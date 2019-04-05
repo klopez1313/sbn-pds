@@ -137,7 +137,7 @@ function makeTable() {
         }
     };
     
-    function newRow(id,name,datasets,preview,odd) {
+    function newRow(id,name,datasets,odd) {
         const rowspan = () => { return datasets.length; };
         const $row = function(dataset,idx) {
             let row = {
@@ -200,9 +200,8 @@ function makeTable() {
     asteroidNames
         .map((asteroid,idx) => {
             const datasets = asteroids[asteroid]['datasets'];
-            const preview = asteroids[asteroid]['preview'];
             const odd = idx % 2 === 1;
-            newRow('asteroids',asteroid,datasets,preview,odd);
+            newRow('asteroids',asteroid,datasets,odd);
         }
     );
     // ASTEROID COUNT
@@ -213,9 +212,8 @@ function makeTable() {
     cometNames
         .map((comet,idx) => {
             const datasets = comets[comet]['datasets'];
-            const preview = comets[comet]['preview'];
             const odd = idx % 2 === 1;
-            newRow('comets',comet,datasets,preview,odd);
+            newRow('comets',comet,datasets,odd);
         }
     );
     // COMET COUNT
@@ -226,9 +224,8 @@ function makeTable() {
     satelliteNames
         .map((satellite,idx) => {
             const datasets = satellites[satellite]['datasets'];
-            const preview = satellites[satellite]['preview'];
             const odd = idx % 2 === 1;
-            newRow('satellites',satellite,datasets,preview,odd);
+            newRow('satellites',satellite,datasets,odd);
         }
     );
     // PLACE SATELLITE COUNT
