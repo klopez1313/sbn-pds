@@ -155,8 +155,15 @@ function makeTable() {
                 },
                 '$preview': (function() {
                     const pview = dataset.file.preview;
-                    if (!pview) return $('<td>', {class: 'cell download-cell'}).text('-');
-                    else return $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: pview, class: 'preview-link'}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                    if (!pview) {
+                        return $('<td>', {class: 'cell download-cell'}).text('-');
+                    } else {
+                        if (dataset.file.usdzPath) {
+                            const usdzPath = dataset.file.usdzPath;
+                            return $('<td>', {class: 'cell download-cell'}).append($('<a>', {rel: 'ar', href: usdzPath, class: 'preview-link'}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                        }
+                        return $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: pview, class: 'preview-link'}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                    }
                 })(),
                 '$ferretSearch': (function() {
                     const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${name.replace(/ /g,'%20')}`;
