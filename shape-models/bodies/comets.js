@@ -8,7 +8,7 @@ let Comets = function() {
                     archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/',
                     objPath: 'files/Churyumov–Gerasimenko/cg_mspcd_shap2_006k_cart.obj',
                     preview: 'previews/67p.png',
-                    usdzPath: 'files/Churyumov-Gerasimenko/67P.reduced.usdz'
+                    usdzPath: 'files/Churyumov–Gerasimenko/67P.reduced.usdz'
                 }
             }]
         },
