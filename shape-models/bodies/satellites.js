@@ -16,6 +16,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: 'files/SATURN_SMALL_MOONS/calypso/calypso_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/calypso/calypso_30k_plt.usdz',
                     preview: 'previews/calypso_30k_plt.png'
                 })
             ]
