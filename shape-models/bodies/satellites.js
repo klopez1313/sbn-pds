@@ -142,7 +142,7 @@ let Satellites = function() {
                 saturnDataset(nullset),
                 stookDataset({
                     objPath: 'files/SATURN_SMALL_MOONS/prometheus/prometheus_30k_plt.tab.obj',
-                    usdzPath: 'files/SATURN_SMALL_MOONS/prometheus/prometheus_30k_plt.tab.usdz',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/prometheus/prometheus_30k_plt.usdz',
                     preview: 'previews/prometheus_30k_plt.png'
                 })
             ]
