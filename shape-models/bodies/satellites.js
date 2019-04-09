@@ -97,6 +97,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/pan_30k_plt.usdz',
                     preview: 'previews/pan_30k_plt.png'
                 })
             ]
