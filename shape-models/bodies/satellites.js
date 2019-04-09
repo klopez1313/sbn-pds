@@ -6,7 +6,7 @@ let Satellites = function() {
         'Atlas (Saturn XV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/atlas/atlas_30k_plt.tab.obj',
                     preview: 'previews/atlas_30k_plt.png'
                 })
             ]
@@ -14,7 +14,7 @@ let Satellites = function() {
         'Calypso (Saturn XIV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/calypso/calypso_30k_plt.tab.obj',
                     preview: 'previews/calypso_30k_plt.png'
                 })
             ]
@@ -22,8 +22,8 @@ let Satellites = function() {
         'Daphnis (Saturn XXXV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
-                    usdzPath: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.usdz',
+                    objPath: 'files/SATURN_SMALL_MOONS/daphnis/daphnis_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/daphnis/daphnis_30k_plt.usdz',
                     preview: 'previews/daphnis_30k_plt.png'
                 }
             )]
@@ -45,7 +45,7 @@ let Satellites = function() {
         'Epimetheus (Saturn XI)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/epimetheus/epimetheus_30k_plt.tab.obj',
                     preview: 'previews/epimetheus_30k_plt.png'
                 }),
                 stookDataset(nullset),
@@ -55,7 +55,7 @@ let Satellites = function() {
         'Helene (Saturn XII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/helene/helene_30k_plt.tab.obj',
                     preview: 'previews/helene_30k_plt.png'
                 }
             )]
@@ -63,7 +63,7 @@ let Satellites = function() {
         'Hyperion (Saturn VII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/hyperion/hyperion_30k_plt.tab.obj',
                     preview: 'previews/hyperion_30k_plt.png'
                 }),
                 thomasDataset(nullset)
@@ -72,7 +72,7 @@ let Satellites = function() {
         'Janus (Saturn X)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/janus/janus_30k_plt.tab.obj',
                     preview: 'previews/janus_30k_plt.png'
                 }),
                 thomasDataset(nullset),
@@ -96,8 +96,8 @@ let Satellites = function() {
         'Pan (Saturn XVIII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
-                    usdzPath: 'files/SATURN_SMALL_MOONS/pan_30k_plt.usdz',
+                    objPath: 'files/SATURN_SMALL_MOONS/pan/pan_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/pan/pan_30k_plt.usdz',
                     preview: 'previews/pan_30k_plt.png'
                 })
             ]
@@ -106,7 +106,7 @@ let Satellites = function() {
             datasets: [
                 stookDataset(nullset),
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/pandora/pandora_30k_plt.tab.obj',
                     preview: 'previews/pandora_30k_plt.png'
                 })
             ]
@@ -140,7 +140,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset(nullset),
                 stookDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/prometheus/prometheus_30k_plt.tab.obj',
                     preview: 'previews/prometheus_30k_plt.png'
                 })
             ]
@@ -151,7 +151,7 @@ let Satellites = function() {
         'Telesto (Saturn XIII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj',
+                    objPath: 'files/SATURN_SMALL_MOONS/telesto/telesto_30k_plt.tab.obj',
                     preview: 'previews/telesto_30k_plt.png'
                 })
             ]
