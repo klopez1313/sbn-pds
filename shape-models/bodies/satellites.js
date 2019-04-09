@@ -107,6 +107,7 @@ let Satellites = function() {
                 stookDataset(nullset),
                 saturnDataset({
                     objPath: 'files/SATURN_SMALL_MOONS/pandora/pandora_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/pandora/pandora_30k_plt.usdz',
                     preview: 'previews/pandora_30k_plt.png'
                 })
             ]
