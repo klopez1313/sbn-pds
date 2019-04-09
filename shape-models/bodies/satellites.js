@@ -23,6 +23,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
+                    usdzPath: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.usdz',
                     preview: 'previews/daphnis_30k_plt.png'
                 }
             )]
