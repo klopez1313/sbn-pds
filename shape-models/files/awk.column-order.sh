@@ -1,6 +1,6 @@
 #!/bin/awk -f
 BEGIN {
-    print "Begin awk script"
+    # begin block
 }
 {
     # swap y and z axes
@@ -16,5 +16,5 @@ BEGIN {
     print $1, x, y, z;
 }
 END {
-    print " - DONE -"
+    # end block
 }
