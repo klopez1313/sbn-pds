@@ -89,6 +89,7 @@ const Asteroids = function() {
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/',
                         objPath: 'files/bennu/101955bennu.tab.obj',
+                        usdzPath: 'files/bennu/bennu.usdz',
                         preview: 'previews/101955bennu.png'
                     }
                 }
