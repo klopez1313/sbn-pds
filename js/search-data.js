@@ -217,7 +217,7 @@ searchApp.factory('searchData', function () {
     },{
         name: 'OSIRIS-REx',
         subtitle: '101955 Bennu',
-        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA'],
+        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA', 'DTM', 'DEM'],
         url: '/pds-staging/resource/orex/',
         category: 'Mission'
     },{
