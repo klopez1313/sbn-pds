@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Eros MSI Images with Geometry</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+            <h1> Eros MSI Images with Geometry Backplanes </h1>
+            </center>
+
+            <p>
+            <b>This data set contains data products for 93,397 images obtained by the
+            Multi-Spectral Imager (MSI) of the Near Earth Asteroid Rendezvous (NEAR)
+            mission during the orbital phase at asteroid 433 Eros. The data products
+            include geometric and geophysical information for each pixel. The data
+            products are in the form of backplanes, stored in the FITS image format.
+            There is one backplane file for each MSI image. Each of the MSI backplane
+            files is a 16-band image cube. The bands of the cube contain the following
+            information calculated for the center of each pixel:
+            Pixel values; x, y, and z coordinates of the intercept with the surface
+            of the asteroid; latitude, longitude and radial distance from asteroid center;
+            solar incidence, emission, and phase angles; horizontal and vertical pixel
+            scale; slope; elevation; gravitational acceleration; and gravitational
+            potential.</b>
+
+            <br><br>
+
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:nearmsi.shapebackplane
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/near/nearmsi.shapebackplane/"> Browse </a>
+                <td width=300><a href="https://sbnarchive.psi.edu/pds4/near/nearmsi_shapebackplane_downloads/">Download data by time range (DOY)</a>
+            </table>
+
+            <p>
+            Because of the size of this data set (721 Gb), it is too large to
+            easily download as a whole.  The data set has been broken down into smaller
+            pieces for download, one gzipped tar file per day.  The filenames have
+            the form "nearmsi.shapebackplane.yyyyDOY.tar.gz" where yyyy is the year and
+            DOY is the day of year.
+
+            <p>
+            Use the following citation to reference this data set:
+
+
+            <p>
+            Blewett, D.T., Barnouin, O.S., Ernst, C.M., Nguyen, L., and Espiritu, R.C.,
+            Eros MSI Images with Geometry Backplanes. urn:nasa:pds:nearmsi.shapebackplane. NASA Planetary Data System, 2017.
+
+            <br> <br>
+
+           <h3><font color="red">Superseded</font> versions of this data set:<br>None</h3>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

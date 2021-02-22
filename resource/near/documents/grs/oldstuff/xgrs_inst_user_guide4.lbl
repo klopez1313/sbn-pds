@@ -1,0 +1,108 @@
+PDS_VERSION_ID           = PDS3                                                
+RECORD_TYPE              = STREAM                                              
+^DOC_DOCUMENT            = "XGRS_INST_USER_GUIDE4.DOC"                         
+^RTF_DOCUMENT            = "XGRS_INST_USER_GUIDE4.RTF"                         
+^ASCII_DOCUMENT          = "XGRS_INST_USER_GUIDE4.TXT"                         
+^JPEG1_DOCUMENT          = "XGRS_INST_GUIDE_FIG1.JPG"                          
+^JPEG2_DOCUMENT          = "XGRS_INST_GUIDE_FIG2.JPG"                          
+^JPEG3_DOCUMENT          = "XGRS_INST_GUIDE_FIG3.JPG"                          
+                                                                               
+OBJECT                   = WORD_DOCUMENT                                       
+  DOCUMENT_NAME          = "XGRS Instrument User Guide version 4"              
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = MICROSOFT_WORD                                      
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                 
+  DESCRIPTION            = "User guide for the XGRS instrument.                
+The purpose of this document is to provide sufficient background               
+information and description of XGRS operations to assist any member of         
+the XGRS team to safely and correctly command the XGRS with only               
+limited one-on-one training.  Since this document is intended for XGRS         
+team members it is assumed that the user already has a basic knowledge         
+of X-ray and gamma-ray detectors and in particular of the NEAR XGRS            
+detectors.  It is also assumed that the user is familiar with the              
+science goals of the NEAR mission and more specifically of the XGRS.           
+"                                                                              
+END_OBJECT               = WORD_DOCUMENT                                       
+                                                                               
+OBJECT                   = RTF_DOCUMENT                                        
+  DOCUMENT_NAME          = "XGRS Instrument User Guide version 4"              
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = RICH TEXT                                           
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                 
+  DESCRIPTION            = "User guide for the XGRS instrument.                
+The purpose of this document is to provide sufficient background               
+information and description of XGRS operations to assist any member of         
+the XGRS team to safely and correctly command the XGRS with only               
+limited one-on-one training.  Since this document is intended for XGRS         
+team members it is assumed that the user already has a basic knowledge         
+of X-ray and gamma-ray detectors and in particular of the NEAR XGRS            
+detectors.  It is also assumed that the user is familiar with the              
+science goals of the NEAR mission and more specifically of the XGRS.           
+"                                                                              
+END_OBJECT               = RTF_DOCUMENT                                        
+                                                                               
+OBJECT                   = TXT_DOCUMENT                                        
+  DOCUMENT_NAME          = "XGRS Instrument User Guide version 4"              
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = ASCII                                               
+  DOCUMENT_FORMAT        = TEXT                                                
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                 
+  DESCRIPTION            = "User guide for the XGRS instrument.                
+The purpose of this document is to provide sufficient background               
+information and description of XGRS operations to assist any member of         
+the XGRS team to safely and correctly command the XGRS with only               
+limited one-on-one training.  Since this document is intended for XGRS         
+team members it is assumed that the user already has a basic knowledge         
+of X-ray and gamma-ray detectors and in particular of the NEAR XGRS            
+detectors.  It is also assumed that the user is familiar with the              
+science goals of the NEAR mission and more specifically of the XGRS.           
+"                                                                              
+                                                                               
+OBJECT                  = JPEG1_DOCUMENT                                       
+  DOCUMENT_NAME         = "XGRS_INST_GUIDE_FIG1.JPG"                           
+  PUBLICATION_DATE      = 2001                                                 
+  INTERCHANGE_FORMAT    = BINARY                                               
+  DOCUMENT_FORMAT       = JPG                                                  
+  DOCUMENT_TOPIC_TYPE   = DATA_ANALYSIS                                        
+  DESCRIPTION           = "XGRS Instrument Guide, Figure 1 of SEQGEN           
+Graphical User interface at beginning of application run. SEQGEN is an         
+application for generating XGRS command sequences for commanding and           
+controlling the XGRS instrument systems as well as navigation and pointing     
+of the spacecraft"                                                             
+END_OBJECT              = JPEG_DOCUMENT                                        
+                                                                               
+                                                                               
+OBJECT                  = JPEG2_DOCUMENT                                       
+  DOCUMENT_NAME         = "XGRS_INST_GUIDE_FIG2.JPG"                           
+  PUBLICATION_DATE      = 2001                                                 
+  INTERCHANGE_FORMAT    = BINARY                                               
+  DOCUMENT_FORMAT       = JPG                                                  
+  DOCUMENT_TOPIC_TYPE   = DATA_ANALYSIS                                        
+  DESCRIPTION           = "XGRS Instrument Guide, Figure 2 of SEQGEN           
+Graphical User interface during application run. SEQGEN is an                  
+application for generating XGRS command sequences for commanding and           
+controlling the XGRS instrument systems as well as navigation and pointing     
+of the spacecraft.  This image depicts the generation of CAS specific to       
+controlling the BGO detector and the optional parameters with values "         
+END_OBJECT              = JPEG_DOCUMENT                                        
+                                                                               
+                                                                               
+OBJECT                  = JPEG3_DOCUMENT                                       
+  DOCUMENT_NAME         = "XGRS_INST_GUIDE_FIG3.JPG"                           
+  PUBLICATION_DATE      = 2001                                                 
+  INTERCHANGE_FORMAT    = BINARY                                               
+  DOCUMENT_FORMAT       = JPG                                                  
+  DOCUMENT_TOPIC_TYPE   = DATA_ANALYSIS                                        
+  DESCRIPTION           = "XGRS Instrument Guide Figure 3 of SEQGEN            
+Graphical User interface at beginning of application run. SEQGEN is            
+an application for generating XGRS command sequences for commanding            
+and controlling the XGRS instrument systems as well as navigation              
+and pointing of the spacecraft. This window shows all of the available         
+CASs that are available for insertion."                                        
+END_OBJECT              = JPEG_DOCUMENT                                        
+                                                                               
+END_OBJECT               = TXT_DOCUMENT                                        
+                                                                               
+END                                                                            

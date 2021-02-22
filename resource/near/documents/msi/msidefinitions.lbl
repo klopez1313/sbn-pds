@@ -1,0 +1,24 @@
+PDS_VERSION_ID           = PDS3                                               
+                                                                              
+RECORD_TYPE              = UNDEFINED                                          
+^ASCII_DOCUMENT          = "MSIDEFINITIONS.TXT"                               
+                                                                              
+  OBJECT                 = ASCII_DOCUMENT                                     
+  DOCUMENT_NAME          = "MULTI-SPECTRAL IMAGER DEFINITIONS"                
+  DOCUMENT_TOPIC_TYPE    = "DATA ANALYSIS"                                    
+  PUBLICATION_DATE       = 2001-07-19                                         
+  FILES                  = 1                                                  
+  INTERCHANGE_FORMAT     = ASCII                                              
+  DOCUMENT_FORMAT        = TEXT                                               
+  DESCRIPTION            = " This is a definition of all the Multi-Spectral   
+                             Imager (MSI) NEAR keywords and their values      
+                             for the MSI Parameter files.  The parameter files
+                             contain 1 line for each FITS file, and are       
+                             organized by year/day of year.  The parameter    
+                             file has the same values as the FITS header,     
+                             with the exception of NEAR-007 (see              
+                             MSIDEFINITIONS.TXT.)"                            
+                                                                              
+  END_OBJECT             = ASCII_DOCUMENT                                     
+                                                                              
+  END                                                                         

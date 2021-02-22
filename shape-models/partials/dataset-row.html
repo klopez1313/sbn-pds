@@ -1,0 +1,8 @@
+<td class="cell"><a href="{{dataset.link}}">{{ dataset['name']}}</a></td>
+<td class="cell">
+    <generate-preview dataset="dataset"></generate-preview>
+</td>
+<td class="cell centered icons-container">
+    <file-download file-to-download="dataset['files']['data']['primary']"></file-download>
+    <file-download ng-repeat="file in dataset['files']['data']['derived']" file-to-download="file"></file-download>
+</td>

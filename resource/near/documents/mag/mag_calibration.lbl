@@ -1,0 +1,34 @@
+PDS_VERSION_ID           = PDS3                                               
+RECORD_TYPE              = STREAM                                             
+^WORD_DOCUMENT           = "MAG_CALIBRATION.DOC"                              
+^RTF_DOCUMENT            = "MAG_CALIBRATION.RTF"                              
+^ASCII_DOCUMENT          = "MAG_CALIBRATION.TXT"                              
+                                                                              
+OBJECT                   = WORD_DOCUMENT                                      
+  DOCUMENT_NAME          = "NEAR MAG calibration document"                    
+  PUBLICATION_DATE       = 2001                                               
+  INTERCHANGE_FORMAT     = BINARY                                             
+  DOCUMENT_FORMAT        = MICROSOFT_WORD                                     
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                
+  DESCRIPTION            = "NEAR MAG calibration document"                    
+END_OBJECT               = WORD_DOCUMENT                                      
+                                                                              
+OBJECT                   = RTF_DOCUMENT                                       
+  DOCUMENT_NAME          = "NEAR MAG Calibration document"                    
+  PUBLICATION_DATE       = 2001                                               
+  INTERCHANGE_FORMAT     = BINARY                                             
+  DOCUMENT_FORMAT        = RICH_TEXT                                          
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                
+  DESCRIPTION            = "NEAR MAG calibration document"                    
+END_OBJECT               = RTF_DOCUMENT                                       
+                                                                              
+OBJECT                   = ASCII_DOCUMENT                                     
+  DOCUMENT_NAME          = "NEAR MAG calibration document"                    
+  PUBLICATION_DATE       = 2001                                               
+  INTERCHANGE_FORMAT     = ASCII                                              
+  DOCUMENT_FORMAT        = TEXT                                               
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                
+  DESCRIPTION            = "NEAR MAG Calibration document"                    
+END_OBJECT               = ASCII_DOCUMENT                                     
+                                                                              
+END                                                                           

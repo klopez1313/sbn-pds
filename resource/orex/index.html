@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>OSIRIS-REx Data Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+        <li><a href="/pds-staging/">Home</a></li>
+        <li class="breadcrumbs-separator">/</li>
+        <li><a href="archive/missions.html">Missions</a></li>
+        <li class="breadcrumbs-separator">/</li>
+        <li>OSIRIS-REx</li>
+        </ol>
+        <center>
+            <h1> OSIRIS-REx Data Archive </h1>
+            </center>
+
+            <p>
+            <b>Main target body:</b>  Asteroid (101955) Bennu<br>
+            <b>Launch date:</b>  8 September 2016<br>
+            <b>Earth flyby date:</b> 22 September 2017</br>
+            <b>Bennu orbit insertion:</b> 31 December 2018<br>
+            <b>Bennu orbit departure:</b> 3 March 2021 (planned)<br>
+            <b>Return to Earth:</b> 24 September 2023 (planned)<br>
+
+            <hr>
+
+            <h3>OSIRIS-REx primary instrument data:</h3>
+
+            <table border=2>
+
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td rowspan=2>Images
+            <td><a href="resource/orex/ocams.html">OCAMS</a>
+            <td>The OSIRIS-REx Camera Suite consists of MapCam, a medium
+field imager; PolyCam, a narrow-field imager; and SamCam, a wide-field camera
+for context images and recording the sampling event.
+
+            <tr>
+            <td><a href="resource/orex/tagcams.html">TAGCAMS</a>
+            <td> The Touch and Go Camera System provides imaging to aid
+in navigation to and around Bennu, to aid in sample acquisition, and to
+confirm sample stowage.
+
+            <tr>
+            <td rowspan=2>Spectra
+            <td><a href="resource/orex/ovirs.html">OVIRS</a>
+            <td> The OSIRIS-REx Visible and Infrared Spectrometer is a point
+spectrometer with a wavelength range of 0.4 to 4.3 microns.
+
+            <tr>
+            <td><a href="resource/orex/otes.html">OTES</a>
+            <td> The OSIRIS-REx Thermal Emission Spectrometer is a compact,
+spot Fourier-transform infrared interferometric spectrometer measuring
+absolute flux of thermally emitted radiation from 5.5 to 50 microns.
+
+            <tr>
+            <td>Nuclear
+            <td>REXIS</a> - not yet available
+            <td>The Regolith X-Ray Imaging Spectrometer measures solar
+X-ray-induced fluorescence from Bennu to map the distribution of
+elements across its surface.
+
+            <tr>
+            <td> Magnetometer
+            <td> N/A
+            <td> No magnetometer instrument on OSIRIS-REx
+
+            <tr>
+            <td> Dust
+            <td> N/A
+            <td> No dust detector on OSIRIS-REx
+
+            <tr>
+            <td> Altimetry
+            <td><a href="resource/orex/ola.html">OLA</a>
+            <td> The OSIRIS-REx Laser Altimeter is a scanning LIDAR system
+providing measurement of spacecraft range to the target body.
+
+            <tr>
+            <td>Radio Science
+            <td><a href="resource/orex/rs.html">Radio Science</a>
+            <td> The OSIRIS-REx radio science observations will provide
+the information necessary to make estimates of the gravity field, mass,
+and other physical characteristics of Bennu.
+
+            <tr>
+            <td> SPICE
+            <td><a href="https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/orex_spice/">OSIRIS-REx SPICE Archive</a>
+            <td>Archived at NAIF
+
+            <tr>
+            <td> Ground Campaign
+            <td><a href="https://sbn.psi.edu/pds-staging/resource/orexlc.html">Mt. Bigelow Groundbased Bennu Observations</a>
+            <td>Photometric and lightcurve observations of Bennu in the ECAS photometric system.
+
+            <tr>
+            <td> Mission
+            <td><a href="resource/orex/orexmission.html">OSIRIS-REx Mission Bundle
+            <td>This bundle contains information and documentation relevant
+to the mission as a whole.
+
+            </table>
+
+            <h3> Release information: </h3>
+
+<ul>
+<li> Mission bundle:
+	<ul>
+	<li>Initial release, Feb. 15, 2019.
+	<li>Release on July 1, 2019 adds Bennu Coordinate System document and Approach Phase Plan Narrative
+        <li>Release on Aug. 27, 2019 adds Mission Phase Plans for Orbit A and Preliminary Survey, and updates the mission dictionary.
+	<li>Release on Nov. 25, 2019 adds Mission Phase Plans for Detailed Survey.
+<li> Release on Feb. 25, 2020 adds Mission Phase Plans for Orbit B and Orbit C, and updates the mission dictionary.
+<li> Release on May 27, 2020 adds Mission Phase Plans for Recon and Orbit R.
+<li> Release on Aug. 25, 2020 adds Mission Phase Plan for Recon B.
+<li> Release on Dec. 1, 2020 adds activities summary for Sample Collection phase, and updates the mission dictionary.
+        </ul>
+<li> OCAMS bundle:
+	<ul>
+<li> Initial release on Feb. 15, 2019: Outbound Cruise (including Earth/Moon)
+<li> Release on Aug. 19, 2019: Bennu data through Nov. 17, 2018
+<li> Release on Nov. 4, 2019:  Bennu data through Feb. 17, 2019
+<li> Release on Nov. 25, 2019:  Bennu data through May 17, 2019
+<li> Release on Feb. 25, 2020:  Bennu data through Aug. 17, 2019
+<li> Release on May 27, 2020:  Bennu data through Nov. 17, 2019
+<li> Release on Aug. 25, 2020:  Bennu data through Feb. 17, 2020
+<li> Release on Dec. 1, 2020:  Bennu data through May 17, 2020
+	</ul>
+<li> OVIRS bundle:
+	<ul>
+<li> Initial release on Feb. 15, 2019: Outbound Cruise (including Earth/Moon)
+<li> Release on Aug. 19, 2019: Bennu data through Nov. 17, 2018
+<li> Release on Aug. 27, 2019: Bennu data through Feb. 17, 2019
+<li> Release on Nov. 25, 2019:  Bennu data through May 17, 2019
+<li> Release on Feb. 25, 2020:  Bennu data through Aug. 17, 2019
+<li> Release on Aug. 25, 2020:  Bennu data through Feb. 17, 2020
+<li> Release on Dec. 1, 2020:  Bennu data through May 17, 2020
+	</ul>
+<li> TAGCAMS bundle:
+	<ul>
+<li> Initial release on Feb. 15, 2019: Outbound Cruise (including Earth/Moon)
+<li> Release on July 1, 2019: Bennu data through Nov. 17, 2018
+<li> Release on Aug. 27, 2019: Bennu data through Feb. 17, 2019
+<li> Release on Nov. 25, 2019:  Bennu data through May 17, 2019
+<li> Release on Feb. 25, 2020:  Bennu data through Aug. 17, 2019
+<li> Release on May 27, 2020:  Bennu data through Nov. 17, 2019
+<li> Release on Aug. 25, 2020:  Bennu data through Feb. 17, 2020
+<li> Release on Dec. 1, 2020:  Bennu data through May 17, 2020
+	</ul>
+<li> OTES bundle:
+	<ul>
+	<li> Initial release on June 28, 2019:  Outbound Cruise and Bennu data through Aug. 17, 2018
+        <li> Release on Dec. 12, 2019:  Bennu data through May 17, 2019
+<li> Release on Feb. 25, 2020:  Bennu data through Aug. 17, 2019
+<li> Release on May 27, 2020:  Bennu data through Nov. 17, 2019
+<li> Release on Aug. 25, 2020:  Bennu data through Feb. 17, 2020
+<li> Release on Dec. 1, 2020:  Bennu data through May 17, 2020
+	</ul>
+<li> OLA bundle:
+	<ul>
+	<li> Initial release on Nov. 7, 2019:  Bennu data through Feb. 17, 2019
+        <li> Release on Dec. 12, 2019:  Bennu data through May 17, 2019
+<li> Release on Feb. 25, 2020:  Bennu data through Aug. 17, 2019
+<li> (No data taken by OLA during Aug. 17 - Nov. 17, 2019)
+<li> (OLA data Nov. 18, 2019 - May 17, 2020 expected soon.)
+	</ul>
+<li> Radio Science bundle:
+	<ul>
+	<li> Initial release on Aug. 10, 2020:  Bennu data through Nov. 17, 2019
+<li> Release on Aug. 25, 2020:  Bennu data Nov. 18, 2019 - Feb. 17, 2020
+<li> Release on Dec. 1, 2020:  Bennu data Feb. 18, 2020 - May 17, 2020
+	</ul>
+</ul>
+
+<p>
+To sign up for email notification of releases, register for the
+<a href="https://pds.jpl.nasa.gov/datasearch/subscription-service/top.cfm">
+PDS Subscription Service</a> and select the desired mission and
+instruments.
+
+            <br><br>
+            <hr>
+
+            <p>
+            For questions about the data sets or this web site, contact Carol Neese
+            (neese@psi.edu).
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+PDS_VERSION_ID                   = PDS3                                       
+RECORD_TYPE                      = STREAM                                     
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-MAG-2-EDR-EROS/ORBIT-V1.0"         
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "NEAR MAG DATA FOR EROS/ORBIT"             
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = "TIME SERIES"                              
+  START_TIME                     = 2000-01-11T00:00:00.000                    
+  STOP_TIME                      = 2001-02-12T23:59:59.999                    
+  DATA_SET_RELEASE_DATE          = 2001-09-01                                 
+  PRODUCER_FULL_NAME             = "DOUGLAS B. HOLLAND"                       
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+      This data set contains the NEAR magnetometer (MAG) data for             
+      the EROS/ORBIT phase. The data set begins on                          
+      2000-01-11T00:00:00.000  and ends 2001-02-12T23:59:59.999 .             
+      The data are raw telemetry data, provided in engineering units,         
+      that have been reformatted into FITS file format (NASA Office           
+      of Science and Technology (NOST), 100-1.0). In addition to the          
+      raw magnetometer data, a calibration file and algorithm are             
+      available. This data set is archived as a set of CDROM images           
+      as a part of the NEAR EDR volume set.                                   
+                                                                              
+      The data set directory structure is shown below. The first volume of    
+      the set is the only volume which contains CATALOG, DOCUMENT             
+      and other non-data subdirectories. Subsequent volumes contain           
+      only DATA and INDEX subdirectories in order to minimize duplication.    
+                                                                              
+      Volume 1 directory structure:                                           
+                                                                              
+          |-CATALOG--                                                         
+          |                                                                   
+          |-DATA-----                                                         
+          |                                                                   
+          |          |-INSTRUMENT-|-CALPAPER---                               
+          |-DOCUMENT-|                                                        
+          |          |-MISSION----|-OVERVIEW---                               
+          |                       |-TECHDIGEST-                               
+          |-GEOMETRY-                                                         
+          |                                                                   
+          |-INDEX----                                                         
+                                                                              
+      Volume 2-n directory structure                                          
+                                                                              
+          |-DATA-----                                                         
+          |-INDEX----                                                         
+                                                                              
+                                                                              
+      Directory Name  Description                                             
+      --------------  -------------                                           
+                                                                              
+      CATALOG         Templates for the mission, instrument host,             
+                      instrument, and data set.                               
+                                                                              
+      DATA            Instrument FITS data files and data labels.             
+                                                                              
+      DOCUMENT        Documentation of the instrument and mission are         
+                      provided as ASCII text and may also be available in     
+                      the original PostScript, PDF or MS Word format.         
+                      Articles from the Johns Hopkins APL Technical Digest    
+                      are provided for an overview of the NEAR mission.       
+                      The instrument subdirectory contains documentation      
+                      describing the instrument and the in flight             
+                      calibration of instrument data.                         
+                                                                              
+      GEOMETRY        This directory contains only a GEOMINFO.TXT file.       
+                      A separate GEOMETRY volume contains all of the SPICE    
+                      kernels in text transfer format for the mission phase   
+                      and the supporting the supporting documentation.        
+                                                                              
+      INDEX           INDEX TABLES for this CD and the volume set             
+                      describing times and key data file parameter values.    
+                                                                              
+     -------------------------------------------------------                  
+                                                                              
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+      The definitions for the data set parameters and other keywords are      
+      given in the file MAGDEFINITIONS.TXT contained in the                   
+      DOCUMENT/INSTRUMENT subdirectory.                                       
+                                                                              
+                                                                              
+    Data                                                                      
+    ====                                                                      
+      The data are in the form of FITS files with attached FITS headers       
+      and detached PDS labels. Files contain all data for one day.            
+                                                                              
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      GEOMETRY subdirectory is described above.                               
+                                                                              
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      This data set is released as a CDROM set.                               
+                                                                              
+                                                                              
+    Processing History                                                        
+    ==================                                                        
+      The processing history includes no background, noise, geometry or       
+      other corrections."                                                     
+                                                                              
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+    Data Quality Flag                                                         
+    =================                                                         
+      Each data file label includes a quality flag string in the              
+      DATA_QUALITY_ID keyword, extracted from the FITS keyword NEAR-008 of    
+      the original data label. The fields of this keyword are defined         
+      below.  Data quality defects flag is raised when there is missing       
+      data other fields informational and not quality related. The eight      
+      characters of this field are described below.                           
+                                                                              
+      Definition - Data Quality Index                                         
+                c0 = Data Quality Flag (0=good,1=flagged for quality          
+                     defects)                                                 
+                c1 = Instrument number for FC, CTP and AIU (1 or 2)           
+                c2 - c6 = Processing Flags not quality related                
+                c7 = CCDS Source (0=VC0, 1=VC1, 2=VC2, 3=VC3)                 
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This data set underwent external peer review within PDS in June,        
+      2000."                                                                  
+                                                                              
+                                                                              
+ END_OBJECT                      = DATA_SET_INFORMATION                       
+                                                                              
+ OBJECT                          = DATA_SET_TARGET                            
+  TARGET_NAME                    = "EROS"                                     
+ END_OBJECT                      = DATA_SET_TARGET                            
+                                                                              
+ OBJECT                          = DATA_SET_HOST                              
+  INSTRUMENT_HOST_ID             = "NEAR"                                     
+  INSTRUMENT_ID                  = "MAG"                                      
+ END_OBJECT                      = DATA_SET_HOST                              
+                                                                              
+ OBJECT                          = DATA_SET_REFERENCE_INFORMATION             
+   REFERENCE_KEY_ID              = "CHENGETAL1998"                            
+ END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION             
+                                                                              
+END_OBJECT                       = DATA_SET                                   
+END                                                                           

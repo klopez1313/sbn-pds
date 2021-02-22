@@ -1,0 +1,233 @@
+NLR Calibration Description
+
+Introduction
+
+The Near Laser Rangefinder (NLR) is the first laser altimeter to
+employ continuous, in-flight calibration using a fiber-optic delay
+assembly (FODA), which is a spooled 109.5 m fused silica fiber-optic
+cable. Part of each optical pulse formed within the laser resonator is
+injected into the FODA, which injects a delayed optical signal
+directly into the receiver. This allows end-to-end calibration for
+each emitted pulse even when no target surface is available.
+
+Data Format
+
+The NLR Experiment Data Records (EDR) take the form of Flexible Image
+Transport Standard (FITS) files, in which each packet makes up one
+record. The NLR FITS files are organized such that all the normal
+format packets from any Coordinated Universal Time (UTC) day are
+compiled into one file, while all the high rate packets from the same
+day are compiled into another file. The FITS file naming convention is
+as follows: for the normal format FITS file, LyydddNT.FIT is used
+where L=laser, and yyddd represents digits giving date of observation
+in two-digit-year and day-of-year format; correspondingly, for the
+high rate format FITS file LyydddHT.FIT is used. An example is
+L96116HT.FIT for data obtained at 2 Hz on April 25, 1996.
+
+The orbital mission phase employed only normal format packets. In these
+packets, the spacecraft mission elapsed time (MET) is recorded at the time
+of the first major frame in the packet. A normal rate packet contains up to
+56 observations, so that the last observation may occur up to 55 seconds
+after the nominal packet time in the case of 1 Hz data.
+
+While the NLR packets contain basic information on the instrument
+status, additional information on the state of the instrument is
+returned in the spacecraft housekeeping packets. The SDC merges this
+additional information with that from the NLR packets to produce the
+NLR FITS files. A full listing of the data values in the NLR FITS
+files with complete definitions is given in Cheng, et al. (2000).
+
+Laboratory Calibration of Range Measurement
+
+The absolute calibration of NLR range measurements, or the relation
+between measured TOF and range, was established in laboratory tests
+prior to launch (Cole, et al. 1997). Two separate measurements were
+obtained: first, a determination of the total system delay in
+commanded threshold TH = 2, and second, a determination of how this
+delay varies with TH (threshold-based range walk). The total system
+delay is the time between the arrival of a laser pulse and the
+electronic registration of counts, and it was determined by comparing
+the time delay of an optical pulse through the FODA in two cases:
+1) FODA separate from the NLR (529.2 ns delay); and 2) FODA integrated
+with the NLR receiver at commanded threshold TH = 2 (558.33 ns delay).
+The total system delay Tsd was measured as the increase in the time
+delay when connected to NLR, or 29.13 ns.
+
+This measurement was confirmed, and the threshold-based range walk was
+measured, during the absolute calibration tests performed on August
+8-9, 1995 ("hall shot test", Zuber, et al. 1997).  We conclude that the
+total system delay is 29 ns, with a (conservative) uncertainty
+corresponding to half a count, which is 1 ns or 15.6 cm in range. 
+
+In-flight Calibration Results 
+
+The measurements of total system delay and threshold-based range walk
+yield the conversion from range counts to range R in meters measured
+by NLR 
+
+        R = 0.3122838 * counts - corr ( TH ) - 4.37         (1)
+
+where the last term accounts for the total system delay of 29 ns, and
+where the correction is listed in Table 1 below and accounts for the
+threshold-based range walk.
+
+The threshold-based range walk corrections in Table 1 were obtained
+from in-flight calibration tests. The calibration counts for all shots
+with a given TH are averaged from a given test, omitting shots without
+valid calibrations (e.g., FAILSAFE data, also data with range gate
+values that suppress the calibration pulse). Each entry in Table 1 is
+the average of  >1000 valid calibrations. The difference in average
+calibration counts between the given threshold and TH = 2 yields the
+range correction in Table 1, using the conversion 0.3122838 m per
+count. The TH = 2 correction is zero by definition. No calibration
+pulses are detected for TH = 7 so no range correction is shown, and
+none is shown for TH = 0 which is at the noise level and which was
+not used for mapping.
+
+Since TH=7 was used for very low altitude flybys, a nominal 4.0
+meters was assigned to corr(TH=7) in calibrating the resulting science
+data.
+
+The second column of Table 1 shows the threshold-based range walk
+corrections from the combined data sets obtained in the flight tests
+performed 4/19/99 and 8/13/99. The values in the second column will be
+adopted for initial analyses. The third column shows, for comparison,
+the corrections obtained from the combined data sets obtained in all
+flight tests from launch through 1998. The changes in these
+corrections over the > 3 yr time span are regarded as a conservative
+estimate of the uncertainties in the corrections. The uncertainty in
+range walk correction corresponds to less than 11 cm in range.
+
+Table 1
+Range corrections in meters vs. TH:
+
+TH       corr (TH)              corr (TH)
+        4/99 & 8/99          previous tests
+1           -0.37               -0.36
+2            0                   0
+3            0.40                0. 51
+4            0.84                0.92
+5            1.38                1.38
+6            2.17                2.15
+7            4.0 (nominal)
+
+Calibrated Level 2 products
+
+The level 2 data products comprise the along-track time series of the
+NLR instrument's science data in physical units, produced using
+precision orbits, ancillary timing and attitude information supplied
+by the NEAR SDC and instrument data derived from in-flight analysis.
+Each level 2 data product is a text format table corresponding to a
+daily level 1 EDR file and is described by a detached label. The file
+naming convention is LyydddNv.TAB, where L=laser, and yyddd contains
+the two-digit year and the three-digit Julian day of observation. The
+letter v stands for processing version. 
+
+Each Level 2 product begins with 2 header lines or records, followed by
+data. The first record lists the name of the source FITS file
+and the SPICE kernels used to compile the information included in the
+table. The SPICE files de403s.bsp, naif0007.tls, and pck0006.tpc used are
+constants in the analysis and are not listed in the header.
+The files listed in the first line of the header are, in order:
+     aggregated NLR telemetry filename;
+     SPICE Orientation file for NEAR;
+     SPICE spacecraft position for NEAR;
+     Additional SPICE position file for NEAR;
+     SPICE on-board time (SCLK) to ET mapping;
+     SPICE file for 433 Eros ephemeris;
+     SPICE Orientation file for 433 Eros;
+     SPICE Instrument kernel file for NLR.
+The second line/record of the header lists brief table headings. These
+are for convenience only and should not be construed as object names.
+
+Precision orbit data for the NEAR-Shoemaker spacecraft is provided by
+the NASA-GSFC analysis team and is archived in the form of SPICE-format
+spacecraft ephemeris (SPK) files. The MET time associated with
+each shot, with minor frame given in decimal seconds, is converted to
+Ephemeris Time in seconds past J2000 (ET) using the most recent time
+conversion (SCLK) file. The spacecraft position at the ET shot time is
+interpolated from the SPK file. The spacecraft orientation SPICE file
+(CK) is resampled at 1-second intervals of whole seconds and convolved
+with a 9-point, centered, finite-impulse-response filter to reduce
+high-rate gyro noise. Coefficients of the filter (unnormalized) are
+given below. The noise reduction allows slow-scanning ground tracks to
+move more smoothly across the surface, and only slightly affects
+positional accuracy during high-rate slews.
+
+Table 2
+Orientation filter convolution coefficients vs. convolution index:
+
+Index   Coefficient
+-4       0.19 
+-3       0.69
+-2       1.31 
+-1       1.81
+ 0       2.0
+ 1       1.81
+ 2       1.31 
+ 3       0.69 
+ 4       0.19
+
+The filtered spacecraft orientation matrix transforms vectors from the
+J2000 inertial reference frame to the instrument deck
+(NEAR_SC_BUS_PRIME) frame. In this frame, observations are taken in
+the positive X-direction. A fixed boresight offset with respect to
+this frame is assumed. The NLR laser boresight orientation was obtained from
+a least-squares relocation of the NLR bounce points (Neumann, et al. 2001),
+that minimized altimetric errors at crossovers.
+The Euler angles of the boresight are provided as a SPICE instrument
+kernel (IK) file, from which a transformation matrix from NEAR to NLR
+frame is derived.
+
+The J2000-to-NLR frame matrix is calculated from the smoothed CK by
+matrix composition.  The one-way time-of-flight from the laser range
+is added to the laser fire time to obtain the bounce point time, and
+the calibrated one-way range vector is projected from the spacecraft
+state at this time along the boresight to obtain the surface bounce
+point position in inertial coordinates with respect to the asteroid
+center-of-mass.  The inertial position is then rotated to the asteroid
+body-fixed coordinate system using satellite/planet position and
+orientation files (PCK).
+
+The asteroid-located radius vector is given in both radial coordinates
+and as a Cartesian position vector. The angle subtended by the bounce
+point to spacecraft position vector and the radius vector is
+calculated. This angle is loosely termed the EMISSION_ANGLE, assuming
+a spherical body. Normally an emission angle greater than 90 degrees would
+indicate a missed shot, but due to the irregular shape of 433 Eros,
+emission angles >120 degrees were obtained. The off-pointing angle from the
+asteroid center (OFF_NADIR angle) is also given.
+
+Lastly, the potential due to gravity and rotation at the shot
+location is calculated (Cheng, et al. 2001) assuming
+a uniform density of 2670 kg m^-3 and the NLR shape model NLR125AR.IMG.
+Since the asteroid is irregularly shaped, a simple topographic datum
+does not exist. The potential field represents the work required to
+transport a particle of unit mass from the shot point to another fixed
+position with respect to the rotating body. The potential divided by an
+average gravitational acceleration can be interpreted as a proxy for
+topographic height in geophysical analyses.
+
+References
+
+Cole, T., M. Boies, A. El-Dinary, A.F. Cheng, M. Zuber, and D.E.
+Smith, The Near Earth Asteroid Rendezvous Laser Altimeter, Space
+Science Reviews, 82, 217-253, 1997.
+
+Cheng, A,F, Cole, T.D., Zuber, M.T., Smith, D.E., Guo, Y. and
+Davidson,F., In-Flight Calibration of the Near Earth Asteroid
+Rendezvous Laser Rangefinder, Icarus, 148, 572-586, 2000.
+
+Cheng, A.F., Barnouin-Jha, O., Prockter, L., Zuber, M.T.,
+Neumann, G., Smith, D.E., Garvin, J., Robinson, M., Veverka, J.,
+and Thomas, P., Small Scale Topography of 433 Eros from Laser
+Altimetry and Imaging, Icarus, in press, 2001.
+
+Neumann, G.A., Rowlands, D.D., Lemoine, F.G., Smith, D.E., and
+Zuber, M.T., Crossover analysis of Mars Orbiter Laser Altimeter
+data, Journal of Geophysical Research, in press, 2001.
+
+Zuber, M., D.E. Smith, A.F. Cheng, and T.D. Cole, The NEAR Laser
+Ranging Investigation, Journal of Geophysical Research, 102,
+23761-23773, 1997.
+

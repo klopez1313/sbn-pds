@@ -1,0 +1,652 @@
+The NEAR Command and Data Handling System,                                    
+JOHNS HOPKINS APL TECHNICAL DIGEST, VOLUME 19, NUMBER 2 (1998) 220            
+(Figures referenced in this text document are available in the ADOBE ACROBAT  
+CDHS.PDF file in this directory.)                                             
+                                                                              
+The NEAR Command and Data Handling System                                     
+David D.Scott, David A. Artis, Brian K. Heggestad, Jerry E. Kroutil, Robert O.
+Krueger, Lloyd A. Linstrom, James A. Perschy, Paul D. Schwartz, and Glen F.   
+Sweitzer                                                                      
+                                                                              
+ABSTRACT                                                                      
+                                                                              
+        The Near Earth Asteroid Rendezvous (NEAR) spacecraft's command and    
+data handling (C&DH) system is designed to manage complex operations and to   
+collect data when the spacecraft is out of contact with ground control. During
+ground contacts, the C&DH system accepts uplink commands and memory loads that
+describe a time-ordered set of events to follow, and it transmits previously  
+recorded data back to the ground station. This article describes the overall  
+C&DH system, gives details on each of the components, and tells how the system
+was tested prior to spacecraft integration. Solid-state data recorders and    
+flight computers are also discussed.                                          
+(Keywords: Autonomous spacecraft, CCSDS, Deep space, Spacecraft, Telemetry.)  
+                                                                              
+INTRODUCTION                                                                  
+                                                                              
+Although the Near Earth Asteroid Rendezvous (NEAR) spacecraft is in ground    
+contact at least several times a week, the spacecraft does most of its work   
+independently; that is, it operates on sequences of commands that are received
+via the X-band radio frequency(RF) uplink and stored on-board. Scenarios range
+from minimal housekeeping during cruise mode to recording data continuously   
+during a 16-h cycle of science measurements at the asteroid Eros. Normally,   
+ground contacts are needed only to send recorded data back to Earth and to    
+receive the next series of commands to be executed. However, on-board autonomy
+rules will sense events that threaten the health of the spacecraft. The       
+strategy in these cases is to enter a safe mode and wait for ground commands  
+to direct recovery. The command and data handling (C&DH) system communicates  
+with the ground via the X-band RF system, processes commands, formats and     
+stores data, and autonomously protects the health of the spacecraft.          
+                                                                              
+OVERVIEW                                                                      
+                                                                              
+Data Flow and Spacecraft Interfaces                                           
+The NEARC&DH system has electrical interfaces throughout the spacecraft.Figure
+1 shows the C&DH system in relation to the other packages on-board the        
+spacecraft. The flow of data and electrical power over these interfaces is    
+managed by the embedded computers in the command and telemetry processors     
+(CTPs).                                                                       
+Command and telemetry signals pass between the RF receivers and transmitters  
+and the C&DH system as serial streams. Table 1 shows the bit rates supported  
+by the NEAR RF links. Formats of these serial streams are based on standards  
+published by the Consultative Committee for Space Data Systems (CCSDS).1 4    
+NEAR follows CCSDS standards regarding headers for transfer frames and        
+packets, Reed Solomon coding, convolution coding, and command operating       
+procedure version 1 (COP-1) for the "handshake" between ground station and    
+spacecraft for commanding. Commands use CCSDS telecommand transfer frame      
+structures containing nonpacketized NEAR-unique command bit formats. Telemetry
+data use the CCSDS transfer frame and packet structures. CCSDS headers provide
+virtual channel (VC) designations for telemetry frames. Assignment of VCs is  
+mission dependent. NEAR uses four VCs, referred to as VC0, VC1, VC2, and VC3. 
+These four channels have specific meanings, as defined in Table 2. Within a   
+telemetry frame are telemetry packets that contain data from one source, such 
+as a subsystem or subprocess. Table 2 lists the packets defined for NEAR. A   
+telemetry packet is designated by its application process identifier, a number
+from 0 to 13. The C&DH 1553B data bus is a time multiplexed, bidirectional dat
+interface5 for communication between bus controller and remote terminals. It i
+useful for all intraspacecraft messages except those that would overload its  
+1-megabit per second data rate. Dedicated high-speed serial circuits are      
+provided for the multispectral imagers that must transfer images at 2 megabits
+per second to the solid-state data recorders (SSDRs).                         
+Power switching merits a special dedicated control and status interface to the
+CTPs,because the capability for switching relay contacts under fault condition
+is critical. Relay contacts from power switching are used to turn spacecraft  
++28-V bus power on and off to other packages and in some cases to control     
+discrete functions.                                                           
+Discrete interface lines, i.e., single wires, are used for distributing the   
+1-Hz synchronization pulse (time tick) to spacecraft subsystems. A set of     
+discrete line interfaces is also provided for fault protection between the CTP
+and the attitude interface units.                                             
+                                                                              
+Redundancy and Cross Strapping                                                
+System reliability concerns dictated that the NEAR C&DH system have no        
+credible single point of failure that could compromise the mission. Figure 1  
+shows the configuration in which full hardward redundancy is provided for C&DH
+components. Cross strapping at critical points makes use of the redundancy.   
+Both CTP 1 and CTP 2 are powered and operational for the entire mission. The  
+command function is actively redundant, which means that both CTPs accept and 
+decode all uplink signals from both sides of the RF system. Control bits in   
+the command message headers prevent any command from being executed more than 
+once. Only one CTP at a time can be in control of telemetry generation, the   
+data recorders, and the 1553B data bus. The position of a relay in the power  
+switching unit is used to select the CTP used for active telemetry and 1553B  
+bus control. Thus, where spacecraft systems are redundant in a stand-by sense,
+the active side is selected by command. Finally, the 1553B data bus is a fully
+redundant system in itself. It features redundant cable harnessing, drivers,  
+and receivers, as well as a message parity error detection scheme with        
+automatic retry for failed messages.                                          
+Stored Command and Autonomous Fault Protection Capabilities                   
+Commands from the ground station can be executed as they are received or can  
+be stored for later execution. Up to 10,000 commands can be stored per CTP.   
+Stored commands can be time tagged for execution at a specific value of       
+mission elapsed time (MET), or they can be organized into a macro that is     
+called by another command. More details on stored commanding are described in 
+the section on C&DH software.                                                 
+Autonomous fault protection is based on autonomy rules that are uploaded and  
+stored in special locations in the CTP memory. Each rule can sense up to two  
+telemetry points, test them separately for limits, and logically combine the  
+test results. When a rule "fires," it causes a specific command to be executed
+Within each CTP are four levels of hardware watchdog timers to protect against
+processor failures. In order of time-out period, they are the RTX2010         
+microprocessor wait-state time-out (10.6 ms), the 1-s polling loop time-out   
+(1.001 s), the 1553B bus initializer time-out (4.0 s), and the "last resort   
+timer," which fires if no command is received from the ground for 12 days. The
+occurrence of any of these events will result in a processor hard reset. Such 
+reset reloads computer software and default autonomy rules from electrically  
+erasable programmable read-only memory (EEPROM) devices on the computer board 
+and resets all hardware.                                                      
+                                                                              
+Management of Stored Data                                                     
+NEAR mission scenarios require science and engineering data to be stored      
+on-board for later transmission to the ground station. As shown in Fig. 1, two
+SSDRs provide this function. They have capacities of 1024 and 512 megabits.   
+Recorder input output circuits are fully cross strapped between the two CTPs. 
+Either or both of the SSDRs can be operated at any time, according to mission 
+needs. Data recording rates are driven by the availability of science data    
+packets. This scheme gives maximum flexibility for allocating recorder        
+capacity. For NEAR, the quantity of science data delivered to the ground      
+station is limited by the bandwidth of the X-band RF downlink, not by the     
+capacity of the recorders. NEAR is the first APL spacecraft to use solid-state
+devices for spaceborne mass storage.                                          
+                                                                              
+Timing and Synchronization                                                    
+Timing for the NEAR C&DH system is driven by a crystal oscillator and fixed-  
+hardware divide chain in the active (bus controller) CTP.All of the frequencie
+for bit rates, 8-Hz 1553B bus minor frames, 1-Hz time tick,etc., come from thi
+chain; thus, all C&DH events are synchronized. Given the downlink telemetry   
+frame length of 8832 bits (from CCSDS), the oscillator frequency and downlink 
+bit rates were chosen so that all frame rates are multiples or even divisions 
+of the 1-Hz time tick. The MET is a count kept in CTP software of the 1-Hz tim
+ticks.A length of 32 bits allows MET to run continuously throughout the missio
+without rolling over. MET, which was set to zero at launch, is used to time ta
+all downlink telemetry frames and packets.                                    
+The value of MET is distributed once per second by messages on the C&DH 1553B 
+bus to each remote terminal. The remote terminal can get a 1-s time marker to 
+an accuracy of several milliseconds by detecting an event on the 1553B bus.   
+Three of the science digital processor units require more accuracy, and, as   
+shown in Fig. 1, receive a hardware 1-Hz time tick pulse from the CTP.        
+The MET and Coordinated Universal Time (UTC) are correlated on the ground.    
+Correlation is based on the measured UTC of receipt of a transfer frame, the  
+value of MET in that frame, and the known distance from spacecraft to ground  
+station.                                                                      
+                                                                              
+COMMAND and TELEMETRY PROCESSOR FLIGHT HARDWARE                               
+                                                                              
+The CTP flight hardware processes uplink command messages, formats downlink   
+telemetry data, and keeps spacecraft time. It is fully redundant and consists 
+of two mechanical assemblies, each housing six electronics boards. Figure 2 is
+a photograph of one of the two processor assemblies before final installation 
+of the flight cover. The following paragraphs describe CTP functionality, as  
+well as some of the processor's significant design features.                  
+                                                                              
+Functional Description                                                        
+Figure 3 is a functional diagram of one of the CTP assemblies. The processor  
+performs the following spacecraft functions:                                  
+1.     Processes real-time and time-tagged uplink command messages and outputs
+the appropriate command data over the 1553B data bus or one of several        
+dedicated command interfaces                                                  
+2.     Gathers and formats real-time and recorded science and housekeeping    
+data and downlinks the data at one of eight selectable downlink data rates    
+3.     Encodes downlink data in accordance with the commanded operating mode  
+using Reed Solomon and convolutional techniques                               
+4.     Formats and stores real-time science and housekeeping data on the      
+on-board SSDR for subsequent playback and reformatting of the data for        
+transmission on the downlink                                                  
+5.     Detects anomalous spacecraft conditions, including power bus           
+undervoltage conditions, attitude control system safing flags, and            
+out-of-limit housekeeping data, and reconfigures the spacecraft in accordance 
+with uploaded and stored control sequences.                                   
+6.     Maintains spacecraft time, distributes time data over the 1553B data   
+bus, and embeds time data in all formatted data outputs                       
+Both CTPs are always powered, one serving as the 1553B bus controller and the 
+other as a 1553B bus remote terminal. Each processor requires approximately 23
+mA at 128 V in its normal operating mode.                                     
+Board Descriptions                                                            
+Figure 4 shows the processor board, one of the six printed-wiring electronics 
+boards. All boards but the flight direct current (DC)/DC converter board are  
+22 3 20 cm. Each board performs specific processor functions.                 
+                                                                              
+Processor Board                                                               
+The processor board design is based on the RTX2010 microprocessor and the     
+United Technologies Microelectronics Center Summit MIL-STD-1553B bus          
+controller. Fault tolerance features added to the design include memory error 
+detection and correction electronics, as well as memory write protection. The 
+processor provides 32,000 words of EEPROM, which is used to hold program,     
+constants, and autonomy rules, and 64,000 words of random access memory.      
+                                                                              
+Housekeeping Board                                                            
+ The housekeeping board contains the state machine logic and interface        
+electronics necessary to gather and condition 31 single-ended analog voltage  
+channels, 31 differential analog voltage channels, 31 AD590 temperature       
+transducer output channels, 31 platinum wire temperature sensor channels, 24  
+digital telltale channels, and 8 serial digital channels once every second and
+to transfer the data to the processor board. Each housekeeping board contains 
+two separate state machine programs one for when the processor is functioning 
+as the bus controller, and one for when the processor is functioning as a     
+remote terminal on the 1553B data bus.                                        
+Encoder Board                                                                 
+The main purpose of the encoder board is to encode telemetry data received fro
+the processor board using Reed Solomon and convolutional coding standards and 
+to serially transmit the encoded data to the telemetry conditioning unit. The 
+convolutional encoding is rate 1/2, constraint length 7, or else rate 1/6,    
+constraint length 15. The encoding is done according to CCSDS recommendations 
+and is a means of keeping downlink transmissions from corrupting data. The    
+encoder board also contains redundant interfaces to the command detector units
+to collect telemetry data and to control the uplink data rate.                
+                                                                              
+Common Interface Board                                                        
+Dedicated serial digital data command outputs and power switching matrix      
+control signals are generated on the common interface board. Innovative design
+features include rise-time control on all serial data outputs to minimize     
+interference with other signals and interface overvoltage protection circuitry
+to ensure C&DH subsystem functionality should a converter fail in one         
+processor. In addition, the common interface board includes uplink command    
+interface logic and circuitry to control playback of the SSDR.                
+Transfer Frame Generator Board                                                
+The transfer frame generator board contains a precision temperature-compensate
+crystal oscillator and the timing chain logic necessary to maintain accurate  
+mission time and to generate all of the internal C&DH clock signals. Additiona
+processor functions performed on this board include gathering high-speed      
+science data from the Multispectral Imager, formatting Imager data into       
+transfer frames stored on the SSDR, and processing spacecraft bus voltage and 
+attitude anomaly flags.                                                       
+                                                                              
+DC/DC Converter Board                                                         
+The CTP power converter uses two modules produced by Interpoint to convert the
+128-V direct current power from the spacecraft into  15-V and                 
+15-V regulated DC power for use by the C&DH electronics. Another Interpoint   
+module is used to filter the input power to meet electromagnetic interference 
+requirements. The converter contains custom circuitry to provide output       
+overvoltage and low-input voltage turn-on protection.                         
+Package Design                                                                
+Each CTP flight unit consists of six multilayer electronics boards and a      
+motherboard, with overall dimensions of 24 3 24 3 17 cm and a weight of 5 kg. 
+The chassis of the C&DH is machined magnesium ZK 60A-75 with a minimum        
+thickness of 1.5 mm. The design uses an integral housing for improved thermal 
+control and includes separate compartments for the power converter and the    
+digital electronics to eliminate potential cross talk.                        
+The CTP board assemblies consist primarily of surface-mounted components      
+populated on both sides to minimize board area. The printed wiring board      
+designs use polyimide glass material with a high glass-transition temperature.
+To meet the requirements imposed by the launch environment, each board is sup-
+ported by a set of wedge lock card guides and a stiffener.                    
+CTP was designed for only conductive cooling to ensure that junction          
+temperatures are held within operational limits. For highly dissipative       
+devices, an additional aluminum heat sink was bonded to the board to improve  
+the heat path between the devices and the chassis.                            
+                                                                              
+C&DH SOFTWARE                                                                 
+                                                                              
+Background                                                                    
+The most pressing requirements that had to be addressed during the C&DH       
+software development effort were programmatic constraints. To meet the NEAR   
+launch date, C&DH software had to be ready for installation on the spacecraft 
+at the outset of the integration and test phase; other spacecraft components  
+could not be operated by the integration and test ground system without a     
+functioning C&DH. An early program decision was made that C&DH software could 
+not be changed via upload commands after launch. This placed added emphasis on
+early requirements definition and exhaustive testing of the implementation, as
+well as mandating a software design that could be flexibly configured by mode 
+commands and parameter uploads. In addition, NEAR development began when the  
+costly and very public failures of the Clementine and Mars Observer missions  
+were fresh reminders to NASA and the aerospace community of the importance of 
+autonomous fault detection and correction capabilities. Thus, early delivery, 
+an inflexible launch date, the need for configurable yet robust software, and 
+the need for extensive autonomous capabilities for health and safety were the 
+biggest design challenges.                                                    
+                                                                              
+C&DH Software Overview                                                        
+The NEAR C&DH software is implemented as compiled FORTH code resident in 64   
+kilobytes of main memory of the CTP RTX2010 microprocessor board. The FORTH   
+language was selected because the RTX2010 processor design uses a native      
+instruction set modeled after FORTH for optimum processor efficiency. FORTH on
+the RTX2010 also offers the advantage of supporting both interactive and      
+compiled software modes.                                                      
+The context diagram of Fig. 5 depicts the C&DH software environment and       
+external interfaces. The software is structured as an executive that is define
+by a 1-s major frame subdivided into eight 125-ms minor frames. The top-level 
+software functions controlled by the executive include the following: uplink  
+processor, command processor, 1553B bus manager, housekeeping data manager,   
+SSDR manager, downlink manager, autonomy functions, and maintenance functions.
+Highlights of these software processes are described in the following         
+paragraphs. Functional differences between the active (1553B bus controller)  
+and backup (1553B bus remote terminal) CTPs are described in the section on   
+the bus manager.                                                              
+                                                                              
+Executive                                                                     
+All C&DH software functions are scheduled with respect to the eight minor     
+frames, each driven by an 8-Hz hardware interrupt that also provides a marker 
+to define the 1-s major frame boundary. The executive is an interrupt service 
+routine that responds to every                                                
+8-Hz interrupt, increments minor frame count, and maintains MET in seconds.   
+All subordinate software routines are scheduled with respect to minor frames 0
+through 7. This scheduled polling approach for C&DH functions eliminates the  
+need for multitasking and additional interrupts, and it also results in a     
+simple deterministic design that can be readily tested. Functions are allocate
+by minor frame to ensure that processor use is distributed among tasks; stress
+testing under maximum load conditions verified that peak processor use within 
+any single 125-ms minor frame is 73 ms. Upon initial power-up or reset of the 
+CTP, the executive executes a number of self-test and initialization functions
+before enabling the interrupt to start the minor frame schedule.              
+                                                                              
+Uplink Processor                                                              
+CTP uplink hardware decodes received telecommand transfer frames and buffers  
+the binary data in first-in first-out memory. The uplink manager controls that
+interface and reads up to four buffered data bytes in each minor frame,       
+performs additional decoding, and detects when a full transfer frame has been 
+received from either of the redundant uplink decoders. Any transmission error 
+detected by the above logic is signaled to ground via the CCSDS status word   
+reported in downlink telemetry frames. If the received data have no           
+transmission errors, and if the frame has the expected sequence number and    
+contains commands that meet validity checks, the commands are extracted from  
+the frame and passed to the command processing task. Upon receipt of each     
+valid command, the uplink manager also resets a software-controlled CTP RF    
+watchdog timer that will time out if not reset within a commandable time      
+interval (from 1 h to 12 days), thereby triggering a stored command sequence  
+that autonomously switches the uplink hardware to the redundant side.         
+                                                                              
+Command Processor                                                             
+Command processing entails handling real-time commands received from the      
+uplink, managing storage of command sequences in C&DH memory, and dispatching 
+pending commands based on a priority scheme. Real-time command packets        
+containing an operation code targeting one of the NEAR instruments or the     
+attitude interface unit are routed to the 1553B bus manager for delivery to   
+that subsystem. Commands destined for the C&DH software are processed directly
+by the command processor; such commands include control and mode options      
+associated with the various C&DH functions. Some C&DH commands support        
+definition of autonomy rules and upload of command sequences (macros) to be   
+stored in memory for later execution. The command processor also accepts data 
+load command and, via a hardware serial data interface, delivers control bits 
+to the SSDRs, command detector units and telemetry conditioning units (none of
+which is accessible via the 1553B data bus). Last, relay commands are dis-    
+patched by controlling a hardware interface with the power switching unit.    
+Command manager software prepares a command history and error status that is  
+stored in memory for diagnostic use.                                          
+Once per minor frame, the queue of pending commands is examined and the       
+command with the highest source priority is executed. The source priority, in 
+high-to-low order, is real-time command, spacecraft separation sequence, macro
+triggered by safing autonomy rule, macro triggered by housekeeping autonomy   
+rule, a command sent from the attitude interface unit, and a time-tagged macro
+scheduled to execute at the current MET. A macro queued for execution is      
+processed to completion unless a command from a higher priority source is     
+received, at which point the macro is suspended; it resumes once the          
+intervening command is completed.                                             
+                                                                              
+1553B Bus Manager                                                             
+A 1553B data bus is the means by which the C&DH software communicates with the
+four NEAR instruments, the two redundant attitude interface units, and the    
+backup CTP. The primary CTP, which serves as bus controller, knows each of    
+these systems as a remote terminal identified by an assigned index. Each      
+subsystem contains a 1553B controller chip that arbitrates exchange of data   
+via shared memory subdivided into receive subaddresses and transmit           
+subaddresses.                                                                 
+Bus manager software schedules and controls all of these data exchanges; it   
+also manages various internal self tests and retry strategies associated with 
+the redundant bus architecture. Software interaction with the bus controller  
+chip is managed by delivering control blocks that direct bus activities as    
+delineated in a schedule that assigns transactions by minor frame.            
+Once per major frame, the bus manager picks up housekeeping data provided by  
+each of the remote terminals and provides these data to the housekeeping data 
+manager. The bus manager also supports pickup of science or engineering data  
+packets from designated subsystems, which are provided to the SSDR manager    
+(VC0) or the downlink manager (VC3).Each remote terminal can deliver up to two
+VC0 packets per second. Other bus manager functions include distribution of   
+MET and a time synchronization message to all remote terminals, as well as    
+preparation of bus status statistics maintained for diagnostic use.           
+One of the two CTPs is always designated as the backup CTP, which means it    
+actually appears to the active CTP as a remote terminal. The C&DH software on 
+the backup CTP senses that it is not "active," and its bus manager software   
+reverts to a different status, in which it receives commands from the active  
+CTP, provides housekeeping and a status message to the active CTP, and receive
+MET from the active CTP. The backup CTP can dispatch commands, but it collects
+only a subset of the housekeeping data and does not collect or provide packets
+to the SSDR or the downlink VCs.                                              
+                                                                              
+Housekeeping Data Manager                                                     
+Once per major frame, housekeeping software concatenates housekeeping data    
+collected from all NEAR subsystems and the CTP housekeeping board to create   
+the spacecraft housekeeping packet on which autonomy rules operate and which  
+is downlinked at a period dependent on telemetry rate and mode. The software  
+also prepares the part of the housekeeping packet that contains internal C&DH 
+status information. Other data inserted into the housekeeping packet are      
+computed telemetry points, which comprise an arithmetic combination of two or 
+more collected data elements. Upon receipt of a command to do so, the data    
+manager delivers to the SSDR manager a copy of the current housekeeping packet
+for storage on the recorder.                                                  
+Several bookkeeping functions are provided by data manager software: a stored 
+table retains a history of high and low values for all telemetry points;      
+snapshots of the housekeeping packets are stored in memory when an error is   
+autonomously detected; and various one-bit telltales are maintained to serve  
+as indicators of problem conditions. Some of these telltales are "sticky," in 
+that they signal an error, and a ground command is required to clear them.    
+Solid-State Data Recorder Manager                                             
+The recorder manager controls the SSDR hardware interface that accepts data to
+be recorded. Once per second,the buffer of accumulated VC0 packets is examined
+Sets of three packets are extracted, packaged into a VC0 transfer frame, and  
+delivered to the recorder interface. As many as five VC0 transfer frames per  
+second are written to the recorder, depending on how ground commands have     
+configured remote terminals to deliver packets. To record images, a hardware  
+formatter (Fig. 5) interfaces with the Multispectral Imager to read image data
+from a high-speed serial line. Because the image bits must be packaged into   
+VC2 transfer frames, the SSDR manager task is notified (via the 1553B bus)    
+when an image is to be collected; the task then prepares the 184 transfer     
+frame wrappers needed by the formatter to encapsulate one image as it is      
+delivered to the recorder.                                                    
+                                                                              
+Downlink Manager                                                              
+The downlink manager can be commanded to configure the downlink in any of     
+eight transmission rates and five different modes that designate recording    
+mode and interleaving of real time (VC3) and SSDR playback (VC1) telemetry    
+frames. This flexibility was mandated by mission requirements that vary       
+dramatically, depending on mission phase (launch mode, cruise phase,          
+at-asteroid operations) and state (safe holds vs. normal operations). The     
+downlink manager keeps track of the current transmission rate and builds a    
+telemetry transfer frame when the downlink hardware has finished transmitting 
+the previous frame. When directed to transmit a frame, the software manages a 
+downlink interface that alternates between two buffers at the occurrence of a 
+major frame marker. The same interface controls downlink hardware frequency   
+and encoding options, as set by ground command sent to the CTP. The downlink  
+manager mediates changes to these parameters so that they take effect only on 
+telemetry frame boundaries. At the slowest downlink rate, a frame is trans-   
+mitted every 896 s; at the fastest rate three frames are transmitted per      
+second. Because of the variable frame transmit rate and various interleave    
+modes, downlink software incorporates the handshaking necessary for the bus   
+manager to notify remote terminals when VC3 packets will go in the downlink in
+the following major frame. The C&DH telemetry mode specifies (via command) the
+interleaving of VC3 and VC1 frames. In a second in which a VC3 frame is to be 
+prepared, the current housekeeping packet is inserted into slot 1 in the      
+frame. Slots 2 and 3 are filled with packets collected from designated remote 
+terminals. Slots 2 and 3 can also be assigned as memory dump packets, in which
+case the downlink manager prepares packets that contain data words read from  
+designated C&DH memory locations. The CCSDS frame header and trailer          
+(including the status word that alternates between reporting the uplink status
+for the two CTPs) are added to the three packets, and the frame is written to 
+the downlink buffer. At the higher downlink rates, when more than one VC3     
+frame is transmitted per second, the second and third VC3 frames are fill     
+frames to avoid reporting of duplicate data.                                  
+Similarly, for a 1-s period in which the telemetry mode calls for a VC1 frame 
+to be transmitted, downlink software manages the SSDR playback interface to   
+read data bytes played from the recorder. One thousand seventy four bytes of  
+recorder data are encapsulated in VC1 frame wrappers, and the appropriate     
+number of frames is delivered to the downlink buffer.                         
+                                                                              
+Autonomy Functions                                                            
+Autonomous fault detection and correction functions are implemented in the for
+of uploadable monitor rules. The autonomy manager maintains 165 rules. Each   
+rule identifies one or two telemetry points in the housekeeping packet,       
+optional arithmetic or masking operations to be performed on those data, and a
+logical compare operation that results in a Boolean flag that is "true" if the
+criterion is met for the designated number of consecutive housekeeping packets
+When evaluated as true, a rule causes the specified stored command macro to be
+queued for execution. Rules are evaluated in priority order, so high-priority 
+safing functions take precedence. Commands to the autonomy manager can load or
+clear rules, turn individual rules or sets of rules on or off, or disable     
+checking of all rules in either of two subsets: safing rules that are stored  
+by default upon CTP power-up, or housekeeping rules that are used for less    
+critical monitoring functions. The safing rules are the means by which mission
+safing modes are implemented. The spacecraft separation sequence, Sun-safe    
+mode, Earth-safe mode, power system monitor functions, and attitude interface 
+unit monitor functions are all implemented as stored command macros triggered 
+by autonomy rules. This rule-based approach to meeting autonomy requirements  
+allowed C&DH design to proceed, even when autonomy modes and actions had not  
+been fully specified at the mission level. The autonomy manager is basically a
+housekeeping checker and rule evaluation engine that queues stored commands.  
+This software was thoroughly tested under maximum stress conditions before    
+delivery to the spacecraft. Later in the integration phase, the actual mission
+rules and macros were installed. What seemed at first to be a simple rule-base
+design actually became quite complex when it came to defining the checks and  
+command responses needed to coordinate safing for all spacecraft subsystems.  
+For example, a rule may trigger a command sequence that in turn disables sets 
+of rules and enables others. Mission rule and macro definition was done by the
+systems engineering team, which coordinated all subsystems and defined        
+cross-subsystem tests. The autonomy manager performs several bookkeeping      
+functions to provide data that summarize rule-checking status. An autonomy    
+history table is maintained, and a handshake to the data manager and command  
+processor ensures that triggered macro commands and housekeeping packet       
+snapshots are stored in memory.                                               
+                                                                              
+Maintenance Functions                                                         
+Software maintenance functions are distributed among the minor frame schedule 
+as small tasks requiring little processing time. Such functions include       
+resetting a watchdog timer that times out if a software error occurs, thereby 
+causing a processor reset; stepwise reading of all electronically correctable 
+memory to cause the hardware to correct any single-bit errors that may have   
+occurred; and computing checksums over blocks of memory so the checksum table 
+can be dumped by command to verify that current memory contents match the     
+image model maintained by the mission operations team.                        
+                                                                              
+POWER SWITCHING UNIT                                                          
+                                                                              
+Power switching for the NEAR spacecraft is a single unit that provides switch 
+power and signals for the operation of the spacecraft. The unit is capable of 
+64 on/off relay commands. Design of the unit was adapted from similar units   
+used on the Midcourse Space Experiment spacecraft.                            
+Functional Description                                                        
+The unit contains a motherboard and six 18 3 18 cm plug-in cards, two         
+driver/telemetry boards, and four relay boards. The boards are mounted in a 23
+3 23 3 25 cm chassis. Two types of latching relays provide the various        
+switching functions, with each relay selected according to the power          
+requirements of the users. Relay contact ratings are 2 and 10 A. In addition, 
+2-A nonlatching relays generate high-level pulse commands. The interface      
+between the spacecraft power bus and the subsystems is through the two 50-pin 
+"D" connectors mounted on each relay board, one for power in and the other for
+switched power out. Table 3 lists the characteristics of the power switching  
+unit assembly; Table 4 shows the types, contact ratings, and quantities of    
+relays.                                                                       
+                                                                              
+Circuit Description                                                           
+The two driver/telemetry boards provide redundant relay coil drive and relay  
+contact position telemetry. Relay drive circuits are configured in an 8 3 8   
+matrix. Each driver/telemetry board accepts an 8-bit parallel command word    
+from one of the two command processors and decodes the command into the       
+appropriate signal to operate the relays.The driver/telemetry boards also     
+contain parallel-to-serial shift registers with output interfaces for         
+telemetering the relay contact positions. All latching relays are monitored.  
+The telemetry data stream one from each driver/telemetry board, supplies data 
+to one of the redundant CTPs. All command decoding and telemetry logic is     
+implemented with CD4000B series integrated circuits. Relay coil drive circuits
+use discrete transistors.                                                     
+                                                                              
+Power Requirements                                                            
+The unit operates with a nominal 128-V and a                                  
+15-V input to each driver/telemetry board. The                                
+128-V power, supplied by the spacecraft battery, operates the command decoding
+and relay coil drive circuitry. The 15-V power operates the telemetry circuits
+                                                                              
+FLIGHT COMPUTER                                                               
+The NEAR flight computer is a Honeywell model HSC-E, which is a three-slice   
+assembly consisting of two independent processor slices and a dual-power      
+converter as the middle slice. Figure 6 is a composite photograph of the      
+flight hardware chassis and circuit boards, with a summary of attributes. The 
+HSC-E occupies less than 3770 cm3 and weighs 5 kg. One processor and one-half 
+of the dual-power converter constitute a computer element called a string.    
+The two strings can be operated simultaneously, or one can be active and one  
+can be in standby (hot or cold) mode. Each string operates from a 128-V       
+source, drawing, nominally, 8 W. Each processor slice contains a generic very 
+high-speed integrated circuit spaceborne computer (GVSC), 512,000 words of    
+static random access memory, 16,000 words of start-up read-only memory,       
+256,000 words of EEPROM, and input/output (I/O).                              
+The central processing unit function consists of a GVSC chip set and associate
+processor support logic. The GVSC chip set implements the MIL-STD-1750A6      
+instruction set. Processor support logic is implemented in a gate array with  
+the I/O control functions. All memory access goes through the GVSC memory     
+management unit and block protect unit. The memory management unit maps       
+logical addresses to physical addresses in 4000 pages via 16 sets of page     
+registers and provides lock and key protection for 4000 blocks of memory to   
+prevent unauthorized accesses. The HSC-E processor supports four              
+I/O interfaces: 1553B, serial I/O, parallel I/O, and a test port.             
+                                                                              
+PRE-INTEGRATION TESTING AND TESTBED SIMULATOR                                 
+The NEAR C&DH system consists of five chassis assemblies that are structurally
+and thermally attached to spacecraft honeycomb panels and powered by the 128-V
+bus. Each item received comprehensive stand-alone testing and a formal pre-   
+integration review of test results before it was installed on the spacecraft. 
+These tests included                                                          
+o       Full functional test at ambient conditions                            
+o       Hot and cold temperature tests in air                                 
+o       Powered 3-axis sinusoidal and random vibration tests                  
+o       Hot and cold soaks and temperature cycles in thermal vacuum           
+Additional compatibility tests were performed to verify all of the interfaces 
+shown in Fig. 1. These tests involved connecting the breadboard CTP to        
+prototypes of the other units one at a time. To prove the interfaces, commands
+were sent, telemetry verified, 1553B bus traffic analyzed, waveforms confirmed
+etc. This effort led to well-understood interfaces and exceptionally trouble- 
+free spacecraft integration.                                                  
+Software testing of the RTX2010 microprocessor code in the CTP was initially  
+performed by the development team. Additional independent validation and      
+verification testing was done by an outside contractor. Finally, a testbed    
+simulator for the ground station evolved from an early command and telemetry  
+test between the CTP and the spacecraft electrical ground support equipment.  
+The breadboards and CTP bench test equipment were preserved for use by the    
+NEAR mission operations team. The team uses this local testbed to try out     
+operational commands and memory loads and to connect various exercises with   
+prototype instruments and the SSDR.                                           
+Test sets were developed specifically for each of the flight units previously 
+discussed. The most elaborate of the test sets is the CTP bench test equipment
+This equipment was custom designed for the NEAR CTP by Telenetics, Inc., in   
+Columbia, Maryland. Its scope was established by the need to drive every CTP  
+input and to monitor every CTP output under closed-loop control by a computer.
+Telenetics implemented this bench test equipment with off-the-shelf VME-based 
+modules augmented by custom-designed interface boards where necessary. The    
+control software was written in C language and runs on a 486 PC under the OS2 
+operating system. Originally planned as a hardware tester, the flexibility of 
+the design lent itself to expanding requirements during CTP development. This 
+bench test equipment became the platform for independent validation and       
+verification testing of the CTP software. Its capability for negative testing,
+such as sending a deliberately bad command message and seeing that it is      
+rejected, was used extensively during these tests. The bench test equipment is
+now incorporated into the testbed simulator that is used routinely by the NEAR
+mission operations team.                                                      
+                                                                              
+CONCLUSION                                                                    
+                                                                              
+The NEAR CTPs and power switching unit were designed, fabricated, and tested a
+APL. Schedule and cost constraints from the NASA Discovery program dictated a 
+"keep it simple" approach and the use of design heritage as much as possible. 
+The outside contracts with SEAKR Engineering and Honeywell were closely       
+monitored by APL staff with many years of technical and contract management   
+experience. The C&DH software was developed by a three-person team that define
+unit tests and an acceptance test procedure using bench test equipment that   
+could simulate spacecraft subsystems. The preliminary build of C&DH software  
+was delivered to the spacecraft for integration in June 1995, 9 months after  
+the software requirements were signed off (Artis7). The CTPs were loaded with 
+new C&DH software a total of 22 times during integration and test and prior to
+launch. Eight of these revisions incorporated a minor code change; all other  
+revisions incorporated an updated set of default mission autonomy rules and   
+stored macros. After a full year in cruise mode and a flyby of the asteroid   
+Mathilde, NEAR operations experience has shown the success of the C&DH        
+implementation.                                                               
+                                                                              
+REFERENCES                                                                    
+                                                                              
+1 Consultative Committee for Space Data Systems (CCSDS), Telecommand Part 1   
+Channel Service Architectural Specification, Blue Book, CCSDS 201.0-B-1, NASA 
+Communications and Data Systems Division (1987).                              
+2 Consultative Committee for Space Data Systems (CCSDS), Telecommand Part 2   
+ Data Routing Service, Blue Book, CCSDS 202.0-B-2, NASA Communications and    
+ Data Systems Division (1992).                                                
+3 Consultative Committee for Space Data Systems (CCSDS), Packet Telemetry,    
+ Blue Book, CCSDS 102.0-B-3, NASA Communications and Data Systems Division    
+ (1992).                                                                      
+4 Consultative Committee for Space Data Systems (CCSDS), Telemetry Channel    
+ Coding, Blue Book, CCSDS 101.0-B-3, NASA Communications and Data Systems     
+ Division (1992).                                                             
+5 Department of Defense, Aircraft Internal Time Division Command/Response     
+ Multiplex Data Bus, MIL-STD-1553B (1978), with Notice II (1986).             
+6 Department of Defense, Sixteen-Bit Computer Instruction Set Architecture,   
+ MIL-STD-1750A (2 Jul 1980).                                                  
+7 Artis, D. A., NEAR Command & Data Handling System Software Requirements     
+Specification, Drawing 7352-9066, JHU/APL, Laurel, MD (1994).                 
+                                                                              
+ACKNOWLEDGMENTS. We thank Joseph F. Bogdanski, Jr., Richard F. Conde, Binh Q. 
+Le, and Donald L. Mitchell for their many contributions to the NEAR C&DH      
+designs. George Theodorakos worked closely with them, carrying out the design 
+of two boards in the CTP. Susan C. Lee defined the mission autonomy rules and 
+safing mode macros. APL's Technical Services Department designed and fabricate
+the printed wiring board and chassis for the CTP and power switching unit.    
+Howard S. Feldmesser led this effort very effectively. Kenneth Nellis and Mark
+Hall of Telenetics, Inc., performed independent validation and verification   
+testing and circuit board design for the indispensable CTP bench test         
+equipment. Honeywell program managers Mack Flakes and Robert Parker delivered 
+the flight computer on time. We also owe thanks to NASA for sponsorship of the
+NEAR program. This work was supported under contract N00039-95-C-0002 with the
+U.S.Navy.                                                                     

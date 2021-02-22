@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Subnode</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="/pds-staging/archive/FAQ/FAQ.html">FAQ</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>FAQ</li>
+        </ol>    
+        <center>
+        <h1> Frequently Asked Questions </h1>
+        </center>
+        <br>
+
+        <style>
+            .accordion {
+              background-color: #eee;
+              color: rgb(7, 7, 7);
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+            
+            .active, .accordion:hover {
+              background-color: #ccc; 
+            }
+            
+            .panel {
+              padding: 0 18px;
+              display: none;
+              background-color: rgb(10, 10, 10);
+              overflow: hidden;
+            }
+
+            h3 {
+                font-size: 110%;
+
+            }
+            </style>
+        
+        <button class="accordion">General PDS</button>
+        <div class="panel">
+        <h3>Q:I found a broken link or bad data file, how do I report it?</h3>
+            <p>A:</strong>Use the "Feedback" tab on the side of the page.</p>
+            
+            <h3>Q:What is FITS? </h3>
+            <p><strong>A:</strong> FITS is a transport format originally designed for moving observational data between different computer architectures. Many FITS files are, structurally at least, compliant with PDS4 data structure requirements, but care must be taken to ensure that the FITS structures are not being abused, or that logically distinct data objects are not being packed into a single data structure, which would negate PDS4 compliance.
+            </p>
+            
+            <h3>Q:If there is both a PDS3 and PDS4 version of the data, which should I use?</h3>
+                <p><strong>A:</strong>We recommend using PDS4 as it might have more meta data available. However, the data themselves are the same in PDS3 and PDS4
+                </p>
+            
+        </div>
+
+        <button class="accordion">Finding Data</button>
+        <div class="panel">
+            <h3>Q:How do you search in the PDS? </h3>
+            <p><strong>A:</strong>There are multiple search tools available for PDS, search tools are available on the individual node pages (Atmospheres, Small Bodies etc). One the main PDS page there is a link to search all the PDS nodes. https://pds.nasa.gov/datasearch/data-search/
+            </p>
+
+            <h3>Q: How can I find all the data available on a given asteroid or comet?</h3> 
+            <p><strong>A:</strong>Try the <a href="https://sbnapps.psi.edu/ferret/"> Ferret </a></p>
+
+            <h3>Q: I'm working with an asteroid which was visited by a spacecraft.  How can I select image data on a specific area or crater of the asteroid?</h3>
+            <p><strong>A:</strong>Try the <a href="https://sbib.psi.edu/">Small Bodies Image Browser (SBIB) </a></p>
+            
+            <h3>Q: I can't find the data I need.  Help! </h3>
+            <p><strong>A:</strong>Use the archive <a href="https://sbn.psi.edu/pds-staging/"> front page</a> to find data by mission, by data type, or by target type.  If you still can't find what you need, send a request through the Feedback tab on the side of the page and we will help you.</p>
+            
+            <h3>Q: I found the table of data I need but how do I find out what the columns mean or what the units are on the columns?</h3>
+            <p><strong>A:</strong> Each data file has a separate label file with the same filename, but with extension either .lbl or .xml.  Open this file to find the column definitions and other information about the data file. Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer"> PDS4 Viewer </a>which displays the column headers with the data </p>
+
+        </div>
+
+        <button class="accordion">Archiving</button>
+        <div class="panel">
+        <p><div>
+            <h3>Q:Why can't you archive normal image format like JPG and png?</h3>
+           <p><strong>A:</strong>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and further processing degrades the image further. </p>
+           
+           <h3>Q:Can you archive TIFF?  </h3>
+            <p><strong>A:</strong>Some TIFFs can be archived. The TIFF must be uncompressed, among other requirements. (Link to the TIFF standard) </p>
+            
+            <h3>Q:How can I validate my FITS files?</h3>
+            <p><strong>A:</strong>Fits compliant validation or PDS4 compliant validation (they are not the same.) For fits compliant validation
+                the <a href="https://fits.gsfc.nasa.gov/fits_verify.html">NASA FITS verifier</a> is a useful tool.</p>
+                
+            <h3>Q:What metadata is useful to be put into a Dictionary?</h3>
+            <p><strong>A:</strong> Definitions created by a data preparer, an XML Schema file and an XML Schematron file used by software for label validation, a human-readable document in which the definitions, specifications, and constraints have been abstracted to facilitate use by human developers </p> 
+                
+            <h3>Q:How good must my documentation be? </h3>  
+            <p><strong>A:</strong>We archive for 50 years.  Needs to describe things clear enough to let someone use/validate it without being able to ask questions.</p>
+                      
+    
+        </div>
+
+        <button class="accordion">Images</button>
+        <div class="panel">
+        <h3>Q:When do you use a Mission Dictionary vs. Discipline Dictionary? </h3>
+        <p><strong>A:</strong>A data defines the meaning and structure of classes and attributes. When used in the context of XML files, it can also constrain the content within an XML element. A discipline Dictionary is intended to provide a place for scientists to write definitions for the SBN discipline dictionary attributes.</p>
+          
+        </div>
+
+
+        <button class="accordion">Use of Data</button>
+        <div class="panel">
+            <h3>Q:How do I find out how to use and read PDS Dictionaries</h3>
+            <p><strong>A:</strong><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 wiki</a></p>
+            
+            <h3>Q:Where do i find a data dictionary?</h3>
+            <p><strong>A:</strong> <a href="https://pds.nasa.gov/datastandards/dictionaries/index-1.15.0.0.shtml">NASA PDS Dictionaries index </a>
+            </p>
+        
+        </div>
+
+    
+        
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+    
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+                
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+                }</script>
+
+
+    
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

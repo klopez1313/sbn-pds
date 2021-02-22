@@ -1,0 +1,170 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE              = "2001-09-04 APL:DBH Auto-generated"        
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-MSI-2-EDR-CRUISE4-V1.0"            
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "NEAR MSI IMAGES FOR CRUISE4"              
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = IMAGE                                      
+  START_TIME                     = 1998-12-24T00:00:00.000                    
+  STOP_TIME                      = 2000-01-10T23:59:59.999                    
+  DATA_SET_RELEASE_DATE          = 2001-09-04                                 
+  PRODUCER_FULL_NAME             = "DOUGLAS B. HOLLAND"                       
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_TERSE_DESCR           = "                                          
+      NEAR EDR volume sets contain a single data set, from one instrument     
+      and one mission phase (defined in the phase table in /AAREADME.TXT)."   
+  DATA_SET_DESC                  = "                                          
+                                                                              
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+      NEAR EDR volume sets contain a single data set, from one instrument     
+      and one mission phase (defined in the phase table in /AAREADME.TXT).    
+                                                                              
+      The data set directory structure is shown below. The first volume of    
+      the set is the only volume which contains CATALOG, DOCUMENT             
+      and other non-data subdirectories. Subsequent volumes contain           
+      only DATA and INDEX subdirectories in order to minimize duplication.    
+                                                                              
+      Volume 1 directory structure:                                           
+                                                                              
+          |-CALIB----|-MSIBANDPASS-                                           
+          |-CATALOG--                                                         
+          |                                                                   
+          |          |-INSTRUMENT--|-MSIPLANS---                              
+          |-DOCUMENT-|                                                        
+          |          |-MISSION-----|-OVERVIEW---                              
+          |                        |-TECHDIGEST-                              
+          |                                                                   
+          |-GEOMETRY-                                                         
+                                                                              
+      Volume 2-n directory structure                                          
+                                                                              
+          |-BROWSE---                                                         
+          |-DATA-----                                                         
+          |-INDEX----                                                         
+                                                                              
+                                                                              
+      Directory Name  Description                                             
+      --------------  -------------                                           
+                                                                              
+      BROWSE          The directory will contain subdirectories yy_doy which  
+                      will contain the .GIF files for that day. These files   
+                      are made up of up to 54 'thumbnail', reduced-size,      
+                      geometrically rectified images scaled in brightness from
+                      the minimum to maximum value in the image. This provides
+                      at a glance an overview of the images taken on that day.
+                      If more than 54 images were taken, there will be        
+                      multiple .GIF files, depending on the number of images. 
+                      The corresponding labels are also found in these        
+                      subdirectories.                                         
+                                                                              
+      CALIB           Calibration tables and corresponding labels for the     
+                      instrument when available.                              
+                                                                              
+      CATALOG         Templates for the mission, instrument host,             
+                      instrument, and data set.                               
+                                                                              
+      DATA            Instrument FITS data files and data labels.             
+                                                                              
+      DOCUMENT        Documentation of the instrument and mission  are        
+                      provide as ASCII text and may also be available in      
+                      the original PostScript, PDF or MMS Word format.        
+                      Articles from the Johns Hopkins APL Technical Digest    
+                      are provided for an overview of the NEAR mission.       
+                      The instrument subdirectory contains documentation      
+                      describing the instrument and the in flight             
+                      calibration of instrument data.                         
+                                                                              
+      GEOMETRY        This directory contains only a GEOMINFO.TXT file.       
+                      A separate GEOMETRY volume contains all of the SPICE    
+                      kernels in text transfer format for the mission phase   
+                      and the supporting the supporting documentation.        
+                                                                              
+      INDEX           INDEX TABLES for this CD and the volume set             
+                      describing times and key data file parameter values.    
+                                                                              
+     -------------------------------------------------------                  
+                                                                              
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+      The definitions for the image parameters and other keywords are         
+      given in the file MSIDEFINITIONS.TXT contained in the                   
+      DOCUMENT/INSTRUMENT subdirectory.                                       
+                                                                              
+                                                                              
+    Data                                                                      
+    ====                                                                      
+      The data are in the form of FITS files with attached FITS headers       
+      and detached PDS labels. Data files contain one image per file.         
+                                                                              
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      GEOMETRY and CALIB subdirectories are described above.                  
+                                                                              
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      This data set is released as a CDROM set.                               
+                                                                              
+                                                                              
+    Processing History                                                        
+    ==================                                                        
+      The processing history includes no background, noise, geometry or       
+      other corrections."                                                     
+                                                                              
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+    Data Quality Flag                                                         
+    =================                                                         
+      Each data file label includes a quality flag string in the              
+      DATA_QUALITY_ID keyword, extracted from the FITS keyword NEAR-008 of    
+      the original data label. The fields of this keyword are defined         
+      below.  Data quality defects flag is raised when there is missing       
+      data other fields informational and not quality related. The eight      
+      characters of this field are described below.                           
+                                                                              
+      Definition - Data Quality Index                                         
+                c0 = Data Quality Flag (0=good,1=flagged for quality          
+                     defects)                                                 
+                c1 = Instrument number for FC, CTP and AIU (1 or 2)           
+                c2 - c6 = Processing Flags not quality related                
+                c7 = CCDS Source (0=VC0, 1=VC1, 2=VC2, 3=VC3)                 
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This data set underwent external peer review within PDS in June,        
+      2000."                                                                  
+                                                                              
+    END_OBJECT                     = DATA_SET_INFORMATION                     
+                                                                              
+                                                                              
+    OBJECT                          = DATA_SET_TARGET                         
+     TARGET_NAME                    = SOLAR                                   
+    END_OBJECT                      = DATA_SET_TARGET                         
+                                                                              
+    OBJECT                          = DATA_SET_HOST                           
+     INSTRUMENT_HOST_ID             = "NEAR"                                  
+     INSTRUMENT_ID                  = "MSI"                                   
+    END_OBJECT                      = DATA_SET_HOST                           
+                                                                              
+    OBJECT                          = DATA_SET_REFERENCE_INFORMATION          
+      REFERENCE_KEY_ID              = "CHENGETAL1998"                         
+    END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION          
+                                                                              
+    OBJECT                          = DATA_SET_REFERENCE_INFORMATION          
+      REFERENCE_KEY_ID              = "HAWKINSETAL1997"                       
+    END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION          
+                                                                              
+    OBJECT                          = DATA_SET_REFERENCE_INFORMATION          
+      REFERENCE_KEY_ID              = "MURCHIE&PIETERS1996"                   
+    END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION          
+                                                                              
+  END_OBJECT                        = DATA_SET                                
+                                                                              
+END                                                                           

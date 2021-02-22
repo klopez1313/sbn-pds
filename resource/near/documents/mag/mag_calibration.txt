@@ -1,0 +1,215 @@
+Calibration of NEAR Magnetometer Data                                         
+                                                                              
+Calibration of the magnetometer data consisted of two major                   
+steps.  The first step was to evaluate the basic sensor                       
+response to the known field in the pre-flight environment.                    
+The second step was to evaluate the sensor alignments and                     
+spacecraft field in the in-flight environment.  The details                   
+of these steps have been described by Lohr et al. [1997] and                  
+Anderson et al. [2001], respectively.   Here we present a                     
+brief summary of the results from these publications.  The                    
+software packages, mag_sdc_proc.doc and mag_sci_proc.doc,  used               
+for data reduction have been included as an example of an                     
+algorithm for the data reduction methodology.                                 
+                                                                              
+                                                                              
+1.  Pre-flight results                                                        
+                                                                              
+The pre-flight calibration evaluated the linearity,                           
+orthogonality and cross talk of the sensor block for each                     
+axis and each dynamic range.  Table 1 shows the list of the                   
+linearity tests performed for ranges 7 through 3 at GSFC and                  
+for ranges 7 through 0 at APL.  Pre-flight sensor                             
+calibration provided absolute gain calibrations to 0.1%                       
+(0.5%) in the least (most) sensitive range and orientation                    
+to 1 arc minute.                                                              
+                                                                              
+                                                                              
+            Table 1 Conversion from counts to nT.                             
+               (Table 2 of Lohr et al. [1997])                                
+                                                                              
+  NEAR Magnetometer Calibration: Counts/nT (20 bit Values)                    
+                                                                              
+Range   Component    GSFC Result      APL Result     % Dev.                   
+  0         X                        124850+/-1300                            
+            Y                        126700+/-920                             
+            Z                        125700+/-1400                            
+  1         X                         32320+/-55                              
+            Y                         32316+/-66                              
+            Z                         32596+/-24                              
+  2         X                        7927.5+/-6.3                             
+            Y                        7981.2+/-6.7                             
+            Z                        8015.5+/-2.9                             
+  3         X          2019.3           2020.0       -0.035                   
+            Y          2027.1           2027.5       -0.020                   
+            Z          2038.8           2040.3       -0.074                   
+  4         X          509.90           510.06       -0.031                   
+            Y          508.94           508.85        0.018                   
+            Z          513.12           513.61       -0.095                   
+  5         X          129.75           129.83       -0.062                   
+            Y          129.34           129.32        0.015                   
+            Z          130.51           130.66       -0.115                   
+  6         X          31.867           31.872       -0.016                   
+            Y          31.869           31.871       -0.006                   
+            Z          32.087           32.106       -0.059                   
+  7         X          8.1103           8.1143       -0.049                   
+            Y          8.1010           8.1030       -0.025                   
+            Z          8.1616           8.1717       -0.124                   
+                                                                              
+2.  In-flight results                                                         
+                                                                              
+                                                                              
+2.1.  Final adjustment matrix                                                 
+                                                                              
+In-flight data, including those acquired during the Earth                     
+swing-by of January 22-23, 1998, were used to obtain the                      
+gain factors and the precise sensor orientation.  From                        
+comparison of the measured and IGRF-1995 model magnetic                       
+fields for the swing-by period, the final adjustment matrix                   
+in the spacecraft coordinates was determined to be:                           
+                                                                              
+ | Bx |            |  1.0005   0.0314   0.0018  |   | Bx |                    
+ | By |         =  | -0.0251   0.9999   0.0073  | * | By |         (1)        
+ | Bz |            | -0.0039  -0.0038   0.9996  |   | Bz |                    
+        Final-SC                                           Obs-SC             
+                                                                              
+To obtain the final vector fields (Bx, By, Bz)Final-SC, one                   
+converts the raw data (counts) from each sensor using the                     
+conversion factors defined in Table 1, removes spacecraft                     
+fields described in the following section to obtain (Bx, By,                  
+Bx)Obs-SC, and then use the matrix operation defined in                       
+Equation (1).                                                                 
+                                                                              
+                                                                              
+2.2.  Spacecraft fields                                                       
+                                                                              
+The spacecraft fields evaluated after launch are summarized                   
+in Table 2, which is taken from Anderson et al. [2001].                       
+The following is a brief description of the sources of                        
+spacecraft fields.                                                            
+                                                                              
+2.2.1. Magnetic latching valves                                               
+                                                                              
+The static magnetic field is due mostly to the magnetic                       
+latching valves used in the propulsion system.  The field                     
+was reduced to less than 200 nT by placing two permanent                      
+magnets on the top deck.  Long-term cruise measurements                       
+determined the field to an accuracy of 0.5 nT.                                
+                                                                              
+2.2.2. Terminal board                                                         
+                                                                              
+All loads on the spacecraft are powered through the terminal                  
+board.  The wiring makes an uncompensated current loop of                     
+100 cm**2 to 600 cm**2 and produces variable magnetic fields.                 
+The total magnitude of the field is 30 to 50 nT and changes                   
+stepwise.                                                                     
+                                                                              
+2.2.3. Power management system                                                
+                                                                              
+The power system includes the solar arrays and cabling, and                   
+the power shunt control circuitry.  The total array counts                    
+ranges from 15 to 60 amperes giving a variation in the                        
+observed field as large as 38 nT.  This variation is                          
+corrected to a precision of about 1.5 nT in each component                    
+by using the following relationship between the solar array                   
+current and the field variations, where one ampere equals                     
+3.4 counts.                                                                   
+                                                                              
+                                                                              
+    | delta BX |   |  -0.020 +/- 0.011 |                                      
+    | delta BY | = |  +0.163 +/- 0.016 | * nT/count     (2)                   
+    | delta BZ |   |  -0.259 +/- 0.011 |                                      
+                                                                              
+Current shunting is done in two levels, digital (stepwise)                    
+and analog (continuous) [Jenkins et al., 1995].  It is                        
+possible to remove the contamination fields from the                          
+currents because both the total solar array currents and                      
+digital and analog shunt currents are recorded.                               
+                                                                              
+2.2.4.  Momentum wheels                                                       
+                                                                              
+Four momentum wheels are included in the spacecraft attitude                  
+control system for three-axis stabilization and precision                     
+pointing.  The wheels produces sinusoidal signals with ~1 nT                  
+peak to peak amplitude.  The contamination from the wheels                    
+can be avoided by filtering out the rapid variation.                          
+                                                                              
+                                                                              
+Table 2. Sources of variable spacecraft magnetic fields                       
+together with their approximate magnitude, characteristic                     
+time scale and type signal.                                                   
+                                                                              
+Source                 Propulsion valve motion                                
+Magnitude              ~100nT                                                 
+Time Scale             Propulsion events                                      
+Type of Signal         Discrete pairwise jumps - zero net change.             
+Mitigation Approach    Flag Propulsion events.  Correcting data               
+                       during propuplsion events not necessary.               
+                                                                              
+Source                 Terminal board:  all spacecraft loads                  
+Magnitude              25 nT                                                  
+Time Scale             ~10 min (heaters),  < 1 s (NLR).                       
+Type of Signal         Variable baseline with discrete jumps                  
+Mitigation Approach    Field is directly proportional to load currents        
+                       monitored in spacecraft engineering data.              
+                       Loops measured during assembly.                        
+                                                                              
+Source                 Digital power system shunts  (*)                       
+Magnitude              5 to 10 nT                                             
+Time Scale             Hours to months                                        
+Type of Signal         Discrete jumps                                         
+Mitigation Approach    Ratio between digital shunt and total solar            
+                       array current identifies shunt step.  Field            
+                       fixed in each level.                                   
+                                                                              
+Source                 Analog power system shunts   (*)                       
+Magnitude              5 nT                                                   
+Time Scale             minutes                                                
+Type of Signal         Gradual variations with intermittent discrete jumps.   
+Mitigation Approach    Field is proportional to analog current within         
+                       each of segments in analog shunt current               
+                       corresponding to the six analog shunt resistors        
+                       on the spacecraft.                                     
+                                                                              
+Source                 Solar Arrays                                           
+Magnitude              30 nT                                                  
+Time Scale             hours to months                                        
+Type of Signal         Gradual shift with discrete jumps                      
+Mitigation Approach    Field is proportional to total solar array             
+                       current.  Independent of digital shunt level.          
+                                                                              
+Source                 Momentum wheels  (*)                                   
+Magnitude              1 to 2 nT                                              
+Time Scale             0.2 to 10s Hz.  usually > 0.5 Hz                       
+Type of Signal         Superposition of four sinusoids corresponding          
+                       to rotation rate of four wheels.                       
+Mitigation Approach    Benign - wheel speeds kept above 0.5 Hz &              
+                       monitored in engineering data.  Speeds < 0.5 Hz        
+                       occur during maneuvers.  MAG 0.5 Hz filter             
+                       elimiates contamination.  1/s sampling allows          
+                       additional filtering if needed.                        
+                                                                              
+(*) Sources either discovered after launch or found to be                     
+stronger than expected.                                                       
+                                                                              
+                                                                              
+References                                                                    
+                                                                              
+Anderson, B. J., L. J. Zanetti, D. H. Lohr, J. Hayes, M. H.                   
+  Acuna, C. T. Russell, and T. Mulligan, In-flight                            
+  calibration of the NEAR magnetometer, IEEE Trans. Geosci.                   
+  Remote Sens., 30, 907-917, 2001.                                            
+                                                                              
+Jenkins, J., Dakermanji, G., Butler, M., and Carlsson, U.,                    
+  The Near Earth Asteroid Rendezvous Spacecraft Power                         
+  Subsystem, in ESA-SP369, Proc. 4th European Space Power                     
+  Conf., T.-D. Guyenne, ed., (ESA), p.277, 1995.                              
+                                                                              
+Lohr, D. A., L. J. Zanetti, B. J. Anderson, T. A. Potemra,                    
+  J. R. Hayes, R. E. Gold, R. M. Henshaw, F. F. Mobley, D.                    
+  B. Holland, M. H. Acuna, J. L. Scheifele, Near Magnetic                     
+  Field Investigation, Instrumentation, Spacecraft                            
+  Magnetics and Data Access, Space Science Reviews, 82, 255-                  
+  281, 1997.                                                                  
+                                                                              
+                                                                              

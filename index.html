@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main index">
+
+        <h1 id="title">PDS Asteroid/Dust Archive</h1>
+
+        <p>
+            This archive site provides access to PDS data on asteroids, dust, planetary satellites, meteorites, and selected other small solar system bodies and laboratory data. Use the links below to select data by target type, by data type, or by mission.
+        </p>
+
+        <!-- See sbn-data-types.html, sbn-target-types.html, and sbn-missions.html to edit this content -->
+        <div class="primary-sections">
+            <section class="paper">
+                <img class="section-header-img" src="images/spectra.png">
+                <div include-html="sbn-data-types.html">
+            </section>
+            <section class="paper">
+                <img class="section-header-img" src="images/eros-narrow.jpg">
+                <div include-html="sbn-target-types.html">
+            </section>
+            <section class="paper">
+                <img class="section-header-img" src="images/dawn.jpg">
+                <div include-html="sbn-missions.html">
+            </section>
+
+        </div>
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

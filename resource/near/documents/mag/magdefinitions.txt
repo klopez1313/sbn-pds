@@ -1,0 +1,452 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " MAG Data File Parameter Definitions"                   
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+MAGNETOMETER SCIENCE RECORD VARIABLES                                         
+       (Binary Table Fields)                                                  
+                                                                              
+The following list of variable names are contained in the header of the Binary
+table extension of the Magnetometer data file created by CFITSIO user routines
+for PDS compliance. The corresponding definitions will be placed in a separate
+file, and will not be contained in the PDS label file, or require the         
+generation of PDS keywords.                                                   
+                                                                              
+ 1.  met                                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 160000000                                             
+        units - seconds (unsigned)                                            
+ definition - Mission Elapsed Time in seconds for the start of this MAG       
+        sample block                                                          
+                                                                              
+ 2.  tdb                                                                      
+                                                                              
+        minimum value - -1.3e+8                                               
+        maximum value - +6.4e+7                                               
+        units - seconds (signed)                                              
+        definition - Barycentric Dynamical Time corresponding to MET(1).      
+     Barycentric Dynamical Time (TDB) is the independent                      
+     variable in the equations, including terms for relativity,               
+     of motion of the celestial bodies.  The solution of these                
+     equations gives the rectangular coordinates of those                     
+     bodies relative to the barycentre (centre of mass) of the                
+     solar system.  (The barycentre does not coincide with the                
+     centre of the Sun but is displaced to a point near its                   
+     surface in the direction of Jupiter.)                                    
+                                                                              
+ 3.  dqi                                                                      
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - Data Quality Index                                       
+                     c0 = Data Quality Flag[0=good,1=flagged for quality      
+                          defects]                                            
+                     c1 = Instrument number for FC, CTP and AIU[1 or 2]       
+                     c2 - c6 = Processing Flags not quality related           
+                     c7 = CCDS Source[0=VC0, 1=VC1, 2=VC2, 3=VC3]             
+                                                                              
+                                                                              
+  4.  mag_on_off                                                              
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - magnetometer electronics power on/off - turn the power to
+                     the magnetometer electronics on or off.  If the power is 
+                     turned off, the magnetometer science record currently    
+                     being constructed is terminated, padded out with zeros,  
+                     and sent.                                                
+                     The DPU turns the magnetometer power on when it starts up
+                     cmd opcode 0xf500                                        
+                     ground conversion:                                       
+                     0=off                                                    
+                     1=on                                                     
+                                                                              
+  5.  cal_on_off                                                              
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - calibration bias current off or on - turn calibration bia
+                     current off or on.  The default is no calibration.       
+                     cmd opcode: 0xf501                                       
+                     ground conversion:                                       
+                     0=off                                                    
+                     1=on                                                     
+                     initial value: 0=off                                     
+                                                                              
+  6.  cal_a_d                                                                 
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - calibrate the A/D converter - the A/D converter in the   
+                     magnetometer electronics has a calibration mode which    
+                     should be exercised periodically by command.  When the   
+                     DPU receives the "calibrate A/D" command, it finishes    
+                     building the current science record and queues it for    
+                     transmission, then sets the "calibrate A/D" bit in its   
+                     interface to the magnetometer.  While the A/D performs   
+                     an internal calibration (at least two 20 Hz magnetometer 
+                     cycles), the DPU discards the garbage serial data which  
+                     the magnetometer sends.  At the end of the calibration,  
+                     the DPU resets the "calibrate A/D bit" and then resumes  
+                     normal data collection from the magnetometer on the      
+                     following cycle.                                         
+                     cmd opcode: 0xf502                                       
+                     ground conversion:                                       
+                     0=calibration mode off (normal data collection)          
+                     1=calibration mode on (internal calibration)             
+                                                                              
+                     Note:  the A/D calibration (described above) can be      
+                            commanded to occur automatically.  A non-zero     
+                            argument identifies the calibration interval in   
+                            seconds; zero turns off automatic calibration.    
+                            The default interval is fifteen minutes.          
+                                                                              
+  7.  range_man_auto                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - range manual/automatic - select manual or automatic range
+                     control.  The default is "automatic".  The DPU finishes  
+                     building the current science record before processing thi
+                     command.                                                 
+                     cmd opcode: 0xf505                                       
+                     ground conversion:                                       
+                     0=manual                                                 
+                     1=automatic                                              
+                     initial value: 1=automatic                               
+                                                                              
+  8.  noise_rej_on_off                                                        
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - noise rejection on/off - enable or disable the noise     
+                     rejection filters.  The default is "on".  The DPU        
+                     finishes building the current science record before      
+                     processing this command.                                 
+                     cmd opcode: 0xf509                                       
+                     ground conversion:                                       
+                     0=off                                                    
+                     1=on                                                     
+                     initial value: 1=on                                      
+                                                                              
+  9.  sw_anti_alias_filt                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - software anti-alias filters on/off - enable or disable th
+                     software anti-alias filter.  The default is "on".  The DP
+                     finishes building the current science record before      
+                     processing this command.                                 
+                     cmd opcode: 0xf50b                                       
+                     ground conversion:                                       
+                     0=off                                                    
+                     1=on                                                     
+                     initial value: 1=on                                      
+                                                                              
+ 10.  manual_range                                                            
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 7                                                     
+        units - N/A                                                           
+        definition - manual range setting - the DPU controls three discrete   
+                     lines which set the gain of the magnetometer detector    
+                     front end electronics which sets the range of the sensor.
+                     When in manual-range-control-mode, the new range will be 
+                     used until a new range is set or automatic-range-control 
+                     mode is entered. When in automatic-range-control mode,   
+                     the new range will be used until the range control       
+                     algorithm calculates a new range. The default is range 3.
+                     The DPU finishes building the current science record     
+                     before processing this command.                          
+                     cmd opcode: 0xf506                                       
+                     ground conversion:                                       
+                     0=4nT                                                    
+                     1=16nT                                                   
+                     2=64nT                                                   
+                     3=256nT                                                  
+                     4=1024nT                                                 
+                     5=4096nT                                                 
+                     6=16384nT                                                
+                     7=65536nT                                                
+                     for example: there are eight sensitivity ranges - in     
+                                  range 0, a field strength of -4nT to +4nT   
+                                  can be measured.                            
+                     initial value: 3=256nT                                   
+                                                                              
+ 11.  actual_range                                                            
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 7                                                     
+        units - N/A                                                           
+        definition - actual range - This gives the instrument range index that
+                     the magnetometer was actually in for the first point in  
+                     the current packet.  Note that each mag sample record als
+                     contains the instrument range.                           
+                                                                              
+ 12.  ac_axis_select                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2                                                     
+        units - N/A                                                           
+        definition - AC axis select - select the axis used for AC processing. 
+                     The default is the Z axis.  The DPU finishes building the
+                     current science record before processing this command.   
+                     cmd opcode: 0xf50c                                       
+                     ground conversion:                                       
+                     0=X axis                                                 
+                     1=Y axis                                                 
+                     2=Z axis                                                 
+                     initial value: 2=Z axis                                  
+                                                                              
+ 13.  rng_chng_more_sens                                                      
+                                                                              
+        minimum value - 1                                                     
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - range change rate, more sensitivity (lsbs) - This is the 
+                     time in MAG internal sample intervals (i.e. 0.05 seconds)
+                     that the instrument waits before changing the instrument 
+                     range to a more sensitive range.  This is only active whe
+                     the instrument is set to autorange mode.  The default    
+                     value is 1200 samples (i.e. one minute).  The value in   
+                     all three field components must be below 17% of current  
+                     full scale for the entire wait period to result in an    
+                     automatic change to a more sensitive range.              
+                                                                              
+ 14.  rng_chng_less_sens                                                      
+                                                                              
+        minimum value - 1                                                     
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - range change rate, less sensitivity (lsbs) - This is the 
+                     time in MAG internal sample intervals (i.e. 0.05 seconds)
+                     that the instrument waits before changing the instrument 
+                     range to a less sensitive range.  This is only active whe
+                     the instrument is set to autorange mode.  The default    
+                     value is 5 samples (i.e. one quarter of a second).  If   
+                     the value in any one of the three field components is    
+                     above 87.5% of current full scale for the entire wait    
+                     period, the instrument will change to a less sensitive   
+                     range.                                                   
+                                                                              
+ 15.  noise_spike_count                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - noise spike count - number of noise spikes seen during   
+                     this science record.                                     
+                                                                              
+ 16.  sample_rate                                                             
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 10                                                    
+        units - N/A                                                           
+        definition - output sample rate =  The index for the output sample    
+        rate given by the following table.  Digital filtering is applied with 
+        Nyquist frequency given in ().                                        
+        0 = 1 sample every 100 seconds (0.5 Hz)                               
+        1 = 1 sample every 50 seconds (0.5 Hz)                                
+        2 = 1 sample every 20 seconds (0.5 Hz)                                
+        3 = 1 sample every 10 seconds (0.5 Hz)                                
+        4 = 1 sample every 5 seconds (0.5 Hz)                                 
+        5 = 1 sample every 2 seconds (0.5 Hz)                                 
+        6 = 1 sample every second (0.5 Hz)                                    
+        7 = 2 samples every second (1 Hz)                                     
+        8 = 5 samples every second (2.5 Hz)                                   
+        9 = 10 samples every second (5 Hz)                                    
+        10 = 20 samples every second (10 Hz)                                  
+                                                                              
+                                                                              
+ 17.  mag_dc_dc_curr                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 255                                                   
+        units - N/A                                                           
+        definition - magnetometer DC/DC current -  Value of the current       
+                     transducer monitoring the current drawn by the           
+                     magnetometer DC to DC power converter.  The conversion to
+                     milliamperes is: I_DCDC = 496.68-3.95*mag_dc_dc_curr     
+                                                                              
+ 18.  probe_temp                                                              
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 255                                                   
+        units - N/A                                                           
+        definition - probe temperature -  Two's complement value of the       
+                     temperature transducer monitoring the temperature of the 
+                     magnetometer sensor.  The conversion to degrees          
+                     Centigrade is: cnt = probe_temp                          
+                         if (cnt.lt.128.0) T_PROBE = 17.7 - 0.55*cnt          
+                         if (cnt.ge.128.0) T_PROBE = 158.5 - 0.55*cnt         
+                                                                              
+                                                                              
+ 19.  mag_elect_temp                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 255                                                   
+        units - N/A                                                           
+        definition - magnetometer electronics temperature - Two's complement  
+                     value of the temperature transducer monitoring the       
+                     temperature of the magnetometer electronics.  The        
+                     conversion to degrees Centigrade is:                     
+                     cnt = mag_elect_temp                                     
+                     if (cnt.lt.128.0) T_ELECT = 18.5 +0.6134*cnt             
+                     if (cnt.ge.128.0) T_ELECT = -138.5+0.6134*cnt            
+                                                                              
+ 20.  dpu_dc_dc_temp                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 255                                                   
+        units - N/A                                                           
+        definition - DPU DC/DC temperature - Two's complement value of the    
+                     temperature transducer monitoring the temperature of the 
+                     magnetometer DC to DC power converter.  The conversion to
+                     degrees Centigrade is:                                   
+                     cnt = mag_elect_temp                                     
+                     if (cnt.lt.128.0) T_ELECT = 18.5 +0.6134*cnt             
+                     if (cnt.ge.128.0) T_ELECT = -138.5+0.6134*cnt            
+                                                                              
+                                                                              
+ 21.  record_aborted                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - When value equals 1, science record aborted command sent,
+                     science record terminated, zero padded.                  
+                                                                              
+ 22.  time_tag                                                                
+                                                                              
+        minimum value - UNK                                                   
+        maximum value - UNK                                                   
+        units - N/A                                                           
+        definition - time tag - the science housekeeping consists of the real-
+                     time housekeeping (except for the magnetic field sample) 
+                     and a time tag.  The housekeeping is sampled at the start
+                     of science record collection.  The time tag indicates the
+                     time of the first magnetometer data sample in the science
+                     record, and provides more accuracy than the time tag in  
+                     the packet header.  The time tag is the delta time, in   
+                     secs./20, of the first sample from the 1 sec. time tag in
+                     the packet header.  Since the 20 Hz magnetometer clock is
+                     independent of the spacecraft 1 Hz clock                 
+                     that provides the MET, the time tag may be incorrect by  
+                     up to 1/20 of a second. The "calibrate A/D" bit indicates
+                     that an A/D calibration was done just before this science
+                     record was collected.  Since calibrating the A/D causes  
+                     data collection from the magnetometer to be suspended, a 
+                     time discontinuity is propagated through the data        
+                     processing stages; thus, the data in the science record  
+                     should be regarded with suspicion.                       
+                                                                              
+ 23.  x_data                                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**16-1                                               
+        units - N/A                                                           
+        definition - X0-X43 DC field (16 bits each) - a series of 44 X-axis   
+                     magnetic field values are contained in each record of the
+                     science data; each value is sixteen bits.  This data is  
+                     collected during a consistent magnetometer state which is
+                     recorded and sent with the sampled magnetic field data.  
+                     To ensure the consistency of the state, the DPU delays   
+                     processing commands that effect the state until after the
+                     current record is complete.  If processing is aborted by 
+                     the Abort Science Record command or by commanding the    
+                     magnetometer power off, the aborted record will have a   
+                     flag set and unfilled data slots will have zeros.        
+                                                                              
+ 24.  y_data                                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**16-1                                               
+        units - N/A                                                           
+        definition - Y0-Y43 DC field (16 bits each) - a series of 44 Y-axis   
+                     magnetic field values are contained in each record of the
+                     science data; each value is sixteen bits.  This data is  
+                     collected during a consistent magnetometer state which is
+                     recorded and sent with the sampled magnetic field data.  
+                     To ensure the consistency of the state, the DPU delays   
+                     processing commands that effect the state until after the
+                     current record is complete.  If processing is aborted by 
+                     the Abort Science Record command or by commanding the    
+                     magnetometer power off, the aborted record will have a   
+                     flag set and unfilled data slots will have zeros.        
+                                                                              
+                                                                              
+ 25.  z_data                                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**16-1                                               
+        units - N/A                                                           
+        definition - Z0-Z43 DC field (16 bits each) - a series of 44 Z-axis   
+                     magnetic field values are contained in each record of the
+                     science data; each value is sixteen bits.  This data is  
+                     collected during a consistent magnetometer state which is
+                     recorded and sent with the sampled magnetic field data.  
+                     To ensure the consistency of the state, the DPU delays   
+                     processing commands that effect the state until after the
+                     current record is complete.  If processing is aborted by 
+                     the Abort Science Record command or by commanding the    
+                     magnetometer power off, the aborted record will have a   
+                     flag set and unfilled data slots will have zeros.        
+                                                                              
+                                                                              
+ 26.  ac_data                                                                 
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - AC0-AC43 sample (8 bits each) - a series of 44 eight-bit 
+                     AC measurements from the selected axis are contained in  
+                     each record of the science data.  This data is collected 
+                     during a consistent magnetometer state which is recorded 
+                     and sent with the sampled magnetic field data.  To ensure
+                     the consistency of the state, the DPU delays processing  
+                     commands that effect the state until after the current   
+                     record is complete.  If processing is aborted by the     
+                     Abort Science Record command or by commanding the        
+                     magnetometer power off, the aborted record will have a   
+                     flag set and unfilled data slots will have zeros.        
+                                                                              
+ 27.  noise_data                                                              
+                                                                              
+        minimum value -0                                                      
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - noise/range0-noise/range43 - A series of 44 noise reject 
+                     indicators and ranges are contained in each science      
+                     record. Each noise reject indicator and three-bit range  
+                     is packed into a four-bit field; the noise reject is in  
+                     the msb and the range is in the lsbs.  The record is     
+                     padded with 48 bits to fill a NEAR CCSDS packet. This    
+                     data is collected during a consistent magnetometer state 
+                     which is recorded and sent with the sampled magnetic     
+                     field data.  To ensure the consistency of the state, the 
+                     DPU delays processing commands that effect the state unti
+                     after the current record is complete.  If processing is  
+                     aborted by the Abort Science Record command or by        
+                     commanding the magnetometer power off, the aborted record
+                     will have a flag set and unfilled data slots will have   
+                     zeros. This flag indicates whether the noise filter      
+                     identified any internal instrument magnetometer samples  
+                     for rejection that were used to obtain the current       
+                     science field values.  This flag is set whether the noise
+                     rejection is on or off.                                  
+                                                                              
+                                                                              

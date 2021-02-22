@@ -1,0 +1,282 @@
+Observation Name,High-gain pass DSS Sta. ,Ownr,Date,DOY,"Strt, UT", Dur,"End, UT",Pr'ty,Bits/ pixel,# imgs  or       # spec,Seq.    IDs,Filters,Est.  comp.,Mbits,P/B (hrs @ 8.8 kb/s),P/B (hrs @ 17.6 kb/s),P/B (hrs @ 26.4 kb/s),week,Target,Description,Status
+Opnav 94c KD,,NAV,03-Apr,094,21:37,0:40,22:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 30115, 30088",done
+Star Calibration 095,,NAV,04-Apr,095,00:35,00:30,01:05,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+MSI_Ride_95a,,NLR,04-Apr,095,01:05,3:20,4:25,,8,380,1,4,2.8,210.33,7.38,3.67,2.46,00094,Eros,1 filter 4 image every 30 seconds,done
+Opnav 95a KD,,NAV,04-Apr,095,4:27,0:28,4:55,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 30191, 30195",done
+70 m track (26.4 kb/s),63,,04-Apr,095,5:10,5:00,10:10,,,,,,,222.63,7.81,3.89,2.61,,,,
+Opnav 95b KD,,NAV,04-Apr,095,10:11,0:40,10:51,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 30191, 30183",done
+Daily Global 95,,NAV,04-Apr,095,13:02,00:30,13:32,,8,32,18,4,2.6,19.07,0.7,0.3,0.2,00094,Eros,4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 95,,NAV,04-Apr,095,13:02,00:30,13:32,,,140,8,,,0.16,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+SouthPeriaps_100,,NAV/MSI,04-Apr,095,13:32,5:30,19:02,,8,201,18,4,2.6,119.81,4.20,2.09,1.40,00094,Eros,A series of mosaics to cover as much territory as possible (TABLE5+FAST),done
+MSI_Ride_95b,,NLR,04-Apr,095,19:05,5:30,0:35,,8,15,1,4,2.8,8.30,0.29,0.15,0.10,00094,Eros,1 filter 4 image every 240 seconds,done
+EquatPeriaps_100,,NAV/MSI,05-Apr,096,0:37,5:40,6:17,,8,216,18,4,2.6,128.75,4.52,2.25,1.51,00094,Eros,A series of mosaics to cover as much territory as possible (TABLE5+FAST),done
+NIS EquatPeriaps,,MSI,05-Apr,096,0:37,5:40,6:17,,,1680,,,,1.92,0.07,0.03,0.02,00094,Eros,"NIS_Periapsis_LonScan: 4 mir pos, narrow (5 sec)",done
+MSI_Ride_96,,NLR,05-Apr,096,06:42,4:05,10:47,,8,257,1,4,2.8,142.25,4.99,2.49,1.67,00094,Eros,1 filter 4 image every 30 seconds,done
+Star Calibration 096,,NAV,05-Apr,096,12:45,00:12,12:57,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 96a KD,,NAV,05-Apr,096,13:05,0:28,13:33,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 30129, 40125",done
+70 m track (26.4 kb/s),43,,05-Apr,096,13:35,8:00,21:35,,,,,,,432.68,14.33,7.14,4.78,,,,
+Opnav 96b KD,,NAV,05-Apr,096,21:36,0:40,22:16,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 20035, 40013",done
+Star Calibration 097,,NAV,06-Apr,097,00:38,00:12,00:50,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NorthPeriaps_100,,NAV/MSI,06-Apr,097,0:58,5:53,6:51,,8,246,18,4,2.6,146.64,5.14,2.56,1.72,00094,Eros,A series of mosaics to cover as much territory as possible (TABLE5+FAST),done
+MSI_Ride_97,,NLR,06-Apr,097,06:53,5:30,12:23,,8,632,1,4,2.8,349.81,12.27,6.11,4.09,00094,Eros,1 filter 4 image every 30 seconds,done
+Daily Global 97,,NAV,06-Apr,097,12:25,00:38,13:03,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00094,Eros,4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 97,,NAV,06-Apr,097,12:25,00:38,13:03,,,140,8,,,0.16,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+Opnav 97a KD,,NAV,06-Apr,097,13:09,0:28,13:37,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40013, 40042",done
+70 m track (26.4 kb/s),43,,06-Apr,097,13:35,9:00,22:35,,,,,,,518.45,18.19,9.06,6.07,,,,
+Opnav 97b KD,,NAV,06-Apr,097,22:41,0:40,23:21,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40082, 40099",done
+MSI_Ride_98a,,NLR,07-Apr,098,01:45,5:30,7:15,,8,320,1,4,2.8,177.12,6.21,3.09,2.07,00094,Eros,1 filter 4 image every 60 seconds,done
+Daily Global 98,,NAV,07-Apr,098,07:30,00:30,08:00,,8,12,18,4,2.6,7.15,0.3,0.1,0.1,00094,Eros,3x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 98,,NAV,07-Apr,098,07:30,00:30,08:00,,,70,8,,,0.08,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+Star Calibration 098,,NAV,07-Apr,098,08:00,00:30,08:30,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+MSI_Ride_98b,,NLR,07-Apr,098,08:30,4:30,13:00,,8,134,1,4,2.8,74.17,2.60,1.30,0.87,00094,Eros,1 filter 4 image every 117 seconds,done
+Opnav 98a KD,,NAV,07-Apr,098,13:00,0:28,13:28,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40094, 40082",done
+70 m track (26.4 kb/s),43,,07-Apr,098,13:30,8:00,21:30,,,,,,,270.83,9.50,4.73,3.17,,,,
+Opnav 98b KD,,NAV,07-Apr,098,21:36,0:40,22:16,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40013, 30207",done
+Daily Global 99,,NAV,08-Apr,099,06:32,00:30,07:02,,8,12,18,4,2.6,7.15,0.3,0.1,0.1,00094,Eros,3x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 99,,NAV,08-Apr,099,06:32,00:30,07:02,,,70,8,,,0.08,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+Star Calibration 099,,NAV,08-Apr,099,07:04,00:30,07:34,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Canopus Calibration 7, ,MSI,08-Apr,099,07:36,04:20,11:56, ,12,700,"4,5,6, 3,11","2,3,4,1,5",2.5,433.95,15.2,7.6,5.1,00094,Canopus,"MSI_CanCal_7: 140 images slewing across 30x30 pixels viewing Canopus, repeat (FAST)",done
+Opnav 99a KD,,NAV,08-Apr,099,14:20,0:28,14:48,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40008, 30006",done
+70 m track (26.4 kb/s),43,,08-Apr,099,14:45,8:00,22:45,,,,,,,453.48,15.91,7.94,5.31,,,,
+Star Calibration 100,,NAV,08-Apr,099,22:21,00:30,22:51,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+EquatorialLon 4,,MSI,08-Apr,099,23:55,4:20,4:15,,8,434,18,4,2.5,269.05,9.44,4.70,3.15,00094,Eros,1 filter 4 image every 83 seconds,done
+MSI_Ride_100,,NLR,09-Apr,100,05:55,5:20,11:15,,8,150,1,4,2.8,83.03,2.91,1.45,0.97,00094,Eros,1 filter 4 image every 125 seconds,done
+Daily Global 100,,NAV,09-Apr,100,13:00,00:30,13:30,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00094,Eros,4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 100,,NAV,09-Apr,100,13:00,00:30,13:30,,,70,8,,,0.08,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+70 m track (26.4 kb/s),43,,09-Apr,100,13:25,8:30,21:55,,,,,,,361.69,12.69,6.32,4.23,,,,
+Opnav 100a KD,,NAV,09-Apr,100,22:01,0:40,22:41,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 40008, 30006",done
+Daily Global 101,,NAV,10-Apr,101,02:00,00:30,02:30,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00094,Eros,4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 101,,NAV,10-Apr,101,02:00,00:30,02:30,,,140,8,,,0.16,0.0,0.0,0.0,00094,Eros,7x4 mosaics during above slew,done
+Star Calibration 101,,NAV,10-Apr,101,02:35,00:12,02:47,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00094,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 101a KD,,NAV,10-Apr,101,2:55,0:28,3:23,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00094,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+70 m track (26.4 kb/s),63,,10-Apr,101,3:50,6:20,10:10,,,,,,,17.04,0.60,0.30,0.20,,,,
+Total MSI images,,,,,,,,,,3913,,,,,,,,,,,
+Opnav 101b KD,,NAV,10-Apr,101,10:10,0:28,10:38,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+Star Calibration 101B,,NAV,10-Apr,101,13:30,00:30,14:00,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+RegGlobal_101,,MSI,10-Apr,101,14:10,0:50,15:00,,8,16,18,4,2.6,9.54,0.33,0.17,0.11,00101,Eros,4x4 mosaic in filter 4,done
+NIS_RegGlobal_101,,MSI,10-Apr,101,14:10,0:50,15:00,,,168,4,,,0.19,0.0,0.0,0.0,00101,Eros,5x7 mosaics (5sp + 2r + 2d) calint=4,done
+Opnav 101b KD,,NAV,10-Apr,101,15:00,0:28,15:28,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+Opnav 101c KD,,NAV,10-Apr,101,21:00,0:28,21:28,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+MSI_RideNLR_102A,,NLR,11-Apr,102,03:20,0:50,4:10,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00101,Eros,1 filter 4 image every 83 seconds,done
+MSI_RideNLR_102B,,NLR,11-Apr,102,06:00,0:50,6:50,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00101,Eros,1 filter 4 image every 83 seconds,done
+MSI_RideNLR_102C,,NLR,11-Apr,102,08:30,0:50,9:20,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00101,Eros,1 filter 4 image every 83 seconds,done
+Opnav 102a KD,,NAV,11-Apr,102,10:15,0:28,10:43,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+RegGlobal_102,,MSI,11-Apr,102,11:00,0:50,11:50,,8,16,18,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,4x4 mosaic in filter 4,done
+NIS_RegGlobal_102,,MSI,11-Apr,102,11:00,0:50,11:50,,,168,4,,,0.19,0.0,0.0,0.0,00101,Eros,5x7 mosaics (5sp + 2r + 2d) calint=4,done
+Star Calibration 102,,NAV,11-Apr,102,12:00,00:30,12:30,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 102b KD,,NAV,11-Apr,102,14:00,0:28,14:28,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,"2x2s pointed to a landmarks 30207, 30175",done
+70 m track (26.4 kb/s),43,,11-Apr,102,14:50,3:20,18:10,,,,,,,67.29,2.36,1.18,0.79,,,,
+OCM 4,,,11-Apr,102,21:42,,,,,,,,,,,,,,,,
+Opnav 102c KL3,,NAV,11-Apr,102,22:42,0:16,22:58,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00101,Eros,2x2 pointed to a landmark,done
+34 m track (8.8 kb/s),43,,11-Apr,102,23:35,2:10,1:45,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 103a KL3,,NAV,12-Apr,103,1:42,0:16,1:58,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00101,Eros,2x2 pointed to a landmark,done
+34 m track (8.8 kb/s),43,,12-Apr,103,4:15,3:00,7:15,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 103b KD,,NAV,12-Apr,103,7:15,0:16,7:31,T,12,8,27,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,2x2 pointed to a landmark,done
+Star Calibration 103,,NAV,12-Apr,103,12:20,00:30,12:50,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+MSI_LonScan_103A,,MSI,12-Apr,103,15:00,5:45,20:45,,8,235,18,4,2.6,140.08,4.91,2.45,1.64,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_LonScan_103A,,MSI,12-Apr,103,15:00,5:45,20:45,,,3852,3,,,4.41,0.2,0.1,0.1,00101,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Opnav 103c KD,,NAV,12-Apr,103,23:00,0:16,23:16,T,12,8,27,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,2x2 pointed to a landmark,done
+MSI_LonScan_104A,,MSI,13-Apr,104,00:00,5:45,5:45,,8,235,18,4,2.6,140.08,4.91,2.45,1.64,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_LonScan_104A,,MSI,13-Apr,104,00:00,5:45,5:45,,,3852,3,,,4.41,0.2,0.1,0.1,00101,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Opnav 104a KD,,NAV,13-Apr,104,6:00,0:16,6:16,T,12,8,27,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,2x2 pointed to a landmark,done
+MSI_LonScan_104B,,MSI,13-Apr,104,06:30,5:45,12:15,,8,235,18,4,2.6,140.08,4.91,2.45,1.64,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_LonScan_104B,,MSI,13-Apr,104,06:30,5:45,12:15,,,3852,3,,,4.41,0.2,0.1,0.1,00101,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Star Calibration 104,,NAV,13-Apr,104,12:30,00:30,13:00,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 104b KD,,NAV,13-Apr,104,13:55,0:16,14:11,T,12,8,27,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,13-Apr,104,14:45,7:50,22:35,,,,,,,477.92,16.77,8.35,5.59,,,,
+Opnav 104c KD,,NAV,13-Apr,104,22:35,0:16,22:51,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+Star Calibration 105A,,NAV,14-Apr,105,03:35,00:30,04:05,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+RegGlobal_105,,MSI,14-Apr,105,05:00,0:50,5:50,,8,16,18,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,4x4 mosaic in filter 4,done
+NIS_RegGlobal_105,,MSI,14-Apr,105,05:00,0:50,5:50,,,168,4,,,0.19,0.0,0.0,0.0,00101,Eros,5x7 mosaics (5sp + 2r + 2d) calint=4,done
+Opnav 105a KD,,NAV,14-Apr,105,5:45,0:16,6:01,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+MSI_South_2x3s_105,,MSI,14-Apr,105,07:30,5:45,13:15,,8,240,18,4,2.6,143.06,5.02,2.50,1.67,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_South_2x3s_105,,MSI,14-Apr,105,07:30,5:45,13:15,,,2400,6,,,2.75,0.1,0.0,0.0,00101,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Opnav 105b KD,,NAV,14-Apr,105,13:55,0:16,14:11,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,14-Apr,105,14:45,7:45,22:30,,,,,,,173.18,6.08,3.03,2.03,,,,
+Opnav 105c KD,,NAV,14-Apr,105,22:35,0:16,22:51,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+Star Calibration 105B,,NAV,14-Apr,105,23:25,00:30,23:55,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+RegGlobal_106,,MSI,15-Apr,106,00:00,1:30,1:30,,8,32,18,4,2.5,19.84,0.70,0.35,0.23,00101,Eros,two 4x4 mosaics in filter 4,done
+NIS_RegGlobal_106,,MSI,15-Apr,106,00:00,0:50,0:50,,,336,4,,,0.38,0.0,0.0,0.0,00101,Eros,5x7 mosaics (5sp + 2r + 2d) calint=4,done
+MSI_Feature_2x2_106,,MSI,15-Apr,106,00:50,1:40,2:30,,8,136,18,4,2.8,75.28,2.64,1.32,0.88,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_Feature_2x2_106,,MSI,15-Apr,106,00:50,1:40,2:30,,,612,5,,,0.70,0.0,0.0,0.0,00101,Eros,5x3 mosaics (5sp + 2r + 2d) calint=5,done
+Opnav 106a KD,,NAV,15-Apr,106,2:45,0:16,3:01,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,15-Apr,106,3:35,6:25,10:00,,,,,,,108.50,3.81,1.90,1.27,,,,
+Opnav 106b KD,,NAV,15-Apr,106,10:00,0:16,10:16,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+MSI_LonScan_106A,,MSI,15-Apr,106,15:00,5:45,20:45,,8,228,18,4,2.6,135.91,4.77,2.37,1.59,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_LonScan_106A,,MSI,15-Apr,106,15:00,5:45,20:45,,,3852,3,,,4.41,0.2,0.1,0.1,00101,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Opnav 106c KD,,NAV,15-Apr,106,21:00,0:16,21:16,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+MSI_LonScan_106B,,MSI,15-Apr,106,21:30,5:45,3:15,,8,235,18,4,2.6,140.08,4.91,2.45,1.64,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_LonScan_106B,,MSI,15-Apr,106,21:30,5:45,3:15,,,3852,3,,,4.41,0.2,0.1,0.1,00101,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Opnav 107a KD,,NAV,16-Apr,107,3:30,0:16,3:46,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+MSI_North_2x3s_107,,MSI,16-Apr,107,04:30,5:45,10:15,,8,228,18,4,2.6,135.91,4.77,2.37,1.59,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_North_2x3s_107,,MSI,16-Apr,107,04:30,5:45,10:15,,,2280,6,,,2.61,0.1,0.0,0.0,00101,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Star Calibration 107,,NAV,16-Apr,107,12:00,00:30,12:30,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00101,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 107b KD,,NAV,16-Apr,107,12:45,0:16,13:01,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,16-Apr,107,13:40,7:45,21:25,,,,,,,445.55,15.63,7.79,5.22,,,,
+Opnav 107c KD,,NAV,16-Apr,107,21:30,0:16,21:46,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+RegGlobal_107,,MSI,16-Apr,107,22:15,0:50,23:05,,8,16,18,4,2.5,9.92,0.35,0.17,0.12,00101,Eros,4x4 mosaic in filter 4,done
+NIS_RegGlobal_107,,MSI,16-Apr,107,22:15,0:50,23:05,,,168,4,,,0.19,0.0,0.0,0.0,00101,Eros,5x7 mosaics (5sp + 2r + 2d) calint=4,done
+MSI_Feature_2x2_107,,MSI,16-Apr,107,22:45,1:40,0:25,,8,288,18,4,2.8,159.41,5.59,2.79,1.87,00101,Eros,1 filter 4 image every 83 seconds,done
+NIS_Feature_2x2_106,,MSI,16-Apr,107,22:45,1:40,0:25,,,1296,5,,,1.48,0.1,0.0,0.0,00101,Eros,5x3 mosaics (5sp + 2r + 2d) calint=5,done
+Opnav 108a KD,,NAV,17-Apr,108,2:40,0:16,2:56,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00101,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,17-Apr,108,3:30,6:30,10:00,,,,,,,180.92,6.35,3.16,2.12,,,,
+Total MSI images,,,,,,,,,,2398,,,,,,,,,,,
+Opnav 108b KD,,NAV,17-Apr,108,9:55,0:26,10:21,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+Star Calibration 108,,NAV,17-Apr,108,14:00,0:30,14:30,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00108,undefined,"Frames taken from park mode, 4 seq 29 (FAST)",done
+MSI_RideNLR_108A,,NLR,17-Apr,108,14:50,1:00,15:50,,8,100,18,4,2.6,59.61,2.09,1.04,0.70,00108,Eros,1 filter 4 image every 30 seconds,done
+MSI_RideNLR_108B,,NLR,17-Apr,108,17:00,1:50,18:50,,8,200,18,4,2.6,119.22,4.18,2.08,1.40,00108,Eros,1 filter 4 image every 30 seconds,done
+MSI_RideNLR_108C,,NLR,17-Apr,108,19:50,1:50,21:40,,8,100,18,4,2.6,59.61,2.09,1.04,0.70,00108,Eros,1 filter 4 image every 60 seconds,done
+MSI_RideNLR_108D,,NLR,17-Apr,108,22:20,1:00,23:20,,8,50,18,4,2.6,29.80,1.05,0.52,0.35,00108,Eros,1 filter 4 image every 60 seconds,done
+Opnav 108c KD,,NAV,17-Apr,108,23:22,0:26,23:48,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_109A,,NLR,18-Apr,109,1:40,1:50,3:30,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00108,Eros,1 filter 4 image every 600 seconds,done
+MSI_RideNLR_109B,,NLR,18-Apr,109,4:15,1:50,6:05,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00108,Eros,1 filter 4 image every 600 seconds,done
+Opnav 109a KD,,NAV,18-Apr,109,6:05,0:26,6:31,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_109C,,NLR,18-Apr,109,6:50,1:50,8:40,,8,100,18,4,2.6,59.61,2.09,1.04,0.70,00108,Eros,1 filter 4 image every 60 seconds,done
+MSI_RideNLR_109D,,NLR,18-Apr,109,9:30,1:50,11:20,,8,10,18,4,2.6,5.96,0.21,0.10,0.07,00108,Eros,1 filter 4 image every 600 seconds,done
+MSI_RideNLR_109E,,NLR,18-Apr,109,12:05,1:50,13:55,,8,100,18,4,2.6,59.61,2.09,1.04,0.70,00108,Eros,1 filter 4 image every 60 seconds,done
+Opnav 109b KD,,NAV,18-Apr,109,14:45,0:26,15:11,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,18-Apr,109,15:15,8:55,0:10,,,,,,,427.65,15.00,7.47,5.01,,,,
+Opnav 110a KD,,NAV,19-Apr,110,0:11,0:26,0:37,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+Star Calibration 110,,NAV,19-Apr,110,2:00,0:30,2:30,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00108,undefined,"Frames taken from park mode, 4 seq 29 (FAST)",done
+MSI_RideNLR_110A,,NLR,19-Apr,110,4:00,2:20,6:20,,8,50,18,4,2.6,29.80,1.05,0.52,0.35,00108,Eros,1 filter 4 image every 157 seconds,done
+MSI_RideNLR_110B,,NLR,19-Apr,110,6:35,1:50,8:25,,8,50,18,4,2.6,29.80,1.05,0.52,0.35,00108,Eros,1 filter 4 image every 120 seconds,done
+Opnav 110b KD,,NAV,19-Apr,110,8:32,0:26,8:58,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_110C,,NLR,19-Apr,110,9:00,8:50,17:50,,8,200,18,4,2.6,119.22,4.18,2.08,1.40,00108,Eros,1 filter 4 image every 157 seconds,done
+Opnav 110c KD,,NAV,19-Apr,110,18:12,0:26,18:38,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_110D,,NLR,19-Apr,110,18:40,8:10,2:50,,8,200,18,4,2.6,119.22,4.18,2.08,1.40,00108,Eros,1 filter 4 image every 145 seconds,done
+Opnav 111a KD,,NAV,20-Apr,111,3:05,0:26,3:31,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,20-Apr,111,3:35,6:10,9:45,,,,,,,320.36,11.24,5.60,3.75,,,,
+Opnav 111b KD,,NAV,20-Apr,111,9:46,0:26,10:12,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+Star Calibration 111,,NAV,20-Apr,111,12:00,0:30,12:30,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00108,undefined,"Frames taken from park mode, 4 seq 29 (FAST)",done
+MSI_RideNLR_111A,,NLR,20-Apr,111,13:10,1:30,14:40,,8,80,18,4,2.6,47.69,1.67,0.83,0.56,00108,Eros,1 filter 4 image every 60 seconds,done
+MSI Feature 2x2 111,,MSI,20-Apr,111,16:00,1:05,17:05,,8,80,18,4,2.6,47.69,1.67,0.83,0.56,00108,Eros,"2x2s targetted with intermediate frames, 42 seconds apart",done
+NIS Feature 2x2 111,,MSI,20-Apr,111,16:00,1:05,17:05,,,360,5,,,0.41,0.0,0.0,0.0,00108,,5x3 mosaics (5sp + 2r + 2d) calint=5,done
+MSI_LonScan_111,,MSI,20-Apr,111,17:10,5:45,22:55,,8,224,18,4,2.6,133.52,4.68,2.33,1.56,00108,Eros,Continuous 1x4 mosaics,done
+NIS_LonScan_111,,MSI,20-Apr,111,17:10,5:45,22:55,,8,3852,3,,,4.41,0.2,0.1,0.1,00108,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Opnav 111c KD,,NAV,20-Apr,111,22:55,0:26,23:21,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_North_2x3s_111,,MSI,20-Apr,111,23:30,5:45,5:15,,8,216,18,4,2.6,128.75,4.52,2.25,1.51,00108,Eros,Continuous targetted 2x3 mosaic sets ,done
+NIS_North_2x3s_111,,MSI,20-Apr,111,23:30,5:45,5:15,,,2160,6,,,2.47,0.1,0.0,0.0,00108,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Opnav 112a KD,,NAV,21-Apr,112,5:15,0:26,5:41,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_LonScan_111,,MSI,21-Apr,112,5:45,5:45,11:30,,8,206,18,4,2.6,122.79,4.31,2.15,1.44,00108,Eros,Continuous 1x4 mosaics,done
+NIS_LonScan_111,,MSI,21-Apr,112,5:45,5:45,11:30,,,3852,3,,,4.41,0.2,0.1,0.1,00108,Eros,mp 73-77 (5sp +2r +2d) calint=5  642 exec.,done
+Star Calibration 112,,NAV,21-Apr,112,11:30,0:30,12:00,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00108,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 112b KD,,NAV,21-Apr,112,13:40,0:26,14:06,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,21-Apr,112,14:10,8:50,23:00,,,,,,,516.85,18.13,9.03,6.05,,,,
+Opnav 112c KD,,NAV,21-Apr,112,23:01,0:26,23:27,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+NIS Cal Target O4,,NIS,21-Apr,112,23:40,1:00,0:40,,,100,,,,0.11,0.0,0.0,0.0,00108,Cal target,NIS_Caltarg_O4: Standard NIS_CAL,done
+MSI Color 3x2 113,,MSI,22-Apr,113,1:00,0:20,1:20,,12,54,"24, 15","1, 3, 4, 6",1.8,46.49,1.63,0.81,0.54,00108,Eros,2 targetted 3x2 start-stop mosaics,done
+MSI Feature Color 113,,MSI,22-Apr,113,1:30,0:50,2:20,,12,135,"24, 15","1, 3, 4, 6",1.8,116.24,4.08,2.03,1.36,00108,Eros,Targetted 2x2 start-stop mosaics with center frame,done
+Opnav 113a KD,,NAV,22-Apr,113,2:55,0:26,3:21,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,22-Apr,113,3:25,6:15,9:40,,,,,,,172.76,6.06,3.02,2.02,,,,
+Opnav 113b KD,,NAV,22-Apr,113,9:41,0:26,10:07,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,22-Apr,113,11:00,3:00,14:00,,,,,,,4.96,0.17,0.09,0.06,,,,
+OCM 5,,,22-Apr,113,17:50,,,,,,,,,,,,,,,,
+Opnav 113c Post Burn KL3A,,NAV,22-Apr,113,19:00,0:16,19:16,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00108,Eros,3x4 mosaic,done
+34 m track (8.8 kb/s),43,,22-Apr,113,20:00,2:10,22:10,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 113c Post Burn KL3B,,NAV,22-Apr,113,22:00,0:16,22:16,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00108,Eros,3x4 mosaic,done
+34 m track (8.8 kb/s),43,,22-Apr,113,23:00,3:00,2:00,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 114a KD,,NAV,22-Apr,113,1:25,0:26,1:51,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI High North Color 2x2 s 114,,MSI,23-Apr,114,3:05,0:55,4:00,,12,144,"24, 15","1, 3, 4, 6",1.8,123.98,4.35,2.17,1.45,00108,Eros,Targetted 2x2 start-stop mosaics,done
+MSI High North Color 2x3 s 114,,MSI,23-Apr,114,5:30,0:50,6:20,,12,216,"24, 15","1, 3, 4, 6",1.8,185.98,6.53,3.25,2.18,00108,Eros,Targetted 2x3 start-stop mosaics,done
+MSI_North_2x3s_114,,MSI,23-Apr,114,8:00,4:45,12:45,,8,180,18,4,2.6,107.29,3.76,1.87,1.26,00108,Eros,Continuous targetted 2x3 mosaic sets ,done
+NIS_North_2x3s_114,,MSI,23-Apr,114,8:00,4:45,12:45,,,1800,6,,,2.06,0.1,0.0,0.0,00108,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Star Calibration 114,,NAV,23-Apr,114,13:00,0:30,13:30,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00108,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 114b KD,,NAV,23-Apr,114,13:30,0:26,13:56,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,23-Apr,114,14:00,8:55,22:55,,,,,,,431.62,15.14,7.54,5.05,,,,
+Opnav 114c KD,,NAV,23-Apr,114,22:56,0:26,23:22,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI_North_2x3s_115,,MSI,24-Apr,115,1:50,4:40,6:30,,8,174,18,4,2.6,103.72,3.64,1.81,1.21,00108,Eros,Continuous targetted 2x3 mosaic sets ,done
+NIS_North_2x3s_115,,MSI,24-Apr,115,1:50,4:40,6:30,,,1740,6,,,1.99,0.1,0.0,0.0,00108,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Opnav 115a KD,,NAV,24-Apr,115,6:30,0:26,6:56,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00108,Eros,2x2 pointed to a landmark,done
+MSI Feature Track 115,,MSI,24-Apr,115,8:00,1:50,9:50,,8,420,18,4,3.6,180.81,6.34,3.16,2.12,00108,Eros,Filter 4 every 14 seconds centered on 5.5 km crater (TABLE 6 + FAST),done
+NIS Feature Track 115,,MSI,24-Apr,115,8:30,1:10,9:40,,,660,7,,,0.76,0.0,0.0,0.0,00108,,MP 40-105 (5sp + 2r + 2d) calint=65,done
+Star Calibration 115,,NAV,24-Apr,115,9:55,0:30,10:25,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00108,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 115b KD,,NAV,24-Apr,115,13:25,0:26,13:51,T,12,8,27,4,2.5,9.92,0.35,0.17,0.12,00108,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,24-Apr,115,13:55,7:20,21:15,,,,,,,309.50,10.86,5.41,3.62,,,,
+Total MSI images,,,,,,,,,,3517,,,,,,,,,,,
+Opnav 115c_KD,,NAV,24-Apr,115,21:45,00:26,22:11,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_116A,,NLR,25-Apr,116,00:40,01:02,01:42,,8,240,18,4,2.6,143.06,5.02,2.50,1.67,00115,Eros,1 filter 4 image every 13 seconds,done
+MSI_RideNLR_116B,,NLR,25-Apr,116,02:45,02:05,04:50,,8,160,18,4,2.6,95.37,3.35,1.67,1.12,00115,Eros,1 filter 4 image every 43 seconds,done
+MSI_RideNLR_116C,,NLR,25-Apr,116,04:50,01:22,06:12,,8,120,18,4,2.6,71.53,2.51,1.25,0.84,00115,Eros,1 filter 4 image every 36 seconds,done
+NIS_RideNLR_116,,NLR,24-Apr,116,00:45,05:11,05:56,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+Opnav 116a KD_starcal,,NAV,25-Apr,116,06:15,00:42,06:57,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,Eros,2x2 pointed to a landmark,done
+MSI_North_2x3s_116A,,MSI,25-Apr,116,07:00,02:45,09:45,,8,109,18,4,2.6,64.97,2.28,1.14,0.76,00115,Eros,1 filter 4 image every 88 seconds during looping 2x3 mosaic,done
+NIS_North_2x3s_116A,,MSI,25-Apr,116,07:00,02:42,09:42,,,1080,4,,,1.24,0.0,0.0,0.0,00115,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+MSI Feature Color 116,,MSI,25-Apr,116,09:45,00:30,10:15,,12,45,"24, 15","1, 3, 4, 6",1.8,38.75,1.36,0.68,0.45,00115,Eros,Targetted 2x2 start-stop mosaics with center frame,done
+MSI_North_2x3s_116B,,MSI,25-Apr,116,10:15,01:44,11:59,,8,67,18,4,2.6,39.94,1.40,0.70,0.47,00115,Eros,1 filter 4 image every 88 seconds during looping 2x3 mosaic,done
+NIS_North_2x3s_116B,,MSI,25-Apr,116,10:15,01:41,11:56,,,660,4,,,0.76,0.0,0.0,0.0,00115,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Opnav 116b KD,,NAV,25-Apr,116,12:00,00:26,12:26,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,25-Apr,116,12:38,08:13,20:51,,, ,,,,470.30,16.50,8.22,5.50,,,,
+Opnav 116c KD,,NAV,25-Apr,116,20:51,00:26,21:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+NIS_RideNLR_117,,NLR,25-Apr,116,23:45,05:11,04:56,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 45-95 (8sp + 2r + 5d) calint=50,done
+MSI_RideNLR_117A,,NLR,26-Apr,117,01:10,01:10,02:20,,8,170,18,4,2.6,101.33,3.56,1.77,1.19,00115,Eros,1 filter 4 image every 21 seconds,done
+Opnav 117a KD_starcal,,NAV,26-Apr,117,05:30,00:42,06:12,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_Flyover_117,,MSI,26-Apr,117,06:15,05:41,11:56,,8,630,1,4,3.6,271.22,9.52,4.74,3.17,00115,Eros,1 filter 4 image every 27 or 29 seconds,done
+NIS_Flyover_117,,MSI,26-Apr,117,06:15,05:40,11:55,,,3300,8,,,3.78,0.1,0.1,0.0,00115,Eros,MP 40-105 (5sp + 2r + 2d) calint=65,done
+Opnav 117b KD,,NAV,26-Apr,117,12:00,00:26,12:26,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,26-Apr,117,12:38,06:10,18:48,,,,,,,395.98,13.89,6.92,4.64,,,,
+Opnav 117c KD,,NAV,26-Apr,117,20:51,00:26,21:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_FeatureTrack_117,,MSI,26-Apr,117,23:43,01:30,01:13,,8,100,30,4,3,51.66,1.81,0.90,0.60,00115,Eros,1 clean filter 4 image every 39 seconds (clean done with all manual exposure),done
+NIS_FeatureTrack_117,,MSI,26-Apr,117,23:43,00:58,00:41,,,208,10,,,0.24,0.0,0.0,0.0,00115,Eros,MP 67-92 (16sp + 2r + 8d) calint=25,done
+MSI_LowEmissMaps_118A,,MSI,27-Apr,118,00:58,01:15,02:13,,8,80,18,4,2.6,47.69,1.67,0.83,0.56,00115,Eros,Mosaics of low emission areas (filter4),done
+NIS_LowEmissMaps_118A,,MSI,27-Apr,118,00:58,01:10,02:08,,,360,4,,,0.41,0.0,0.0,0.0,00115,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+MSI Feature Color 118,,MSI,27-Apr,118,02:13,00:30,02:43,,12,45,"24, 15","1, 3, 4, 6",1.8,38.75,1.36,0.68,0.45,00115,Eros,Targetted 2x2 start-stop mosaics with center frame,done
+MSI_LowEmissMaps_118B,,MSI,27-Apr,118,02:31,00:53,03:24,,8,36,18,4,2.6,21.46,0.75,0.37,0.25,00115,Eros,Mosaics of low emission areas (filter4),done
+NIS_LowEmissMaps_118B,,MSI,27-Apr,118,02:31,00:54,03:25,,,648,"5,7",,,0.74,0.0,0.0,0.0,00115,Eros,"7x23 mosaics (2sp+0r+0d), alt. w/ one close shutter dark (10sp+0r+0d)",done
+Opnav 118a KD_starcal,,NAV,27-Apr,118,03:25,00:42,04:07,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_LowEmissMaps_118C,,MSI,27-Apr,118,04:10,02:04,06:14,,8,76,18,4,2.6,45.30,1.59,0.79,0.53,00115,Eros,Mosaics of low emission areas (filter4),done
+NIS_LowEmissMaps_118C,,MSI,27-Apr,118,04:10,02:04,06:14,,,1008,"5,7,4",,,1.15,0.0,0.0,0.0,00115,Eros,"7x23 mosaics (2sp+0r+0d) alt. w/ one close shutter dk (10sp+0r+0d), plus  5x5 mosaics (6sp + 2r + 3d) calint=5",done
+MSI_RideNLR_118A,,NLR,27-Apr,118,07:00,02:06,09:06,,8,178,18,4,2.6,106.10,3.72,1.85,1.24,00115,Eros,1 filter 4 image every 39 seconds,done
+MSI_RideNLR_118B,,NLR,27-Apr,118,09:20,02:30,11:50,,8,195,18,4,2.6,116.24,4.08,2.03,1.36,00115,Eros,1 filter 4 image every 43 seconds,done
+NIS_RideNLR_118,,NLR,27-Apr,118,06:15,05:11,11:26,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+Opnav 118b KD,,NAV,27-Apr,118,12:01,00:26,12:27,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,27-Apr,118,12:38,08:00,20:38,,,,,,,449.39,15.77,7.85,5.26,,,,
+Opnav 118c KD,,NAV,27-Apr,118,20:51,00:26,21:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_FeatureTrack_118,,MSI,27-Apr,118,23:45,05:44,05:29,,8,452,18,4,3,233.50,8.19,4.08,2.73,00115,Eros,"4 targets, image delta varies",done
+NIS_FeatureTrack_118,,MSI,27-Apr,118,23:45,05:40,05:25,,,3300,8,,,3.78,0.1,0.1,0.0,00115,Eros,MP 40-105 (5sp + 2r + 2d) calint=65,done
+Opnav 119a KD_starcal,,NAV,28-Apr,119,05:30,00:42,06:12,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_119A,,NLR,28-Apr,119,06:15,00:42,06:57,,8,120,18,4,2.6,71.53,2.51,1.25,0.84,00115,Eros,1 filter 4 image every 16 seconds,done
+MSI_RideNLR_119B,,NLR,28-Apr,119,08:50,00:42,09:32,,8,220,18,4,2.6,131.14,4.60,2.29,1.53,00115,Eros,1 filter 4 image every 16 seconds,done
+NIS_RideNLR_119,,NLR,28-Apr,119,06:15,05:11,11:26,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+Opnav 119b KD,,NAV,28-Apr,119,12:01,00:26,12:27,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,28-Apr,119,12:38,08:00,20:38,,,,,,,459.60,16.13,8.03,5.38,,,,
+Opnav 119c KD,,NAV,28-Apr,119,21:51,00:26,22:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_LowEmissMaps_119,,MSI,28-Apr,119,23:45,05:45,05:30,,8,32,18,4,2.6,19.07,0.67,0.33,0.22,00115,Eros,Mosaics of low emission areas (filter4),done
+NIS_LowEmissMaps_119,,MSI,28-Apr,119,23:45,02:04,01:49,,,3540,"6,7",,,4.06,0.1,0.1,0.0,00115,Eros,"7x42 mosaics (2sp + 0r + 0d) ,alt. w/ close shutter dark (10sp+0r+0d).",done
+Opnav 120a KD_starcal,,NAV,29-Apr,120,05:30,00:42,06:12,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_120A,,NLR,29-Apr,120,06:30,01:57,08:27,,8,168,18,4,2.6,100.14,3.51,1.75,1.17,00115,Eros,1 filter 4 image every 38 seconds,done
+MSI_RideNLR_120B,,NLR,29-Apr,120,09:10,01:47,10:57,,8,152,18,4,2.6,90.60,3.18,1.58,1.06,00115,Eros,1 filter 4 image every 38 seconds,done
+NIS_RideNLR_120,,NLR,28-Apr,120,06:15,05:11,11:26,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+Opnav 120b KD,,NAV,29-Apr,120,12:01,00:26,12:27,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,29-Apr,120,12:38,08:00,20:38,,,,,,,233.52,8.19,4.08,2.73,,,,
+Opnav 120c KD,,NAV,29-Apr,120,20:51,00:26,21:17,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_North_2x3s_120,,MSI,29-Apr,120,23:45,03:59,03:44,,8,150,18,4,2.6,89.41,3.14,1.56,1.05,00115,Eros,1 filter 4 image every 88 seconds during looping 2x3 mosaic,done
+NIS_North_2x3s_120,,MSI,29-Apr,120,23:45,01:41,01:26,,,1440,4,,,1.65,0.1,0.0,0.0,00115,Eros,5x5 mosaics (6sp + 2r + 3d) calint=5,done
+Opnav 121a KD_starcal,,NAV,29-Apr,120,03:45,00:42,04:27,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_121A,,NLR,30-Apr,121,04:30,02:37,07:07,,8,45,1,4,3.6,19.37,0.68,0.34,0.23,00115,Eros,1 filter 4 image every 195 seconds,done
+MSI_RideNLR_121B,,NLR,30-Apr,121,07:40,00:51,08:31,,8,15,1,4,3.6,6.46,0.23,0.11,0.08,00115,Eros,1 filter 4 image every 166 seconds,done
+NIS_RideNLR_121,,NLR,30-Apr,121,04:30,03:38,08:08,,,1377,9,,,1.58,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+70 m track (26.4 kb/s),43,,30-Apr,121,10:00,04:00,14:00,,,,,,,130.87,4.59,2.29,1.53,,,,
+OCM 6,,,30-Apr,121,16:10,,,,,,,,,,,,,,,,
+Opnav 121b Post Burn KL3A,,NAV,30-Apr,121,18:25,00:22,18:47,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00115,Eros,3x4 mosaic,done
+70 m track (26.4 kb/s),43,,30-Apr,121,19:20,02:10,21:30,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 121c Post Burn KL3B,,NAV,30-Apr,121,21:25,00:22,21:47,T,12,12,27,4,2.5,14.88,0.52,0.26,0.17,00115,Eros,3x4 mosaic,done
+70 m track (26.4 kb/s),43,,30-Apr,121,22:20,01:30,23:50,,,,,,,14.88,0.52,0.26,0.17,,,,
+MSI_FeatureTrack_121,,MSI,30-Apr,121,23:45,05:37,05:22,,8,183,18,4,2.6,109.08,3.83,1.91,1.28,00115,Eros,"One feature,  1 filter 4 image ev. 28Sec",done
+NIS_FeatureTrack_121,,MSI,30-Apr,121,23:45,05:40,05:25,,,3300,8,,,3.78,0.1,0.1,0.0,00115,Eros,MP 40-105 (5sp + 2r + 2d) calint=65,done
+Opnav 122a KD_starcal,,NAV,01-May,122,05:30,00:42,06:12,F,12,4,29,0,2.5,2.48,0.09,0.04,0.03,00115,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+,,, , , ,, ,,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+MSI_RideNLR_122A,,NLR,01-May,122,06:15,01:37,07:52,,8,185,18,4,2.6,110.27,3.87,1.93,1.29,00115,Eros,1 filter 4 image every 28 seconds,done
+MSI_RideNLR_122B,,NLR,01-May,122,08:20,03:25,11:45,,8,417,18,4,2.6,248.56,8.72,4.34,2.91,00115,Eros,1 filter 4 image every 28 seconds,done
+NIS_RideNLR_122,,NLR,01-May,122,06:15,05:11,11:26,,,2000,3,,,2.29,0.1,0.0,0.0,00115,Eros,MP 50-100 (8sp + 2r + 5d) calint=50,done
+Opnav 122b KD,,NAV,01-May,122,12:01,00:26,12:27,F,12,8,27,4,2.5,4.96,0.17,0.09,0.06,00115,Eros,2x2 pointed to a landmark,done
+70 m track (26.4 kb/s),43,,01-May,122,12:38,08:00,20:38,,,,,,,486.39,17.07,8.50,5.69,,,,
+Total MSI images,,,,,,,,,,4586,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Total  images taken in 100 km orbit,,,,,,,,,,14414,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Total  spectra taken in 100 km orbit,,,,,,,,,,75911,,,,,,,,,,,

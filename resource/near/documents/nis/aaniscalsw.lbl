@@ -1,0 +1,53 @@
+PDS_VERSION_ID        = PDS3 
+RECORD_TYPE           = STREAM 
+^ASCII_DOCUMENT        = { "BASECON.PRO", "BLEND.PRO", 
+                          "CHECK_FITS.PRO", "EPROP_DIV.PRO", 
+                          "EPROP_MULT.PRO", "EPROP_SUMDIF.PRO", 
+                          "FIXGAPS.PRO", "FXADDPAR.PRO", 
+                          "FXPARPOS.PRO", "GETRUN.PRO", 
+                          "HOST_TO_IEEE.PRO", "IEEE_TO_HOST.PRO", 
+                          "IS_IEEE_BIG.PRO", "LINFILL.PRO", 
+                          "MEAN.PRO", "MKHDR.PRO", "MORE.PRO", 
+                          "NICENUMBER.PRO", "NIS_C_BACK.PRO", 
+                          "NIS_C_BACK_TIGHT.PRO", "NIS_C_CROSS.PRO", 
+                          "NIS_C_DARK.PRO", "NIS_C_DARKSEP.PRO", 
+                          "NIS_C_DARKSPACE.PRO", "NIS_C_DIV.PRO", 
+                          "NIS_C_DMV.PRO", "NIS_C_ECOR.PRO", 
+                          "NIS_C_GAIN.PRO", "NIS_C_IOF.PRO", 
+                          "NIS_C_METFIND.PRO", "NIS_C_MIRROR.PRO", 
+                          "NIS_C_PHOT.PRO", "NIS_C_RAD.PRO", 
+                          "NIS_C_SPICE.PRO", "NIS_C_WRITE.PRO", 
+                          "NIS_CLEAN.PRO", "NIS_FITS_FORMAT.PRO", 
+                          "NIS_PROC.PRO", 
+                          "NIS_RECAL.PRO", "NISCAL.PRO", "NRUNS.PRO", 
+                          "NWRDS.PRO", "PATH.PRO", "POS.PRO", 
+                          "RAYHIST.PRO", "READCOL.PRO", 
+                          "READFITS.PRO", "REMCHAR.PRO", "REPCHR.PRO", 
+                          "SMOOTH2.PRO", "SPC.PRO", "SSTRR.PRO", 
+                          "STRIP.PRO", "STRN.PRO", "STRNUMBER.PRO", 
+                          "SXADDPAR.PRO", "SXDELPAR.PRO", "SXPAR.PRO", 
+                          "TARCLR.PRO", "TOPC.PRO", "WORDARRAY.PRO", 
+                          "WRITEFITS.PRO", "ZPARCHECK.PRO" } 
+ 
+OBJECT                = ASCII_DOCUMENT 
+  PUBLICATION_DATE    = 2001-07-13 
+  DOCUMENT_NAME       = " Niscal NIS Calibration IDL Program " 
+  DOCUMENT_TOPIC_TYPE = "SENSOR CALIBRATION" 
+  INTERCHANGE_FORMAT  = ASCII 
+  DOCUMENT_FORMAT     = TEXT 
+  FILES               = 63 
+  DESCRIPTION         = "These IDL procedures are used for calibrating 
+                         NIS data from raw counts to radiance factor. 
+                         Together with the data files also archived on 
+                         this volume, they are Niscal Version 5.01.  Each 
+                         procedure has comments. Those comments, together 
+                         with the Niscal user manual, MANUAL.TXT, and the 
+                         calibration paper described in 
+                         DOCUMENT/NISCAL.LBL, make up the PDS 
+                         documentation for Niscal. 
+                         Niscal requires data files to run; those files 
+                         are also archived on this volume.  See 
+                         DOCUMENT/DOCINFO.TXT. 
+                         " 
+END_OBJECT            = ASCII_DOCUMENT 
+END 

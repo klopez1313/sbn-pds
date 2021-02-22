@@ -1,0 +1,22 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2001-07-12                                               
+  NOTE             = " NIS Instrument Calibration Directory "                 
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+************File CALINFO.TXT:                                                 
+                                                                              
+The CALIB/ directory contains sixteen calibration tables with detached        
+PDS labels.  The NIS calibration procedure, NISCAL, uses these file to        
+convert from raw NIS output (DN) to radiance.                                 
+                                                                              
+The description fields in the label files, together with (1) the              
+calibration documents in DOCUMENT/, (2) the Niscal manual                     
+DOCUMENT/NISCALSW/MANUAL.TXT, (3) the comments in the Niscal IDL procedures   
+in DOCUMENT/NISCALSW/, and (4) the NIS instrument catalog                     
+CATALOG/NISINST.CAT, all combine to give detailed explanations of the         
+tables and their values' significance.                                        

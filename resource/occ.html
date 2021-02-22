@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Small Bodies Occultations</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+            <h1> Asteroid Occultations </h1>
+            </center>
+
+            <h3>
+            <p>
+This data set is intended to include all reported timings of observed asteroid, planet, and planetary satellite occultation events made by observers from around the world. Included are occultation axes derived from those timings, and (wherever possible) volume-equivalent diameters derived from fitting to shape models. This version is complete through to May 2019, with observations up until Sept 2019.
+            </h3>
+
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:smallbodiesoccultations::3.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations_V3_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations_V3_0.zip"> Download (9.9 Mb) </a>
+            </table>
+
+            <p>
+            Use the following citation to reference this data set:
+
+            <p>
+"Herald, D., Frappa, E., Gault, D., Hayamizu, T., Kerr, S., Moore, J., and Giacchini, B., Asteroid Occultations V3.0. urn:nasa:pds:smallbodiesoccultations::3.0. NASA Planetary Data System, 2019."
+
+            <br><br>
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
+            <table border=1>
+           <tr><td width=500> urn:nasa:pds:smallbodiesoccultations::2.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations_V2_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations_V2_0.zip"> Download (5 Mb) </a>
+            <tr><td width=500> urn:nasa:pds:smallbodiesoccultations::1.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations.zip"> Download (14 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V14.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V14_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V14_0.zip"> Download (15 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V13.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V13_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V13_0.zip"> Download (15 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V12.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V12_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V12_0.zip"> Download (23 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V11.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V11_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V11_0.zip"> Download (23 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V10.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V10_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V10_0.zip"> Download (23 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V9.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V9_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V9_0.zip"> Download (23 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V8.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V8_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V8_0.zip"> Download (23 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V7.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V7_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V7_0.zip"> Download (19 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V6.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V6_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V6_0.zip"> Download (14 Mb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V5.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V5_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V5_0.zip"> Download (390 kb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V4.1
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V4_1"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V4_1.zip"> Download (328 kb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V4.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V4_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V4_0.zip"> Download (331 kb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V3.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V3_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V3_0.zip"> Download (291 kb) </a>
+            <tr><td width=500> EAR-A-3-RDR-OCCULTATIONS-V2.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V2_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V2_0.zip"> Download (208 kb) </a>
+            <tr><td> EAR-A-3-RDR-OCCULTATIONS-V1.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V1_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_OCCULTATIONS_V1_0.zip">  Download (84 kb) </a>
+            </table></div>
+
+            <br> <br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

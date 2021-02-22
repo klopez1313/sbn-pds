@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Hayabusa Data Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Hayabusa</li>
+        </ol>
+        <center>
+            <h1> Hayabusa Data Archive </h1>
+            </center>
+
+            <p>
+            <b>Main target body:</b>  Asteroid (25143) Itokawa<br>
+            <b>Launch date:</b> 9 May 2003 </br>
+            <b> Earth Flyby date:</b> 19 May 2004 </br>
+            <b> Itokawa orbit operations:</b> 12 September 2005 - 19 November 2005</br>
+
+            <hr>
+
+            <h3>Hayabusa primary instrument data:</h3>
+
+            <table border=2>
+
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Images
+            <td><a href="resource/hayamica.html">Asteroid Multi-band Imaging Camera (AMICA)</a>
+            <td> A 1024x1000 pixel camera with seven ECAS filters and a wide-band filter.
+
+            <tr>
+            <td rowspan=2>Spectra
+            <td><a href="resource/nirsraw.html">Near-Infrared Spectrometer (NIRS) raw</a>
+            <td rowspan=2> A grating infrared spectrometer with spectral range 850-2100 nm
+
+            <tr>
+            <td><a href="resource/nirscal.html">Near-Infrared Spectrometer (NIRS) calibrated</a>
+
+            <tr>
+            <td>Nuclear
+            <td>X-Ray Spectrometer (XRS)</a>
+            <td>Data from XRS were not archived in PDS.  XRS data are available at <a href="http://darts.isas.jaxa.jp/planet/project/hayabusa/">DARTS</a>.
+
+            <tr>
+            <td>Magnetometer
+            <td> N/A
+            <td> No magnetometer instrument on Hayabusa
+
+            <tr>
+            <td>Dust
+            <td> N/A
+            <td> No dust detector instrument on Hayabusa
+
+            <tr>
+            <td>Altimetry
+            <td><a href="resource/haylidar.html">Light Detection and Ranging (LIDAR)</a>
+            <td> Raw and calibrated laser altimetry data
+
+            <tr>
+            <td>Radio Science
+            <td>N/A
+            <td> Hayabusa Radio Science data were not released by the mission.
+
+            <tr>
+            <td rowspan=2>Ancillary
+            <td><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/hay-a-spice-6-v1.0">Hayabusa SPICE archive</a>
+            <td>Archived at NAIF
+
+            <tr>
+            <td><a href="resource/amicacal.html">Hayabusa Groundbased calibration data</a>
+            <td>Groundbased ECAS photometry of Hayabusa AMICA calibration stars
+
+            </table>
+
+            <h3>Derived data:</h3>
+
+            <table border=2>
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Images
+            <td><a href="resource/amicageom.html">Hayabusa AMICA images with Geometry Backplanes</a>
+            <td> AMICA Itokawa image set with geometric and gravitational backplanes
+
+            <tr>
+            <td>Models
+            <td><a href="resource/itokawashape.html">Gaskell Itokawa Shape Model</a>
+            <td> Most accurate shape model available for Itokawa, provided in a range of resolutions
+
+            </table>
+
+            <hr>
+
+            <p>
+            For questions about the data sets or this web site, contact Carol Neese
+            (neese@psi.edu).
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

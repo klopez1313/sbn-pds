@@ -1,0 +1,14 @@
+<tr class="row row-alt sbn-body" ng-repeat-start="object in objects">
+    <td class="cell" colspan="2">{{ object.name }}</td>
+    <td class="cell"><ferret-link object-name="object.name"></ferret-link></td>
+</tr>
+<tr class="row">
+    <td class="cell"><a href="{{object.datasets[0].link}}">{{ object.datasets[0]['name']}}</a></td>
+    <td class="cell"><generate-preview dataset="object.datasets[0]"></generate-preview></td>
+    <td class="cell centered icons-container"><file-download file-to-download="object.datasets[0]['files']['data']['primary']"></file-download><file-download file-to-download="object.datasets[0]['files']['data']['derived']"></file-download></td>
+</tr>
+<tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in object.datasets.slice(1)">
+    <td class="cell"><a href="{{dataset.link}}">{{ dataset.name }}</a></td>
+    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
+    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
+</tr>

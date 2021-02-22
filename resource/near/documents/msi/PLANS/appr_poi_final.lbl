@@ -1,0 +1,27 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+^CSV_DOCUMENT       = "APPR_POI_FINAL.CSV"                                    
+^XLS_DOCUMENT       = "APPR_POI_FINAL.XLS"                                    
+                                                                              
+OBJECT              = CSV_DOCUMENT                                            
+  DOCUMENT_NAME       = "OBSERVATION INFORMATION FOR APPROACH AND INSERTION"  
+  DOCUMENT_TOPIC_TYPE = "MAPPING DESCRIPTION AND RESULTS"                     
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  DOCUMENT_FORMAT     = TEXT                                                  
+  PUBLICATION_DATE  = 2000-07-17                                              
+  DESCRIPTION       = "This document is a comma delimited Excel spreadsheet   
+                      covering the period December 15, 1999 through February  
+                      27, 2000."                                              
+END_OBJECT          = CSV_DOCUMENT                                            
+                                                                              
+OBJECT              = XLS_DOCUMENT                                            
+  DOCUMENT_NAME       = "OBSERVATION INFORMATION FOR APPROACH AND INSERTION"  
+  DOCUMENT_TOPIC_TYPE = "MAPPING DESCRIPTION AND RESULTS"                     
+  INTERCHANGE_FORMAT  = BINARY                                                
+  DOCUMENT_FORMAT     = "MICROSOFT EXCEL"                                     
+  PUBLICATION_DATE  = 2000-07-17                                              
+  DESCRIPTION       = "This document is an Excel spreadsheet covering the     
+                      period December 15, 1999 through February 27, 2000."    
+END_OBJECT          = XLS_DOCUMENT                                            
+                                                                              
+END                                                                           

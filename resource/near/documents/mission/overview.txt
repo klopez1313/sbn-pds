@@ -1,0 +1,11 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " Mission Overview: Refer to /CATALOG/NEARMISSION.CAT "  
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+See the /CATALOG/NEARMISSION.CAT catalog file for a NEAR Mission overview.    

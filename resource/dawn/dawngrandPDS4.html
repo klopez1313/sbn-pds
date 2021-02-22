@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Dawn GRaND PDS4 Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/dawn">Dawn</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>GRaND PDS4 Archive</li>
+        </ol>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Type</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/xgn.html">Nuclear</a></li>
+            <li class="breadcrumbs-separator">/</li>
+        </ol>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/target-types.html">Target Type</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/asteroids.html">All Asteroid Data</a></li>
+            <li class="breadcrumbs-separator">/</li>
+        </ol>
+        <center>
+            <h1> Dawn GRaND PDS4 Archive</h1>
+
+            <h2>Nuclear Spectroscopy of 4 Vesta and 1 Ceres</h2>
+
+            <b>Status: <font color=red>Coming Soon</font>
+            </b>
+            </center>
+
+<p>
+The Dawn Mission's Gamma Ray and Neutron Detector (GRaND) collected data needed to map the elemental composition of the surfaces of Dawn mission targets 4 Vesta and 1 Ceres.  GRaND measured the spectrum of planetary gamma rays and neutrons, which originate from galactic cosmic ray interactions and the decay of radioelements within the regolith, while the spacecraft is in orbit around each body.
+
+<p>
+The Dawn GRaND archive, including raw and calibrated data and maps, has been previously available in the deprecated PDS3 archive standard, and has now been migrated to the current standard, PDS4.  In migrating the GRaND archive to the new PDS4 standard, no changes were made to the data files; however, the metadata and documentation were revised and enhanced.  Please see the GRaND archive description document [link] to understand the organization and content of the GRaND archive.  The original PDS3 GRaND archive is still available at the <a href="https://sbn.psi.edu/pds-staging/resource/dawn/">Dawn Archive Page</a>.
+
+<p>
+Custom IDL software is available for ease of access and processing of raw GRaND data for scientific analyses [link].  However, the IDL software is not necessary to access and use the GRaND data, as all information to do so is available in the PDS4 labels.
+
+<p>
+Each bundle contains raw, calibrated, and derived data on the specified target.  The ancillary bundle contains high level information and documentation.
+
+<br><br>
+
+<center>
+<table border=1>
+   <tr><td width=100><i>Bundle/Target</i>
+       <td width=100><i>Browse link</i>
+       <td width=100><i>Download link</i>
+       <td width=200><i>Bundle DOI</i>
+<tr><td>Ancillary
+    <td>
+    <td>
+    <td>10.26033/2cqt-at57
+<tr><td>Cruise
+    <td>
+    <td>
+    <td>10.26033/skyr-at92
+<tr><td>Mars
+    <td>
+    <td>
+    <td>10.26033/v138-0v94
+<tr><td>4 Vesta
+    <td>
+    <td>
+    <td>10.26033/ypv0-mt21
+<tr><td>1 Ceres
+    <td>
+    <td>
+    <td>10.26033/hf9h-pt31
+</table>
+</center>
+
+            <h3>
+            <center>
+            <a href="resource/dawn/index.html">Return to Dawn Archive Page</a><br>
+            </center>
+            <br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

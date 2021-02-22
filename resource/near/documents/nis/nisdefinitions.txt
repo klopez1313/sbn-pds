@@ -1,0 +1,472 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " NIS Data File parameter Definitions "                  
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+NEAR INFRARED SPECTROMETER SCIENCE RECORD VARIABLES                           
+       (Binary Table Fields)                                                  
+                                                                              
+The following list of variable names are contained in the header of the Binary
+table extension of the NIS data file created by CFITSIO user routines for     
+PDS compliance.  The corresponding definitions will be placed in a separate   
+file and will not be contained in the PDS label file, or require the generatio
+of PDS keywords.                                                              
+                                                                              
+                                                                              
+ 1.  met                                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 160000000                                             
+        units - seconds (unsigned)                                            
+ definition - Mission Elapsed Time in seconds for the start of this XGRS      
+integration period                                                            
+                                                                              
+ 2.  tdb                                                                      
+                                                                              
+        minimum value - -1.3e+8                                               
+        maximum value - +6.4e+7                                               
+        units - seconds (signed)                                              
+        definition - Barycentric Dynamical Time corresponding to MET(1).      
+     Barycentric Dynamical Time (TDB) is the independent                      
+     variable in the equations, including terms for relativity,               
+     of motion of the celestial bodies.  The solution of these                
+     equations gives the rectangular coordinates of those                     
+     bodies relative to the barycentre (centre of mass) of the                
+     solar system.  (The barycentre does not coincide with the                
+     centre of the Sun but is displaced to a point near its                   
+     surface in the direction of Jupiter.)                                    
+                                                                              
+ 3.  dqi                                                                      
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - Data Quality Index                                       
+                     c0 = Data Quality Flag[0=good,1=flagged for quality      
+                          defects]                                            
+                     c1 = Instrument number for FC, CTP and AIU[1 or 2]       
+                     c2 - c6 = Processing Flags not quality related           
+                     c7 = CCDS Source[0=VC0, 1=VC1, 2=VC2, 3=VC3]             
+                                                                              
+                                                                              
+  4.  spectrometer_on_off                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - NIS electronics power on/off - turn the power to the NIS 
+                     electronics on or off.  The DPU turns on the spectrometer
+                     power when it starts up via a discrete which controls a  
+                     solid state relay.  The entire NIS interface becomes     
+                     operational within 1-2 seconds after power is applied.   
+                     Turning off the spectrometer zeros the SSG control word. 
+                     cmd opcode: 0fx400                                       
+                     ground conversion:                                       
+                     0=off                                                    
+                     1=on                                                     
+                     initial value: 1=on                                      
+                                                                              
+  5.  scan_mirror_drive_select                                                
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - scan mirror drive select - Select the primary or secondar
+                     drive for subsequent scan mirror motions.  The default is
+                     the primary drive.  Note: the mirror is allowed to spring
+                     to its fully forward position before changing the drive; 
+                     the "Home scan mirror" should be issued after this       
+                     command.                                                 
+                     cmd opcode: 0fx402                                       
+                     ground conversion:                                       
+                     0=primary                                                
+                     1=secondary                                              
+                     initial value: 0=primary                                 
+                                                                              
+  6.  shutter_drive_select                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - shutter drive select - select the primary or secondary   
+                     drive for subsequent shutter drive motions.  The default 
+                     is the primary drive.                                    
+                     cmd opcode: 0fx405                                       
+                     ground conversion:                                       
+                     0=primary                                                
+                     1=secondary                                              
+                     initial value: 0=primary                                 
+                                                                              
+  7.  slit_drive_select                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - slit plate drive select - select the primary or secondary
+                     drive for subsequent shutter slit plate motions.  The    
+                     default is the primary drive.                            
+                     cmd opcode: 0fx406                                       
+                     ground conversion:                                       
+                     0=primary                                                
+                     1=secondary                                              
+                     initial value: 0=primary                                 
+                                                                              
+  8.  slit shutter position                                                   
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 3                                                     
+        units - N/A                                                           
+        definition - slit/shutter in/out - move the slit and shutter to the   
+                     desired position.  The default is both the slit and      
+                     shutter out.                                             
+                     cmd opcode: 0fx407                                       
+                     ground conversion:                                       
+                     0=both out                                               
+                     1=slit only                                              
+                     2= shutter only                                          
+                     3=both in                                                
+                     initial value: 0=both out                                
+                                                                              
+  9.  ge_detector_gain                                                        
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - Ge detector gain adjust - set the gain of the Ge detector
+                     The default is 1x.                                       
+                     cmd opcode: 0fx408                                       
+                     ground conversion:                                       
+                     0=1x                                                     
+                     1=10x                                                    
+                     initial value: 0=1x                                      
+                                                                              
+ 10.  spare1                                                                  
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - spare                                                    
+                                                                              
+ 11.  ssg_telltales                                                           
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 255                                                   
+        units - N/A                                                           
+        definition - SSG telltales - include protective cover indicator, slit 
+                     and shutter position indicators, and the "start" and     
+                     "nadir" discrete fiducials.                              
+                                                                              
+                     cover closed bit 0,0=closed                              
+                     cover open   bit 1,0=open                                
+                     slit in      bit 2,0=in                                  
+                     slit out     bit 3,0=out                                 
+                     shutter in   bit 4,0=in                                  
+                     shutter out  bit 5,0=out                                 
+                     mirror start bit 6,1=active                              
+                     mirror nadir bit 7,1=active                              
+                                                                              
+                                                                              
+ 12.  motor_move_volt                                                         
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - motor move voltage - set the voltage used to move the    
+                     mirror, slit, or shutter.  The default is 15V (to save   
+                     power).                                                  
+                     cmd opcode: 0fx410                                       
+                     ground conversion:                                       
+                     0=15V                                                    
+                     1=20V                                                    
+                     initial value: 0=15V                                     
+                                                                              
+ 13.  spare2                                                                  
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - spare                                                    
+                                                                              
+ 14.  sequence_aborted                                                        
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - Sequence aborted during acquisition.                     
+        0=no abort                                                            
+        1=sequence abort                                                      
+                                                                              
+ 15.  commanded_scan_mirror_pos                                               
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 350                                                   
+        units - N/A                                                           
+        definition - Position of scan mirror. Mirror has 351 steps in 0.2     
+        degree rotation steps. Sequences to mirror define a starting position,
+        and the sequence can increment the mirror by some number each         
+        observation.                                                          
+                                                                              
+ 16.  number_of_spectra                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 63                                                    
+        units - N/A                                                           
+        definition - Number of spectra summed during each observation. Each   
+        spectrum is a one second integration of data in the detectors. up to 6
+        seconds can be summed and saved as a single spectrum.                 
+                                                                              
+ 17.  actual_scan_mirror_pos                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 350                                                   
+        units - N/A                                                           
+        definition - Actual position of scan mirror during observation. An    
+        error exists if this parameter is not the same as                     
+        commanded_scan_mirror_pos.                                            
+                                                                              
+ 18.  current_sequence                                                        
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 15                                                    
+        units - N/A                                                           
+        definition - current spectrometer sequence - number of the current    
+                     spectrometer sequence. Fifteen sequence definitions can b
+                     held in the NIS while it is on. Sequence number s 0,1,   
+                     and 2 are hard-coded and are defined automatically when  
+                     the instrument is turned on, but they can be subsequently
+                     redefined like the rest of the sequences.                
+                                                                              
+ 19.  science_summary                                                         
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 256                                                   
+        units - N/A                                                           
+        definition - science summary - a science summary which indicates the  
+        basic health of the detector and interface hardware.  The summary is  
+        the most significant eight bits of the brightest pixel of either the  
+        Ge or the InGaAs detectors.                                           
+                                                                              
+ 20.  ge_detector_temp                                                        
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Germanium detector temperature - Temperature at the      
+        detector itself. Temperatures are recorded as counts. Conversion of   
+        counts to engineering units is performed by the ground software.      
+        Equation for converting counts to Degrees X is:                       
+        Ge detector temperatures have a caveat:                               
+        only 8 bits of the 12 bit data are sent to the ground, with the 8 bits
+        taken out of the middle. Therefore when the temperature reaches a     
+        maximum value the data rolls over and starts again near the minimum.  
+        If the scale isn't adjusted a temperature of just above -30C can      
+        appear as around -110C.                                               
+                                                                              
+                                                                              
+ 21.  ge_inner_board_temp                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Germanium inner board temperature - One of two boards    
+        containing preamplifiers. Temperatures are recorded as counts.        
+        Conversion of counts to engineering units is performed by the ground  
+        software. Equation for converting counts to Degrees X is:             
+                                                                              
+                                                                              
+ 22.  ge_middle_board_temp                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Germanium middle board temperature - One of two boards   
+        containing preamplifiers. Temperatures are recorded as counts.        
+        Conversion of counts to engineering units is performed by the ground  
+        software. Equation for converting counts to Degrees X is:             
+                                                                              
+                                                                              
+ 23.  ingaas_detector_temp_1                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Indium Gallium Arsenide detector temperature #1 - One of 
+        two measurements made at the detector itself. Temperatures are        
+        recorded as counts. Conversion of counts to engineering units is      
+        performed by the ground software. Equation for converting counts to   
+        Degrees X is:                                                         
+                                                                              
+                                                                              
+ 24.  ingaas_detector_temp_2                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Indium Gallium Arsenide detector temperature #2 - One of 
+        two  measurements made at the detector itself. Temperatures are       
+        recorded as counts. Conversion of counts to engineering units is      
+        performed by the ground software. Equation for converting counts to   
+        Degrees X is:                                                         
+                                                                              
+                                                                              
+ 25.  ingaas_inner_board_temp                                                 
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Indium Gallium Arsenide inner board temperature - One of 
+        two boards containing preamplifiers. Temperatures are recorded as     
+        counts. Conversion of counts to engineering units is performed by the 
+        ground software. Equation for converting counts to Degrees X is:      
+                                                                              
+                                                                              
+ 26.  ingaas_middle_board_temp                                                
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Indium Gallium Arsenide middle board temperature - One of
+        two boards containing preamplifiers. Temperatures are recorded as     
+        counts. Conversion of counts to engineering units is performed by the 
+        ground software. Equation for converting counts to Degrees X is:      
+                                                                              
+                                                                              
+ 27.  ssg_scan_motor_temp                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group scan motor temperature - A          
+        temperature measurement on the motor case of the scan motor.          
+        Temperatures are recorded as counts. Conversion of counts to          
+        engineering units is performed by the ground software. Equation for   
+        converting counts to Degrees X is:                                    
+                                                                              
+                                                                              
+ 28.  ssg_scan_mirror_temp                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group scan mirror temperature - Temperatur
+        of the scan mirror itself. Temperatures are recorded as counts.       
+        Conversion of counts to engineering units is performed by the ground  
+        software. Equation for converting counts to Degrees X is:             
+                                                                              
+                                                                              
+ 29.  ssg_drive_board_temp                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group drive board temperature - Temperatur
+        of the board in the support electronics for NIS.  Not located inside  
+        the instrument proper, but in the support electronics which is mounted
+        on the forward facing side of the aft deck (rather than the instrument
+        which is on the aft facing side of the aft deck). Temperatures are    
+        recorded as counts. Conversion of counts to engineering units is      
+        performed by the ground software. Equation for converting counts to   
+        Degrees X is:                                                         
+                                                                              
+                                                                              
+ 30.  ssg_detector_base_temp                                                  
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group detector base temperature - The     
+        detector base is a temperature monitor on the housing structure in    
+        between where the two detectors mount to the housing.  It is a housing
+        temperature and not a detector temperature. Temperatures are recorded 
+        as counts. Conversion of counts to engineering units is performed by  
+        the ground software. Equation for converting counts to Degrees X is:  
+                                                                              
+                                                                              
+ 31.  nis_dc_dc_temp                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - NIS DC/DC temperature - DC/DC power converter temperature
+        Converters take spacecraft DC power (nominally 33 V or so) and convert
+        it into the voltages needed by the instrument. The temperature of     
+        these units rise because they handle all the power of the instrument  
+        and are appreciably less than 100% efficient (the lost power becoming 
+        heat). Temperatures are recorded as counts. Conversion of counts to   
+        engineering units is performed by the ground software. Equation for   
+        converting counts to Degrees X is:                                    
+                                                                              
+                                                                              
+ 32.  dpu_dc_dc_temp                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Data Processing Unit DC/DC power converter temperature.  
+        Temperatures are recorded as counts. Conversion of counts to          
+        engineering units is performed by the ground software. Equation for   
+        converting counts to Degrees X is:                                    
+                                                                              
+                                                                              
+ 33.  ssg_motor_current                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group motor current - Current provided to 
+        motor that dives the scan mirror. Current values are recorded as      
+        counts. Conversion of counts to engineering units is performed by the 
+        ground software. Equation for converting counts to mAmps is:          
+                                                                              
+                                                                              
+ 34.  nis_dc_dc_current                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - NEAR Infrared Spectrometer DC/DC converter current.      
+        Current values are recorded as counts. Conversion of counts to        
+        engineering units is performed by the ground software. Equation for   
+        converting counts to mAmps is:                                        
+                                                                              
+                                                                              
+ 35.  ssg_dc_dc_current                                                       
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**8-1                                                
+        units - N/A                                                           
+        definition - Sensor Systems Group DC/DC converter current. Current    
+        values are recorded as counts. Conversion of counts to engineering    
+        units is performed by the ground software. Equation for converting    
+        counts to mAmps is:                                                   
+                                                                              
+                                                                              
+ 36.  ge_spectra                                                              
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**16-1                                               
+        units - N/A                                                           
+        definition - Germanium spectrum - the accumulation of                 
+                     counts from the Germanium detector at the end            
+                     of every one second integration period.  Each 16-bit     
+                     spectrum is the accumulation of up to 63 12-bit spectra. 
+                     Accumulations larger than 16 bits, "wrap around".        
+                                                                              
+ 37.  ingaas_spectra                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**16-1                                               
+        units - N/A                                                           
+        definition - Indium Gallium Arsenide spectrum - the accumulation of   
+                     counts from the Indium Gallium Arsenide detector at the  
+                     end of every one second integration period.  Each 16-bit 
+                     spectrum is the accumulation of up to 63 12-bit spectra. 
+                     Accumulations larger than 16 bits, "wrap around".        
+                                                                              
+------------------------------------------------------------------------------

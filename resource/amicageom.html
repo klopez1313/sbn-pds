@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Hayabusa AMICA Images with Geometry</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+            <h1> Hayabusa AMICA Images with Geometry Backplanes </h1>
+            </center>
+
+            <h3>
+            <p>
+            The Asteroid Multi-band Imaging Camera
+                    (AMICA) of the Hayabusa mission to the asteroid 25143 Itokawa obtained
+                    1662 images from May 11, 2003, shortly after launch, until November
+                    19, 2005, after Itokawa encounter.  This data set provides derived
+                    data products for 1339 of those images that includes geometric
+                    information for each pixel.
+            </h3>
+            <a
+            href="https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_3_AMICAGEOM_V1_0/catalog/dataset.cat"
+            class="pds-button">
+            Data Set Info
+        </a>
+            <table border=1>
+            <tr><td width=500> HAY-A-AMICA-3-AMICAGEOM-V1.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_3_AMICAGEOM_V1_0"> Browse </a>
+                <td width=200> (for download, see below)
+            </table>
+
+            <p>
+            To facilitate downloading of this large data set, it has been divided into
+            smaller compressed pieces.  To reconstruct the data set on your machine,
+            download 'amicageom0.zip' and unzip it to create a copy of the data set
+            without the data directories.  Download 'ddr_gaskell.tar' and 'ddr_spice.tar',
+            place them in the data directory of the data set, and un-tar them to
+            populate the data directory.  Within the two data subdirectories, the data
+            files themselves are gzipped.  If you unzip them all the full size of the
+            data set will be approximately 82 Gbytes.
+
+            <ul>
+            <li><a href="https://sbnarchive.psi.edu/pds3/hayabusa/downloads/amicageom0.zip">amicageom0.zip (51 Mb)</a>
+            <li><a href="https://sbnarchive.psi.edu/pds3/hayabusa/downloads/ddr_gaskell.tar">ddr_gaskell.tar (4.4 Gb)</a>
+            <li><a href="https://sbnarchive.psi.edu/pds3/hayabusa/downloads/ddr_spice.tar">ddr_spice.tar (2.4 Gb)</a>
+            </ul>
+
+            <p>
+            Use the following citation to reference this data set:
+
+            <p>
+            Barnouin, O. and Kahn, E., Hayabusa
+                    AMICA Images with Geometry Backplanes V1.0.
+                    HAY-A-AMICA-3-AMICAGEOM-V1.0. NASA Planetary Data System, 2012.
+
+            <br> <br>
+
+           <h3><font color="red">Superseded</font> versions of this data set:<br>None</h3>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

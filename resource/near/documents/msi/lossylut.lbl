@@ -1,0 +1,74 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = STREAM                                                
+^GIF_DOCUMENT         = "LOSSYLUT.GIF"                                        
+^JPEG_DOCUMENT        = "LOSSYLUT.JPG"                                        
+^PNG_DOCUMENT         = "LOSSYLUT.PNG"                                        
+^TIFF_DOCUMENT        = "LOSSYLUT.TIF"                                        
+^ASCII_DOCUMENT       = "LOSSYLUT.TXT"                                        
+                                                                              
+OBJECT                = GIF_DOCUMENT                                          
+  DOCUMENT_NAME       = "GIF for the MSI Lossy Lookup Table"                  
+  DOCUMENT_TOPIC_TYPE = "DATA ANALYSIS"                                       
+  INTERCHANGE_FORMAT  = BINARY                                                
+  PUBLICATION_DATE    = 2001-07-17                                            
+  DOCUMENT_FORMAT     = GIF                                                   
+  DESCRIPTION         = "This document contains a plot of the the lossy       
+                         compression lookup Table for MSI"                    
+END_OBJECT            = GIF_DOCUMENT                                          
+                                                                              
+OBJECT                = JPEG_DOCUMENT                                         
+  DOCUMENT_NAME       = "JPG for the MSI Lossy Lookup Table"                  
+  DOCUMENT_TOPIC_TYPE = "DATA ANALYSIS"                                       
+  INTERCHANGE_FORMAT  = BINARY                                                
+  PUBLICATION_DATE    = 2001-07-17                                            
+  DOCUMENT_FORMAT     = JPG                                                   
+  DESCRIPTION         = "This document contains a plot of the the lossy       
+                         compression lookup Table for MSI"                    
+END_OBJECT            = JPEG_DOCUMENT                                         
+                                                                              
+OBJECT                = PNG_DOCUMENT                                          
+  DOCUMENT_NAME       = "PNG for the MSI Lossy Lookup Table"                  
+  DOCUMENT_TOPIC_TYPE = "DATA ANALYSIS"                                       
+  INTERCHANGE_FORMAT  = BINARY                                                
+  PUBLICATION_DATE    = 2001-07-17                                            
+  DOCUMENT_FORMAT     = PNG                                                   
+  DESCRIPTION         = "This document contains a plot of the the lossy       
+                         compression lookup Table for MSI"                    
+END_OBJECT            = PNG_DOCUMENT                                          
+                                                                              
+OBJECT                = TIFF_DOCUMENT                                         
+  DOCUMENT_NAME       = "TIF for the MSI Lossy Lookup Table"                  
+  DOCUMENT_TOPIC_TYPE = "DATA ANALYSIS"                                       
+  INTERCHANGE_FORMAT  = BINARY                                                
+  PUBLICATION_DATE    = 2001-07-17                                            
+  DOCUMENT_FORMAT     = TIFF                                                  
+  DESCRIPTION         = "This document contains a plot of the the lossy       
+                         compression lookup Table for MSI"                    
+END_OBJECT            = TIFF_DOCUMENT                                         
+                                                                              
+                                                                              
+OBJECT                = ASCII_DOCUMENT                                        
+  DOCUMENT_NAME       = "ASCII document for MSI Lossy Lookup Table"           
+  DOCUMENT_TOPIC_TYPE = "DATA ANALYSIS"                                       
+  PUBLICATION_DATE    = 2001-07-19                                            
+  FILES               = 1                                                     
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  DOCUMENT_FORMAT     = TEXT                                                  
+  DESCRIPTION         = "This document contains the lossy compression         
+                         look up table used to accomplish data compression    
+                         as the data were transmitted back from the           
+                         spacecraft to Earth.  Those data files that          
+                         were compressed using this technique were then       
+                         unpacked by the APL Science Data Center.             
+                         Each column contains the corresponding entry in      
+                         each of the lossy compression tables for a given     
+                         12-bit input DN value, as described by the           
+                         corresponding row on which the data appear.  As      
+                         an example, for a 12-bit input DN value of 100,      
+                         the values used for tables 0 through 7 are           
+                         provided on line 100 in the first through            
+                         eighth fields of this comma-separated-value          
+                         table."                                              
+END_OBJECT            = ASCII_DOCUMENT                                        
+                                                                              
+END                                                                           

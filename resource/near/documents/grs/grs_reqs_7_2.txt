@@ -1,0 +1,1657 @@
+Requirement Specifications For Level-2 Parameters Required Stored or Derived   
+by The Near Earth Asteroid Rendezvous (NEAR) Gamma-Ray Spectrometer  (GRS)     
+Ground System                                                                  
+                                                                               
+Irina Mikheeva (UA) and Tim McClanahan (GSFC)                                  
+                                                                               
+Revision 1.5:  May 25, 2001                                                    
+                                                                               
+(This text version has a complete set of associated TIF files, one for each    
+page of the original WORD document.  Pointers inserted below identify the      
+associated files that capture the figures, equations, or tables not shown in   
+this file.)                                                                    
+                                                                               
+                                                                               
+Table of Contents                                                              
+                                                                               
+                                                                               
+A.     Introduction and Purpose..............................................1 
+                                                                               
+B.     The UA-LPL Ground Processing Environment..............................2 
+                                                                               
+C.     Description of NEAR GRS Data File Standards...........................3 
+                                                                               
+D.     Fractional Footprint Accounting.......................................4 
+                                                                               
+E.     Listings of Parameters for GRS Level-2 Integral Records...............5 
+       E.1-E.7.  NEAR GRS Spectra............................................5 
+       E.8.      NEAR GRS Science Housekeeping (SCI HK) Parameters...........5 
+       E.9.      NEAR GRS Engineering Housekeeping (ENG HK)Parameters........6 
+       E.10.     NEAR GRS Derived Engineering (DER ENG) Parameters..........10 
+       E.11.     NEAR GRS Spatial (SPATIAL) Parameters......................10 
+                                                                               
+F.     Listings of Parameters for GRS Level-2 Summary Record................11 
+       F.1-F.7.  NEAR GRS Summarized Spectra................................11 
+       F.8.      NEAR GRS Summarized Engineering (ENG)Parameters............11 
+       F.9.      NEAR GRS Summarized Spatial (SPATIAL) Parameters...........12 
+                                                                               
+G.      Listings of Parameters for GRS Fractional Footprint                    
+               Accounting System............................................12 
+                                                                               
+H.      Numerical Specifications for GRS Level-2 Integral                      
+               Records......................................................12 
+       H.1-H.7.  NEAR GRS Spectra...........................................12 
+       H.8.      NEAR GRS Science Housekeeping (SCI HK) Parameters..........13 
+       H.9.      NEAR GRS Engineering Housekeeping (ENG HK) Parameters......13 
+       H.10.     NEAR GRS Derived Engineering (DER ENG) Parameters..........13 
+       H.11.     NEAR GRS Spatial (SPATIAL) Parameters......................14 
+                                                                               
+I.      Numerical Specifications for GRS Level-2 Summary                       
+               Record.......................................................22 
+       I.1-I.7.  NEAR GRS Summarized Spectra................................22 
+       I.8.      NEAR GRS Summarized Engineering (ENG) Parameters...........23 
+       I.9.      NEAR GRS Summarized Spatial (SPATIAL) Parameters...........24 
+                                                                               
+J.      Numerical Specifications for GRS Fractional Footprint Accounting       
+               System.......................................................27 
+                                                                               
+APPENDIX 1.     Definitions for:  Instr_Angular_Response_Fct_YYMeV             
+                    (where YY can be 0.3, 0.6, 1.0, 3.0 or 6.0);               
+                  NC_Angular_Fct; NC_Geom_Weight_YYMeV; NC_Weight_YYMeV;       
+                 NR_Geom_Weight_YYMeV; NR_Weight_YYMeV......................30 
+                                                                               
+APPENDIX 2.     Approximations for:  Instr_Angular_Response_Fct_YYMeV,         
+                    (where YY can be 0.3, 0.6, 1.0, 3.0 or 6.0);               
+                 NC_Angular_Fct.............................................32 
+                                                                               
+APPENDIX 3      Location of GRS Level-2 Parameters in the U of A               
+                   Database.................................................36 
+                                                                               
+NEAR GRS Requirements Specs Revision Notes..................................47 
+                                                                               
+NEAR GRS Glossary and Acronym List..........................................49 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+A. Introduction and Purpose                                                    
+                                                                               
+The following document will act as one part of a two part requirement          
+specification for all Level-2 parameters required to be stored or derived by   
+the Near Earth Asteroid Rendezvous (NEAR) X-ray and Gamma-Ray spectrometer     
+ground system (XGRS).  It will relate specifically to the Gamma-Ray            
+spectrometer (GRS) requirements. The document will act as a primary common     
+reference for both NEAR X-ray and Gamma-ray spectrometer (XGRS) science team   
+members, systems development staff and future users of these data.  The goal   
+is to assist in the development and understanding of parameters defined as     
+key to the NEAR XGRS Science objectives.                                       
+                                                                               
+A primary data server residing at the University of Arizona, Lunar and         
+Planetary Laboratory (UA-LPL) is designated with the function of deriving and  
+serving mission critical parameters during cruise and encounter phases of the  
+NEAR mission scheduled from February 1996 through February 2001.  The intent   
+of the first level product is to include all NEAR XGRS mission critical        
+information needed for asteroid mapping, health of instrument, control, and    
+science analysis systems.                                                      
+                                                                               
+Level-1 products will include integral spectral data in either raw or          
+instrument calibrated format.  Bundled with the spectral data products will    
+be scientific housekeeping and engineering housekeeping data sampled by the    
+XGRS instrumentation at the same time as the integral spectra onboard the      
+spacecraft.  This information is then telemetered through NASA's Deep Network  
+(DSN) managed by the Jet Propulsion Laboratory in Pasadena, California, and    
+NEAR related telemetry is forwarded to the Applied Physics Laboratory (APL).   
+The Level-0 XGRS raw spectral and engineering data is then broken out of the   
+NEAR mission specific data stream and stored online at the APL Science Data    
+Center (SDC).  These data are stored in the Hierarchical Data Format (HDF)     
+file standard.  These files are then picked up by the automated (UA-LPL) data  
+processing ingest system.                                                      
+                                                                               
+Figure 1.0   NEAR XGRS OPERATIONAL FLOW OF INFORMATION                         
+                                                                               
+(See file GRS_REQS_7_2_003.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+B. The UA-LPL Ground Processing Environment                                    
+                                                                               
+The core of the UA-LPL data processing system (Figure 2.0) consists of a       
+Sybase Relational Database (UA-RDBMS) that stores tables of NEAR XGRS raw      
+spectral, science housekeeping, engineering housekeeping, derived engineering  
+and spatial data products.  XRS and GRS data processing systems are            
+logically partitioned into separate processing environments on the UA-LPL      
+server.  A scientific data processing system has been developed around the     
+UA-RDBMS to provide automated data ingest and science team interaction.        
+Critical spatial and derived engineering data products are generated either    
+at ingest time or query time.  Core query time processing options include      
+calibration and summation processing, compression and bundling of query        
+results for return to the scientific user community over the Internet file     
+transfer protocol (FTP).                                                       
+                                                                               
+Figure 2.0   NEAR XGRS Ground Processing System at the UA-LPL                  
+                                                                               
+(See file GRS_REQS_7_2_004.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+UA-LPL database ingest systems automatically monitor the APL SDC for new and   
+updated postings of XGRS data sets.  These file sets are recovered via the     
+file transfer protocol (FTP) to the UA-LPL data system.  Raw spectral and      
+engineering data products are then loaded into XGRS RDBMS tables with Mission  
+Elapsed Time (MET) acting as the primary key for database access.  Mission     
+Elapsed Time is used with spacecraft ephemeris data SPICE system, APL          
+Science Data Center and JPL/NASA Ancillary Information Facility) to derive     
+spatial data products.  Spacecraft navigation and pointing information is      
+converted to SPICE data for the NEAR XGRS ground system and will be generated  
+by participating scientists at APL/SDC. These products will then be            
+maintained within the UA-RDBMS database system.                                
+                                                                               
+At Goddard Space Flight Center participating scientists will be charged with   
+monitoring instrument health, calibration, and bad data flagging systems.      
+These data are then forwarded to on-line ingest processes at the UA-RDBMS.     
+The calibration system will be used to convert spectral data products to a     
+common energy standard specified at query time.  Calibration processing is     
+optionally selected at query time.  Bad flagging information is generated      
+during instrument health checks as a function of identification of problem     
+(MET) record sets.  These (MET)'s are forwarded to the UA-LPL RDBMS for        
+tagging.                                                                       
+                                                                               
+Query time summation processes will be used to sum multiple integral record    
+sets into a single output record. This record will include one spectrum per    
+spectral classification and selected engineering products.  Summed output      
+will generally be specific to regional coverage and science analysis.  The     
+primary motivation for summation processing is to limit large volume network   
+transfers incurred in this distributed processing environment.  Results are    
+then accumulated in the Xternal Data Representation (XDR) binary file          
+standard (Sun Microsystems) then compressed, bundled and forwarded to the      
+query initiator.                                                               
+                                                                               
+C. Description of NEAR GRS Data File Standards                                 
+                                                                               
+In the NEAR GRS data processing system there are 3 data file standards         
+possible for output.   These different file standards reflect the different    
+UA-LPL ground processes selectable at query time.   Output format type is      
+selected at query time through the UA-LPL WWW query interface.    Integral     
+raw GRS products will be used primarily in the calibration, instrument health  
+and mission planning activities.  Calibrated data will be used primarily in    
+the science analysis activity.   Formats for the three record standards are    
+as follows.                                                                    
+                                                                               
+Figure 3a                                                                      
+FORMAT 1:     GRS Integral Raw:                                                
+                                                                               
+(See file GRS_REQS_7_2_005.TIF for the figure)                                 
+                                                                               
+                                                                               
+Figure 3b                                                                      
+FORMAT 2:     GRS Integral Calibrated:                                         
+                                                                               
+(See file GRS_REQS_7_2_005.TIF for the figure)                                 
+                                                                               
+                                                                               
+Nomenclature for GRS integral data products:                                   
+FORMATS 1 and 2 (Calibrated and Raw)                                           
+     g(yyyy)(ddd)(hh)(mm)(ss).xdr                                              
+     Example:  g1998234010159.xdr                                              
+                                                                               
+NEAR GRS Summation Processing:  (Format 3)                                     
+The NEAR XGRS data processing ground system is a distributed system that       
+currently spans institutions in the United States and Europe.  The summation   
+processing system has been specified to render the possibly very large         
+volumes of data (> Gbytes) returned from a single query down to a single       
+summary record.  The intention of summation processing will be to minimize     
+the per query network data transfer size (bytes), by rendering a single        
+summed spectrum from a relationally defined set.  Correlated parameters will   
+be bundled with this summed set.  The summation ground processing step will    
+be supported only on calibrated spectral data products.                        
+                                                                               
+Figure 3c                                                                      
+FORMAT 3:      GRS Summed:                                                     
+                                                                               
+(See file GRS_REQS_7_2_006.TIF for the figure)                                 
+                                                                               
+                                                                               
+Nomenclature for GRS integral data products:                                   
+FORMATS 3  (Summed)                                                            
+     h(yyyy)(ddd)(hh)(mm)(ss).xdr                                              
+     Example:  h1998234010159.xdr                                              
+                                                                               
+Summation processing will be query specific and all derived engineering        
+tracking is done internal to each query process.  All (XDR) file sets          
+returned from the query will be run through the summation processing system.   
+Integral calibrated spectra will be summed into single GRS specific output     
+sets.  Selected engineering and spatial parameters are also averaged into      
+values representative of the parameter over the range of output (MET) records  
+and specific to each query.  Parameter rendering algorithms are listed in the  
+numerical specifications (Section I).                                          
+                                                                               
+                                                                               
+D.      Fractional Footprint Accounting                                        
+                                                                               
+The 433Eros asteroid is highly irregular in shape and deviates significantly   
+from a spherical geometry.  A system was developed by NEAR XGRS staff to       
+partition a virtual representation of the 433Eros asteroid into surface        
+regions (bins) of roughly equal surface area, not based on spherical           
+geometry.  The bin system is internal to the UA-RDBMS ground processing        
+system.                                                                        
+                                                                               
+Individual spectral accumulations will most likely span multiple asteroid      
+surface bins.  This system will be used to discriminate and identify the       
+applicability of integral footprints, based on their fractional coverage of    
+the asteroid surface bin being queried.  During UA-RDBMS ingest processing     
+each integral footprint will be broken down into a set of records, one bin     
+record for each bin subtended by the footprint.  The current plan does not     
+include the possibility of using the fractional footprint as a weighting       
+function when automatically summing spectral data at query time.  The          
+fractional footprint accounting will be used as a query time threshold         
+criteria for inclusion of the integral MET to summation processing.            
+                                                                               
+Figure 4.0                                                                     
+Fractional Footprint                                                           
+                                                                               
+(See file GRS_REQS_7_2_007.TIF for the figure)                                 
+                                                                               
+                                                                               
+A query time specification requesting all integrations (MET records) from Bin  
+C with a fractional footprint area >= 0.4  would return the example            
+integration and others whose fractional coverage are at least 0.4.             
+Information related to the bin processing is included in sections G and J.     
+                                                                               
+                                                                               
+                                                                               
+E.      Listings of Parameters for GRS level-2 Integral Records                
+                                                                               
+                                                                               
+FORMATS  1,2 - List of RDBMS parameters for Single Raw and Calibrated GRS      
+Level-2 record (output)                                                        
+                                                                               
+E.1. - E.7.   NEAR GRS Spectra:  4 spectra*1024 channels*(Real*4), 1           
+spectrum*21 channels(Real*4), 1 spectrum*1024 channels*(Real*4), 1             
+spectrum*21 channels(Real*4)                                                   
+                                                                               
+0 - 1023  Sodium Iodide (NAI) spectrum                                         
+0 - 1023  Bismuth Germanate (BGO) spectrum                                     
+0 - 1023  Anti-Coincidence (ANTICO) spectrum                                   
+0 - 1023  Sodium Iodide (NAI1ESC)  single escape spectrum                      
+0 - 20  Bismuth Germanate (BGO1ESC) single escape spectrum                     
+0 - 1023  Sodium Iodide (NAI2ESC) double escape spectrum                       
+0 - 20  Bismuth Germanate (BGO2ESC) double escape spectrum                     
+                                                                               
+                                                                               
+E.8.   NEAR GRS Science Housekeeping (SCI HK) Parameters:  31*(Integer*4)      
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.  Version 7    
+of the software was uploaded in May 1999.                                      
+                                                                               
+0       MET                                                                    
+1       UTC                                                                    
+2       DQI                     *  Data Quality Index                          
+3       TIME_TAG                                                               
+4       INTEGRATION_TIME                                                       
+5       BGO_PROTON_FLARE_FLG                                                   
+6       BGO_LEVEL_1_SAFE_FLG                            Version 7              
+7       BGO_LEVEL_2_SAFE_FLG                                                   
+8       NAI_LEVEL_1_SAFE_FLG                                                   
+9       NAI_LEVEL_2_SAFE_FLG                                                   
+10      NAI_INT_OVERFLOW_FLG                                                   
+11      BGO_INT_OVERFLOW_FLG                                                   
+12      NAI_ANTICOINCID_OVFL_FLG                                               
+13      NAI_SINGLE_ESCP_OVFL_FLG                                               
+14      NAI_DOUBLE_ESCP_OVFL_FLG                                               
+15      BGO_SINGLE_ESCP_OVFL_FLG                                               
+16      BGO_DOUBLE_ESCP_OVFL_FLG                                               
+17      NAI_RAW_EVENT_RATE                                                     
+18      BGO_RAW_EVENT_RATE                                                     
+19      COINCIDENCE_COUNTER                             Version 7              
+20      COMMAND_COUNTER                                 Version 7              
+21      PROBLEM_COUNTER                                 Version 7              
+22      PROBLEM_CODE                                    Version 7              
+23      NUM_NAI_ANTICOINCID_EVENTS                                             
+24      NUM_NAI_VALID_EVENTS                                                   
+25      NUM_BGO_VALID_EVENTS                                                   
+26      NAI_DC_OFFSET                                   Downlinked value.      
+                                                        No conversion to       
+                                                        energy bins is         
+                                                        performed. (no         
+                                                        division by 2 as       
+                                                        required by NEAR       
+                                                        XFRS DPU Software      
+                                                        Requirements           
+                                                        Specifications         
+                                                        JHU/APL 7358-9002      
+                                                        Version 7)             
+27      BGO_DC_OFFSET                                   - " -                  
+28      NAI_STAND_DEV                                   - " -                  
+29      BGO_STAND_DEV                                   - " -                  
+30    GRAY_DATA_QUALITY_BIT                             Version 7              
+                                                                               
+                                                                               
+E.9. NEAR GRS Engineering Housekeeping (ENG HK) Parameters: 152*(REAL*4)       
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.  Version 7    
+of the software was uploaded in May 1999.  ENG_HK Parameters 0:137 are         
+common to XRS and GRS.  Parameters are sampled at XRS and GRS                  
+Resolutions.                                                                   
+                                                                               
+0         DETECTOR_ELECTR_CURR                                                 
+1         XRAY_PIN_DIODE_FET_BIAS                                              
+2         HVCE_TEMPERATURE                                                     
+3         UNF_XRAY_HVPS_VOLT                                                   
+4         MG_XRAY_HVPS_VOLT                                                    
+5         AL_XRAY_HVPS_VOLT                                                    
+6         XRAY_GAS_HVPS_VOLT                                                   
+7         XRAY_PIN_HVPS_VOLT                                                   
+8         NAI_HVPS_VOLT                                                        
+9         BGO_HVPS_VOLT                                                        
+10        DPU_DC_DC_TEMP                                                       
+11        XGRS_DC_DC_TEMP                                                      
+12        UNF_XRAY_HVPS_TEMP                                                   
+13        MG_XRAY_HVPS_TEMP                                                    
+14        AL_XRAY_HVPS_TEMP                                                    
+15        XRAY_GAS_HVPS_TEMP                                                   
+16        XRAY_PIN_HVPS_TEMP                                                   
+17        NAI_HVPS_TEMP                                                        
+18        BGO_HVPS_TEMP                                                        
+19        TEC_CURRENT                                                          
+20        NAI_HVPS_VOLT_CMD                                                    
+21        BGO_HVPS_VOLT_CMD                                                    
+22        UNF_HVPS_VOLT_CMD                                                    
+23        MG_HVPS_VOLT_CMD                                                     
+24        AL_HVPS_VOLT_CMD                                                     
+25        HVPS_POWER_ON_OFF                                                    
+26        XRAY_CALIB_HOME_FLG                                                  
+27        XRAY_CALIB_MOTOR_ON_OFF                                              
+28        XRAY_CALIB_MOTOR_ENABLE                                              
+29        GAS_HVPS_VOLT_CMD                                                    
+30        PIN_HVPS_VOLT_CMD                                                    
+31        GAMMA_RAY_HEATER_CURR                                                
+32        spare0                                                               
+33        XRAY_CALIB_MOTOR_DIR                                                 
+34        XRAY_CALIB_MOTOR_CURR                                                
+35        XRAY_CALIB_MOTOR_GOAL                                                
+36        XRAY_CALIB_MOTOR_POS                                                 
+37        XRAY_CALIB_MOTOR_FID_SENS                                            
+38        XRAY_CALIB_MOTOR_FID_BRIT                                            
+39        XRAY_MOTOR_IN_CALIB_POSITION                                         
+40        XRAY_MOTOR_IN_NORM_POSITION                                          
+41        ACTIVE_SOLAR_TOGGLE_MODE                                             
+42        XRAY_CALIB_MAX_STEPS                                                 
+43        Spare                                                                
+44        TEC_ENABLE                                                           
+45        XRAY_CALIB_CUM_MOTOR_STPS                                            
+46        GRAY_BURST_THRESH_VAL                                                
+47        XRAY_SAFING_THRESH                                                   
+48        XRAY_CALIB_MOTOR_DIAG                                                
+49        TEC_POWER_ON_OFF                                                     
+50        TEC_MODE                                                             
+51        TEC_COOL_HEAT_FLG                                                    
+52        TEC_TEMPERATURE                                                      
+53        TEC_COOL_MODE_TEMP_UP_LMT                                            
+54        TEC_COOL_MODE_TEMP_LOW_LMT                                           
+55        TEC_HEAT_MODE_TEMP_UP_LMT                                            
+56        TEC_HEAT_MODE_TEMP_LOW_LMT                                           
+57        GAMMA_RAY_TEMP_HYSTERESIS                                            
+58        GAMMA_RAY_HEAT_TEMP_LOW_LMT                                          
+59        FULL_GAMMA_RAY_SCIENCE_MODE                                          
+60        FULL_XRAY_SCIENCE_MODE                                               
+61        SUMM_GRAY_XRAY_SCIENCE_MODE                                          
+62        GRAY_BURST_SCI_REC_MODE                                              
+63        HVCE_TEMP_SET_POINT                                                  
+64        CMDED_END_XRAY_INTEG_PER                                             
+65        CMDED_GAMMA_RAY_INTEG_PER                                            
+66        BGO_PROTON_FLARE_FLG                                                 
+67        GAMMA_RAY_BIN_OVER_FLG_CMD                                           
+68        UNF_XRAY_BIN_OVER_FLG_CMD                                            
+69        MG_BIN_OVER_FLG_CMD                                                  
+70        AL_BIN_OVER_FLG_CMD                                                  
+71        ACT_BIN_OVER_FLG_CMD                                                 
+72        NAI_BIN_OVERFLOW_FLG                                                 
+73        BGO_BIN_OVERFLOW_FLG                                                 
+74        NAI_ANTICOIN_OVERFLOW_FLG                                            
+75        NAI_SING_ESC_OVERFLOW_FLG                                            
+76        NAI_DOUB_ESC_OVERFLOW_FLG                                            
+77        BGO_SING_ESC_OVERFLOW_FLG                                            
+78        BGO_DOUB_ESC_OVERFLOW_FLG                                            
+79        UNF_XRAY_BIN_OVERFLOW_FLG                                            
+80        MG_BIN_OVERFLOW_FLG                                                  
+81        AL_BIN_OVERFLOW_FLG                                                  
+82        ACT_BIN_OVERFLOW_FLG                                                 
+83        GAMMA_RAY_HEAT_ON_OFF                                                
+84        GAMMA_RAY_HEAT_MODE                                                  
+85        BGO_LEVEL_1_SAFING_FLG                                               
+86        BGO_LEVEL_2_SAFING_FLG                                               
+87        Spare                                                                
+88        XRAY_INTEGR_TIME                                                     
+89        HVPS_ON_OFF                                                          
+90        PIN_SENSOR_MASK_FLG                                                  
+91        GAS_SENSOR_MASK_FLG                                                  
+92        AL_SENSOR_MASK_FLG                                                   
+93        MG_SENSOR_MASK_FLG                                                   
+94        UNF_SENSOR_MASK_FLG                                                  
+95        BGO_SENSOR_MASK_FLG                                                  
+96        NAI_SENSOR_MASK_FLG                                                  
+97        UNF_XRAY_RISE_TIME_THRESH                                            
+98        MG_RISE_TIME_THRESH                                                  
+99        AL_RISE_TIME_THRESH                                                  
+100       GAS_RISE_TIME_THRESH                                                 
+101       UNF_RISE_TIME_VALID_THRESH                   Downlinked value.       
+                                                       No ground conversion    
+                                                       specified in NEAR       
+                                                       XFRS DPU Software       
+                                                       Requirements            
+                                                       Specifications          
+                                                       JHU/APL 7358-9002       
+                                                       Version 7 is performed. 
+102       MG_RISE_TIME_VALID_THRESH                    - " -                   
+103       AL_RISE_TIME_VALID_THRESH                    - " -                   
+104       GAS_RISE_TIME_VALID_THRESH                   - " -                   
+105       GAMMA_RAY_INTEGR_TIME                                                
+106       GAMMA_SING_ESC_WIND_CENTER                   - " -                   
+107       GAMMA_SING_ESC_WIND_WIDTH                                            
+108       GAMMA_DOUB_ESC_WIND_CENTER                   - " -                   
+109       GAMMA_DOUB_ESC_WIND_WIDTH                                            
+110       NAI_LOW_LEVEL_AMPL_THRESH                   Ground conversion is:    
+                                                      (downlinked  value       
+                                                      * 3.413 + 3.0), which    
+                                                      is different from        
+                                                      specified in NEAR        
+                                                      XFRS DPU Software        
+                                                      Requirements             
+                                                      Specifications           
+                                                      JHU/APL 7358-9002        
+                                                      Version 7                
+111       BGO_LOW_LEVEL_AMPL_THRESH                    - " -                   
+112       UNF_LOW_LEVEL_AMPL_THRESH                                            
+113       MG_LOW_LEVEL_AMPL_THRESH                                             
+114       AL_LOW_LEVEL_AMPL_THRESH                                             
+115       GAS_LOW_LEVEL_AMPL_THRESH                                            
+116       PIN_LOW_LEVEL_AMPL_THRESH                                            
+117       GAMMA_RAY_SENSOR_TEMP                                                
+118       NAI_LEVEL_1_SAFING_FLG                                               
+119       UNF_LEVEL_1_SAFING_FLG                                               
+120       MG_LEVEL_1_SAFING_FLG                                                
+121       AL_LEVEL_1_SAFING_FLG                                                
+122       GAS_LEVEL_1_SAFING_FLG                                               
+123       PIN_LEVEL_1_SAFING_FLG                                               
+124       NAI_LEVEL_2_SAFING_FLG                                               
+125       UNF_LEVEL_2_SAFING_FLG                                               
+126       MG_LEVEL_2_SAFING_FLG                                                
+127       AL_LEVEL_2_SAFING_FLG                                                
+128       GAS_LEVEL_2_SAFING_FLG                                               
+129       PIN_LEVEL_2_SAFING_FLG                                               
+130       XRAY_SENS_SAFING_REST_LEVEL                                          
+131       GAMMA_SENS_SAFING_REST_LEVEL                                         
+132       XRAY_SAFING_REST_MAX_RETRY                                           
+133       GAMMA_SAFING_REST_MAX_RETRY                                          
+134       GAMMA_HEATER_DUTY_CYCLE                                              
+135       GAMMA_SENS_SAFING_THRESH                                             
+136       HVPS_CURRENT                                                         
+137       BGO_PROTON_FLARE_THRESH                                              
+138       VERSION_NUMBER                               Version 7               
+139       NAI_SPECTRUM_0                               Version 7               
+140       HW_NAI_RAW                                   Version 7               
+141       NAI_HIGH_ENERGY                              Version 7               
+142       BGO_SPECTRUM_0                               Version 7               
+143       HW_BG                                        Version 7               
+144       BGO_HIGH_ENERGY                              Version 7               
+145       NAI_ANTICOIN_SPECTRUM_0                      Version 7               
+146       HW_NAI_ANTICOIN                              Version 7               
+147       NAI_ANTICOIN_HIGH_ENERGY                     Version 7               
+148       SINGLE_ESC_SPECTRUM_0                        Version 7               
+149       SINGLE_ESC_HIGH_ENERGY                       Version 7               
+150       DOUBLE_ESC_SPECTRUM_0                        Version 7               
+151       DOUBLE_ESC_HIGH_ENERGY                       Version 7               
+                                                                               
+                                                                               
+                                                                               
+E.10. NEAR GRS Derived Engineering (DER ENG) Parameters:  17*(Real*4),         
+1*(Integer*4), 1*(4*Integer*4)                                                 
+                                                                               
+These parameters are not stored in the University of Arizona RDBMS but         
+derived at a query time.                                                       
+                                                                               
+"Not valid" - is designated as = -1                                            
+                                                                               
+0     GAIN_STANDARD_BGO                       Not valid if not calibrated      
+1     GAIN_STANDARD_NAI                       Not valid if not calibrated      
+2     ZERO_STANDARD_BGO                       Not valid if not calibrated      
+3     ZERO_STANDARD_NAI                       Not valid if not calibrated      
+4     REAL_GAIN_BGO                                                            
+5     REAL_GAIN_NAI                                                            
+6     REAL_ZERO_BGO                                                            
+7     REAL_ZERO_NAI                                                            
+8     LIVE_TIME_BGO                                                            
+9     LIVE_TIME_NAI                                                            
+10    BGO_VALID_CHANNEL_HI                    Not valid if not calibrated      
+11    NAI_VALID_CHANNEL_HI                    Not valid if not calibrated      
+12    BGO_VALID_CHANNEL_LOW                   Not valid if not calibrated      
+13    NAI_VALID_CHANNEL_LOW                   Not valid if not calibrated      
+14    Pos_ESC_1                                                                
+15    Pos_ESC_2                                                                
+16    GCR_FLUX                                                                 
+17    Bad_Flag                                                                 
+18    Query_ID                                                                 
+                                                                               
+                                                                               
+E.11.  NEAR GRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 32*(Real*4)      
+                                                                               
+These parameters are derived in the University of Arizona at the ingest        
+phase.                                                                         
+                                                                               
+"Not valid" - is designated as = -1                                            
+                                                                               
+0       MET                                                                    
+1       PLATEID_BORESITE_INTERSECT            NOT VALID IF FOV_STATUS=0        
+2       BINID_BORESIGHT_INTERSECT             NOT VALID IF FOV_STATUS=0        
+3       SC_POSITION, X                                                         
+4       SC_POSITION, Y                                                         
+5       SC_POSITION, Z                                                         
+6       BS_VECTOR, X                                                           
+7       BS_VECTOR, Y                                                           
+8       BS_VECTOR, Z                                                           
+9       FOV_STATUS                                                             
+10      DOWNLINK_STATUS                                                        
+11      AVERAGE_SC_DISTANCE                   NOT VALID IF FOV_STATUS=0        
+12      AVERAGE_EMISSION_ANGLE                NOT VALID IF FOV_STATUS=0        
+13      TOTAL_EFF_SOLID_ANGLE                 =0  IF FOV_STATUS=0              
+14      TOTAL_AREA_FOOTPRINT                  NOT VALID                        
+15      TOTAL_VISIBLE_AREA                    =0  IF FOV_STATUS=0              
+16      NC_WEIGHT_0.3MEV                      =0  IF FOV_STATUS=0              
+17      NR_WEIGHT_0.6MEV                      =0  IF FOV_STATUS=0              
+18      NC_WEIGHT_0.6MEV                      =0  IF FOV_STATUS=0              
+19      NR_WEIGHT_1.0MEV                      =0  IF FOV_STATUS=0              
+20      NC_WEIGHT_1.0MEV                      =0  IF FOV_STATUS=0              
+21      NR_WEIGHT_3.0MEV                      =0  IF FOV_STATUS=0              
+22      NC_WEIGHT_3.0MEV                      =0  IF FOV_STATUS=0              
+23      NC_WEIGHT_6.0MEV                      =0  IF FOV_STATUS=0              
+24      BORESIGHT_INTERSECT_LAT               NOT VALID IF FOV STATUS = 0      
+25      BORESIGHT_INTERSECT_LON               NOT VALID IF FOV STATUS = 0      
+26      BORESIGHT_INTERSECT_R                 NOT VALID IF FOV STATUS = 0      
+27      SPICE_KERNEL_ID                                                        
+28      PLATE_MODEL_ID                                                         
+29      PROCESSING_SOFTWARE_ID                                                 
+30      DATABASE_VERSION_ID                                                    
+                                                                               
+                                                                               
+F. Listings of Parameters for GRS Level-2 Summary Record                       
+                                                                               
+                                                                               
+FORMAT  3 - List of RDBMS parameters for Summarized GRS Level-2 record         
+(output)                                                                       
+                                                                               
+F.1. - F.7.   NEAR GRS Summarized Spectra: 4 spectra*1024 channels*(Real*4),   
+1 spectrum*21 channels(Real*4), 1 spectrum*1024 channels*(Real*4),             
+1 spectrum*21 channels(Real*4)                                                 
+                                                                               
+0 - 1023  Sodium Iodide (NAI) spectrum                                         
+0 - 1023  Bismuth Germanate (BGO) spectrum                                     
+0 - 1023  Anti-Coincidence (ANTICO) spectrum                                   
+0 - 1023  Sodium Iodide (NAI1ESC)  single escape spectrum                      
+0 - 20  Bismuth Germanate (BGO1ESC) single escape spectrum                     
+0 - 1023  Sodium Iodide (NAI2ESC) double escape spectrum                       
+0 - 20  Bismuth Germanate (BGO2ESC) double escape spectrum                     
+                                                                               
+                                                                               
+F.8.   NEAR GRS Summarized Engineering (ENG) Parameters:  13*(Real*4)          
+                                                                               
+0       GAIN_STANDARD_BGO                                                      
+1       GAIN_STANDARD_NAI                                                      
+2       ZERO_STANDARD_BGO                                                      
+3       ZERO_STANDARD_NAI                                                      
+4       TOTAL_INTEG_TIME                                                       
+5       TOTAL_LIVE_TIME_BGO                                                    
+6       TOTAL_LIVE_TIME_NAI                                                    
+7       BGO_VALID_CHANNEL_HI                                                   
+8       NAI_VALID_CHANNEL_HI                                                   
+9       BGO_VALID_CHANNEL_LOW                                                  
+10      NAI_VALID_CHANNEL_LOW                                                  
+11      AVG_GCR_FLUX                                                           
+12      NUMBER_MET                                                             
+                                                                               
+F.9.  NEAR GRS Summarized Spatial (SPATIAL) Parameters:  13*(Real*4)           
+                                                                               
+"Not valid" - is designated as = -1                                            
+                                                                               
+0       AVG_SC_DISTANCE                       NOT VALID IF FOV_STATUS=0        
+1       AVG_EMI_ANGLE                         NOT VALID IF FOV_STATUS=0        
+2       AVG_TOTAL_EFF_SOLID_ANGLE             =0  IF FOV_STATUS=0              
+3       NR_WEIGHT_0.3MEV                      =0  IF FOV_STATUS=0              
+4       NC_WEIGHT_0.3MEV                      =0  IF FOV_STATUS=0              
+5       NR_WEIGHT_0.6MEV                      =0  IF FOV_STATUS=0              
+6       NC_WEIGHT_0.6MEV                      =0  IF FOV_STATUS=0              
+7       NR_WEIGHT_1.0MEV                      =0  IF FOV_STATUS=0              
+8       NC_WEIGHT_1.0MEV                      =0  IF FOV_STATUS=0              
+9       NR_WEIGHT_3.0MEV                      =0  IF FOV_STATUS=0              
+10      NC_WEIGHT_3.0MEV                      =0  IF FOV_STATUS=0              
+11      NC_WEIGHT_6.0MEV                      =0  IF FOV_STATUS=0              
+12      ESTIMATED_COVERED_AREA                =0  IF FOV_STATUS=0              
+                                                                               
+                                                                               
+                                                                               
+G.  Listing of Parameters for GRS Fractional Footprint Accounting System       
+                                                                               
+Internal to the University of Arizona RDBMS information for accounting         
+purposes only.  This information will not be output at the query time.         
+                                                                               
+0       MET                                     INTEGER*4                      
+1       FOOTPRINT_BIN_TOTAL_AREA                REAL*4       NOT VALID         
+2       FOOTPRINT_BIN_VISIBLE_AREA              REAL*4                         
+3       TOTAL_EFF_SOLID_ANGLE_FRACTION          REAL*4                         
+4       NR_SPECTRUM_FRACTION                    REAL*4                         
+5       NC_SPECTRUM_FRACTION                    REAL*4                         
+6       BINID                                   REAL*4                         
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+H.      Numerical Specifications for GRS level-2 Integral Records              
+                                                                               
+FORMATS  1,2 - Numerical specifications for Single Raw and Calibrated GRS      
+Level-2 record (output)                                                        
+                                                                               
+H.1. - H.7.   NEAR GRS Spectra:  4 spectra*1024 channels*(Real*4),             
+1 spectrum*21 channels(Real*4), 1 spectrum*1024 channels*(Real*4),             
+1 spectrum*21 channels(Real*4)                                                 
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+H.8. NEAR GRS Science Housekeeping (SCI HK) Parameters:  31*(Integer*4)        
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+H.9. NEAR GRS Engineering Housekeeping (ENG HK) Parameters: 152*(REAL*4)       
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+H.10. NEAR GRS Derived Engineering (DER ENG) Parameters:  17*(Real*4),         
+1*(Integer*4), 1*(4*Integer*4)                                                 
+                                                                               
+PARAMETER NAME                   UNITS                                         
+                                                                               
+0       GAIN_STANDARD_BGO     keV/channel    User specified of default         
+1       GAIN_STANDARD_NAI     keV/channel    - " -                             
+2       ZERO_STANDARD_BGO         keV        - " -                             
+3       ZERO_STANDARD_NAI         keV        - " -                             
+4       REAL_GAIN_BGO         keV/channel    a1+a2*x+a3*x^2+a4*x^3+...,        
+                                             where x is day since launch,      
+                                             a1..an are derived coefficients,  
+                                             provided by GSFC.                 
+5       REAL_GAIN_NAI         keV/channel    - " -                             
+6       REAL_ZERO_BGO             keV        - " -                             
+7       REAL_ZERO_NAI             keV        - " -                             
+8       LIVE_TIME_BGO          Unitless                                        
+                                                                               
+        LIVE_TIME_BGO =                                                        
+         NUM_BGO_VALID_EVENTS(SCI_HK:25)/(BGO_RAW_EVENT_RATE(SCI_HK:18) -      
+            0.5*BGO_HIGH_ENERGY(ENG_HK:144))                                   
+                                                                               
+9       LIVE_TIME_NAI          Unitless                                        
+                                                                               
+        LIVE_TIME_NAI =                                                        
+         NUM_NAI_VALID_EVENTS(SCI_HK:24) / (NAI_RAW_EVENT_RATE(SCI_HK:17) -    
+            0.2*NAI_HIGH_ENERGY(ENG_HK:141))                                   
+                                                                               
+10      BGO_VALID_CHANNEL_HI    Channel      Highest channel of the spectrum   
+                                             in new (after  calibration)       
+                                             energy  scale.                    
+                                             =N(1021), if  N(1021)<=1023       
+                                             =1023, if N(1021)>1023,           
+                                             N(1021): channel number in the    
+                                             new energy scale, corresponding   
+                                             to 1021 channel of the original   
+                                             spectrum.                         
+                                                                               
+        (See file GRS_REQS_7_2_015.TIF for the equation)                       
+                                                                               
+                                                                               
+11      NAI_VALID_CHANNEL_HI    Channel      - " -                             
+12      BGO_VALID_CHANNEL_LOW   Channel      Lowest channel of the spectrum    
+                                             in new (after calibration)        
+                                             energy scale.                     
+                                             =N(LLD), if N(LLD)>=0             
+                                             =0, if N(LLD)<0,                  
+                                             N(LLD): channel number in the     
+                                             new energy scale, corresponding   
+                                             to low level discriminator        
+                                             setting of the original spectrum  
+                                             N(LLD_0)= BGO_LOW_LEVEL_AMPL_     
+                                               THRESH                          
+                                             (Eng_HK:111) or 10, whatever is   
+                                             higher.                           
+13      NAI_VALID_CHANNEL_LOW   Channel      - " -                             
+                                             N(LLD_0)= NAI_LOW_LEVEL_AMPL_     
+                                               THRESH                          
+                                             (Eng_HK:110)                      
+14      Pos_ESC_1                 keV        Energy, corresponding to the      
+                                             middle of 1-st escape window      
+                                             (Eng_HK:106)                      
+                                                                               
+        (See file GRS_REQS_7_2_016.TIF for the equation)                       
+                                                                               
+                                                                               
+15      Pos_ESC_2                 keV        Energy, corresponding to the      
+                                             middle of 2-nd escape window      
+                                             (Eng_HK:108)                      
+16      GCR_Flux             Counts/Seconds  Parameter reflects changes        
+                                             in galactic cosmic ray flux.      
+                                             Updated after calibration         
+                                                                               
+        (See file GRS_REQS_7_2_016.TIF for the equation)                       
+                                                                               
+                                                                               
+17    Bad_Flag                                                                 
+18    Query_ID                                                                 
+                                                                               
+                                                                               
+                                                                               
+H.11.  NEAR GRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 32*(Real*4)      
+                                                                               
+All spatial derivations, unless specified differently, are made for the        
+middle of integration period.                                                  
+*  ET - ephemeris time corresponding to clock fixed Mission Elapsed Time in    
+the middle of the integration period.  Measuring units are seconds before      
+January 1, 2000.                                                               
+                                                                               
+PARAMETER NAME                      UNITS                                      
+                                                                               
+0  MET                             Seconds        Mission Elapsed Time at      
+                                                  start of integration         
+1  PlateID_Boresite_Intersect    Plate Index      ID of the plate that         
+                                                  boresight intersects in      
+                                                  the middle of integration    
+                                                  period                       
+2  BinID_Boresite_Intersect       Bin Index       ID of the plate that         
+                                                  boresight intersects in the  
+                                                  middle of integration period 
+3  SC_Position, X                Coord X, km      Position of spacecraft       
+4  SC_Position, Y                Coord Y, km      (ET*) in Eros fixed          
+5  SC_Position, Z                Coord Z, km      coord. system (ET*)          
+6  BS_Vector, X                Vector X, normal   Boresight vector of GRS      
+7  BS_Vector, Y                Vector Y, normal   (ET*) in Eros fixed          
+8  BS_Vector, Z                Vector Z, normal   coord. system (ET*)          
+9  FOV_Status                    Status value     = 0: Field of view (FOV) is  
+                                                  completely off the asteroid  
+                                                  (if there are no plates in   
+                                                  the field of view).          
+                                                  = 1: Field of view is on     
+                                                  the asteroid (totally or     
+                                                  partially).                  
+10  Downlink_Status              Status Value     = 0:  No downlink            
+                                                  = 1:  Yes downlink           
+                                                  (The angle between antenna   
+                                                  direction and vector         
+                                                  spacecraft(ET*) Earth(ET*)   
+                                                  is less than 2 degrees)      
+                                                                               
+11 Average_SC_Distance            Kilometers      Average distance from the    
+                                                  spacecraft to the            
+                                                  surface of the asteroid      
+                                                  in the middle of             
+                                                  integration period.          
+                                                                               
+        (See file GRS_REQS_7_2_017.TIF for the equation)                       
+                                                                               
+                                                                               
+12  Avg_Emission_Angle             Degrees        Average emission angle       
+                                                                               
+        (See file GRS_REQS_7_2_018.TIF for the equation)                       
+                                                                               
+                                                                               
+13  Total_Eff_Solid_Angle         Steradians       Overall solid angle of      
+                                                   all plates in the           
+                                                   footprint weighted by the   
+                                                   instrument angular response 
+                                                   function for the 1 MeV      
+                                                   radiation.                  
+                                                                               
+        (See file GRS_REQS_7_2_018.TIF for the equation)                       
+                                                                               
+                                                                               
+14  Total_Area_Footprint        Sq. Kilometers     NOT VALID                   
+15  Total_Visible_Area          Sq. Kilometers     Total area of plates in     
+                                                   the footprint visible       
+                                                   from the spacecraft         
+                                                                               
+        (See file GRS_REQS_7_2_018.TIF for the equation)                       
+                                                                               
+                                                                               
+16  Footprint_Solid_Angle         Steradians       Overall solid angle of      
+                                                   all plates in the           
+                                                   footprint as seen from      
+                                                   the spacecraft.             
+                                                                               
+        (See file GRS_REQS_7_2_018.TIF for the equation)                       
+                                                                               
+                                                                               
+17  NR_Geom_Weight_0.3MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of             
+                                                  gamma-ray  radiation from    
+                                                  the asteroid surface in      
+                                                  the direction  normal to     
+                                                  the surface (for 0.3 MeV     
+                                                  natural radioactivity        
+                                                  radiation).                  
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_019.TIF for the equation)                       
+                                                                               
+                                                                               
+18  NC_Geom_Weight_0.3MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of             
+                                                  gamma-ray radiation from     
+                                                  the asteroid surface in the  
+                                                  direction normal to the      
+                                                  surface (for 0.3 MeV         
+                                                  non-elastic scattering and   
+                                                  thermal neutron capture      
+                                                  radiation). For complete     
+                                                  definition see Appendix 1.   
+                                                                               
+        (See file GRS_REQS_7_2_019.TIF for the equation)                       
+                                                                               
+                                                                               
+19  NR_Geom_Weight_0.6MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  0.6 MeV natural              
+                                                  radioactivity radiation).    
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_020.TIF for the equation)                       
+                                                                               
+                                                                               
+20  NC_Geom_Weight_0.6MeV           Steradians    Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface  (for  
+                                                  0.6 MeV non-elastic          
+                                                  scattering and thermal       
+                                                  neutron capture radiation).  
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_020.TIF for the equation)                       
+                                                                               
+                                                                               
+21  NR_Geom_Weight_1.0MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  1.0 MeV natural              
+                                                  radioactivity radiation).    
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_021.TIF for the equation)                       
+                                                                               
+                                                                               
+22  NC_Geom_Weight_1.0MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  1.0 MeV non-elastic          
+                                                  scattering and thermal       
+                                                  neutron capture radiation).  
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_021.TIF for the equation)                       
+                                                                               
+                                                                               
+23  NR_Geom_Weight_3.0MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  3.0 MeV natural              
+                                                  radioactivity radiation).    
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_022.TIF for the equation)                       
+                                                                               
+                                                                               
+24  NC_Geom_Weight_3.0MeV         Steradians      Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  3.0 MeV non-elastic          
+                                                  scattering and thermal       
+                                                  neutron capture radiation).  
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_022.TIF for the equation)                       
+                                                                               
+                                                                               
+25  NC_Geom_Weight_6.0MeV           Steradians    Normalization coefficient.   
+                                                  It relates the gamma-ray     
+                                                  flux at the detector and     
+                                                  the intensity of gamma-ray   
+                                                  radiation from the asteroid  
+                                                  surface in the direction     
+                                                  normal to the surface (for   
+                                                  6.0 MeV non-elastic          
+                                                  scattering and thermal       
+                                                  neutron capture radiation).  
+                                                  For complete definition      
+                                                  see Appendix 1.              
+                                                                               
+        (See file GRS_REQS_7_2_023.TIF for the equation)                       
+                                                                               
+                                                                               
+26  Boresight_Intersect_Lat          Degrees      Latitude of boresight        
+                                                  intersection in the middle   
+                                                  of integration period        
+                                                  Coordinate transformation    
+                                                  Asteroid Body Fixed,         
+                                                  Cartesian to Asteroid Body   
+                                                  Fixed, Spherical.            
+                                                  Intersection point (x,y,z)   
+                                                  of boresight with asteroid   
+                                                  surface converted to         
+                                                  Latitude.                    
+                                                                               
+                                                  LAT = Degrees(ARC_SIN(Z/R))  
+                                                  (R solved for in eqn 28)     
+                                                                               
+27   Boresight_Intersect_Lon       Degrees        Longitude of boresight       
+                                                  intersection in the middle   
+                                                  of integration period        
+                                                  Coordinate transformation    
+                                                  Asteroid Body Fixed,         
+                                                  Cartesian to Asteroid Body   
+                                                  Fixed, Spherical.            
+                                                  Intersection point (x,y,z)   
+                                                  of boresight with asteroid   
+                                                  surface converted to         
+                                                  Longitude.                   
+                                                                               
+                                          1. LON = -1.*Degrees(ARC_TAN(Y/X))   
+                                          2. LON = 270 for x = 0 AND y > 0     
+                                          3. LON =  90 for x = 0 AND y < 0     
+                                                                               
+                                                                               
+28   Boresight_Intersect_R          Kilometers    Radius-vector of boresight   
+                                                  intersection in the middle   
+                                                  of integration period        
+                                                  Coordinate transformation    
+                                                  Asteroid Body Fixed,         
+                                                  Cartesian to Asteroid Body   
+                                                  Fixed, Spherical.            
+                                                  Intersection point (x,y,z)   
+                                                  of boresight with asteroid   
+                                                  surface converted to Radius  
+                                                  from center of asteroid      
+                                                  mass.                        
+                                                                               
+                                                  R = SQRT( X^2 + Y^2 + Z^2)   
+                                                  (R is needed in sol'n 26)    
+                                                                               
+29   SPICE_Kernel_ID             Version Number   Specified by NAIF            
+30   Plate_Model_ID              Version Number                                
+31   Processing_Software_ID      Version Number                                
+32   DataBase_Version_ID         Version Number                                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I. Numerical Specifications for GRS Level-2 Summary Record                     
+                                                                               
+                                                                               
+FORMAT  3 :  Numerical specifications for summarized GRS Level-2 record        
+(output)                                                                       
+                                                                               
+                                                                               
+I.1. - I.7.   NEAR GRS Summarized Spectra: 4 spectra*1024 channels*(Real*4),   
+1 spectrum*21 channels(Real*4), 1 spectrum*1024 channels*(Real*4),             
+1 spectrum*21 channels(Real*4)                                                 
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+        (See file GRS_REQS_7_2_024.TIF for the equations for I.1. - I.7.)      
+                                                                               
+Sodium Iodide summed spectrum:                                                 
+                                                                               
+                                                                               
+Bismuth Germanate summed spectrum:                                             
+                                                                               
+                                                                               
+Anti-Coincidence summed spectrum:                                              
+                                                                               
+                                                                               
+Sodium Iodide single escape summed spectrum:                                   
+                                                                               
+                                                                               
+Bismuth Germanate single escape summed spectrum:                               
+                                                                               
+                                                                               
+Sodium Iodide double escape summed spectrum:                                   
+                                                                               
+                                                                               
+Bismuth Germanate double escape summed spectrum:                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I.8.   NEAR GRS Summarized Engineering (ENG) Parameters:  13*(Real*4)          
+                                                                               
+PARAMETER NAME                   UNITS                                         
+                                                                               
+0       GAIN_STANDARD_BGO     keV/Channel      User specified or default       
+1       GAIN_STANDARD_NAI     keV/Channel            - " -                     
+2       ZERO_STANDARD_BGO         keV                - " -                     
+3       ZERO_STANDARD_NAI         keV                - " -                     
+4       TOTAL_INTEG_TIME        Seconds                                        
+                                                                               
+        (See file GRS_REQS_7_2_025.TIF for the equation)                       
+                                                                               
+                                                                               
+5       TOTAL_LIVE_TIME_BGO     Seconds                                        
+                                                                               
+      (See file GRS_REQS_7_2_025.TIF for the equation)                         
+                                                                               
+                                                                               
+6       TOTAL_LIVE_TIME_NAI     Seconds                                        
+                                                                               
+        (See file GRS_REQS_7_2_025.TIF for the equation)                       
+                                                                               
+                                                                               
+7       BGO_VALID_CHANNEL_HI    Channel        Highest channel of summed       
+                                               spectrum uncorrupted by energy  
+                                               scale adjustments. Lowest       
+                                               BGO_VALID_CHANNEL_HI            
+                                               among all MET records in a      
+                                               sum.                            
+8       NAI_VALID_CHANNEL_HI    Channel             - " -                      
+                                               Lowest NAI_VALID_CHANNEL_HI     
+                                               among all MET records in a sum. 
+9       BGO_VALID_CHANNEL_LOW   Channel        Lowest channel of summed        
+                                               spectrum uncorrupted by         
+                                               energy scale adjustments.       
+                                               Highest BGO_VALID_CHANNEL_LOW   
+                                               among all MET records in a sum. 
+10      NAI_VALID_CHANNEL_LOW   Channel             - " -                      
+                                               Highest NAI_VALID_CHANNEL_LOW   
+                                               among all MET records in a sum. 
+                                                                               
+11      Avg_GCR_FLUX         Counts/Second     Characteristics of average      
+                                               galactic cosmic ray flux        
+                                                                               
+        (See file GRS_REQS_7_2_025.TIF for the equation)                       
+                                                                               
+                                                                               
+12    Number_MET                               Number of MET records in a      
+                                               query                           
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I.9.  NEAR GRS Summarized Spatial (SPATIAL) Parameters:  13*(Real*4)           
+                                                                               
+                                                                               
+PARAMETER NAME                 UNITS                                           
+                                                                               
+0       AVG_SC_DISTANCE      Kilometers        Distance from the spacecraft    
+                                               to the surface of the asteroid  
+                                               averaged over MET records in a  
+                                               sum.                            
+                                                                               
+        (See file GRS_REQS_7_2_026.TIF for the equation)                       
+                                                                               
+                                                                               
+1       AVG_EMI_ANGLE         Degrees          Emission angle averaged  over   
+                                               MET records in a sum.           
+                                                                               
+        (See file GRS_REQS_7_2_026.TIF for the equation)                       
+                                                                               
+                                                                               
+2     AVG_TOTAL_EFF_SOLID_ANGLE    Steradians     Total effective solid angle  
+                                                  averaged over MET records    
+                                                  in a sum.                    
+                                                                               
+        (See file GRS_REQS_7_2_026.TIF for the equation)                       
+                                                                               
+                                                                               
+3     NR_Weight_0.3MeV   Steradians*Seconds    Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface (for natural     
+                                               radioactivity radiation and     
+                                               energy range < 0.45 MeV).       
+                                               For complete definition see     
+                                               Appendix 1.                     
+                                                                               
+        (See file GRS_REQS_7_2_027.TIF for the equation)                       
+                                                                               
+                                                                               
+                                                                               
+4     NC_Weight_0.3MeV   Steradians*Counts     Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum  gamma-line  
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the  direction       
+                                               normal to the surface           
+                                               normalized for GCR flux = 1     
+                                               proton/(s*cm2) (for non-elastic 
+                                               scattering and thermal neutron  
+                                               capture radiation and energy    
+                                               range < 0.45 MeV).              
+                                               For complete definition         
+                                               see Appendix 1.                 
+                                                                               
+        (See file GRS_REQS_7_2_027.TIF for the equation)                       
+                                                                               
+                                                                               
+5     NR_Weight_0.6MeV    Steradians*Seconds   Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface (for natural     
+                                               radioactivity radiation and     
+                                               energy range 0.45..0.8 MeV).    
+                                               For complete definition         
+                                               see Appendix 1.                 
+                                                                               
+        (See file GRS_REQS_7_2_027.TIF for the equation)                       
+                                                                               
+                                                                               
+6     NC_Weight_0.6MeV    Steradians*Counts    Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface normalized for   
+                                               GCR flux = 1 proton/(s*cm2)     
+                                               (for non-elastic scattering and 
+                                               thermal neutron capture         
+                                               radiation and energy range      
+                                               0.45..0.8 MeV).                 
+                                               For complete definition         
+                                               see Appendix 1.                 
+                                                                               
+        (See file GRS_REQS_7_2_027.TIF for the equation)                       
+                                                                               
+                                                                               
+7     NR_Weight_1.0MeV    Steradians*Seconds   Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface (for natural     
+                                               radioactivity radiation and     
+                                               energy range 0.8..2.0 MeV).     
+                                               For complete definition see     
+                                               Appendix 1.                     
+                                                                               
+        (See file GRS_REQS_7_2_028.TIF for the equation)                       
+                                                                               
+                                                                               
+8     NC_Weight_1.0MeV    Steradians*Counts    Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface normalized for   
+                                               GCR flux = 1 proton/(s*cm2)     
+                                               (for non-elastic scattering     
+                                               and thermal neutron capture     
+                                               radiation and energy range      
+                                               0.8..2.0 MeV).                  
+                                               For complete definition see     
+                                               Appendix 1.                     
+                                                                               
+        (See file GRS_REQS_7_2_028.TIF for the equation)                       
+                                                                               
+                                                                               
+9     NR_Weight_3.0MeV    Steradians*Seconds   Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface (for natural     
+                                               radioactivity radiation and     
+                                               energy range 2.0..4.5 MeV).     
+                                               For complete definition see     
+                                               Appendix 1.                     
+                                                                               
+        (See file GRS_REQS_7_2_028.TIF for the equation)                       
+                                                                               
+                                                                               
+10     NC_Weight_3.0MeV   Steradians*Counts    Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum  gamma-line  
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface normalized for   
+                                               GCR flux = 1 proton/(s*cm2)     
+                                               (for non-elastic scattering     
+                                               and thermal neutron capture     
+                                               radiation and energy range      
+                                               2.0..4.5 MeV).                  
+                                               For complete definition         
+                                               see Appendix 1.                 
+                                                                               
+        (See file GRS_REQS_7_2_029.TIF for the equation)                       
+                                                                               
+                                                                               
+11     NC_Weight_6.0MeV   Steradians*Counts    Normalization coefficient.      
+                                               It relates the number of counts 
+                                               in summed spectrum gamma-line   
+                                               to the intensity of gamma-ray   
+                                               radiation of corresponding      
+                                               energy from the asteroid        
+                                               surface in the direction normal 
+                                               to the surface normalized for   
+                                               GCR flux = 1 proton/(s*cm2)     
+                                               (for non-elastic scattering     
+                                               and thermal neutron capture     
+                                               radiation and energy range      
+                                               > 4.5 MeV).                     
+                                               For complete definition see     
+                                               Appendix 1.                     
+                                                                               
+        (See file GRS_REQS_7_2_029.TIF for the equation)                       
+                                                                               
+                                                                               
+12    ESTIMATED_COVERED_AREA   Sq. Kilometers   Estimated area of the asteroid 
+                                                surface covered by MET records 
+                                                in a sum                       
+                                                                               
+                  For a spatial query                                          
+                                                                               
+        (See file GRS_REQS_7_2_029.TIF for the equations)                      
+                                                                               
+                  For a temporal query                                         
+                                                                               
+                                                                               
+                                                                               
+J.  Numerical Specifications for GRS Fractional Footprint Accounting System    
+                                                                               
+PARAMETER NAME                       UNITS                                     
+                                                                               
+0       MET                         Seconds         Mission Elapsed Time at    
+                                                    start of integration.      
+1       Footprint_Bin_Total_Area   Sq. Kilometers   NOT VALID                  
+2       Footprint_Bin_Visible_Area Sq. Kilometers   Total area of all plates   
+                                                    in the footprint that      
+                                                    belong to the bin, visible 
+                                                    from the spacecraft.       
+                                                                               
+                  Fractions are considered as in H11 param.15                  
+                                                                               
+        (See file GRS_REQS_7_2_029.TIF for the equation)                       
+                                                                               
+                                                                               
+3       Total_Eff_Solid_Angle_Fraction   Unitless    Fraction of the total     
+                                                     effective solid angle     
+                                                     that can be attributed to 
+                                                     the bin.                  
+                                                                               
+        (See file GRS_REQS_7_2_030.TIF for the equation)                       
+                                                                               
+                                                                               
+4       NR_Spectrum_Fraction       Unitless       Fraction of the spectrum     
+                                                  that can be attributed to    
+                                                  the bin (for natural         
+                                                  radioactivity radiation).    
+                                                                               
+        (See file GRS_REQS_7_2_030.TIF for the equation)                       
+                                                                               
+                                                                               
+5       NC_Spectrum_Fraction       Unitless       Fraction of the spectrum     
+                                                  that can be attributed to    
+                                                  the bin (for non-elastic     
+                                                  scattering and thermal       
+                                                  neutron capture radiation).  
+                                                                               
+        (See file GRS_REQS_7_2_031.TIF for the equation)                       
+                                                                               
+                                                                               
+6     Binid                         Value         Bin identifier generated by  
+                                                  the Bin generation system    
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 1   Definitions for:                                                  
+       Instr_Angular_Response_Fct_YYMeV,                                       
+          where YY can be 0.3, 0.6, 1.0, 3.0 or 6.0;                           
+       NC_Angular_Fct;                                                         
+       NC_Geom_Weight_YYMeV;                                                   
+       NC_Weight_YYMeV;                                                        
+       NR_Geom_Weight_YYMeV;                                                   
+       NR_Weight_YYMeV                                                         
+                                                                               
+        (See files GRS_REQS_7_2_032.TIF and GRS_REQS_7_2_033.TIF for the       
+                full appendix and equations)                                   
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 2   Approximations for:                                               
+       Instr_Angular_Response_Fct_YYMeV,                                       
+          where YY can be 0.3, 0.6, 1.0, 3.0 or 6.0;                           
+       NC_Angular_Fct                                                          
+                                                                               
+        (See file GRS_REQS_7_2_034.TIF for the full appendix and equations)    
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_035.TIF for the figure)                                 
+                                                                               
+Figure 1.  GRS angular response function for radiation 0.3 MeV                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_035.TIF for the figure)                                 
+                                                                               
+Figure 2.  GRS angular response function for radiation 0.6 MeV                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_036.TIF for the figure)                                 
+                                                                               
+Figure 3.  GRS angular response function for radiation 1.0 MeV                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_036.TIF for the figure)                                 
+                                                                               
+Figure 4.  GRS angular response function for radiation 3.0 MeV                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_037.TIF for the figure)                                 
+                                                                               
+Figure 5.  GRS angular response function for radiation 6.0 MeV                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+(See file GRS_REQS_7_2_037.TIF for the figure)                                 
+                                                                               
+Figure 6.  Angular dependence of non-elastic scattering and                    
+thermal neutron capture gamma-ray emission from the surface                    
+(approximation).                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 3   Location of GRS Level-2 Parameters in the U of A Database         
+                                                                               
+(The tables in Appendix 3 are not included but can be accessed through         
+the TIF files identified below or in the WORD or PDF complete files.)          
+                                                                               
+E.8.    NEAR GRS Science Housekeeping (SCI HK) Parameters:  31*(Integer*4)     
+                                                                               
+        (See files GRS_REQS_7_2_038.TIF to GRS_REQS_7_2_041.TIF for tables)    
+                                                                               
+E.9.  NEAR GRS Engineering Housekeeping (ENG HK) Parameters:  152*(REAL*4)     
+                                                                               
+        (See files GRS_REQS_7_2_042.TIF to GRS_REQS_7_2_046.TIF for tables)    
+                                                                               
+                                                                               
+E.10.  NEAR GRS Derived Engineering (DER ENG) Parameters:  17*(Real*4),        
+        1*(Integer*4), 1*(4*Integer*4)                                         
+                                                                               
+        (See file GRS_REQS_7_2_046.TIF for tables)                             
+                                                                               
+                                                                               
+E.11.  NEAR GRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 32*(Real*4)      
+                                                                               
+        (See files GRS_REQS_7_2_047.TIF to GRS_REQS_7_2_048.TIF for tables)    
+                                                                               
+                                                                               
+G.  Listing of Parameters for GRS Fractional Footprint Accounting System       
+                                                                               
+        (See file GRS_REQS_7_2_048.TIF for table)                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+NEAR GRS Requirements Specs Revision Notes                                     
+                                                                               
+NEAR XGRS Team Meeting,  September 15, 1999,  (Version 7 Upgrades)             
+                                                                               
+        1. Pg.3     Removed 2 Eng_hk redundant parameters from record:         
+                    Formats 1 and 2:                                           
+                    Eng_HK changed from 154 to 152 total parameters.           
+                    Two parameters:                                            
+                    gray_burst_thresh_val:  Partition Offset (46,139)          
+                                            kept at 46                         
+                    gray_burst_sci_rec_mode:  positions (62,140) kept          
+                                              at 62                            
+                    Related: Forced changes in E.9 title (pg.6) and list       
+                    (Pg.9), H.9 (title) pg.13                                  
+                    Modified SCIHK for new V7 totals                           
+        2. Pg.6     Added 6 SCI_HK parameters E.8 and labeled for              
+                    version 7 sofware upgrade.                                 
+        3. Pg.9     Added 14 ENG_HK parameters E.9 and labeled for             
+                    version 7 software upgrade.                                
+        4. Pg.9     E.10 BADID and QUERYID is a total 5*(I*4) field in Title   
+        5. Pg.12    Added elaboration of 6 BINID to section G.                 
+                    (Fractional Footprint Accounting System)                   
+        6. Pg.13    Modified Live Time Eqns for NAI, BGO                       
+        7. Pg.21    Corrected Boresite intersection point for Lat-lon-R eqns   
+                    Spatial Partition Offsets (32,33,34) Resp.                 
+                    -1. designates 180 degree rotation in longitude to match   
+                    Cornell from test data                                     
+        8. Pg.15    Changed Bsite km to normal                                 
+        9. Pg.29    Added elaboration of 6 BINID to section J. See item 5.     
+                    (Fractional Footprint Accounting System)                   
+        10.Pg.32    * Need to make eqn mods for                                
+                    Instrument_Angular_Response_Fct_0.3Mev,                    
+                    20<phi<=40.  Modification is not made. (Appendix 2)        
+        11.         Modified all occurences of NAL_ to NAI_                    
+                                                                               
+                                                                               
+                                                                               
+October 18, 1999  Following revision is suggested.                             
+                                                                               
+        1.  Pg.3        FORMAT 1: Position of escape windows is added to the   
+                        description of valid Derived Eng. Record parameters.   
+        2.  Pg.4        FORMAT 3: "summed" is added to the description of      
+                        spectra.                                               
+        3.  Pg.10       E.10.:  Param.14-15: "NOT VALID IF NOT CALIBRATED"     
+                        note is removed.                                       
+        4.  Pg.13       H.9,title:  Number of parameters in Eng.HK is          
+                        changed from 154 to 152                                
+        5.  Pg.13       H.10.:  In description of param.8-9 eng.param.names    
+                        are adjusted.                                          
+        6.  Pg.13-14    H.10.:  Param.10-13 definition is modified in          
+                        accordance with new spectrum limits. Derivation        
+                        algorithm is added.                                    
+        7.  Pg.14       H.10.:  Param.14-15 (Pos_Esc_1,Pos_Esc_2): units are   
+                        changed to keV. Derivation algorithm is added.         
+        8.  Pg.14       H.10.:  Param.16: "NAI_INTEGRAL(I)" is replaced by     
+                        "NAI(I)"                                               
+        9.  Pg.15       H.11.:  In param.3-8 description light time correction 
+                        NEAR-Eros is removed.                                  
+        10. Pg.15       H.11:  Param.9: Derivation algorithm is added.         
+        11. Pg.15-21    H.11.:  Param.11-13,15-25: Added comment "Fractions    
+                        of the plates are considered".                         
+        12. Pg.21       H.11.:  Param.27: specifications for                   
+                        Boresight_Intersection_Lon are changed.                
+        13. Pg.23       I.8.:  Insignificant changes in description of         
+                        param.7-10.                                            
+        14. Pg.28-29    J.:  Param.2-5: Added comment "Fractions of the        
+                        plates are considered".                                
+        15. Pg.32       App.2:  Instrument_Angular_Response_Fct_0.3Mev,        
+                        2 0<phi<=40: 1.04087*10^(-1) is changed to 1.04087     
+                        (in accordance with revision note 10 of                
+                        September 15, 1999)                                    
+        16. Pg.36       Revision notes are added                               
+        17. Pg.37       Pending issues are added                               
+        18. Pg.i        Table of contents is added                             
+                                                                               
+                                                                               
+                                                                               
+January 25, 2000.  Following revision is suggested.                            
+                                                                               
+        1. H10, param.12:  (Eng_HK:111)*3.4+3 is replaced with (Eng_HK:111)    
+           Param.13:  (Eng_HK:110)*3.4+3 is replaced with (Eng_HK:110)         
+        2. H10, param.16:  integration is changed to energy range instead      
+           of channel range                                                    
+        3. H11, param.14-15:  discription of fractions added                   
+        4. H11, param.26-27:  "degrees" added                                  
+        5. J, param.1-2:  description of fractions added                       
+        6. Appendix 1.:  some symbols definitions are added                    
+                                                                               
+                                                                               
+April 6-7, 2000.  Following revision is suggested.                             
+                                                                               
+        1. E8, param.26-29:  description is clarified                          
+        2. E9, param.101-104,106,108,110,111:  description is clarified        
+        3. E11, H11, param.14:  set to -1 all the time.                        
+        4. G, J, param.1:  set to -1 all the time.                             
+        5. H10, param.16:  description is clarified.                           
+        6. Appendix 3 is added                                                 
+                                                                               
+                                                                               
+May 25, 2001    Revisions                                                      
+                                                                               
+        1. Renamed all Level-1 references to Level-2.                          
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+NEAR GRS Glossary and Acronym List                                             
+                                                                               
+AL              X-ray Spectrometer: Aluminum Detector                          
+ANTICO          Gamma-ray Spectrometer: Anti-Coincidence                       
+APL             Applied Physics Laboratory                                     
+AVG             Average                                                        
+BGO             Bismuth Germanate                                              
+CH              Channel                                                        
+CMD             Command                                                        
+CTP             Command and Telemetry Processing                               
+DER             Derived Engineering                                            
+DPU             Data Processing Unit                                           
+DSN             Deep Space Network                                             
+DQI             Data Quality Index                                             
+ENG             Engineering                                                    
+ESC             Escape                                                         
+ET              Ephemeris Time                                                 
+FCT             Function                                                       
+FLG             Flag                                                           
+FOV             Field of View                                                  
+FTP             File Transfer Protocol                                         
+GCR             Galactic Cosmic Rays                                           
+GAS PC          Gas Proportional Counter Detector                              
+GRS             Gamma Ray Spectrometer                                         
+GSFC            Goddard Space Flight Center                                    
+LT              Light Time                                                     
+HDF             Hierarchical Data Format                                       
+HK              Space Craft or Instrument House Keeping Parameters             
+HVPS            High Voltage Power Supply                                      
+I*4             Signed Integer 4 byte parameter = 32 bits                      
+JPL             Jet Propulsion Laboratory                                      
+keV             Kilo Electron Volts                                            
+LLD             Lower Level Discriminator                                      
+MET             Mission Elapsed Time                                           
+MeV             Mega Electron Volts                                            
+MG              X ray Spectrometer: Magnesium Detector                         
+NAI             Sodium Iodide                                                  
+NAIF            Nasa Ancillary Information Facility                            
+NASA            National Aeronautics and Space Administration                  
+NC              Neutron Capture Radiation                                      
+NR              Natural Radioactivity Radiation                                
+NEAR            Near Earth Asteroid Rendezvous                                 
+POS             Position                                                       
+PIN             X-ray Spectrometer:  Silicon PIN Detector                      
+QueryID         Query IDentifier file served by Relational Database            
+                Management System                                              
+R*4             Floating Point 4 byte Parameter = 32 bits                      
+RDBMS           Relational Database Management System                          
+RT              Rise Time                                                      
+SC              Space Craft                                                    
+SCI             Science                                                        
+SDC             Applied Physics Laboratory Science Data Center                 
+SPICE           Spacecraft - Planetary - Instrument - C-matrix - Ephemerides   
+TBD             To Be Decided                                                  
+UA              University of Arizona                                          
+UA-LPL          University of Arizona - Lunar and Planetary Laboratory         
+UA-RDBMS        University of Arizona - Relational Database Management System  
+UNF             X-ray Spectrometer:  Unfiltered Detector                       
+WWW             World Wide Web                                                 
+XDR             eXternal Data Representation                                   
+XGRS            X-ray and Gamma-ray Spectrometer                               
+XRS             X-ray Spectrometer                                             

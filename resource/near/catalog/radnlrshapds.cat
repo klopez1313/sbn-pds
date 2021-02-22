@@ -1,0 +1,320 @@
+PDS_VERSION_ID                    = PDS3                                      
+RECORD_TYPE                       = STREAM                                    
+LABEL_REVISION_NOTE               = "2001-09-17 EG: Grayzeck Original;        
+      2009-09-16, T. Barnes (SBN): Added ABSTRACT_DESC and CITATION_DESC      
+              from EN copy and added DATA_SET_MISSION.                        
+      2009-10-13, T. Barnes (SBN): Updated DATA_SET_NAME value from EN copy." 
+                                                                              
+OBJECT                            = DATA_SET                                  
+ DATA_SET_ID                      = "NEAR-A-NLR-5-EROS/SHAPE/GRAVITY-V1.0"    
+                                                                              
+ OBJECT                           = DATA_SET_INFORMATION                      
+    DATA_SET_NAME                 = "NEAR EROS NLR DERIVED PRODUCTS - SHAPE   
+                                      MODEL V1.0"                             
+                                                                              
+  DATA_SET_COLLECTION_MEMBER_FLG  = "N"                                       
+  DATA_OBJECT_TYPE                = TABLE                                     
+  START_TIME                      = 2001-04-30                                
+  STOP_TIME                       = 2001-08-27                                
+  DATA_SET_RELEASE_DATE           = 2001-09-30                                
+  PRODUCER_FULL_NAME              = "JAMES MILLER"                            
+  DETAILED_CATALOG_FLAG           = "N"                                       
+  ABSTRACT_DESC                  = "                                          
+    NEAR Eros shape/gravity science derived data from NEAR NAV team at JPL."  
+  CITATION_DESC                  = "                                          
+    Neumann G., Giorgini J.D., Miller J.K., A. Konopliv, and E. Grayzeck,     
+    NEAR EROS NLR DERIVED PRODUCTS - SHAPE MODEL V1.0,                        
+    NEAR-A-NLR-5-EROS/SHAPE/GRAVITY-V1.0, NASA Planetary Data System, 2001."  
+  DATA_SET_TERSE_DESC             = "NEAR Eros gravity science derived        
+                                     data from NEAR NAV team at JPL."         
+  DATA_SET_DESC                   = "                                         
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+                                                                              
+    This file contains a shape model for the                                  
+    asteroid Eros derived from NEAR Laser Rangefinder observations.           
+    The NLR measurements were made over the period 30 April 2000 to           
+    27 August 2000 from orbits of 35 and 50 km.                               
+                                                                              
+    The gravity model obtained by integrating this shape model is             
+    provided as a separate companion file ('gr_101.dat') to this file.        
+                                                                              
+    The shape model files and descriptive information regarding the file      
+    formats and contents were kindly supplied by J.K. Miller of the NEAR      
+    navigation team, in response to user requests made at the NEAR PDS        
+    archive review.                                                           
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+                                                                              
+    SH_101.DAT    A multi-part table giving X, Y, and Z vertices of the       
+                    shape model, the plate model, and parameters.             
+                                                                              
+    The shape table lists a serial number and coordinates for                 
+    each vertex comprising the plate model of the shape of Eros. The          
+    vertex numbers are referenced in the following table.                     
+                                                                              
+    NOTE that the first row of this table contains only a single              
+    integer in the first column, giving the total number of vertices          
+    in the table.                                                             
+                                                                              
+    The index number of the vertex. This number is used in the plate table.   
+                                                                              
+    Following rows contain (x,y,z) position of the vertex                     
+                                                                              
+    The shape table further defines the triangular plates comprising          
+    the Eros shape model. For each plate three vertices are listed by         
+    vertex number. The positions corresponding to each vertex number          
+    are defined in the preceeding vertex table.                               
+                                                                              
+    NOTE: The first row of this table contains only a single integer          
+          indicating the total number of plates defined.                      
+                                                                              
+    Subsequent rows have the index number for the triangular plate defined    
+    along with the index numbers of the three vertices defining this plate    
+                                                                              
+    Then there is a single-row table contains two constants relating          
+    to the table of harmonic coefficients:                                    
+    first the degree of the harmonic solution. The total number               
+    of coefficients in the solution is (NDEGREE+1)^2.                         
+    Second there is a Normalization flag. This value is '1', indicating       
+    that the following solution has been fully normalized.                    
+                                                                              
+    The last part of the table lists several parameters and the harmonic      
+    coefficients constituting the shape model solution. The format, an        
+    in-house format used by the NAV team, is not tied to logical records,     
+    but rather makes use of a repeating, 3-column physical record structure   
+    as needed to hold the various parameters. The contents of the rows of     
+    the table are as follows:                                                 
+                                                                              
+    The first two records contain the volume of the model and the vector      
+    offset from the center of the shape model to the true center of           
+    gravity:                                                                  
+                                                                              
+      Record 1:                                                               
+        Column 1   Volume in km^3                                             
+        Column 2   -blank-                                                    
+        Column 3   -blank-                                                    
+                                                                              
+      Record 2:                                                               
+        Column 1   Xcg  in km                                                 
+        Column 2   Ycg  in km                                                 
+        Column 3   Zcg  in km                                                 
+                                                                              
+    The next two record contain the coefficients for the inertia tensor.      
+    Note that this is a symmetric matrix, so only the unique elements are     
+    specified here:                                                           
+                                                                              
+      Record 3:                                                               
+        Column 1   Ixx  in km^2                                               
+        Column 2   Iyy  in km^2                                               
+        Column 3   Izz  in km^2                                               
+                                                                              
+      Record 4:                                                               
+        Column 1   Ixy  in km^2                                               
+        Column 2   Ixz  in km^2                                               
+        Column 3   Iyz  in km^2                                               
+                                                                              
+    The subsequent records contain the shape model harmonic coefficients      
+    Cij and Sij. All the Si0 are = 0, and are thus omitted from this file.    
+    The remaining coefficients are stored three to a record, in this          
+    logical sequence:                                                         
+                                                                              
+      C00                                                                     
+      C10  C11  S11                                                           
+      C20  C21  C22  S21  S22                                                 
+      C30  C31  C32  C33  S31  S32  S33                                       
+      etc.                                                                    
+                                                                              
+    which becomes this physical sequence:                                     
+                                                                              
+      Record 5:  C00  C10  C11                                                
+      Record 6:  S11  C20  C21                                                
+      Record 7:  C22  S21  S22                                                
+      Record 8:  C30  C31  C32                                                
+      Record 9:  C33  S31  S32                                                
+      etc.                                                                    
+                                                                              
+    The total number of coefficients stored is (NDEGREE+1)^2, where           
+    NDEGREE is found as the first integer (i.e., COLUMN 1) in the first       
+    row of the HDR_TABLE, above,                                              
+                                                                              
+    The last record in the file contains only a single entry in the first     
+    column.                                                                   
+                                                                              
+    GR_101.DAT  ASCII coefficients for the gravity model.                     
+                                                                              
+    The gravity model table starts as one row with three integer parameters:  
+    The degree of the harmonic solution presented and two processing flags.   
+    The degree of the harmonic solution, i.e., the number of harmonic         
+    cooefficient stored in this file is (NDEGREE+1)^2.                        
+    The first flag indicating that the result has been normalized.            
+    It is equal to '1'.  A second flag as an internal processing flag,        
+    equal to '1'                                                              
+                                                                              
+    Next this table lists the various parameters and harmonic                 
+    coefficients of the gravity solution. The format, an in-house format      
+    used by the NAV team, is not based on logical records, but rather         
+    makes use of a repeating, 3-number physical record structure as           
+    needed to hold the various parameters. The contents of the rows of        
+    the table are as follows.                                                 
+                                                                              
+    The first two records contain general model parameters:                   
+                                                                              
+      Record 1:                                                               
+        Column 1   Volume in km^3 of the model                                
+        Column 2   Density in g/cm^3 (assumed constant)                       
+        Column 3   Mass in kg                                                 
+                                                                              
+      Record 2:                                                               
+        Column 1   The gravitational potential, GM, in km^2/s^3               
+        Column 2   R0, the average radius used in the model - in this case    
+                   selected to be the maximum radius                          
+        Column 3   -blank-                                                    
+                                                                              
+    The next two records contain the coefficients for the inertia tensor.     
+    Note that this is a symmetric matrix, so only the unique elements are     
+    specified here:                                                           
+                                                                              
+      Record 3:                                                               
+        Column 1   Ixx  in km^2                                               
+        Column 2   Iyy  in km^2                                               
+        Column 3   Izz  in km^2                                               
+                                                                              
+      Record 4:                                                               
+        Column 1   Ixy  in km^2                                               
+        Column 2   Ixz  in km^2                                               
+        Column 3   Iyz  in km^2                                               
+                                                                              
+    The subsequent records contain the gravitational harmonic coefficients    
+    Cij and Sij. All the Si0 are = 0, and are thus omitted from this file.    
+    The remaining coefficients are stored three to a record, in this          
+    logical sequence:                                                         
+                                                                              
+      C00                                                                     
+      C10  C11  S11                                                           
+      C20  C21  C22  S21  S22                                                 
+      C30  C31  C32  C33  S31  S32  S33                                       
+      etc.                                                                    
+                                                                              
+    which becomes this physical sequence:                                     
+                                                                              
+      Record 5:  C00  C10  C11                                                
+      Record 6:  S11  C20  C21                                                
+      Record 7:  C22  S21  S22                                                
+      Record 8:  C30  C31  C32                                                
+      Record 9:  C33  S31  S32                                                
+      etc.                                                                    
+                                                                              
+    The total number of coefficients stored is (NDEGREE+1)^2, where           
+    NDEGREE is found as the first integer in the first row of the file        
+    (that is, in column 1 of the INTEGER_TABLE defined above).                
+                                                                              
+    The last record in the file contains only a single entry in the first     
+    column.                                                                   
+                                                                              
+    Processing                                                                
+    ==========                                                                
+                                                                              
+    The shape model include both a triangular plate model and a set           
+    of spherical harmonics. The plate model is comprised of two lists:        
+    a list of (x,y,z) vertex positions relative to the center of the          
+    model; and a list of the triples of vertices defining each of the         
+    triangular plate.                                                         
+                                                                              
+    The spherical harmonics are provided as a set of coefficients             
+    with corresponding values for volume, center-of-gravity offset            
+    and the inertia tensor.                                                   
+                                                                              
+    The gravity model obtained by integrating this shape model is             
+    provided as a separate companion file ('gr_101.dat') to this              
+    file in the same form as the shape model.                                 
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      None.                                                                   
+                                                                              
+    Coordinate System                                                         
+    =================                                                         
+      The Eros prime meridian is fixed at 326.08 degrees.                     
+                                                                              
+    Software                                                                  
+    ========                                                                  
+      None.                                                                   
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      TBD."                                                                   
+                                                                              
+    CONFIDENCE_LEVEL_NOTE           = "                                       
+                                                                              
+    Overview                                                                  
+    ========                                                                  
+      Data in this archive have been reduced as part of mission data          
+      analysis activities of the NEAR Navigation Team.  Data of               
+      questionable validity have been omitted from the solutions.             
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This archival data set was not reviewed by the NEAR NLR or RSS          
+      Teams prior to submission to the Planetary Data System (PDS).           
+      It was not one of the data sets included in a comprehensive             
+      review by the PDS Small Bodies Node in August 2001, prior to            
+      PDS acceptance and ingestion.                                           
+                                                                              
+      Prior to creation of the final version of the archival data             
+      set, key elements of the archive were distributed for                   
+      preliminary review.  These included electronic versions of              
+      example PDS labels and example data files.                              
+                                                                              
+    Data Coverage and Quality                                                 
+    =========================                                                 
+      The data included in this archive were collected during the             
+      NEAR orbital phase from 2000-04-30 to 2000-08-27.                       
+                                                                              
+    Limitations                                                               
+    ===========                                                               
+      The limitations in this data set follow from the quality of             
+      the execution, which is described above under Data Coverage             
+      and Quality."                                                           
+                                                                              
+                                                                              
+ END_OBJECT                       = DATA_SET_INFORMATION                      
+                                                                              
+ OBJECT                           = DATA_SET_MISSION                          
+  MISSION_NAME                    = "NEAR EARTH ASTEROID RENDEZVOUS"          
+ END_OBJECT                       = DATA_SET_MISSION                          
+                                                                              
+ OBJECT                           = DATA_SET_TARGET                           
+  TARGET_NAME                     = EROS                                      
+ END_OBJECT                       = DATA_SET_TARGET                           
+                                                                              
+ OBJECT                           = DATA_SET_HOST                             
+  INSTRUMENT_HOST_ID              = NEAR                                      
+  INSTRUMENT_ID                   = NLR                                       
+ END_OBJECT                       = DATA_SET_HOST                             
+                                                                              
+ OBJECT                           = DATA_SET_REFERENCE_INFORMATION            
+  REFERENCE_KEY_ID                = "YEOMANSETAL2000"                         
+ END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+END_OBJECT                        = DATA_SET                                  
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              

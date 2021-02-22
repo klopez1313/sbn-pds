@@ -1,0 +1,344 @@
+Observation Name,High-gain pass DSS Sta. ,Ownr,Date,DOY,"Strt, UT", Dur,"End, UT",Pr'ty,Bits/ pixel,# imgs  or       # spec,Seq.     IDs,Filters,Est.  comp.,Mbits,P/B (hrs @8.8 kb/s),P/B (hrs @17.6 kb/s),P/B (hrs @26.4 kb/s),week,Target,Description,Status
+ Opnav 59a KF,,NAV,28-Feb,059,00:15,00:17,00:32,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00059,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+NIS Cal target O2,,NIS,28-Feb,059,03:00,01:00,04:00,,,100,10,,,0.11,0.0,0.0,0.0,00059,cal target,NIS_Caltarg_O2: Standard NIS_CAL,done
+ Opnav 59b KF,,NAV,28-Feb,059,06:00,00:17,06:17,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00059,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Star Calibration 059,,NAV,28-Feb,059,09:30,00:10,09:40,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Daily Global 059,,NAV,28-Feb,059,10:15,00:30,10:45,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_059: 4x4 in filter 4 (TABLE 5 + FAST),done
+ Opnav 59c KF,,NAV,28-Feb,059,13:00,00:17,13:17,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00059,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 060,,NAV,29-Feb,060,02:00,00:30,02:30,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_060: 4x4 in filter 4 (TABLE 5 + FAST),done
+Star Calibration 060,,NAV,29-Feb,060,03:00,00:10,03:10,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 60a H,,NAV,29-Feb,060,04:45,00:17,05:02,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),63,,29-Feb,060,05:30,03:30,09:00,,,,,,,41.65,1.46,0.73,0.49,,,,
+ Opnav 60b H,,NAV,29-Feb,060,09:25,00:17,09:42,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Multispectral Rotation 4, ,MSI,29-Feb,060,10:00,05:30,15:30, ,12,168,22,1-7,1,260.37,9.1,4.6,3.0,00059,Eros,MSI_MSRot_4: 2x2; seven filters every 70 deg of rot. for 1.1 Eros rotation.  Auto exp. (Uncompressed),done
+,,,,,,,,,12,168,21,1-7,1.9,137.04,4.8,2.4,1.6,00059,Eros,Clean (FAST),done
+ Opnav 60c H,,NAV,29-Feb,060,15:45,00:17,16:02,T,8,9,27,4,2.5,11.16,0.4,0.2,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,29-Feb,060,16:15,06:25,22:40,,,,,,,414.14,14.53,7.25,4.85,,,,
+ Opnav 60d H,,NAV,29-Feb,060,22:45,00:17,23:02,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 61a H,,NAV,01-Mar,061,06:00,00:12,06:12,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Star Calibration 061,,NAV,01-Mar,061,10:30,00:10,10:40,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Daily Global 061,,NAV,01-Mar,061,11:30,00:30,12:00,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_061: 4x4 in filter 4 (TABLE 5 + FAST),done
+ Opnav 61b H,,NAV,01-Mar,061,12:15,00:17,12:32,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 61c H,,NAV,01-Mar,061,17:35,00:17,17:52,T,8,9,27,4,2.5,11.16,0.4,0.2,0.1,00059,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,01-Mar,061,18:00,05:10,23:10,,,,,,,40.29,1.41,0.71,0.47,,,,
+ Opnav 62a KL1,,NAV,01-Mar,061,23:15,00:21,23:36,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Global Morph 3x3_2,,NAV/MSI,02-Mar,062,04:00,06:10,10:10,,8,243,1,4,2.6,144.85,5.1,2.5,1.7,00059,Eros,"MSI_GM_3x3_2: 3x3 every 15 deg for 1.1 Eros rotation.  One filter, autoexp. (FAST)",done
+ Opnav 62b KL1,,NAV,02-Mar,062,10:40,00:21,11:01,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 062,,NAV,02-Mar,062,11:30,00:30,12:00,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_062: 4x4 in filter 4 (TABLE 5 + FAST),done
+Star Calibration 062,,NAV,02-Mar,062,12:30,00:10,12:40,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 62c KL1,,NAV,02-Mar,062,14:45,00:21,15:06,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,02-Mar,062,15:05,05:10,20:15,,,,,,,194.44,6.82,3.40,2.28,,,,
+ Opnav 62d KL1,,NAV,02-Mar,062,20:20,00:21,20:41,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 63a KL1,,NAV,03-Mar,063,05:00,00:21,05:21,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 063,,NAV,03-Mar,063,07:00,00:30,07:30,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_063: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 063,,NAV,03-Mar,063,07:00,00:30,07:30,,,140,8,,,0.16,0.0,0.0,0.0,00059,Eros,NIS_DailyGlobal_063: 4x7 mosaics during above slew,done
+Star Calibration 063,,NAV,03-Mar,063,08:00,00:10,08:10,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 63b KL1,,NAV,03-Mar,063,10:00,00:21,10:21,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 63c KL1,,NAV,03-Mar,063,14:35,00:21,14:56,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,03-Mar,063,15:00,03:45,18:45,,,,,,,42.32,1.48,0.74,0.50,,,,
+Orbit Correction Maneuver 2,,,03-Mar,063,18:00,,,,,,,,,,,,,,,,
+ Opnav 63d KL1,,NAV,03-Mar,063,19:00,00:21,19:21,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,03-Mar,063,19:50,02:20,22:10,,,,,,,74.71,2.62,1.31,0.87,,,,
+ Opnav 63e KL1,,NAV,03-Mar,063,22:00,00:21,22:21,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,03-Mar,063,22:50,05:30,04:20,,,,,,,161.66,5.67,2.83,1.89,,,,
+ Opnav 64a KL1,,NAV,04-Mar,064,04:10,00:21,04:31,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 64b KL1,,NAV,04-Mar,064,14:40,00:21,15:01,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,04-Mar,064,15:05,05:45,20:50,,,,,,,281.01,9.86,4.92,3.29,,,,
+ Opnav 64c KL1,,NAV,04-Mar,064,21:05,00:21,21:26,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 65a KL3,,NAV,05-Mar,065,05:00,00:21,05:21,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 065,,NAV,05-Mar,065,07:00,00:30,07:30,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_065: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 065,,NAV,05-Mar,065,07:00,00:30,07:30,,,140,8,,,0.16,0.0,0.0,0.0,00059,Eros,NIS_DailyGlobal_065: 4x7 mosaics during above slew,done
+Star Calibration 065,,NAV,05-Mar,065,08:00,00:10,08:10,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 65b KL3,,NAV,05-Mar,065,10:00,00:21,10:21,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 65c KL3,,NAV,05-Mar,065,16:28,00:21,16:49,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,05-Mar,065,16:35,05:30,22:05,,,,,,,42.32,1.48,0.74,0.50,,,,
+ Opnav 66a KL3,,NAV,06-Mar,066,22:20,00:21,22:41,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+South Globals,,NAV/MSI,06-Mar,066,03:00,06:00,09:00,,12,232,18,4,2.6,138.29,4.9,2.4,1.6,00059,Eros,"SouthGlobals: 3x5,3x4,4x3,4x4, or 3x5 every 24 deg for 1.1 Eros rotation.  One filter, autoexp. (FAST)",done
+Canopus Calibration 6, ,MSI,06-Mar,066,09:30,00:30,10:00, ,12,112,"3,4, 5,6,11, 12, 23",1-7,2.5,69.43,2.4,1.2,0.8,00059,Canopus,"MSI_CanCal_6: 16 images slewing across 2 pixels with Canopus, repeat (filters 1-7) (FAST)",done
+Canopus Point, ,NAV,06-Mar,066,10:05,00:10,10:15, ,12,8,1,"0,4",2.5,4.96,0.2,0.1,0.1,00059,Canopus,"MSI_CanPoint: Point to Canopus take 4 clear, 4 in filter 4",done
+ Opnav 66b KL3,,NAV,06-Mar,066,11:00,00:21,11:21,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Star Calibration 066,,NAV,06-Mar,066,12:00,00:10,12:10,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00059,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Daily Global 066,,NAV,06-Mar,066,13:00,00:30,13:30,,8,16,18,4,2.5,9.92,0.3,0.2,0.1,00059,Eros,DailyGlobal_066: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 066,,NAV,06-Mar,066,13:00,00:30,13:30,,,140,8,,,0.16,0.0,0.0,0.0,00059,Eros,NIS_DailyGlobal_066: 4x7 mosaics during above slew,done
+ Opnav 66c KL3,,NAV,06-Mar,066,15:40,00:21,16:01,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00059,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,06-Mar,066,16:05,06:30,22:35,,,,,,,289.87,10.17,5.07,3.39,,,,
+Total images for week,,,,,,,,,,1368,,,,,,,,,,,
+Opnav 66d N3,,NAV,06-Mar,66,22:35,0:25,23:00,,8,16,18,4,3,8.27,0.3,0.1,0.1,00066,Eros,4x4 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 1,,MSI,07-Mar,67,3:00,1:47,4:47,,8,150,1,4,3,77.49,2.7,1.4,0.9,00066,Eros,one filter 4 image every 38 seconds (TABLE6+FAST),done
+Opnav 67a N3,,NAV,07-Mar,67,7:00,0:25,7:25,,8,16,18,4,3,8.27,0.3,0.1,0.1,00066,Eros,4x4 mosaic in filter 4 (TABLE5+FAST),done
+Opnav 67b H3,,NAV,07-Mar,67,11:25,0:20,11:45,,8,9,18,4,3,4.65,0.2,0.1,0.1,00066,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+34 Meter (8.8 kb/s),43,,07-Mar,67,11:40,8:15,19:55,,,,,,,98.67,3.46,1.73,1.15,,,,
+Opnav 67b M3,,NAV,07-Mar,67,19:55,0:25,20:20,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 067,,NAV,07-Mar,67,20:25,00:25,20:50,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Flyover 2,,MSI,07-Mar,67,21:25,1:07,22:32,,8,90,1,4,3,46.49,1.6,0.8,0.5,00066,Eros,one filter 4 image every 38 seconds (TABLE6+FAST),done
+Equatorial Lon1 (5S),,MSI,07-Mar,67,22:33,5:39,4:12,,8,288,18,4,3,148.78,5.2,2.6,1.7,00066,Eros,3x2 in filter 4 every15 deg for 1 rotation,done
+Opnav 68a N3,,NAV,08-Mar,68,4:05,0:25,4:30,,8,16,18,4,3,8.27,0.3,0.1,0.1,00066,Eros,4x4 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),63,,08-Mar,68,4:35,6:05,10:40,,,,,,,212.22,7.40,3.71,2.48,,,,
+Momentum Management,,,,68,6:00,,,,,,,,,,,,,,,,
+Opnav 68b H3,,NAV,08-Mar,68,10:45,0:20,11:05,,8,9,18,4,3,4.65,0.2,0.1,0.1,00066,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 068,,NAV,08-Mar,68,11:15,00:25,11:40,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 68c M3,,NAV,08-Mar,68,18:05,0:25,18:30,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+North Equatorial Lon1 (14N),,MSI,08-Mar,68,19:00,5:33,0:33,,8,288,18,4,3,148.78,5.2,2.6,1.7,00066,Eros,3x2 in filter 4 every15 deg for 1 rotation,done
+Opnav 69a H3,,NAV,09-Mar,69,0:45,0:20,1:05,,8,9,18,4,3,4.65,0.2,0.1,0.1,00066,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 069,,NAV,09-Mar,69,01:15,00:25,01:40,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 69b L3,,NAV,09-Mar,69,8:00,0:25,8:25,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+Mid North 2x2_A1 (23N),,MSI,09-Mar,69,8:50,0:20,9:10,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00066,Eros,Clean (FAST),done
+Mid North 2x2_A2 (23N),,MSI,09-Mar,69,9:15,0:20,9:35,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Mid North 2x2_A3 (26N),,MSI,09-Mar,69,11:35,0:20,11:55,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position ,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Mid North 2x2_A4 (26N),,MSI,09-Mar,69,11:55,0:20,12:15,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position ,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Opnav 69c M3,,NAV,09-Mar,69,14:15,0:25,14:40,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,09-Mar,69,15:05,8:15,23:20,,,,,,,460.60,16.07,8.06,5.39,,,,
+Opnav 69d Q3,,NAV,09-Mar,69,23:19,0:30,23:49,,8,15,18,4,3,7.75,0.3,0.1,0.1,00066,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+NPolarLat1,,MSI,09-Mar,69,23:49,4:43,4:32,,12,112,22,1-7,1.3,133.52,4.7,0.0,1.6,00066,Eros,8 filters every 1045 seconds for 1 rotation (16 sets),done
+,,,,,,,,,8,128,21,"1-7,1",1.3,152.60,5.4,2.7,1.8,00066,Eros,Clean (FAST),done
+NIS NPolarLat1,,MSI,09-Mar,69,23:49,4:33,4:22,,,936,3,,,1.07,0.0,0.0,0.0,00066,Eros,mp 63 - 87  (16sp + 2r + 4d) cal at 87,done
+70 Meter (26.4 kb/s),63,,10-Mar,70,4:35,5:58,10:33,,,,,,,294.94,10.35,2.85,3.45,,,,
+Opnav 70a Q3,,NAV,10-Mar,70,10:35,0:30,11:05,,8,15,18,4,3,7.75,0.3,0.1,0.1,00066,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+NLR,,NLR,10-Mar,70,11:00,7:00,17:00,,,,,,,,,,,,,,
+Opnav 70b H3,,NAV,10-Mar,70,17:00,0:20,17:20,,8,9,18,4,3,4.65,0.2,0.1,0.1,00066,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 070,,NAV,10-Mar,70,17:30,00:25,17:55,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NorthPolarLon1 (37N),,MSI,10-Mar,70,18:00,5:40,23:40,,8,288,18,4,2.5,178.54,6.3,3.1,2.1,00066,Eros,2x3 in filter 4 every15 deg for 1 rotation,done
+NIS NPolarLon1,,MSI,10-Mar,70,18:00,5:33,23:33,,,2080,4,,,2.38,0.1,0.0,0.0,00066,Eros,double repeat: mp 73-76 (5sp + 2r + 2d) cal at 76; mp 75-78 (5sp + 2r + 2d) cal at 78,done
+Opnav 70c Q3,,NAV,10-Mar,70,23:40,0:30,0:10,,8,15,18,4,3,7.75,0.3,0.1,0.1,00066,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+High North 2x2_B1 (35N),,MSI,11-Mar,71,1:10,0:20,1:30,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00066,Eros,Clean (FAST),done
+High North 2x2_B2  (35N),,MSI,11-Mar,71,3:03,0:20,3:23,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+High North 2x2_B3  (35N),,MSI,11-Mar,71,3:30,0:20,3:50,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+High North 2x2_B4  (35N),,MSI,11-Mar,71,3:43,0:20,4:03,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+High North 2x2_B5  (35N),,MSI,11-Mar,71,5:15,0:20,5:35,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 8 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Opnav 71a N2,,NAV,11-Mar,71,5:43,0:25,6:08,,8,16,18,4,3,8.27,0.3,0.1,0.1,00066,Eros,4x4 mosaic in filter 4 (TABLE5+FAST),done
+High North 2x2_B6 (35N0,,MSI,11-Mar,71,6:14,0:20,6:34,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position ,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Star Calibration 071,,NAV,11-Mar,71,06:30,00:25,06:55,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NLR,,NLR,11-Mar,71,7:00,6:00,13:00,,,,,,,,,,,,,,
+Opnav 71b N2,,NAV,11-Mar,71,13:30,0:20,13:50,,8,16,18,4,3,8.27,0.3,0.1,0.1,00066,Eros,4x4 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,11-Mar,71,14:15,10:13,0:28,,,,,,,656.50,22.95,11.48,7.68,,,,
+Opnav 72a M3,,NAV,12-Mar,72,0:30,0:20,0:50,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 072,,NAV,12-Mar,72,01:00,00:25,01:25,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00066,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NorthEquatorialLon1 (20N) ,,MSI,12-Mar,72,1:25,5:35,7:00,,12,288,18,4,2.5,178.54,6.3,3.1,2.1,00066,Eros,3x2 in filter 4 every15 deg for 1 rotation,done
+Opnav 72b KF,,NAV,12-Mar,72,7:00,0:20,7:20,,8,6,18,4,3,3.10,0.1,0.1,0.0,00066,Eros,2x3 mosaic in filter 4 (TABLE5+FAST),done
+Mid North  2x2_B1 (16N),,MSI,12-Mar,72,7:50,0:20,8:10,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00066,Eros,2x2 with 7 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00066,Eros,Clean (FAST),done
+Mid North  2x2_B2 (16N),,MSI,12-Mar,72,8:37,0:20,8:57,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Mid North  2x2_B3 (16N) ,,MSI,12-Mar,72,9:00,0:20,9:20,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position ,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Mid North  2x2_B4 (16N),,MSI,12-Mar,72,11:25,0:20,11:45,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Opnav 72c M2,,NAV,12-Mar,72,12:55,0:20,13:15,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Opnav 72d M2,,NAV,12-Mar,72,15:40,0:20,16:00,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,12-Mar,72,16:15,7:48,0:03,,,,,,,481.68,16.86,8.43,5.64,,,,
+Opnav 73a M3,,NAV,13-Mar,73,0:05,0:20,0:25,,8,12,18,4,3,6.20,0.2,0.1,0.1,00066,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Equatorial  2x2_A1 (0N),,MSI,13-Mar,73,0:45,0:20,1:05,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Equatorial 2x2_A2 (0N),,MSI,13-Mar,73,1:04,0:20,1:24,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Equatorial  2x2_A3  (0N),,MSI,13-Mar,73,3:25,0:20,3:45,,12,28,22,1-7,1.2,36.16,1.3,0.6,0.4,00066,Eros,2x2 with 7 filters at every position ,done
+,,,,,,,,,12,32,21,"1-7,1",1.2,41.33,1.5,0.7,0.5,00066,Eros,Clean (FAST),done
+Equatorial  2x2_A4  (0N),,MSI,13-Mar,73,3:45,0:20,4:05,,12,13,22,1-7,1.2,16.79,0.6,0.3,0.2,00066,Eros,2x2 with 7 filters at every position,done
+MSI observations were lost due to DPU freeze.,,NLR,13-Mar,73,3:45,39:30,74/19:30,,,,,,,,,,,,,lost 45 images from this week,
+70 Meter (26.4 kb/s),63,,13-Mar,73,4:30,6:03,10:33,,,,,,,737.14,25.82,12.90,8.63,,,,
+Totals for the week for MSI,,,,,,,,,,2880,,,2,2231.72,,,,,,,
+MSI observations were lost due to DPU freeze.,,NLR,13-Mar,73,3:45,39:30,74/19:30,,,,,,,,,,,,,,
+NIS Feature Trk 1,,MSI,14-Mar,74,3:00,2:50,5:50,,,600,9,,,0.69,0.0,0.0,0.0,00073,Eros,mp 67 - 85    16sp + 2r + 4dark,done
+NIS Cal target O3,,NIS,14-Mar,74,9:05,0:32,9:37,,,100,10,,,0.11,0.0,0.0,0.0,00073,cal target,Standard NIS_CAL,done
+70 Meter (26.4 kb/s),43,,14-Mar,74,15:35,8:35,0:10,,,,,,,0.80,0.03,0.01,0.01,,,,
+Opnav 75a M3,,NAV,15-Mar,75,0:18,0:20,0:38,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+FeatureTrk2,,MSI,15-Mar,75,3:10,2:50,6:00,,12,130,1,4,2.5,80.59,2.8,1.4,0.9,00073,Eros,point to asteroid body fix position and take 1 filter 4 image every 73 seconds (TABLE6+FAST),done
+NIS Feature Trk 2,,MSI,15-Mar,75,3:10,2:50,6:00,,,600,9,,,0.69,0.0,0.0,0.0,00073,Eros,mp 67 - 85    16sp + 2r + 4dark,done
+Opnav 75b KL3,,NAV,15-Mar,75,6:00,0:20,6:20,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 3,,MSI,15-Mar,75,6:30,4:55,11:25,,8,260,1,4,3,134.32,4.7,2.4,1.6,00073,Eros,one filter 4 image every 66 seconds (TABLE6+FAST),done
+NIS Flyover 3,,MSI,15-Mar,75,6:30,4:55,11:25,,,1040,7,,,1.19,0.0,0.0,0.0,00073,Eros,mp 67 - 85    16sp + 2r + 4dark,done
+Star Calibration 075,,NAV,15-Mar,75,11:30,00:25,11:55,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NLR,,NLR,15-Mar,75,12:00,6:00,18:00,,,,,,,,,,,,,,
+Opnav 75c KL3,,NAV,15-Mar,75,18:00,0:20,18:20,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,15-Mar,75,18:35,6:30,1:05,,,,,,,237.86,8.30,4.16,2.78,,,,
+Opnav 76a Q3,,NAV,16-Mar,76,1:05,0:20,1:25,,8,15,18,4,3,7.75,0.3,0.1,0.1,00073,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+SouthPolarLon1 (35S) ,,MSI,16-Mar,76,6:00,5:27,11:27,,12,240,18,4,3,123.98,4.4,2.2,1.5,00073,Eros,2x4 in filter 4 every12 deg for 1 rotation,done
+NIS SouthPolarLon 1,,MSI,16-Mar,76,6:00,5:27,11:27,,,4296,5,,,4.92,0.2,0.1,0.1,00073,Eros,mp 72 - 78   4sp + 2r + 1dark,done
+Star Calibration 076,,NAV,16-Mar,76,11:30,00:25,11:55,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+34 meter (8.8 kb/s),63,,16-Mar,76,12:06,8:05,20:11,,,,,,,139.13,4.84,2.43,1.63,,,,
+Opnav 76b M3,,NAV,16-Mar,76,20:18,0:20,20:38,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+FeatureTrk3,,MSI,17-Mar,77,6:00,1:00,7:00,,12,120,18,4,2.5,74.39,2.6,1.3,0.9,00073,Eros,point to asteroid body fix position and take 1 filter 4 image every 39 seconds (TABLE6+FAST),done
+NIS Feature Trk 3,,MSI,17-Mar,77,6:30,1:00,7:30,,,280,11,,,0.32,0.0,0.0,0.0,00073,Eros,mp 67 - 85    16sp + 2r + 4dark,done
+Opnav 77a H3,,NAV,17-Mar,77,7:30,0:20,7:50,,8,9,18,4,3,4.65,0.2,0.1,0.1,00073,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 077,,NAV,17-Mar,77,17:30,00:25,17:55,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 77b M3,,NAV,17-Mar,77,18:00,0:20,18:20,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,17-Mar,77,18:36,4:00,22:36,,,,,,,94.24,3.26,1.65,1.10,,,,
+Opnav 77c M3,,NAV,17-Mar,77,22:44,0:20,23:04,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Equatorial  4x1 C1 (0S),,MSI,18-Mar,78,2:20,0:20,2:40,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,4x1 with 4 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+Equatorial 8x1 C2 (0S),,MSI,18-Mar,78,2:52,0:20,3:12,,12,32,24,"1,3,4,6",1.2,41.33,1.5,0.7,0.5,00073,Eros,8x1 with 4 filters at every position,done
+,,,,,,,,,12,40,15,"1,3,4,6,1",1.2,51.66,1.8,0.9,0.6,00073,Eros,Clean (FAST),done
+Equatorial 6x1 C3  (0S),,MSI,18-Mar,78,3:59,0:20,4:19,,12,24,24,"1,3,4,6",1.2,31.00,1.1,0.5,0.4,00073,Eros,6x1 with 4 filters at every position,done
+,,,,,,,,,12,30,15,"1,3,4,6,1",1.2,38.75,1.4,0.7,0.5,00073,Eros,Clean (FAST),done
+Equatorial  9x1 C4  (0S),,MSI,18-Mar,78,4:47,0:20,5:07,,12,36,24,"1,3,4,6",1.2,46.49,1.6,0.8,0.5,00073,Eros,9x1 with 4 filters at every position,done
+,,,,,,,,,12,45,15,"1,3,4,6,1",1.2,58.12,2.0,1.0,0.7,00073,Eros,Clean (FAST),done
+Equatorial  9x1 C5  (0S),,MSI,18-Mar,78,6:02,0:20,6:22,,12,36,24,"1,3,4,6",1.2,46.49,1.6,0.8,0.5,00073,Eros,9x1 with 4 filters at every position,done
+,,,,,,,,,12,45,15,"1,3,4,6,1",1.2,58.12,2.0,1.0,0.7,00073,Eros,Clean (FAST),done
+Equatorial Lon 2,,MSI,18-Mar,78,7:30,5:35,13:05,,12,288,18,4,2.5,178.54,6.3,3.1,2.1,00073,Eros,4x2 in filter 4 every10 deg for 1 rotation,done
+Star Calibration 078,,NAV,18-Mar,78,13:00,00:25,13:25,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 78a M3,,NAV,18-Mar,78,13:30,0:20,13:50,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,18-Mar,78,14:06,8:15,22:21,,,,,,,611.86,21.42,10.71,7.16,,,,
+Opnav 78b M3,,NAV,18-Mar,78,22:34,0:20,22:54,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 4,,MSI,19-Mar,79,3:00,3:55,6:55,,8,500,1,4,3,258.30,9.1,4.5,3.0,00073,Eros,one filter 4 image every 66 seconds (TABLE6+FAST),done
+NIS Flyover 4,,MSI,19-Mar,79,3:00,3:55,6:55,,,840,8,,,0.96,0.0,0.0,0.0,00073,Eros,mp 63-81   16sp + 2r + 4dark,done
+Opnav 79a M3,,NAV,19-Mar,79,7:00,0:20,7:20,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Mid North  3x1 C1 ,,MSI,19-Mar,79,9:05,0:20,9:25,,12,12,24,"1,3,4,6",1.2,15.50,0.5,0.3,0.2,00073,Eros,3x1 with 4 filters at every position,done
+,,,,,,,,,12,15,15,"1,3,4,6,1",1.2,19.37,0.7,0.3,0.2,00073,Eros,Clean (FAST),done
+Mid North  2x2_C2,,MSI,19-Mar,79,11:15,0:20,11:35,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+Mid North  2x2_C3,,MSI,19-Mar,79,11:40,0:20,12:00,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+Mid North  3x2_C4,,MSI,19-Mar,79,12:00,0:20,12:20,,12,24,24,"1,3,4,6",1.2,31.00,1.1,0.5,0.4,00073,Eros,2x2 with 4 filters at every position,done
+,,,,,,,,,12,30,15,"1,3,4,6,1",1.2,38.75,1.4,0.7,0.5,00073,Eros,Clean (FAST),done
+Mid North  2x2_C5,,MSI,19-Mar,79,12:30,0:20,12:50,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+Star Calibration 079,,NAV,19-Mar,79,13:00,00:25,13:25,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 79b KL3,,NAV,19-Mar,79,13:30,0:20,13:50,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,2x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,19-Mar,79,14:01,9:30,23:31,,,,,,,524.43,18.36,9.18,6.14,,,,
+Opnav 79c M3,,NAV,19-Mar,79,22:49,0:20,23:09,,8,12,18,4,3,6.20,0.2,0.1,0.1,00073,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+North Polar Lon 2,,MSI,20-Mar,80,2:27,5:35,8:02,,12,288,18,4,2.5,178.54,6.3,3.1,2.1,00073,Eros,3x2 in filter 4 every15 deg for 1 rotation,done
+NIS NorthPolarLon 2,,MSI,20-Mar,80,2:27,5:35,8:02,,,4296,5,,,4.92,0.2,0.1,0.1,00073,Eros,mp 72 - 78   4sp + 2r + 1dark,done
+High North  1x5 B1,,MSI,20-Mar,80,8:00,0:20,8:20,,12,20,24,"1,3,4,6",1.2,25.83,0.9,0.5,0.3,00073,Eros,1x5 with 4 filters at every position,done
+,,,,,,,,,12,25,15,"1,3,4,6,1",1.2,32.29,1.1,0.6,0.4,00073,Eros,Clean (FAST),done
+High North  2x2_B2,,MSI,20-Mar,80,8:30,0:20,8:50,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  2x2_B3,,MSI,20-Mar,80,8:44,0:20,9:04,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  2x2_B4,,MSI,20-Mar,80,8:58,0:20,9:18,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  1x5_B5,,MSI,20-Mar,80,10:35,0:20,10:55,,12,20,24,"1,3,4,6",1.2,25.83,0.9,0.5,0.3,00073,Eros,1x5 with 4 filters at every position,done
+,,,,,,,,,12,25,15,"1,3,4,6,1",1.2,32.29,1.1,0.6,0.4,00073,Eros,Clean (FAST),done
+High North  2x2_B6,,MSI,20-Mar,80,11:05,0:20,11:25,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  2x2_B7,,MSI,20-Mar,80,11:20,0:20,11:40,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  2x2_B8,,MSI,20-Mar,80,11:35,0:20,11:55,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+High North  2x2_B9,,MSI,20-Mar,80,12:05,0:20,12:25,,12,16,24,"1,3,4,6",1.2,20.66,0.7,0.4,0.2,00073,Eros,2x2 with 4 filters at every position ,done
+,,,,,,,,,12,20,15,"1,3,4,6,1",1.2,25.83,0.9,0.5,0.3,00073,Eros,Clean (FAST),done
+Star Calibration 080,,NAV,20-Mar,80,13:00,00:25,13:25,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00073,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 80a Q2,,NAV,20-Mar,80,13:30,0:20,13:50,,8,15,18,4,3,7.75,0.3,0.1,0.1,00073,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,20-Mar,80,14:01,10:00,0:01,,,,,,,641.58,22.47,11.23,7.51,,,,
+Totals for the week for MSI,,,,,,,,,,2876,,,2,2228.62,,,,,,,
+Opnav 81a KL3,,NAV,21-Mar,81,0:06,0:20,0:26,,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00080,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+NPolarLat2,,MSI,21-Mar,81,3:12,4:43,7:55,,12,88,24,"1,3,4,6",1.5,90.92,3.2,0.0,1.1,00080,Eros,4 filters every 1045 seconds for 1 rotation (9+13 sets),done
+,,,,,,,,,12,110,15,"1,3,4,6,1",1.5,113.65,4.0,2.0,1.3,00080,Eros,Clean (FAST),done
+NIS NPolarLat1,,MSI,21-Mar,81,3:12,4:43,7:55,,,936,3,,,1.07,0.0,0.0,0.0,00080,Eros,mp 66 - 90  (16sp + 2r + 4d) cal at 90,done
+Flyover 5,,MSI,21-Mar,81,8:40,1:20,10:00,,8,140,1,4,2.8,77.49,2.7,1.4,0.9,00080,Eros,one filter 4 image every 30 seconds (TABLE6+FAST),done
+Flyover 6,,MSI,21-Mar,81,10:50,1:20,12:10,,8,140,1,4,2.8,77.49,2.7,1.4,0.9,00080,Eros,one filter 4 image every 30 seconds (TABLE6+FAST),done
+Star Calibration 081,,NAV,21-Mar,81,13:00,00:25,13:25,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00080,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 81b H4,,NAV,21-Mar,81,13:30,0:20,13:50,,8,9,18,4,3,4.65,0.2,0.1,0.1,00080,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,21-Mar,81,14:25,6:20,20:45,,,,,,,375.20,13.12,5.00,4.39,,,,
+Opnav 81c Q4,,NAV,21-Mar,81,20:35,0:20,20:55,,8,15,18,4,3,7.75,0.3,0.1,0.1,00080,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 7,,MSI,21-Mar,81,23:30,5:35,5:05,,8,651,1,4,2.8,360.33,12.6,6.3,4.2,00080,Eros,one filter 4 image every 30 seconds (TABLE6+FAST),done
+Star Calibration 082,,NAV,22-Mar,82,05:07,00:25,05:32,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00080,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 82a M1,,NAV,22-Mar,82,5:36,0:20,5:56,,8,12,18,4,3,6.20,0.2,0.1,0.1,00080,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Feature Trk 4,,MSI,22-Mar,82,6:01,1:20,7:21,,8,265,18,4,2.8,146.68,5.1,2.6,1.7,00080,Eros,point to asteroid body fixed position and take one filter 4 image every 18 seconds (TABLE5+FAST),done
+Opnav 82b M1,,NAV,22-Mar,82,13:31,0:20,13:51,,8,12,18,4,3,6.20,0.2,0.1,0.1,00080,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,22-Mar,82,14:20,8:25,22:45,,,,,,,529.63,18.54,9.27,6.20,,,,
+Opnav 82c H4,,NAV,22-Mar,82,22:36,0:20,22:56,,8,9,18,4,3,4.65,0.2,0.1,0.1,00080,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 8_rev 1,,MSI,23-Mar,83,7:31,5:35,13:06,,8,743,1,4,2.8,411.25,14.4,7.2,4.8,00080,Eros,one filter 4 image every 30 seconds (TABLE6+FAST),done
+Star Calibration 083,,NAV,23-Mar,83,13:10,00:25,13:35,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00080,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Opnav 83a KH1,,NAV,23-Mar,83,13:23,0:20,13:43,T,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00080,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,23-Mar,83,14:35,8:10,22:45,,,,,,,423.96,14.83,7.42,4.96,,,,
+Opnav 83b H4,,NAV,23-Mar,83,22:36,0:20,22:56,,8,9,18,4,3,4.65,0.2,0.1,0.1,00080,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Equatorial Lon 3,,MSI,23-Mar,83,23:25,5:35,5:00,,8,447,18,4,3,230.92,8.1,4.0,2.7,00080,Eros,4x2 mosaics taken every 6 deg (TABLE5+FAST),done
+70 Meter (26.4 kb/s),43,,24-Mar,84,5:00,5:35,10:35,,,,,,,235.57,8.27,4.12,2.76,,,,
+Mom_Dump,,,24-Mar,84,5:30,,,,,,,,,,,,,,,,
+Opnav 84a KM1,,NAV,24-Mar,84,9:50,0:20,10:10,,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00080,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+South Equatorial Lon 1_sun,,MSI,24-Mar,84,13:16,5:35,18:51,,8,270,18,4,3,139.48,4.9,2.4,1.6,00080,Eros,4x2 mosaics taken every 10 deg (TABLE6+FAST),done
+Opnav 84b KM1,,NAV,24-Mar,84,18:31,0:20,18:51,,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00080,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Opnav 85a KL1,,NAV,25-Mar,85,1:01,0:20,1:21,,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00080,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+Feature Trk 5,,MSI,25-Mar,85,1:31,2:00,3:31,,8,276,1,4,2.8,152.77,5.4,2.7,1.8,00080,Eros,point to asteroid body fixed position and take one filter 4 image every 25 seconds (TABLE6+FAST),done
+Feature Trk 6,,MSI,25-Mar,85,3:32,0:55,4:27,,8,159,1,4,2.8,88.01,3.1,1.5,1.0,00080,Eros,point to asteroid body fixed position and take one filter 4 image every 20 seconds (TABLE6+FAST),done
+Star Calibration 084,,NAV,25-Mar,85,04:31,00:25,04:56,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00080,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+MSI shutdown again after Starcal until next high gain track.,,,,,,,,,,,,,,,,,,,,,
+70 Meter (26.4 kb/s),43,,25-Mar,85,14:20,8:25,22:45,,,,,,,405.05,14.17,7.09,4.74,,,,
+Opnav 85c Q1,,NAV,25-Mar,85,22:36,0:20,22:56,,8,15,18,4,3,7.75,0.3,0.1,0.1,00080,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+Star Calibration 086,,NAV,26-Mar,86,01:25,00:25,01:50,,12,4,29,0,2.5,2.48,0.0,0.0,0.0,00080,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+MSI shutdown again after Starcal until next high gain track.,,,,,,,,,,,,,,,,,,,,,
+NIS SouthPolar_A,,MSI,26-Mar,86,1:55,0:20,2:15,,,857,4,,,0.98,0.0,0.0,0.0,00080,Eros,mp 72 - 76  (16sp + 2r + 4d) cal every 7th mp,done
+70 Meter (26.4 kb/s),43,,26-Mar,86,14:15,9:10,23:25,,,,,,,11.21,0.35,0.20,0.13,,,,
+Opnav 86b H1,,NAV,26-Mar,86,23:16,0:20,23:36,,8,9,18,4,3,4.65,0.2,0.1,0.1,00080,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+South Polar Lon 2,,MSI,26-Mar,86,23:53,4:30,4:23,,8,577,18,4,2.8,319.37,11.2,5.6,3.7,00080,Eros,one filter 4 image every 27 seconds (TABLE5+FAST),done
+NIS SouthPolar Lon,,MSI,26-Mar,86,23:53,5:35,5:28,,,651,5,,,0.75,0.0,0.0,0.0,00080,Eros,mp 72  (3sp + 0r + 0d) cal every 7th,done
+70 Meter (26.4 kb/s),43,,27-Mar,87,4:55,5:35,10:30,,,,,,,324.77,11.39,5.68,3.80,,,,
+Totals for the week for MSI,,,,,,,,,,4033,,,2,3125.18,,,,,,,
+OPN_87a_KL3,,NAV,27-Mar,87,10:20,0:35,10:55,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+OPN_87b_KM3,,NAV,27-Mar,87,19:01,0:30,19:31,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+MSI Starcal_87,,NAV,28-Mar,88,1:01,0:23,1:24,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Flyover12,,MSI,28-Mar,88,1:25,4:42,6:07,,8,351,18,4,2.5,217.59,7.6,3.8,2.5,00087,Eros,filter 4 images scanning along nose taken every 43s for 214 im and every 54s for 137 im (TABLE5+FAST),done
+NIS_Flyover12,,MSI,28-Mar,88,1:25,4:42,6:07,,,2450,8,,,2.81,0.1,0.0,0.0,00087,Eros,mp 75 (9sp + 2r +4d) calint=9;        245 exec,done
+Flyover13               0(N),,MSI,28-Mar,88,6:55,5:46,12:41,,8,310,18,4,2.5,192.18,6.7,3.4,2.2,00087,Eros,filter 4 images scanning along nose taken every 66s (TABLE5+FAST),done
+NIS_Flyover13,,MSI,28-Mar,88,6:55,5:46,12:41,,,2450,8,,,2.81,0.1,0.0,0.0,00087,Eros,mp 75 (9sp + 2r +4d) calint=9;        245 exec,done
+MSI Starcal_88,,NAV,28-Mar,88,13:20,0:30,13:50,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+OPN_88a_KH1,,NAV,28-Mar,88,13:50,0:30,14:20,T,8,9,27,4,2.5,11.16,0.4,0.2,0.1,00087,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,28-Mar,88,14:21,7:45,22:06,,,,,,,446.38,15.66,7.81,5.22,,,,
+OPN_88b_KM3,,NAV,28-Mar,88,22:06,0:35,22:41,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 14,,NLR,29-Mar,89,1:18,5:11,6:29,,8,240,18,4,3,123.98,4.4,2.2,1.5,00087,Eros,one filter 4 image every 40 seconds during NLR nadir point (TABLE5+FAST),done
+NIS_Flyover 14,,MSI,29-Mar,89,1:18,5:11,6:29,,8,2200,11,,,2.52,0.1,0.0,0.0,00087,Eros,mp 75 (9sp + 2r +4d) calint=9;        220 exec,done
+MSI Starcal_89,,NAV,29-Mar,89,6:31,0:30,7:01,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+NorthEquatorialLon3  +25(N),,MSI,29-Mar,89,7:00,5:58,12:58,,8,440,18,4,3,227.30,8.0,4.0,2.7,00087,Eros,filter 4  4x2 mosaic every 7 deg (TABLE5+FAST),done
+OPN_89a_KH1,,NAV,29-Mar,89,13:15,0:31,13:46,T,8,9,27,4,2.5,11.16,0.4,0.2,0.1,00087,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,29-Mar,89,14:04,8:00,22:04,,,,,,,374.89,13.15,6.56,4.39,,,,
+OPN_89b_KM3,,NAV,29-Mar,89,20:55,0:35,21:30,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+FeatureTrk7,,MSI,30-Mar,90,1:00,5:27,6:27,,8,388,18,4,2.5,240.53,8.4,4.2,2.8,00087,Eros,point to asteroid body fixed position and take one filter 4 image every 49 seconds (TABLE5+FAST),done
+NIS_FeatureTrk7,,MSI,30-Mar,90,1:00,5:27,6:27,,,1160,9,,,1.33,0.0,0.0,0.0,00087,Eros,mp 63-71 (16sp + 2r +4d) calint=19;        58 exec,done
+FeatureTrk8          +35(N),,MSI,30-Mar,90,6:30,6:10,12:40,,8,437,18,4,2.5,270.91,9.5,4.7,3.2,00087,Eros,point to asteroid body fixed position and take one filter 4 image every 49 seconds (TABLE5+FAST),done
+NIS_FeatureTrk8,,MSI,30-Mar,90,6:30,6:10,12:40,,,1160,9,,,1.33,0.0,0.0,0.0,00087,Eros,mp 63-71 (16sp + 2r +4d) calint=19;        58 exec,done
+MSI Starcal_90,,NAV,30-Mar,90,12:45,0:30,13:15,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+OPN_90a_KL1,,NAV,30-Mar,90,13:15,0:30,13:45,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,3x4 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,30-Mar,90,14:15,8:40,22:55,,,,,,,538.89,18.91,9.43,6.31,,,,
+OPN_90b_Q1,,NAV,30-Mar,90,22:56,0:35,23:31,F,8,15,27,4,2.5,9.30,0.3,0.2,0.1,00087,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+Flyover15,,NLR,31-Mar,91,1:45,5:31,7:16,,8,321,1,4,3,165.83,5.8,2.9,1.9,00087,Eros,one filter 4 image every 60 seconds during NLR nadir point (TABLE6+FAST),done
+NIS_Flyover15,,MSI,31-Mar,91,1:45,5:31,7:16,,,1302,3,,,1.49,0.1,0.0,0.0,00087,Eros,mp 63-87 (16sp + 2r +4d) calint=20;        52 exec,done
+NorthPolarLon3  +35(S),,MSI,31-Mar,91,7:16,5:42,12:58,,8,497,18,4,2.5,308.10,10.8,5.4,3.6,00087,Eros, filter 4 2x8 mosaics every 12 deg (TABLE6+FAST),done
+NIS_NorthPolarLon3,,MSI,31-Mar,91,7:16,5:42,12:58,,,1928,5,,,2.21,0.1,0.0,0.0,00087,Eros,mp 72-73 (2sp + 0r +0d) calint=7;        900 exec,done
+MSI_Starcal_91,,NAV,31-Mar,91,13:01,0:30,13:31,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+OPN_91a_Q1,,NAV,31-Mar,91,13:30,0:30,14:00,F,8,15,27,4,2.5,9.30,0.3,0.2,0.1,00087,Eros,3x5 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,31-Mar,91,14:06,7:45,21:51,,,,,,,498.71,17.50,8.73,5.84,,,,
+OPN_91b_H1,,NAV,31-Mar,91,21:50,0:35,22:25,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00087,Eros,3x3 mosaic in filter 4 (TABLE5+FAST),done
+Flyover 16           +35(S),,MSI,01-Apr,92,0:40,5:22,6:02,,8,312,1,4,2.8,172.69,6.1,3.0,2.0,00087,Eros,one filter 4 image every 60 seconds (TABLE6+FAST),done
+NIS_Flyover 16 ,,MSI,01-Apr,92,0:40,5:22,6:02,,,1160,9,,,1.33,0.0,0.0,0.0,00087,Eros,mp 63-71 (16sp + 2r +4d) calint=19;        58 exec,done
+Flyover 17,,MSI,01-Apr,92,6:30,5:23,11:53,,8,477,1,4,2.8,264.02,9.3,4.6,3.1,00087,Eros,one filter 4 image every 40 seconds (TABLE6+FAST),done
+NIS_Flyover 17,,MSI,01-Apr,92,6:30,5:23,11:53,,,1160,9,,,1.33,0.0,0.0,0.0,00087,Eros,mp 63-71 (16sp + 2r +4d) calint=19;        58 exec,done
+MSI_Starcal_92,,NAV,01-Apr,92,12:36,0:30,13:06,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+OPN_92a_KM1,,NAV,01-Apr,92,13:05,0:30,13:35,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,01-Apr,92,14:10,7:40,21:50,,,,,,,454.87,15.96,7.96,5.32,,,,
+OPN_92b_KM1,,NAV,01-Apr,92,21:51,0:35,22:26,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+OCM 4,,,02-Apr,93,3:15,,,,,,,,,,,,,,,,
+OPN_93a_KM1_rev1,,NAV,02-Apr,93,4:15,0:35,4:50,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,02-Apr,93,5:00,2:10,7:10,,,,,,,14.88,0.52,0.26,0.17,,,,
+OPN_93b_KM1,,NAV,02-Apr,93,7:15,0:35,7:50,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,02-Apr,93,8:00,2:20,10:20,,,,,,,14.88,0.52,0.26,0.17,,,,
+Equatorial_8x1_D4      0(S),,MSI,02-Apr,93,15:15,0:40,15:55,,12,32,24,"1,3,4,6",1.3,38.15,1.3,0.7,0.4,00087,Eros,8x1 with 4 filters at every position,done
+,,,,,,,,,12,40,15,"1,3,4,6,1",1.3,47.69,1.7,0.8,0.6,00087,Eros,Clean (FAST),done
+Equatorial_8x1_D1      0(S),,MSI,02-Apr,93,16:10,1:05,17:15,,12,32,24,"1,3,4,6",1.3,38.15,1.3,0.7,0.4,00087,Eros,8x1 with 4 filters at every position,done
+,,,,,,,,,12,40,15,"1,3,4,6,1",1.3,47.69,1.7,0.8,0.6,00087,Eros,Clean (FAST),done
+Equatorial_6x1_D2      0(S),,MSI,02-Apr,93,17:15,0:55,18:10,,12,24,24,"1,3,4,6",1.3,28.61,1.0,0.5,0.3,00087,Eros,6x1 with 4 filters at every position,done
+,,,,,,,,,12,30,15,"1,3,4,6,1",1.3,35.76,1.3,0.6,0.4,00087,Eros,Clean (FAST),done
+Equatorial_7x1_D3      0(S),,MSI,02-Apr,93,18:25,1:00,19:25,,12,28,24,"1,3,4,6",1.3,33.38,1.2,0.6,0.4,00087,Eros,7x1 with 4 filters at every position,done
+,,,,,,,,,12,35,15,"1,3,4,6,1",1.3,41.73,1.5,0.7,0.5,00087,Eros,Clean (FAST),done
+MSI_Starcal_93,,NAV,02-Apr,93,19:23,0:30,19:53,,12,4,29,0,2.5,2.48,0.1,0.0,0.0,00087,undefined,"Point 90 deg off-NADIR, 4 seq 29, return (FAST)",done
+Flyover 18,,NLR,02-Apr,93,20:31,4:30,1:01,,8,160,18,4,2.8,88.56,3.1,1.5,1.0,00087,Eros,one filter 4 image every 68 seconds for 95 im and 46 seconds for 65 im. NLR ride along (TABLE5+FAST),done
+NIS_Flyover 18,,MSI,02-Apr,93,20:31,4:30,1:01,,,2450,8,,,2.81,0.1,0.0,0.0,00087,Eros,mp 75 (9sp + 2r +4d) calint=9;        245 exec,done
+OPN_94a_KM1,,NAV,03-Apr,94,2:01,0:30,2:31,F,8,12,27,4,2.5,7.44,0.3,0.1,0.1,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+OPN_94b_KM1,,NAV,03-Apr,94,13:16,0:27,13:43,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00087,Eros,4x3 mosaic in filter 4 (TABLE5+FAST),done
+70 Meter (26.4 kb/s),,,03-Apr,94,13:42,7:55,21:37,,,,,,,427.32,14.99,7.48,5.00,,,,
+Totals for the week for MSI,,,,,,,,,,4411,,,,,,,,,,,
+
+
+Total images for 200 km,,,,,,,,,,15568,,,,,,,,,,,
+
+
+Totals spectra for 200 km,,,,,,,,,,35452,,,,,,,,,,,

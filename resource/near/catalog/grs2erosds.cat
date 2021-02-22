@@ -1,0 +1,133 @@
+PDS_VERSION_ID                   = PDS3                                       
+RECORD_TYPE                      = STREAM                                     
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0"         
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "NEAR GRS SPECTRA FOR EROS/ORBIT"          
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = SPECTRUM                                   
+  START_TIME                     = 2000-01-11T19:30:16                        
+  STOP_TIME                      = 2001-02-10T16:39:57                        
+  DATA_SET_RELEASE_DATE          = 2001-07-15                                 
+  PRODUCER_FULL_NAME             = "JACOB TROMBKA"                            
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+ Data Set Overview and Parameters                                             
+ ================================                                             
+                                                                              
+                                                                              
+The GRS Level 2 data products in this archive include daily                   
+time series of spectra collected by the instrument along with                 
+selected spacecraft engineering and instrument configuration and              
+orbital ephemerides. Supporting documentation includes as to the              
+specifics of how these data were generated. Selected ephemerides              
+and engineering parameters are averaged for the composite set of              
+information.                                                                  
+                                                                              
+  Processing                                                                  
+  ==========                                                                  
+                                                                              
+The Level 2 data products comprise the time series of the GRS                 
+instrument's science data in physical units. At each integration              
+time the instrument Data Processing Unit (DPU) samples instrument             
+spectra accumulated during the integration period as well as                  
+instrument and engineering configuration information.  Ground                 
+processing activities at the University of Arizona produce Derived            
+Engineering and Spatial Ephemerides information.  The Level-2 data            
+are then combined into integral products within a relational                  
+database and exported as an integral Level-2 product. Each GRS record         
+is comprised of the following logical data units:                             
+                                                                              
+  Spectra:                                                                    
+                      5, (1024 Channel) Spectra                               
+                       (NAI, BGO, ANTI, NAI1, NAI2, BGO1, BGO2)               
+                       NAI = Sodium Iodide:     Asteroid Pointing             
+                       BGO = Bismuth Germanate: Asteroid Pointing             
+                       ANTI= Anti-Coincidence:  Asteroid Pointing             
+                       NAI1= Sod. Iod 1 Escape: Asteroid Pointing             
+                       NAI2= Sod. Iod 2 Escape: Asteroid Pointing             
+                      2, (21 Channel) Spectra                                 
+                       BGO1= Bis. Germ. 1 Escpe:Asteroid Pointing             
+                       BGO2= Bis. Germ. 2 Escpe:Asteroid Pointing             
+ Instrument HouseKeeping:  Instrument Rates and activity                      
+ Engineering Housekeeping: Engineering Configurations (volts, etc.)           
+ Derived Engineering:      Ground derived data products                       
+ Spatial                   Orbital Ephemerides                                
+                                                                              
+   Data and Ancillary Files                                                   
+   ========================                                                   
+                                                                              
+Files for Level-2 are organized into a series of time subdirectories.         
+                                                                              
+                                                                              
+   Coordinate System                                                          
+   =================                                                          
+   All products were derived in the Asteroid Body Fixed Coordinate            
+   System                                                                     
+                                                                              
+   Software                                                                   
+   ========                                                                   
+   These products were derived from a specialized ground                      
+   processing system developed at the University of Arizona                   
+   Lunar and Planetary Laboratory.  All derived products are                  
+   described in the DOCUMENT Section of this volume:                          
+                                                                              
+   Requirement Specifications For Level-2 Parameters Required                 
+   Stored or Derived by The Near Earth Asteroid Rendezvous                    
+   (NEAR) Gamma-Ray Spectrometer (GRS) Ground System                          
+                                                                              
+   Media                                                                      
+   ======                                                                     
+   CD-ROM                                                                     
+"                                                                             
+                                                                              
+  CONFIDENCE_LEVEL_NOTE           = "                                         
+                                                                              
+    Overview                                                                  
+    ========                                                                  
+      Data in this archive have been reduced as part of mission data          
+      analysis activities of the NEAR XGRS  Science Team.  Data of            
+      questionable validity have been omitted from the solutions.             
+                                                                              
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This archival data set was reviewed by the NEAR XGRS                    
+      Team prior to submission to the Planetary Data System (PDS).            
+      It was one of several data sets included in a comprehensive             
+      review by the PDS Small Bodies Node in August 2001, prior to            
+      PDS acceptance and ingestion.                                           
+                                                                              
+                                                                              
+    Data Coverage and Quality                                                 
+    =========================                                                 
+      The data included in this archive were collected during the             
+      NEAR orbital phase from 2000-02-14 to 2001-02-12.                       
+                                                                              
+                                                                              
+    Limitations                                                               
+    ===========                                                               
+    None                                                                      
+                  "                                                           
+                                                                              
+                                                                              
+  END_OBJECT                       = DATA_SET_INFORMATION                     
+                                                                              
+  OBJECT                           = DATA_SET_TARGET                          
+    TARGET_NAME                    = "EROS"                                   
+  END_OBJECT                       = DATA_SET_TARGET                          
+                                                                              
+  OBJECT                           = DATA_SET_HOST                            
+    INSTRUMENT_HOST_ID             = "NEAR"                                   
+    INSTRUMENT_ID                  = "GRS"                                    
+  END_OBJECT                       = DATA_SET_HOST                            
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "CHENGETAL1998"                          
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+END                                                                           

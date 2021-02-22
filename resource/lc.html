@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Lightcurve Derived Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+            <h1> Asteroid Lightcurve Data Base (LCDB) </h1>
+            </center>
+
+            <h3>
+            <p>
+           The Asteroid Lightcurve Data Base (LCDB) is a set of files generated from a MySQL
+database that includes information directly and indirectly obtained from observations
+made to determine the period and/or amplitude of asteroid lightcurves. The
+information is taken from numerous journals and other sources.
+
+Its main purpose is to provide a central location for basic information about
+asteroid rotation rates and related information that can be used in statistical
+studies involving a few or many parameters. Some of the data are obtained directly
+from the observations while other data are inferred or calculated based on orbital
+characteristics, assumed class, etc.
+            </h3>
+
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:ast-lightcurve-database::3.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V3_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V3_0.zip"> Download (12 Mb) </a>
+            </table>
+
+            <p>
+            Use the following citation to reference this data set:
+
+            <p>
+            "Warner, B., Pravec, P., and Harris, A.
+                    P., Eds., Asteroid Lightcurve Data Base (LCDB) V3.0
+                    urn:nasa:pds:ast-lightcurve-database::3.0.
+                    NASA Planetary Data System, 2019."
+
+            <br><br>
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:ast-lightcurve-database::2.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V2_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V2_0.zip"> Download (6.9 Mb) </a>
+
+            <tr><td width=500> urn:nasa:pds:ast_lightcurve_derived_parameters::1.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast_lightcurve_derived"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds4/non_mission/ast_lightcurve_derived.zip"> Download (1.4 Mb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V16.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V16_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V16_0.zip"> Download (2.0 Mb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V15.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V15_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V15_0.zip"> Download (820 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V14.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V14_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V14_0.zip"> Download (676 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V13.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V13_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V13_0.zip"> Download (558 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V12.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V12_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V12_0.zip"> Download (445 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V11.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V11_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V11_0.zip"> Download (357 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V10.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V10_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V10_0.zip"> Download (293 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V9.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V9_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V9_0.zip"> Download (244 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V8.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V8_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V8_0.zip"> Download (134 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V7.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V7_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V7_0.zip"> Download (137 kb) </a>
+            <tr><td width=500> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V6.0
+                <td width=100> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V6_0"> Browse </a>
+                <td width=200> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V6_0.zip"> Download (97 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V5.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V5_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V5_0.zip">  Download (71 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V4.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V4_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V4_0.zip">  Download (49 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V3.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V3_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V3_0.zip">  Download (43 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V2.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V2_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V2_0.zip">  Download (40 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-REF-V1.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_REF_V1_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_REF_V1_0.zip">  Download (16 kb) </a>
+            <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V1.0
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V1_0"> Browse </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V1_0.zip">  Download (43 kb) </a>
+            </table></div>
+
+            <br> <br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

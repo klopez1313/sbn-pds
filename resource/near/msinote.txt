@@ -1,0 +1,31 @@
+A note from SBN about dark frames and 0-ms exposures for MSI
+
+For the Eros orbital phase of the archive, image frames as well as dark
+frames and 0-ms exposures have TARGET_NAME set to EROS in the raw data
+labels; processed dark exposures are also included in the calibrated data
+sets. This can cause confusion because the dark and 0-ms exposures are
+identified as Eros images yet appear to be "bad" exposures because of the
+idiosyncrasies of the MSI camera.
+
+Many MSI sequences were designed such that each image taken by the MSI
+camera was immediately followed by a 0-ms exposure to correct MSI camera
+idiosyncrasies. Also the camera was operated near room temperature so there
+was a significant amount of dark current generated during typical exposure
+durations. For this reason dark exposures of a duration equal to the usual
+exposure durations were often taken as a usual component of a sequence and,
+when viewed, appear to be nearly identical to the 0-ms exposures. Two
+methods of obtaining dark exposures were often used: (1) closing the shutter
+during the dark exposure or (2) opening the shutter during the exposure
+while pointing to "dark sky".
+
+It appears both techinques were used on several MSI sequences, such as
+"seq9_30_xreg" which was performed on day of year 2000-205. In this
+particular sequence, the first eight exposures (m0139720804f4 through
+m0139723433f4, including their associated 0-ms exposures) appear to have
+been done with the shutter closed, and then the next six exposures
+(m0139723596f4 through m0139724413f4) appear to have been done with the
+shutter opened, but with the MSI camera pointed away from the illuminated
+part of Eros by some small angle. The fifteenth exposure (m0139724574f4)
+appears to be the first exposure that picked up a small amount of the
+illuminated surface of Eros.
+

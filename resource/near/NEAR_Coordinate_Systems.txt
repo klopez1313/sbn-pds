@@ -1,0 +1,156 @@
+                       COORDINATES FOR EROS
+             PDS ARCHIVE HOLDINGS FOR THE NEAR MISSION
+
+IAU Standard for asteroids and comets:
+      The positive rotational pole is defined by the right-hand rule (RHR),
+   with values of latitude ranging from [+90 degrees,-90 degrees] from the
+   positive pole down to the negative pole. Longitude should also follow the
+   RHR, with values increasing from [0 degrees,360 degrees] from the Prime
+   Meridian around the body in the right-handed sense (Seidelmann et al.
+   2005).
+
+NEAR Eros Data:
+
+                           Concave side of Eros
+                                  'paw'
+                                 Psyche
+                 /----\        270 degrees       __/----\
+                /      --\                   ___/        \
+               /          \-----------------/            /
+              |                                         /
+    Prime      \    +X         o  Pole (+Z)            /
+   Meridian     \               _ out of page       /--
+  0 degrees      \__           / \            __/---
+                    \_________/   \__________/
+
+                                 +Y
+                              90 degrees
+                         Convex side of Eros
+                              'saddle'
+                               Himeros
+
+   For a topographic reference for the user, the IAU Standard places the 0
+degrees Prime Meridian line at one of the long ends, with longitude increasing
+to 90 degrees near Himeros and 270 degrees near Psyche. The Prime Meridian was
+set with the low-resolution data, attempting to fix a crater near one of the
+long ends. With the later data, the crater's position was slightly off. The
+North Pole is the positive pole. There is no need to express "East" or "West"
+longitude in this system and there should not be any negative longitude values
+(although the typical "East" longitude corresponds to the IAU Standard).
+These coordinates are planetocentric.
+   Prior to Seidleman et al. (2005), there were no explicit definitions for 
+small bodies, so the coordinate definitions for planets were used by some 
+groups and other groups used their own defintions (which in the case of NEAR 
+turned out to be the "new" standard).  Therefore, much of the NEAR data and 
+documentation is not in compliance with the IAU Standard Longitude Coordinate 
+System.
+   The PDS is imposing conformity by documenting the inconsistencies and
+detailing the data affected. Data files will not be changed, so the user must
+use this document as a guide. Data are listed by instrument.
+
+General Documentation
+---------------------
+   Many of the archived catalog files use an incorrect longitude system. The
+catalog files for the mission, named either "nearmission.cat" or
+"mission.cat", refer to the landing site on Eros as 37.2 degrees South by
+278.4 degrees West. To conform to IAU standards, the landing site is -37.2
+degrees latitude, 81.6 degrees longitude (i.e. 360 degrees - West longitude).
+
+Multi-Spectral Imager (MSI)
+---------------------------
+   All data for this instrument uses the Western Longitude System. To comply
+with the IAU Standard, the correct longitude = 360 degrees - West longitude
+value.
+   Starting with the "observation_overview.doc" file, an Eros body schematic
+is given and both East and West longitude is mentioned. Level 1 and 2 data
+have ".lbl" files with "CENTER_LONGITUDE" keywords. The given longitude is
+West longitude. Index tables of data include the latitude and longitude. Level
+3 data products include basemaps, shape models, and mosaics all with West
+longitude. Some files follow a naming convention which includes the latitude
+and longitude in the filename. Keywords to be aware of are
+"WESTERNMOST_LONGITUDE", "EASTERNMOST_LONGITUDE", and "SUB_S/C_LON".
+
+NEAR Infrared Spectrometer (NIS)
+--------------------------------
+   Level 3 data products are the only ones affected. Keywords
+"LONGITUDE_RANGE" and "LONGITUDE" are used. The longitudes are reported as
+Western longitude. To comply with the IAU Standard, the correct longitude =
+360 degrees - West longitude value.
+
+NEAR Laser Ranger (NLR)
+-----------------------
+   All documentation, data and derived products use the IAU Standard Longitude
+System. Nothing needs to be done.
+
+Magnetometer (MAG)
+------------------
+   The data use X, Y, and Z coordinates rather than latitude/longitude. The X,
+Y, and Z system is correctly right-handed.
+   For Level 3 data products, there are graphs and maps hard labeled with
+longitude values of -180 degrees...0 degrees...+180 degrees. To conform to the
+IAU Standard, 360 degrees should be added to the negative longitude values.
+
+X-ray Spectrometer (XRS)
+------------------------
+   The data are given with West longitude. To comply with the IAU Standard,
+the correct longitude = 360 degrees - West longitude value.
+   The Level 1 data are not affected, but a Level 2 data keyword
+"BORESIGHT_INTERSECT_LON" is given in West longitude.
+
+Gamma-Ray Spectrometer (GRS)
+----------------------------
+   The data are given with West longitude. To comply with the IAU Standard,
+the correct longitude = 360 degrees - West longitude value.
+   The Level 1 data are not affected, but a Level 2 data keyword
+"BORESIGHT_INTERSECT_LON" is given in West longitude.
+
+Radio Science (RSS)
+-------------------
+   Data are in East longitude which conforms to the IAU standard.
+   Values range from [-180 degrees, 180 degrees] instead of [0 degrees, 360
+degrees] in derived data products. To completely conform to the IAU Standard,
+360 degrees should be added to the negative longitude values. Keywords to be
+aware of in the Level 2 data products are "WESTERNMOST_LONGITUDE",
+"EASTERNMOST_LONGITUDE", "REFERENCE_LONGITUDE" and "CENTER_LONGITUDE".
+
+SPICE
+-----
+   The data do not specifically reference longitudes.
+
+Published Data
+--------------
+   Many references cited in the documentation, including "refs.cat", are
+published in the Icarus Special Edition for NEAR (Volume 155). Of these,
+several do not use the IAU Coordinate Standard. The following is a list of
+the coordinate systems used in the publications and how to convert to the IAU
+Standard Longitude System.
+   Miller et al. uses correct right-handed system for longitude, but with a
+range of [-180 degrees, 180 degrees] instead of [0 degrees, 360 degrees]. To
+conform to the IAU Standard, 360 degrees needs to be added to all negative
+values.
+   Thomas et al. uses West longitude. To conform to the IAU Standard, the
+given longitude must be subtracted from 360 degrees.
+   Bussey et al. uses West longitude. To conform to the IAU Standard, the
+given longitude must be subtracted from 360 degrees.
+   Cheng et al. uses both East and West longitude. To conform to the IAU
+Standard, the West longitude values must be subtracted from 360 degrees. The
+East longitude values are correct.
+   Prockter et al. uses West longitude. To conform to the IAU Standard, the
+given longitude must be subtracted from 360 degrees.
+   Bell et al. uses West longitude. To conform to the IAU Standard, the given
+longitude must be subtracted from 360 degrees.
+   Murchie et al. uses West longitude.  To conform to the IAU Standard, the 
+given longitude must be subtracted from 360 degrees.
+   Lucey et al. uses East longitude.  These values are correct.
+   Acuna et al. uses correct right-handed system for longitude, but with a 
+range of   [-180 degrees, 180 degrees] instead of [0 degrees, 360 degrees].  
+To conform to the IAU Standard, 360 degrees needs to be added to all negative 
+values.
+
+Reference
+---------
+  Seidelmann, P. K., Archinal, B. A., A’Hearn, M. F., Cruikshank, D. P., Hilton, 
+J. L., Keller, H. U., Oberst, J., Simon, J. L., Stooke, P., Tholen, D. J., and 
+Thomas, P.C.  2005.  Report of the IAU/IAG Working Group on Cartographic 
+Coordinates and Rotational Elements: 2003.  Celestial Mechanics and Dynamical 
+Astronomy 91, 203-215.

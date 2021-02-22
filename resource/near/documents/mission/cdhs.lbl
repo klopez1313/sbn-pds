@@ -1,0 +1,35 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = UNDEFINED                                             
+^ASCII_DOCUMENT       = "CDHS.TXT"                                            
+^ADOBE_PDF_DOCUMENT   = "CDHS.PDF"                                            
+                                                                              
+OBJECT                = ASCII_DOCUMENT                                        
+  DOCUMENT_NAME       = "The NEAR Command and Data Handling System"           
+  DOCUMENT_TOPIC_TYPE = "DATA SET DESCRIPTION"                                
+  PUBLICATION_DATE    = 1998                                                  
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  DOCUMENT_FORMAT     = TEXT                                                  
+  DESCRIPTION         = "This provides and overview of the Command and data   
+                         and data handling system for NEAR"                   
+END_OBJECT            = ASCII_DOCUMENT                                        
+                                                                              
+OBJECT                = ADOBE_PDF_DOCUMENT                                    
+  DOCUMENT_NAME       = "The NEAR Command and Data Handling System"           
+  DOCUMENT_TOPIC_TYPE = "DATA SET DESCRIPTION"                                
+  INTERCHANGE_FORMAT  = BINARY                                                
+  DOCUMENT_FORMAT     = ADOBE_PDF                                             
+  PUBLICATION_DATE    = 1998                                                  
+  DESCRIPTION         = "This provides and overview of the Command and data   
+                         and data handling system for NEAR"                   
+  ABSTRACT_TEXT       = "The Near Earth Asteroid Rendezvous (NEAR) data       
+  data handling (C&DH) system is designed to manage complex operations and to 
+collect data when the spacecraft is out of contact with ground control. During
+ground contacts, the C&DH system accepts uplink commands and memory loads that
+describe a time-ordered set of events to follow, and it transmits previously  
+recorded data back to the ground station. This article describes the overall  
+C&DH system, gives details on each of the components, and tells how the system
+was tested prior to spacecraft integration. Solid-state data recorders and    
+flight computers are also discussed."                                         
+  END_OBJECT          = ADOBE_PDF_DOCUMENT                                    
+                                                                              
+END                                                                           

@@ -1,0 +1,2199 @@
+                                                                               
+                                                                               
+                                                                               
+Requirement Specifications for Level-2 Parameters                              
+Required Stored or Derived by                                                  
+The Near Earth Asteroid Rendezvous (NEAR) X-Ray Spectrometer  (XRS) Ground     
+System                                                                         
+                                                                               
+Irina Mikheeva (UA) and Tim McClanahan (GSFC)                                  
+                                                                               
+Revision 1.5:  May 25,  2001                                                   
+                                                                               
+(This text file has a complete set of associated TIF files, one for each page  
+of the original WORD document.  Pointers given below identify the associated   
+files that capture the figures, equations, or tables not shown in this file.)  
+                                                                               
+                                                                               
+Table of Contents                                                              
+                                                                               
+                                                                               
+A. Introduction and Purpose..............................................1     
+                                                                               
+B. The UA-LPL Ground Processing Environment..............................2     
+                                                                               
+C. Description of NEAR GRS Data File Standards...........................3     
+                                                                               
+D. Fractional Footprint Accounting.......................................5     
+                                                                               
+E. Listings of Parameters for XRS Level-2 Integral Records...............5     
+   E.1-E.4.  NEAR XRS Spectra............................................5     
+   E.5.      NEAR XRS Science Housekeeping (SCI HK) Parameters...........6     
+   E.6.      NEAR XRS Engineering Housekeeping (ENG HK) Parameters.......7     
+   E.7.      NEAR XRS Derived Engineering (DER ENG) Parameters..........10     
+   E.8.      NEAR XRS Spatial (SPATIAL) Parameters......................11     
+   E.9.      NEAR XRS Solar (SOLAR) Parameters..........................12     
+                                                                               
+F. Listings of Parameters for XRS Level-2 Summary Record................12     
+   F.1-F.8.  NEAR XRS Summarized Spectra................................12     
+   F.9.      NEAR XRS Summarized Engineering (ENGINEERING) Parameters...13     
+   F.10.     NEAR XRS Summarized Spatial (SPATIAL) Parameters...........14     
+   F.11.     NEAR XRS Summarized Solar (SOLAR) Parameters...............14     
+                                                                               
+G. Listings of Parameters for XRS Fractional Footprint Accounting              
+   System...............................................................14     
+                                                                               
+H. Numerical Specifications for XRS Level-2 Integral Records............15     
+   H.1-H.4.  NEAR XRS Spectra...........................................15     
+   H.5.      NEAR XRS Science Housekeeping (SCI HK) Parameters..........15     
+   H.6.      NEAR XRS Engineering Housekeeping (ENG HK) Parameters......15     
+   H.7.      NEAR XRS Derived Engineering (DER ENG) Parameters..........15     
+   H.8.      NEAR XRS Spatial (SPATIAL) Parameters......................17     
+   H.9.      NEAR XRS Solar (SOLAR) Parameters..........................23     
+                                                                               
+I. Numerical Specifications for XRS Level-2 Summary Record..............25     
+   I.1-I.8.  NEAR XRS Summarized Spectra............................... 25     
+   I.9.      NEAR XRS Summarized Engineering (ENGINEERING) Parameters...28     
+   I.10.     NEAR XRS Summarized Spatial (SPATIAL) Parameters...........31     
+   I.11.     NEAR XRS Summarized Solar (SOLAR) Parameters...............36     
+                                                                               
+J. Numerical Specifications for XRS Fractional Footprint Accounting            
+   System...............................................................36     
+                                                                               
+APPENDIX 1. Definitions for:   Collimator_Fct;                                 
+            Spatial_Fluorescence_Norm; Angular_Fluor_Fct;                      
+            Total_Weight_Fluor; Spatial_Scattering_Norm;                       
+            Angular_Scatter_Fct; Total_Weight_Scatt.....................39     
+                                                                               
+APPENDIX 2. Approximations for:   Collimator_Fct; Angular_Fluor_Fct;           
+            Angular_Scatter_Fct; FOV_Status.............................43     
+                                                                               
+APPENDIX 3  Location of XRS Level-2 Parameters in the U of A                   
+            Database....................................................45     
+                                                                               
+NEAR XRS Requirements Specs Revision Notes..............................57     
+                                                                               
+NEAR XRS Glossary and Acronym List......................................59     
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+A. Introduction and Purpose                                                    
+                                                                               
+The following document will act as one part of a two part requirement          
+specification for all Level-2 parameters required to be stored, or derived by  
+the Near Earth Asteroid Rendezvous (NEAR) X-ray and Gamma-Ray spectrometer     
+ground systems (XGRS). It will relate specifically to the X-Ray spectrometer   
+(XRS) requirements. The document will act as a primary common reference for    
+both NEAR X-ray and Gamma-ray spectrometer (XGRS) science team members,        
+systems development staff and future users of these data.  The goal is to      
+assist in the development and understanding of parameters defined as key to    
+the Level-2 NEAR XGRS science objectives.                                      
+                                                                               
+A primary data server residing at the University of Arizona, Lunar and         
+Planetary Laboratory (UA-LPL) is designated with the function of deriving and  
+serving these mission critical parameters during cruise and encounter phases   
+of the NEAR mission scheduled from February 1996 through February 2001.   The  
+intent of the first level product is to include all NEAR XRS mission critical  
+information needed for asteroid mapping, health of instrument, control, and    
+science analysis systems.                                                      
+                                                                               
+Level -2 products will include integral spectral data in either raw or         
+instrument calibrated format.  Bundled with the spectral data products will    
+be scientific housekeeping and engineering housekeeping data sampled by the    
+XGRS instrumentation at the same time as the integral spectra onboard the      
+spacecraft.  This information is then telemetered through NASA's Deep Network  
+(DSN) managed by the Jet Propulsion Laboratory in Pasadena, California, and    
+NEAR related telemetry is forwarded to the Applied Physics Laboratory (APL).   
+The Level-0 XGRS raw spectral and engineering data is then broken out of the   
+NEAR mission specific data stream and stored online at the APL Science Data    
+Center (SDC).  These data are stored in the Hierarchical Data Format (HDF)     
+file standard.   Theses files are then picked up by the automated (UA-LPL)     
+data processing ingest system.                                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+Figure 1.0   NEAR XGRS OPERATIONAL FLOW OF INFORMATION                         
+                                                                               
+(See file XRS_REQS_7_2_004.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+B. The UA-LPL Ground Processing Environment                                    
+                                                                               
+The core of the UA-LPL data processing system (Figure 2.0) consists of a       
+Sybase Relational Database (UA-RDBMS) that stores tables of NEAR XGRS raw      
+spectral, science housekeeping, engineering housekeeping, derived engineering  
+and spatial data products.   XRS and GRS data processing systems are           
+logically partitioned into separate processing environments on the UA-LPL      
+server.    A scientific data processing system has been developed around the   
+UA-RDBMS to provide automated data ingest and science team interaction.        
+Critical spatial and derived engineering data products are generated either    
+at ingest time or query time.  Core query time processing options include      
+calibration and summation processing, compression and bundling of query        
+results for return to the scientific user community over the Internet file     
+transfer protocol (FTP).                                                       
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+Figure 2.0   NEAR XGRS Ground Processing System at the UA-LPL                  
+                                                                               
+(See file XRS_REQS_7_2_005.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+UA-LPL  database ingest systems automatically monitor the APL SDC for new and  
+updated postings of XGRS data sets.  These file sets are recovered via the     
+file transfer protocol (FTP) to the UA-LPL data system.  Raw spectral and      
+engineering data products are then loaded into XGRS RDBMS tables with Mission  
+Elapsed Time (MET) acting as the primary key for database access.  Mission     
+Elapsed Time is used with spacecraft ephemeris data (SPICE system, APL         
+Science Data Center and JPL/NASA Ancillary Information Facility) to derive     
+spatial data products.   Spacecraft navigation and pointing information is     
+converted to SPICE data for the NEAR XGRS ground system and will be generated  
+by participating scientists at APL/SDC. Software systems have been developed   
+at the UA-LPL and GSFC to generate both spatial and derived engineering        
+products. These products will then be maintained within the UA-RDBMS database  
+system.                                                                        
+                                                                               
+At Goddard Space Flight Center participating scientists will be charged with   
+monitoring instrument health, calibration, and bad flagging systems.  A        
+feedback system is employed to move derived information to on-line ingest      
+processes at the UA-RDBMS.  The calibration system will be used to convert     
+spectral data products to a common energy standard specified at query time.    
+Calibration processing is optionally selected at query time. Bad flagging      
+information is generated during instrument health checks as a function of      
+identification of problem (MET) record sets.  These (MET)'s are forwarded to   
+the UA-LPL RDBMS for tagging.                                                  
+Query time summation processes will be used to sum multple integral record     
+sets into a single output record. This record will include one spectrum per    
+spectral classification and selected engineering products.  Summed output      
+will generally be specific to regional coverage and science analysis.  The     
+primary motivation for summation processing is to limit large volume network   
+transfers incurred in this distributed processing environment.  Results are    
+then accumulated in the Xternal Data Representation (XDR) binary file          
+standard (Sun Microsystems) then compressed, bundled and forwarded to the      
+query initiator.                                                               
+                                                                               
+                                                                               
+C. Description of NEAR XRS Data File Standards                                 
+                                                                               
+In the NEAR XRS data processing system there are 3 data file standards         
+possible for output.   These different file standards reflect the different    
+UA-LPL ground processes selectable at query time. Output format type is        
+selected at query time through the UA-LPL WWW query interface.    Integral     
+raw XRS products will be used primarily in the calibration, instrument health  
+and mission planning activities.  Calibrated data will be used primarily in    
+the science analysis activity.   Formats for the three record standards are    
+as follows.                                                                    
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+FORMAT 1:    XRS Integral Raw:                                                 
+                                                                               
+Figure 3a                                                                      
+(See file XRS_REQS_7_2_006.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+FORMAT 2:     XRS Integral Calibrated:                                         
+                                                                               
+Figure 3b                                                                      
+(See file XRS_REQS_7_2_006.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+Nomenclature for XRS integral data products:  FORMATS 1 and 2  (Calibrated     
+and Raw)                                                                       
+Nomenclature for XRS integral data products:  FORMATS 1 and 2  (Calibrated     
+and Raw)                                                                       
+     x(yyyy)(ddd)(hh)(mm)(ss).xdr     Example:  x1998234010159.xdr             
+                                                                               
+There currently is no planned calibration processing for the integral XRS      
+data products.  This may have an impact on the total number of parameters in   
+the derived engineering sections of the XRS integral records.                  
+                                                                               
+NEAR XRS Summation Processing:  (Format 3)                                     
+The NEAR XRS data processing ground system is a distributed system that        
+currently spans institutions in the United States and Europe.  The summation   
+processing system has been specified to render potentially very large volumes  
+of data (> Gbytes) returned from a single query down to a single summary       
+record. The intention of summation processing will be to minimize the per      
+query network data transfer size (bytes), by rendering a single summed         
+spectrum from a relationally defined set.  Correlated parameters will be       
+bundled with this summed set.   The summation ground processing step will be   
+supported only on calibrated spectral data products.                           
+         Both Solar detector types (GAS PC and PIN) will be returned by the    
+summation query and selected parameters will be summarized in the Format 3     
+product standard.                                                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+FORMAT 3:      XRS Summed:                                                     
+                                                                               
+Figure 3c                                                                      
+(See file XRS_REQS_7_2_007.TIF for the figure)                                 
+                                                                               
+                                                                               
+                                                                               
+Nomenclature for XRS integral data products:  FORMATS 3  (Summed)              
+     y(yyyy)(ddd)(hh)(mm)(ss).xdr     Example:  y1998234010159.xdr             
+                                                                               
+                                                                               
+Summation processing will be query specific and all derived engineering        
+tracking is done internal to each query process.  All (XDR) file sets          
+returned from the query will be run through the summation processing system.   
+Integral calibrated spectra will be summed into single XRS specific output     
+sets.  Selected engineering and spatial parameters are also averaged into      
+values representative of the parameter over the range of output (MET) records  
+and specific to each query.  Parameter rendering algorithms are listed in the  
+numerical specifications (Section I).                                          
+                                                                               
+                                                                               
+D. Fractional Footprint Accounting                                             
+                                                                               
+The 433Eros asteroid is highly irregular in shape and deviates significantly   
+from a spherical geometry.  A system was developed by NEAR XGRS staff to       
+partition the virtual 433Eros asteroid into surface regions (bins) of roughly  
+equal surface area, not based on spherical geometry.  The bin system is        
+internal to the UA-RDBMS ground processing system.                             
+                                                                               
+Individual spectral accumulations will most likely span multiple asteroid      
+surface bins.   This system will be used to discriminate and identify the      
+applicability of integral footprints, based on their fractional coverage of    
+the asteroid surface bin being queried. During UA-RDBMS ingest processing      
+each integral footprint will be broken down into a set of records, one bin     
+record for each bin subtended by the footprint.  The current plan does not     
+include the possibility of using the fractional footprint as a weighting       
+function when automatically summing spectral data at query time.   The         
+fractional footprint accounting will be used as a query time threshold         
+criteria for inclusion of the integral MET to summation processing.            
+                                                                               
+                                                                               
+                                                                               
+Figure 4.0   Fractional Footprint                                              
+                                                                               
+(See file XRS_REQS_7_2_008.TIF for the figure)                                 
+                                                                               
+                                                                               
+A query time specification requesting all integrations (MET records) from Bin  
+C with a fractional footprint area >= 0.4  would return the example            
+integration and others whose fractional coverage are at least 0.4.             
+Information related to the bin processing is included in sections G and J.     
+                                                                               
+                                                                               
+                                                                               
+E. Listings of Parameters for XRS Level-2 Integral Records                     
+                                                                               
+                                                                               
+FORMATS  1,2 - List of RDBMS parameters for Single Raw and Calibrated XRS      
+Level-2 record (output)                                                        
+E.1. - E.4.   NEAR XRS Spectra:  4 spectra*256 channels*(Real*4)               
+                                                                               
+0 - 255  Unfiltered spectrum (UNF)                                             
+0 - 255  Mg filtered spectrum (MG)                                             
+0 - 255  Al filtered spectrum   (AL)                                           
+0 - 255  Solar spectrum (proportional counter GAS_PC or PIN)  (SOLAR_SP)       
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+E.5.   NEAR XRS Science Housekeeping (SCI HK) Parameters:  53*(Integer*4)      
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.   Version 7   
+of the software was uploaded in May 1999.                                      
+                                                                               
+0   MET (Mission Elapsed Time) Primary Key to RDBMS                            
+1   EPHEMERIS_TIME                                                             
+2   DQI                                    - Data Quality Indicator            
+3   TIME_TAG                                                                   
+4   UNF_MON_INTEG_TIME                                                         
+5   MG_MON_INTEG_TIME                                                          
+6   AL_MON_INTEG_TIME                                                          
+7   ACTV_SOL_MON_INTEG_TIME                                                    
+8   UNF_XRAY_1_SAFE_FLG                                                        
+9   MG_XRAY_1_SAFE_FLG                                                         
+10  AL_XRAY_1_SAFE_FLG                                                         
+11  GAS_XRAY_1_SAFE_FLG                                                        
+12  PIN_XRAY_1_SAFE_FLG                                                        
+13  UNF_XRAY_2_SAFE_FLG                                                        
+14  MG_XRAY_2_SAFE_FLG                                                         
+15  AL_XRAY_2_SAFE_FLG                                                         
+16  GAS_XRAY_2_SAFE_FLG                                                        
+17  PIN_XRAY_2_SAFE_FLG                                                        
+18  UNF_XRAY_OVERFLOW_FLG                                                      
+19  MG_XRAY_OVERFLOW_FLG                                                       
+20  AL_XRAY_OVERFLOW_FLG                                                       
+21  ACTIVE_XRAY_OVERFLOW_FLG                                                   
+22  UNF_XRAY_RAW_EVENT_RATE                                                    
+23  MG_XRAY_RAW_EVENT_RATE                                                     
+24  AL_XRAY_RAW_EVENT_RATE                                                     
+25  GAS_XRAY_RAW_EVENT_RATE                                                    
+26  PIN_XRAY_RAW_EVENT_RATE                                                    
+27  UNF_XRAY_VALID_EVENTS                                                      
+28  MG_XRAY_VALID_EVENTS                                                       
+29  AL_XRAY_VALID_EVENTS                                                       
+30  GAS_XRAY_VALID_EVENTS                               Version 7              
+31  UNF_XRAY_EVENTS_REJ_BY_RT                                                  
+32  MG_XRAY_EVENTS_REJ_BY_RT                                                   
+33  AL_XRAY_EVENTS_REJ_BY_RT                                                   
+34  GAS_XRAY_EVENTS_REJ_BY_RT                                                  
+35  PIN_SOLAR_PROCESS_EVENT                             Version 7              
+36  XTALK_COUNTER                                       Version 7              
+37  CMD_OPCODE                                          Version 7              
+38  CMD_ARGUMENT                                              Version 7        
+39  CMDS_RECEIVED                                       Version 7              
+40  PROBLEM_COUNTER                                     Version 7              
+41  PROBLEM_CODE                                              Version 7        
+42  UNF_XRAY_DC_OFFSET        Downlinked value.  No conversion to energy       
+                              bins is performed. ( no devision by 8 as         
+                              required by NEAR XFRS DPU Software Requirement   
+                              Specifications JHU/APL 7358-9002 Version 7)      
+43  MG_XRAY_DC_OFFSET                                   - " -                  
+44  AL_XRAY_DC_OFFSET                                   - " -                  
+45  GAS_XRAY_DC_OFFSET                                  - " -                  
+46  PIN_DC_OFFSET                                       - " -                  
+47  UNF_STAND_DEV                                       - " -                  
+48  MG_STAND_DEV                                        - " -                  
+49  AL_STAND_DEV                                        - " -                  
+50  GAS_STAND_DEV                                       - " -                  
+51  PIN_STAND_DEV                                       - " -                  
+52  XRAY_DATA_QUALITY_BIT                               Version 7              
+                                                                               
+                                                                               
+E.6. NEAR XRS Engineering Housekeeping (ENG HK) Parameters: 163*(REAL*4)       
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.   Version 7   
+of the software was uploaded in May 1999.   The Gamma -Ray Spectrometer        
+ENG_HK paramaters (0:137) are identical to the XRS, but sampled at the GRS     
+sample rate.                                                                   
+                                                                               
+0         DETECTOR_ELECTR_CURR                                                 
+1         XRAY_PIN_DIODE_FET_BIAS                                              
+2         HVCE_TEMPERATURE                                                     
+3         UNF_XRAY_HVPS_VOLT                                                   
+4         MG_XRAY_HVPS_VOLT                                                    
+5         AL_XRAY_HVPS_VOLT                                                    
+6         XRAY_GAS_HVPS_VOLT                                                   
+7         XRAY_PIN_HVPS_VOLT                                                   
+8         NAI_HVPS_VOLT                                                        
+9         BGO_HVPS_VOLT                                                        
+10        DPU_DC_DC_TEMP                                                       
+11        XGRS_DC_DC_TEMP                                                      
+12        UNF_XRAY_HVPS_TEMP                                                   
+13        MG_XRAY_HVPS_TEMP                                                    
+14        AL_XRAY_HVPS_TEMP                                                    
+15        XRAY_GAS_HVPS_TEMP                                                   
+16        XRAY_PIN_HVPS_TEMP                                                   
+17        NAI_HVPS_TEMP                                                        
+18        BGO_HVPS_TEMP                                                        
+19        TEC_CURRENT                                                          
+20        NAI_HVPS_VOLT_CMD                                                    
+21        BGO_HVPS_VOLT_CMD                                                    
+22        UNF_HVPS_VOLT_CMD                                                    
+23        MG_HVPS_VOLT_CMD                                                     
+24        AL_HVPS_VOLT_CMD                                                     
+25        HVPS_POWER_ON_OFF                                                    
+26        XRAY_CALIB_HOME_FLG                                                  
+27        XRAY_CALIB_MOTOR_ON_OFF                                              
+28        XRAY_CALIB_MOTOR_ENABLE                                              
+29        GAS_HVPS_VOLT_CMD                                                    
+30        PIN_HVPS_VOLT_CMD                                                    
+31        GAMMA_RAY_HEATER_CURR                                                
+32        Spare0                                                               
+33        XRAY_CALIB_MOTOR_DIR                                                 
+34        XRAY_CALIB_MOTOR_CURR                                                
+35        XRAY_CALIB_MOTOR_GOAL                                                
+36        XRAY_CALIB_MOTOR_POS                                                 
+37        XRAY_CALIB_MOTOR_FID_SENS                                            
+38        XRAY_CALIB_MOTOR_FID_BRIT                                            
+39        XRAY_MOTOR_IN_CALIB_POSITION                                         
+40        XRAY_MOTOR_IN_NORM_POSITION                                          
+41        ACTIVE_SOLAR_TOGGLE_MODE                                             
+42        XRAY_CALIB_MAX_STEPS                                                 
+43        Spare1                                                               
+44        TEC_ENABLE                                                           
+45        XRAY_CALIB_CUM_MOTOR_STPS                                            
+46        GRAY_BURST_THRESH_VAL                                                
+47        XRAY_SAFING_THRESH                                                   
+48        XRAY_CALIB_MOTOR_DIAG                                                
+49        TEC_POWER_ON_OFF                                                     
+50        TEC_MODE                                                             
+51        TEC_COOL_HEAT_FLG                                                    
+52        TEC_TEMPERATURE                                                      
+53        TEC_COOL_MODE_TEMP_UP_LMT                                            
+54        TEC_COOL_MODE_TEMP_LOW_LMT                                           
+55        TEC_HEAT_MODE_TEMP_UP_LMT                                            
+56        TEC_HEAT_MODE_TEMP_LOW_LMT                                           
+57        GAMMA_RAY_TEMP_HYSTERESIS                                            
+58        GAMMA_RAY_HEAT_TEMP_LOW_LMT                                          
+59        FULL_GAMMA_RAY_SCIENCE_MODE                                          
+60        FULL_XRAY_SCIENCE_MODE                                               
+61        SUMM_GRAY_XRAY_SCIENCE_MODE                                          
+62        GRAY_BURST_SCI_REC_MODE                                              
+63        HVCE_TEMP_SET_POINT                                                  
+64        CMDED_END_XRAY_INTEG_PER                                             
+65        CMDED_GAMMA_RAY_INTEG_PER                                            
+66        BGO_PROTON_FLARE_FLG                                                 
+67        GAMMA_RAY_BIN_OVER_FLG_CMD                                           
+68        UNF_XRAY_BIN_OVER_FLG_CMD                                            
+69        MG_BIN_OVER_FLG_CMD                                                  
+70        AL_BIN_OVER_FLG_CMD                                                  
+71        ACT_BIN_OVER_FLG_CMD                                                 
+72        NAI_BIN_OVERFLOW_FLG                                                 
+73        BGO_BIN_OVERFLOW_FLG                                                 
+74        NAI_ANTICOIN_OVERFLOW_FLG                                            
+75        NAI_SING_ESC_OVERFLOW_FLG                                            
+76        NAI_DOUB_ESC_OVERFLOW_FLG                                            
+77        BGO_SING_ESC_OVERFLOW_FLG                                            
+78        BGO_DOUB_ESC_OVERFLOW_FLG                                            
+79        UNF_XRAY_BIN_OVERFLOW_FLG                                            
+80        MG_BIN_OVERFLOW_FLG                                                  
+81        AL_BIN_OVERFLOW_FLG                                                  
+82        ACT_BIN_OVERFLOW_FLG                                                 
+83        GAMMA_RAY_HEAT_ON_OFF                                                
+84        GAMMA_RAY_HEAT_MODE                                                  
+85        BGO_LEVEL_1_SAFING_FLG                                               
+86        BGO_LEVEL_2_SAFING_FLG                                               
+87        Spare3                                                               
+88        XRAY_INTEGR_TIME                                                     
+89        HVPS_ON_OFF                                                          
+90        PIN_SENSOR_MASK_FLG                                                  
+91        GAS_SENSOR_MASK_FLG                                                  
+92        AL_SENSOR_MASK_FLG                                                   
+93        MG_SENSOR_MASK_FLG                                                   
+94        UNF_SENSOR_MASK_FLG                                                  
+95        BGO_SENSOR_MASK_FLG                                                  
+96        NAI_SENSOR_MASK_FLG                                                  
+97        UNF_XRAY_RISE_TIME_THRESH                                            
+98        MG_RISE_TIME_THRESH                                                  
+99        AL_RISE_TIME_THRESH                                                  
+100       GAS_RISE_TIME_THRESH                                                 
+101       UNF_RISE_TIME_VALID_THRESH      Downlinked value. No ground          
+                                          conversion specified in              
+                                          NEAR XFRS DPU Software               
+                                          Requirements Specifications          
+                                          JHU/APL 7358-9002 Version 7 is       
+                                          performed.                           
+102       MG_RISE_TIME_VALID_THRESH                     - " -                  
+103       AL_RISE_TIME_VALID_THRESH                     - " -                  
+104       GAS_RISE_TIME_VALID_THRESH                    - " -                  
+105       GAMMA_RAY_INTEGR_TIME                                                
+106       GAMMA_SING_ESC_WIND_CENTER                    - " -                  
+107       GAMMA_SING_ESC_WIND_WIDTH                                            
+108       GAMMA_DOUB_ESC_WIND_CENTER                    - " -                  
+109       GAMMA_DOUB_ESC_WIND_WIDTH                                            
+110       NAI_LOW_LEVEL_AMPL_THRESH       Ground conversion is: (downlinked    
+                                          value * 3.413 + 3.0), which is       
+                                          different from specified in          
+                                          NEAR XFRS DPU Software               
+                                          Requirements Specifications          
+                                          JHU/APL 7358-9002 Version 7          
+111       BGO_LOW_LEVEL_AMPL_THRESH                     - " -                  
+112       UNF_LOW_LEVEL_AMPL_THRESH                                            
+113       MG_LOW_LEVEL_AMPL_THRESH                                             
+114       AL_LOW_LEVEL_AMPL_THRESH                                             
+115       GAS_LOW_LEVEL_AMPL_THRESH                                            
+116       PIN_LOW_LEVEL_AMPL_THRESH                                            
+117       GAMMA_RAY_SENSOR_TEMP                                                
+118       NAI_LEVEL_1_SAFING_FLG                                               
+119       UNF_LEVEL_1_SAFING_FLG                                               
+120       MG_LEVEL_1_SAFING_FLG                                                
+121       AL_LEVEL_1_SAFING_FLG                                                
+122       GAS_LEVEL_1_SAFING_FLG                                               
+123       PIN_LEVEL_1_SAFING_FLG                                               
+124       NAI_LEVEL_2_SAFING_FLG                                               
+125       UNF_LEVEL_2_SAFING_FLG                                               
+126       MG_LEVEL_2_SAFING_FLG                                                
+127       AL_LEVEL_2_SAFING_FLG                                                
+128       GAS_LEVEL_2_SAFING_FLG                                               
+129       PIN_LEVEL_2_SAFING_FLG                                               
+130       XRAY_SENS_SAFING_REST_LEVEL                                          
+131       GAMMA_SENS_SAFING_REST_LEVEL                                         
+132       XRAY_SAFING_REST_MAX_RETRY                                           
+133       GAMMA_SAFING_REST_MAX_RETRY                                          
+134       GAMMA_HEATER_DUTY_CYCLE                                              
+135       GAMMA_SENS_SAFING_THRESH                                             
+136       HVPS_CURRENT                                                         
+137       BGO_PROTON_FLARE_THRESH                                              
+138       VERSION_NUMBER                                        Version 7      
+139       CLEAR_SPECTRUM_0                                      Version 7      
+140       CLEAR_HW_RAW                                          Version 7      
+141       CLEAR_HW_RISE_TIME_REJECT                             Version 7      
+142       CLEAR_FALSE_RISE_TIME_REJECT                          Version 7      
+143       CLEAR_TRUE_RISE_TIME_REJECT                           Version 7      
+144       CLEAR_HIGH_ENERGY                                     Version 7      
+145       MG_SPECTRUM_0                                         Version 7      
+146       MG_HW_RAW                                             Version 7      
+147       MG_HW_RISE_TIME_REJECT                                Version 7      
+148       MG_FALSE_RISE_TIME_REJECT                             Version 7      
+149       MG_TRUE_RISE_TIME_REJECT                              Version 7      
+150       MG_HIGH_ENERGY                                        Version 7      
+151       AL_SPECTRUM_0                                         Version 7      
+152       AL_HW_RAW                                             Version 7      
+153       AL_HW_RISE_TIME_REJECT                                Version 7      
+154       AL_FALSE_RISE_TIME_REJECT                             Version 7      
+155       AL_TRUE_RISE_TIME_REJECT                              Version 7      
+156       AL_HIGH_ENERGY                                        Version 7      
+157       SOLAR_SPECTRUM_0                                      Version 7      
+158       SOLAR_HW_RAW                                          Version 7      
+159       SOLAR_HW_RISE_TIME_REJECT                             Version 7      
+160       SOLAR_FALSE_RISE_TIME_REJECT                          Version 7      
+161       SOLAR_TRUE_RISE_TIME_REJECT                           Version 7      
+162       SOLAR_HIGH_ENERGY                                     Version 7      
+                                                                               
+                                                                               
+                                                                               
+E.7. NEAR XRS Derived Engineering (DER ENG) Parameters:  28*(Real*4),          
+1*(Integer*4), 4*(Integer*4)                                                   
+                                                                               
+These parameters are not stored in the University of Arizona  RDBMS but        
+derived at a query time.                                                       
+"Not valid" - is designated as = -1                                            
+                                                                               
+0    Spare                                                                     
+1    Spare                                                                     
+2    Spare                                                                     
+3    Spare                                                                     
+4    Spare                                                                     
+5    Spare                                                                     
+6    Spare                                                                     
+7    Spare                                                                     
+8    Spare                                                                     
+9    Spare                                                                     
+10   Spare                                                                     
+11   Spare                                                                     
+12   UNF_LIVE_TIME                                                             
+13   MG_LIVE_TIME                                                              
+14   AL_LIVE_TIME                                                              
+15   SOLAR_LIVE_TIME                                                           
+16   UNF_VALID_CHANNEL_HI                                                      
+17   MG_VALID_CHANNEL_HI                                                       
+18   AL_VALID_CHANNEL_HI                                                       
+19   UNF_VALID_CHANNEL_LOW                                                     
+20   MG_VALID_CHANNEL_LOW                                                      
+21   AL_VALID_CHANNEL_LOW                                                      
+22   UNF_RISE_TIME_CHANNEL                                                     
+23   MG_RISE_TIME_CHANNEL                                                      
+24   AL_RISE_TIME_CHANNEL                                                      
+25   Spare                                                                     
+26   Spare                                                                     
+27   Spare                                                                     
+28   BAD_FLAG                                                                  
+29-32   QUERY_ID                                                               
+                                                                               
+                                                                               
+                                                                               
+E.8.  NEAR XRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 38*(Real*4)       
+                                                                               
+These parameters are derived in the University of Arizona at the ingest        
+phase.                                                                         
+"Not valid" - is designated as = -1                                            
+                                                                               
+0       METT                                                                   
+1       PLATEID_BORESIGHT_INTERSECT          NOT VALID IF FOV_STATUS=0         
+2       BINID_BORESIGHT_INTERSECT            NOT VALID IF FOV_STATUS=0         
+3       SC_POSITION, X                                                         
+4       SC_POSITION, Y                                                         
+5       SC_POSITION, Z                                                         
+6       BS_VECTOR, X                                                           
+7       BS_VECTOR, Y                                                           
+8       BS_VECTOR, Z                                                           
+9       EARTH_POSITION, X                                                      
+10      EARTH_POSITION, Y                                                      
+11      EARTH_POSITION, Z                                                      
+12      SUN_POSITION, X                                                        
+13      SUN_POSITION, Y                                                        
+14      SUN_POSITION, Z                                                        
+15      FOV_STATUS                                                             
+16      DOWNLINK_STATUS                                                        
+17      ANGLE_SUN_SOLAR_MON                                                    
+18      AVG_SC_DISTANCE                      NOT VALID IF FOV_STATUS=0         
+19      SUN_DISTANCE                                                           
+20      AVG_EMISSION_ANGLE                   NOT VALID IF FOV_STATUS=0         
+21      AVG_INCIDENCE_ANGLE                  NOT VALID IF FOV_STATUS=0,2,4     
+22      PHASE_ANGLE                          NOT VALID IF FOV_STATUS=0,2,4     
+23      AVG_INC_EMI_COS_RATIO                NOT VALID IF FOV_STATUS=0,2,4     
+24      SPATIAL_FLUORESCENCE_NORM            =0 IF FOV_STATUS=0,2,4            
+25      SPATIAL_SCATTERING_NORM              =0 IF FOV_STATUS=0,2,4            
+26      TOTAL_AREA_FOOTPRINT                 NOT VALID                         
+27      TOTAL_ILLUMINATED_AREA               =0 IF FOV_STATUS=0,2,4            
+28      TOTAL_VISIBLE_AREA                   =0 IF FOV_STATUS=0                
+29      TOTAL_EFF_AREA                       NOT VALID                         
+30      TOTAL_EFF_SOLID_ANGLE                =0 IF FOV_STATUS=0                
+31      FOOTPRINT_SOLID_ANGLE                =0 IF FOV_STATUS=0                
+32      BORESIGHT_INTERSECTION_LAT           NOT VALID IF FOV_STATUS=0         
+33      BORESIGHT_INTERSECTION_LON           NOT Valid IF FOV STATUS=0         
+34      BORESIGHT_INTERSECTION_R             NOT VALID IF FOV_STATUS=0         
+35      SPICE_KERNEL_ID                                                        
+36      PLATE_MODEL_ID                                                         
+37      PROCESSING_SOFTWARE_ID                                                 
+38      DATABASE_VERSION_ID                                                    
+                                                                               
+                                                                               
+                                                                               
+E.9.  NEAR XRS Solar (SOLAR) Parameters: 2*(Real*4)                            
+                                                                               
+0       SOLAR_INTEGRAL                                                         
+1       SOLAR_LEVEL                                                            
+                                                                               
+                                                                               
+                                                                               
+F. Listings of Parameters for XRS Level-2 Summary Record                       
+                                                                               
+FORMAT  3 - List of RDBMS parameters for Summarized XRS Level-2 record         
+            (output)                                                           
+                                                                               
+F.1. - F.8.   NEAR XRS Summarized Spectra:  8 spectra*256 channels*(Real*4)    
+                                                                               
+0 - 255  Unfiltered Calibrated* Summed spectrum with proportional counter      
+         GAS_PC active   (UNF, GAS_PC)                                         
+0 - 255  Mg filtered Calibrated* Summed spectrum with proportional counter     
+         GAS_PC active   (Mg, GAS_PC)                                          
+0 - 255  Al filtered Calibrated* Summed spectrum with proportional counter     
+         GAS_PC active   (Al, GAS_PC)                                          
+0 - 255  GAS_PC Calibrated* Summed spectrum   (GAS_PC)                         
+0 - 255  Unfiltered Calibrated* Summed spectrum with proportional counter PIN  
+         active   (UNF, PIN)                                                   
+0 - 255  Mg filtered Calibrated* Summed spectrum with proportional counter     
+         PIN active   (MG, PIN)                                                
+0 - 255  Al filtered Calibrated* Summed spectrum with PIN active (AL, PIN)     
+0 - 255  PIN Calibrated* Summed spectrum (PIN)                                 
+                                                                               
+                                                                               
+* Calibration system is not implemented currently                              
+                                                                               
+F.9.  NEAR XRS Summarized Engineering (ENGINEERING) Parameters:  48*(Real*4)   
+                                                                               
+0    Spare                                                                     
+1    Spare                                                                     
+2    Spare                                                                     
+3    Spare                                                                     
+4    Spare                                                                     
+5    Spare                                                                     
+6    TOTAL_INTEG_TIME_UNF_GAS                                                  
+7    TOTAL_INTEG_TIME_MG_GAS                                                   
+8    TOTAL_INTEG_TIME_AL_GAS                                                   
+9    TOTAL_INTEG_TIME_GAS                                                      
+10   TOTAL_LIVE_TIME_UNF_GAS                                                   
+11   TOTAL_LIVE_TIME_MG_GAS                                                    
+12   TOTAL_LIVE_TIME_AL_GAS                                                    
+13   TOTAL_LIVE_TIME_GAS                                                       
+14   UNF_VALID_CHANNEL_HI_GAS                                                  
+15   MG_VALID_CHANNEL_HI_GAS                                                   
+16   AL_VALID_CHANNEL_HI_GAS                                                   
+17   UNF_VALID_CHANNEL_LOW_GAS                                                 
+18   MG_VALID_CHANNEL_LOW_GAS                                                  
+19   AL_VALID_CHANNEL_LOW_GAS                                                  
+20   UNF_INVALID_CHANNEL_HI_GAS                                                
+21   MG_INVALID_CHANNEL_HI_GAS                                                 
+22   AL_INVALID_CHANNEL_HI_GAS                                                 
+23   UNF_INVALID_CHANNEL_LOW_GAS                                               
+24   MG_INVALID_CHANNEL_LOW_GAS                                                
+25   AL_INVALID_CHANNEL_LOW_GAS                                                
+26   NUMBER_MET_GAS                                                            
+27   TOTAL_INTEG_TIME_UNF_PIN                                                  
+28   TOTAL_INTEG_TIME_MG_PIN                                                   
+29   TOTAL_INTEG_TIME_AL_PIN                                                   
+30   TOTAL_INTEG_TIME_PIN                                                      
+31   TOTAL_LIVE_TIME_UNF_PIN                                                   
+32   TOTAL_LIVE_TIME_MG_PIN                                                    
+33   TOTAL_LIVE_TIME_AL_PIN                                                    
+34   TOTAL_LIVE_TIME_PIN                                                       
+35   UNF_VALID_CHANNEL_HI_PIN                                                  
+36   MG_VALID_CHANNEL_HI_PIN                                                   
+37   AL_VALID_CHANNEL_HI_PIN                                                   
+38   UNF_VALID_CHANNEL_LOW_PIN                                                 
+39   MG_VALID_CHANNEL_LOW_PIN                                                  
+40   AL_VALID_CHANNEL_LOW_PIN                                                  
+41   UNF_INVALID_CHANNEL_HI_PIN                                                
+42   MG_INVALID_CHANNEL_HI_PIN                                                 
+43   AL_INVALID_CHANNEL_HI_PIN                                                 
+44   UNF_INVALID_CHANNEL_LOW_PIN                                               
+45   MG_INVALID_CHANNEL_LOW_PIN                                                
+46   AL_INVALID_CHANNEL_LOW_PIN                                                
+47   NUMBER_MET_PIN                                                            
+                                                                               
+                                                                               
+F.10.   NEAR XRS Summarized Spatial (SPATIAL) Parameters:  17*(Real*4)         
+                                                                               
+0       AVG_SC_DISTANCE_GAS                 NOT VALID IF FOV_STATUS=0          
+1       AVG_EMI_ANGLE_GAS                   NOT VALID IF FOV_STATUS=0          
+2       AVG_INC_ANGLE_GAS                   NOT VALID IF FOV_STATUS=0,2,4      
+3       AVG_PHASE_GAS                       NOT VALID IF FOV_STATUS=0,2,4      
+4       AVG_INC_EMI_COS_RATIO_GAS           NOT VALID IF FOV_STATUS=0,2,4      
+5       AVG_EFF_SOLID_ANGLE_GAS             =0 IF FOV_STATUS=0                 
+6       TOTAL_WEIGHT_FLUOR_GAS              =0 IF FOV_STATUS=0,2,4             
+7       TOTAL_WEIGHT_SCAT_GAS               =0 IF FOV_STATUS=0,2,4             
+8       AVG_SC_DISTANCE_PIN                 NOT VALID IF FOV_STATUS=0          
+9       AVG_EMI_ANGLE_PIN                   NOT VALID IF FOV_STATUS=0          
+10      AVG_INC_ANGLE_PIN                   NOT VALID IF FOV_STATUS=0,2,4      
+11      AVG_PHASE_PIN                       NOT VALID IF FOV_STATUS=0,2,4      
+12      AVG_INC_EMI_COS_RATIO_PIN           NOT VALID IF FOV_STATUS=0,2,4      
+13      AVG_EFF_SOLID_ANGLE_PIN             =0 IF FOV_STATUS=0                 
+14      TOTAL_WEIGHT_FLUOR_PIN              =0 IF FOV_STATUS=0,2,4             
+15      TOTAL_WEIGHT_SCAT_PIN               =0 IF FOV_STATUS=0,2,4             
+16      ESTIMATED_COVERED_AREA              =0 IF FOV_STATUS=0                 
+                                                                               
+                                                                               
+F.11.   NEAR XRS Summarized Solar (SOLAR) Parameters:  4*(Real*4)              
+                                                                               
+1   AVERAGE_SOLAR_INTEGRAL_GAS                                                 
+2   SOLAR_INTEGRAL_VARIANCE_GAS                                                
+3   AVERAGE_SOLAR_INTEGRAL_PIN                                                 
+4   SOLAR_INTEGRAL_VARIANCE_PIN                                                
+                                                                               
+                                                                               
+                                                                               
+G.  Listing of Parameters for XRS Fractional Footprint Accounting System       
+                                                                               
+Internal to the University of Arizona RDBMS information for accounting         
+purposes only.  This information will not be output at the query time.         
+                                                                               
+0       MET                              INTEGER*4                             
+1       FOOTPRINT_BIN_TOTAL_AREA         REAL*4   NOT VALID                    
+2       FOOTPRINT_BIN_ILLUM_AREA         REAL*4   =0 IF FOV_STATUS=2,4         
+3       FOOTPRINT_BIN_VISIBLE_AREA       REAL*4                                
+4       FOOTPRINT_BIN_EFF_AREA           REAL*4   NOT VALID                    
+5       TOTAL_EFF_SOLID_ANGLE_FRACTION   REAL*4                                
+6       SPECTRUM_FRACTION                REAL*4   NOT VALID IF FOV_STATUS=2,4  
+7       BIN_ID                           REAL*4                                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+H.      Numerical Specifications for XRS Level-2 Integral Records              
+                                                                               
+FORMATS  1,2 - Numerical specifications for Single Raw and Calibrated XRS      
+               Level-2 record (output)                                         
+                                                                               
+                                                                               
+H.1. - H.4.   NEAR XRS Spectra:  4 spectra*256 channels*(Real*4)               
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+H.5.   NEAR XRS Science Housekeeping (SCI HK) Parameters:  53*(Integer*4)      
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+H.6.   NEAR XRS Engineering Housekeeping (ENG HK) Parameters: 163*(REAL*4)     
+                                                                               
+The following parameters are described in detail in the NEAR XGRS DPU          
+Software Requirements Specification JHU/APL Version 7 7358-9002.               
+Version 7 of the software was uploaded in May 1999.                            
+                                                                               
+                                                                               
+H.7.   NEAR XRS Derived Engineering (DER ENG) Parameters:  28*(Real*4),        
+1*(Integer*4), 1*(4*Integer*4)                                                 
+                                                                               
+NOTE: *'ed items are pending science team approval and development.            
+                                                                               
+   PARAMETER NAME                                                UNITS         
+                                                                               
+0       Spare                                                                  
+1       Spare                                                                  
+2       Spare                                                                  
+3       Spare                                                                  
+4       Spare                                                                  
+5       Spare                                                                  
+6       Spare                                                                  
+7       Spare                                                                  
+8       Spare                                                                  
+9       Spare                                                                  
+10      Spare                                                                  
+11      Spare                                                                  
+12      UNF_LIVE_TIME                                            Unitless      
+                                                                               
+UNF_LIVE_TIME =                                                                
+                                                                               
+UNF_XRAY_VALID_EVENTS(SCI_HK:27)/(UNF_XRAY_RAW_EVENT_RATE(SCI_HK:22)  -        
+                                       0.037 * XTALK_COUNTER(SCI_HK:36))       
+                                                                               
+                                                                               
+                                                                               
+13      MG_LIVE_TIME                                           Unitless        
+                                                                               
+        MG_LIVE_TIME =                                                         
+                                                                               
+        MG_XRAY_VALID_EVENTS(SCI_HK:28)/(MG_XRAY_RAW_EVENT_RATE(SCI_HK:23)-    
+                                       0.025 * XTALK_COUNTER(SCI_HK:36))       
+                                                                               
+14      AL_LIVE_TIME                                             Unitless      
+                                                                               
+        AL_LIVE_TIME =                                                         
+                                                                               
+        AL_XRAY_VALID_EVENTS(SCI_HK:29)/(AL_XRAY_RAW_EVENT_RATE(SCI_HK:24)-    
+                                       0.031 * XTALK_COUNTER(SCI_HK:36))       
+                                                                               
+15      SOLAR_LIVE_TIME                                          Unitless      
+                                                                               
+IF Active Solar Monitor is GAS                                                 
+                                                                               
+ SOLAR_LIVE_TIME =                                                             
+      GAS_XRAY_VALID_EVENTS(SCI_HK:30) /                                       
+      GAS_XRAY_RAW_EVENT_RATE(SCI_HK:25)                                       
+                                                                               
+IF Active Solar Monitor is PIN                                                 
+                                                                               
+ SOLAR_LIVE_TIME =                                                             
+      PIN_SOLAR_PROCESS_EVENTS(SCI_HK:35) /                                    
+      PIN_XRAY_RAW_EVENT_RATE(SCI_HK:26)                                       
+                                                                               
+                                                                               
+                                                                               
+16  UNF_VALID_CHANNEL_HI                 Channel                               
+    Highest channel of the spectrum in original (no calibration) or new        
+    (after calibration) energy scale.                                          
+    =N(253), if N(253)<=255                                                    
+    =255,    if N(253)>255,                                                    
+    N(253)=253 for non-calibrated spectra.                                     
+    N(253): channel number in the new energy scale, corresponding to 253       
+    channel of the original spectrum, for calibrated spectra.                  
+                                                                               
+                                                                               
+    (See file XRS_REQS_7_2_019.TIF for the equation)                           
+                                                                               
+17  MG_VALID_CHANNEL_HI         - " -                                  - " -   
+"                                                                              
+18  AL_VALID_CHANNEL_HI         - " -                                  - " -   
+19  UNF_VALID_CHANNEL_LOW       - " -                                          
+    Lowest channel of the spectrum in original (no calibration) or new (after  
+    calibration) energy scale.                                                 
+    =N(LLD), if N(LLD)>=0                                                      
+    =0,    if N(LLD)<0,                                                        
+    N(LLD)=(Eng_HK:112) or 10, whatever is higher, for non-calibrated          
+    spectra.                                                                   
+    N(LLD): channel number in the new energy scale, corresponding  to low      
+    level discriminator setting of the original spectrum                       
+    LLD=(Eng_HK:112) or 10, whatever is higher, for calibrated spectra.        
+                                                                               
+                                                                               
+    (See file XRS_REQS_7_2_020.TIF for the equation)                           
+                                                                               
+20  MG_VALID_CHANNEL_LOW                - " -                   - " -          
+    N(LLD) corresponds to Eng_HK:113                                           
+    or 10, whatever is higher.                                                 
+21  AL_VALID_CHANNEL_LOW                - " -                   - " -          
+    N(LLD) corresponds to Eng_HK:114                                           
+    or 10, whatever is higher.                                                 
+22  UNF_RISE_TIME_CHANNEL               - " -                                  
+    Rise time threshold channel in the new (after calibration) energy scale.   
+    =N(RT)=(Eng_HK:101) for non-calibrated spectra.                            
+    =N(RT): channel number in the new energy scale, corresponding  to a rise   
+    time discriminator setting in the original spectrum (Eng_HK:101), for      
+    calibrated spectra.                                                        
+                                                                               
+    (See file XRS_REQS_7_2_020.TIF for the equation)                           
+                                                                               
+23  MG_RISE_TIME_CHANNEL                - " -                   - " -  N(RT)   
+    corresponds to Eng_HK:102                                                  
+24  AL_RISE_TIME_CHANNEL                - " -                   - " -  N(RT)   
+    corresponds to Eng_HK:103                                                  
+25  Spare                                                                      
+26  Spare                                                                      
+27  Spare                                                                      
+28  BAD_FLAG                                            Provided by GSFC       
+29-32  QUERY_ID                                                                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+H.8.  NEAR XRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 38*(Real*4)       
+                                                                               
+All spatial derivations, unless specified differently, are made for the        
+middle of integration period.                                                  
+*  ET :  ephemeris time corresponding to clock fixed mission elapsed time in   
+the middle of the integration period.  Measuring units are seconds before      
+January 1, 2000.                                                               
+                                                                               
+PARAMETER NAME               UNITS                                             
+                                                                               
+0  MET                       Seconds          Mission Elapsed Time at start    
+                                                of integration.                
+                                                                               
+1  PlateID_Boresight_Intersect   Plate Index    ID of the plate that           
+                                                boresight intersects in the    
+                                                middle of integration period   
+                                                                               
+2  BinID_Boresight_Intersect      Bin Index     ID of the bin that boresight   
+                                                intersects in the middle of    
+                                                integration period             
+                                                                               
+3  SC_Position, X            Coord X, km        Position of spacecraft (ET*)   
+                                                in Erosfixed                   
+                                                                               
+4  SC_Position, Y            Coord Y, km        coord. system (ET*).           
+                                                                               
+5  SC_Position, Z            Coord Z, km                                       
+                                                                               
+6  BS_Vector, X              Vector X, normal   Boresight vector of XRS (ET*)  
+                                                in Erosfixed                   
+                                                                               
+7  BS_Vector, Y              Vector Y, normal   coord. system (ET*).           
+                                                (Instr. Pointing Direction)    
+                                                                               
+8  BS_Vector, Z              Vector Z, normal                                  
+                                                                               
+9  Earth_Position, X         Coord X, km        Position of the Earth (ET*)    
+                                                in Erosfixed                   
+                                                                               
+10 Earth_position, Y         Coord Y, km        coord. system (ET*).           
+                                                                               
+11 Earth_Position, Z         Coord Z, km                                       
+                                                                               
+12 Sun_Position, X           Coord X, km        Position of the Sun in         
+                                                Erosfixed coord.               
+                                                                               
+13 Sun_Position, Y           Coord Y, km        system (ET*), corrected for    
+                                                light                          
+                                                                               
+14 Sun_Position, Z           Coord Z, km    time Sun-Eros (ET*- LTSun-Eros)    
+                                                                               
+15 FOV_Status                    Status value                                  
+    = 0:    Field of view (FOV) is completely off the asteroid.                
+    = 1:    The field of view is totally on the asteroid and at least part of  
+            the footprint is lit by the sun.                                   
+    = 2:    The field of view is totally on the asteroid and ALL of the        
+            plates are dark. (Asteroid darkside)                               
+    = 3:    Part of the field of view is off the asteroid and at least one     
+            plate is lit by the sun.                                           
+    = 4:    Part of the field of view is off the asteroid and all plates are   
+            dark.  (Asteroid darkside)  For derivation see Appendix 2          
+                                                                               
+16 Downlink_Status               Status Value                                  
+    = 0:      No downlink                                                      
+    = 1:      Yes downlink (The angle between antenna direction and vector     
+              spacecraft(ET*)--> Earth(ET*) is less than 2 degrees)            
+                                                                               
+17 Angle_Sun_Solar_Mon           Degrees         Angle between Solar Monitor   
+                                                 Normal (ET*) and vector       
+                                                 spacecraft(ET*)               
+                                                 --> Sun(ET*-LTSun-NEAR)       
+                                                                               
+18 Avg_SC_Distance               Kilometers    Average distance from the       
+                                               spacecraft to the surface       
+                                               of the asteroid contributing    
+                                               to the spectrum.Approximation   
+                                               for Collimator_Fct can          
+                                               be found in Appendix 2.         
+                                                                               
+   (See file XRS_REQS_7_2_022.TIF for the equation)                            
+                                                                               
+19 Sun_Distance                  Kilometers      Sun_Position vector           
+                                                 magnitude.                    
+                                                                               
+20 Avg_Emission_Angle            Degrees         Average emission angle        
+                                                 (between normal to the        
+                                                 surface and direction         
+                                                 from the surface to the       
+                                                 spacecraft). Approximation    
+                                                 for Collimator_Fct is given   
+                                                 in Appendix 2.                
+                                                                               
+   (See file XRS_REQS_7_2_022.TIF for the equation)                            
+                                                                               
+21 Avg_Incidence_Angle           Degrees         Average incidence angle       
+                                                 (between normal to the        
+                                                 surface and direction from    
+                                                 the surface to the sun).      
+                                                 Approximation for             
+                                                 Collimator_Fct                
+                                                 is given in Appendix 2.       
+                                                                               
+   (See file XRS_REQS_7_2_023.TIF for the equation)                            
+                                                                               
+22 Phase_Angle                   Degrees               Phase angle (between    
+                                                 direction from the sun to     
+                                                 the surface and direction     
+                                                 from the surface to the       
+                                                 spacecraft).                  
+                                                                               
+                                                                               
+23 Avg_Inc_Emi_Cos_Ratio         Unitless        Average ratio of the cosine   
+                                                 of incidence angle to the     
+                                                 cosine of emission angle.     
+                                                 Approximation for             
+                                                 Collimator_Fct is given in    
+                                                 Appendix 2.                   
+                                                                               
+   (See file XRS_REQS_7_2_023.TIF for the equation)                            
+                                                                               
+24 Spatial_Fluorescence_Norm     Steradians      Spatial normalization         
+                                                 coefficient for fluorescence  
+                                                 flux.  It relates the         
+                                                 fluorescence flux at the      
+                                                 detector to the fluorescence  
+                                                 intensity from the asteroid   
+                                                 surface in the direction      
+                                                 normal to the surface under   
+                                                 the condition that incidence  
+                                                 angle=0. For complete         
+                                                 definition see Appendix 1.    
+                                                 Approximations for            
+                                                 Angular_Fluor_Fct and         
+                                                 Collimator_Fct  are given in  
+                                                 Appendix 2.                   
+                                                                               
+   (See file XRS_REQS_7_2_023.TIF for the equation)                            
+                                                                               
+25 Spatial_Scattering_Norm       Steradians      Spatial normalization         
+                                                 coefficient for scattering.   
+                                                 It relates the scattering     
+                                                 flux  at the detector to the  
+                                                 intensity of scattering from  
+                                                 the asteroid surface under    
+                                                 the condition that incidence  
+                                                 angle = emission angle =  0   
+                                                 For complete definition see   
+                                                 Appendix 1. Approximations    
+                                                 for Angular_Scatter_Fct       
+                                                 and Collimator_Fct are given  
+                                                 in Appendix 2.                
+                                                                               
+   (See file XRS_REQS_7_2_024.TIF for the equation)                            
+                                                                               
+26 Total_Area_Footprint          Sq. Kilometers  NOT VALID  (= -1)             
+                                                                               
+27 Total_Illuminated_Area        Sq. Kilometers  Total area of  plates in the  
+                                                 footprint contributing to     
+                                                 the spectrum (lit by the sun  
+                                                 and visible from the          
+                                                 spacecraft)                   
+                                                                               
+   (See file XRS_REQS_7_2_024.TIF for the equation)                            
+                                                                               
+28 Total_Visible_Area            Sq. Kilometers  Total area of plates in the   
+                                                 footprint visible from the    
+                                                 spacecraft                    
+                                                                               
+   (See file XRS_REQS_7_2_024.TIF for the equation)                            
+                                                                               
+29 Total_Eff_Area                Sq. Kilometers  NOT VALID  (= -1)             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+30 Total_Eff_Solid_Angle         Unitless        Overall solid angle of all    
+                                                 plates in the footprint       
+                                                 contributing to the spectrum  
+                                                 (lit by the sun and visible   
+                                                 from the spacecraft) and      
+                                                 weighted by the response      
+                                                 function of the collimator,   
+                                                 relatively the instrument     
+                                                 full field of view.           
+                                                                               
+   (See file XRS_REQS_7_2_025.TIF for the equation)                            
+                                                                               
+31 Footprint_Solid_Angle         Unitless          Overall solid angle of all  
+                                                 plates in the footprint as    
+                                                 seen from the spacecraft,     
+                                                 relatively the instrument     
+                                                 full field of view.* Plate    
+                                                 solid angle is modified by    
+                                                 plate fraction in FOV         
+                                                                               
+   (See file XRS_REQS_7_2_025.TIF for the equation)                            
+                                                                               
+32 Boresight_Intersection_Lat    Degrees               Latitude of boresight   
+                                                 intersection in the middle    
+                                                 of integration period         
+                                                 Coordinate transformation     
+                                                 Asteroid Body Fixed,          
+                                                 Cartesian to Asteroid         
+                                                 Body Fixed, Spherical.        
+                                                 Intersection point (x,y,z)    
+                                                 of boresight with asteroid    
+                                                 surface converted to          
+                                                 Latitude.                     
+                                                                               
+         LAT = Degrees(ARC_SIN(Z/R))             (R solved for in 34)          
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+33 Boresight_Intersection_Lon      Degrees             Longitude of boresight  
+                                                 intersection the middle of    
+                                                 integration period            
+                                                 Coordinate transformation     
+                                                 Asteroid Body Fixed,          
+                                                 Cartesian to Asteroid         
+                                                 Body Fixed, Spherical.        
+                                                 Intersection point (x,y,z)    
+                                                 boresight with asteroid       
+                                                 surface converted to          
+                                                 Longitude                     
+                                                                               
+    1.    LON = -1.*Degrees(ARC_TAN(Y/X))                                      
+    2.    LON = 270             for x = 0 AND y > 0                            
+    3.    LON = 90              for x = 0 AND y < 0                            
+                                                                               
+                                                                               
+                                                                               
+34 Boresight_Intersection_R        Kilometers    Radius-vector of boresight    
+                                                 intersection in the middle    
+                                                 of integration period         
+                                                 Coordinate transformation     
+                                                 Asteroid Body Fixed,          
+                                                 Cartesian to Asteroid Body    
+                                                 Fixed, Spherical.             
+                                                 Intersection point (x,y,z)    
+                                                 of boresight with asteroid    
+                                                 surface converted to Radius   
+                                                 from center of asteroid       
+                                                 mass.                         
+                                                                               
+   R =    SQRT( X^2 + Y^2 + Z^2)         (R is needed in sol'n 32)             
+                                                                               
+                                                                               
+35 SPICE_Kernel_ID                 Version Number    Specified by NAIF         
+36 Plate_Model_ID                  Version Number                              
+37 Processing_Software_ID          Version Number                              
+38 DataBase_Version_ID             Version Number                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+H.9.  NEAR XRS Solar (SOLAR) Parameters: 2*(Real*4)                            
+                                                                               
+     PARAMETER NAME                  UNITS                                     
+                                                                               
+0    SOLAR_INTEGRAL                Counts/Second      Solar monitor counting   
+                                                      rate, corrected for the  
+                                                      radiation incidence      
+                                                      angle and normalized to  
+                                                      1.4 Astronomical Unit    
+                                                      distance to the Sun.     
+                                                      Reflects changes in      
+                                                      solar x-ray flux.        
+                                                                               
+     (See file XRS_REQS_7_2_027.TIF for the equation)                          
+                                                                               
+                                                                               
+1    SOLAR_LEVEL                                      Set correspondingly to   
+                                                      10 solar activity        
+                                                      ranges provided by       
+                                                      GSFC, Control            
+                                                      parameter:               
+                                                      (Solar_Integral*300)     
+                                                      Takes values 0 .. 9.     
+                                                                               
+V = Solar_Integral * 300                                                       
+                                                                               
+For PIN - detector:   Example:   V values will be modified and subject to      
+change:  Dynamically loaded runtime.                                           
+                                                                               
+IF V< 3500  THEN   SOLAR_LEVEL = 0                                             
+                                                                               
+IF V>= 3500  AND   V < 5000   THEN   SOLAR_LEVEL = 1                           
+                                                                               
+IF V>= 5000  AND   V < 7000   THEN   SOLAR_LEVEL = 2                           
+                                                                               
+IF V>= 7000  AND   V < 11000  THEN   SOLAR_LEVEL = 3                           
+                                                                               
+IF V>= 11000  AND   V < 20000 THEN   SOLAR_LEVEL = 4                           
+                                                                               
+IF V>= 20000  AND   V < 40000 THEN   SOLAR_LEVEL = 5                           
+                                                                               
+IF V>= 40000  AND   V < 80000 THEN   SOLAR_LEVEL = 6                           
+                                                                               
+IF V>= 80000  AND   V < 200000  THEN   SOLAR_LEVEL = 7                         
+                                                                               
+IF V>= 200000  AND   V < 1750000   THEN   SOLAR_LEVEL = 8                      
+                                                                               
+IF V>= 1750000 THEN   SOLAR_LEVEL = 9                                          
+                                                                               
+                                                                               
+                                                                               
+For GAS - detector:                                                            
+                                                                               
+IF V< 16000  THEN   SOLAR_LEVEL = 0                                            
+                                                                               
+IF V>= 16000  AND   V < 32000   THEN   SOLAR_LEVEL = 1                         
+                                                                               
+IF V>= 32000  AND   V < 63000   THEN   SOLAR_LEVEL = 2                         
+                                                                               
+IF V>= 63000  AND   V < 100000   THEN   SOLAR_LEVEL = 3                        
+                                                                               
+IF V>= 100000  AND   V < 105000   THEN   SOLAR_LEVEL = 4                       
+                                                                               
+IF V>= 105000  AND   V < 120000   THEN   SOLAR_LEVEL = 5                       
+                                                                               
+IF V>= 120000  AND   V < 140000   THEN   SOLAR_LEVEL = 6                       
+                                                                               
+IF V>= 140000  AND   V < 180000   THEN   SOLAR_LEVEL = 7                       
+                                                                               
+IF V>= 180000  AND   V < 1900000   THEN   SOLAR_LEVEL = 8                      
+                                                                               
+IF V>= 1900000 THEN   SOLAR_LEVEL = 9                                          
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I. Numerical Specifications for XRS Level-2 Summary Record                     
+                                                                               
+                                                                               
+FORMAT  3 - Numerical specifications for Summarized XRS Level-2 record         
+            (output)                                                           
+                                                                               
+                                                                               
+I.1.    NEAR XRS Summarized Unfiltered Spectrum with GAS_PC Active             
+        (UNF,GAS_PC):  256 Channels*(Real*4)                                   
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+                                                                               
+ (See file XRS_REQS_7_2_028.TIF for the equation)                              
+                                                                               
+                                                                               
+I.2.    NEAR XRS Summarized MG Spectrum with GAS_PC Active (MG,GAS_PC):  256   
+        Channels*(Real*4)                                                      
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+                                                                               
+ (See file XRS_REQS_7_2_029.TIF for the equation)                              
+                                                                               
+I.3.    NEAR XRS Summarized AL Spectrum with GAS_PC Active (AL,GAS_PC):  256   
+        Channels*(Real*4)                                                      
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+ (See file XRS_REQS_7_2_029.TIF for the equation)                              
+                                                                               
+                                                                               
+I.4.    NEAR XRS Summarized GAS_PC  Spectrum  (GAS_PC):  256                   
+        Channels*(Real*4)                                                      
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+ (See file XRS_REQS_7_2_029.TIF for the equation)                              
+                                                                               
+                                                                               
+                                                                               
+I.5.    NEAR XRS Summarized Unfiltered Spectrum with PIN Active (UNF,PIN):     
+        256 Channels*(Real*4)                                                  
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+ (See file XRS_REQS_7_2_029.TIF for the equation)                              
+                                                                               
+                                                                               
+I.6.    NEAR XRS Summarized MG Spectrum with PIN Active (MG,PIN):  256         
+        Channels*(Real*4)                                                      
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+   (See file XRS_REQS_7_2_030.TIF for the equation)                            
+                                                                               
+                                                                               
+I.7.    NEAR XRS Summarized AL Spectrum with PIN active (AL,PIN):  256         
+        Channels*(Real*4)                                                      
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+ (See file XRS_REQS_7_2_030.TIF for the equation)                              
+                                                                               
+                                                                               
+I.8.    NEAR XRS Summarized PIN Spectrum (PIN):  256 Channels*(Real*4)         
+                                                                               
+Measuring units:   Counts/Channel                                              
+                                                                               
+ (See file XRS_REQS_7_2_030.TIF for the equation)                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I.9.  NEAR XRS Summarized Engineering (ENGINEERING) Parameters:  48*(Real*4)   
+                                                                               
+PARAMETER NAME                           UNITS                                 
+                                                                               
+0       Spare                                                                  
+1       Spare                                                                  
+2     Spare                                                                    
+3     Spare                                                                    
+4       Spare                                                                  
+5     Spare                                                                    
+                                                                               
+                                                                               
+                                                                               
+6       TOTAL_INTEG_TIME_UNF_GAS        Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+7       TOTAL_INTEG_TIME_MG_GAS         Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+8       TOTAL_INTEG_TIME_AL_GAS         Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+9     TOTAL_INTEG_TIME_GAS            Seconds                                  
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+10      TOTAL_LIVE_TIME_UNF_GAS       Seconds                                  
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+11      TOTAL_LIVE_TIME_MG_GAS          Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+12      TOTAL_LIVE_TIME_AL_GAS          Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+13    TOTAL_LIVE_TIME_GAS           Seconds                                    
+                                                                               
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+14      UNF_VALID_CHANNEL_HI_GAS        Channel     Highest channel of summed  
+                                                    spectrum uncorrupted by    
+                                                    energy scale adjustments.  
+                                                    Lowest UNF_VALID_CHANNEL   
+                                                    _HI among all MET records  
+                                                    in a sum.                  
+(See file XRS_REQS_7_2_031.TIF for the equation)                               
+                                                                               
+15    MG_VALID_CHANNEL_HI_GAS           Channel     - " - Lowest               
+                                                    MG_VALID_CHANNEL_HI        
+16      AL_VALID_CHANNEL_HI_GAS         Channel     - ' - Lowest               
+                                                    AL_VALID_CHANNEL_HI        
+17      UNF_VALID_CHANNEL_LOW_GAS       Channel     Lowest channel of summed   
+                                                    spectrum uncorrupted       
+                                                    by energy scale            
+                                                    adjustments or LLD         
+                                                    variations. Highest        
+                                                    UNF_VALID_CHANNEL_LOW      
+                                                    among all MET records      
+                                                    in a sum.                  
+18      MG_VALID_CHANNEL_LOW_GAS        Channel     - ' - Highest              
+                                                    MG_VALID_CHANNEL_LOW       
+19      AL_VALID_CHANNEL_LOW_GAS        Channel     - ' - Highest              
+                                                    AL_VALID_CHANNEL_LOW       
+20      UNF_INVALID_CHANNEL_HI_GAS      Channel     Highest channel of         
+                                                    rise-time transition       
+                                                    region in the summed       
+                                                    spectrum formed as a       
+                                                    result of energy scale or  
+                                                    rise time settings         
+                                                    variations. Highest        
+                                                    UNF_RISE_TIME_CHANNEL      
+                                                    among all MET records      
+                                                    in a sum.                  
+21      MG_INVALID_CHANNEL_HI_GAS       Channel     - ' -Highest               
+                                                    MG_RISE_TIME_CHANNEL       
+22      AL_INVALID_CHANNEL_HI_GAS       Channel     - ' - Highest              
+                                                    AL_RISE_TIME_CHANNEL       
+                                                                               
+23    UNF_INVALID_CHANNEL_LOW_GAS       Channel     Lowest channel of          
+                                                    rise-time transition       
+                                                    region in the summed       
+                                                    spectrum formed as a       
+                                                    result of energy scale     
+                                                    or rise time settings      
+                                                    variations. Lowest         
+                                                    UNF_RISE_TIME_CHANNEL      
+                                                    among all MET records      
+                                                    in a sum.                  
+24      MG_INVALID_CHANNEL_LOW_GAS      Channel     - ' - Lowest               
+                                                    MG_RISE_TIME_CHANNEL       
+25    AL_INVALID_CHANNEL_LOW_GAS        Channel     - ' - Lowest               
+                                                    AL_RISE_TIME_CHANNEL       
+                                                                               
+26      Number_MET_GAS        Number of MET records in the query when GAS      
+                              solar monitor was active                         
+                                                                               
+                                                                               
+27      TOTAL_INTEG_TIME_UNF_PIN        Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+                                                                               
+28      TOTAL_INTEG_TIME_MG_PIN         Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+                                                                               
+29      TOTAL_INTEG_TIME_AL_PIN         Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+                                                                               
+30    TOTAL_INTEG_TIME_PIN              Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+                                                                               
+31      TOTAL_LIVE_TIME_UNF_PIN         Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+32      TOTAL_LIVE_TIME_MG_PIN          Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_032.TIF for the equation)                               
+                                                                               
+33      TOTAL_LIVE_TIME_AL_PIN          Seconds                                
+                                                                               
+(See file XRS_REQS_7_2_033.TIF for the equation)                               
+                                                                               
+34    TOTAL_LIVE_TIME_PIN             Seconds                                  
+                                                                               
+                                                                               
+(See file XRS_REQS_7_2_034.TIF for the equation)                               
+                                                                               
+                                                                               
+35      UNF_VALID_CHANNEL_HI_PIN        Channel   Highest channel of summed    
+                                                  spectrum uncorrupted by      
+                                                  energy scale adjustments.    
+                                                  Lowest UNF_VALID_CHANNEL_HI  
+                                                  among all MET records in     
+                                                  a sum.                       
+36    MG_VALID_CHANNEL_HI_PIN           Channel    - " - Lowest                
+                                                   MG_VALID_CHANNEL_HI         
+37      AL_VALID_CHANNEL_HI_PIN         Channel    - " - Lowest                
+                                                   AL_VALID_CHANNEL_HI         
+38      UNF_VALID_CHANNEL_LOW_PIN       Channel   Lowest channel of summed     
+                                                  spectrum uncorrupted by      
+                                                  energy scale adjustments or  
+                                                  LLD variations. Highest      
+                                                  UNF_VALID_CHANNEL_LOW        
+                                                  among all MET records in     
+                                                  a sum.                       
+39      MG_VALID_CHANNEL_LOW_PIN        Channel    - " - Highest               
+                                                   MG_VALID_CHANNEL_LOW        
+40      AL_VALID_CHANNEL_LOW_PIN        Channel    - " - Highest               
+                                                   AL_VALID_CHANNEL_LOW        
+41      UNF_INVALID_CHANNEL_HI_PIN      Channel   Highest channel of           
+                                                  rise-time transition region  
+                                                  in the summed spectrum       
+                                                  formed as a result of        
+                                                  energy scale or rise time    
+                                                  settings variations.Highest  
+                                                  UNF_RISE_TIME_CHANNEL        
+                                                  among all MET records in a   
+                                                  sum.                         
+42      MG_INVALID_CHANNEL_HI_PIN       Channel    - ' - Highest               
+                                                   MG_RISE_TIME_CHANNEL        
+43      AL_INVALID_CHANNEL_HI_PIN       Channel    - ' - Highest               
+                                                   AL_RISE_TIME_CHANNEL        
+44      UNF_INVALID_CHANNEL_LOW_PIN     Channel   Lowest channel of rise-time  
+                                                  transition region in the     
+                                                  summed spectrum formed as a  
+                                                  result of energy scale or    
+                                                  rise time settings           
+                                                  variations. Lowest           
+                                                  UNF_RISE_TIME_CHANNEL among  
+                                                  all MET records in a sum.    
+45      MG_INVALID_CHANNEL_LOW_PIN      Channel    - ' - Lowest                
+                                                   MG_RISE_TIME_CHANNEL        
+46      AL_INVALID_CHANNEL_LOW_PIN      Channel    - ' - Lowest                
+                                                   AL_RISE_TIME_CHANNEL        
+                                                                               
+47    Number_MET_PIN         Number of MET records in the query when PIN       
+                               solar monitor was active                        
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+I.10.   NEAR XRS Summarized Spatial (SPATIAL) Parameters:  17*(Real*4)         
+                                                                               
+          PARAMETER NAME                UNITS                                  
+                                                                               
+                                                                               
+0       AVG_SC_DISTANCE_GAS           Kilometers   Distance from the           
+                                                   spacecraft to the surface   
+                                                   of the asteroid             
+                                                   averaged over MET records   
+                                                   in a sum with proportional  
+                                                   counter active.             
+                                                                               
+                                                                               
+ (See file XRS_REQS_7_2_034.TIF for the equation)                              
+                                                                               
+                                                                               
+                                                                               
+1       AVG_EMI_ANGLE_GAS             Degrees         Emission angle averaged  
+                                                    over MET records in a sum  
+                                                    with proportional counter  
+                                                    active.                    
+                                                                               
+     (See file XRS_REQS_7_2_034.TIF for the equation)                          
+                                                                               
+2       AVG_INC_ANGLE_GAS             Degrees      Incidence angle averaged    
+                                                   over MET records in a sum   
+                                                   with proportional counter   
+                                                   active.                     
+                                                                               
+     (See file XRS_REQS_7_2_034.TIF for the equation)                          
+                                                                               
+3       AVG_PHASE_GAS                 Degrees       Phase angle averaged over  
+                                                    MET records in a sum with  
+                                                    proportional counter       
+                                                    active.                    
+                                                                               
+                                                                               
+     (See file XRS_REQS_7_2_035.TIF for the equation)                          
+                                                                               
+                                                                               
+4       AVG_INC_EMI_COS_RATIO_GAS     Unitless      Ratio of cosines of        
+                                                    incidence and emission     
+                                                    angles averaged over MET   
+                                                    records in a sum with      
+                                                    proportional counter       
+                                                    active.                    
+                                                                               
+     (See file XRS_REQS_7_2_035.TIF for the equation)                          
+                                                                               
+                                                                               
+5       AVG_EFF_SOLID_ANGLE_GAS       Unitless      Total effective solid      
+                                                    angle averaged over MET    
+                                                    records in a sum with      
+                                                    proportional counter       
+                                                    active                     
+                                                                               
+      (See file XRS_REQS_7_2_035.TIF for the equation)                         
+                                                                               
+                                                                               
+6     Total_Weight_Fluor_GAS    Steradians*Counts  Normalization coefficient   
+                                                   providing the link between  
+                                                   the summed fluorescence     
+                                                   spectrum and the intensity  
+                                                   of fluorescence from the    
+                                                   asteroid surface in the     
+                                                   direction normal to the     
+                                                   surface under the           
+                                                   condition that incidence    
+                                                   angle = 0 (for MET's with   
+                                                   proportional counter        
+                                                   active). For complete       
+                                                   definition see Appendix 1.  
+                                                                               
+      (See file XRS_REQS_7_2_036.TIF for the equation)                         
+                                                                               
+                                                                               
+7     Total_Weight_Scat_GAS     Steradians*Counts  Normalization               
+                                                   coefficient providing the   
+                                                   link between the summed     
+                                                   spectrum of scattering      
+                                                   and the intensity of        
+                                                   scattering from the         
+                                                   asteroid surface under      
+                                                   the condition that          
+                                                   incidence angle =           
+                                                   emission angle = half-sum   
+                                                   of incidence and emission   
+                                                   angles averaged over all    
+                                                   MET records participating   
+                                                   in the sum (for MET's       
+                                                   with proportional counter   
+                                                   active). For complete       
+                                                   definition see Appendix 1.  
+                                                                               
+        (See file XRS_REQS_7_2_036.TIF for the equation)                       
+                                                                               
+                                                                               
+8       AVG_SC_DISTANCE_PIN         Kilometers        Distance from the        
+                                                    spacecraft to the surface  
+                                                    of the asteroid            
+                                                    averaged over MET records  
+                                                    in a sum with PIN monitor  
+                                                    active.                    
+                                                                               
+        (See file XRS_REQS_7_2_036.TIF for the equation)                       
+                                                                               
+                                                                               
+9       AVG_EMI_ANGLE_PIN           Degrees         Emission angle averaged    
+                                                    over MET records in a sum  
+                                                    with PIN monitor active.   
+                                                                               
+        (See file XRS_REQS_7_2_037.TIF for the equation)                       
+                                                                               
+10      AVG_INC_ANGLE_PIN           Degrees         Incidence angle averaged   
+                                                    over MET records in a sum  
+                                                    with PIN monitor active.   
+                                                                               
+        (See file XRS_REQS_7_2_037.TIF for the equation)                       
+                                                                               
+11      AVG_PHASE_PIN               Degrees         Phase angle averaged over  
+                                                    MET records in a sum with  
+                                                    PIN monitor active.        
+                                                                               
+        (See file XRS_REQS_7_2_037.TIF for the equation)                       
+                                                                               
+                                                                               
+12      AVG_INC_EMI_COS_RATIO_PIN   Unitless        Ratio of cosines of        
+                                                    incidence and emission     
+                                                    angles averaged over MET   
+                                                    records in a sum           
+                                                    with PIN monitor active.   
+                                                                               
+       (See file XRS_REQS_7_2_037.TIF for the equation)                        
+                                                                               
+13      AVG_EFF_SOLID_ANGLE_PIN     Unitless          Total effective solid    
+                                                    angle averaged over MET    
+                                                    records in a sum with PIN  
+                                                    monitor active.            
+      (See file XRS_REQS_7_2_038.TIF for the equation)                         
+                                                                               
+14    Total_Weight_Fluor_PIN   Steradians*Counts   Normalization coefficient   
+                                                   providing the link between  
+                                                   the summed fluorescence     
+                                                   spectrum and the intensity  
+                                                   of fluorescence from the    
+                                                   asteroid surface in the     
+                                                   direction normal to the     
+                                                   surface under the           
+                                                   condition that incidence    
+                                                   angle = 0 (for MET's        
+                                                   with PIN monitor active).   
+                                                   For complete definition     
+                                                   see Appendix 1.             
+                                                                               
+      (See file XRS_REQS_7_2_038.TIF for the equation)                         
+                                                                               
+15    Total_Weight_Scat_PIN    Steradians*Counts   Normalization coefficient   
+                                                   providing the link between  
+                                                   the summed spectrum of      
+                                                   scattering and the          
+                                                   intensity of scattering     
+                                                   from the asteroid           
+                                                   surface under the           
+                                                   condition that incidence    
+                                                   angle = emission angle      
+                                                   = half-sum of incidence     
+                                                   and emission angles         
+                                                   averaged over all MET       
+                                                   records participating       
+                                                   in the sum (for MET's with  
+                                                   PIN monitor active).        
+                                                   For complete definition     
+                                                   see Appendix 1              
+                                                                               
+       (See file XRS_REQS_7_2_038.TIF for the equation)                        
+                                                                               
+                                                                               
+                                                                               
+16      ESTIMATED_COVERED_AREA  Sq. Kilometers      Estimated area of the      
+                                                    asteroid surface covered   
+                                                    by MET records in a sum    
+                                                                               
+                                                    For a spatial query        
+                                                    For a temporal query       
+                                                                               
+                                                                               
+        (See file XRS_REQS_7_2_039.TIF for the equation)                       
+                                                                               
+                                                                               
+I.11.  NEAR XRS Summarized Solar (SOLAR) Parameters:  4*(Real*4)               
+                                                                               
+               PARAMETER NAME                        UNITS                     
+                                                                               
+                                                                               
+1        Average_Solar_Integral_GAS                 Counts                     
+         (See file XRS_REQS_7_2_039.TIF for the equation)                      
+                                                                               
+2        Solar_Integral_Variance_GAS                Sq. Counts                 
+         (See file XRS_REQS_7_2_039.TIF for the equation)                      
+                                                                               
+3        Average_Solar_Integral_PIN                 Counts                     
+         (See file XRS_REQS_7_2_039.TIF for the equation)                      
+                                                                               
+4        Solar_Integral_Variance_PIN                Sq. Counts                 
+         (See file XRS_REQS_7_2_039.TIF for the equation)                      
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+J.  Numerical Specifications for XRS Fractional Footprint Accounting System    
+                                                                               
+        PARAMETER NAME                 UNITS                                   
+                                                                               
+0       MET                             Seconds      Mission Elapsed Time at   
+                                                     start of integartion      
+                                                                               
+1       Footprint_Bin_Total_Area    Sq. Kilometers     NOT VALID (= -1)        
+                                                                               
+2       Footprint_Bin_Illum_Area    Sq. Kilometers  Total area of all plates   
+                                                    in the footprint that      
+                                                    belong to the bin,         
+                                                    contributing into the      
+                                                    spectrum (lit by the sun   
+                                                    and visible from the       
+                                                    spacecraft)                
+                                                                               
+        Fractions are considered as in H8 param.29                             
+     (See file XRS_REQS_7_2_040.TIF for the equation)                          
+                                                                               
+3       Footprint_Bin_Visible_Area  Sq. Kilometers  Total area of all plates   
+                                                    in the footprint that      
+                                                    belong to the bin,         
+                                                    visible from the           
+                                                    spacecraft                 
+                                                                               
+        Fractions are considered as in H8 param.28                             
+        (See file XRS_REQS_7_2_040.TIF for the equation)                       
+                                                                               
+                                                                               
+4       Footprint_Bin_Eff_Area      Sq. Kilometers     NOT VALID (= -1)        
+                                                                               
+                                                                               
+                                                                               
+5       Total_Eff_Solid_Angle_Fraction   Unitless      Fraction of the total   
+                                                     effective solid angle     
+                                                     that can be attributed    
+                                                     to the bin.               
+                                                                               
+        (See file XRS_REQS_7_2_040.TIF for the equation)                       
+                                                                               
+6       Spectrum_Fraction           Unitless        Fraction of the spectrum   
+                                                    that can be attributed to  
+                                                    the bin. Approximations    
+                                                    for Angular_Scatter_Fct    
+                                                    and Collimator_Fct are     
+                                                    given in Appendix 2.       
+                                                                               
+        (See file XRS_REQS_7_2_041.TIF for the equation)                       
+                                                                               
+7.       BINID                           Number     Bin identifier as          
+                                                    generated by the           
+                                                    Bin definition system.     
+                                                    Each bin is unique.        
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 1.                     Definitions for:                               
+                                                          Collimator_Fct;      
+                                                  Spatial_Fluorescence_Norm;   
+                                              Angular_Fluor_Fct;               
+                                              Total_Weight_Fluor;              
+                                              Spatial_Scattering_Norm;         
+                                              Angular_Scatter_Fct;             
+                                              Total_Weight_Scatt.              
+                                                                               
+                                                                               
+                                                                               
+             (See files XRS_REQS_7_2_042-045.TIF for the equations)            
+                                                                               
+Angular_Fluor_Fct:                                                             
+  Ratio of intensity of fluorescence (photons/(s*sr*cm2surface) from the       
+  surface to the intensity of fluorescence from the same surface illuminated   
+  with the same solar flux with the incidence angle = 0 in the direction of    
+  the normal to the surface (emission angle = 0), which is a weak function of  
+  composition, energy and solar activity.                                      
+                                                                               
+Spatial_Fluorescence_Norm:                                                     
+  Ratio of the fluorescence flux at the detector (photons/(s*cm2detector)      
+  from the whole footprint at given orbital configuration to the intensity of  
+  fluorescence from the asteroid surface (photons/(s*sr*cm2surface) under the  
+  same solar flux and 0 incidence and emission angles.                         
+                                                                               
+Angular_Scatter_Fct:                                                           
+  Ratio of intensity of scattering (photons/(s*keV*sr*cm2surface) from the     
+  surface  with a given incidence and emission angles, ? and ?, to the         
+  intensity of scattering from the same surface with the incidence angle =     
+  emission angle =  0, which is a weak function of composition, energy and     
+  solar activity.                                                              
+                                                                               
+Spatial_Scattering_Norm:                                                       
+  Ratio of the scattering flux at the detector (photons/(s*keV*cm2detector)    
+  from the whole footprint at given orbital configuration to the scattering    
+  intensity of 1 cm2 of the asteroid surface (photons/(s*keV*sr*cm2surface)    
+  under the same solar flux when incidence angle = emission angle = 0.         
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 2.       Approximations for:                                          
+                                     Collimator_Fct;                           
+                                     Angular_Fluor_Fct;                        
+                                     Angular_Scatter_Fct;                      
+                                     FOV_Status                                
+                                                                               
+                                                                               
+1)  Collimator_Fct = 0.97*exp(-0.5*((?-0.02)/1.42)^2)+0.028-0.11*?  +0.0256*   
+     ?^2, where ?- the angle between the boresight and the vector directed     
+     from the spacecraft to the midpoint of  the plate.                        
+                                                                               
+     Collimator_Fct = 0, when ??> 3.4 degrees.                                 
+                                                                               
+                                                                               
+                                                                               
+     (See file XRS_REQS_7_2_046.TIF for the figure)                            
+                                                                               
+     Figure 1.   Angular response of the XRS collimator;                       
+                 measurements vs. approximation                                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+2) When XRS field of view is represented with the 16 sided polygon if all 16   
+     sides are located on the asteroid  FOV_STATUS = 1 or 2 depending on the   
+     illumination status.   If less than 16 sides are located on the asteroid  
+     FOV_STATUS = 3 or 4 depending on the illumination status.   If no sides   
+     are located on the asteroid FOV_STATUS = 0.                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+3) Angular_Fluor_Fct   and   Angular_Scatter_Fct  -  surfaces:                 
+                                                                               
+                                                                               
+                                                                               
+       (See file XRS_REQS_7_2_047.TIF for the equation)                        
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+T(0,0)= 1.00172E+00     T(2,0)=-3.26751E-05     T(4,0)=2.42909E-08             
+T(0,1)=-5.64297E-04     T(2,1)=-8.04678E-06     T(4,1)=-4.14045E-09            
+T(0,2)=-1.73585E-05     T(2,2)=7.96751E-07      T(4,2)=4.06218E-10             
+T(0,3)=-2.17047E-06     T(2,3)=-2.74497E-08     T(4,3)=-1.41884E-11            
+T(0,4)=3.15083E-08      T(2,4)=4.04218E-10      T(4,4)=2.09849E-13             
+T(0,5)=-2.18812E-10     T(2,5)=-2.05539E-12     T(4,5)=-1.07269E-15            
+T(1,0)=-4.38375E-04     T(3,0)=-1.70545E-06     T(5,0)=-1.77067E-10            
+T(1,1)=8.20107E-05      T(3,1)=2.81293E-07      T(5,1)=2.10402E-11             
+T(1,2)=-7.99650E-06     T(3,2)=-2.74913E-08     T(5,2)=-2.07651E-12            
+T(1,3)=2.79160E-07      T(3,3)=9.59744E-10      T(5,3)=7.25547E-14             
+T(1,4)=-4.09545E-09     T(3,4)=-1.41387E-11     T(5,4)=-1.07835E-15            
+T(1,5)=2.07066E-11      T(3,5)=7.19243E-14      T(5,5)=5.55545E-18             
+                                                                               
+T1(0,0)=4.22939E-01     T1(2,0)=-2.58902E-06    T1(4,0)=1.23481E-09            
+T1(0,1)=-1.63307E-03    T1(2,1)=-8.19620E-07    T1(4,1)=-2.18860E-10           
+T1(0,2)=-1.27089E-06    T1(2,2)=6.04984E-08     T1(4,2)=1.58527E-11            
+T1(0,3)=-1.81205E-07    T1(2,3)=-1.50287E-09    T1(4,3)=-3.97157E-13           
+T1(0,4)=1.61853E-09     T1(2,4)=1.58143E-11     T1(4,4)=4.21262E-15            
+T1(0,5)=-7.84793E-12    T1(2,5)=-5.75453E-14    T1(4,5)=-1.54659E-17           
+T1(1,0)=-1.67373E-03    T1(3,0)=-1.46340E-07    T1(5,0)=-6.17352E-12           
+T1(1,1)=2.35748E-05     T1(3,1)=2.10009E-08     T1(5,1)=7.78907E-13            
+T1(1,2)=-8.08433E-07    T1(3,2)=-1.50273E-09    T1(5,2)=-5.79691E-14           
+T1(1,3)=2.07575E-08     T1(3,3)=3.75675E-11     T1(5,3)=1.45610E-15            
+T1(1,4)=-2.15323E-10    T1(3,4)=-3.96237E-13    T1(5,4)=-1.55376E-17           
+T1(1,5)=7.61606E-13     T1(3,5)=1.44604E-15     T1(5,5)=5.75357E-20            
+                                                                               
+                                                                               
+(See file XRS_REQS_7_2_047.TIF for the figure)                                 
+                                                                               
+Figure 2    Angular_Fluor_Fct(????                                             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+APPENDIX 3    Location of XRS Level-2 Parameters in the U of A Database        
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+E.5.   NEAR XRS Science Housekeeping (SCI HK) Parameters:  53*(Integer*4)      
+                                                                               
+                                                                               
+     (See files XRS_REQS_7_2_048.TIF to XRS_REQS_7_2_050.TIF for tables)       
+                                                                               
+                                                                               
+                                                                               
+E.6. NEAR XRS Engineering Housekeeping (ENG HK) Parameters: 163*(REAL*4)       
+                                                                               
+                                                                               
+     (See files XRS_REQS_7_@_050.TIF to XRS_REQS_7_2_056.TIF for tables)       
+                                                                               
+                                                                               
+E.7. NEAR XRS Derived Engineering (DER ENG) Parameters:  28*(Real*4),          
+     1*(Integer*4), 4*(Integer*4)                                              
+                                                                               
+                                                                               
+     (See file XRS_REQS_7_2_057.TIF for table)                                 
+                                                                               
+                                                                               
+                                                                               
+E.8.  NEAR XRS Spatial (SPATIAL) Parameters:  1*(Integer*4), 38*(Real*4)       
+                                                                               
+                                                                               
+                                                                               
+     (See files XRS_REQS_7_2_057.TIF to XRS_REQS_7_2_058.TIF for tables)       
+                                                                               
+                                                                               
+                                                                               
+E.9.  NEAR XRS Solar (SOLAR) Parameters: 2*(Real*4)                            
+                                                                               
+                                                                               
+     (See file XRS_REQS_7_2_059.TIF for table)                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+G.  Listing of Parameters for XRS Fractional Footprint Accounting System       
+                                                                               
+                                                                               
+     (Please see file XRS_REQS_7_2_059.TIF for table)                          
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+NEAR XRS Requirements Specs Revision Notes                                     
+                                                                               
+NEAR XGRS Team Meeting                                                         
+September 15, 1999                                                             
+(Version 7 Upgrades)                                                           
+                                                                               
+        XRS Document Revisions:                                                
+        1. Pg 3      Removed 2 Eng_hk redundant parameters from record:        
+                       Formats 1 and 2:                                        
+                     Eng_HK changed from 165 to 163 total parameters.          
+                     Two parameters:                                           
+                     gray_burst_thresh_val: Partition Offset (46,139) kept at  
+                   46                                                          
+                     gray_burst_sci_rec_mode: positions (62,140) kept at 62    
+                       Related: Forced changes in E.6 title (pg. 7) and list   
+                       (Pg. 10), H.6 (title) pg.15                             
+                       Modified SCIHK also for new V7 total parameters         
+        2. Pg 6-7    Added 9 SCI_HK parameters E.5 and labeled for             
+                     version 7 sofware upgrade.                                
+        3. Pg 7-10   Added 25 ENG_HK parameters E.6 and labeled for            
+                     version 7 software upgrade.                               
+        4. Pg 10     E.7 BADID and QUERYID is a total 5*(I*4) field in Title   
+        5. Pg 14     Added  7 BINID to Fractional Footprint Accounting         
+                     (Section G)                                               
+        6. Pg 15     Modified Live Time equations for MG,AL,UNF,Solar          
+                     (Derived Eng) R. Starr                                    
+        7. Pg 17     Bsite vectors changed from km to unitless                 
+        8. Pg 22     Added comment * Plate solid angle modified by plate       
+                     fraction in FOV. (JSB)                                    
+        9. Pg 24     Modified Equation for V.                                  
+                     Removed factor 3*SQRT(Solar_Integral*300)                 
+                     Added Line:                                               
+                     V values will be modified and subject to change:  -->     
+                     Dynamically loaded at Runtime.                            
+        10. Pg 37    Added elaboration of 7 BINID to section J.                
+                     Fractional Footprint Accounting System                    
+        11. Pg 42    Added Comment * Currently testing method using            
+                     fractional FOV boundaries.                                
+      12. Pg 43    Modified Angular_Fluor_Fct and Angular_Scat_Fct             
+                     derivations                                               
+                                                                               
+                                                                               
+                                                                               
+October 18, 1999  Following revision is suggested.                             
+                                                                               
+        1. Pg.3             Format 1: tailing parameter is added to the        
+                           description of valid Derived Eng. Record            
+                           parameters.                                         
+        2. Pg.11      E.7.: Paramaters 22-24 are renamed. Parameters 25-27     
+                           are removed.                                        
+                          Parameter 25 is set as TAILING_PARAMETER.            
+                          Parameter 26-27: spare.                              
+        3. Pg.11-12   E.8.: Parameters 18,20,30 are made valid for             
+                           FOV_STATUS=2,4                                      
+                           (Darkside)                                          
+        4. Pg.13-14   F.10: Param.0-1,8-9  "not valid IF FOV_STATUS=0" added,  
+                              Param.2-4,10-12 "not valid IF FOV_STATUS=0,2,4"  
+                           added,                                              
+                              Param.5,13,16  "=0 IF FOV_STATUS=0" added,       
+                              Param.6-7,14-15 "=0 IF FOV_STATUS=0,2,4" added   
+        5. Pg.14      G.:   Param.5: "=0 IF FOV_STATUS=2,4" is removed in      
+                            acc. with note 3.                                  
+        6. Pg.15-16   H.7.: In description of param.12-15 eng.param.names are  
+                           adjusted.                                           
+        7. Pg.16      H.7.: Param.16,19-21 definition is modified in           
+                            accordance with new spectrum limits. Derivation    
+                            algorithm is added.                                
+      8. Pg.16      H.7.: Param.22-24 are redefined and renamed accordingly    
+                           to revision note 2. Param.25 is set as              
+                           TAILING_PARAMETER.                                  
+      9. Pg.17      H.7.: Param.26-27 are removed, now spare.                  
+     10. Pg.17      H.8.: In param.3-14 description light time correction      
+                           NEAR-Eros is removed.                               
+     11. Pg.18,21   H.8.: Param.18,20,30 are redefined to characterise         
+                           Darkside as well.                                   
+     12. Pg.19-22   H.8.: Param.21-25,28-31: Added comment "Fractions of the   
+                           plates are considered".                             
+     13. Pg.22      H.8.: Param.33 - specifications for                        
+                           Boresight_Intersection_Lon are changed.             
+     14. Pg.23      H.9.: For param.0 upper limit of integration is changed    
+                           to 253 in accordance with new spectrum limits.      
+     15. Pg.28,29   I.9.: Insignificant changes in description of              
+                           param.14-19,35-40                                   
+     16. Pg.28-30   I.9.: Param.20-25,41-46 description is modified in         
+                           accordance with modifications to param.22-24 of     
+                           Der.Eng.                                            
+                           (revision notes 2,8).                               
+     17.Pg.30,33  I.10: Param.0,8 description is modified in accordance        
+                           with new definitions of param.18 of Spatial record  
+                           (revision note 11).                                 
+     18. Pg.36-37  J.:  Param.3-6: Added comment "Fractions of the plates      
+                           are considered".                                    
+     19. Pg.37     J.:  Param.5 is redefined in accordance with the            
+                           param.30 of Spatial record (revision note 11).      
+     20. Pg.42  App.2:  New FOV_STATUS specifications.                         
+     21. Pg.43  App.2:  Figure 2 "Footprint_Solid_Angle variations" is         
+                           removed                                             
+                           Figure 2 "Angular_Fluor_Fct(???)"  is added.        
+                                                                               
+     22. Pg.44     Revision notes are added                                    
+     23. Pg.45     Pending issues are added                                    
+     24. Pg.i-ii           Table of contents is added                          
+                                                                               
+                                                                               
+January 25, 2000    Following revision is suggested.                           
+                                                                               
+0. C: Nomenclature for Format 1-3 is changed                                   
+1. E6, multiple parameters:  NaL is changed to NaI                             
+2. G, param.6: "=0 if FOV_STATUS=2,4" is replaced by "not valid if             
+   FOV_STATUS=2,4"                                                             
+3. H8, param.26-29: description of fractions added                             
+4. H8, param.32-33: "Degrees" added                                            
+5. J, param.1-4: description of fractions added                                
+6. Appendix 1.:  some symbols definitions added                                
+                                                                               
+April 6-7, 2000.  Following revision is suggested.                             
+                                                                               
+1. E5, param.42-51:                          description is clarified          
+2. E6, param.101-104,106,108,110,111:      description is clarified.           
+3. E7, H7,  param.16-24:                     changed to valid for              
+                                           noncalibrated data.                 
+4. E8, H8, param.26,27:                      set to -1 all the time.           
+5. G, J, param.1,2:                          set to -1 all the time.           
+6. H10, param.16:                            description is clarified.         
+7. I9, param.14-25,35-46:                    changed to valid for              
+                                           noncalibrated data.                 
+8. I9, param.0-5:                            make it real gain/zero until      
+                                           calibration                         
+                                           is implemented                      
+9. Appendix 3 added                                                            
+                                                                               
+January 12, 2001 Revision                                                      
+                                                                               
+1. Revisions of scattering treatment in Appendix 1                             
+2. E8, H8, parameter 22 redefined to PHASE_ANGLE                               
+3. F10, I10, parameters 3, 11 redefined to AVG_PHASE                           
+4. H8, param 33 definition is changed                                          
+                                                                               
+                                                                               
+                                                                               
+Revision Notes Continued...                                                    
+                                                                               
+May 25, 2001 Revision                                                          
+1.      Changed all Level-1 references in Document to Level 2                  
+2.      E.7, H.7 (Derived Engineering) changed all references                  
+        To (Real and Standard) Gain, Zeros in Level-2 record to                
+        Spare.  Calibration system was never implemented in UA                 
+        XRS ground system.  Parameters changed = (0-11)                        
+3.      F.9, I.9 (Derived Engineering, Summary Record) changed all             
+        References to (Standard) Gain, Zeros in record to                      
+        Spare.  Calibration system was never implemented in UA XRS             
+        Ground system.  Parameters changed = (0-5)                             
+4.      Took out references to Tailing Parameter.  The system was never        
+        implemented as part of the quicklook system.                           
+                                                                               
+NEAR XRS Glossary and Acronym List                                             
+                                                                               
+AL              X-ray Spectrometer: Aluminum Detector                          
+ANTICO          Gamma-ray Spectrometer: Anti-Coincidence                       
+APL             Applied Physics Laboratory                                     
+AVG             Average                                                        
+BGO             Bismuth Germanate                                              
+CH              Channel                                                        
+CMD             Command                                                        
+CTP             Command and Telemetry Processing                               
+DER             Derived Engineering                                            
+DPU             Data Processing Unit                                           
+DSN             Deep Space Network                                             
+DQI             Data Quality Index                                             
+ENG             Engineering                                                    
+ESC             Escape                                                         
+ET              Ephemeris Time                                                 
+FCT             Function                                                       
+FLG             Flag                                                           
+FOV             Field of View                                                  
+FTP             File Transfer Protocol                                         
+GCR             Galactic Cosmic Rays                                           
+GAS PC  Gas Proportional Counter Detector                                      
+GRS             Gamma Ray Spectrometer                                         
+GSFC            Goddard Space Flight Center                                    
+LT              Light Time                                                     
+HDF             Hierarchical Data Format                                       
+HK              Space Craft or Instrument House Keeping Parameters             
+HVPS            High Voltage Power Supply                                      
+I*4             Signed Integer 4 byte parameter = 32 bits                      
+JPL             Jet Propulsion Laboratory                                      
+keV             Kilo Electron Volts                                            
+LLD             Lower Level Discriminator                                      
+MET             Mission Elapsed Time                                           
+MeV             Mega Electron Volts                                            
+MG              X ray Spectrometer: Magnesium Detector                         
+NAI             Sodium Iodide                                                  
+NAIF            Nasa Ancillary Information Facility                            
+NASA            National Aeronautics and Space Administration                  
+NC              Neutron Capture Radiation                                      
+NR              Natural Radioactivity Radiation                                
+NEAR            Near Earth Asteroid Rendezvous                                 
+POS             Position                                                       
+PIN             X-ray Spectrometer:  Silicon PIN Detector                      
+QueryID Query IDentifier file served by Relational Database Management         
+            System                                                             
+R*4           Floating Point 4 byte Parameter = 32 bits                        
+RDBMS         Relational Database Management System                            
+RT            Rise Time                                                        
+SC              Space Craft                                                    
+SCI             Science                                                        
+                                                                               
+NEAR XRS Glossary and Acronym List Cont.                                       
+                                                                               
+                                                                               
+SDC             Applied Physics Laboratory Science Data Center                 
+SPICE         Spacecraft - Planetary - Instrument - C-matrix - Ephemerides     
+TBD             To Be Decided                                                  
+UA              University of Arizona                                          
+UA-LPL      University of Arizona - Lunar and Planetary Laboratory             
+UA-RDBMS        University of Arizona - Relational Database Management System  
+UNF             X-ray Spectrometer:  Unfiltered Detector                       
+WWW             World Wide Web                                                 
+XDR             eXternal Data Representation                                   
+XGRS            X-ray and Gamma-ray Spectrometer                               
+XRS             X-ray Spectrometer                                             

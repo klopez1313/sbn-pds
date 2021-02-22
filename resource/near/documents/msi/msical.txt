@@ -1,0 +1,390 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE = "                                                       
+  19 May 2003  S.McLaughlin-SBN  Corrected the Processing Levels to reflect   
+                                 only those actually delivered: Added RADDBL, 
+                                 noted that data for CRD and CRDDBL levels    
+                                 were not delivered.                          
+  "                                                                           
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  PUBLICATION_DATE    = 2001-09-01                                            
+  NOTE                = "MSI Calibration Document."                           
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+MSI Calibration                                                               
+---------------                                                               
+                                                                              
+MSI calibration is done in three principal steps:                             
+                                                                              
+1. Radiometric calibration - Results from onground and inflight               
+tests that were used to develop the conversion of raw DN's into               
+into physical units of radiance.                                              
+                                                                              
+2.  Geometric calibration - Results from onground and inflight                
+tests that were used to derive image scale and distortion                     
+and imager alignment, as well as the timing of image frames.                  
+                                                                              
+3. Scattered light - Results from inflight tests that were used to            
+quantify scattered light and signal from sources other than                   
+the measured target.                                                          
+                                                                              
+Details of calibrations performed can be found in:                            
+                                                                              
+[MURCHIEETAL1999]                                                             
+[MURCHIEETAL2000]                                                             
+[LIETAL2000]                                                                  
+                                                                              
+A brief description follows:                                                  
+                                                                              
+1.  Radiometric Calibration                                                   
+                                                                              
+For radiometric calibration, the main objective of inflight                   
+calibration is solving for variables in the calibration equation for          
+converting image data numbers (DNs) to physical units of radiance, W          
+m-2 micro m-1 sr-1.                                                           
+                                                                              
+The calibration equation has two forms.  The first form is applied            
+when the field-of-view is underfilled, or when the field is filled by         
+accompanying 0-ms exposures taken close in time and in the same filter        
+are not available:                                                            
+                                                                              
+Radiance(x,y,f,T,t,c) =                                                       
+                                                                              
+{[DN(x,y,f,T,t,c) - Dark(x,y,t,T,MET)] - Smear(x,y,t)} * 100                  
+                                                                              
+--------------------------------------------------------      (1)             
+                                                                              
+Flat(x,y,f,c) * Coef(f) * Resp(f,T) * Atten(f,c) * Exp(t)                     
+                                                                              
+where DN(x,y,f,T,t,c) is raw DN measured by the pixel in column x, row        
+y through filter f at exposure time t and temperature T with the cover        
+status c open or closed. Dark(x,y,t,T,MET) is the dark closed.                
+Dark(x,y,t,T,MET) is the dark level modeled for this pixel at exposure        
+time t, temperature T, and mission-elapsed time MET, time t,                  
+temperature T, and mission-elapsed time MET, derived from a model             
+based on dedicated dark frames taken throughout the the mission.              
+Smear(x,y,t) is the scene-dependent readout smear for the pixel at            
+exposure time t.  Flat(x,y,f,c) is the flat field for filter f with           
+the cover status c open or closed. Coef(f) is the coefficient for             
+converting dark-removed, flat field and smear-corrected DN from filter        
+f to radiance, for a baseline exposure time of 100 ms. Resp(f,T) is           
+the responsivity for this filter at temperature T relative to the             
+baseline, inflight operating temperature (-29.6 deg C). Atten(f,c), if        
+appropriate, is the attenuation of incoming signal by the lens cover          
+in filter f when the cover status c is closed.  Exp(t) is exposure            
+time in milliseconds between 1 and 999 ms.                                    
+                                                                              
+The second version of the calibration equation is used for monochrome         
+sequences having as an objective photometric accuracy, or for color           
+sequences, in either case when the asteroid overfills the FOV:                
+                                                                              
+Radiance(x,y,f,T,t,c) =                                                       
+                                                                              
+{[DN(x,y,f,T,t,c)-Dark(x,y,MET,T,t)] -                                        
+[DN(x,y,f,T,0,c)-Dark(x,y,MET,T,0)]}*100                                      
+                                                                              
+--------------------------------------------------            (2)             
+                                                                              
+Flat(x,y,f,c) * Coef(f) * Resp(f,T) * Atten(f,c) * Exp(t)                     
+                                                                              
+where DN(x,y,f,T,t,c) is raw DN of an intended image scene.                   
+DN(x,y,f,T,0,c) is an image acquired a few seconds later at an                
+exposure time of 0 ms. The 0-ms image contains no real scene                  
+information, but has the same transfer smear and leaked light as the          
+primary image. It differs only in (a) the exact position of the scene         
+at the sub-pixel level and (b) a slightly lesser accumulation of dark         
+current at the shorter exposure time. For a typical Eros image exposed        
+to a DN of approximately 2000, this approach removes approximately 20         
+DN of leaked light ignored in equation 1. Application of this version         
+of the equation requires two raw images to produce one calibrated,            
+reduced image, and this is much more resource-intensive.                      
+                                                                              
+1.1. Dark Images                                                              
+                                                                              
+The signal level measured in space is the sum of three components:            
+(a) dark current from thermal electrons,                                      
+(b) a bias of approximately 80 intentionally added to the output              
+to prevent occurrence of negative values which would reach ground             
+as zeroes in the 12-bit DN words, and                                         
+(c) low-level periodic noise picked up by spacecraft electronics.             
+Odd and even columns have slightly different biases                           
+(by approximately 6 DN), an inherent property of this Thomson CCD.            
+This difference introduces a fixed pattern which,                             
+when subtracted from the data, has no measurable effect                       
+on accuracy or signal-to-noise ratio of the image data.                       
+                                                                              
+The model for dark current depends on CCD temperature T,                      
+exposure time t, mission-elapsed time MET, and row number y:                  
+                                                                              
+Dark(y,MET,T,t) =                                                             
+                                                                              
+(a1_offset + a1_coeff*y) + ((a2_offset + a2_coeff*y)*MET) +                   
+((a3_offset + a3_coeff*y)*T) + t*((b1_offset + b1_coeff*y) +                  
+((b2_offset + b2_coeff*y)*T))                                                 
+                                                                              
+(3)                                                                           
+                                                                              
+where a1_offset is an offset, a1_coeff is a multiplicative                    
+coefficient, and y is row incrementing from 1 to 244.                         
+These ten constants have separate values for                                  
+odd and even columns. All values are given in Table 1.                        
+                                                                              
+Table 1. Constants in Dark Current Model                                      
+-------                                                                       
+                                                                              
+----------------------------------------------------------------              
+Parameter Explanation             Even                Odd                     
+                            ---------------    -----------------              
+                            offset    coeff.    offset    coeff.              
+                            ------    ------    ------    ------              
+                                                                              
+a1 Bias at MET=0            80.336  4.939e-3    84.543  5.467e-3              
+   reference CCD temp.                                                        
+                                                                              
+a2 Change in bias with    1.918e-8 1.037e-11  1.736e-8 1.054e-11              
+   MET                                                                        
+                                                                              
+a3 Change in bias with   -5.272e-2  1.159e-4 -4.406e-2  1.345e-4              
+   CCD temperature                                                            
+                                                                              
+b1 Dark accumulation      8.071e-3  2.549e-6  8.491e-3  8.571e-7              
+   perms, reference                                                           
+   CCD temp.                                                                  
+                                                                              
+b2 Change in d.c.         2.355e-4  8.767e-8  2.249e-4  2.942e-8              
+   accumulation rate                                                          
+   with change in                                                             
+   CCD temperature                                                            
+                                                                              
+----------------------------------------------------------------              
+                                                                              
+1.2. Response Uniformity                                                      
+                                                                              
+The pixel-to-pixel variation in CCD response to a uniform                     
+extended source, the "flat field," was measured  onground,                    
+and retested during flight. The flat-field correction                         
+effectively removes pixel-to-pixel signal variations, with residuals          
+at the levels expected for shot noise at measured DN levels                   
+(i.e., approximately one part in 200). Files containing                       
+Flat(x,y,f,c) for each filter with the cover off are listed in the            
+table below. For the condition of the cover still on, that                    
+flat-field file is multiplied by the ratio of the flat fields                 
+with the cover on and off.                                                    
+                                                                              
+All images acquired at or after mission elapsed time (MET)                    
+6427889 (2 May 1996) have the cover off, and all the images                   
+taken before have the cover on.                                               
+                                                                              
+Table 2. Flat field Files                                                     
+--------                                                                      
+---------------------------------------------------------                     
+Filter number  Cover-off flat field  Cover-on ratio                           
+-------------  -------------------   --------------------                     
+0              flat0-31C.FIT         coverflatratio0.FIT                      
+1              flat1-31C.FIT         coverflatratio1.FIT                      
+2              flat2-31C.FIT         coverflatratio2.FIT                      
+3              flat3-31C.FIT         coverflatratio3.FIT                      
+4              flat4-31C.FIT         coverflatratio4.FIT                      
+5              flat5-31C.FIT         coverflatratio5.FIT                      
+6              flat6-31Cn.FIT        coverflatratio6.FIT                      
+7              flat7-31Cn.FIT        coverflatratio7.FIT                      
+--------------------------------------------------------                      
+                                                                              
+1.3. Readout Smear                                                            
+                                                                              
+MSI is shuttered electronically. An image is exposed for a                    
+nominal integration (exposure) time, following which it is                    
+transferred in 0.9 ms to a memory zone on the CCD from which                  
+analog signal is digitized line-by-line. Accumulation of                      
+signal continues during the 0.9 ms of frame transfer.                         
+The finite duration of the frame transfer therefore induces a streak          
+"frame transfer smear" in the wake of an illuminated object in                
+the field of view, parallel to the direction of frame                         
+transfer. The magnitude of the smear to be removed from the pixel in          
+column x and line y in an image integrated for exposure time t is:            
+                                                                              
+Smear(x,y,t) = Summation (1 to y-1) {(t2/t) *                                 
+                                                                              
+DN(x,y,f,T,t,c) - Dark(x,y,T,t) - Smear(x,y,t)                                
+----------------------------------------------   }           (4)              
+Flat(x,y,f,c)                                                                 
+                                                                              
+where t2 is the time for frame transfer (0.9 ms) divided                      
+by the number of lines in the image in the direction of frame                 
+transfer (244 lines).                                                         
+                                                                              
+1.4. Linearity                                                                
+                                                                              
+The underlying assumption of radiometric calibration of MSI is                
+that response of the CCD is linear with exposure time, to the                 
+digitization limit of 4095. Onground testing summarized                       
+summarized by [HAWKINSETAL97] shows that this condition                       
+is satisfied onground. This assumption was tested again                       
+after launch, placing an upper limit of 1% on the variations                  
+in linearity with signal level.                                               
+                                                                              
+1.5. Cover Attenuation                                                        
+                                                                              
+The attenuation of light by the lens cover is of significance                 
+mostly because the first of the two scheduled lunar calibration               
+sequences was acquired with the cover on, while the second                    
+lunar calibration sequence, in January 1998, was acquired with                
+the cover off. The attenuation in filter 0 is poorly determined.              
+                                                                              
+Table 3. Cover Attenuation                                                    
+-------                                                                       
+-----------------------------------                                           
+Filter number        Atten(f,c)                                               
+-------------        --------------                                           
+0                    (0.2774)                                                 
+1                     0.2357                                                  
+2                     0.2182                                                  
+3                     0.2444                                                  
+4                     0.2322                                                  
+5                     0.2432                                                  
+6                     0.2305                                                  
+7                     0.2330                                                  
+-----------------------------------                                           
+                                                                              
+1.6. Radiometric Responsivity                                                 
+                                                                              
+Radiometric responsivity results from the efficiency                          
+in converting photons of light into photoelectrons measured by the            
+instrument, and is the key variable for converting DN levels into             
+physical units of radiance.                                                   
+                                                                              
+Table 4. Calibration Coefficients Coeff(f)                                    
+--------                                                                      
+-----------------------------                                                 
+Filter                Coef(f)                                                 
+------                -------                                                 
+0                     4041.1                                                  
+1                     530.0                                                   
+2                     163.4                                                   
+3                     506.4                                                   
+4                     317.4                                                   
+5                     468.0                                                   
+6                     168.0                                                   
+7                     64.0                                                    
+----------------------------                                                  
+                                                                              
+1.7. Relative responsivity as a function of temperature                       
+                                                                              
+The temperature dependence of responsivity in each filter                     
+Resp(f,T) was determined from fitting onground measurements                   
+of the large integrating sphere at different temperatures                     
+[HAWKINSETAL1997]. This is expressed as a second-order                        
+polynomial:                                                                   
+                                                                              
+Resp(f,T) = a + bT + cT**2                                  (5)               
+                                                                              
+using the coefficients:                                                       
+                                                                              
+Table 5. Coefficients to Resp(f,T)                                            
+-------                                                                       
+---------------------------------------------                                 
+Filter   a           b            c                                           
+---------------------------------------------                                 
+0        1.0057      0.00019236   --                                          
+1        0.94105     -0.0029599   -3.2714e-05                                 
+2        0.9022      -0.0045827   -4.3198e-05                                 
+3        1.0499      0.0016854    --                                          
+4        1.1311      0.0041073    -1.0833e-05                                 
+5        1.1049      0.0051262    5.3421e-05                                  
+6        1.1965      0.0070161    1.2722e-05                                  
+7        1.3238      0.012328     4.6893e-05                                  
+---------------------------------------------                                 
+                                                                              
+where T is temperature in Celsius and the function is                         
+unity at the nominal inflight operating temperature of -29.6C.                
+                                                                              
+2.  Geometric Calibration                                                     
+                                                                              
+2.1. Image Scale and Distortion                                               
+                                                                              
+The best focal length is 166.850 +/- 0.10 mm. This translates                 
+into accurate angular dimensions for a mean pixel of                          
+95.9 microradians x 161.8 microradians, and a field-of-view of                
+2.95 degrees x 2.26 degrees.                                                  
+                                                                              
+2.2. Imager Alignment                                                         
+                                                                              
+To within about 150 microradians (1 pixel) accuracy,                          
+pointing over the course of the entire mission may be defined                 
+by simple linear functions of instrument deck                                 
+temperature T(deck). In an image reference frame, with                        
+the origin at the upper left, the column (sample) number increases            
+in the +z direction in the spacecraft reference frame. The line (row)         
+number in an image increases in the -y' direction in the spacecraft           
+reference frame. The offset position from the spacecraft                      
+x' axis in the column or spacecraft +z direction is approximated by:          
+                                                                              
+column offset (microradians) = -1260 - 45.81*T(deck)        (6)               
+(+/- 113 microradians), r = 0.83                                              
+                                                                              
+The offset position in the line or spacecraft -y' direction                   
+is approximated by:                                                           
+                                                                              
+line offset (microradians) = -744  (+/-99 microradians)     (7)               
+                                                                              
+3. Scattered Light                                                            
+                                                                              
+Scattered light is measured using inflight images of Canopus.                 
+A failed Eros orbit insertion maneuver on 20 December 1998,                   
+in which more than 28 kg of hydrazine was expended by attitude                
+control jets on NEAR, caused the deposit of burn products                     
+on the outer optic of the MSI.  This resulted in a wavelength-                
+dependent degradation of the system point-spread function.                    
+The scattered light is progressively worse in the shortest                    
+and longest wavelength filters, especially at 450 and 1050 nm.                
+The degraded PSF is restored using the Fourier                                
+filtering technique described by [LIETAL2000].                                
+                                                                              
+4. Processing levels                                                          
+                                                                              
+NEAR images are archived in up to 8 forms which have                          
+undergone differing calibration pathways and levels of                        
+subsequent processing, depending on the target body,                          
+time during the mission, and intent of the observation:                       
+                                                                              
+RAW: Image in units of raw DN as received from the spacecraft                 
+after data were uncompressed                                                  
+                                                                              
+RAD: Image calibrated to units of radiance using equation (1)                 
+                                                                              
+RADDBL: As with RAD; in addition images are deblurred                         
+by application of the Fourier filtering restoration of a                      
+degraded image PSF                                                            
+                                                                              
+IOF: Image calibrated to units of I/F; following calibration                  
+to radiance using equation (1), image is divided by the pi                    
+times the solar irradiance expected at the target body's                      
+distance from the Sun                                                         
+                                                                              
+IOFDBL: As with IOF; in addition images are deblurred                         
+by application of the Fourier filtering restoration of a                      
+degraded image PSF                                                            
+                                                                              
+CIF: Cleaned image calibrated to units of I/F; as with CRD,                   
+calibration performed using equation (2) with removal of                      
+background levels by subtraction of a 0-ms                                    
+exposure image; then image is divided by the pi times                         
+the solar irradiance expected at the target body's distance                   
+from the Sun                                                                  
+                                                                              
+CIFDBL: As with CIF; in addition images are deblurred by                      
+application of the Fourier filtering restoration of a                         
+a degraded image PSF                                                          
+                                                                              
+These levels were discussed in the delivered version of MSICAL.TXT but        
+no data was delivered:                                                        
+                                                                              
+CRD: Cleaned image calibrated to units of radiance; calibration               
+performed using equation (2) with removal of background                       
+levels by subtraction of a 0-ms exposure image                                
+                                                                              
+CRDDBL: As with CRD; in addition images are deblurred                         
+by application of the Fourier filtering restoration of a                      
+degraded image PSF                                                            
+                                                                

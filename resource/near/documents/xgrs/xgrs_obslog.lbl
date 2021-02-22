@@ -1,0 +1,48 @@
+PDS_VERSION_ID           = PDS3                                                
+RECORD_TYPE              = STREAM                                              
+^XLS_DOCUMENT            = "XGRS_OBSLOG.CSV"                                   
+^CSV_DOCUMENT            = "XGRS_OBSLOG.XLS"                                   
+                                                                               
+OBJECT                   = XLS_DOCUMENT                                        
+  DOCUMENT_NAME          = "XGRS_OBSLOG"                                       
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = MICROSOFT_EXCEL                                     
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                 
+  DESCRIPTION            = "Operations log for the XGRS instrument during      
+the orbital encounter with the Eros433 Asteroid.  See teh XGRS users guide     
+for operations descriptions."                                                  
+END_OBJECT               = XLS_DOCUMENT                                        
+                                                                               
+OBJECT                   = CSV_DOCUMENT                                        
+  DOCUMENT_NAME          = "XGRS_OBSLOG"                                       
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = ASCII                                               
+  DOCUMENT_FORMAT        = TEXT                                                
+  DOCUMENT_TOPIC_TYPE    = "OPERATIONS REPORT"                                 
+  DESCRIPTION            = "Operations log for the XGRS instrument             
+ during the orbital encounter with the Eros433 Asteroid. The                   
+ table is text and proceeds in ime from top (beginning of                      
+ mission) to bottom (end of mission).  Each entry (row) is the                 
+ instrument control macro that was issued at the identified time.              
+ PARM 1 to 6 fields show the macro configuration parameters that               
+ were issued.  Each field is Fields are of variable length and                 
+ seperated by a ',' :                                                          
+                                                                               
+ COL_NUM     NAME             DESCRIPTION                                      
+ 1           XGRS_COMMAND_ID  XGRS CAS or MACRO Identifier                     
+ 2           XGRS_COMMAND     Macro name                                       
+ 3           XGRS_MODE        Macro State change                               
+ 4           YEAR             Year, 4 chars                                    
+ 5           DOY              Day of year, length 1 to 3 chars                 
+ 6           HOUR_MIN_SEC     Hour Min and Sec, 7 or 8 chars                   
+ 7           PARM1            Depends on the command issued                    
+ 8           PARM2            Depends on the command issued                    
+ 9           PARM3            Depends on the command issued                    
+ 10          PARM4            Depends on the command issued                    
+ 11          PARM5            Depends on the command issued                    
+ 12          PARM6            Depends on the command issued"                   
+                                                                               
+END_OBJECT               = CSV_DOCUMENT                                        
+                                                                               
+END                                                                            

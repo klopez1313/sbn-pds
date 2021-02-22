@@ -1,0 +1,24 @@
+PDS_VERSION_ID           = PDS3                                                
+RECORD_TYPE              = STREAM                                              
+^DOC_DOCUMENT            = "XGRS_COMMAND_DESC.DOC"                             
+^ASCII_DOCUMENT          = "XGRS_COMMAND_DESC.TXT"                             
+                                                                               
+OBJECT                   = WORD_DOCUMENT                                       
+  DOCUMENT_NAME          = "XGRS Commanding Description"                       
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = MICROSOFT_WORD                                      
+  DOCUMENT_TOPIC_TYPE    = OPERATION_REPORT                                    
+  DESCRIPTION            = "XGRS Commanding Description"                       
+END_OBJECT               = WORD_DOCUMENT                                       
+                                                                               
+OBJECT                   = TXT_DOCUMENT                                        
+  DOCUMENT_NAME          = "XGRS Commanding Description"                       
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = ASCII                                               
+  DOCUMENT_FORMAT        = TEXT                                                
+  DOCUMENT_TOPIC_TYPE    = OPERATION_REPORT                                    
+  DESCRIPTION            = "XGRS Commanding Description"                       
+END_OBJECT               = TXT_DOCUMENT                                        
+                                                                               
+END                                                                            

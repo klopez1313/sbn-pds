@@ -1,0 +1,2392 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " GRS Data File Parameter Definitions                "   
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+GAMMA RAY SUMMARY SCIENCE RECORD VARIABLES                                    
+       (Binary Table Fields)                                                  
+                                                                              
+                                                                              
+The following list of variable names are contained in the header of the       
+Binary table extension of the gamma ray full data file created by CFITSIO     
+user routines for PDS compliance. The corresponding definitions will be       
+placed in a separate file, and will not be contained in the PDS label         
+file, or require the generation of PDS keywords.                              
+                                                                              
+                                                                              
+ 1.  met                                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 160000000                                             
+        units - seconds (unsigned)                                            
+ definition - Mission Elapsed Time in seconds for the start of this XGRS      
+integration period                                                            
+                                                                              
+ 2.  tdb                                                                      
+                                                                              
+        minimum value - -1.3e+8                                               
+        maximum value - +6.4e+7                                               
+        units - seconds (signed)                                              
+        definition - Barycentric Dynamical Time corresponding to MET(1).      
+     Barycentric Dynamical Time (TDB) is the independent                      
+     variable in the equations, including terms for relativity,               
+     of motion of the celestial bodies.  The solution of these                
+     equations gives the rectangular coordinates of those                     
+     bodies relative to the barycentre (centre of mass) of the                
+     solar system.  (The barycentre does not coincide with the                
+     centre of the Sun but is displaced to a point near its                   
+     surface in the direction of Jupiter.)                                    
+                                                                              
+ 3.  dqi                                                                      
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - Data Quality Index                                       
+                     c0 = Data Quality Flag[0=good,1=flagged for quality      
+                          defects]                                            
+                     c1 = Instrument number for FC, CTP and AIU[1 or 2]       
+                     c2 - c6 = Processing Flags not quality related           
+                     c7 = CCDS Source[0=VC0, 1=VC1, 2=VC2, 3=VC3]             
+                                                                              
+ 4. time_tag                                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - seconds (unsigned)                                                   
+ definition - time tag - MET in seconds for the start of this gamma ray       
+integration period                                                            
+                                                                              
+ 5. integration_time                                                          
+                                                                              
+ minimum value - typically 0                                                  
+ maximum value - cmded gamma ray integration period length; possibly          
+longer                                                                        
+ units - seconds (unsigned)                                                   
+ definition - actual integration time (sec.) - the portion of the period      
+covered by this record in which the gamma ray sensors were unmasked and       
+integrating;                                                                  
+ Note: the period covered by a record can exceed the cmded integration        
+period under conditions of telemetry backup when a higher rate of             
+telemetry is being produced by the XGRS than is allocated to it; the          
+period covered by a record can be less than the cmded integration period      
+due to various factors including the integration being terminated early by    
+ground command                                                                
+                                                                              
+ 6. bgo_proton_flare_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO proton flare detection flag - indicates whether a proton    
+flare was detected / continued in the period covered by this record           
+ 0= no BGO proton flare occurred in the period covered by this record         
+ 1= BGO proton flare occurred in the period covered by this record            
+ BGO proton flare detection flag - indicates whether a BGO proton flare       
+has been detected by the XGRS software in the current gamma ray               
+integration period ground conversion:                                         
+ 0=BGO proton flare not detected                                              
+ 1=BGO proton flare detected                                                  
+ initial value: 0=BGO proton flare not detected                               
+                                                                              
+ 7. gray_data_quality_bit                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Data quality flag                                               
+ 0= no HV slew in this Gray record period                                     
+ 1= HV slew in this Gray record period                                        
+                                                                              
+                                                                              
+ 8. bgo_level_1_safe_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO level one safing flag                                       
+ 0=this sensor not safed at level 1 at any time in this gamma ray record      
+period                                                                        
+ 1=this sensor safed at level 1 at some time in this gamma ray record         
+period                                                                        
+                                                                              
+ BGO gamma sensor level 1 safing flag - indicates whether this sensor is      
+currently (at the time of the snapshot sampling) in safing level 1; this      
+is a useful value in the realtime snapshot but not in the science             
+snapshots since in that case it will only reflect the safing state at the     
+start of the integration period; in the science housekeeping (non-realtime    
+portion), the corresponding "sticky" version of the flag indicates whether    
+the sensor was at safing level 1 at any time over the gamma ray               
+integration period and should be referenced ground conversion:                
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+ 9. bgo_level_2_safe_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO level two safing flag                                       
+ 0=this sensor not safed at level 2 at any time in this gamma ray record      
+period                                                                        
+ 1=this sensor safed at level 2 at some time in this gamma ray record         
+period                                                                        
+                                                                              
+ BGO gamma sensor level 2 safing flag - indicates whether this sensor is      
+currently (at the time of the snapshot sampling) in safing level 2; this      
+is a useful value in the realtime snapshot but not in the science             
+snapshots since in that case it will only reflect the safing state at the     
+start of the integration period; in the science housekeeping (non-realtime    
+portion), the corresponding "sticky" version of the flag indicates whether    
+the sensor was at safing level 1 at any time over the gamma ray               
+integration period and should be referenced ground conversion:                
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+10. nai_level_1_safe_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI level one safing flag                                       
+ 0=this sensor not safed at level 1 at any time in this gamma ray record      
+period                                                                        
+ 1=this sensor safed at level 1 at some time in this gamma ray record         
+period                                                                        
+                                                                              
+ 11. nai_level_2_safe_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI level two safing flag                                       
+ 0=this sensor not safed at level 2 at any time in this gamma ray record      
+period                                                                        
+ 1=this sensor safed at level 2 at some time in this gamma ray record         
+period                                                                        
+                                                                              
+ 12. nai_int_overflow_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI integral spectrum bin overflow occurrence flag              
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+                                                                              
+ 13. bgo_int_overflow_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO integral spectrum bin overflow occurrence flag              
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+                                                                              
+ 14. nai_anticoincid_ovfl_flg                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI anticoincidence spectrum bin overflow occurrence flag       
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+                                                                              
+ 15. nai_single_escp_ovfl_flg                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI single escape shifted spectrum bin overflow occurrence      
+flag                                                                          
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+                                                                              
+ 16. nai_double_escp_ovfl_flg                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI double escape shifted spectrum bin overflow occurrence      
+flag                                                                          
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+ 17. bgo_single_escp_ovfl_flg                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO single escape peak spectrum bin overflow occurrence flag    
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1=bin overflow occurred for this spectrum in this gamma ray record period    
+                                                                              
+ 18. bgo_double_escp_ovfl_flg                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO double escape peak spectrum bin overflow occurrence flag    
+ 0=no bin overflow occurred for this spectrum in this gamma ray record        
+period                                                                        
+ 1= bin overflow occurred for this spectrum in this gamma ray record          
+period                                                                        
+                                                                              
+ 19. nai_raw_event_rate                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - NaI raw event count - the accumulation of counts from the       
+NaI gamma ray sensor hardware raw event counter over the entire period        
+covered by this record (independent of the NaI sensor mask state) - see       
+note with actual integration time description                                 
+                                                                              
+ 20. bgo_raw_event_rate                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - BGO raw event count - the accumulation of counts from the       
+BGO gamma ray sensor hardware raw event counter over the entire period        
+covered by this record (independent of the BGO sensor mask state) - see       
+note with actual integration time description                                 
+                                                                              
+ 21. coincidence counter                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - The count of NaI/BGO coincident events OVER THE ENTIRE GAMMA RAY
+ ACTUAL INTEGRATION TIME which may be shorter or longer than the commanded    
+ gamma ray integration time                                                   
+                                                                              
+ 22. command_counter                                                          
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65535                                                        
+ units - N/A                                                                  
+ definition - A running count of commands received by the XGRS: rolls over    
+  after 65535.                                                                
+                                                                              
+ 23. problem_counter                                                          
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 0 - 255                                                      
+ units - N/A                                                                  
+ definition -    A running count of problems identified by the XGRS software. 
+ Rolls over after 255.                                                        
+                                                                              
+ 24. problem_code                                                             
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition -   Code for the most problem most recently recognized by the     
+    XGRS software. :                                                          
+    0: no problem                                                             
+    1-63: Common DPU problem codes                                            
+    192-219: XGRS Application problem codes                                   
+                                                                              
+ 25. num_nai_anticoincid_events                                               
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - NaI anti-coincidence event count - the accumulation of          
+counts from the NaI hardware anti-coincidence counter over the entire         
+period covered by this record (independent of the NaI sensor mask state);     
+the events counted are NaI raw events which are not coincident with BGO       
+events; see note with actual integration time description                     
+                                                                              
+ 26. num_nai_valid_events                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - NaI valid processed event count - the count of NaI gamma ray    
+events which pass certain event                                               
+ discrimination criteria (low level amplitude and negative amplitude) and     
+are integrated in the NaI integral spectrum; this count accumulates over      
+the entire gamma ray actual integration time which may be shorter or          
+longer than the cmded gamma ray integration period                            
+                                                                              
+ 27. num_bgo_valid_events                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - N/A                                                                  
+ definition - BGO valid processed event count - the count of BGO gamma ray    
+events which pass certain event discrimination criteria (low level            
+amplitude and negative amplitude) and are integrated in the BGO integral      
+spectrum; this count accumulates over the entire gamma ray actual             
+integration time which may be shorter or longer than the cmded gamma ray      
+integration period                                                            
+                                                                              
+ 28. nai_dc_offset                                                            
+                                                                              
+ minimum value - -2048                                                        
+ maximum value - +2047                                                        
+ units - N/A                                                                  
+ definition - NaI DC offset - average NaI sensor background level;            
+ ground conversion: offset in energy bins = reported offset / 2               
+ This conversion yields an offset range of -1024 to 1023 energy bins. If      
+the reported NaI DC offset and std dev both have value -2, neither is         
+considered valid.                                                             
+                                                                              
+ 29. bgo_dc_offset                                                            
+                                                                              
+ minimum value - -2048                                                        
+ maximum value - +2047                                                        
+ units - N/A                                                                  
+ definition - BGO DC offset - average BGO sensor background level;            
+ ground conversion: offset in energy bins = reported offset / 2               
+ This conversion yields an offset range of -1024 to 1023 energy bins. If      
+the reported BGO DC offset and std dev both have value -2, neither is         
+considered valid.                                                             
+                                                                              
+ 30. nai_stand_dev                                                            
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2047                                                         
+ units - N/A                                                                  
+ definition - NaI standard deviation- standard deviation of NaI sensor        
+background level;                                                             
+ standard deviation in energy bins = reported std. dev. / 2                   
+ This conversion yields a std. dev. range of 0 to 1023+ energy bins.          
+ A value of -2 is reported to signify that no background samples were made    
+for the NaI sensor in this record period and neither the reported DC          
+offset nor the std. dev. for this sensor are valid                            
+                                                                              
+ 31. bgo_stand_dev                                                            
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2047                                                         
+ units - N/A                                                                  
+ definition - BGO standard deviation- standard deviation of BGO sensor        
+background level;                                                             
+ standard deviation in energy bins = reported std. dev. / 2                   
+ This conversion yields a std. dev. range of 0 to 1023+ energy bins.          
+ A value of -2 is reported to signify that no background samples were made    
+for the BGO sensor in this record period and neither the reported DC          
+offset nor the std. dev. for this sensor are valid                            
+                                                                              
+ 32. detector_electr_curr                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - sensed detector electronics current (8MSBs/12 partially         
+converted by XGRS software)                                                   
+ hk int (SRS log. ch. 7)                                                      
+ target current = ~3.9878 * downlinked value - 2.2 mA                         
+                                                                              
+ 33. xray_pin_diode_fet_bias                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - sensed Xray PIN diode solar monitor FET bias (8MSBs/12          
+partially converted by XGRS software)                                         
+ hk int (SRS log. ch. 12)                                                     
+ target bias = ~19.939 * downlinked value - 15.95 mV                          
+                                                                              
+ 34. hvce_temperature                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed HVCE temperature (partially converted by XGRS            
+software)                                                                     
+ hk int (SRS log. ch. 2)                                                      
+ ground conversion: sensed temp = ~0.1248 * downlinked value - 277.1 degC     
+                                                                              
+ 35. unf_xray_hvps_volt                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed unfiltered Xray HVPS voltage (partially converted by     
+XGRS software) - this voltage is ramped by the software when a new voltage    
+level is cmded from the ground or when automated safing is in progress;       
+when the voltage is stable it should match the corresponding cmded target     
+voltage                                                                       
+ hk int(SRS log. ch. 14)                                                      
+ target voltage = ~ 1.248 * downlinked value - 57.4 V                         
+                                                                              
+ 36. mg_xray_hvps_volt                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed Mg filtered Xray HVPS voltage (partially converted by    
+XGRS software) - this voltage is ramped by the software when a new voltage    
+level is cmded from the ground or when automated safing is in progress;       
+when the voltage is stable it should match the corresponding cmded target     
+voltage                                                                       
+ hk int (SRS log. ch. 15)                                                     
+ target voltage = ~ 1.248 * downlinked value - 55.54 V                        
+                                                                              
+ 37. al_xray_hvps_volt                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed Al filtered Xray HVPS voltage (partially converted by    
+XGRS software) - this voltage is ramped by the software when a new voltage    
+level is cmded from the ground or when automated safing is in progress;       
+when the voltage is stable it should match the corresponding cmded target     
+voltage                                                                       
+ hk int(SRS log. ch. 16)                                                      
+ target voltage = ~ 1.248 * downlinked value - 59.91 V                        
+                                                                              
+ 38. xray_gas_hvps_volt                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed Xray gas tube solar monitor HVPS voltage (partially      
+converted by XGRS software) - this voltage is ramped by the software when     
+a new voltage level is cmded from the ground or when automated safing is      
+in progress; when the voltage is stable it should match the corresponding     
+cmded target voltage                                                          
+ hk int(SRS log. ch. 17)                                                      
+ target voltage = ~ 1.248 * downlinked value - 54.92 V                        
+                                                                              
+ 39. xray_pin_hvps_volt                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed Xray PIN diode solar monitor HVPS voltage (partially     
+converted by XGRS software) - this voltage is ramped by the software when     
+a new voltage level is cmded from the ground or when automated safing is      
+in progress; when the voltage is stable it should match the corresponding     
+cmded target voltage                                                          
+ hk int(SRS log. ch. 18)                                                      
+ target voltage = ~ 1.248 * downlinked value - 61.16 V                        
+                                                                              
+ 40. nai_hvps_volt                                                            
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed NaI gamma ray HVPS voltage (partially converted by       
+XGRS software) - this voltage is ramped by the software when a new voltage    
+level is cmded from the ground or when automated safing is in progress;       
+when the voltage is stable it should match the corresponding cmded target     
+voltage                                                                       
+ hk int(SRS log. ch. 20)                                                      
+ target voltage = ~ 1.248 * downlinked value - 49.3 V                         
+                                                                              
+ 41. bgo_hvps_volt                                                            
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - sensed BGO gamma ray HVPS voltage (partially converted by       
+XGRS software) - this voltage is ramped by the software when a new voltage    
+level is cmded from the ground or when automated safing is in progress;       
+when the voltage is stable it should match the corresponding cmded target     
+voltage                                                                       
+ hk int(SRS log. ch. 19)                                                      
+ target voltage = ~ 1.248 * downlinked value - 50.92 V                        
+                                                                              
+ 42. dpu_dc_dc_temp                                                           
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed DPU DC/DC conv temperature (8MSBs/12)                    
+ hk int(SRS log. ch. 35)                                                      
+ target temp = ~ 0.613 * downlinked value + 18.51 degC                        
+                                                                              
+ 43. xgrs_dc_dc_temp                                                          
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed XGRS DC/DC temperature (8MSBs/12)                        
+ hk int(SRS log. ch. 36)                                                      
+ target temp = ~ 0.613 * downlinked value + 18.51 degC                        
+                                                                              
+ 44. unf_xray_hvps_temp                                                       
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed unfiltered Xray HVPS temp. (8MSBs/12)                    
+ hk int(SRS log. ch. 22)                                                      
+ target temp = ~ 0.62759 * downlinked value + 17.2591 degC                    
+                                                                              
+ 45. mg_xray_hvps_temp                                                        
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed Mg filtered Xray HVPS temp. (8MSBs/12)                   
+ hk int(SRS log. ch. 23)                                                      
+ target temp = ~ 0.6287 * downlinked value + 18.1667 degC                     
+                                                                              
+ 46. al_xray_hvps_temp                                                        
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed Al filtered Xray HVPS temp. (8MSBs/12)                   
+ hk int(SRS log. ch. 24)                                                      
+ target temp = ~ 0.63028 * downlinked value + 17.58972 degC                   
+                                                                              
+ 47. xray_gas_hvps_temp                                                       
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed Xray gas tube solar monitor HVPS temp. (8MSBs/12)        
+ hk int(SRS log. ch. 25)                                                      
+ target temp = ~ 0.6289 * downlinked value + 17.67 degC                       
+                                                                              
+ 48. xray_pin_hvps_temp                                                       
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed Xray PIN diode solar monitor HVPS temp. (8MSBs/12)       
+ hk int(SRS log. ch. 26                                                       
+ target temp = ~ 0.6289 * downlinked value + 17.67 degC                       
+                                                                              
+ 49. nai_hvps_temp                                                            
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed NaI gamma ray HVPS temp. (8MSBs/12)                      
+ hk int(SRS log. ch. 28)                                                      
+ target temp = ~ 0.6289 * downlinked value + 17.67 degC                       
+                                                                              
+ 50. bgo_hvps_temp                                                            
+                                                                              
+ minimum value - -128                                                         
+ maximum value - +127                                                         
+ units - N/A                                                                  
+ definition - sensed BGO gamma ray HVPS temp. (8MSBs/12)                      
+ hk int(SRS log. ch. 27)                                                      
+ target temp = ~ 0.6289 * downlinked value + 17.67 degC                       
+                                                                              
+ 51. tec_current                                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - sensed TEC current (8MSBs/12 partially converted by XGRS        
+ software)                                                                    
+ hk int(SRS log. ch. 8)                                                       
+ target current = ~ 3.9878 * downlinked value - 2.2 mA                        
+                                                                              
+ 52. nai_hvps_volt_cmd                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded Nal gamma ray HVPS voltage - the most recently cmded      
+param for this voltage; cmd opcode 0xf300                                     
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+ 53. bgo_hvps_volt_cmd                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded BGO gamma ray HVPS voltage - the most recently cmded      
+param for this voltage; cmd opcode 0xf300                                     
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+                                                                              
+ 54. unf_hvps_volt_cmd                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded unfiltered Xray HVPS voltage - the most recently cmded    
+param for this voltage; cmd opcode 0xf300                                     
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+ 55. mg_hvps_volt_cmd                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded Mg filtered Xray HVPS voltage - the most recently         
+cmded param for this voltage; cmd opcode 0xf300                               
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+ 56. al_hvps_volt_cmd                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded Al filtered Xray HVPS voltage - the most recently         
+cmded param for this voltage; cmd opcode 0xf300                               
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+ 57. hvps_power_on_off                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - HVPS power on/off - the current value of the Gbus control       
+bit which is used by the software to turn the HVPS power on and off; HVPS     
+power control is by ground cmd only,                                          
+ cmd opcode 0xf323                                                            
+ ground conversion: 0 = off, 1 = on                                           
+ initial value: 0 = off                                                       
+                                                                              
+ 58. xray_calib_home_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration home flag - reflects whether or not a home     
+motor command is executing or was executed in the current Xray integration    
+period; cmd opcode 0xf321                                                     
+ ground conversion: 0 = motor not homing/homed in current Xray int period     
+ 1 = motor homing/homed in current Xray int period                            
+ initial value: 0 = motor not homing/homed                                    
+                                                                              
+ 59. xray_calib_motor_on_off                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor power on/off - the value most            
+recently written to of the Gbus control bit which is used by the software     
+to turn motor controller power on and off in response to the motor            
+movement cmds; cmd opcodes 0xf303, 0xf308, 0xf321                             
+ ground conversion: 0 = off, 1 = on                                           
+ initial value: 0 = off                                                       
+                                                                              
+ 60. xray_calib_motor_enable                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor power enable - the value most            
+recently written to the Gbus control bit which is used by the software to     
+enable or disable current flow in the motor windings; motor controller        
+power must be on first; software controller in response to motor movement     
+cmds; cmd opcodes 0xf303, 0xf308, 0xf321                                      
+ ground conversion: 0 = disabled, 1 = enabled                                 
+ initial value: 0 = disabled                                                  
+                                                                              
+ 61. gas_hvps_volt_cmd                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2447                                                         
+ units - N/A                                                                  
+ definition - cmded Xray gas tube solar monitor HVPS voltage - the most       
+recently cmded param for this voltage; cmd opcode 0xf300                      
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~1500 Volts               
+                                                                              
+                                                                              
+ 62. pin_hvps_volt_cmd                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 114                                                          
+ units - N/A                                                                  
+ definition - cmded Xray pin diode solar monitor HVPS voltage - the most      
+recently cmded param for this voltage; cmd opcode 0xf300                      
+ ground conversion: target volts = ~ 0.61435 * downlinked value               
+ initial value: 0 = target 0 Volts                                            
+ This conversion yields a target volt range of 0 to ~70 Volts                 
+                                                                              
+ 63. gamma_ray_heater_curr                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - sensed gamma ray heater current (8MSBs/12 partially             
+converted by XGRS software)                                                   
+ hk int (SRS log. ch. 6)                                                      
+ target current = ~ 3.9878 * downlinked value - 2.2 mA                        
+                                                                              
+ 64. version                                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 15                                                           
+ units - N/A                                                                  
+ definition - Software version number.                                        
+                                                                              
+ 65. xray_calib_motor_dir                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor direction - the most recent motor        
+direction in effect derived from the cmded motor direction in any of the      
+Xray calibration motor movement commands: cmd opcodes 0xf303, 0xf308,         
+0xf321                                                                        
+ ground conversion: 0 = reverse, 1 = forward                                  
+ initial value: 1 = forward (always overridden by cmd param input)            
+                                                                              
+ 66. xray_calib_motor_curr                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 7                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor current level - the most recently        
+cmded motor current cmd param; cmd opcode 0xf305                              
+ ground conversion: cmd param * 40 = target mA                                
+ initial value: 3 = target motor current 120 mA                               
+ This conversion yields a target motor current range of 0 to 280 mA           
+                                                                              
+ 67. xray_calib_motor_goal                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 199                                                          
+ units - N/A                                                                  
+ definition - Xray calibration motor goal - the current goal for the motor    
+position derived from the current "actual" motor position in combination      
+with any motor movement cmds: cmd opcodes 0xf303, 0xf308, 0xf321 (cmded       
+indirectly)                                                                   
+ ground conversion:                                                           
+ 0 = normal/non-calibrate position                                            
+ 75 = MG-filtered calibrate position                                          
+ 100 = unfiltered calibrate position                                          
+ 125 = Al-filtered calibrate position                                         
+ for cmded motor steps=n: if cmded motor direction=forward                    
+ then new motor goal =(current actual motor position + n) mod 200             
+ if cmded motor direction=reverse                                             
+ then new motor goal = (current actual motor position - n) mod 200            
+ initial value: 0 = normal/non-calibrate position                             
+                                                                              
+ 68. xray_calib_motor_pos                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 199                                                          
+ units - N/A                                                                  
+ definition - Xray calibration motor position - the current "actual" motor    
+position                                                                      
+ ground conversion:                                                           
+ 0 = normal/non-calibrate position                                            
+ 75 = MG-filtered calibrate position                                          
+ 100 = unfiltered calibrate position                                          
+ 125 = Al-filtered calibrate position                                         
+ initial value: initially undetermined (note initial motor goal position      
+is 0)                                                                         
+                                                                              
+ 69. xray_calib_motor_fid_sens                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 7                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor fiducial sensitivity - the most          
+recently cmded motor fiducial sensitivity cmd param,                          
+ cmd opcode 0xf306                                                            
+ ground conversion: none                                                      
+ initial value: 4                                                             
+                                                                              
+ 70. xray_calib_motor_fid_brit                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 3                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor fiducial brightness - the most           
+recently cmded motor fiducial brightness cmd param;                           
+ cmd opcode 0xf307                                                            
+ ground conversion:                                                           
+ 0 = off,                                                                     
+ 1 = 1/3 full brightness,                                                     
+ 2 = 2/3 full brightness,                                                     
+ 3 = full brightness                                                          
+ initial value = 1 = 1/3 full brightness                                      
+                                                                              
+ 71. xray_motor_in_calib_position                                             
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor "in unfiltered calibrate position"       
+ fiducial - the most recent value of this fiducial sensed via the Gbus and    
+cached in the software indicates whether the motor was at the unfiltered      
+calibrate position (position 100) at the time the sensing was done -          
+indicates a current motor position if the motor is not moving                 
+ ground conversion: these are the current positions providing the motor is    
+not moving                                                                    
+ 0 = not in unfiltered calibrate position (motor position not 100)            
+ 1 = in unfiltered calibrate position (motor position 100)                    
+                                                                              
+ 72. xray_motor_in_norm_position                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor "in normal position"                     
+ fiducial - the most recent value of this fiducial sensed via the Gbus and    
+cached in the software indicates whether the motor was at the unfiltered      
+calibrate position (position 0) at the time the sensing was done -            
+indicates a current motor position if the motor is not moving                 
+ ground conversion: these are the current positions providing the motor is    
+not moving                                                                    
+ 0 = not in normal/non-calibrate position (not at motor position 0)           
+ 1 = in normal/non-calibrate position (motor position 0)                      
+                                                                              
+ 73. active_solar_toggle_mode                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Active solar monitor toggle mode - the most recently cmded      
+ solar toggle mode cmd param; cmd opcode 0xf316                               
+ ground conversion:                                                           
+ 0 = solar monitor toggle mode off; the integration of the active solar       
+spectrum will be performed according to the most recently commanded sensor    
+mask                                                                          
+ 1 = solar monitor toggle mode on; the integration of solar spectra           
+alternates between the two solar monitors at the end of each Xray             
+integration period                                                            
+ initial value = 0 = solar monitor toggle mode off                            
+                                                                              
+ 74. xray_calib_max_steps                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1023                                                         
+ units - N/A                                                                  
+ definition - Xray calibration max. steps (10 lsbits / 16) - the maximum      
+number of steps the software will allow in executing the motor home           
+command; nominally, this command requires a maximum of 200 steps, however,    
+with motor slippage may require greater than nominal; cmd opcode 0xf321       
+ ground conversion : none                                                     
+ nominally 200 steps = complete revolution of calibration rod                 
+                                                                              
+ 75. spare1                                                                   
+                                                                              
+ minimum value - N/A                                                          
+ maximum value - N/A                                                          
+ units - N/A                                                                  
+ definition - spare                                                           
+                                                                              
+ 76. tec_enable                                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - TEC enable state - most recently cmded TEC enable state cmd     
+param indicates whether automated TEC temp control algorithm is enabled or    
+disabled; the TEC enable state is controlled by ground cmd only; the TEC      
+is turned off if the control algorithm is disabled; the TEC control           
+algorithm autonomously turns the TEC on and off if it is enabled;             
+ cmd opcode 0xf30b                                                            
+ ground conversion:                                                           
+ 0 = disabled, 1 = enabled                                                    
+ initial value = 1 = enabled                                                  
+                                                                              
+ 77. xray_calib_cum_motor_stps                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - Xray calibration cumulative motor steps - the current value     
+of a running count of motor steps taken as a result of any of the motor       
+movement commands; counter rolls over;                                        
+ cmd opcodes 0xf303, 0xf308, 0xf321                                           
+ ground conversion: none                                                      
+ nominally 200 steps = complete revolution of calibration rod                 
+ initial value = 0 steps                                                      
+                                                                              
+ 78. gray_burst_thresh_val                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1023                                                         
+ units - N/A                                                                  
+ definition - gamma ray burst threshold (encoded as min[burst thr, 255])      
+ - an encoding of the most recently cmded gamma ray burst threshold           
+ ground conversion: reported burst thresh = min[actual cmded burst thr,       
+255]                                                                          
+ Range of actual burst thresh is 0-1023.                                      
+ initial value: 100                                                           
+                                                                              
+                                                                              
+ 79. xray_safing_thresh                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - Xray sensor safing threshold (16LSBs/24) - most recently        
+cmded param for maximum "safe" raw hardware event counter rate per second     
+for each Xray sensor; cmd opcode 0xf31c                                       
+ ground conversion: none (note: the 8 MSBs of this value which are not        
+downlinked are all 0)                                                         
+ initial value = 30,000 counts per second maximum                             
+                                                                              
+ 80. xray_calib_motor_diag                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Xray calibration motor diagnostics - no actual motor            
+diagnostics have been implemented for the XGRS Application Software           
+version 6 for this cmd; cmd opcode 0xf30a                                     
+ ground conversion:                                                           
+ 0 = motor diagnostics never commanded                                        
+ 1 = motor diagnostics have been commanded                                    
+ initial value = 0 = no diagnostics commanded                                 
+                                                                              
+ 81. tec_power_on_off                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - TEC power on/off - the value most recently written to the       
+Gbus control bit which is used by the software to turn TEC power on and       
+off as triggered by the TEC on/off cmd or the automated TEC control           
+algorithm, if enabled by ground command; the software turns the TEC off if    
+the automated TEC control algorithm has been disabled: if the automated       
+TEC control algorithm has been enabled, the software will                     
+ turn the TEC on and off autonomously;                                        
+ cmd opcode 0xf30b                                                            
+ ground conversion:                                                           
+ 0 = TEC off/automated TEC control algorithm disabled                         
+ 1 = TEC on/automated TEC control algorithm enabled                           
+ initial value = 0 = TEC off/automated TEC control algorithm disabled         
+                                                                              
+ 82. tec_mode                                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - TEC mode - the most recently cmded TEC mode cmd param which     
+controls whether the automated TEC control algorithm, if separately           
+enabled, operates in "heat" or "cool" mode;                                   
+ cmd opcode 0xf30c                                                            
+ ground conversion:                                                           
+ 0 = cool mode sensed                                                         
+ 1 = heat mode sensed                                                         
+ initial value: 0= cool mode commanded                                        
+                                                                              
+ 83. tec_cool_heat_flg                                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - TEC cool/heat flag - the most recent value of this sensor       
+interface read bit sensed and cached in the XGRS software indicates the       
+TEC mode; used to compare to expected cmded TEC mode when the automated       
+TEC control algorithm is enabled by ground command                            
+ ground conversion: provided the automated TEC control algorithm is           
+enabled:                                                                      
+ 0=cool mode sensed                                                           
+ 1=heat mode sensed                                                           
+                                                                              
+ 84. tec_temperature                                                          
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - TEC temperature (partially converted by XGRS software)          
+ hk int (SRS log. ch. 1)                                                      
+ target temp = 0.124 * downlinked value - 277.62 degC                         
+ TEC temperature (partially converted by XGRS software)                       
+                                                                              
+ 85. tec_cool_mode_temp_up_lmt                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - TEC cool mode temp. target range upper limit (8 MSBs/12) -      
+the most recently cmded value of this limit for use in the automated TEC      
+control algorithm in conjunction with the "cool" mode of that algorithm;      
+cmd opcode 0xf30d                                                             
+ ground conversion:                                                           
+ target temp. = ~0.12399 * downlinked value - 277.62 degC                     
+ reported temp. cmd param=actual temp. command parameter/16                   
+ actual temp. cmd param = 4096*(target temp. degC + 273)/500                  
+ This conversion yields a range of target temp from -273 to ~227 degC.        
+ initial actual temp. cmd param value: 2195 = ~-5                             
+ downlinked cmd param value = target temp upper limit of ~231 degC            
+                                                                              
+ 86. tec_cool_mode_temp_low_lmt                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - TEC cool mode temp. target range lower limit (8 MSBs/12) -      
+the most recently cmded value of this limit for use in the automated TEC      
+control algorithm in conjunction with the "cool" mode of that algorithm;      
+cmd opcode 0xf30d                                                             
+ ground conversion:                                                           
+ target temp. = ~0.12399 * downlinked value - 277.62 degC                     
+ reported temp. cmd param=actual temp. command parameter/16                   
+ actual temp. cmd param = 4096*(target temp. degC + 273)/500                  
+ This conversion yields a range of target temp from -273 to ~227 degC.        
+ initial actual temp. cmd param value: 1827 = ~-51                            
+ downlinked cmd param value = target temp lower limit of -277 degC            
+                                                                              
+ 87. tec_heat_mode_temp_up_lmt                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - TEC heat mode temp. target range upper limit (8 MSBs/12) -      
+the most recently cmded value of this limit for use in the automated TEC      
+control algorithm in conjunction with the "heat" mode of that algorithm;      
+cmd opcode 0xf30d                                                             
+ ground conversion:                                                           
+ target temp. = ~0.12399 * downlinked value - 277.62 degC                     
+ reported temp. cmd param=actual temp. command parameter/16                   
+ actual temp. cmd param = 4096*(target temp. degC + 273)/500                  
+ This conversion yields a range of target temp from -273 to ~227 degC.        
+ initial actual temp. cmd param value:                                        
+ 3096 = ~193 downlinked cmd param value = target temp upper limit of 125      
+degC                                                                          
+                                                                              
+ 88. tec_heat_mode_temp_low_lmt                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - TEC heat mode temp. target range lower limit (8 MSBs/12) -      
+the most recently cmded value of this limit for use in the automated TEC      
+control algorithm in conjunction with the "heat" mode of that algorithm;      
+cmd opcode 0xf30d                                                             
+ ground conversion:                                                           
+ target temp. = ~0.12399 * downlinked value - 277.62 degC                     
+ reported temp. cmd param=actual temp. command parameter/16                   
+ actual temp. cmd param = 4096*(target temp. degC + 273)/500                  
+ This conversion yields a range of target temp from -273 to ~227 degC         
+ initial actual temp. cmd param value:                                        
+ 2974 = ~186 downlinked cmd param value = target temp lower limit of 91       
+degC                                                                          
+                                                                              
+ 89. gamma_ray_temp_hysteresis                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 15                                                           
+ units - N/A                                                                  
+ definition - gamma ray temp. hysteresis - most recently cmded gamma ray      
+temp. hysteresis cmd param - used in the automated gamma ray heater           
+control algorithm; cmd opcode 0xf322                                          
+ ground conversion:                                                           
+ target hysteresis in degC = ~ 0.1248 * downlinked value                      
+ gamma ray temp upper thr = gamma ray temp lower thr + gamma ray temp         
+hysteresis                                                                    
+ This conversion equates to a target hysteresis range of 0 to ~1.9 degC.      
+ initial value: 2 = target hysteresis 0.25 degC                               
+                                                                              
+ 90. gamma_ray_heat_temp_low_lmt                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - gamma ray heater temp. lower limit - the most recently cmded    
+value for this limit which is used in the automated gamma ray heater          
+control algorithm; cmd opcode 0xf322                                          
+ ground conversion:                                                           
+ target temp. in degC = ~ 0.1248 * downlinked value - 280.03                  
+ This conversion yields a target temp range of -273 to ~231 degC.             
+ initial value: 2400 = target temp 19 degC                                    
+                                                                              
+ 91. full_gamma_ray_science_mode                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - full gamma ray science record mode - the most recently cmded    
+full gamma ray science record mode which determines whether full gamma ray    
+science records will be created and downlinked;                               
+ cmd opcode 0xf324                                                            
+ ground conversion:                                                           
+ 0=full gamma ray science record mode generation off                          
+ 1= full gamma ray science record mode generation on                          
+ initial value: 0 = full gamma ray science record mode generation off         
+                                                                              
+ 92. full_xray_science_mode                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - full Xray science record mode- the most recently cmded full     
+Xray science record mode which determines whether full Xray science           
+records will be created and downlinked;                                       
+ cmd opcode 0xf324                                                            
+ ground conversion:                                                           
+ 0=full Xray science record mode generation off                               
+ 1= full Xray science record mode generation on                               
+ initial value: 0 = full Xray science record mode generation off              
+                                                                              
+ 93. summ_gray_xray_science_mode                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - summary Xray/gamma ray science record mode - the most           
+recently cmded summary Xray / gamma ray science record mode which             
+determines whether summary science records will be created and downlinked;    
+cmd opcode 0xf324                                                             
+ ground conversion:                                                           
+ 0= summary Xray / gamma ray science record mode generation off               
+ 1= summary Xray / gamma ray science record mode generation on                
+ initial value: 1 = summary Xray / gamma ray science record mode              
+generation on                                                                 
+                                                                              
+ 94. gray_burst_sci_rec_mode                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gamma ray burst science record mode- the most recently cmded    
+gamma ray burst science record mode which determines whether gamma ray        
+burst science records will be created and downlinked;                         
+ cmd opcode 0xf324                                                            
+ ground conversion:                                                           
+ 0= gamma ray burst science record mode generation off                        
+ 1= gamma ray burst science record mode generation on                         
+ initial value: 0= gamma ray burst science record mode generation off         
+                                                                              
+ 95. hvce_temp_set_point                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1364                                                         
+ units - N/A                                                                  
+ definition - HVCE temperature set point - the most recently cmded value      
+for this temp set point;                                                      
+ cmd opcode 0xf301                                                            
+ ground conversion:                                                           
+ cmd temp.param = (target temp. degC + 273)*4096/1000                         
+ This conversion yields a target temp range of -273 to ~60 degC.              
+ initial value:120 0 = ~ target temp 20 degC                                  
+                                                                              
+                                                                              
+ 96. cmded_end_xray_integ_per                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Cmded end gamma ray integration period - indicates whether      
+an end gamma ray integration period cmd or an HVCE temperature setpoint       
+cmd which implicitly executes an end xray integration period cmd has ended    
+this xray integration period; this value should be inspected in the xray      
+housekeeping only and ignored elsewhere - its interpretation in the Xray      
+housekeeping and the realtime housekeeping may be ambiguous due to user       
+uncertainty on its sampling time;                                             
+ cmd opcodes 0xf301, 0xf30f                                                   
+ ground conversion:                                                           
+ 0=this Xray integration period not ended by command                          
+ 1=this Xray integration period ended by command                              
+ initial value: 0=this Xray integration period not ended by command           
+                                                                              
+ 97. cmded_gamma_ray_integ_per                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Cmded end gamma ray integration period - indicates whether      
+an end gamma ray integration period cmd or an HVCE temperature setpoint       
+cmd which implicitly executes an end gamma ray integration period cmd has     
+ended this gamma ray integration period; this value should be inspected in    
+the gamma ray housekeeping only and ignored elsewhere - its interpretation    
+in the Xray housekeeping and the realtime                                     
+ housekeeping may be ambiguous due to user uncertainty on its sampling        
+time;                                                                         
+ cmd opcodes 0xf301, 0xf30f                                                   
+ ground conversion:                                                           
+ 0=this gamma ray integration period not ended by command                     
+ 1=this gamma ray integration period ended by command                         
+ initial value: 0=this gamma ray integration period not ended by command      
+                                                                              
+ 98. bgo_proton_flare_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO proton flare detection flag - indicates whether a BGO       
+proton flare has been detected by the XGRS software in the current gamma      
+ray integration period                                                        
+ ground conversion:                                                           
+ 0=BGO proton flare not detected                                              
+ 1=BGO proton flare detected initial value:                                   
+ initial value: 0=BGO proton flare not detected                               
+                                                                              
+ 99. gamma_ray_bin_over_flg_cmd                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gamma ray spectral bin overflow mode - the most recent cmded    
+gamma ray bin spectral bin overflow mode cmd param; cmd opcode 0xf319         
+ ground conversion:                                                           
+ 0=normal bin overflow mode commanded for all gamma ray spectra; if a bin     
+overflow occurs (any bin reaches its maximum value of 65535 counts)           
+integration of the spectra will be suspended immediately for all gamma ray    
+spectra                                                                       
+ 1=override bin overflow mode commanded for all gamma ray spectra; if a       
+bin overflow occurs integration of the spectrum (spectra) with bin            
+overflow will continue and the affected bin(s) will be allowed to continue    
+ initial value: 1=override bin overflow mode commanded for all gamma ray      
+spectra                                                                       
+                                                                              
+100. unf_xray_bin_over_flg_cmd                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - unfiltered Xray spectral ray bin overflow mode - the most       
+recent cmded bin spectral bin overflow mode cmd param for the unfiltered      
+Xray spectrum; cmd opcode 0xf319                                              
+ ground conversion:                                                           
+ 0=normal bin overflow mode commanded for unfiltered xray spectrum; if a      
+bin overflow occurs (any bin reaches its maximum value of 65535 counts)       
+integration of that spectrum will be suspended immediately                    
+ 1=override bin overflow mode commanded for unfiltered xray spectrum; if a    
+bin overflow occurs integration of the spectrum with bin overflow will        
+continue and the affected bin(s) will be allowed to continue                  
+ initial value: 1=override bin overflow mode commanded for unfiltered xray    
+spectrum                                                                      
+                                                                              
+101. mg_bin_over_flg_cmd                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Mg filtered spectral bin overflow mode - the most recent        
+cmded bin spectral bin overflow mode cmd param for the Mg filtered Xray       
+spectrum; cmd opcode 0xf319                                                   
+ ground conversion:                                                           
+ 0=normal bin overflow mode commanded for Mg filtered xray spectrum; if a     
+bin overflow occurs (any bin reaches its maximum value of 65535 counts)       
+integration of that spectrum will be suspended immediately                    
+ 1=override bin overflow mode commanded for Mg filtered xray spectrum; if     
+a bin overflow occurs integration of the spectrum with bin overflow will      
+continue and the affected bin(s) will be allowed to continue                  
+ initial value: 1=override bin overflow mode commanded for Mg filtered        
+xray spectrum                                                                 
+                                                                              
+102. al_bin_over_flg_cmd                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Al filtered spectral bin overflow mode - the most recent        
+cmded bin spectral bin overflow mode cmd ram for the Al filtered Xray         
+spectrum; cmd opcode 0xf319                                                   
+ ground conversion:                                                           
+ 0=normal bin overflow mode commanded for Al filtered xray spectrum; if a     
+bin overflow occurs (any bin reaches its maximum value of 65535 counts)       
+integration of that spectrum will be suspended immediately                    
+ 1=override bin overflow mode commanded for Al filtered xray spectrum; if     
+a bin overflow occurs integration of the spectrum with bin overflow will      
+continue and the affected bin(s) will be allowed to continue                  
+ initial value: 1=override bin overflow mode commanded for Al filtered        
+xray spectrum                                                                 
+                                                                              
+103. act_bin_over_flg_cmd                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - active solar spectral bin overflow mode - the most recent       
+cmded bin spectral bin overflow mode cmd param for the active solar           
+monitor spectrum; cmd opcode 0xf319                                           
+ ground conversion:                                                           
+ 0=normal bin overflow mode commanded for active solar spectrum; if a bin     
+overflow occurs (any bin reaches its maximum value of 65535 counts)           
+integration of that spectrum will be suspended immediately                    
+ 1=override bin overflow mode commanded for active solar spectrum; if a       
+bin overflow occurs integration of the spectrum with bin overflow will        
+continue and the affected bin(s) will be allowed to continue                  
+ initial value: 1=override bin overflow mode commanded for active solar       
+spectrum                                                                      
+                                                                              
+104. nai_bin_overflow_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI integral spectrum bin overflow occurrence flag -            
+indicates whether a bin overflow has occurred for this spectrum in the        
+current gamma ray integration period; this value will be meaningful in the    
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+105. bgo_bin_overflow_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO integral spectrum bin overflow occurrence flag -            
+indicates whether a bin overflow has occurred for this spectrum in the        
+current gamma ray integration period; this value will be meaningful in the    
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+106. nai_anticoin_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI anticoincidence spectrum bin overflow occurrence flag -     
+indicates whether a bin overflow has occurred for this spectrum in the        
+current gamma ray integration period; this value will be meaningful in the    
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+107. nai_sing_esc_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI single escape shifted spectrum bin overflow occurrence      
+flag - indicates whether a bin overflow has occurred for this spectrum in     
+the current gamma ray integration period; this value will be meaningful in    
+the realtime snapshot but not in the science housekeeping snapshots which     
+will always indicate no occurrence; the copy of this flag included in the     
+non-realtime science housekeeping will be meaningful                          
+ and should be referenced there.                                              
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+108. nai_doub_esc_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI double escape shifted spectrum bin overflow occurrence      
+flag - indicates whether a bin overflow has occurred for this spectrum in     
+the current gamma ray integration period; this value will be meaningful in    
+the realtime snapshot but not in the science housekeeping snapshots which     
+will always indicate no occurrence; the copy of this flag included in the     
+non-realtime science housekeeping will be meaningful                          
+ and should be referenced there.                                              
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+109. bgo_sing_esc_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO single escape peak spectrum bin overflow occurrence flag    
+- indicates whether a bin overflow has occurred for this spectrum in the      
+current gamma ray integration period; this value will be meaningful in the    
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science house-keeping will be                                        
+ meaningful and should be referenced there.                                   
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+110. bgo_doub_esc_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO double escape peak spectrum bin overflow occurrence flag    
+- indicates whether a bin overflow has occurred for this spectrum in the      
+current gamma ray integration period; this value will be meaningful in the    
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science house-keeping will be meaningful                             
+ and should be referenced there.                                              
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+                                                                              
+111. unf_xray_bin_overflow_flg                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - unfiltered Xray spectrum bin overflow occurrence flag-          
+indicates whether a bin overflow has occurred for this spectrum in the        
+current Xray integration period; this value will be meaningful in the         
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+112. mg_bin_overflow_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Mg filtered Xray spectrum bin overflow occurrence flag-         
+indicates whether a bin overflow has occurred for this spectrum in the        
+current Xray integration period; this value will be meaningful in the         
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+113. al_bin_overflow_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Al filtered Xray spectrum bin overflow occurrence flag-         
+indicates whether a bin overflow has occurred for this spectrum in the        
+current Xray integration period; this value will be meaningful in the         
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+114. act_bin_overflow_flg                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - active solar monitor spectrum bin overflow occurrence flag-     
+indicates whether a bin overflow has occurred for this spectrum in the        
+current Xray integration period; this value will be meaningful in the         
+realtime snapshot but not in the science housekeeping snapshots which will    
+always indicate no occurrence; the copy of this flag included in the non-     
+realtime science housekeeping will be meaningful and should be referenced     
+there.                                                                        
+ ground conversion:                                                           
+ 0=no overflow of this spectrum has occurred in this integration period       
+ 1=overflow of this spectrum has occurred in this integration period          
+ initial value: 0=no overflow of this spectrum has occurred in this           
+integration period                                                            
+                                                                              
+115. gamma_ray_heat_on_off                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gamma ray heater power on/off - - the value most recently       
+written to the Gbus control bit which is used by the software to turn         
+gamma ray heater power on and off in response to ground command or the        
+automated gamma ray heater control algorithm, if enabled; cmd opcode          
+0xf312                                                                        
+ ground conversion:                                                           
+ 0=heater power off                                                           
+ 1=heater power on                                                            
+ initial value: 0=heater power off                                            
+                                                                              
+116. gamma_ray_heat_mode                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gamma ray heater mode - the most recent gamma ray heater        
+mode cmd param which determines whether the XGRS software will turn power     
+to the gamma ray heater off until further ground command or use an            
+automated gamma heater control algorithm; cmd opcode 0xf312                   
+ ground conversion:                                                           
+ 0=commanded off heater mode                                                  
+ 1=commanded automatic heater mode                                            
+ initial value: 1=automatic heater mode                                       
+                                                                              
+117. bgo_level_1_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO gamma sensor level 1 safing flag - indicates whether        
+this sensor is currently (at the time of the snapshot sampling) in safing     
+level 1; this is a useful value in the realtime snapshot but not in the       
+science snapshots since in that case it will only reflect the safing state    
+at the start of the integration period; in the science housekeeping (non-     
+realtime portion) , the corresponding "sticky" version of the flag            
+indicates whether the sensor was at safing level 1 at any time over the       
+gamma ray integration period and should be referenced                         
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+118. bgo_level_2_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO gamma sensor level 2 safing flag - indicates whether        
+this sensor is currently (at the time of the snapshot sampling) in safing     
+level 2; this is a useful value in the realtime snapshot but not in the       
+science snapshots since in that case it will only reflect the safing state    
+at the start of the integration period; in the science housekeeping (non-     
+realtime portion) , the corresponding "sticky" version of the flag            
+indicates whether the sensor was at safing level 2 at any time over the       
+gamma ray integration period and should be referenced                         
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+119. spare4                                                                   
+                                                                              
+ minimum value - N/A                                                          
+ maximum value - N/A                                                          
+ units - N/A                                                                  
+ definition - spare                                                           
+                                                                              
+120. xray_integr_time                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - Xray integration time - the most recently cmded Xray            
+integration time in seconds;                                                  
+ cmd opcode 0xf302                                                            
+ ground conversion: time in seconds                                           
+ initial value: 100 seconds                                                   
+                                                                              
+121. hvps_on_off                                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - HVPS on/off - the most recently cmded state for HVPS power;     
+ cmd opcode 0xf31a                                                            
+ ground conversion: 0=off, 1=on                                               
+ initial value: 0=off                                                         
+                                                                              
+122. pin_sensor_mask_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - PIN solar monitor sensor mask flag - the most recently cmded    
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+123. gas_sensor_mask_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gas solar monitor sensor mask flag - the most recently cmded    
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+124. al_sensor_mask_flg                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Al filtered Xray sensor mask flag - the most recently cmded     
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+125. mg_sensor_mask_flg                                                       
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Mg filtered Xray sensor mask flag - the most recently cmded     
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+126. unf_sensor_mask_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - unfiltered Xray sensor mask flag - the most recently cmded      
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+127. bgo_sensor_mask_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - BGO gamma ray sensor mask flag - the most recently cmded        
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion: 0=this sensor masked, 1=this sensor unmasked              
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+128. nai_sensor_mask_flg                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI gamma ray sensor mask flag - the most recently cmded        
+mask state for this sensor;                                                   
+ cmd opcode 0xf31a                                                            
+ ground conversion:                                                           
+ 0=this sensor masked, 1=this sensor unmasked                                 
+ initial value: 1=this sensor unmasked                                        
+                                                                              
+129. unf_xray_rise_time_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - unfiltered Xray rise time discriminator threshold; events       
+with rise times greater than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf315                                                            
+ ground conversion: equates to roughly 0-1000 nano-second rise times          
+(non-linearly); a calibration curve is needed to determine the exact          
+correspondence of commanded thresholds to rise times                          
+ initial value: 135 = ~0.5 micro-sec rise time                                
+                                                                              
+130. mg_rise_time_thresh                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Mg filtered Xray rise time discriminator threshold; events      
+with rise times greater than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf315                                                            
+ ground conversion: equates to roughly 0-1000 nano-second rise times          
+(non-linearly); a calibration curve is needed to determine the exact          
+correspondence of commanded thresholds to rise times                          
+ initial value: 135 = ~0.5 micro-sec rise time                                
+                                                                              
+131. al_rise_time_thresh                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Al filtered Xray rise time discriminator threshold; events      
+with rise times greater than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf315                                                            
+ ground conversion: equates to roughly 0-1000 nano-second rise times          
+(non-linearly); a calibration curve is needed to determine the exact          
+correspondence of commanded thresholds to rise times                          
+ initial value: 135 = ~0.5 micro-sec rise time                                
+                                                                              
+132. gas_rise_time_thresh                                                     
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - gas solar monitor rise time discriminator threshold; events     
+with rise times greater than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf315                                                            
+ ground conversion: equates to roughly 0-1000 nano-second rise times          
+(non-linearly); a calibration curve is needed to determine the exact          
+correspondence of commanded thresholds to rise times                          
+ initial value: 135 = ~0.5 micro-sec rise time                                
+                                                                              
+133. unf_rise_time_valid_thresh                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - unfiltered Xray rise time valid discriminator threshold;        
+events with energy exceeding the threshold will be rejected based on the      
+rise time discrimination flag - the most recently cmded value for this        
+threshold;                                                                    
+ cmd opcode 0xf316                                                            
+ ground conversion: cmd param = energy_level(keV)*25.6                        
+ The cmd param range (0-255) produces a range energy thresholds from 0 keV    
+to ~10 keV.                                                                   
+ initial value: 51 = ~2 keV                                                   
+                                                                              
+134. mg_rise_time_valid_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Mg filtered Xray rise time valid discriminator threshold;       
+events with energy exceeding the threshold will be rejected based on the      
+rise time discrimination flag - the most recently cmded value for this        
+threshold;                                                                    
+ cmd opcode 0xf316                                                            
+ ground conversion: cmd param = energy_level(keV)*25.6                        
+ The cmd param range (0-255) produces a range energy thresholds from 0 keV    
+to ~10 keV.                                                                   
+ initial value: 51 = ~2 keV                                                   
+                                                                              
+135. al_rise_time_valid_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Al filtered Xray rise time valid discriminator threshold;       
+events with energy exceeding the threshold will be rejected based on the      
+rise time discrimination flag - the most recently cmded value for this        
+threshold;                                                                    
+ cmd opcode 0xf316                                                            
+ ground conversion: cmd param = energy_level(keV)*25.6                        
+ The cmd param range (0-255) produces a range energy thresholds from 0 keV    
+to ~10 keV.                                                                   
+ initial value: 51 = ~2 keV                                                   
+                                                                              
+136. gas_rise_time_valid_thresh                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - gas solar monitor rise time valid discriminator threshold;      
+events with energy exceeding the threshold will be rejected based on the      
+rise time discrimination flag - the most recently cmded value for this        
+threshold;                                                                    
+ cmd opcode 0xf316                                                            
+ ground conversion: cmd param = energy_level(keV)*25.6                        
+ The cmd param range (0-255) produces a range energy thresholds from 0 keV    
+to ~10 keV.                                                                   
+ initial value: 51 = ~2 keV                                                   
+                                                                              
+137. gamma_ray_integr_time                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - Gamma ray integration time - the most recently cmded gamma      
+ray integration time in seconds;                                              
+ cmd opcode 0xf30e                                                            
+ ground conversion: time in seconds                                           
+ initial value: 1200 seconds (20 minutes)                                     
+                                                                              
+138. gamma_sing_esc_wind_center                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value -1023                                                          
+ units - N/A                                                                  
+ definition - gamma ray single escape window center bin - the most            
+recently cmded center energy bin for the gamma ray single escape peak         
+histogram; this histogram accumulates gamma ray single escape events          
+within a "window" centered at this bin with cmd specified width;              
+ cmd opcode 0xf310                                                            
+ ground conversion: window center in energy bins                              
+ initial value: bin 52 = ~ 0.511 MeV energy bin, the expected "single         
+escape" event energy                                                          
+                                                                              
+139. gamma_sing_esc_wind_width                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 63                                                           
+ units - N/A                                                                  
+ definition - gamma ray single escape window width - the most recently        
+cmded width for the gamma ray single escape peak histogram formation;         
+gamma ray single escape events within the energy window defined by the        
+cmded window center and this width are accumulated in this histogram;         
+effective window width is forced odd for XGRS software convenience but the    
+value actually cmded appears in this telemetry field;                         
+ cmd opcode 0xf310                                                            
+ ground conversion: window width in energy bins (forced to an odd value,      
+cmd param + 1, in case cmd param is even)                                     
+ initial value: 19 bins wide                                                  
+                                                                              
+140. gamma_doub_esc_wind_center                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1023                                                         
+ units - N/A                                                                  
+ definition - gamma ray double escape window center bin - the most            
+recently cmded center energy bin for the gamma ray double escape peak         
+histogram; this histogram accumulates gamma ray double escape events          
+within a "window" centered at this bin with cmd specified width;              
+ cmd opcode 0xf311                                                            
+ ground conversion: window center in energy bins                              
+ initial value: bin104 = ~ target 1.022 MeV energy bin, the expected          
+"double escape" event energy                                                  
+                                                                              
+141. gamma_doub_esc_wind_width                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 63                                                           
+ units - N/A                                                                  
+ definition - gamma ray double escape window width - the most recently        
+cmded width for the gamma ray double escape peak histogram formation;         
+gamma ray double escape events within the energy window defined by the        
+cmded window center and this width are accumulated in this histogram;         
+effective window width is forced odd for XGRS software convenience but the    
+value actually cmded appears in this telemetry field;                         
+ cmd opcode 0xf311                                                            
+ ground conversion: window width in energy bins (forced to an odd value,      
+cmd param + 1, in case cmd param is even)                                     
+ initial value: 21 bins wide                                                  
+                                                                              
+142. nai_low_level_ampl_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - NaI gamma ray lower level discriminator threshold; events       
+with energy less than the threshold will be rejected - the most recently      
+cmded value for this threshold;                                               
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 3.413 * cmd param                  
+ This conversion yields a target energy bin discrimination range of 0 to      
+~870.                                                                         
+ initial value: 3 = ~ target energy bin# 10                                   
+                                                                              
+143. bgo_low_level_ampl_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - BGO gamma ray lower level discriminator threshold; events       
+with energy less than the threshold will be rejected - the most recently      
+cmded value for this threshold;                                               
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 3.413 * cmd param                  
+ This conversion yields a target energy bin discrimination range of 0 to      
+~870.                                                                         
+ initial value: 3 = ~ target energy bin# 10                                   
+                                                                              
+144. unf_low_level_ampl_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - unfiltered Xray lower level discriminator threshold; events     
+with energy less than the threshold will be rejected - the most recently      
+cmded value for this threshold;                                               
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 0.8533 * cmd param                 
+ This conversion yields a target energy bin discrimination range of 0 to      
+~218.                                                                         
+ initial value: 15 = ~ target energy bin# 13                                  
+                                                                              
+145. mg_low_level_ampl_thresh                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Mg filtered Xray lower level discriminator threshold; events    
+with energy less than the threshold will be rejected - the most recently      
+cmded value for this threshold;                                               
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 0.8533 * cmd param                 
+ This conversion yields a target energy bin discrimination range of 0 to      
+~218.                                                                         
+ initial value: 15 = ~ target energy bin# 13                                  
+                                                                              
+146. al_low_level_ampl_thresh                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Al filtered Xray lower level discriminator threshold; events    
+with energy less than the threshold will be rejected - the most recently      
+cmded value for this threshold;                                               
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 0.8533 * cmd param                 
+ This conversion yields a target energy bin discrimination range of 0 to      
+~218.                                                                         
+ initial value: 15 = ~ target energy bin# 13                                  
+                                                                              
+147. gas_low_level_ampl_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - gas solar monitor Xray lower level discriminator threshold;     
+events with energy less than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 0.8533 * cmd param                 
+ This conversion yields a target energy bin discrimination range of 0 to      
+~218.                                                                         
+ initial value: 15 = ~ target energy bin# 13                                  
+                                                                              
+148. pin_low_level_ampl_thresh                                                
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - PIN solar monitor Xray lower level discriminator threshold;     
+events with energy less than the threshold will be rejected - the most        
+recently cmded value for this threshold;                                      
+ cmd opcode 0xf314                                                            
+ ground conversion: target energy bin# = ~ 0.8533 * cmd param                 
+ This conversion yields a target energy bin discrimination range of 0 to      
+~218.                                                                         
+ initial value: 37 = ~ target energy bin# 32                                  
+                                                                              
+149. gamma_ray_sensor_temp                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 4095                                                         
+ units - N/A                                                                  
+ definition - gamma ray sensor temp. (avg of 4 converted samples)             
+ hk int (SRS log. ch. 21)                                                     
+ target temp = ~ 0.1248 * downlinked value - 280.03                           
+                                                                              
+150. nai_level_1_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI gamma ray sensor level one safing flag - indicates          
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 1; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 1 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+151. unf_level_1_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - unfiltered Xray sensor level one safing flag - indicates        
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 1; this is a useful value in the realtime snapshot but not in    
+the science                                                                   
+ snapshots since in that case it will only reflect the safing state at the    
+start of the integration period; in the                                       
+ science housekeeping (non-realtime portion), the corresponding "sticky"      
+version of the flag indicates                                                 
+ whether the sensor was at safing level 1 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+152. mg_level_1_safing_flg                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Mg filtered Xray sensor level one safing flag - indicates       
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 1; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 1 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+153. al_level_1_safing_flg                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Al filtered Xray sensor level one safing flag - indicates       
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 1; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 1 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+154. gas_level_1_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gas solar monitor Xray sensor level one safing flag -           
+indicates whether this sensor is currently (at the time of the snapshot       
+sampling) in safing level 1; this is a useful value in the realtime           
+snapshot but not in the science snapshots since in that case it will only     
+reflect the safing state at the start of the integration period; in the       
+science housekeeping (non-realtime portion), the corresponding "sticky"       
+version of the flag indicates                                                 
+ whether the sensor was at safing level 1 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+155. pin_level_1_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - PIN solar monitor Xray sensor level one safing flag -           
+indicates whether this sensor is currently (at the time of the snapshot       
+sampling) in safing level 1; this is a useful value in the realtime           
+snapshot but not in the science snapshots since in that case it will only     
+reflect the safing state at the start of the integration period; in the       
+science housekeeping (non-realtime portion), the corresponding "sticky"       
+version of the flag indicates whether the sensor was at safing level 1 at     
+any time over the gamma ray integration period and should be referenced       
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 1                             
+ 1=this sensor is currently in safing level 1                                 
+ initial value: 0=this sensor is not currently in safing level 1              
+                                                                              
+156. nai_level_2_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - NaI gamma ray sensor level two safing flag - indicates          
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 2; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 2 at any time over the gamma ray      
+integration period and should be eferenced                                    
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+157. unf_level_2_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - unfiltered Xray sensor level two safing flag - indicates        
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 2; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 2 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+158. mg_level_2_safing_flg                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Mg filtered Xray sensor level two safing flag - indicates       
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 2; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 2 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+159. al_level_2_safing_flg                                                    
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - Al filtered Xray sensor level two safing flag - indicates       
+whether this sensor is currently (at the time of the snapshot sampling) in    
+safing level 2; this is a useful value in the realtime snapshot but not in    
+the science snapshots since in that case it will only reflect the safing      
+state at the start of the integration period; in the science housekeeping     
+(non-realtime portion), the corresponding "sticky" version of the flag        
+indicates                                                                     
+ whether the sensor was at safing level 2 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+160. gas_level_2_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - gas solar monitor Xray sensor level two safing flag -           
+indicates whether this sensor is currently (at the time of the snapshot       
+sampling) in safing level 2; this is a useful value in the realtime           
+snapshot but not in the science snapshots since in that case it will only     
+reflect the safing state at the start of the integration period; in the       
+science housekeeping (non-realtime portion), the corresponding "sticky"       
+version of the flag indicates                                                 
+ whether the sensor was at safing level 2 at any time over the gamma ray      
+integration period and should be referenced                                   
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+161. pin_level_2_safing_flg                                                   
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1                                                            
+ units - N/A                                                                  
+ definition - PIN solar monitor Xray sensor level two safing flag -           
+indicates whether this sensor is currently (at the time of the snapshot       
+sampling) in safing level 2; this is a useful value in the realtime           
+snapshot but not in the science snapshots since in that case it will only     
+reflect the safing state at the start of the integration period; in the       
+science housekeeping (non-realtime portion), the corresponding "sticky"       
+version of the flag indicates whether the sensor was at safing level 2 at     
+any time over the gamma ray integration period and should be referenced       
+ ground conversion:                                                           
+ 0=this sensor is not currently in safing level 2                             
+ 1=this sensor is currently in safing level 2                                 
+ initial value: 0=this sensor is not currently in safing level 2              
+                                                                              
+162. xray_sens_safing_rest_level                                              
+                                                                              
+ minimum value - 1                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Xray sensor safing/restore interval - the most recently         
+cmded value for this interval; the time in minutes between automated          
+attempts to restore an Xray sensor in safing level 1 to nominal safing        
+level 0; cmd opcode 0xf31d                                                    
+ ground conversion: time in minutes                                           
+ initial value: 60 minute intervals between retries                           
+                                                                              
+163. gamma_sens_safing_rest_level                                             
+                                                                              
+ minimum value - 1                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - gamma ray sensor safing/restore interval - the most recently    
+cmded value for this interval; the time in minutes between automated          
+attempts to restore a gamma ray sensor in safing level 1 to nominal safing    
+level 0;                                                                      
+ cmd opcode 0xf31d                                                            
+ ground conversion: time in minutes                                           
+ initial value: 60 minute intervals between retries                           
+                                                                              
+164. xray_safing_rest_max_retry                                               
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - Xray sensor safing/restore maximum retries - the most           
+recently cmded value for the maximum number of times the XGRS software        
+will autonomously attempt to restore an Xray sensor from safing level 1 to    
+nominal safing level 0;                                                       
+ cmd opcode 0xf31e                                                            
+ ground conversion: number of retries                                         
+ initial value: maximum 6 retries                                             
+                                                                              
+165. gamma_safing_rest_max_retry                                              
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - gamma ray sensor safing/restore maximum retries - the most      
+recently cmded value for the maximum number of times the XGRS software        
+will autonomously attempt to restore a gamma ray sensor from safing level     
+1 to nominal safing level 0;                                                  
+ cmd opcode 0xf31e                                                            
+ ground conversion: number of retries                                         
+ initial value: maximum 6 retries                                             
+                                                                              
+166. gamma_heater_duty_cycle                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 100                                                          
+ units - N/A                                                                  
+ definition - gamma ray heater duty cycle - the percentage of time the        
+gamma ray heater is on over a 100 second period; the duty cycle is            
+continuously computed; at the time of snapshot sampling the duty cycle for    
+the most recently completed 100 second period is the sampled value            
+ ground conversion: duty cycle as a percentage = downlinked value / 100       
+                                                                              
+167. gamma_sens_safing_thresh                                                 
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - gamma ray sensor safing threshold - most recently cmded         
+param for maximum "safe" raw hardware event counter rate per second for       
+each gamma ray sensor;                                                        
+ cmd opcode 0xf31c                                                            
+ ground conversion: none (note: the 8 MSBs of this value which are not        
+downlinked are all 0)                                                         
+ initial value: 30,000 counts per second maximum                              
+                                                                              
+168. hvps_current                                                             
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 255                                                          
+ units - N/A                                                                  
+ definition - HVPS current                                                    
+ (8MSBs/12 partially converted by XGRS software)                              
+ hk int (SRS log. ch. 9)                                                      
+ target current = ~ 3.9878 * downlinked value - 2.2 mA                        
+                                                                              
+169. bgo_proton_flare_thresh                                                  
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - BGO gamma ray proton flare detection threshold (16LSBs/24) -    
+the most recently cmded value for detecting a BGO gamma ray proton flare;     
+each second accumulation of the BGO raw event counter is compared to this     
+threshold; if the raw event counter value exceeds the threshold, the gamma    
+ray sensors will be masked                                                    
+ cmd opcode 0xf317                                                            
+ ground conversion:                                                           
+ reported threshold = actual threshold(16 MSBs) note: it is not               
+anticipated that thresholds in excess of                                      
+ 16-bits will be needed                                                       
+ initial value: 10,000 counts per second maximum                              
+                                                                              
+                                                                              
+170.  summ_gamma_nai_spect                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 15*2**(18) = 3932160                                  
+        units - N/A                                                           
+        definition - Integral NaI spectrum - binned and compressed;           
+                     each byte encodes unsigned exponent and mantissa for 64  
+                     compressed NaI integral histogram bins;                  
+                     see Fig 3-38a given in the Expanded XGRS Software Version
+                     Telemetry Descriptions dated 6/5/98 for encoding/decoding
+                                         ground conversion:                   
+                     decompressed summary science data can be computed on the 
+                     ground for each 1-byte (exponent, mantissa) compressed   
+                     summary value, as follows:                               
+                       decompressed value(16-bit = mantissa*2**(exponent+n)   
+                         where n=1 for Xray data                              
+                               n=3 for gamma ray data                         
+                     each decompressed spectrum (16, 16-bit values) represents
+                     a binned form of the original non-binned/non-compressed  
+                     spectrum; the summary spectra cannot be expanded to the  
+                     unbinned form                                            
+                                                                              
+171.  summ_gamma_bgo_spect                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 15*2**(18) = 3932160                                  
+        units - N/A                                                           
+        definition - Integral BGO spectrum - binned and compressed;           
+                     each byte encodes unsigned exponent and mantissa for 64  
+                     compressed BGO integral histogram bins;                  
+                     see Fig 3-38a given in the Expanded XGRS Software Version
+                     Telemetry Descriptions dated 6/5/98 for encoding/decoding
+                                         ground conversion:                   
+                     decompressed summary science data can be computed on the 
+                     ground for each 1-byte (exponent, mantissa) compressed   
+                     summary value, as follows:                               
+                       decompressed value(16-bit = mantissa*2**(exponent+n)   
+                         where n=1 for Xray data                              
+                               n=3 for gamma ray data                         
+                     each decompressed spectrum (16, 16-bit values) represents
+                     a binned form of the original non-binned/non-compressed  
+                     spectrum; the summary spectra cannot be expanded to the  
+                     unbinned form                                            
+                                                                              
+------------------------------------------------------------------------------
+                                                                              
+NEAR KEYWORDS and Examples                                                    
+                                                                              
+The following list of NEAR keywords reflects the current status and can be    
+modified as required.                                                         
+                                                                              
+EXTNAME = 'BINARY_TBL'         / name of this binary table extension          
+DATE    = '25/08/98'           / Current Date                                 
+ORIGIN  = 'NEAR-4  '           / Originator Science Data Center               
+DATE-OBS= '20/01/98'           / dd/mm/yy                                     
+INSTRUME= 'NEAR-XGR'           / Spacecraft Instrument                        
+AUTHOR  = 'NEAR-SDC'           / Contact point for this data                  
+COMMENT   NEAR Project/MSI Reserved Keywords: NEAR-001 Through NEAR-199       
+NEAR-001=                57600 / Data offset from start of file (bytes)       
+NEAR-002= '1.01    '           / Version of this file format                  
+NEAR-003= 'GRS98020.FIT'       / Name of this file                            
+NEAR-004= '14:25:04Z'          / Time that this file was created              
+NEAR-005= 'GRS.001 '           / Product ID                                   
+NEAR-006= 'PDSGRS  '           / Program name that produced this file         
+NEAR-007= 'v0-00   '           / Version # of above program                   
+COMMENT   XGRS Reserved Keywords: NEAR-300 Through NEAR-399                   
+NEAR-301= 'XGR     '           / Instrument Type                              
+NEAR-302= 'GAMMASUMM '         / Sensor Type                                  
+NEAR-303=             60664607 / Initial MET in File                          
+NEAR-304=             60750707 / Final MET in File                            
+END                                                                           

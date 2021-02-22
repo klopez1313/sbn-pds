@@ -1,0 +1,880 @@
+PDS_VERSION_ID        = PDS3                                                   
+RECORD_TYPE           = STREAM                                                 
+OBJECT                = TEXT                                                   
+  INTERCHANGE_FORMAT  = ASCII                                                  
+  PUBLICATION_DATE    = 2001-09-01                                             
+  NOTE                = "N/A"                                                  
+                                                                               
+                                                                               
+XGRS Instrument Users' Guide                                                   
+                                                                               
+Richard Starr                                                                  
+Code 690.2                                                                     
+NASA/GSFC                                                                      
+301-286-5073                                                                   
+richard.starr@gsfc.nasa.gov                                                    
+                                                                               
+Table of Contents                                                              
+                                                                               
+        Table of Contents                                      ii              
+1.0     Scope                                                   1              
+2.0     Overview                                                1              
+3.0     Commands, Fragments, and Canned Activity Sequences      1              
+        3.1     Commands                                        2              
+        3.2     Fragments                                       2              
+        3.3     Canned Activity Sequences                       3              
+4.0     SASF and SSF Files                                      4              
+5.0     Spacecraft Pointing                                     6              
+        5.1     GNC CASs                                        7              
+        5.2     SASF and SSF Files with GNC CAS                 8              
+6.0     SEQGEN                                                 11              
+        6.1     Scheduling Rules                               13              
+7.0     XGRS Baseline Configuration                            14              
+8.0     Data Volume                                            16              
+9.0     Useful Documents                                       16              
+        Appendix A                                             18              
+                                                                               
+                                                                               
+                                                                               
+1.0     Scope                                                                  
+                                                                               
+The purpose of this document is to provide sufficient background               
+information and description of XGRS operations to assist any member of         
+the XGRS team to safely and correctly command the XGRS with only               
+limited one-on-one training.  Since this document is intended for XGRS         
+team members it is assumed that the user already has a basic knowledge         
+of X-ray and gamma-ray detectors and in particular of the NEAR XGRS            
+detectors.  It is also assumed that the user is familiar with the              
+science goals of the NEAR mission and more specifically of the XGRS.           
+                                                                               
+2.0     Overview                                                               
+                                                                               
+Commanding the XGRS is accomplished through the use of the SEQGEN              
+software package developed by JPL and made available to the NEAR               
+project and the individual instrument teams.  A version of this                
+software package resides on the APL computer NEARMOH5 where an account         
+has been provided to the XGRS command sequencer, Richard Starr (GSFC;          
+301-286-5073; richard.starr@gsfc.nasa.gov).  Additional accounts can           
+be obtained as necessary.  Command sequence files are generated on             
+NEARMOH5 and stored in the user's directory.  Separate sequences are           
+generated for the X-ray and gamma-ray instruments.  These command              
+sequences include not only instrument level commands, but also                 
+spacecraft pointing commands when XGRS has that responsibility.                
+Sequence files are then copied to the directory                                
+/project/nearmops/production/sasf/xgrs on NEARMOH5.  From there they           
+are combined with other instrument sequences by Yanping Guo (JHU/APL;          
+240-228-7541; yanping.guo@jhuapl.edu) and forwarded to NEAR mission            
+operations where they are encoded for upload to the spacecraft.  All           
+sequences must be approved by the XGRS instrument engineer, John               
+Goldsten (JHU/APL; 240-228-8432; John.Goldsten@jhuapl.edu), before             
+they can be merged with other instrument sequences for that week.              
+Mission operations provides tracking and op-nav schedule information           
+to the science teams approximately four weeks prior to command                 
+execution on the spacecraft.  Science teams provide preliminary and            
+final sequences about 2.5 weeks and 1.5 weeks prior to command                 
+execution, respectively.  Between delivery of preliminary and final            
+sequences science teams negotiate any changes due to conflicts with            
+other science teams or mission operations. Prior to orbital operations         
+at Eros, the instrument with primary pointing control/responsibility           
+for any particular week will have already been decided.  It is hoped           
+        that this will eliminate most conflicts.                               
+                                                                               
+3.0     Commands, Fragments, and Canned Activity Sequences                     
+                                                                               
+The basic command nomenclature and description for XGRS can be found           
+in NEAR X-ray/Gamma Ray (XGRS) DPU Software Requirements                       
+Specification, JHU/APL 7358-9002 Version 7, 7/8/99, and NEAR XGRS              
+Software Version 7 Expanded Telemetry Descriptions, Revision 7/8/99.           
+While the primitive command structure described in these documents may         
+be used to command the XGRS directly, this is only permitted in a few          
+situations, and only by the instrument engineer.  As explained above,          
+the science teams use SEQGEN to generate command sequences.  This adds         
+two levels of buffer between the basic XGRS commands and the command           
+sequence files delivered to mission ops for execution: fragments and           
+canned activity sequences (CAS).                                               
+                                                                               
+3.1     Commands                                                               
+                                                                               
+Many commands are available to control and configure the XGRS                  
+instrument.  Some of the commands have no parameters associated with           
+them, and others have one or two parameters.  The command that sets            
+the gamma-ray integration time period has one parameter:                       
+XG_GR_INT_PER,param1.  Param1 is the desired integration period in             
+seconds and can vary from 0 to 65535.  Typical integration periods for         
+the gamma-ray detector during orbital operations will be 1200 seconds.         
+An example of a command with no parameters is the one that ends the            
+gamma--ray integration period immediately (within one second),                 
+regardless of the current settings: XG_END_GR_INT. An example of an            
+XGRS command that accepts two parameters is the one used to adjust the         
+high voltages for any of the seven detectors: NaI, BGO, Al filtered            
+proportional counter, Mg filtered proportional counter, unfiltered             
+proportional counter, solar monitor proportional counter and solar             
+monitor PIN diode.  The mnemonic for this command is                           
+XG_HV_SETPT,param1,param2.  The first parameter identifies the                 
+detector high voltage to be changed, and the second the high voltage           
+to be applied to that detector.  So a command to adjust the NaI high           
+voltage to 1394 volts would look something like:                               
+XG_HV_SETPT,"NAI",2269.  (The second parameter has a scaling factor of         
+1.6278.)  XG_GR_INT_PER and XG_HV_SETPT are executed when the                  
+integration period ends so that individual integration periods are not         
+corrupted by changing parameters.  As mentioned above, XG_END_GR_INT           
+is executed immediately.                                                       
+                                                                               
+3.2     Fragments                                                              
+                                                                               
+Commands are combined to make fragments.  The fragment that is used to         
+control the NaI and BGO high voltages is called gray_hv_on:                    
+                                                                               
+XGRS(gray_hv_on,,                                                              
+    PARAMETERS,                                                                
+        NAI_hv(                                                                
+            TYPE,STRING,                                                       
+            DEFAULT,\"2269"\,                                                  
+            HELP,\"Range is 0...2447 or NOCHANGE"\                             
+        ),                                                                     
+        BGO_hv(                                                                
+            TYPE,STRING,                                                       
+            DEFAULT,\"2223"\,                                                  
+            HELP,\"Range is 0...2447 or NOCHANGE"\                             
+        ),                                                                     
+    end,                                                                       
+    STEPS,                                                                     
+        note(1,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Duration: 2 seconds"\                                       
+        ),                                                                     
+        note(2,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Shared resources: None"\                                    
+        ),                                                                     
+        note(3,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,                                                              
+            \"Description: Gamma-ray Spectrometer Voltage Set Points for On"\  
+        ),                                                                     
+        command(4,                                                             
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            INCLUSION_CONDITION,\NAI_hv != "NOCHANGE"\,                        
+            XG_HV_SETPT("NAI",atoi(NAI_hv))                                    
+        ),                                                                     
+        command(5,                                                             
+            SCHEDULED_TIME,\00:00:01\,FROM_ACTIVITY_START,                     
+            INCLUSION_CONDITION,\BGO_hv != "NOCHANGE"\,                        
+            XG_HV_SETPT("BGO",atoi(BGO_hv))                                    
+        ),                                                                     
+        command(6,                                                             
+            SCHEDULED_TIME,\00:00:02\,FROM_ACTIVITY_START,                     
+            XG_END_GR_INT()                                                    
+        ),                                                                     
+    end                                                                        
+) ##end ACTIVITY_TYPE gray_hv_on                                               
+                                                                               
+Included within this fragment are default values for the parameters            
+NAI_hv and BGO_hv.  They are 2269 for NaI and 2223 for BGO, which              
+corresponds to 1394 and 1366 volts for NaI and BGO, respectively.  The         
+sections of this fragment that contain command 4 and command 5 invoke          
+the primitive command XG_HV_SETPT described in the previous section.           
+Command 4 is hard-wired for the NaI: param1 = "NAI".  Command 5 is             
+hard-wired for the BGO: param1 = "BGO".  The second parameter that             
+specifies the high voltage setting  (NAI_hv or BGO_hv) can be                  
+"NOCHANGE" or any value from 0 to 2447 which allows an upper limit of          
+approximately 1500 volts for either detector.                                  
+                                                                               
+The final section of this fragment, which contains command 6 forces an         
+end to the gamma-ray integration period.  This allows the high voltage         
+change to be executed immediately, rather than waiting for the                 
+gamma-ray integration period to end normally.                                  
+                                                                               
+3.3     Canned Activity Sequences                                              
+                                                                               
+Fragments are combined to make a canned activity sequence or CAS.  It          
+is the CASs that are used by SEQGEN and that the instrument command            
+sequencer must use in order to command the instrument.  If a command           
+has not been incorporated into a fragment and that fragment                    
+incorporated into a CAS, that command is not available to the command          
+sequencer.  The CAS that controls gamma-ray high voltage is                    
+CAS_xgrs_gray_hv:                                                              
+                                                                               
+XGRS(CAS_xgrs_gray_hv,,                                                        
+    PARAMETERS,                                                                
+        P1_NAI_hv(                                                             
+            TYPE,STRING,                                                       
+            DEFAULT,\"2269"\,                                                  
+            HELP,\"Range is 0...2447 or NOCHANGE"\                             
+        ),                                                                     
+        P2_BGO_hv(                                                             
+            TYPE,STRING,                                                       
+            DEFAULT,\"2223"\,                                                  
+            HELP,\"Range is 0...2447 or NOCHANGE"\                             
+        ),                                                                     
+    end,                                                                       
+    STEPS,                                                                     
+        note(1,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Duration: 00:00:02"\                                        
+        ),                                                                     
+        note(2,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Shared resources: None"\                                    
+        ),                                                                     
+        note(3,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Description: Gamma-ray Voltage Set Points for On"\          
+        ),                                                                     
+        activity(4,                                                            
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            XGRS(gray_hv_on,P1_NAI_hv,P2_BGO_hv)                               
+        ),                                                                     
+    end                                                                        
+) ##end ACTIVITY_TYPE CAS_xgrs_gray_hv                                         
+                                                                               
+                                                                               
+The structure is similar to that of the fragment.  Parameters are              
+named and default values given first.  The section of the CAS that             
+contains activity 4 incorporates the fragment gray_hv_on.  Only two            
+parameters need to be specified: P1_NAI_hv for the NaI and P2_BGO_hv           
+for the BGO.  This particular CAS contains only one fragment, but any          
+        number of fragments may be contained within a single CAS.              
+                                                                               
+All fragments and CASs for the XGRS have been written by Rick Shelton          
+(JHU/APL; 240-228-8599; Richard.Shelton@jhuapl.edu) and reviewed and           
+approved by Richard Starr and John Goldsten.  Rick Shelton is the              
+person to contact if any changes need to be made to existing fragments         
+or CASs or if new ones need to be generated.  All fragments and CASs           
+must be verified on the brass-board and approved by the instrument             
+command sequencer, instrument engineer, and mission operations, so             
+changes and additions can take time to accomplish.  Simple changes             
+such as adjusting default parameters may not need to be run through            
+the brass-board.                                                               
+                                                                               
+4.0     SASF and SSF Files                                                     
+                                                                               
+In order to send commands to an instrument or pointing commands to the         
+spacecraft, it is necessary to create a file that contains all the             
+CASs for the specified time period - normally one week beginning on            
+Monday.  This is accomplished within SEQGEN.  SEQGEN generates several         
+files as its output.  The two most important for our purposes are the          
+sasf and ssf files.  The sasf files contain the time-ordered and               
+time-tagged CASs.  These files can be read by SEQGEN and edited as             
+needed.   It is these files (after being combined with other                   
+instrument sasf files) that are delivered to mission ops.  The ssf             
+files contain similar information to the sasf, but display the more            
+primitive command structures and actual execution times in both MET            
+and UTC.  It is a good idea to examine the ssf file before delivering          
+the sasf file to Yanping.  Some errors in sequencing are more easily           
+picked up here than in the sasf file.                                          
+                                                                               
+As mentioned above, commanding is normally for a one week period,              
+beginning on Monday.  The naming convention for sasf and ssf files is          
+YYDDD_NAME.sasf or YYDDD_NAME.ssf, where YY=year, DDD=day of year for          
+the first day of the week, and NAME is the name of the instrument.  So         
+the file that would contain the CASs for the GRS for the week                  
+beginning 14 December 1998 would be 98348_GRS.sasf.  The corresponding         
+ssf file is just 98348_GRS.ssf.  For that same week the XRS files are          
+98348_XRS.sasf and 98348_XRS.ssf.                                              
+                                                                               
+All CASs are available within SEQGEN when creating either the XRS or           
+the GRS sasf files.  All commands can be combined into a single file           
+using either instrument name.  Having the ability to separate the              
+commands for the two instruments is useful in those cases where XRS            
+and GRS commands may overlap in time.  This can be handled within a            
+single sasf file, but separating them into two files makes the                 
+activity easier.                                                               
+                                                                               
+The sasf file for the week beginning 14 December 1998 (98348_GRS.sasf)         
+minus a lot of header information is:                                          
+                                                                               
+************************************************************                   
+$$EOH                                                                          
+$$EOD                                                                          
+request(grs_hv,                                                                
+                START_TIME, 1998-349T12:00:00,                                 
+                REQUESTOR, "Richard Starr GSFC",                               
+                PROCESSOR, "1",                                                
+                KEY, "GRS")                                                    
+                                                                               
+        activity(1,                                                            
+                SCHEDULED_TIME,\0:0:0\,FROM_REQUEST_START,                     
+                XGRS(CAS_xgrs_bgo_coinc_win,"54","19","105","21")              
+        ),                                                                     
+        activity(2,                                                            
+                SCHEDULED_TIME,\0:0:2\,FROM_PREVIOUS_START,                    
+                XGRS(CAS_xgrs_gray_hv,"2219","2227")                           
+        ),                                                                     
+end;                                                                           
+                                                                               
+$$EOF                                                                          
+                                                                               
+Within SEQGEN one generates requests and requests can contain one or           
+more activities.  In the above case activity 1 begins at the                   
+FROM_REQUEST_START time which is 12:00:00 UTC on day 349 of 1998.              
+Activity 2 begins 2 seconds after the start of the previous activity.          
+Activity 1 sets the BGO single escape coincidence window centroid              
+(54), width (19) and the BGO double escape coincidence window centroid         
+(105) and width (21).                                                          
+                                                                               
+The corresponding ssf file for this week, again without a lot of               
+header is:                                                                     
+                                                                               
+************************************************************                   
+$$EOH                                                                          
+$$SEQUENCE                                                                     
+  EXECUTE_MACRO 1998-349/02:05:00.000,0089097709:                              
+               3,CTP1,TRK_TERM_341$1_4_6_1CMD,"FBA_CONFIG"                     
+  EXECUTE_MACRO 1998-349/02:10:00.000,0089098009:                              
+               3,CTP1,TRK_TERM_341$1_4_7_5_1CMD,"GS5_POINT"                    
+  XG_SESWIN_DEF 1998-349/12:00:00.000,0089133409:3,1,grs_hv$1_4_4CMD,54,19     
+  XG_DDESWIN_DEF 1998-349/12:00:01.000,0089133410:3,1,grs_hv$1_4_5CMD,105,21   
+  XG_HV_SETPT 1998-349/12:00:02.000,0089133411:3,1,grs_hv$2_4_4CMD,"NAI",2219  
+  XG_HV_SETPT 1998-349/12:00:03.000,0089133412:3,1,grs_hv$2_4_5CMD,"BGO",2227  
+  XG_END_GR_INT 1998-349/12:00:04.000,0089133413:3,1,grs_hv$2_4_6CMD           
+$$EOS                                                                          
+$$EOF                                                                          
+                                                                               
+For each individual action the ssf file lists the XGRS command, UTC            
+execution time, MET execution time, request name, and command                  
+parameters, if any.  The ssf explicitly shows all of the commands to           
+be executed and their relative timing.  XG_SESWIN_DEF sets the single          
+escape coincidence window and is executed first at 12:00:00.  One              
+second later XG_DDESWIN_DEF sets the double escape window parameters.          
+Then XG_HV_SETPT is executed twice to set first the NaI high voltage           
+and then the BGO high voltage.  Finally, to force immediate execution,         
+XG_END_GR_INT is sent at 12:00:04.  Here, one advantage of examining           
+the ssf becomes clear.  Nothing in the sasf file or either of the CASs         
+that make up this request explicitly show the XG_END_GR_INT command.           
+It is hidden in the corresponding fragment.  (See section 3.1.)  This          
+also demonstrates why the two activities/CASs in the request were              
+arranged in this particular order.  If CAS_xgrs_gray_hv was scheduled          
+first the XG_END_GR_INT command would have been executed before the            
+BGO coincidence windows were changed forcing an end to the integration         
+period prematurely.                                                            
+                                                                               
+5.0     Spacecraft Pointing                                                    
+                                                                               
+During a significant part of the orbital mission at Eros, the XGRS             
+team will have the opportunity and responsibility of pointing the              
+spacecraft.  This will allow the XGRS team to make the best use of the         
+available observing time while the spacecraft is in low orbit.                 
+Current plans call for ~50 km orbits starting in mid-April of 2000 and         
+continuing until the end of September 2000.  There will be two                 
+additional weeks of 50-km orbits starting in mid-December 2000 and             
+35-km orbits during January 2001.  For most of these time periods,             
+XGRS will have priority.  Approximately 8 to 10 hours of each day will         
+be lost to mission operations for tracking and op-navs, but the                
+remainder of each day is available for science observations.                   
+                                                                               
+The pointing plan for the XGRS is being developed at Cornell                   
+University by Elaina McCartney (607-255-6910; emm5@cornell.edu).  Each         
+week, Elaina will provide to the XGRS command sequencer an excel               
+spreadsheet which will contain the pointing information for that week.         
+                                                                               
+Pointing the spacecraft is accomplished in the same way as commanding          
+the XGRS.  That is we use SEQGEN.  There are several guidance,                 
+navigation and control (GNC) CASs available to the XGRS team that              
+allow us to point to asteroid nadir, point off-nadir, point to a               
+specific location on the asteroid surface, and to scan around a point          
+on the asteroid surface.  It will be the responsibility of the XGRS            
+command sequencer to incorporate the pointing information provided by          
+Elaina into the sasf files that are delivered to Yanping each week.            
+                                                                               
+5.1     GNC CASs                                                               
+                                                                               
+As mentioned above, the science teams have a number of options in how          
+and where they point the spacecraft, however, for the XGRS the current         
+pointing plan requires only off-nadir pointing and target specific             
+pointing.  No scanning is currently anticipated for the XGRS to                
+accomplish its science goals.  For this reason the XGRS command                
+sequencer will need just one CAS for essentially all pointing control:         
+                                                                               
+XGRS(CAS_xgrs_gnc_point_quick,,                                                
+    PARAMETERS,                                                                
+        P1_slew_dur(                                                           
+            TYPE,DURATION,                                                     
+            RANGE,\1...900\,                                                   
+            DEFAULT,\500\,                                                     
+            HELP,\slew duration\                                               
+        ),                                                                     
+        P2_ds40_coord_sys(                                                     
+            TYPE,UNSIGNED_DECIMAL                                              
+        ),                                                                     
+        P3_aimpt_x(                                                            
+            TYPE,FLOAT                                                         
+        ),                                                                     
+        P4_aimpt_y(                                                            
+            TYPE,FLOAT                                                         
+        ),                                                                     
+        P5_aimpt_z(                                                            
+            TYPE,FLOAT                                                         
+        ),                                                                     
+    end,                                                                       
+    STEPS,                                                                     
+        note(1,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Duration: 00:00:02 + P1_slew_dur"\                          
+        ),                                                                     
+        note(2,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Shared resources: Attitude"\                                
+        ),                                                                     
+        note(3,                                                                
+            SCHEDULED_TIME,\00:00:00\,FROM_ACTIVITY_START,                     
+            TEXT,\"Description: XGRS Point NEAR Spacecraft"\                   
+        ),                                                                     
+        activity(4,                                                            
+            SCHEDULED_TIME,\00:00:00 - P1_slew_dur\,FROM_ACTIVITY_START,       
+            GNC(DS40_POINT,P1_slew_dur,P2_ds40_coord_sys,                      
+            P3_aimpt_x,P4_aimpt_y, P5_aimpt_z,0,1.0,0.0,0.0,"XGRS")            
+        ),                                                                     
+    end                                                                        
+) ##end ACTIVITY_TYPE CAS_xgrs_gnc_point_quick                                 
+                                                                               
+CAS_xgrs_gnc_point_quick was designed to minimize the number of                
+parameters that need to be specified by the command sequencer, thus            
+making the job of generating the sequence file easier and quicker, not         
+moving the spacecraft any faster!  There are five parameters that need         
+to be specified.  P1_slew_dur specifies the time required for the              
+spacecraft to move from where ever it is when XGRS takes control to            
+where we want it to point.  The default value is 500 seconds.  Under           
+most circumstances this is more time than necessary, but is a fairly           
+safe upper limit.  Since the XGRS is a fairly simple instrument to             
+operate - there are no lasers to pulse or filter wheels to rotate -            
+the XGRS will start taking asteroid data as soon as the slewing                
+maneuver is completed, even if it takes less time than specified.              
+P2_ds40_coor_sys specifies the coordinate system that will be used.            
+This will be either the nadir/sun coordinate system                            
+(P2_ds40_coor_sys=4) used when XGRS does off-nadir pointing or the             
+asteroid body fixed coordinate system (P2_ds40_coor_sys=5) used for            
+target specific pointing.  Finally, we must specify where to point the         
+spacecraft using P3_aimpt_x, P4_aimpt_y, and P5_aimpt_z.  For                  
+off-nadir pointing only azimuth and elevation need to be specified.            
+P3_aimpt_x=elevation, P4_aimpt_y=azimuth, and P5_aimpt_z=0.  Azimuth           
+should always be zero (P4_aimpt_y=0).  For target specific pointing            
+x,y,z coordinates are required.                                                
+                                                                               
+The values of these parameters and start times for each sequence are           
+contained in the spreadsheet that Elaina provides weekly.  The                 
+spreadsheet that will be used for Eros operations during the week of           
+22 May 2000 (00143) can be found in Appendix A.                                
+                                                                               
+5.2     SASF and SSF Files with GNC CAS                                        
+                                                                               
+The first two requests from 00143_XRS.sasf are shown below.                    
+                                                                               
+************************************************************                   
+$$EOH                                                                          
+$$EOD                                                                          
+request(seq_01,                                                                
+                START_TIME, 2000-143T20:49:50,                                 
+                REQUESTOR, "Richard Starr GSFC",                               
+                PROCESSOR, "1",                                                
+                KEY, "XRS")                                                    
+                                                                               
+        activity(1,                                                            
+                SCHEDULED_TIME,\00:08:30\,FROM_REQUEST_START,                  
+                XGRS(CAS_xgrs_gnc_point_quick,510,4,4,0,0)                     
+        ),                                                                     
+        activity(2,                                                            
+                SCHEDULED_TIME,\08:55:00\,FROM_PREVIOUS_START,                 
+                XGRS(CAS_xgrs_release_attitude)                                
+        ),                                                                     
+end;                                                                           
+                                                                               
+request(seq_02,                                                                
+                START_TIME, 2000-144T06:09:50,                                 
+                REQUESTOR, "Richard Starr GSFC",                               
+                PROCESSOR, "1",                                                
+                KEY, "XRS")                                                    
+                                                                               
+        activity(1,                                                            
+                SCHEDULED_TIME,\00:08:30\,FROM_REQUEST_START,                  
+                XGRS(CAS_xgrs_gnc_point_quick,510,4,4,0,0)                     
+        ),                                                                     
+        activity(2,                                                            
+                SCHEDULED_TIME,\04:50:20\,FROM_PREVIOUS_START,                 
+                XGRS(CAS_xgrs_gnc_point_quick,510,5,12.2648,0,4.46402)         
+        ),                                                                     
+        activity(3,                                                            
+                SCHEDULED_TIME,\00:44:40\,FROM_PREVIOUS_START,                 
+                XGRS(CAS_xgrs_release_attitude)                                
+        ),                                                                     
+end;                                                                           
+                                                                               
+All pointing requests end with CAS_xgrs_release_attitude.  This tells          
+the other instrument teams and mission ops that the spacecraft is now          
+free for pointing commands from some other team.  Sequence 1 starts            
+the spacecraft slew maneuver at 20:49:50, but the observation starts           
+510 seconds (00:08:30) later.  This is an off-nadir point (4), with            
+elevation=4, and azimuth=0.  Sequence 2 starts with off-nadir                  
+pointing, then switches to target specific pointing before releasing           
+attitude control.                                                              
+                                                                               
+The parameter values used in this CAS can be compared to those given           
+in the spreadsheet.  The start time of each request is the START_TIME          
+(columns J,K,L).  The first activity of each request begins                    
+FROM_REQUEST_START (column T).  The start of the observation specified         
+in the first activity (SCHEDULED_TIME) is 08:30 (510 seconds) later            
+(column Q).  Subsequent activities begin FROM_PREVIOUS_START (column           
+T) at times also specified in column P.  The CAS to be used for each           
+activity is given in column AB and the parameter values in column AA.          
+                                                                               
+In the second request above (seq_02), the slew starts at 06:09:50              
+(column L), but the first observation (activity 1) which is an                 
+off-nadir point (4) begins at 06:18:20 (column L).  Activity 2, which          
+is an asteroid body fixed pointing sequence (5), starts 04:50:20 after         
+the start of activity 1 (column Q).  This means that the observation           
+begins at 11:08:40 (column L), but the slew for activity 2 begins 510          
+seconds earlier at 11:00:10 (column I).  The duration of activity 1 is         
+then not 04:50:20, but only 04:41:40 (column U) or 16900 seconds               
+(column V).  An additional 10 seconds of pad is typically added to the         
+start time of each activity to insure no overlap.                              
+                                                                               
+Finally, since the asteroid body fixed pointing sequences are used to          
+maximize viewing time over regions of the asteroid that would                  
+otherwise have poor coverage, they get priority.  This means that              
+slewing time is extracted from sequences before and after, since they          
+are typically off-nadir pointing sequences.                                    
+                                                                               
+The portion of the 00143_XRS.ssf that corresponds to these same two requests   
+is:                                                                            
+                                                                               
+MACRO_BREAK 2000-143/20:49:48.000,0134438814:7,1,seq_01$1_4_4CMD,"CTP"         
+  FC_DS40_URAM_LD 2000-143/20:49:48.000,0134438814:7,1,seq_01$1_4_5CMD,        
+4,4.000000000000000,0.0000000000000000,0.0000000000000000,0.0000000000000000,  
+0.000000000000000,1.0000000000000000,0,0.0000000000000000,0.0000000000000000,  
+1.0000000000000000,1.0000000000000000,0.0000000000000000,0.0000000000000000,2  
+  MACRO_BREAK 2000-143/20:49:48.000,0134438814:7,1,seq_01$1_4_6CMD,"CTP"       
+  FC_PB_TLM_MODE 2000-143/20:49:49.000,0134438815:7,1,seq_01$1_4_8_9CMD,"ENA"  
+  FC_RT_TLM_MODE 2000-143/20:49:49.000,0134438815:7,1,seq_01$1_4_8_10CMD,      
+"VC0","64","0x0",0,"1","30"                                                    
+  FC_STRT_GUI_SCN 2000-143/20:49:50.000,0134438816:7,1,seq_01$1_4_11CMD,1      
+  FC_STRT_GUI_SCN 2000-143/20:49:52.000,0134438818:7,1,seq_01$1_4_13CMD,1      
+  FC_PB_TLM_MODE 2000-143/20:58:12.000,0134439318:7,1,seq_01$1_4_14_5IF_1CMD,  
+"ENA"                                                                          
+  FC_RT_TLM_MODE 2000-143/20:58:13.000,0134439319:7,1,seq_01$1_4_14_5IF_4CMD,  
+"VC0","64","0x0",0,"1","300"                                                   
+  MACRO_BREAK 2000-144/06:09:48.000,0134472415:0,1,seq_02$1_4_4CMD,"CTP"       
+  FC_DS40_URAM_LD 2000-144/06:09:48.000,0134472415:0,1,seq_02$1_4_5CMD,        
+4,4.000000000000000,0.0000000000000000,0.0000000000000000,0.0000000000000000,  
+0.000000000000000,1.0000000000000000,0,0.0000000000000000,0.0000000000000000,  
+1.0000000000000000,1.0000000000000000,0.0000000000000000,0.0000000000000000,2  
+  MACRO_BREAK 2000-144/06:09:48.000,0134472415:0,1,seq_02$1_4_6CMD,"CTP"       
+  FC_PB_TLM_MODE 2000-144/06:09:49.000,0134472416:0,1,seq_02$1_4_8_9CMD,"ENA"  
+  FC_RT_TLM_MODE 2000-144/06:09:49.000,0134472416:0,1,seq_02$1_4_8_10CMD,      
+"VC0","64","0x0",0,"1","30"                                                    
+  FC_STRT_GUI_SCN 2000-144/06:09:50.000,0134472417:0,1,seq_02$1_4_11CMD,1      
+  FC_STRT_GUI_SCN 2000-144/06:09:52.000,0134472419:0,1,seq_02$1_4_13CMD,1      
+  FC_PB_TLM_MODE 2000-144/06:18:12.000,0134472919:0,1,seq_02$1_4_14_5IF_1CMD,  
+"ENA"                                                                          
+  FC_RT_TLM_MODE 2000-144/06:18:13.000,0134472920:0,1,seq_02$1_4_14_5IF_4CMD,  
+"VC0","64","0x0",0,"1","300"                                                   
+  MACRO_BREAK 2000-144/11:00:08.000,0134489835:0,1,seq_02$2_4_4CMD,"CTP"       
+  FC_DS40_URAM_LD 2000-144/11:00:08.000,0134489835:0,1,seq_02$2_4_5CMD,        
+5,12.264799999999999,0.000000000000000,4.4640199999999997,0.0000000000000000,  
+0.000000000000000,1.0000000000000000,0,0.0000000000000000,0.0000000000000000,  
+1.0000000000000000,1.0000000000000000,0.0000000000000000,0.0000000000000000,2  
+  MACRO_BREAK 2000-144/11:00:08.000,0134489835:0,1,seq_02$2_4_6CMD,"CTP"       
+  FC_PB_TLM_MODE 2000-144/11:00:09.000,0134489836:0,1,seq_02$2_4_8_9CMD,"ENA"  
+  FC_RT_TLM_MODE 2000-144/11:00:09.000,0134489836:0,1,seq_02$2_4_8_10CMD,      
+"VC0","64","0x0",0,"1","30"                                                    
+  FC_STRT_GUI_SCN 2000-144/11:00:10.000,0134489837:0,1,seq_02$2_4_11CMD,1      
+  FC_STRT_GUI_SCN 2000-144/11:00:12.000,0134489839:0,1,seq_02$2_4_13CMD,1      
+  FC_PB_TLM_MODE 2000-144/11:08:32.000,0134490339:0,1,seq_02$2_4_14_5IF_1CMD,  
+"ENA"                                                                          
+  FC_RT_TLM_MODE 2000-144/11:08:33.000,0134490340:0,1,seq_02$2_4_14_5IF_4CMD,  
+"VC0","64","0x0",0,"1","300"                                                   
+  MACRO_BREAK 2000-144/20:49:48.000,0134525215:0,1,seq_03$1_4_4CMD,"CTP"       
+  FC_DS40_URAM_LD                                                              
+                                                                               
+This is fairly detailed, but a little examination shows that the start         
+time of activity 1 in sequence 1 is 20:49:48 and the start times for           
+activities 1 and 2 in sequence 2 are 06:09:48 and 11:00:08,                    
+respectively.  These times are each 2 seconds earlier than are called          
+out in the SASF file to allow time for initialization in the flight            
+computer before start of the sequence 2 seconds later.                         
+                                                                               
+Mission ops has provided two software tools which make SSF files a             
+little easier to understand.  They are SEQOUT and SSF_SUMMARY.  Both           
+of them take an SSF file as input and produce an output file that has          
+been cleaned up for easier reading.  SEQOUT can be found on NEARMOH5           
+in the directory /project/nearmops/production/opstool.  SSF_SUMMARY is         
+also on NEARMOH5 in the directory                                              
+/project/nearmops/production/sasf/ops.  Move a copy of one or both of          
+these programs to the working directory that contains the SSF files.           
+For SEQOUT the syntax is:                                                      
+                                                                               
+[47] /homes/starr/seqgen/99088>/homes/starr/seqgen/seqout 99088_XRS            
+                                                                               
+The resulting file is 99088_XRS.seqout.  For SSF_SUMMARY the syntax is:        
+                                                                               
+[49] /homes/starr/seqgen/99088>/homes/starr/seqgen/ssf_summary 99088_XRS       
+                                                                               
+The output file is 99088_XRS.ssf.sum.                                          
+                                                                               
+                                                                               
+6.0     SEQGEN                                                                 
+                                                                               
+In order to run SEQGEN on NEARMOH5 the latest copy of the script               
+"gen_prod" should be maintained in the user directory.  The syntax is          
+as follows:                                                                    
+                                                                               
+[46] /homes/starr/seqgen>gen_prod 99095 GRS                                    
+                                                                               
+                                                                               
+FOR FIGURE 1 SEE:  ./XGRS_INST_GUIDE_FIG1.JPG                                  
+                                                                               
+                                                                               
+Figure 1.  SEQGEN time line for 99095_GRS.sasf.                                
+                                                                               
+                                                                               
+If the file 99095_GRS.sasf already exists it will be read in at                
+startup, otherwise you start with a blank slate.  In Figure 1, SEQGEN          
+has been executed and the initial page is displayed.  At the top of            
+the page the one week time line is shown.  Further down are SSR                
+resource allocations and then activity requests for various                    
+instruments.  The "OPS" line indicates tracks or time periods when the         
+spacecraft high-gain antenna is pointed at the Earth for data                  
+downlink.  During orbital operations at Eros there will be a track of          
+approximately eight hours duration every day.  In addition there will          
+be several MSI images taken for navigation purposes each day and the           
+timing for these will appear in the "OPNAV" line.  The file                    
+99095_XRS.sasf is displayed as a background sequence and the GRS               
+request bgo_coinc_win is also seen.  The only changes possible are to          
+the GRS request.  This can be accomplished by going to the "Activity           
+Panel" button and highlighting "Edit" in order to bring up the editor          
+window.  The editor window for this SEQGEN session is displayed in             
+Figure 2.                                                                      
+                                                                               
+                                                                               
+FOR FIGURE 2 SEE:  ./XGRS_INST_GUIDE_FIG2.JPG                                  
+                                                                               
+Figure 2  SEQGEN editor window for 99095_GRS.sasf.                             
+                                                                               
+Boxes that must be completed manually, are ID (bgo_coinc_win),                 
+Processor ("1"), Start Time (1999-096T12:00;00), and Plot Key (GRS).           
+Other information is filled in as the requests are generated.  Already         
+existing requests are listed at the bottom of the page.  Some non-XGRS         
+requests may be listed.  They will be frozen, meaning they cannot be           
+changed or deleted.  They can be ignored.  In Figure 2, the only GRS           
+request, bgo_coinc_win, has been loaded into the working area in the           
+middle of the page.  The four parameters available for change within           
+the CAS are shown.  To add additional activities to this request go to         
+the "Step Panel" button and highlight "New Activity."  This brings up          
+a new panel, shown in Figure 3, where all of the NEAR CASs are                 
+available for insertion, however, only XGRS CASs should be used.  To           
+exit from the editor window and return to the time line window after           
+all request editing is complete, go to the "Header Panel" button and           
+highlight "Done."  All requests should be visible in the time line.            
+Generally, no commands of any kind should be sent during the first 5           
+minutes of the one week scheduling period.  Any other time, instrument         
+level commands are acceptable, even during tracks or op-navs.  They            
+will be executed on schedule unless they coincide exactly with a               
+spacecraft maneuver, in which case there may be some small delay,              
+usually not more than a few seconds.  Pointing commands must fit in            
+between mission ops work and any other instrument pointing activities.         
+If XGRS pointing commands overlap with any other pointing activities           
+including its own, warning flags will appear in the time line window.          
+Double clicking on the flags will open a panel with an explanation of          
+the error.   Go back to the editor window to correct the problem.              
+                                                                               
+FOR FIGURE 3 SEE:  ./XGRS_INST_GUIDE_FIG3.JPG                                  
+                                                                               
+Figure 3.  SEQGEN editor activity panel.                                       
+                                                                               
+                                                                               
+To exit from SEQGEN go to the "Environment Panel" button and highlight         
+"Quit" with "Save."  Even if no changes have been made it is wise to           
+save before quitting, because no ssf file will be created without              
+executing a save.  Use an editor to examine the sasf and ssf files to          
+verify that all requests have been properly interpreted.                       
+                                                                               
+6.1     Scheduling Rules                                                       
+                                                                               
+There are a few rules that the instrument schedulers must observe in           
+order to ensure that the sequence files they submit each week will be          
+uploaded to the spacecraft and executed as planned.  Failure to                
+observe these rules could prevent all or part of a week's sequences            
+from being implemented.                                                        
+                                                                               
+* Instrument schedulers are only permitted to request CASs.  Any               
+  instrument request file containing calls to fragments or bare commands       
+  will be rejected by the ops scheduling system.                               
+                                                                               
+* Request files sent to ops must be conflict (error) free.  Exception:         
+  "SSRn SEMENT FULL, SCHEDULE CAS_SSR_SEG_SWITCH."                             
+                                                                               
+* Instrument schedulers may not make a request that would result in            
+  commands occurring within the first 5 minutes of a scheduling week.          
+                                                                               
+* If an instrument team assumes attitude ownership they must relinquish        
+  it prior to any other teams assumption of attitude (including ops).          
+                                                                               
+* "No spill-over requests."  Any CAS requested by an instrument team in        
+  a given week must fully complete all commanding prior to the end of          
+  the scheduling period.                                                       
+                                                                               
+* Instrument requests may not result in more data being collected than         
+  can be down loaded on the next playback.                                     
+                                                                               
+7.0     XGRS Baseline Configuration                                            
+                                                                               
+To date, the XGRS has always been powered up in real-time by John              
+Goldsten.  He employs an approved macro made up of primitive commands.         
+An XGRS CAS, which performs the same function as this macro, also              
+exists: CAS_xgrs_warm_up.  This CAS determines all default settings.           
+These values may change slightly from time to time, but as of this             
+writing (8/99) the default values for several of the XGRS engineering          
+parameters are given in Table 1.                                               
+                                                                               
+For the high voltages, the engineering parameter that is required by           
+the CAS is shown in parenthesis.  The scaling factor is 1.6278.  These         
+high voltage values are selected so that the gamma-ray detectors have          
+an energy range of about 0 - 10 MeV and the X-ray detectors have an            
+energy range of about 0 - 10 keV.  The NaI and BGO thresholds are              
+engineering parameters that correspond to a threshold of channels 10           
+and 13, respectively.  An approximate equation for the LLD settings            
+for both gamma-ray detectors is:                                               
+                                                                               
+Channel Number  = 3.0 + 3.4*LLD                                                
+                                                                               
+For the X-ray detectors, the relationship between LLD parameter and            
+channel number is nearly one to one.  A rise time threshold of 135 for         
+the X-ray proportional counters corresponds to approximately 0.5               
+microseconds.  The valid rise time threshold is set to channel 51,             
+which corresponds to approximately 2.0 keV.                                    
+                                                                               
+The integration periods for cruise have been held constant for most of         
+the last three years since launch.  When orbital operations begin next         
+year, it is anticipated that the X-ray and gamma-ray integration               
+periods will be 100 and 1200 seconds, respectively.                            
+                                                                               
+                                                                               
+                                                                               
+8.0     Data Volume                                                            
+                                                                               
+The XGRS is a fairly simple instrument to operate.  Once high voltages         
+and discriminator levels have been set there is little to change.  The         
+only instrument parameters that effect the amount of data that the             
+XGRS generates are the integration periods.   The XGRS produces four           
+different data sets: Summary, XRS, GRS, and Burst. Integration periods         
+for XRS and GRS can vary from 1 to 65535 seconds.  During cruise               
+typical values for XRS and GRS have been 300 and 2400 seconds,                 
+respectively.  In orbit, integration periods are likely to be 100              
+seconds  for XRS and 1200 seconds for GRS.  The integration period for         
+Summary data is always equal to that of the XRS.  Summary, XRS, and            
+GRS produce 1, 7, and 31 data packets respectively, each integration           
+period.  The Burst data rate is fixed to one data packet every 166             
+seconds.  A packet contains 2944 bits.  Typical data volumes for               
+cruise and orbit are given in Table 2.                                         
+                                                                               
+TABLE 2. TYPICAL XGRS DATA VOLUMES                                             
+                                                                               
+                                                                               
+                                                                               
+Data Set                                                                       
+                                                                               
+Number of Packets                                                              
+                                                                               
+Integration Period (s)                                                         
+Integration Periods per Day                                                    
+                                                                               
+Packets per Day                                                                
+Daily Data Volume (bits)                                                       
+Cruise                                                                         
+XRS                                                                            
++ Summary                                                                      
+                                                                               
+8                                                                              
+                                                                               
+300                                                                            
+                                                                               
+288                                                                            
+                                                                               
+2304                                                                           
+                                                                               
+        6,782,976                                                              
+                                                                               
+GRS                                                                            
+31                                                                             
+2400                                                                           
+36                                                                             
+1116                                                                           
+        3,285,504                                                              
+                                                                               
+Burst                                                                          
+-                                                                              
+1                                                                              
+-                                                                              
+520.5                                                                          
+        1,532,352                                                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+        11,600,832                                                             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+Orbit                                                                          
+XRS                                                                            
++ Summary                                                                      
+                                                                               
+8                                                                              
+                                                                               
+100                                                                            
+                                                                               
+864                                                                            
+                                                                               
+6912                                                                           
+                                                                               
+        20,348,928                                                             
+                                                                               
+GRS                                                                            
+31                                                                             
+1200                                                                           
+72                                                                             
+2232                                                                           
+        6,571,008                                                              
+                                                                               
+Burst                                                                          
+-                                                                              
+1                                                                              
+-                                                                              
+520.5                                                                          
+        1,532,352                                                              
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+        28,452,288                                                             
+                                                                               
+                                                                               
+9.0     Useful Documents                                                       
+                                                                               
+NEAR X-ray/Gamma Ray (XGRS) DPU Software Requirements Specification,           
+JHU/APL 7358-9002 Version 7, 7/8/99.                                           
+                                                                               
+NEAR XGRS Software Version 7 Expanded Telemetry Descriptions,                  
+Revision 7/8/99.                                                               
+                                                                               
+"The X-ray/Gamma-ray Spectrometer on the Near Earth Asteroid Rendezvous        
+Mission", J. O. Goldsten et al., Space Sci. Rev. 82 (1997) 169.                
+                                                                               
+"Compositional Mapping with the NEAR X-ray/Gamma-ray Spectrometer"             
+J. I. Trombka et al., J. Geophys. Res.102, (1997) 23729-23750.                 
+                                                                               
+XGRS Command List                                                              
+                                                                               
+XGRS Fragments                                                                 
+                                                                               
+XGRS Instrument CASs                                                           
+                                                                               
+XGRS GNC CASs                                                                  
+                                                                               

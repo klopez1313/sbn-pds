@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>NEAR Data Set Structure</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/near">NEAR</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Data Set Structure</li>
+        </ol>
+        <center>
+            <h2> NEAR Data Set Structure </h2>
+            </center>
+
+            <p>
+            In PDS, a "data set" is a group of data under the same data set ID.
+            All the PDS NEAR data sets have this high-level directory structure:
+
+            <br><br>
+
+            <table border=1>
+            <tr>
+            <td width=100>aareadme.txt
+            <td>This text file provides an overview of the contents the data set.
+            <tr>
+            <td>browse
+            <td>This directory contains browse tools developed by NEAR scientists for
+            specific scientific inquires. This directory may not be present in all
+            data sets.
+            <tr>
+            <td>calib
+            <td>This directory contains files used to calibrate instrument data. This
+            directory may not be present.
+            <tr>
+            <td>catalog
+            <td>This directory contains PDS catalog files with descriptions for the
+            mission, instrument host, instrument and data sets.
+            <tr>
+            <td>data
+            <td>This directory contains uncalibrated or calibrated instrument data.
+            <tr>
+            <td>document
+            <td>This directory contains instrument documentation. It is included only on the first volume of a set of data. For example, only the first volume of MSI data for the Eros Orbit phase has a document directory.
+            <tr>
+            <td>errata.txt
+            <td>This text file describes data errors and anomalies.
+            <tr>
+            <td>geometry
+            <td>This directory contains geometry files. It may include SPICE files. This directory may not be present.
+            <tr>
+            <td>index
+            <td>This directory contains index tables describing times and key data file
+            parameter values for this data set.
+            <tr>
+            <td>voldesc.cat
+            <td>This text file contains a formal description of the contents of the volume.
+            </table>
+
+            <br>
+
+            <center>
+            <a href="resource/near">Return to NEAR Archive</a>
+            </center>
+            <br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

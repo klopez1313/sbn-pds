@@ -1,0 +1,220 @@
+PDS_VERSION_ID       = PDS3                                                   
+RECORD_TYPE          = FIXED_LENGTH                                           
+RECORD_BYTES         = 80                                                     
+SPACECRAFT_NAME      = "NEAR EARTH ASTEROID RENDEZVOUS"                       
+OBJECT               = TEXT                                                   
+  PUBLICATION_DATE   = 2000-09-06                                             
+  NOTE               = "AAREADME.TXT File for data set:                       
+                        NEAR-A-SPICE-6-EDR-EROS/ORBIT-V1.0"                   
+END_OBJECT           = TEXT                                                   
+                                                                              
+END                                                                           
+                                                                              
+NEAR Mission SPICE GEOMETRY Data Set                                          
+========================================================================      
+                                                                              
+                                                                              
+Introduction                                                                  
+============                                                                  
+                                                                              
+   This document provides an overview of this volume of the Near              
+   Earth Asteroid Rendezvous (NEAR) SPICE Data Archive, including             
+   a complete listing of the volume contents.                                 
+                                                                              
+   This volume contains navigation and ancillary data in the form of          
+   SPICE System kernel files for the NEAR spacecraft during the mission       
+   phase with name: EROS/ORBIT                                                
+   covering the year and daynumbers (YYYYDDD) 2000011 through 2001043.        
+   See the mission phases table below for a description of the phases of the  
+   mission.                                                                   
+                                                                              
+   The SPICE kernel files contain geometric and much other ancillary          
+   information needed to recover the full value of science instrument         
+   data. In particular SPICE kernels provide spacecraft and planetary         
+   ephemerides, instrument mounting alignments, spacecraft orientation,       
+   spacecraft sequences of events, data needed for certain time               
+   conversions, etc. Data in the SPICE kernel files can be accessed           
+   using the NAIF (Navigation and Ancillary Information Facility)             
+   software necessary to read these files.                                    
+                                                                              
+   The NEAR Science Data Center (SDC) has created this data set for long      
+   term archive by the Planetary Data System (PDS), as specified in the       
+   NEAR Project Archive Generation, Validation and Transfer Plan              
+   (February 1998).                                                           
+                                                                              
+   This data set is a part of the NEAR level 1b data set delivery as          
+   described by the NEAR PDS Data Archive Plan. The Plan also describes       
+   the higher level data products, which will become separate PDS data sets.  
+                                                                              
+   The February 1998 Plan document is in the DOCUMENT subdirectory of this    
+   data set, in the file PDSARCHIVEPLAN, in text (.TXT) and rich text (.RTF)  
+   formats. The included plan is dated February 1998. It is expected to be    
+   updated with final definitions of higher level products. The revised plan  
+   will be included in later phase data sets.                                 
+                                                                              
+                                                                              
+Volume Format                                                                 
+=============                                                                 
+                                                                              
+   This volume has been formatted according to the ISO-9660 level 2           
+   Interchange Standard.                                                      
+                                                                              
+   This volume does not contain any Extended Attribute Records (XAR).         
+   Thus, some VAX/VMS users may have problems accessing files on this         
+   volume.                                                                    
+                                                                              
+                                                                              
+File Formats                                                                  
+============                                                                  
+                                                                              
+   All text documents and other meta information files such as                
+   descriptions, PDS object definitions and detached PDS labels are           
+   stream format files, with a carriage return (ASCII 13) and a line          
+   feed character (ASCII 10) at the end of the record.  This allows           
+   the files to be read by MS-DOS/Windows, Unix, and VMS operating            
+   systems.                                                                   
+                                                                              
+   The SPICE kernel data files on were prepared to be used                    
+   under a UNIX environment. Therefore all SPICE text kernel files are        
+   UNIX text files, with a line feed character (ASCII 10) at the end          
+   of the line, and all SPICE binary kernels files are UNIX binary            
+   files in which bit pattern structures for double precision and             
+   integer numbers follow IEEE standard. NAIF software is available to        
+   convert these files for use on other systems.                              
+                                                                              
+                                                                              
+Volume Contents                                                               
+===============                                                               
+                                                                              
+   Files on this volume are organized into a set of subdirectories            
+   below the top-level directory. The following table shows the               
+   structure and content of these directories. In the table, directory        
+   names are enclosed in square brackets ([]). See the *INFO.TXT files        
+   in each directory for specific information on the files in the             
+   directory.                                                                 
+                                                                              
+   [TOP-LEVEL-DIRECTORY]                                                      
+   |                                                                          
+   |-- AAREADME.TXT        The text version of the AAREADME file.             
+   |-- ERRATA.TXT          Text information describing data errors/anomalies. 
+   |-- VOLDESC.CAT         Description of the contents of this volume.        
+   |                                                                          
+   |--[CATALOG]            Directory containing PDS catalog objects.          
+   |  |                                                                       
+   |  |-- CATINFO.TXT      Description of files in the CATALOG directory.     
+   |  |-- SPICEDS.CAT      Description of SPICE data set.                     
+   |  |-- NEARINSTHOST.CAT Description of the spacecraft.                     
+   |  |-- NEARMISSION.CAT  Description of the mission.                        
+   |  |-- PERSON.CAT       Description of personnel created this volume.      
+   |  +-- REF.CAT          List of publications mentioned in *.CAT files.     
+   |                                                                          
+   |--[DATA]               Directory containing SPICE data files (kernels.)   
+   |  |                                                                       
+   |  |--[CK]              Directory containing CK files.                     
+   |  |  |                                                                    
+   |  |  |-- CKINFO.TXT    Description of files in the DATA/CK directory      
+   |  |  |-- *.BC          CK files.                                          
+   |  |  +-- *.LBL         PDS labels for CK files.                           
+   |  |  |                                                                    
+   |  |--[EK]              Directory containing EK files.                     
+   |  |  |                                                                    
+   |  |  |-- EKINFO.TXT    Description of files in the DATA/EK directory      
+   |  |  |-- *.BPE         EK files.                                          
+   |  |  +-- *.LBL         PDS labels for EK files.                           
+   |  |                                                                       
+   |  |--[FK]              Directory containing FK file(s).                   
+   |  |  |                 (The NEAR mission does not use this kernel type)   
+   |  |  +-- FKINFO.TXT    Reference to DATA/IK directory.                    
+   |  |                                                                       
+   |  |--[IK]              Directory containing IK files.                     
+   |  |  |                                                                    
+   |  |  |-- IKINFO.TXT    Description of files in the DATA/IK directory.     
+   |  |  |-- *.TI          IK files.                                          
+   |  |  +-- *.LBL         PDS labels for IK files.                           
+   |  |                                                                       
+   |  |--[LSK]             Directory containing LSK files.                    
+   |  |  |                                                                    
+   |  |  |-- LSKINFO.TXT   Description of files in the DATA/LSK directory.    
+   |  |  |-- *.TLS         FK file(s).                                        
+   |  |  +-- *.LBL         PDS labels for LSK files.                          
+   |  |                                                                       
+   |  |--[PCK]             Directory containing PCK file(s).                  
+   |  |  |                                                                    
+   |  |  |-- PCKINFO.TXT   Description of files in the DATA/PCK directory.    
+   |  |  |-- *.TPC         PCK file(s).                                       
+   |  |  |-- *.BPC         PCK file(s).                                       
+   |  |  +-- *.LBL         PDS labels for PCK files.                          
+   |  |                                                                       
+   |  |--[SCLK]            Directory containing SCLK file(s).                 
+   |  |  |                                                                    
+   |  |  |-- SCLKINFO.TXT  Description of files in the DATA/SCLK directory.   
+   |  |  |-- *.TSC         SCLK file(s).                                      
+   |  |  +-- *.LBL         PDS labels for SCLK files.                         
+   |  |                                                                       
+   |  +--[SPK]             Directory containing SPK files.                    
+   |     |                                                                    
+   |     |-- SPKINFO.TXT   Description of files in the DATA/SPK directory.    
+   |     |-- *.BSP         SPK files.                                         
+   |     +-- *.LBL         PDS labels for SPK files.                          
+   |                                                                          
+   |--[DOCUMENT]           Directory containing volume related documents.     
+   |  |                                                                       
+   |  |-- DOCINFO.TXT      Description of files in the DOCUMENT directory.    
+   |  |-- ONLABELS.TXT     Description of PDS labels for SPICE kernels.       
+   |  |-- PDSARCHIVEPLAN.TXTDescription of PDS Archive Plan.                  
+   |  +-- LBLINFO.TXT      Description of PDS label location on this volume.  
+   |                                                                          
+   |--[INDEX]              Directory containing index files.                  
+   |  |                                                                       
+   |  |-- INDXINFO.TXT     Description of files in the INDEX directory.       
+   |  |-- INDEX.TAB        Index table of SPICE kernels on this volume.       
+   |  +-- INDEX.LBL        PDS label for INDEX.TAB file.                      
+   |                                                                          
+   +--[SOFTWARE]                                                              
+      |                                                                       
+      +-- SOFTINFO.TXT     Instructions on how to obtain SPICE Software.      
+                                                                              
+Mission Phase Parameters (Planned Values; Feb. 2000)                          
+-----------------------------------------------------                         
+                                                                              
+1) Phase Name                                                                 
+2) Segment(Phase Abbrv)                                                       
+3) Start Year, DayOf Year                                                     
+4) End Year, DayOf Year,                                                      
+5) Length(days)                                                               
+-------------------------------------------------------                       
+                                                                              
+CRUISE1                CRU1      1996051      1997175    491                  
+MATHILDE               MATH      1997176      1997178      3                  
+CRUISE2                CRU2      1997179      1998022    209                  
+EARTH                  ERTH      1998023      1998026      4                  
+CRUISE3                CRU3      1998027      1998356    330                  
+EROS/FLY/BY            ERFB      1998357      1998357      1                  
+CRUISE4                CRU4      1998358      2000010    383                  
+EROS/ORBIT             EROS      2000011      2001043    399                  
+EROS/SURFACE           ERSF      2001044      2001059     16                  
+                                                                              
+-------------------------------------------------------                       
+                                                                              
+Whom to Contact for Information                                               
+===============================                                               
+                                                                              
+   PDS Navigation and Ancillary Information Facility (NAIF),                  
+   MAIL STOP 301-125L                                                         
+   Jet Propulsion Laboratory                                                  
+   California Institute of Technology                                         
+   4800 Oak Grove Drive                                                       
+   Pasadena, CA, 91109-8099                                                   
+   818-354-3869                                                               
+   WWW Site:  http://naif.jpl.nasa.gov                                        
+   Electronic mail address:  naif@naif.jpl.nasa.gov                           
+                                                                              
+                                                                              
+   NEAR Science Data Center                                                   
+   Douglas B. Holland                                                         
+   The Johns Hopkins University                                               
+   Applied Physics Laboratory                                                 
+   11100 Johns Hopkins Road                                                   
+   Laurel MD 20723                                                            
+   Email: Douglas.Holland@jhuapl.edu                                          
+                                                                              

@@ -1,0 +1,129 @@
+PDS_VERSION_ID                   = PDS3                                       
+RECORD_TYPE                      = STREAM                                     
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-GRS-3-EDR-EROS/SURFACE-V1.0"       
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "NEAR GRS SPECTRA EROS ON ASTEROID"        
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = SPECTRUM                                   
+  START_TIME                     = 2001-02-19T16:59:24                        
+  STOP_TIME                      = 2001-02-28T17:49:37                        
+  DATA_SET_RELEASE_DATE          = 2001-07-15                                 
+  PRODUCER_FULL_NAME             = "JACOB TROMBKA"                            
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+                                                                              
+   Introduction                                                               
+   =============                                                              
+   This document provides an overview of the Near Earth Asteroid              
+   Rendezvous Gamma-Ray Spectrometer, On asteroid Level 3 data                
+   archive. This volume contains science data products from                   
+   observations acquired by the Near Earth Asteroid Rendezvous                
+   (NEAR) Gamma-ray Spectrometer (GRS) instrument.                            
+                                                                              
+   The following documentation and dataset describes the dataset              
+   and documentation delivered as part of the NEAR XGRS instrument            
+   team delivery to NASA's Planetary Data System.                             
+                                                                              
+   Volume Information                                                         
+   ==================                                                         
+   It was found that the on surface attitude of the spacecraft did            
+   not facilitate the use of the fixed high gain antenna and the              
+   low gain antenna was used for the duration of the on-surface               
+   mission.  As a result available telemetry rates did not                    
+   facilitate the downlink of the full complement of instrument,              
+   engineering and ancillary information with priority being                  
+   given to selected spectra.  The first two days of on-surface               
+   activity were used to calibrate the detectors to account for               
+   deviations of temperature between orbital and on surface                   
+   operations.  Adjustments were then made to the instrument high             
+   voltage to improve the energy gain in the escape peak spectra.             
+                                                                              
+   In this configuration, several long term integrations were                 
+   collected and spectra taken for the 3 longest integrations                 
+   and ancillary information.                                                 
+                                                                              
+   Each of set of spectra were corrected for channel rollover                 
+   which occured in several instances due to long integration                 
+   times causing accumulations of counts in some channels to                  
+   exceed and rollover the maximum numerical range of the 2 byte              
+   channel.  Higher counting rates in the lower energies of each              
+   spectrum incurred multiple rollovers and algorithms were                   
+   developed to rectify this effect.                                          
+                                                                              
+   A second correction made to the on-surface spectra is the                  
+   removal of differential non-linearities (DNL) contained within             
+   the spectra. The effect being high frequency spikes in                     
+   channels spaced at regular intervals within the spectrum.                  
+   (DNL)`s were removed using a 3rd order polynomial fit and                  
+   smoothing function for a sliding boxcar of 21 channels                     
+   through each raw spectrum.  The result is then provided as a GRS           
+   Level-3 spectrum.                                                          
+                                                                              
+   Coordinate System                                                          
+   =================                                                          
+   All products were derived in the Asteroid Body Fixed Coordinate            
+   System                                                                     
+                                                                              
+   Software                                                                   
+   ========                                                                   
+                                                                              
+   Requirement Specifications For Level-2 Parameters Required                 
+   Stored or Derived by The Near Earth Asteroid Rendezvous                    
+   (NEAR) Gamma-Ray Spectrometer (GRS) Ground System                          
+                                                                              
+   Media                                                                      
+   ======                                                                     
+   CD-ROM                                                                     
+"                                                                             
+                                                                              
+  CONFIDENCE_LEVEL_NOTE           = "                                         
+                                                                              
+    Overview                                                                  
+    ========                                                                  
+    Data in this archive have been reduced as part of mission data            
+    analysis activities of the NEAR XGRS  Science Team.  Data of              
+    questionable validity have been omitted from the solutions.               
+                                                                              
+                                                                              
+    Review                                                                    
+    ======                                                                    
+    This archival data set was reviewed by the NEAR XGRS                      
+    Team prior to submission to the Planetary Data System (PDS).              
+    It was one of several data sets included in a comprehensive               
+    review by the PDS Small Bodies Node in August 2001, prior to              
+    PDS acceptance and ingestion.                                             
+                                                                              
+                                                                              
+    Data Coverage and Quality                                                 
+    =========================                                                 
+    The data included in this archive were collected during the               
+    NEAR orbital phase from 2001-02-19 to 2001-02-28.                         
+                                                                              
+                                                                              
+    Limitations                                                               
+    ===========                                                               
+    None                                                                      
+                  "                                                           
+                                                                              
+                                                                              
+  END_OBJECT                       = DATA_SET_INFORMATION                     
+                                                                              
+  OBJECT                           = DATA_SET_TARGET                          
+    TARGET_NAME                    = "EROS"                                   
+  END_OBJECT                       = DATA_SET_TARGET                          
+                                                                              
+  OBJECT                           = DATA_SET_HOST                            
+    INSTRUMENT_HOST_ID             = "NEAR"                                   
+    INSTRUMENT_ID                  = "XGR"                                    
+  END_OBJECT                       = DATA_SET_HOST                            
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "CHENGETAL1998"                          
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+END                                                                           

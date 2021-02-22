@@ -1,0 +1,25 @@
+<div id="search">
+    <label for="query">Search: </label>
+    <input type="text" name="query" id="query" ng-model="view.query" autofocus>
+</div>
+
+<table class="table" id="shape-model-table">
+    <!-- ASTEROIDS -->
+    <tr class="row category" id="asteroids">
+        <th class="cell" colspan="5"><h3>Asteroids ({{ view.asteroids.length }})</h3></th>
+    </tr>
+    <tr sbn-object-header-row ng-repeat-start="asteroid in view.asteroids | filter : view.query" sbn-object="asteroid" class="row row-alt sbn-body" colspan="2"></tr>
+    <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in asteroid.datasets"></tr>
+    <!-- COMETS -->
+    <tr class="row category" id="comets">
+        <th class="cell" colspan="5"><h3>Comets ({{ view.comets.length }})</h3></th>
+    </tr>
+    <tr sbn-object-header-row ng-repeat-start="comet in view.comets | filter : view.query" sbn-object="comet" class="row row-alt sbn-body" colspan="2"></tr>
+    <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in comet.datasets"></tr>
+    <!-- PLANETARY SATELLITES -->
+    <tr class="row category" id="satellites">
+        <th class="cell" colspan="5"><h3>Planetary Satellites ({{ view.satellites.length }})</h3></th>
+    </tr>
+    <tr sbn-object-header-row ng-repeat-start="satellite in view.satellites | filter : view.query" sbn-object="satellite" class="row row-alt sbn-body" colspan="2"></tr>
+    <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in satellite.datasets"></tr>
+</table>

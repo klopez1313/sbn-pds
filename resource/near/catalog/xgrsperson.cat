@@ -1,0 +1,613 @@
+PDS_VERSION_ID                   = PDS3                                       
+LABEL_REVISION_NOTE                "J. ALEXOPOULOS, 2001-06-13"               
+RECORD_TYPE                      = STREAM                                     
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "MACUNA"                                   
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "MARIO H. ACUNA"                           
+  LAST_NAME                      = "ACUNA"                                    
+  TELEPHONE_NUMBER               = "301-286-7258"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "301-286-1683"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "NASA GODDARD SPACE FLIGHT CENTER"         
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "NASA GODDARD SPACE FLIGHT CENTER          
+                                   CODE 695                                   
+                                   GREENBELT, MD 20771"                       
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "MHA@LEPMOM.GSFC.NASA.GOV"                 
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "JALEXOPOULOS"                             
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "JIM S. ALEXOPOULOS"                       
+  LAST_NAME                      = "ALEXOPOULOS"                              
+  TELEPHONE_NUMBER               = "314-935-8152"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "314-935-5332"                             
+  FAX_NUMBER                     = "314-935-7361"                             
+  INSTITUTION_NAME               = "WASHINGTON UNIVERSITY"                    
+  NODE_ID                        = "GEOSCIENCE"                               
+  PDS_AFFILIATION                = "NODE"                                     
+  REGISTRATION_DATE              = 1996-01-01                                 
+  PDS_ADDRESS_BOOK_FLAG          = "Y"                                        
+  ADDRESS_TEXT                   = "Washington University                     
+                                   Dept. of Earth & Planetary Sciences        
+                                   Campus Box 1169                            
+                                   One Brookings Drive                        
+                                   St. Louis, MO  63130-4899"                 
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "JIM@WUZZY.WUSTL.EDU"                      
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "BJANDERSON"                               
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "BRIAN J. ANDERSON"                        
+  LAST_NAME                      = "ANDERSON"                                 
+  TELEPHONE_NUMBER               = "240-228-6347"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "443-778-6347"                             
+  FAX_NUMBER                     = "240-228-6670"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "BRIAN.ANDERSON@JHUAPL.EDU"                
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "KBARNOUIN-JHA"                            
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "KOPAL BARNOUIN-JHA"                       
+  LAST_NAME                      = "BARNOUIN-JHA"                             
+  TELEPHONE_NUMBER               = "240-228-5781"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "443-778-5781"                             
+  FAX_NUMBER                     = "240-228-6670"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "KOPAL.BARNOUIN-JHA@JHUAPL.EDU"            
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "JBHANGOO"                                 
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "JASBIR S. BHANGOO"                        
+  LAST_NAME                      = "BHANGOO"                                  
+  TELEPHONE_NUMBER               = "520-626-2712"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "520-621-6783"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "UNIVERSITY OF ARIZONA"                    
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "University of Arizona                     
+                                   Lunar and Planetary Laboratory             
+                                   1629 E. University Blvd.                   
+                                   Tucson, AZ 85721"                          
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "JBS@LPL.ARIZONA.EDU"                      
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+PDS_USER_ID                      = "TMCCLANAHAN"                              
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "Timothy .P McClanahan"                    
+  LAST_NAME                      = "MCCLANAHAN"                               
+  TELEPHONE_NUMBER               = "301-286-6748"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "301-286-0212"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "GODDARD SPACE FLIGHT CENTER"              
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "Astrochemistry Branch, 691                
+                                    Laboratory for Extraterrestrial Physics,  
+                                    NASA/Goddard Space Flight Center          
+                                    Greenbelt, MD 20771"                      
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "xrtpm@lepxgrs.gsfc.nasa.gov"              
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "BCARCICH"                                 
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "BRIAN T. CARCICH"                         
+  LAST_NAME                      = "CARCICH"                                  
+  TELEPHONE_NUMBER               = "607-255-7453"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "607-255-6102"                             
+  FAX_NUMBER                     = "607-255-9002"                             
+  INSTITUTION_NAME               = "CORNELL UNIVERSITY"                       
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "Cornell University                        
+                                   404 Space Sciences Building                
+                                   Ithaca, NY 14853-6801"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "BC17@CORNELL.EDU"                         
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "DDOMINGUE"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "DEBORAH L DOMINGUE"                       
+  LAST_NAME                      = "DOMINGUE"                                 
+  TELEPHONE_NUMBER               = "240-228-7945"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "240-228-6000"                             
+  FAX_NUMBER                     = "240-228-6670"                             
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY/APPLIED          
+                                    PHYSICS LABORATORY"                       
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "Johns Hopkins University/Applied          
+                                    Physics Laboratory                        
+                                    11100 Johns Hopkins Rd.                   
+                                    Laurel MD 20723"                          
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "DEBORAH.DOMINGUE@JHUAPL.EDU"              
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "AHARCH"                                   
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "ANN P. HARCH"                             
+  LAST_NAME                      = "HARCH"                                    
+  TELEPHONE_NUMBER               = "607-255-6913"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "607-225-3507"                             
+  FAX_NUMBER                     = "607-255-9002"                             
+  INSTITUTION_NAME               = "CORNELL UNIVERSITY"                       
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "Cornell University                        
+                                   324 Space Sciences Bldg.                   
+                                   Ithaca, NY 14853"                          
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "ann@baritone.tn.cornell.edu"              
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "KHARSHMAN"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "KARL P HARSHMAN"                          
+  LAST_NAME                      = "HARSHMAN"                                 
+  TELEPHONE_NUMBER               = "520-626-7469"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "520-621-4676"                             
+  FAX_NUMBER                     = "520-621-6783"                             
+  INSTITUTION_NAME               = "UNIVERSITY OF ARIZONA/LUNAR               
+                                    AND PLANETARY LABORATORY"                 
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "University of Arizona/LPL                 
+                                    1629 E. University Blvd                   
+                                    Tucson, Az. 85721"                        
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "KARL@LPL.ARIZONA.EDU"                     
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "NIZENBERG"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "NOAM R. IZENBERG"                         
+  LAST_NAME                      = "IZENBERG"                                 
+  TELEPHONE_NUMBER               = "443-778-7918"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "443-778-8400"                             
+  FAX_NUMBER                     = "443-778-6670"                             
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "NOAM.IZENBERG@JHUAPL.EDU"                 
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "DALOHR"                                   
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "DAVID A. LOHR"                            
+  LAST_NAME                      = "LOHR"                                     
+  TELEPHONE_NUMBER               = "240-228-8904"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "DAVID.LOHR@JHUAPL.EDU"                    
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = GNEUMANN                                   
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "GREGORY A. NEUMANN"                       
+  LAST_NAME                      = NEUMANN                                    
+  TELEPHONE_NUMBER               = "301-614-6026"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "301-614-6010"                             
+  FAX_NUMBER                     = UNK                                        
+  INSTITUTION_NAME               = "NASA/GODDARD SPACE FLIGHT CENTER"         
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "DATA PRODUCER"                            
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "NASA/Goddard Space Flight Center          
+                                   Code 926, Space Geodesy                    
+                                   Greenbelt, MD  20771"                      
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "NEUMANN@THARSIS.GSFC.NASA.GOV"            
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "ARAUGH"                                   
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "ANNE C. RAUGH"                            
+  LAST_NAME                      = "RAUGH"                                    
+  TELEPHONE_NUMBER               = "301-405-6855"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "301-405-5024"                             
+  FAX_NUMBER                     = "301-405-3538"                             
+  INSTITUTION_NAME               = "UNIVERSITY OF MARYLAND"                   
+  NODE_ID                        = "SBN"                                      
+  PDS_AFFILIATION                = "NODE"                                     
+  REGISTRATION_DATE              = 1992-05-24                                 
+  PDS_ADDRESS_BOOK_FLAG          = "Y"                                        
+  ADDRESS_TEXT                   = "University Of Maryland                    
+                                   Department of Astronomy                    
+                                   College Park, MD  20742-2421"              
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "RAUGH@ASTRO.UMD.EDU"                      
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "MROBINSON"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "MARK S. ROBINSON"                         
+  LAST_NAME                      = "ROBINSON"                                 
+  TELEPHONE_NUMBER               = "847-467-1825"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "847-491-8060"                             
+  INSTITUTION_NAME               = "NORTHWESTERN UNIVERSITY"                  
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "Northwestern University                   
+                                   Dept. of Geological Sciences               
+                                   1847 Sheridan Road                         
+                                   Evanston IL 60208"                         
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "robinson@earth.northwestern.edu"          
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "CTRUSSELL"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "CHRISTOPHER T. RUSSELL"                   
+  LAST_NAME                      = "RUSSELL"                                  
+  TELEPHONE_NUMBER               = "310-825-3188"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "N/A"                                      
+  FAX_NUMBER                     = "310-206-3051"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "INSTITUTE OF GEOPHYSICS AND               
+                                   PLANETARY PHYSICS/UCLA"                    
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "INSTITUTE OF GEOPHYSICS AND               
+                                   PLANETARY PHYSICS/UCLA                     
+                                   LOS ANGELES, CA 90024-1567"                
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "CTRUSSELL@IGPP.UCLA.EDU"                  
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = DSMITH                                     
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "DAVID E. SMITH"                           
+  LAST_NAME                      = SMITH                                      
+  TELEPHONE_NUMBER               = "301-286-8671"                             
+  ALTERNATE_TELEPHONE_NUMBER     = UNK                                        
+  FAX_NUMBER                     = UNK                                        
+  INSTITUTION_NAME               = "NASA/GODDARD SPACE FLIGHT CENTER"         
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "DATA PRODUCER"                            
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "NASA/Goddard Space Flight Center          
+                                   Code 920                                   
+                                   Laboratory for Terrestrial Physics         
+                                   Greenbelt, MD  20771"                      
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "DSMITH@THARSIS.GSFC.NASA.GOV"             
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "KTAKAHASHI"                               
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "KAZUE TAKAHASHI"                          
+  LAST_NAME                      = "TAKAHASHI"                                
+  TELEPHONE_NUMBER               = "240-228-5782"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "443-778-5782"                             
+  FAX_NUMBER                     = "240-228-6670"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "KAZUE.TAKAHASHI@JHUAPL.EDU"               
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "HTAYLOR"                                  
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "HOWARD W. TAYLOR"                         
+  LAST_NAME                      = "TAYLOR"                                   
+  TELEPHONE_NUMBER               = "443-778-5682"                             
+  ALTERNATE_TELEPHOHE_NUMBER     = "240-228-5682"                             
+  FAX_NUMBER                     = "443-778-3839"                             
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID =                      = "GENERAL"                                  
+  REGISTRATION_DATE              = 2001-06-01                                 
+  PDS_ADDRESS_BOOK_FLAG          = "Y"                                        
+  ADDRESS_TEXT                   = "Johns Hopkins University Applied          
+                                   Physics Laboratory                         
+                                   11100 Johns Hopkins Road                   
+                                   Laurel, Maryland 20723-6099"               
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "HOWARD.TAYLOR@JHUAPL.EDU"                 
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = "LJZANETTI"                                
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "LAWRENCE L. ZANETTI"                      
+  LAST_NAME                      = "ZANETTI"                                  
+  TELEPHONE_NUMBER               = "240-228-6897"                             
+  ALTERNATE_TELEPHONE_NUMBER     = "443-778-6897"                             
+  FAX_NUMBER                     = "240-228-6670"                             
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  INSTITUTION_NAME               = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY"                        
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "N/A"                                      
+  REGISTRATION_DATE              = "N/A"                                      
+  ADDRESS_TEXT                   = "JOHNS HOPKINS UNIVERSITY APPLIED          
+                                   PHYSICS LABORATORY                         
+                                   11100 JOHNS HOPKINS ROAD                   
+                                   LAUREL, MD 20723-6099"                     
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "LARRY.ZANETTI@JHUAPL.EDU"                 
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+                                                                              
+OBJECT                           = PERSONNEL                                  
+PDS_USER_ID                      = MZUBER                                     
+                                                                              
+  OBJECT                         = PERSONNEL_INFORMATION                      
+  FULL_NAME                      = "MARIA T. ZUBER"                           
+  LAST_NAME                      = ZUBER                                      
+  TELEPHONE_NUMBER               = "301-286-2129"                             
+  ALTERNATE_TELEPHONE_NUMBER     = UNK                                        
+  FAX_NUMBER                     = "301-286-1757"                             
+  INSTITUTION_NAME               = "NASA/GODDARD SPACE FLIGHT CENTER"         
+  NODE_ID                        = "N/A"                                      
+  PDS_AFFILIATION                = "DATA PRODUCER"                            
+  REGISTRATION_DATE              = "N/A"                                      
+  PDS_ADDRESS_BOOK_FLAG          = "N"                                        
+  ADDRESS_TEXT                   = "NASA/Goddard Space Flight Center          
+                                   Mailstop 920.0                             
+                                   Greenbelt, MD  20771"                      
+  END_OBJECT                     = PERSONNEL_INFORMATION                      
+                                                                              
+  OBJECT                         = PERSONNEL_ELECTRONIC_MAIL                  
+  ELECTRONIC_MAIL_ID             = "ZUBER@THARSIS.GSFC.NASA.GOV"              
+  ELECTRONIC_MAIL_TYPE           = "INTERNET"                                 
+  PREFERENCE_ID                  = 1                                          
+  END_OBJECT                     = PERSONNEL_ELECTRONIC_MAIL                  
+                                                                              
+END_OBJECT                       = PERSONNEL                                  
+                                                                              
+END                                                                           

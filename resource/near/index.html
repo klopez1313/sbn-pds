@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>NEAR Data Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>NEAR</li>
+        </ol>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/target-types.html">Target Type</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/neos.html">Near Earth Objects</a></li>
+            <li class="breadcrumbs-separator">/</li>
+        </ol>
+        <center>
+            <h1> Near Earth Asteroid Rendezvous (NEAR) Data Archive </h1>
+            </center>
+
+            <p>
+            <b>Main target bodies:</b>  Asteroids (253) Mathilde and (433) Eros<br>
+            <b>Launch date:</b>  17 February 1996</br>
+            <b>Mathilde flyby date:</b> 27 June 1997</br>
+            <b> Eros orbit operations:</b>  Feb. 2000 through February 2001</br>
+
+            <hr>
+
+            <h3> Browse and search the PDS NEAR Eros image archive using the
+            <a href="http://sbn.psi.edu/sbib/">Small Bodies Image Browser</a>.</h3>
+
+            <h3>NEAR primary instrument data:</h3>
+
+            <table border=2>
+
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Images
+            <td><a href="resource/near/msiinst.html">Multi-Spectral Imager (MSI)</a>
+            <td>A 537x244 pixel CCD camera with eight filters covering the spectral range from 0.4 to 1.1 microns
+
+            <tr>
+            <td>Spectra
+            <td><a href="resource/near/nisinst.html">Near-Infrared Spectrometer (NIS)</a>
+            <td> A grating infrared spectrometer with a 32-element Ge array covering the spectral range 1348-2732 nm.
+
+            <tr>
+            <td rowspan=2>Nuclear
+            <td><a href="resource/near/grsinst.html">Gamma-Ray Spectrometer (GRS)</a>
+            <td> Detects characteristic gamma rays in the 0.3 to 10 MeV range that are emitted from specific elements in the surface.
+
+            <tr>
+            <td><a href="resource/near/xrsinst.html">X-Ray Spectrometer (XRS)</a>
+            <td> An X-ray fluorescence spectrometer that detects characteristic X-ray line emissions excited by solar X-rays from elements in the asteroid's surface.
+
+            <tr>
+            <td>Magnetometer
+            <td><a href="resource/near/maginst.html">NEAR Magnetometer (MAG)</a>
+            <td> A fluxgate magnetometer using ring core sensors made of highly magnetically permeable materal to detect and map the intrinsic magnetic fields of Eros.
+
+            <tr>
+            <td> Dust
+            <td> N/A
+            <td> No dust detector instrument on NEAR
+
+            <tr>
+            <td>Altimetry
+            <td><a href="resource/near/nlrinst.html">NEAR Laser Rangefinder (NLR)</a>
+            <td> A laser altimeter using a Cr-Nd-YAG solid-state laser and a compact reflecting telescope to measure distance from the spacecraft to the surface.
+
+            <tr>
+            <td>Radio Science
+            <td><a href="resource/near/rssinst.html">Radio Science Subsystem (RSS)</a>
+            <td> Accurate doppler measurements of the spacecraft's radial velocity with respect to Earth allow the mapping of the gravity field.  Both raw data and gravity maps are available.
+
+            <tr>
+            <td> SPICE
+            <td><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/">NEAR SPICE archive</a>
+            <td>Archived at NAIF
+
+            </table>
+
+            <h3>Derived data:</h3>
+
+            <table border=2>
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Images
+            <td><a href="resource/erosbackplane.html">Eros MSI images with Geometry Backplanes</a>
+            <td> MSI Eros image set with geometric and gravitational backplanes
+
+            <tr>
+            <td rowspan=2>Models
+            <td><a href="resource/erosshape.html">Gaskell Eros Shape Model</a>
+            <td> Most accurate shape model available for Eros, provided in a range of resolutions
+
+            <tr>
+            <td><a href="resource/nearmod.html">NEAR Mission-produced Models</a>
+            <td>Includes team-produced shape and gravity models of both Eros and Mathilde
+
+<tr>
+            <td>Features
+            <td><a href="resource/erosponds.html"> Eros Ponds </a>
+            <td> Tables of the size and location of ponded deposits on Eros by Roberts
+
+            </table>
+
+            <hr>
+
+            <p>
+            <h3>Additional Resources:</h3>
+
+            <ul>
+            <li><a href="resource/near/neardoc.html"> NEAR Documentation Set</a>
+            <li><a href="resource/near/nEAR_Coordinate_Systems.txt"> NEAR Coordinate Systems Document</a>
+            <li><a href="resource/near/dataprobs.html">Known and Discovered Problems</a>
+            <li> <a href="resource/near/mission_phases.html">Mission Phases and Eros Orbital Phases</a>
+            <li> <a href="resource/near/datalevels.html">Definition of Data Levels</a>
+            <li> <a href="resource/near/dsstructure.html">NEAR Data Set Directory Structure</a>
+            <li><a href="resource/near/findit.html">Where to find...</a>
+            </ul>
+
+            <p>
+            For questions about the data sets or this web site, contact Carol Neese
+            (neese@psi.edu).
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

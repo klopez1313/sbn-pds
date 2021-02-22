@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Galileo Orbiter Data Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Galileo</li>
+        </ol>
+        <center>
+            <h1> Galileo Orbiter Data Archive </h1>
+            </center>
+
+            <p>
+            <b>Main target body:  </b>Jupiter<br>
+            <b>Other target bodies:</b> Dust, and asteroids Ida, Gaspra, and Dactyl <br>
+            <b>Launch date:  </b> 18 October 1989 </br>
+            <b>951 Gaspra encounter:</b>  29 October 1991<br>
+            <b>243 Ida and Dactyl encounter:</b>  28 August 1993<br>
+            <b>Jupiter orbit insertion:  </b> 8 December 1995<br>
+            <b>End of mission:  </b>21 September 2003
+
+            <hr>
+
+            <h3>Galileo Orbiter primary instrument data at SBN:</h3>
+
+            <table border=2>
+
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Dust
+            <td><a href="resource/gdds.html">Galileo Dust Detector Subsystem (GDDS)</a>
+            <td>GDDS can detect particles having masses between 10<sup>-16</sup>g<br>
+            and 10<sup>-6</sup>g traveling at relative speeds of up to<br>
+            70 km/s.  GDDS has detected interplanetary dust from asteroids<br>
+            and comets, interstellar dust, and streams of dust originating<br>
+            from Io volcanic activity.
+
+            <tr>
+            <td>Images
+            <td><a href="resource/idagaspra.html">Ida/Gaspra Collection</a>
+            <td>A collection of Galileo and other data specific to Ida<br> and Gaspra, selected from the full data sets.
+
+            </table>
+
+            <h3> Galileo derived data at SBN:</h3>
+
+            <table border=2>
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td rowspan=2>Images
+            <td><a href="resource/gaspracal.html">Galileo SSI radiometrically calibrated images of Gaspra</a>
+            <td rowspan=2>Prepared by Domingue from SSI instrument data
+
+            <tr>
+            <td><a href="resource/idacalimages.html">Galileo SSI radiometrically calibrated images of Ida</a>
+
+            <tr>
+            <td rowspan=4>Spectra
+            <td><a href="resource/gaspracube.html">Galileo NIMS Gaspra spectral image cube</a>
+            <td rowspan=4> Prepared by Granahan from NIMS instrument data
+
+            <tr>
+            <td><a href="resource/idacube.html">Galileo NIMS Ida spectral image cube</a>
+
+            <tr>
+            <td><a href="resource/gaspraspec.html">Galileo NIMS radiance point spectra of Gaspra</a>
+
+            <tr>
+            <td><a href="resource/pointspec.html">Galileo NIMS radiance point spectra of Ida and Dactyl</a>
+
+            <tr>
+            <td>Maps/Mosaics
+            <td><a href="resource/stookemaps.html">Stooke Small Bodies Maps</a>
+            <td>Maps and mosaics of small solar system bodies by Stooke,<br> including Ida and Gaspra
+
+            <tr>
+            <td rowspan=2>Models
+            <td><a href="resource/oshape.html">Thomas Shape Models </a>
+            <td>Optical shape models by Thomas of small solar system bodies,<br> including Ida and Gaspra models based on Galileo images
+
+            <tr>
+            <td><a href="resource/stkshape.html">Stooke Shape Models </a>
+            <td>Optical shape models by Stooke of small solar system bodies,<br> including Ida and Gaspra models based on Galileo images
+
+            </table>
+
+            <br><br>
+
+            <hr>
+
+            <h3> Galileo data at other PDS nodes:</h3>
+
+            <table border=2>
+
+            <tr>
+            <td width=100><i>Data type</i>
+            <td width=300><i>Browse/Download</i>
+            <td width=400><i>Description</i>
+
+            <tr>
+            <td>Images
+            <td><a href="https://pds-imaging.jpl.nasa.gov/portal/galileo_mission.html">Solid State Imager (SSI)</a>
+            <td rowspan=2> Search for Galileo SSI and NIMS data at the<br> PDS Cartography and Imaging Sciences Node
+
+            <tr>
+            <td rowspan=2>Spectra
+            <td><a href="https://pds-imaging.jpl.nasa.gov/portal/galileo_mission.html">
+            Near-Infrared Mapping Spectrometer (NIMS)</a>
+
+            <tr>
+            <td><a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/catalog.htm">Ultraviolet Spectrometer/Extreme Ultraviolet<br> Spectrometer (UVS/EUV)</a>
+            <td> Search for UVS/EUV data at the PDS Atmospheres Node
+
+            <tr>
+            <td rowspan=6>Fields and Particles
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Magnetometer (MAG)</a>
+            <td rowspan=6> Search for Galileo Fields and Particles data at<br> PDS Planetary Plasma Interactions Node
+
+            <tr>
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Energetic Particles Detector (EPD)</a>
+
+            <tr>
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Heavy Ion Counter (HIC)</a>
+
+            <tr>
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Plasma Subsystem (PLS)</a>
+
+            <tr>
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Plasma Wave Subsystem (PWS)</a>
+
+            <tr>
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Photopolarimeter/Radiometer (PPR)</a>
+
+            <tr>
+            <td>Altimetry
+            <td> N/A
+            <td> No Altimeter on Galileo
+
+            <tr>
+            <td>Radio Science
+            <td><a href="https://pds-ppi.igpp.ucla.edu/search/index.jsp">Radio Science Subsystem (RSS)</a>
+            <td> Search for Galileo RSS data at PDS Planetary Plasma<br> Interactions Node
+
+            </table>
+
+
+            <p>
+            For questions about the data sets or this web site, contact Carol Neese
+            (neese@psi.edu).
+
+            <br>
+
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

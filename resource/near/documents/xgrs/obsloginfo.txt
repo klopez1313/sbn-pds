@@ -1,0 +1,59 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  PUBLICATION_DATE    = 2001-09-01                                            
+  NOTE                = "N/A"                                                 
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+1. Introduction                                                               
+                                                                              
+This document provides an overview of the Near Earth Asteroid                 
+Rendezvous X-Ray Level 2 Observation Log archive.  These documents            
+describe the systems that were used to command and control the                
+spacecraft during times when XGRS was controlling attitude, as                
+well as commands that were used to configure the instrumentation              
+during the orbital encounter.                                                 
+                                                                              
+                                                                              
+2. Directory Contents                                                         
+                                                                              
+Three types of files are included in this directory:                          
+                                                                              
+a. XGRS_COMMAND_DESC.*    Describes the Observation Log macro names           
+                          and configuration parameters.                       
+                                                                              
+b. XGRS_INST_USER_GUIDE4* Commanding and CAS generation for                   
+                           instrument and commanding of spacecraft.           
+                           Lists formats and other higher level               
+                           issues for team members to build                   
+                           instrument control macros.                         
+                                                                              
+c. XGRS_OBSLOG*           Actual Observation Log of dates and times           
+                           of command macros that were executed by            
+                           the spacecraft and instrument systems.             
+                                                                              
+Also included are label files for each file type.                             
+                                                                              
+3. Cognizant Persons                                                          
+                                                                              
+NEAR/XRS data were provided by Jacob Trombka, NEAR XGRS Team Leader:          
+                                                                              
+Jacob Trombka                                                                 
+Building 2, Rm# 165                                                           
+Code 691, Astrochemistry Branch                                               
+NASA/Goddard Space Flight Center                                              
+Greenbelt, MD 20771.                                                          
+                                                                              
+jack.trombka@gsfc.nasa.gov                                                    
+301-286-5941                                                                  
+                                                                              
+This volume was designed and produced by:                                     
+                                                                              
+Tim McClanahan                                                                
+Building 2, # 166                                                             
+Code 691, Astrochemistry Branch                                               
+NASA/ Goddard Space Flight Center                                             
+Greenbelt, MD 20771                                                           

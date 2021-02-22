@@ -1,0 +1,48 @@
+PDS_VERSION_ID          = PDS3                                                
+RECORD_TYPE             = STREAM                                              
+                                                                              
+OBJECT                  = TEXT                                                
+   INTERCHANGE_FORMAT   = ASCII                                               
+   PUBLICATION_DATE     = 2000-09-08                                          
+   NOTE                 = "PDS LABELS FOR NEAR SPICE KERNELS"                 
+END_OBJECT              = TEXT                                                
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+ SPICE Data PDS Labels                                                        
+=========================                                                     
+                                                                              
+   PDS labels for NEAR SPICE kernel files contained on this                   
+   CD are stored as detached files in the same directories where the          
+   actual data files are. The naming convention for the label files           
+   on this CD is the following: for a particular data file the label          
+   file has exactly the same name with extension ".LBL".                      
+                                                                              
+                                                                              
+Contact Information                                                           
+===================                                                           
+                                                                              
+   For NEAR project specific information provided in this                     
+   data set see AAREADME.TXT file Science Data Center contact.                
+                                                                              
+   For general information about SPICE system:                                
+                                                                              
+      Charles H. Acton, Jr,                                                   
+      (818)-354-3869,                                                         
+      Chuck.Acton@jpl.nasa.gov,                                               
+                                                                              
+   or                                                                         
+                                                                              
+      Boris Semenov                                                           
+      (818)-354-8136                                                          
+      Boris.Semenov@jpl.nasa.gov                                              
+                                                                              
+   address:                                                                   
+                                                                              
+      Navigation and Ancillary Information Facility (NAIF)                    
+      Jet Propulsion Laboratory                                               
+      MS 301-125L                                                             
+      4800 Oak Grove Drive                                                    
+      Pasadena CA 91109 USA                                                   
+                                                                              

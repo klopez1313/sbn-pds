@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>SBN Reference VEVERKAETAL1997B</title>
+
+<!-- 
+########################
+ALL of the head, style links, header and menu code is in the include. Edit that file with extreme care!!
+########################
+ -->
+
+<!--#include virtual="/css-n-includes/incl_top.inc"-->
+
+<!-- ################################################ LEFT SIDEBAR ########################################## -->
+
+<!--#include virtual="/css-n-includes/incl_left-side.inc"-->
+
+<!-- ################################################ MAIN ################################################## -->
+
+<div id="centerwide">
+
+<a name="mainContent"></a>
+<!-- ************************************************** You may begin editing! ************************************************** -->
+
+<!--
+===========================================================================
+EDIT HISTORY:
++ 2011-08-22 EMW	converted to xhtml, updated to new look
+===========================================================================
+-->
+
+<h1>VEVERKAETAL1997B</h1>
+
+<p>Veverka, J., P. Thomas, A. Harch, B. Clark, J.F. Bell III, B. Carcich, J. Joseph, C. Chapman, W. Merline, M. Robinson, M. Malin, L. McFadden, S.L. Murchie, S.E. Hawkins III, R. Farquhar, N.R. Izenberg, A. Cheng, Near's Flyby Of 253 Mathilde: Images of a C Asteroid, Science, Vol. 278, pp 2109-2114, 1997.</p>
+
+<!-- ************************************************** End editing! ************************************************** -->
+<!--#include virtual="/css-n-includes/incl_bottom.inc"-->
+<br />Last updated: <!--#config timefmt="%A %B %d, %Y"--><!--#echo var="LAST_MODIFIED" --></div><!-- close id whotext -->
+
+</div><!-- close id footer -->
+</div><!-- end id footwrap -->
+
+</div><!-- close wrapper -->
+
+</body>
+</html>

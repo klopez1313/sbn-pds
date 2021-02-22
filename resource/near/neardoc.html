@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>NEAR Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/near">NEAR</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>NEAR Documentation Set</li>
+        </ol>
+        
+        <center>
+            <h1>NEAR Documentation Set</h1>
+            </center>
+
+            <p>This page provides direct links to the best available copies of the NEAR documentation set, in all available formats.</p>
+
+            <h2>Mission Documents</h2>
+
+            <ul>
+            <li><b>Mission Overview:</b> A top-level description of the NEAR mission and its original, planned phases
+                <ul>
+                <li><a href="resource/near/documents/mission/overview.pdf">PDF</a>
+                <li><a href="resource/near/catalog/nearmission.cat">Text</a> (PDS catalog file)
+                </ul>
+            <li><b>NEAR Spacecraft Decription:</b> An overview of the spacecraft and its major subsytems
+                <ul>
+                <li><a href="resource/near/catalog/nearinsthost.cat">Text</a>  (PDS catalog file)
+                </ul>
+            <li><b>Archive Plan:</b> The original plan for collecting and archiving the NEAR data with the Planetary Data System
+                <ul>
+                <li><a href="resource/near/documents/mission/pdsarchiveplan.rtf">RTF</a>
+                <li><a href="resource/near/documents/mission/pdsarchiveplan.txt">Text</a>
+                </ul>
+            <li><b>Command and Data Handling System Description</b>: A reprint of the JHU APL Tech Digest article
+                <ul>
+                <li><a href="resource/near/documents/mission/cdhs.pdf">PDF</a>
+                <li><a href="resource/near/documents/mission/cdhs.txt">Text</a>
+                </ul>
+            <!-- 2004-08-02 S.McLaughlin Added link for sequserguide.pdf (Sequencer Guide) -->
+            <li><b>MSI/NIS/OPNAV Sequencer Guide</b>:
+                <ul>
+                <li><a href="resource/near/documents/msi/sequserguide.pdf">PDF</a>
+                </ul>
+            <li><b>Mission Reference List</b>: A master list of all citations mentioned in the documentation and data labels of all NEAR instruments
+                <ul><li><a href="resource/near/catalog/ref.cat">Text</a> (PDS Reference File)
+                </ul>
+            </ul>
+
+            <h2>Description of the Eros Coordinate Systems</h2>
+            <ul>
+            <li><a href="resource/near/NEAR_Coordinate_Systems.txt">Text</a>
+            </ul>
+
+            <h2>Description of Data Levels</h2>
+            <ul>
+            <li><a href="resource/near/datalevels.html">Text</a>
+            </ul>
+
+            <p>
+            <h2>Multi-Spectral Imager (MSI) Documents</h2>
+            <p>
+            <ul>
+            <b>MSI Instrument Description</b>
+            <ul>
+            <li><a href="resource/near/catalog/msiinst.cat">Text</a> (PDS catalog file)
+            </ul>
+            <p>
+
+            <b>MSI Reference List</b>: A list of all citations mentioned in the MSI documentation and data labels
+            <ul><li><a href="resource/near/catalog/msiref.cat">Text</a> (PDS Reference File)
+            </ul>
+            <p>
+
+            <!-- 2002-11-04 S.McLaughlin removed the following item and inserted it into the MSI Calibration section
+
+            <b>MSI Filter Bandpasses</b>
+            <ul>
+            <li><a href="resource/near/catalog/msifilds.cat">Text</a> (PDS catalog file)
+            </ul>
+
+            -->
+
+            <b>MSI Calibrations</b>
+            <ul>
+            <li>Description of calibration processes, equations, and levels
+             <ul>
+            <li><a href="resource/near/documents/msi/msical.txt">Text</a>
+            </ul>
+             <li>Files useful for the calibration of MSI images
+             <ul>
+            <li><a href="resource/near/documents/msi/calinfo.txt">Filter bandpass, flat field, and point spread function files</a>  (Text)
+             <li><a href="resource/near/catalog/msifilds.cat">Filter bandpass files only</a> (Text, PDS catalog file)
+             </ul>
+             </ul>
+            <p>
+
+            <b>Lossy Look-up Table:</b> The MSI lossy compression look-up table, in several forms
+             <ul>
+            <li><a href="resource/near/documents/msi/lossylut.txt">ASCII table</a> and <a href="resource/near/documents/msi/lossylut.lbl">PDS Label</a>
+            <li><a href="resource/near/documents/msi/lossylut.gif">GIF plot</a>
+            <li><a href="resource/near/documents/msi/lossylut.jpg">JPEG plot</a>
+            <li><a href="resource/near/documents/msi/lossylut.tif">TIFF plot</a>
+            <li><a href="resource/near/documents/msi/lossylut.png">PNG plot</a>
+            </ul>
+            <p>
+
+            <!--
+            2004-08-02 S.McLaughlin Added link for observation_overview.doc and sequserguide.pdf (Sequencer Guide)
+             -->
+
+            <b>MSI Observation Overviews, Detailed Descriptions, and Guides</b>
+            <ul>
+            <li>Overview
+             <ul>
+            <li><a href="resource/near/documents/msi/observation_overview.txt">Text</a>
+            <li><a href="resource/near/documents/msi/observation_overview.doc">DOC</a>
+            </ul>
+            <li>Detailed Descriptions
+             <ul>
+            <li><a href="resource/near/documents/msi/pre_eros_desc.txt">Text</a> (pre-Eros)
+             <li><a href="resource/near/documents/msi/eros_obsv_desc.txt">Text</a> (Eros)
+             </ul>
+            <li>Sequencer Guide (MSI/NIS/OPNAV)
+             <ul>
+            <li><a href="resource/near/documents/msi/sequserguide.pdf">PDF</a>
+            </ul>
+            <li>Observation Guides
+             <ul>
+            <li><a href="resource/near/documents/msi/pre_eros_obsv_guide.csv">CSV</a>,
+             <a href="resource/near/documents/msi/pre_eros_obsv_guide.xls">XLS</a> (pre-Eros)
+             <li><a href="resource/near/documents/msi/eros_obsv_guide.csv">CSV</a>,
+             <a href="resource/near/documents/msi/eros_obsv_guide.xls">XLS</a> (Eros)
+             </ul>
+            </ul>
+            <p>
+
+            <b>Parameter Descriptions:</b> A text file providing definitions for the MSI parameters as they are referenced in FITS headers and PDS labels
+             <ul>
+            <li><a href="resource/near/documents/msi/msidefinitions.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>MSI Dataset Descriptions</b> by mission phase. Only data available (in whole or in part) at this site are included. Descriptions are in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/msi1cru1ds.cat">Cruise Phase 1</a>
+            <li><a href="resource/near/catalog/msi1mathds.cat">Mathilde Fly-by</a>
+            <li><a href="resource/near/catalog/msi1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/msi1erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/msi1cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/msi1erfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/msi1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/msi1erosds.cat">Eros Orbit</a>
+            </ul>
+
+            <li><em>Level 2 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/msi2cru1ds.cat">Cruise Phase 1</a>
+            <li><a href="resource/near/catalog/msi2mathds.cat">Mathilde Fly-by</a>
+            <li><a href="resource/near/catalog/msi2cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/msi2erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/msi2cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/msi2erfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/msi2cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/msi2erosds.cat">Eros Orbit</a>
+            </ul>
+
+            <li><em>Level 3 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/msi3dimds.cat">Digital Image Maps of Eros Surface</a>
+            <li><a href="resource/near/catalog/msi3basemapsds.cat">Eros Basemaps</a> (simple cylindrical
+             map projections)
+             <li><a href="resource/near/catalog/msi3shapeds.cat">MSI-based Eros Shape Models</a>
+            </ul>
+            <p>
+            </ul>
+            </ul>
+
+
+            <p>
+            <h2>NEAR Laser Rangefinder (NLR) Documents</h2>
+            <p>
+            <ul>
+            <b>NLR Instrument Description:</b>
+            <ul>
+            <li><a href="resource/near/catalog/nlrinst.cat">Text</a> (PDS catalog file)
+             <li>A reprint of the JHU APL Tech Digest article
+             <ul>
+            <li><a href="resource/near/documents/nlr/nlr.pdf">PDF</a> (with figures)
+             <li><a href="resource/near/documents/nlr/nlr.rtf">RTF</a> (with figures)
+             <li><a href="resource/near/documents/nlr/nlr.txt">Text</a> (no figures)
+             </ul>
+            </ul>
+            <p>
+
+            <b>NLR Reference List</b>: A list of all citations mentioned in the NLR
+             documentation and data labels
+             <ul><li><a href="resource/near/catalog/nlrref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+
+             <b>Calibration Information:</b> A text file describing the NLR instrument
+             calibration
+             <ul>
+            <li><a href="resource/near/documents/nlr/nlrcalib.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>Parameter Descriptions:</b> A text file providing definitions for the
+             NLR parameters as they are referenced in FITS headers and PDS labels
+             <ul>
+            <li><a href="resource/near/documents/nlr/nlrdefinitions.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>NLR Dataset Descriptions</b> by mission phase. Only data available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/nlr1cru1ds.cat">Cruise Phase 1</a>
+            <li><a href="resource/near/catalog/nlr1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/nlr1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/nlr1erosds.cat">Eros Orbit</a>
+            </ul>
+
+            <li><em>Level 2 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/nlr2erosds.cat">Eros Orbit</a>
+            </ul>
+
+            <li><em>Level 3 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/nlr3erosds.cat">Eros Orbit </a>
+             (includes spherical harmonic shape and gravity models)
+             <li><a href="resource/near/catalog/nlr3erosdsmap.cat">Eros Map Projection</a>
+             (simple cylindrical for NLR shape/gravity models)
+             <li><a href="resource/near/catalog/radnlrshapds.cat">Eros Shape/Gravity Models</a>
+             (from JPL NAV team using NLR data)
+             </ul>
+            <p>
+            </ul>
+
+            </ul>
+
+
+            <p>
+            <h2>Near-Infrared Spectrometer (NIS) Documents</h2>
+            <p>
+            <ul>
+            <b>NIS Instrument Description</b>
+            <ul>
+            <li><a href="resource/near/catalog/nisinst.cat">Text</a>(PDS catalog file)
+             <li>A reprint of the JHU APL Tech Digest article
+             <ul>
+            <li><a href="resource/near/documents/nis/nis.pdf">PDF</a>
+             (with figures)
+             <li><a href="resource/near/documents/nis/nis.asc">Text</a>
+             (no figures)
+             </ul>
+            </ul>
+            <p>
+
+            <b>NIS Reference List</b>: A list of all citations mentioned in the NIS
+             documentation and data labels
+             <ul><li><a href="resource/near/catalog/nisref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+
+             <b>Calibration Information:</b> Files describing the NLR instrument
+             calibration, procedures, and software
+             <ul>
+            <li><a href="resource/near/documents/nis/calinfo.txt">Text</a> (Overview)
+             <li>Calibration procedures
+             <ul>
+            <li><a href="resource/near/documents/nis/niscal.doc">DOC</a>
+             (with figures)
+             <li><a href="resource/near/documents/nis/niscal.asc">Text</a>
+             (no figures)
+             </ul>
+            <li>Description of files used for calibrating the NIS data from
+             raw counts to radiance factor.
+             <ul>
+            <li><a href="resource/near/documents/nis/aaniscaltb.lbl">Text</a> (PDS label)
+             </ul>
+            <li>Description of the IDL software used for calibrating the NIS data from
+             raw counts to radiance factor.
+             <ul>
+            <li><a href="resource/near/documents/nis/aaniscalsw.lbl">Text</a> (PDS label)
+             </ul>
+            </ul>
+            <p>
+
+            <!-- 2004-08-02 S.McLaughlin Added link for sequserguide.pdf (Sequencer Guide) -->
+
+            <b>MSI/NIS/OPNAV Sequencer Guide</b>:
+             <ul>
+            <li><a href="resource/near/documents/msi/sequserguide.pdf">PDF</a>
+            </ul>
+            <p>
+
+            <b>NIS-Specific Phases and Subphases:</b> A text file providing a
+             table of working divisions of the NIS observations with the
+             NEAR mission. Refer to Table 2 in the following document.
+             <ul>
+            <li><a href="resource/near/documents/nis/extrinfo.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>NIS Acronyms:</b> A text file containing a list of acronyms specific
+             to the NEAR mission and the MSI/NIS team
+             <ul>
+            <li><a href="resource/near/documents/nis/nisdefinitions.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>Parameter Descriptions:</b> A text file providing definitions for the
+             NIS parameters as they are referenced in FITS headers and PDS labels
+             <ul>
+            <li><a href="resource/near/documents/nis/nisdefinitions.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>NIS Dataset Descriptions</b> by mission phase. Only data available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/nis1cru1ds.cat">Cruise Phase 1</a>
+            <li><a href="resource/near/catalog/nis1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/nis1erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/nis1cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/nis1erfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/nis1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/nis1erosds.cat">Eros Orbit</a>
+            <ul>
+            <li><a href="resource/near/documents/nis/extrinfo.txt">Extras</a>,
+             description of raw NIS data in the format used
+             by the MSI/NIS team during Eros orbit
+             </ul>
+            </ul>
+
+            <li><em>Level 2 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/nis2erosds.cat">Eros Orbit</a>
+            </ul>
+            <p>
+            </ul>
+            </ul>
+
+
+            <p>
+            <h2>Magnetometer (MAG) Documents</h2>
+            <p>
+            <ul>
+            <b>MAG Instrument Description</b>
+            <ul>
+            <li><a href="resource/near/catalog/maginst.cat">Text</a>
+             (PDS catalog file)
+             </ul>
+            <p>
+
+            <b>Mag Reference List</b>: A list of all citations mentioned in the MAG
+             documentation and data labels
+             <ul><li><a href="resource/near/catalog/magref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+            <b>Calibration Information:</b> Files describing the MAG instrument
+             calibration, results, and software
+             <ul>
+            <li>Calibration procedures and results
+             <ul>
+            <li><a href="resource/near/documents/mag/mag_calibration.doc">DOC</a>
+             (with figures)
+             <li><a href="resource/near/documents/mag/mag_calibration.rtf">RTF</a>
+             (with figures)
+             <li><a href="resource/near/documents/mag/mag_calibration.txt">Text</a>
+             (no figures)
+             </ul>
+            <li>Description of software used for the production of science data
+             files for the NEAR MAG experiment.
+             <ul>
+            <li><a href="resource/near/documents/mag/sci_proc.lbl">Text</a> (PDS label)
+             </ul>
+            <li>Description of software used for reading the Science Data Center (SDC).
+             <ul>
+            <li><a href="resource/near/documents/mag/sdc_proc.lbl">Text</a> (PDS label)
+             </ul>
+            </ul>
+            <p>
+
+
+             <b>Parameter Descriptions:</b> A text file providing definitions for the
+             MAG parameters as they are referenced in FITS headers and PDS labels
+             <ul>
+            <li><a href="resource/near/documents/mag/magdefinitions.txt">Text</a>
+            </ul>
+            <p>
+
+            <b>MAG Dataset Descriptions</b> by mission phase. Only data available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/mag1cru1ds.cat">Cruise Phase 1</a>
+            <li><a href="resource/near/catalog/mag1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/mag1erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/mag1cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/mag1erfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/mag1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/mag1erosds.cat">Eros Orbit</a>
+            <li><a href="resource/near/catalog/mag1ersfds.cat">Eros Surface</a>
+            </ul>
+
+            <li><em>Level 2 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/mag2cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/mag2erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/mag2cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/mag2erfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/mag2cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/mag2erosds.cat">Eros Orbit</a>
+            </ul>
+            <p>
+            </ul>
+            </ul>
+
+
+            <p>
+            <h2>X-ray Spectrometer (XRS) Documents</h2>
+            <p>
+            <ul>
+            <b>XRS Instrument Description</b>
+            <ul>
+            <li><a href="resource/near/catalog/xgrsinst.cat">Text</a>
+             (PDS catalog file)
+             </ul>
+            <p>
+
+            <b>XRS Reference List</b>: A list of all citations mentioned in the XRS
+             documentation and data labels
+             <ul><li><a href="resource/near/catalog/xgrsref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+            <b>XRS Level 2 Requirements Specifications:</b> Document describing the
+             formats and derivations of all the parameters required for XRS Level 2
+             analysis.
+             <ul>
+            <li><a href="resource/near/documents/xrs/xrs_reqs_7_2.doc">DOC</a>
+             (with figures)
+             <li><a href="resource/near/documents/xrs/xrs_reqs_7_2.txt">Text</a>
+             (without figures)
+             </ul>
+            <p>
+
+            <b>XRS Observation Overview, Observation Log, User Guide, and
+             Command Log Description</b>
+            <ul>
+            <li>Overview
+             <ul>
+            <li><a href="resource/near/documents/xgrs/obsloginfo.txt">
+             Text</a>
+            </ul>
+            <li>Observation Log
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_obslog.xls">
+             XLS</a>
+            <li><a href="resource/near/documents/xgrs/xgrs_obslog.csv">
+             CSV</a> (ASCII comma-delimited table)
+             </ul>
+            <li>Instrument User Guide
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.doc">
+             DOC</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.rtf">
+             RTF</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.txt">
+             Text</a> (with JPEG figures:
+             <a href="resource/near/documents/xgrs/xgrs_inst_guide_fig1.jpg">1</a>,
+             <a href="resource/near/documents/xgrs/xgrs_inst_guide_fig2.jpg">2</a>, and
+             <a href="resource/near/documents/xgrs/xgrs_inst_guide_fig3.jpg">3</a>)
+             </ul>
+            <li>Command Log Description
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_command_desc.doc">
+             DOC</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_command_desc.txt">
+             Text</a> (without figures)
+             </ul>
+            </ul>
+            <p>
+
+            <b>Parameter Descriptions:</b> Text files providing definitions for the
+             XRS parameters as they are referenced in FITS headers and
+             PDS labels. The listings are divided by instrument and operating
+             mode.
+             <ul>
+            <li><a href="resource/near/documents/xrs/xrfdefinitions.txt">XRS - Full Mode</a>
+            <li><a href="resource/near/documents/xrs/xrsdefinitions.txt">XRS - Summary</a>
+            </ul>
+            <p>
+
+            <b>XRS Dataset Descriptions</b> by mission phase. Only data available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/xrs1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/xrs1erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/near/catalog/xrs1cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/near/catalog/xrs1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/near/catalog/xrs1erosds.cat">Eros Orbit</a>
+            </ul>
+
+            <li><em>Level 2 and 3 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/xrs23erosds.cat">Eros Orbit</a>
+            </ul>
+            <p>
+            </ul>
+
+            </ul>
+
+
+            <p>
+            <h2>Gamma-Ray Spectrometer (GRS) Documents</h2>
+            <p>
+            <ul>
+            <b>GRS Instrument Description</b>
+            <ul><li><a href="resource/near/catalog/xgrsinst.cat">Text</a>
+             (PDS catalog file)
+             </ul>
+            <p>
+
+            <b>GRS Reference List</b>: A list of all citations mentioned in the GRS
+             documentation and data labels
+             <ul><li><a href="resource/near/catalog/xgrsref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+            <b>GRS Level 2 Requirements Specifications:</b> Document describing the
+             formats and derivations of all the parameters required for GRS Level
+             2 analysis.
+             <ul>
+            <li><a href="resource/near/documents/grs/grs_reqs_7_2.doc">DOC</a>
+             (with figures)
+             <li><a href="resource/near/documents/grs/grs_reqs_7_2.txt">Text</a>
+             (without figures)
+             </ul>
+            <p>
+
+            <b>GRS Observation Overview, Observation Log, User Guide, and
+             Command Log Description</b>
+            <ul>
+            <li>Overview
+             <ul>
+            <li><a href="resource/near/documents/xgrs/obsloginfo.txt">
+             Text</a>
+            </ul>
+            <li>Observation Log
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_obslog.xls">
+             XLS</a>
+            <li><a href="resource/near/documents/xgrs/xgrs_obslog.csv">
+             CSV</a> (ASCII comma-delimited table)
+             </ul>
+            <li>Instrument User Guide
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.doc">
+             DOC</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.rtf">
+             RTF</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_inst_user_guide4.txt">
+             Text</a> (without figures)
+             </ul>
+            <li>Command Log Description
+             <ul>
+            <li><a href="resource/near/documents/xgrs/xgrs_command_desc.doc">
+             DOC</a> (with figures)
+             <li><a href="resource/near/documents/xgrs/xgrs_command_desc.txt">
+             Text</a> ((without figures)
+             </ul>
+            </ul>
+            <p>
+
+            <b>Parameter Descriptions:</b> Text files providing definitions for the
+             GRS parameters as they are referenced in FITS headers and
+             PDS labels. The listings are divided by instrument and operating
+             mode.
+             <ul>
+            <li><a href="resource/near/documents/grs/grbdefinitions.txt">
+             GRS - Burst Mode</a>
+            <li><a href="resource/near/documents/grs/grfdefinitions.txt">
+             GRS - Full Mode</a>
+            <li><a href="resource/near/documents/grs/grsdefinitions.txt">
+             GRS - Summary</a>
+            </ul>
+            <p>
+
+            <b>GRS Dataset Descriptions</b> by mission phase. Only data available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+            <li><em>Level 1b Data.</em>
+             <ul>
+            <li><a href="resource/catalog/grs1cru2ds.cat">Cruise Phase 2</a>
+            <li><a href="resource/near/catalog/grs1erthds.cat">Earth Swing-by</a>
+            <li><a href="resource/catalog/grs1cru3ds.cat">Cruise Phase 3</a>
+            <li><a href="resource/catalog/grs1cru4ds.cat">Cruise Phase 4</a>
+            <li><a href="resource/catalog/grs1erosds.cat">Eros Orbit</a>
+            <li><a href="resource/catalog/grs1ersfds.cat">Eros Surface</a>
+            </ul>
+
+            <li><em>Level 2 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/grs2erosds.cat">Eros Orbit</a>
+            <li><a href="resource/near/catalog/grs23ersfds.cat">Eros Surface</a>
+            </ul>
+
+            <li><em>Level 3 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/grs23ersfds.cat">Eros Surface</a>
+            </ul>
+            <p>
+            </ul>
+            <p>
+
+            </ul>
+
+
+
+            <p>
+            <h2>Radio Science Documents</h2>
+            <p>
+            <ul>
+            <b>Radio Science Subsystem Description</b>
+            <ul>
+            <li><a href="resource/near/catalog/radinst.cat">Text</a>
+             (PDS catalog file)
+             </ul>
+            <p>
+
+            <b>Radio Science Reference List</b>: A list of all citations mentioned
+             in the Radio Science documentation and data labels
+             <ul><li><a href="resource/near/catalog/radref.cat">Text</a>
+             (PDS Reference File)
+             </ul>
+            <p>
+
+
+             <b>System Interface Specification (SIS) Documents</b>
+            <ul>
+            <li><a href="resource/near/documents/radio/trk_2_21.txt">Deep Space Network
+             UTMP and TEMPO EOP Files</a> (Text)
+             <li><a href="resource/near/documents/radio/trk_2_23.txt">Deep Space Network
+             Media Calibration Data File</a> (Text)
+             </ul><p>
+            <b>Radio Science Dataset Descriptions</b> by mission phase. Only data
+             available
+             (in whole or in part) at this site are included. Descriptions are
+             in the form of PDS catalog files:
+             <p>
+            <ul>
+
+            <li><em>Level 1 to 5 Data.</em>
+             <ul>
+            <li><a href="resource/near/catalog/radmathds.cat">Mathilde Fly-by</a>
+            <li><a href="resource/near/catalog/raderfbds.cat">Eros Fly-by</a>
+            <li><a href="resource/near/catalog/raderosds.cat">Eros Orbit</a>
+            <li><a href="resource/near/catalog/radgravds.cat">Eros Gravity Model</a> (from RSS data)
+             <li><a href="resource/near/catalog/raddsmap2.cat">Eros Map Projection</a>
+             (simple cylindrical for RSS gravity model)
+             <li><a href="resource/near/catalog/radnlrshapds.cat">Eros Shape/Gravity Models</a>
+             (from JPL NAV team using NLR data)
+             </ul>
+            <p>
+            </ul>
+            </ul>
+            <p>
+
+
+            <p>
+            <h2>SPICE Documents</h2>
+
+            <ul>
+             <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/document/docinfo.txt">Outline of documentation in the NEAR SPICE archive</a></b>
+             <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/document/">Documentation in the NEAR SPICE archive</a></b>
+             <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/catalog/spiceds.cat">NEAR SPICE data set catalog file</a>
+             </ul>
+            </ul>
+
+            <p>
+            NOTE:  The NEAR SPICE archive was originally structured inconveniently as
+            nine data sets divided by mission
+            phase.  For ease of use, these nine data sets were combined into a single
+            data set by Boris Semenov of NAIF, and the combined NEAR SPICE data set was
+            reviewed internally by SBN.  The combined data set was released by NAIF in
+            February 2013 and linked on the SBN NEAR archive site.
+
+            <p>
+            The original nine data sets, which are now superseded by the combined data set,
+            are accessible <a href="resource/near/spice.html">
+            here</a>.
+
+            </ul>
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

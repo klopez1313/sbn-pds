@@ -1,0 +1,137 @@
+PDS_VERSION_ID        = PDS3                                                   
+                                                                               
+                                                                               
+RECORD_TYPE           = FIXED_LENGTH                                           
+RECORD_BYTES          = 26                                                     
+FILE_RECORDS          = 45                                                     
+                                                                               
+                                                                               
+^MG_TABLE             = ("NFIG6.TAB", 1)                                       
+^FE_TABLE             = ("NFIG6.TAB",24)                                       
+                                                                               
+DATA_SET_ID           = "NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0"                     
+PRODUCT_NAME          = "NITTLER ET AL. (2001) FIGURE 6"                       
+PRODUCT_ID            = NFIG6                                                  
+                                                                               
+                                                                               
+INSTRUMENT_HOST_NAME  = "NEAR EARTH ASTEROID RENDEZVOUS"                       
+INSTRUMENT_NAME       = "NEAR X-RAY SPECTROMETER"                              
+TARGET_NAME           = "N/A"                                                  
+PRODUCT_CREATION_TIME = 2001-09-27                                             
+                                                                               
+DESCRIPTION           = "These tables contain the data used to generate        
+  Figure 6 of Nittler et al. (2001). The caption for this figure is:           
+                                                                               
+    Fig 6: Theoretical calibration curves relating x-ray photon ratios         
+    to concentration ratios for (a) Mg/Si and (b) Fe/Si, for a range of        
+    solar temperatures. Symbols are results of model calculations for          
+    specific meteorite compositions; curves are second-order polynomial        
+    fits to the points. Each set of symbols and curve corresponds to the       
+    indicated solar temperature, reflecting the spectral hardening of the      
+    solar x-ray spectrum with temperature. Similar calibration curves          
+    were used to derive Al/Si, S/Si, and Ca/Si ratios.                         
+                                                                               
+  Note that a single blank line has been inserted between the tables           
+  for readability.                                                             
+  "                                                                            
+                                                                               
+OBJECT     = MG_TABLE                                                          
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = MG_CURVE                                                
+  ROWS               = 22                                                      
+  ROW_BYTES          = 26                                                      
+  COLUMNS            = 4                                                       
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = WEIGHT_RATIO                                               
+    START_BYTE    = 1                                                          
+    BYTES         = 5                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Mg/Si weight ratio"                                       
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = "4MK RATIO"                                                
+    START_BYTE    = 7                                                          
+    BYTES         = 6                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F6.4"                                                     
+    DESCRIPTION   = "Mg/Si photon ratio at 4MK"                                
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = "8MK RATIO"                                                
+    START_BYTE    = 14                                                         
+    BYTES         = 5                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Mg/Si photon ratio at 8MK"                                
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = "16MK RATIO"                                               
+    START_BYTE    = 20                                                         
+    BYTES         =  5                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Mg/Si photon ratio at 16MK"                               
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = MG_TABLE                                                          
+                                                                               
+                                                                               
+OBJECT     = FE_TABLE                                                          
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = FE_CURVE                                                
+  ROWS               = 22                                                      
+  ROW_BYTES          = 26                                                      
+  COLUMNS            = 4                                                       
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = WEIGHT_RATIO                                               
+    START_BYTE    = 1                                                          
+    BYTES         = 5                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Fe/Si weight ratio"                                       
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = "12MK RATIO"                                               
+    START_BYTE    = 7                                                          
+    BYTES         = 6                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F6.4"                                                     
+    DESCRIPTION   = "Fe/Si photon ratio at 12MK"                               
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = "16MK RATIO"                                               
+    START_BYTE    = 14                                                         
+    BYTES         = 5                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Fe/Si photon ratio at 16MK"                               
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = "20MK RATIO"                                               
+    START_BYTE    = 20                                                         
+    BYTES         =  5                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F5.3"                                                     
+    DESCRIPTION   = "Fe/Si photon ratio at 20MK"                               
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = FE_TABLE                                                          
+                                                                               
+END                                                                            

@@ -1,0 +1,150 @@
+#search {
+    margin: 2em 0 1em 0;
+}
+.row {
+    display: table-row;
+}
+.row-alt {
+    background-color: var(--section-header);
+}
+.header {
+    background-color: var(--section-header);
+}
+.cell {
+    padding: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.cell h3 {
+    margin: 0;
+    text-decoration: underline;
+}
+.cell.centered {
+    text-align: center;
+}
+
+.cell.cell-sm {
+    max-width: 50px;
+}
+.cell.cell-md {
+    max-width: 130px;
+}
+.cell.cell-lg {
+    max-width: 400px;
+}
+
+.object-name {
+    text-align: left;
+}
+
+.icon {
+    height: 32px;
+    padding: 8px;
+    cursor: pointer;
+    fill: var(--link);
+}
+.ferret-link {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.external-link-icon {
+    height: 14px;
+}
+.download-link-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: none;
+}
+.category {
+    background-color: var(--section-header);
+}
+.category .cell {
+    border: none;
+    font-size: 1.5em;
+}
+.preview {
+    height: 6em;
+    width: auto;
+}
+.input-text {
+    margin: 0;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.preview-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preview-ar-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.preview-ar {
+    width: 65%;
+    border: 1px solid #BDBDBD;
+}
+.dps-2020-intro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.dps-2020-intro .pds-button {
+    height: 0;
+}
+.dps-models {
+    display: flex;
+    flex-flow: row wrap;
+}
+.dps-model {
+    width: 8em;
+    border-radius: 0.1em;
+    border: 1px solid #BDBDBD;
+    margin: 0.25em;
+    padding: 0.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clickable {
+    cursor: pointer;
+}
+.clickable:hover {
+    box-shadow: 0 0 2px 1px #BDBDBD;
+}
+
+/* START RESPONSIVE CSS */
+
+/* iPhone 6 & wider */
+@media (min-width: 375px) {
+    .sbn-main {
+        padding: 0 0.5em;
+    }
+    .cell * {
+        font-size: 0.85em;
+    }
+    .preview {
+        height: 50px;
+        width: 50px;
+    }
+}
+/* iPhone 6 Plus & wider */
+@media (min-width: 414px) {
+    .cell * {
+        font-size: 0.9em;
+    }
+}
+/* iPad (portrait mode) & wider */
+@media (min-width: 768px) {
+    .preview {
+        height: 80px;
+        width: 80px;
+    }
+}
+/* END RESPONSIVE CSS */

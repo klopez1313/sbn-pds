@@ -1,0 +1,135 @@
+PDS_VERSION_ID                   = PDS3                                       
+RECORD_TYPE                      = STREAM                                     
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-NIS-5-EDR-EROS/ORBIT-V1.0"         
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME           = "NEAR NIS CALIBRATED SPECTRA FOR EROS/ORBIT V1.0" 
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_SET_TERSE_DESC            = "This data set contains the NIS Level 2    
+  delivery i.e. calibrated NIS spectra in the Nixel database."                
+  DATA_OBJECT_TYPE               = SPECTRUM                                   
+  START_TIME                     = 1996-04-17T23:53:18.000                    
+  STOP_TIME                      = 2000-05-13T11:01:16.000                    
+  DATA_SET_RELEASE_DATE          = 2001-09-05                                 
+  PRODUCER_FULL_NAME             = "BRIAN T. CARCICH"                         
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+      This data set contains the NEAR infrared spectrometer (NIS)             
+      data for the EROS/ORBIT phase.                                          
+                                                                              
+      The data are calibrated data, provided in scientific units,             
+      that have been formatted into FITS file format (NASA Office             
+      of Science and Technology (NOST), 100-1.0). In addition to the          
+      raw spectrometer data, a calibration file and algorithm are             
+      available. This data set is archived as a set of CDROM images           
+      as a part of the NEAR EDR volume set.                                   
+                                                                              
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+      The only special parameter in the INDEX/INDEX.TAB file is MET,          
+      which approximates the Mission Elapsed Time in seconds.                 
+                                                                              
+                                                                              
+    Data                                                                      
+    ====                                                                      
+      The data are in a FITS file called the nixel database.                  
+      The nixel database maintains large amounts of information               
+      along with each spectrum:  instrument housekeeping; observational       
+      geometry; footprint location on the target.                             
+                                                                              
+      Some columns record user inputs that controlled Niscal, the NIS         
+      calibration procedure run to generate the values in the table.          
+      Those fields are CALIBRATION_MODE_BITS, DARK_MODE, NOISE_MODE,          
+      RADIANCE_MODE, and SLIT_MODE.  Those columns' possible values           
+      and their meanings are described in the file NIXDB.LBL.                 
+                                                                              
+      Some columns may be used to determine the type of observation e.g.      
+      a spectrum with field-of-view completely on, partially on, or completely
+      off the asteroid, a spectrum of the calibration plaque a spectrum with  
+      the slit set to narrow or wide and the shutter open or closed (dark).   
+      Those columns are SLIT_SHUTTER_FLAG, MIRROR_POSITION, and               
+      POLYGON_TYPE_FLAG.  Those columns' possible values                      
+      and their meanings are described in the file NIXDB.LBL.                 
+                                                                              
+      One column describes the data quality index which highlights suspect    
+      spectra:  NIS_DQI.  Those columns' possible values                      
+      and their meanings are described in the file NIXDB.LBL.                 
+                                                                              
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      The files in CALIB/ are the ones used in the actual                     
+      calibration of the data in DATA/.  The DESCRIPTION field in each        
+      calibration file's PDS label describes what role that file plays        
+      in NIS calibration.  The calibration procedure is described in          
+      even more detail under the DOCUMENT/ tree.                              
+                                                                              
+      The GEOMETRY directory is described above.                              
+                                                                              
+      The calibration plaque for the NIS instrument is made with              
+      Infragold LF (trademarked) which is a porous metal surface              
+      with a gold coating.                                                    
+      See files referred to by DOCUMENT/NIS.LBL for further information.      
+                                                                              
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      This data set is released as a CDROM set.                               
+                                                                              
+                                                                              
+    Processing History                                                        
+    ==================                                                        
+      The processing history includes dark current                            
+      and lighting geometry corrections necessary to convert from             
+      raw data to I/F units.  The location of each spectrum's                 
+      field of view was determined using a 22,540 plate shape                 
+      model of Eros, PDS PRODUCT_ID = 'PLATE-EROS-2001012-022540'             
+      of DATA_SET_ID = 'NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0'."                
+                                                                              
+                                                                              
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+                                                                              
+    Data Quality Flag                                                         
+    =================                                                         
+      Each spectrum includes a quality flag value in the                      
+      data quality field, extracted from the original data label and adjusted 
+      by the Niscal program. The values of this keyword are defined           
+      below.  The data quality flag is non-zero when there is missing         
+      data or other problems with the spectra.  The                           
+      possible values of this field are described in the file NIXDB.LBL.      
+                                                                              
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This data set underwent external peer review within PDS in August,      
+      2001."                                                                  
+                                                                              
+ END_OBJECT                       = DATA_SET_INFORMATION                      
+                                                                              
+ OBJECT                            = DATA_SET_TARGET                          
+    TARGET_NAME                    = "EROS"                                   
+ END_OBJECT                        = DATA_SET_TARGET                          
+                                                                              
+ OBJECT                            = DATA_SET_HOST                            
+  INSTRUMENT_HOST_ID               = "NEAR"                                   
+  INSTRUMENT_ID                    = "NIS"                                    
+ END_OBJECT                        = DATA_SET_HOST                            
+                                                                              
+ OBJECT                            = DATA_SET_REFERENCE_INFORMATION           
+   REFERENCE_KEY_ID                = "CHENGETAL1998"                          
+ END_OBJECT                        = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+ OBJECT                            = DATA_SET_REFERENCE_INFORMATION           
+   REFERENCE_KEY_ID                = "WARRENETAL1997"                         
+ END_OBJECT                        = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+END                                                                           

@@ -1,0 +1,54 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = STREAM                                         
+                                                                              
+OBJECT                       = VOLUME                                         
+  VOLUME_SERIES_NAME         = "NEAR EARTH ASTEROID ENCOUNTER MISSION"        
+  VOLUME_SET_NAME            = "NEAR: NEAR-INFRARED SPECTROMETER"             
+  VOLUME_SET_ID              = "USA_NASA_PDS_NNEROS_1XXX"                     
+  VOLUMES                    = 0001                                           
+  VOLUME_NAME                = "VOLUME 0001: NIS EROS/ORBIT"                  
+  VOLUME_ID                  = "NNEROS_0001"                                  
+  VOLUME_FORMAT              = "ISO-9660-Level-2"                             
+  VOLUME_VERSION_ID          = "VERSION 1.0"                                  
+  MEDIUM_TYPE                = "CD-ROM"                                       
+  DATA_SET_ID                = "NEAR-A-NIS-2-EDR-EROS/ORBIT-V1.0"             
+  PUBLICATION_DATE           = 2001-09-01                                     
+  DESCRIPTION                = "This volume contains images taken by the      
+                                Spectrograph for NEAR on 2000011 through      
+                                2001043."                                     
+                                                                              
+  OBJECT                     = DATA_PRODUCER                                  
+    INSTITUTION_NAME         = "THE JOHNS HOPKINS APPLIED PHYSICS LABORATORY" 
+    FACILITY_NAME            = "NEAR SCIENCE DATA CENTER"                     
+    FULL_NAME                = "DOUGLAS B. HOLLAND"                           
+    ADDRESS_TEXT             = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY      
+                                11100 JOHNS HOPKINS ROAD                      
+                                LAUREL MD 20723-6099                          
+                                USA"                                          
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "douglas.holland@jhuapl.edu"                   
+  END_OBJECT                 = DATA_PRODUCER                                  
+                                                                              
+  OBJECT                     = DATA_SUPPLIER                                  
+    INSTITUTION_NAME         = "THE JOHNS HOPKINS APPLIED PHYSICS LABORATORY" 
+    FACILITY_NAME            = "NEAR SCIENCE DATA CENTER"                     
+    FULL_NAME                = "DOUGLAS B. HOLLAND"                           
+    ADDRESS_TEXT             = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY      
+                                11100 JOHNS HOPKINS ROAD                      
+                                LAUREL MD 20723-6099                          
+                                USA"                                          
+    TELEPHONE_NUMBER         = "N/A"                                          
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "douglas.holland@jhuapl.edu"                   
+  END_OBJECT                 = DATA_SUPPLIER                                  
+                                                                              
+  OBJECT                     = CATALOG                                        
+    ^DATA_SET                = "NISDATASET.CAT"                               
+    ^INSTRUMENT              = "NISINST.CAT"                                  
+    ^INSTRUMENT_HOST         = "NEARINSTHOST.CAT"                             
+    ^MISSION                 = "NEARMISSION.CAT"                              
+    ^REFERENCE               = "REF.CAT"                                      
+  END_OBJECT                 = CATALOG                                        
+                                                                              
+END_OBJECT                   = VOLUME                                         
+END                                                                           

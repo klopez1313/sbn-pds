@@ -1,0 +1,66 @@
+PDS_VERSION_ID                    = PDS3                                      
+LABEL_REVISION_NOTE               = "Mark Robinson, 2001-07-23"               
+RECORD_TYPE                       = "STREAM"                                  
+INSTRUMENT_HOST_NAME              = "NEAR EARTH ASTEROID RENDEZVOUS"          
+TARGET_NAME                       = "EROS"                                    
+                                                                              
+OBJECT                            = DATA_SET_MAP_PROJECTION                   
+  DATA_SET_ID                     = "NEAR-A-MSI-5-DIM-EROS/ORBIT-V1.0"        
+                                                                              
+  OBJECT                          = DATA_SET_MAP_PROJECTION_INFO              
+    MAP_PROJECTION_TYPE           = "SIMPLE CYLINDRICAL"                      
+    MAP_PROJECTION_DESC           = "The NEAR Cartogprahic products           
+      of Eros are presented in a Simple Cylindrical map projection. In        
+      this projection, parallels of latitude and longitude are                
+      straight lines with constant distances between equal latitude and       
+      longitude intervals. This projection offers a number of advantages      
+      for storing and managing global digital data; in particular, it is      
+      computationally simple, and data are stored in a compact form.          
+      Distortion in the projection is greatest at the poles were the          
+      pole becomes a complete line rather than a point on the surface.        
+                                                                              
+      The transformation from latitude and longitude to line and              
+      sample is given by the following equations:                             
+                                                                              
+      line = INT(LINE_PROJECTION_OFFSET - lat*MAP_RESOLUTION)                 
+                                                                              
+      sample = INT(SAMPLE_PROJECTION_OFFSET - lon*MAP_RESOLUTION)             
+                                                                              
+      Note that integral values of line and sample correspond to the          
+      center of a pixel. Lat and lon are the latitude and longitude           
+      of a given location on the surface.                                     
+                                                                              
+      LINE_PROJECTION_OFFSET is the line number minus one on which            
+      the map projection origin occurs. The map projection origin             
+      is the intersection of the equator and the projection                   
+      longitude. The value of LINE_PROJECTION_OFFSET is positive for          
+      images starting north of the equator and is negative for images         
+      starting south of the equator.                                          
+                                                                              
+      SAMPLE_PROJECTION_OFFSET is the nearest sample number to the            
+      left of the projection longitude. The value of SAMPLE_                  
+      PROJECTION_OFFSET is positive for images starting to the west           
+      of the projection longitude and is negative for images starting         
+      to the east of the projection longitude.                                
+                                                                              
+      MAP_RESOLUTION is measured in pixels/degree.                            
+                                                                              
+      There are four PDS parameters that specify the latitude and             
+      longitude boundaries of an image.  MAXIMUM_LATITUDE and                 
+      MINIMUM_LATITUDE specify the latitude boundaries of the image,          
+      and EASTERNMOST_LONGITUDE and WESTERNMOST_LONGITUDE specify the         
+      longitudinal boundaries of the map.                                     
+                                                                              
+      Definitions of other mapping parameters can be found in the             
+      PDS Data dictionary. "                                                  
+                                                                              
+    ROTATIONAL_ELEMENT_DESC       = "See [SNYDER1987]."                       
+    OBJECT                        = DS_MAP_PROJECTION_REF_INFO                
+      REFERENCE_KEY_ID            = "SNYDER1987"                              
+    END_OBJECT                    = DS_MAP_PROJECTION_REF_INFO                
+                                                                              
+  END_OBJECT                      = DATA_SET_MAP_PROJECTION_INFO              
+END_OBJECT                        = DATA_SET_MAP_PROJECTION                   
+                                                                              
+END                                                                           
+                                                                              

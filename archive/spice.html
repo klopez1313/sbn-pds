@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Spice Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Types</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>SPICE Kernels</li>
+        </ol>
+
+        <center>
+        <h1> SPICE Data </h1>
+        </center>
+        <p> These data sets include SPICE data, which contains time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space.
+            <br> For more SPICE data and tools, see the <a href="https://naif.jpl.nasa.gov/naif/">Navigation and Ancillary Information Node (NAIF) </a></p>
+
+        <ul>
+        <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/dawn-m_a-spice-6-v1.0/dawnsp_1000">Dawn SPICE Archive</a>
+        <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/">Near-Earth Asteroid Rendezvous (NEAR) SPICE</a>
+        <li><a href="http://naif.jpl.nasa.gov/naif/data_archived.html">Deep Impact</a></li>
+        <li><a href="http://naif.jpl.nasa.gov/naif/data_archived.html">Deep Space 1</a></li>
+        <li><a href="http://naif.jpl.nasa.gov/naif/data_archived.html">New Horizons</a></li>
+        <li><a href="http://naif.jpl.nasa.gov/naif/data_archived.html">Stardust</a></li>
+        <li><a href="https://psa.esac.esa.int/pub/mirror/INTERNATIONAL-ROSETTA-MISSION/SPICE/">Rosetta</a> Archived at ESA</li>
+        </ul>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = STREAM                                        
+OBJECT                        = TEXT                                          
+  PUBLICATION_DATE            = 2001-09-01                                    
+  NOTE                        = "Description of the                           
+     PRE_EROS_OBSV_GUIDE files in this directory."                            
+END_OBJECT                    = TEXT                                          
+END                                                                           
+                                                                              
+Column Descriptions for the MSI Pre_Eros Observation Guide:                   
+                                                                              
+The MSI Pre_Eros observation guide describes some basic information           
+about each MSI observation that was acquired during the NEAR mission          
+prior to 1998. An 'observation' is a convenient unit for organizing the       
+data and refers to the process of sequencing. The observations within         
+these guides were developed essentially by hand in STOL.  This differs        
+from the sequences after 998-210 which were built in SEQGEN.   A              
+different organizational structure was required for each which is why         
+the mission was divided in this manner.                                       
+                                                                              
+                                                                              
+The following fields are recorded:                                            
+                                                                              
+1. Orbit                                                                      
+   Occasional entries in this column give range to target (tbd). This is      
+   only applicable for the Mathilde flyby and the EarthMoon Swingby.          
+   Additional range and viewing information will be available in the          
+   mathilde_orbital_info.txt and earthmoon_orbital_info.txt files, in         
+   the respective subdirectories.                                             
+                                                                              
+2. Sub-solar Latitude -  tbd, will be sub-solar latitude on the target        
+   (earth or mathilde).                                                       
+                                                                              
+3.  Observation                                                               
+    This is a unique descriptive term identifying the name of the             
+    observation. This represents a unit of sequencing which acquired a        
+    set of images.  The data acquired within an observation were              
+    generally taken as a discrete event with a common purpose.                
+                                                                              
+                                                                              
+4.  Year-Doy                                                                  
+    This describes the year and day of year of the start of the               
+    observation.                                                              
+                                                                              
+                                                                              
+5.  Sequence -                                                                
+    In the Pre_Eros spreadsheet, this column will be a link to the STOL       
+    script for the sequence.  Sometimes this will be preceded by a text       
+    description of the sequence.  The pre_eros_seq_archive.txt has some       
+    examples which will show you how to interpret the STOL script.            
+    Please refer to the observation_overview.txt file for the names and       
+    locations of additional files available such as imagelists.               
+                                                                              
+                                                                              
+6.  MET Range                                                                 
+    This is the range of METs  for the observation (spacecraft mets for       
+    first and last images in the observation).                                
+                                                                              
+7.  Start UTC                                                                 
+    This is the UTC of the first image in the observation.                    
+                                                                              
+8.  End  UTC                                                                  
+    This is the UTC of the last image in the observation.                     
+                                                                              
+9. Sequence ID (tbd)                                                          
+   Up to 12 unique Sequence Definitions were resident in the MSI DPU          
+   during the Pre_Eros  phases.  Each of these Sequence Definitions           
+   contains a parameter, the Seq ID, which is an integer between 1 and        
+   12, that uniquely distinguishes it from the other Seq Defs.  A             
+   Sequence Definition defines the format by which images are acquired        
+   (number of images, spacing, compression, exposures, filters, etc).         
+   Seq Defs were executed by calling the Seq ID. We could redefine the        
+   parameter values in any or all of the Sequence Definitions at any          
+   time during the mission.  There is currently no SeqID log available        
+   for this period as in the Eros phases. But you can go to the STOL          
+   sequence file and find where the SEQ ID has been loaded just prior to      
+   the observation. (if I have time before the final is due I'll  list        
+   these out in some useful manner).                                          
+                                                                              
+   A better way to get the same information is to look in the image           
+   header, where you can  find listed the compression, exposure values,       
+   and so forth for that image.  An imagelist (if available) is another       
+   way to get an overview of some of this information.                        
+                                                                              
+10. Filters                                                                   
+    This is a list of the filters that were used during this Sequence.        
+                                                                              
+11. Number of Nonzero Images                                                  
+    This is the number of images acquired by this observation which had       
+    non-zero exposure values.                                                 
+                                                                              
+12. Number of Zero Exp Images                                                 
+    This is the number images acquired by this observation which had          
+    zero exposure values.                                                     
+                                                                              
+13. Compression                                                               
+    This lists the type of compression used for the images acquired in        
+    this observation.  (tbd)                                                  
+                                                                              
+14. Description                                                               
+    A short description of the observation.                                   
+                                                                              
+15. Detailed Description -                                                    
+    In a few cases there are text files that offer more detailed              
+    information. They will be linked from the spreadsheet, or at the          
+    very least referenced by name. They will be located in the /pre_eros      
+    subdirectory. The observation_overview.txt also contains detailed         
+    descriptions of many observations.                                        
+                                                                              
+16. Gifs -                                                                    
+    These are predict plots generated by our visualization program            
+    Orbit. They show the MSI and sometimes NIS fields of view plotted         
+    against a 3-d representation of the target.  Often an observation         
+    continued over the course of many hours. It is impossible to capture      
+    the observation design in a single plot,  but we were very pressed        
+    for time and tried to at least give the flavor of the observation in      
+    the simplest manner. Plots do not exist for every observation.            
+    Sometimes, but not always,  there is a short description in the           
+    comment area on the plot itself which will help explain the               
+    observation.                                                              
+                                                                              
+    The times shown in the middle of the plot usually represent the           
+    bounding mets and utcs for the frames displayed.                          
+                                                                              
+    The best way to look at these sequences is with our visualization         
+    s/w, called Orbit.  Even though many of these observations last           
+    hours, during which the view to Eros changes considerably,  we can        
+    only show one view in these gifs. In orbit you can step through the       
+    sequence frame by frame and watch how the view to eros changes. I         
+    would like to make this program available in binary form.  If you         
+    need it and want it, contact us at Cornell. We might make it              
+    available on our public ftp site.                                         

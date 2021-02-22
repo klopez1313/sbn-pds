@@ -1,0 +1,202 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+LABEL_REVISION_NOTE = "                                                       
+   28 Mar 2001   A.C.Raugh: Template created for Eros Shape Model             
+   29.Mar 2001   B.T.Carcich:  filled in some the details                     
+   30.Mar 2001   B.T.Carcich:  Converted to multiple plate models covered     
+                               by this DATA_SET object                        
+   30.Mar 2001   B.T.Carcich:  All six plate models included                  
+   2009-07-13    T.Barnes(SBN): Added CITATION_DESC from EN copy and          
+                                added ABSTRACT_DESC.                          
+   2009-09-09    T.Barnes(SBN): Added DETAILED_CATALOG_FLAG.                  
+   2009-09-12    T.Barnes(SBN): Added DATA_SET_MISSION and RECORD_TYPE"       
+                                                                              
+OBJECT     = DATA_SET                                                         
+  DATA_SET_ID = "NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0"                         
+                                                                              
+  OBJECT     = DATA_SET_INFORMATION                                           
+    DATA_SET_NAME                  = "NEAR MSI SHAPE MODEL FOR 433 EROS V1.0" 
+    DATA_SET_COLLECTION_MEMBER_FLG = "N"                                      
+    DATA_OBJECT_TYPE               = TABLE                                    
+    START_TIME                     = "N/A"                                    
+    STOP_TIME                      = "N/A"                                    
+    DATA_SET_RELEASE_DATE          = 2001-09-30                               
+    PRODUCER_FULL_NAME             = "BRIAN CARCICH"                          
+    DETAILED_CATALOG_FLAG          = "N"                                      
+    ABSTRACT_DESC                  = "                                        
+      This data set contains the Peter Thomas shape model for asteroid        
+      433 Eros, based on optical data from the NEAR MSI instrument. "         
+    CITATION_DESC                  = "                                        
+      Thomas P.C., J. Joseph, B.T. Carcich, A.C. Raugh, NEAR MSI SHAPE MODEL  
+      FOR 433 EROS V1.0, NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0, NASA Planetary  
+      Data System, 2001."                                                     
+    DATA_SET_TERSE_DESC            = "                                        
+      This data set consists of a shape model, in varying                     
+      resolutions and formats, of the surface of 433 Eros,                    
+      derived from observations made by the NEAR Multi-Spectral               
+      Imager (MSI) instrument."                                               
+                                                                              
+    DATA_SET_DESC                  = "                                        
+                                                                              
+                                                                              
+      Data Set Overview                                                       
+      =================                                                       
+        This data set contains the Peter Thomas shape model for               
+        asteroid 433 Eros, based on optical data from the NEAR                
+        MSI instrument.  The current version of this data set contains        
+        the following shape model files and PRODUCT_ID's                      
+                                                                              
+        eros_2001012_001708.tab       PLATE-EROS-2001012-001708               
+        eros_2001012_007790.tab       PLATE-EROS-2001012-007790               
+        eros_2001012_010152.tab       PLATE-EROS-2001012-010152               
+        eros_2001012_022540.tab       PLATE-EROS-2001012-022540               
+        eros_2001012_088398.tab       PLATE-EROS-2001012-088398               
+        eros_2001012_200700.tab       PLATE-EROS-2001012-200700               
+        erosrgst_2001012.tab          RGST-EROS-2001012                       
+                                                                              
+        Each shape model file also has a detached label file, with a          
+        suffix of .lbl, which describes the respective formats.               
+                                                                              
+        The first six files are in a plate model format and only              
+        represent the model shape.  The last file is in a modified            
+        Peter Thomas RGST model format and includes shape, gravity,           
+        slope and topograpic information.                                     
+                                                                              
+        N.B.:  In the RGST-EROS-2001012 product, some radii starting from     
+        the model center intersect the surface in more than one point.        
+        This happens mostly around 160 degrees west longitude.  That means    
+        that the RGST format used in that product is not able to adequately   
+        represent the shape model's surface.  Caveat emptor.  If this is an   
+        issue, users may use one of the plate models.                         
+                                                                              
+        The plate file naming convention uses three fields, separated by      
+        underscores:  the first field is the target, eros; the second         
+        field represents the version of the base shape model, 2001012;        
+        the third field gives the number of plates in that file's             
+        representation of the base shape model.                               
+                                                                              
+        All files represent the same Eros shape model (2001012)               
+        only the resolution and format changes between files.                 
+                                                                              
+        These shape models are distinct from the Peter Thomas shape           
+        models based on optical data from other sources, included             
+        in a separate data set:  EAR-A-5-DDR-SHAPE-MODELS-V2.0.               
+                                                                              
+        These shape models are also distinct from the shape models            
+        based on radar observations, included in a separate                   
+        data set:  EAR-A-5-DDR-RADARSHAPE-MODELS-V1.0.                        
+                                                                              
+                                                                              
+      Parameters                                                              
+      ==========                                                              
+        A single data table contains both the cartesian coordinates           
+        of the vertices and the list of vertices defining                     
+        triangular facets.  Details of mapping and production of the          
+        model are given in the Processing section below, and                  
+        further details are given in the relevant published paper.            
+        [THOMASETAL2001].                                                     
+                                                                              
+                                                                              
+      Processing                                                              
+      ==========                                                              
+        Shape model derived via stereogrammetry of 1,888 NEAR MSI             
+        images.  The model is based on 31,532 observations of 6,328           
+        control points.  The actual plate models have triangular              
+        plates, with  vertices interpolated from the control                  
+        points.  To transform the set of individual coordinates of            
+        control points into these plate model files, we make use of           
+        software internally called 'WaG,' currently being developed           
+        by Applied Research Associates NZ Limited.                            
+                                                                              
+                                                                              
+      Coordinate System                                                       
+      =================                                                       
+        The 433 Eros body-fixed planetocentric coordinate system is           
+        defined as follows:                                                   
+                                                                              
+        North Spin Pole with respect to the J2000 reference frame:            
+                                                                              
+          RA = 11.350 Dec = 17.216, +/- 0.02 degrees                          
+                                                                              
+        Prime Meridian:                                                       
+                                                                              
+          W = 326.027 + 1639.38864745 d, degrees                              
+                                                                              
+          (d in days after the J2000 epoch, JD 2451545.0)                     
+                                                                              
+        The body-fixed ``Planetocentric'' coordinate system referred to       
+        here is defined for solar system bodies as follows:                   
+                                                                              
+         --   The x-axis of the Planetocentric coordinate system for a        
+              specified body lies both in the body's equatorial plane and     
+              in the plane containing the body's prime meridian.              
+                                                                              
+         --   The z-axis is parallel to the body's mean axis of rotation      
+              and points North of the invariable plane of the solar system    
+              (regardless of the body's spin direction). The north pole is    
+              this pole of rotation.                                          
+                                                                              
+         --   The y-axis is defined as the cross product of the z and x       
+              axes, in that order. Thus, the frame is right-handed.           
+                                                                              
+        The above definition implies that the axes of a planetocentric        
+        system are time-varying. Thus a complete specification of the         
+        axes requires identification of an epoch as well as the body.         
+        This frame is relative to J2000.                                      
+                                                                              
+                                                                              
+      Software                                                                
+      ========                                                                
+        The plate model format is compatible with software developed          
+        at Cornell.  The two packages are POINTS, written by Jonathan         
+        Joseph, which is used to collect and solve for the control            
+        points that are the basis for the shape model, and ORBIT,             
+        written by Brian Carcich, which used the model to aid science         
+        planners when they created the sequences of images during             
+        the NEAR mission.  None of these software packages will               
+        be archived with these shape models.                                  
+                                                                              
+                                                                              
+      Media/Format                                                            
+      ============                                                            
+        These data are included as part of the NEAR mission archive,          
+        and are also available for Internet download.                         
+      "                                                                       
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+                                                                              
+      Confidence Level Overview                                               
+      =========================                                               
+        The center of figure is within 50 m of the center of mass             
+        provided by the NEAR Navigation team at JPL.                          
+                                                                              
+        The control point RMS error is less than 10 m.  The error             
+        at any point on the surface is typically less than 50 m.              
+                                                                              
+                                                                              
+      Review                                                                  
+      ======                                                                  
+        External review of the NEAR mission archive, including this           
+        data set, was peformed in August, 2001.                               
+      "                                                                       
+  END_OBJECT = DATA_SET_INFORMATION                                           
+                                                                              
+  OBJECT     = DATA_SET_HOST                                                  
+    INSTRUMENT_HOST_ID = NEAR                                                 
+    INSTRUMENT_ID      = MSI                                                  
+  END_OBJECT = DATA_SET_HOST                                                  
+                                                                              
+  OBJECT     = DATA_SET_TARGET                                                
+    TARGET_NAME = EROS                                                        
+  END_OBJECT = DATA_SET_TARGET                                                
+                                                                              
+  OBJECT                           = DATA_SET_MISSION                         
+    MISSION_NAME                   = "NEAR EARTH ASTEROID RENDEZVOUS"         
+  END_OBJECT                       = DATA_SET_MISSION                         
+                                                                              
+  OBJECT     = DATA_SET_REFERENCE_INFORMATION                                 
+    REFERENCE_KEY_ID = "THOMASETAL2001"                                       
+  END_OBJECT = DATA_SET_REFERENCE_INFORMATION                                 
+                                                                              
+END_OBJECT = DATA_SET                                                         
+END                                                                           

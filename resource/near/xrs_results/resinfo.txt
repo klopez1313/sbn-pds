@@ -1,0 +1,84 @@
+PDS_VERSION_ID        = PDS3                                                   
+RECORD_TYPE           = STREAM                                                 
+OBJECT                = TEXT                                                   
+  INTERCHANGE_FORMAT  = ASCII                                                  
+  PUBLICATION_DATE    = 2001-09-01                                             
+  NOTE                = "N/A"                                                  
+END_OBJECT            = TEXT                                                   
+                                                                               
+END                                                                            
+                                                                               
+RESINFO.TXT Written as part of the NEAR XGRS submission to                     
+the Planetary Data System (PDS). The data presented in                         
+this directory are specific to the NEAR X-ray Spectrometer                     
+Level 3 submission.                                                            
+                                                                               
+The following files comprise Figure 2 from Nittler, 2001 MAPS                  
+n000504.lbl                                                                    
+n000504.tab                                                                    
+n000615.lbl                                                                    
+n000615.tab                                                                    
+n000710.lbl                                                                    
+n000710.tab                                                                    
+n001227.lbl                                                                    
+n001227.tab                                                                    
+n010102.lbl                                                                    
+n010102.tab                                                                    
+                                                                               
+Description:                                                                   
+Observed and best fit model Soft X-ray spectra (0 to 10 KeV)                   
+obtained from NEAR XGRS solar monitor and three asteroid                       
+pointing detectors (bare, Mg filter, and Al filter) during                     
+five solar flares (a through e) which occurred during the NEAR                 
+mision orbital phase.  Two theoretical spectra for the solar monitor           
+correspond to best solar two temperature and one temperature above             
+4 KeV fit to observed spectra.  Theoretical spectra for asteroid               
+pointing detectors are best fit using Levenberg-Marquardt least                
+squares minimization.  All spectra have had background removed.                
+A typical background during that time was removed from the solar               
+monitor spectrum, and a background removed using the method from               
+the asteroid pointing detectors.                                               
+                                                                               
+The following files comprise Figure 3 from Nittler, 2001 MAPS                  
+quietsummer.lbl                                                                
+quietsummer.tab                                                                
+quietwinter.lbl                                                                
+quietwinter.tab                                                                
+                                                                               
+Description:                                                                   
+Observed and best fit model soft X-ray spectra (0.5 to 3 KeV                   
+obtained from NEAR XGRS three asteroid pointing detectors (bare,               
+Mg filter, and Al filter) during solar quiescence in summer (a)                
+and winter (b) halves of the mission, respectively.  Lower energy              
+lines (for Mg and Si at 1.25 and 1.75 respectively) are clearly                
+observable during quiescent times.  Theoretical spectra for                    
+asteroid pointing detectors are best fit using Levenberg-Marquardt             
+least squares minimization.  All spectra have had background                   
+removed.  A typical background during that time was removed                    
+from the solar monitor spectrum, and a background removed using                
+the method from the asteroid pointing detectors.                               
+                                                                               
+                                                                               
+The following files comprise Figure 4 from Nittler, 2001 MAPS                  
+nfig4.lbl                                                                      
+nfig4.tab                                                                      
+                                                                               
+Description:                                                                   
+Theoretical models of continuum plus lines for single average                  
+temperature solar corona at 4, 8, and 16 million degrees, from models          
+by Mewe.                                                                       
+                                                                               
+The following files comprise Figure 6 from Nittler, 2001 MAPS                  
+nfig6.lbl                                                                      
+nfig6.tab                                                                      
+                                                                               
+Description:                                                                   
+For Mg/Si (a) and Fe/Si (b), photon (X-ray intensity) ratios                   
+versus weight ratios for typical meteorite compositions                        
+generated using solar output at 4, 8, and 16 million degrees.                  
+                                                                               
+                                                                               
+Tables 1-3 from the Nittler, MAPS 2001 paper are elaborated in                 
+XRSMAPS_FLOURESCENCE.TXT in this directory.                                    
+                                                                               
+Table 4 is addendum to XRSMAPS_FLOURESCENCE.TXT.                               

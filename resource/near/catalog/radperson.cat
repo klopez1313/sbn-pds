@@ -1,0 +1,65 @@
+PDS_VERSION_ID                    = PDS3                                      
+RECORD_TYPE                       = FIXED_LENGTH                              
+RECORD_BYTES                      = 80                                        
+LABEL_REVISION_NOTE               =  "E. GRAYZECK, 2001-07-30"                
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = JGIORGINI                                 
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "JON D. GIORGINI"                         
+  LAST_NAME                       = GIORGINI                                  
+  TELEPHONE_NUMBER                = "8183933107"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "N/A"                                     
+  FAX_NUMBER                      = "8183933107"                              
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  INSTITUTION_NAME                = "JET PROPULSION LABORATORY"               
+  NODE_ID                         = "N/A"                                     
+  PDS_AFFILIATION                 = "N/A"                                     
+  REGISTRATION_DATE               = "N/A"                                     
+  ADDRESS_TEXT                    = "JET PROPULSION LABORATORY                
+                                     MAIL STOP 301-150                        
+                                     4800 OAK GROVE DRIVE                     
+                                     PASADENA, CA  91109-8099"                
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "JON.GIORGINI@JPL.NASA.GOV"               
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+                                                                              
+OBJECT                            = PERSONNEL                                 
+ PDS_USER_ID                      = AKONOPLIV                                 
+                                                                              
+ OBJECT                           = PERSONNEL_INFORMATION                     
+  FULL_NAME                       = "ALEX S. KONOPLIV"                        
+  LAST_NAME                       = KONOPLIV                                  
+  TELEPHONE_NUMBER                = "8183546105"                              
+  ALTERNATE_TELEPHONE_NUMBER      = "N/A"                                     
+  FAX_NUMBER                      = "8183936388"                              
+  PDS_ADDRESS_BOOK_FLAG           = "N"                                       
+  INSTITUTION_NAME                = "JET PROPULSION LABORATORY"               
+  NODE_ID                         = "N/A"                                     
+  PDS_AFFILIATION                 = "N/A"                                     
+  REGISTRATION_DATE               = "N/A"                                     
+  ADDRESS_TEXT                    = "JET PROPULSION LABORATORY                
+                                     MAIL STOP 301-125J                       
+                                     4800 OAK GROVE DRIVE                     
+                                     PASADENA, CA  91109-8099"                
+ END_OBJECT                       = PERSONNEL_INFORMATION                     
+                                                                              
+ OBJECT                           = PERSONNEL_ELECTRONIC_MAIL                 
+  ELECTRONIC_MAIL_ID              = "ASK@KRAIT.JPL.NASA.GOV"                  
+  ELECTRONIC_MAIL_TYPE            = "INTERNET"                                
+  PREFERENCE_ID                   = 1                                         
+ END_OBJECT                       = PERSONNEL_ELECTRONIC_MAIL                 
+                                                                              
+END_OBJECT                        = PERSONNEL                                 
+                                                                              
+END                                                                           
+                                                                              
+                                                                              

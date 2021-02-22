@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Data from LADEE</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>LADEE</li>
+        </ol>
+        <center>
+            <h1> Data from the Lunar Atmosphere and Dust Environment Explorer (LADEE) mission </h1>
+            </center>
+
+            <p>
+            <h3>Now available in the PDS SBN archive:</h3>
+
+            <ul>
+            <li><a href="resource/ldex.html">Lunar Dust Experiment (LDEX)</a>
+            </ul>
+
+            <h3>Now available from the PDS Atmospheres Node
+            <a href="http://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/LADEE/mainr.html">LADEE Archive Page</a>:</h3>
+
+            <ul>
+            <li> <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/LADEE/nms.html">Neutral Mass Spectrometer (NMS)</a>
+            <li> <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/LADEE/uvs.html">UV-Vis Spectrometer (UVS)</a>
+            <li> <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/LADEE/naif.html">SPICE </a>
+            </ul>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

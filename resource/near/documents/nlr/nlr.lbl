@@ -1,0 +1,49 @@
+PDS_VERSION_ID           = PDS3                                               
+                                                                              
+RECORD_TYPE              = UNDEFINED                                          
+^ASCII_DOCUMENT          = "NLR.TXT"                                          
+^ADOBE_PDF_DOCUMENT      = "NLR.PDF"                                          
+                                                                              
+  OBJECT                   = ASCII_DOCUMENT                                   
+  DOCUMENT_NAME            = "NEAR LASER RANGEFINDER:A TOOL FOR THE MAPPING   
+                              AND TOPOLOGIC STUDY OF ASTEROID 433 EROS"       
+  DOCUMENT_TOPIC_TYPE      = "DATA SET DESCRIPTION"                           
+  INTERCHANGE_FORMAT       = ASCII                                            
+  DOCUMENT_FORMAT          = TEXT                                             
+  PUBLICATION_DATE         = 1998                                             
+  DESCRIPTION              = "NEAR Laser Rangefinder Description"             
+  END_OBJECT               = ASCII_DOCUMENT                                   
+                                                                              
+  OBJECT                   = ADOBE_PDF_DOCUMENT                               
+  DOCUMENT_NAME            = "NEAR LASER RANGEFINDER:A TOOL FOR THE MAPPING   
+                              AND TOPOLOGIC STUDY OF ASTEROID 433 EROS"       
+  DOCUMENT_TOPIC_TYPE      = "DATA SET DESCRIPTION"                           
+  INTERCHANGE_FORMAT       = BINARY                                           
+  DOCUMENT_FORMAT          = ADOBE_PDF                                        
+  PUBLICATION_DATE         = 1998                                             
+  DESCRIPTION              = "NEAR Laser Rangefinder Description"             
+  ABSTRACT_TEXT            = "                                                
+In 1999, after a 3-year transit through space, the Near Earth Asteroid        
+Rendezvous (NEAR) spacecraft will place a scientific payload consisting of    
+five instruments into a low-altitude orbit ( 35 km) about the asteroid 433    
+Eros for 1 year. One instrument, the NEAR Laser Rangefinder (NLR), will use   
+infrared laser pulses to provide astrophysicists with precision altimetry data
+measurements that were previously unavailable from asteroid observations.     
+These data will accurately map Eros's topology, identify and characterize     
+small-scale surface features, a precisely determine overall volume and mass   
+once they are combined with navigation data. Objectives associated with the   
+NLR science mission are presented along with performance specifications and   
+instrument design details. The method by which NLR performance was analyzed is
+described, as are tests us to verify its performance and operability. During  
+performance testing, an 'end-to-end' test was conducted, where the integrated 
+NLR instrument was operated in free space using a 216.4-m hallway. Test       
+results fully verified all instrument interfaces and indicated that NLR per-  
+formance parameters were well within all specifications. In addition, range   
+noise and biases were repeatable to 1 count, which is the minimum level       
+possible for a direct-detection rangefinder.                                  
+(Keywords: Acceptance testing, APD detector, Laser altimeter, Laser           
+Rangefinder.)                                                                 
+    "                                                                         
+  END_OBJECT               = ADOBE_PDF_DOCUMENT                               
+                                                                              
+  END                                                                         

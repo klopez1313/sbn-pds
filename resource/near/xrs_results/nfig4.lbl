@@ -1,0 +1,83 @@
+PDS_VERSION_ID        = PDS3                                                   
+                                                                               
+                                                                               
+RECORD_TYPE           = FIXED_LENGTH                                           
+RECORD_BYTES          = 52                                                     
+FILE_RECORDS          = 1024                                                   
+                                                                               
+                                                                               
+^TABLE                = "NFIG4.TAB"                                            
+                                                                               
+DATA_SET_ID           = "NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0"                     
+PRODUCT_NAME          = "NITTLER ET AL. (2001) FIGURE 4"                       
+PRODUCT_ID            = NFIG0                                                  
+                                                                               
+                                                                               
+INSTRUMENT_HOST_NAME  = "NEAR EARTH ASTEROID RENDEZVOUS"                       
+INSTRUMENT_NAME       = "NEAR X-RAY SPECTROMETER"                              
+TARGET_NAME           = "LABORATORY CALIBRATOR"                                
+PRODUCT_CREATION_TIME = 2001-09-24                                             
+                                                                               
+OBJECT     = TABLE                                                             
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = THEORETICAL_SPECTRA                                     
+  ROWS               = 1024                                                    
+  ROW_BYTES          = 52                                                      
+  COLUMNS            = 4                                                       
+  DESCRIPTION        = "Figure caption from Nittler et al. (2001):             
+                                                                               
+     Theoretical solar x-ray spectra for three plasma electron                 
+     temperatures, calculated using model of Mewe et al. (1985).               
+     The solar x-ray spectrum is composed of lines from highly-                
+     excited ions, superimposed on a continuum. As the plasma                  
+     temperature increases, the spectrum 'hardens,' with increased             
+     output at higher energies.                                                
+    "                                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = ENERGY                                                     
+    START_BYTE    = 1                                                          
+    BYTES         = 7                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F7.4"                                                     
+    UNIT          = "keV"                                                      
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = "4MK"                                                      
+    START_BYTE    = 10                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "PHOTONS/SECOND/STERADIAN"                                 
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = "8MK"                                                      
+    START_BYTE    = 24                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "PHOTONS/SECOND/STERADIAN"                                 
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = "16MK"                                                     
+    START_BYTE    = 38                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "PHOTONS/SECOND/STERADIAN"                                 
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = TABLE                                                             
+                                                                               
+END                                                                            

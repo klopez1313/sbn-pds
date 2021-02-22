@@ -1,0 +1,264 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = STREAM                                   
+                                                                              
+OBJECT                             = INSTRUMENT                               
+  INSTRUMENT_HOST_ID               = "NEAR"                                   
+  INSTRUMENT_ID                    = "NIS"                                    
+                                                                              
+  OBJECT                           = INSTRUMENT_INFORMATION                   
+    INSTRUMENT_NAME                = "NEAR INFRARED SPECTROMETER"             
+    INSTRUMENT_TYPE                = "SPECTROMETER"                           
+    INSTRUMENT_DESC                = "                                        
+                                                                              
+    Instrument Overview                                                       
+    ===================                                                       
+                                                                              
+      Launched on February 17, 1996, the Near Earth Asteroid Rendezvous       
+      (NEAR) spacecraft will go into orbit around the asteroid 433 Eros on    
+      February 14, 2000. The first launch of the Discovery class missions,    
+      NEAR will study this S-class asteroid up close, determining its         
+      geological characteristics, physical properties and composition         
+      [CHENGETAL1997]. The reflected-light spectral data gathered by the      
+      Near Infrared Spectrometer (NIS) is a key component of an integrated    
+      strategy for the study of Eros. This strategy also includes high        
+      resolution imaging from the multispectral imager (MSI)                  
+      [VEVERKAETAL1997A], elemental abundance measurements from the           
+      X-ray/gamma-ray spectrometer (XGRS) [TROMBKAETAL1997], magnetic         
+      field data from the magnetometer (MAG) [ACUNAETAL1997], topographic     
+      data from the NEAR laser rangefinder (NLR) [ZUBERETAL1997], and mass    
+      and gravity data from the on-board radio science experiment             
+      [YEOMANSETAL1997]. NIS will conduct spectral mapping of Eros by         
+      measuring reflected sunlight in the wavelength range from 800 to        
+      2600 nm. Reflectance spectra of Eros will be used to identify the       
+      surface mineral assemblages, to constrain the origin and evolution      
+      of the surface, and, in combination with other NEAR data, to explore    
+      the links between asteroids and meteorites.                             
+                                                                              
+      NEAR has traveled a circuitous path on its way to its orbital           
+      encounter with Eros [FARQUHARETAL1995], including a swing through       
+      the inner main asteroid belt that allowed a flyby of the C-type         
+      asteroid 253 Mathilde, a gravity-assist swingby of Earth, and an        
+      unplanned initial flyby of Eros itself following an aborted             
+      orbit-insertion burn [YEOMANSETAL1999], [VEVERKAETAL1999B]. Due to      
+      inadequate power margins at the relatively large heliocentric           
+      distance during the target-of-opportunity encounter with Mathilde on    
+      June 27, 1997, NIS was not turned on at that time [VEVERKAETAL1997B].   
+      The NIS instrument's protective cover was not opened until later in     
+      1997, allowing observations of the on-board calibration target          
+      (caltarget) and of the Earth and Moon during the January 23, 1998       
+      swingby maneuver. NIS first observed Eros in late December 1998         
+      [VEVERKAETAL1999A]. Data from the Eros flyby provided a valuable        
+      opportunity to evaluate instrument performance.  Observations of Eros   
+      will resume on final approach in early 2000 and continue throughout     
+      the mission as the orbit is changed in steps from 500 to 35 km radius.  
+                                                                              
+      NIS was designed to fulfill four key NEAR measurement requirements      
+      [VEVERKAETAL1997A]:  1) Map the mineralogical composition of Eros       
+      using reflected sunlight 1) Map the distribution and abundance of       
+      minerals at scales as small as 300 meters 1) Complement high            
+      resolution MSI images and low resolution XGRS elemental distribution    
+      maps for definitive identification of rock types composing Eros'        
+      surface 1)  Provide information on the physical and textural            
+      properties of these surface materials                                   
+                                                                              
+      In order to fulfill these requirements, the instrument's behavior       
+      must be characterized both from rigorous preflight calibration and      
+      testing and from in-flight observations over the mission lifetime.      
+      This paper reviews the data and techniques used to calibrate the        
+      NIS, and discusses initial in-flight results for observations by NIS    
+      during the cruise, Earth swingby, and Eros flyby phases of the NEAR     
+      mission. The calibration of the instrument will be refined              
+      throughout the mission. Table two in the NIS calibration paper contains 
+      the science rationale for the phases and can be found in the            
+      NIS/DOCUMENT/INSTRUMENT/CALPAPER directory.                             
+                                                                              
+                                                                              
+    Instrument Description                                                    
+    ========================                                                  
+      NIS is composed of a grating infrared spectrometer, a scan mirror,      
+      two passively cooled detector modules, a mounting bracket,              
+      spectrometer electronics, and a data processing unit (DPU) that         
+      controls both the NIS and the NEAR magnetometer. NIS has a one-time     
+      deployable opaque cover, which was opened on September 24, 1997,        
+      three months after the Mathilde flyby [VEVERKAETAL1997B].               
+                                                                              
+    Hardware                                                                  
+    --------                                                                  
+      The NIS design (Fig. 1) is copied from an earlier Applied Physics       
+      Laboratory (APL) spectrometer - the Defense Meteorological Satellite    
+      Special Sensor Ultraviolet Spectrographic Imager (SSUSI) - and          
+      modified for an infrared wavelength range. [WARRENETAL1997] detail      
+      the design characteristics, engineering, and construction of the        
+      instrument. A gold-coated scan mirror controls the direction of         
+      viewing over a range of 140 degrees. Light reflected from the scan      
+      mirror passes through a 20 x 25-mm aperture stop and is imaged by a     
+      telescope mirror at a slit. The field of view is selectable at the      
+      slit to 'narrow' (0.38 degrees x 0.76 degrees) or 'wide' (0.76          
+      degrees x 0.76 degrees) settings. A shutter actuates the narrow         
+      slit, with the smaller slit opening coming down over the fixed wide     
+      slit. The two slits provide field-of-view sizes of 0.65 x 1.3 km or     
+      1.3 x 1.3 km from 100 km distance. A second shutter can be actuated     
+      to completely block the slit for dark current measurements. After       
+      passing through the slit, light is dispersed and re- imaged off a       
+      gold toroidal diffraction grating (a Rowland circle configuration       
+      spectrometer) and hits a dichroic beamsplitter mounted at 45 degrees    
+      to the beam which transmits or reflects the energy to fall on two       
+      32- element linear detector arrays. Reflected 2nd order wavelengths     
+      (804-1506 nm) fall on a germanium (Ge) array. Each Ge channel has a     
+      bandwidth of 21.6 nm.  The germanium detector has a selectable gain     
+      of 1x or 10x. Transmitted 1st order wavelengths (1348-2732 nm) go to    
+      an indium-gallium-arsenide (InGaAs) array with 43.1 nm channel          
+      bandwidth. [WARRENETAL1997] calibrated the central wavelengths of       
+      all NIS channels at three operational temperatures (-7 degrees C,       
+      -17 degrees C, and -23 degrees C) and found best-fit Ge spectral        
+      calibration given by:                                                   
+                                                                              
+      lambda (nm) = 794.6 + 21.61*n        (Equation 1)                       
+                                                                              
+      where n is Ge element number 1-32. The uncertainty of the wavelength    
+      calibration over the range of temperatures examined is +/-0.5 nm.       
+      InGaAs element center wavelengths are given by:                         
+                                                                              
+      lambda (nm) = 43.11*n - 50.8        (Equation 2)                        
+                                                                              
+      where n is InGaAs element number 33-64. The temperature-dependent       
+      wavelength uncertainty is approximately +/-3.5 nm.                      
+                                                                              
+      The lower two channels of the InGaAs detector (channels 33 and 34,      
+      at 1372 and 1315 nm respectively) are below the transition              
+      wavelength of the dichroic beamsplitter, and therefore always           
+      register very low signal. The upper 3 channels (channels 62-64 at       
+      2622, 2665, and 2708 nm) are near or in detector cutoff, making the     
+      effective upper bound for good signal-to-noise ratio (SNR) around       
+      2500 nm for the signal level expected at Eros. Additionally, two        
+      InGaAs channels (47 and 57, at 1975 nm and 2406 nm) have been           
+      extremely noisy since manufacture and do not produce easily usable      
+      data. Default operations for NIS utilize the narrow slit, providing     
+      a critically sampled spectral resolution of 22 nm in the Ge             
+      detector, and 44 nm in the InGaAs detector. The wide slit               
+      configuration provides half the spectral resolution (44 nm and 88 nm    
+      respectively), but passes twice the light and therefore has a higher    
+      SNR.                                                                    
+                                                                              
+      The NIS scan mirror can rotate the line of sight over 350 steps in      
+      0.4-degree increments in the spacecraft Z-X' plane. The +Z axis is      
+      perpendicular to the plane of NEAR's solar panels, and +X' is the       
+      boresight of the instruments.  Mirror position 0 (nominal caltarget     
+      observation geometry) is 30 degrees towards the Z-axis from the         
+      boresight. The boresight is aligned with mirror position 75.            
+      Position 300 points in the -Z (anti-Sun) direction.                     
+                                                                              
+      For optimum performance the detectors are operated near -35 degrees     
+      C, maintained by passive cooling or active heaters, depending on the    
+      thermal environment. A solar-illuminated gold calibration plaque        
+      (caltarget) is mounted to the instrument for radiometric stability      
+      calibration.  Table I summarizes the NIS specifications. More           
+      detailed descriptions of the NIS instrument design are presented in     
+      [PEACOCK1997] and [WARRENETAL1997].                                     
+                                                                              
+    Flight Software                                                           
+    ---------------                                                           
+      In-flight NIS data are acquired through the use of command sequences    
+      to the instrument that specify ten instrument parameters                
+      [NISAPLSRS1995], [IZENBERGETAL1998] as follows:  1. Spectrometer        
+      sequence ID (0-15). Sixteen sequences can be uploaded and stored        
+      while the instrument is powered. Sequences 0, 1, and 2 are              
+      hard-coded, but can be redefined.  2. Repeats: the number of times      
+      the commanded observations will repeat.  3. Seconds between             
+      repeats.  4. Number of observations. This is the number taken during    
+      a single repeat of the sequence.  5. Calibration interval               
+      (1-65535).  Number of observations before acquisition of dark           
+      spectra. This is used to interleave shutter-closed dark observations    
+      with data observations.  6. Number of seconds to co-add spectral        
+      data in each observation (0-63).  7. Number of rest spectra (0-63).     
+      Used when interleaved darks are taken, between spectra acquisition      
+      and dark acquisition.  8. Number of co-added seconds of dark signal     
+      for interleaved dark spectrum.  9. Number of scan mirror steps          
+      between observations (sign indicates direction).  10. Seconds           
+      between observations.                                                   
+                                                                              
+      For the purposes of the software discussion, a 'spectrum' is the        
+      result of a one-second integration of the instrument as it gathers      
+      data.  An 'observation' is 0-63 consecutive one-second spectra          
+      summed together. The example sequence ( 15  3  5  10  5  16  2  4 2     
+      2 ) is interpreted as follows: Sequence ID is 15. The sequence will     
+      repeat three times, each iteration to contain 10 observations           
+      consisting of 16 co-added spectra of accumulated data. The              
+      calibration interval of five means that every 5th observation           
+      (numbers 5 and 10 in each repeat) will instead co-add 10 spectra of     
+      the target, then rest 2 seconds while the shutter closes, then take     
+      four co-added spectra of dark signal. After each accumulated            
+      observation, the scan mirror will move +2 steps and the instrument      
+      will rest two seconds. During each repeat, the mirror will move 20      
+      steps. Each repeat is separated by five seconds to allow the mirror     
+      to return to the start position. This example sequence would            
+      generate 30 NIS observations of the target, and 6 dark                  
+      observations.  Choice of the wide or narrow NIS slit, the high or       
+      low Ge detector gain, and the starting NIS scan mirror position are     
+      specified through separate commands to the instrument."                 
+                                                                              
+                                                                              
+  END_OBJECT                       = INSTRUMENT_INFORMATION                   
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "ACUNAETAL1997"                          
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "CHENGETAL1997"                          
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "FARQUHARETAL1995"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "IZENBERGETAL1998"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "NISAPLSRS1995"                          
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "PEACOCK1997"                            
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "TROMBKAETAL1997"                        
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "VEVERKAETAL1997A"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "VEVERKAETAL1997B"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "VEVERKAETAL1999A"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "VEVERKAETAL1999B"                       
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "WARRENETAL1997"                         
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "YEOMANSETAL1997"                        
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "YEOMANSETAL1999"                        
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+  OBJECT                           = INSTRUMENT_REFERENCE_INFO                
+    REFERENCE_KEY_ID               = "ZUBERETAL1997"                          
+  END_OBJECT                       = INSTRUMENT_REFERENCE_INFO                
+                                                                              
+END_OBJECT                         = INSTRUMENT                               
+END                                                                           

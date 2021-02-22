@@ -1,0 +1,1019 @@
+                                                                              
+NEAR-EARTH ASTEROID RENDEZVOUS PROJECT                                        
+ARCHIVE GENERATION, VALIDATION, AND                                           
+TRANSFER PLAN                                                                 
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+Prepared by:                                                                  
+                                                                              
+D. Davis and C. Neese                                                         
+Planetary Science Institute                                                   
+620 North Sixth Avenue                                                        
+Tucson, Arizona 85705-8331                                                    
+                                                                              
+                                                                              
+E. Grayzeck                                                                   
+University of Maryland                                                        
+College Park, Maryland 20742                                                  
+                                                                              
+                                                                              
+D. Holland                                                                    
+Science Data Center Manager                                                   
+NEAR Project                                                                  
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+February 14, 1998                                                             
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+NEAR-EARTH ASTEROID RENDEZVOUS PROJECT                                        
+ARCHIVE GENERATION, VALIDATION, AND                                           
+TRANSFER PLAN                                                                 
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+Approved by:                                                                  
+                                                                              
+                                                                              
+                                                                              
+M.H. Acuna                                                                    
+Team Leader, MAG                                                              
+                                                                              
+                                                                              
+                                                                              
+Date                                                                          
+                                                                              
+J.I. Trombka                                                                  
+Team Leader, XGRS                                                             
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+Date                                                                          
+M. F. A'Hearn                                                                 
+Node Manager                                                                  
+Small Bodies Node, PDS                                                        
+                                                                              
+                                                                              
+                                                                              
+Date                                                                          
+                                                                              
+J. Veverka                                                                    
+Team Leader, MSI-VIS                                                          
+Date                                                                          
+T. Morgan                                                                     
+NEAR Program Scientist                                                        
+                                                                              
+                                                                              
+                                                                              
+Date                                                                          
+                                                                              
+D.K. Yeomans                                                                  
+Team Leader, RS                                                               
+                                                                              
+                                                                              
+Date                                                                          
+A.F. Cheng                                                                    
+NEAR Project Scientist                                                        
+                                                                              
+                                                                              
+                                                                              
+Date                                                                          
+                                                                              
+M.T. Zuber                                                                    
+Team Leader, NLR                                                              
+Date                                                                          
+S. McMahon                                                                    
+Project Manager                                                               
+Planetary Data System                                                         
+Date                                                                          
+                                                                              
+T. Coughlin                                                                   
+NEAR Project Manager                                                          
+Date                                                                          
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+CHANGE PAGE                                                                   
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+TABLE OF CONTENTS                                                             
+                                                                              
+1.0          INTRODUCTION                                                     
+                                                                              
+2.0          OVERVIEW OF NEAR MISSION                                         
+2.1          MISSION OVERVIEW                                                 
+2.2          GROUND DATA SYSTEM                                               
+                                                                              
+3.0          ARCHIVING FUNCTIONS                                              
+3.1          OVERVIEW OF THE ARCHIVING FUNCTIONS                              
+3.2          ARCHIVE DESIGN                                                   
+3.3          GENERATION OF ARCHIVE                                            
+3.4          VALIDATION OF ARCHIVE                                            
+3.5          FURTHER INFORMATION                                              
+                                                                              
+4.0          ROLES AND RESPONSIBILITIES                                       
+4.1          RESPONSIBILITIES OF THE NEAR PROJECT                             
+4.2          RESPONSIBILITIES OF THE PDS                                      
+4.3          RESPONSIBILITIES OF NSSDC                                        
+                                                                              
+5.0          NEAR ARCHIVE STRUCTURE                                           
+5.1          OVERVIEW OF THE ARCHIVE STRUCTURE                                
+5.2          THE VOLUME DOCUMENTATION FILES                                   
+5.3          THE DATA SET COLLECTIONS                                         
+                                                                              
+6.0          SCHEDULE FOR GENERATION, VALIDATION, AND DELIVERY                
+                                                                              
+7.0          NEAR DATA RELEASE POLICY                                         
+                                                                              
+Appendix A                    NEAR Science Data Products                      
+                                                                              
+Appendix B                    Glossary of Terms and Acronyms                  
+                                                                              
+Appendix C                    Data Level Definitions                          
+                                                                              
+Appendix D                    NEAR Project Data Policy                        
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+1.          Introduction.                                                     
+                                                                              
+This document defines the process of archiving data from the NEAR mission     
+with the Planetary Data System (PDS), including the design, generation,       
+validation, and transfer of the data archive to PDS.  The archive will        
+include raw and reduced data, navigation data necessary for the               
+interpretation of the data, documentation, and software.                      
+                                                                              
+Section 2 gives an overview of the NEAR mission including the Ground Data     
+System by means of which the data stream will be converted into science data  
+products.  Section 3 provides an overview of the steps necessary to produce   
+the NEAR data archive, while Section 4 specifies the roles of each of the     
+participants in the archiving process, and assigns responsibility for each of 
+the archiving functions.  Section 5 outlines the upper-level structure of the 
+archive itself.  Details of the archive structure down to the file level will 
+be determined later as information about the data products from each          
+instrument becomes available, and will be specified in the Software Interface 
+Specification (SIS) documents.  Section 6 provides the schedule for data      
+archiving, and section 7 specifies the data release policy for the NEAR       
+mission.                                                                      
+                                                                              
+For reference, a list of the NEAR science data products expected from each    
+instrument, a glossary of acronyms used in this document, and the data level  
+definitions are given in the appendices.                                      
+                                                                              
+2.          Overview of the NEAR Mission.                                     
+                                                                              
+2.1          Mission Overview                                                 
+                                                                              
+The Near Earth Asteroid Rendezvous (NEAR) spacecraft was launched on February 
+17, 1996, and is planned to rendezvous with the S-class near-earth asteroid   
+433 Eros. First detection of Eros by the NEAR instruments is expected to      
+occur in the fall of 1998, and rendezvous maneuvers will begin on January 10, 
+1999, with the initial close approach to Eros.  NEAR will remain in orbit to  
+study the asteroid for the rest of the nominal mission which will end on      
+February 6, 2000.  Prior to reaching 433 Eros, NEAR will fly within 1200 km   
+of the C-class main-belt asteroid 253 Mathilde on June 27, 1997.              
+                                                                              
+The instruments aboard NEAR include the Multispectral Imager (MSI), the Near  
+Infrared Spectrometer (NIS), the X-ray/Gamma-ray Spectrometer (XGRS), the     
+Magnetometer (MAG), and the NEAR Laser Rangefinder (NLR).  In addition, the   
+Radio Science (RS) experiment will use the NEAR telemetry system to determine 
+the mass and gravity field of the asteroid.                                   
+                                                                              
+2.2          Ground Data System                                               
+                                                                              
+The NEAR Ground Data System is the mechanism by which the raw spacecraft data 
+stream will be converted to science data products.  The Mission Operations    
+Center (MOC), located at APL, will be responsible for monitoring the status   
+of the spacecraft and payloads, commanding the spacecraft and payloads, and   
+coordinating real-time mission planning.  The MOC will receive telemetry      
+packets from DSN and process them to level 0 through 0b, providing the level  
+0b data to the Science Data Center (SDC).                                     
+The Science Data Center (SDC), also at APL, will support the processing,      
+analysis, and archiving of the science data.  In particular, the SDC will     
+support the Science Teams, providing easy access to all the data required by  
+the teams, and coordinating archival of products produced by the teams to the 
+Planetary Data System.                                                        
+                                                                              
+The SDC will accept and process telemetry, command history, and navigation    
+data, creating the Experiment Data Records (EDRs), calibration files, and     
+telemetry archive.  Also, the SDC will coordinate with Mission Operations to  
+collect science sequence priorities from the Science Teams, and will          
+coordinate with JPL to develop the asteroid kinematics model, gravity model,  
+and shape model.                                                              
+                                                                              
+3.          Archiving Functions.                                              
+                                                                              
+3.1          Overview of the Archiving Functions                              
+                                                                              
+The archive will contain science data products from each of the instruments,  
+navigation and geometry data from the SPICE kernels, software, and sufficient 
+documentation of the data, software, and mission to enable future scientists  
+to understand and use the archive.  To produce this archive, a number of      
+steps need to be carried out, including design of the archive structure and   
+contents, generation of the archive components, validation, and final         
+packaging and delivery.  The science data products form the core of the       
+archive, and a list of the expected data products from each of the            
+instruments is given in Appendix A.                                           
+                                                                              
+3.2          Archive Design                                                   
+                                                                              
+The dataset to be archived from the NEAR project is expected to be several    
+tens of GB in size.  The archive will be delivered using CDs or digital       
+versatile disks (DVDs), as appropriate.  The data will be ordered by time     
+first, then by instrument, and further divided by type of data, if relevant.  
+Figure 1 illustrates the structure of a typical volume of the archive.  Data  
+types and volumes for each instrument and archive component and for the total 
+archive are shown in Table 1.  The details of what components are included in 
+the archive and how they are grouped into data sets, subdirectories, and      
+files comprises the design of the archive. The upper level structure and      
+contents of the archive are described in more detail in Section 5.  The       
+arrangement of the final details of the archive down to the file level will   
+not be specified until more detailed information on the data products and     
+other components are available.  When the final detailed structure of the     
+archive is established, it will be recorded in Software Interface             
+Specification (SIS) documents.                                                
+                                                                              
+                                                                              
+                                                                              
+Table 1                                                                       
+Data Volumes for Archive Components                                           
+                                                                              
+                                                                              
+Archive Component                                                             
+Data Type                                                                     
+Data Volume                                                                   
+(MB)                                                                          
+MSI                                                                           
+Raw Images                                                                    
+Mosaicked Images                                                              
+Calibrations                                                                  
+Shape Data                                                                    
+Support Data                                                                  
+                                                                              
+NIS                                                                           
+Raw Spectra                                                                   
+Calibrations                                                                  
+Calibrated Spectra                                                            
+Image Cubes                                                                   
+                                                                              
+XGRS                                                                          
+Raw Data File                                                                 
+X-ray Maps                                                                    
+Gamma-Ray Maps                                                                
+Elemental Composition Maps                                                    
+                                                                              
+RS                                                                            
+Raw Data (Doppler vs. Time)                                                   
+Doppler Residuals                                                             
+Gravity Maps                                                                  
+Other                                                                         
+                                                                              
+NLR                                                                           
+Raw Time Tagged Data                                                          
+Altimetry Data Products                                                       
+Gravity and Dynamics                                                          
+                                                                              
+MAG                                                                           
+Uncorrected B Components vs. Time                                             
+B(t) Time Series                                                              
+Calibrated Spherical Harmonic Models                                          
+                                                                              
+MERGE                                                                         
+Shape models                                                                  
+                                                                              
+Navigation                                                                    
+Mission History File - Mission Wide                                           
+SPICE Kernels                                                                 
+                                                                              
+Software                                                                      
+Calibration Algorithms                                                        
+Higher Level Software (as provided by Science Team)                           
+                                                                              
+Documentation                                                                 
+                                                                              
+                                                                              
+Total archive                                                                 
+                                                                              
+?50-100 GB                                                                    
+                                                                              
+                                                                              
+3.3          Generation of the Archive                                        
+                                                                              
+Responsibility for generating archive components is specified in Section 4.   
+Science data products will be generated in PDS-compatible formats.  This      
+requires that each data file (data table or image file) be in a format        
+approved by PDS and be accompanied by a PDS "label", actually a detached      
+descriptive header file describing formally the content and structure of the  
+accompanying data file.  Navigation and geometry data necessary to interpret  
+the data (e.g. spacecraft ephemeris and attitude records, command histories,  
+and spacecraft housekeeping files) will be extracted from the SPICE kernels   
+and provided as ancillary archive components.  The source code of all         
+software to be provided with the archive will be collected and documented.    
+In addition, files documenting the archive components will be prepared by the 
+parties generating the data.  In general, all information necessary to        
+interpret and use the data are to be included in the archive.                 
+                                                                              
+The PDS provides for the documentation of the mission, spacecraft,            
+instruments, and data products with special documenting files called "catalog 
+objects".  Since the catalog objects take the form of a template which must   
+be filled out with prescribed information, they are also (misleadingly)       
+referred to as "templates" even when they are already filled out.  The        
+required templates are the mission template, describing the NEAR mission as a 
+whole, the "instrument host template" describing the spacecraft, one          
+instrument template for each instrument, and one data set template for each   
+data set.  These templates should contain all information necessary to        
+document the archive, and ideally should make it possible for scientists to   
+make correct use of the data in the distant future when the mission personnel 
+are not available to support them.  The PDS will fill in the formal portions  
+of the catalog objects, requiring only text descriptions of the mission,      
+spacecraft, instruments, and data sets from NEAR.                             
+                                                                              
+3.4          Validation of the Archive                                        
+                                                                              
+Data validation falls into two types, validation of the data itself and       
+validation of the compliance of the archive with PDS archiving requirements.  
+The first type of validation will be carried out by the Science Teams, and    
+the second will be overseen by the PDS, in coordination with the teams and    
+the SDC.  The delivery schedule of four separate delivery dates for different 
+portions of the mission will facilitate validation by insuring that problems  
+in the early deliveries are resolved by the time of the later deliveries and  
+the final archive.                                                            
+                                                                              
+The formal validation of data content, adequacy of documentation, and         
+adherence to PDS archiving standards is finalized with an external peer       
+review.  The peer review will be coordinated by the PDS.  The peer review     
+process may result in "liens", actions recommended by the reviewers or by PDS 
+personnel to correct the archive.  All liens must be resolved by the dataset  
+provider:  the SDC for level 1b and calibration data, the science teams for   
+higher level data products and calibration algorithms.  Once the liens are    
+cleared, PDS will do a final validation prior to packaging and delivery.      
+                                                                              
+3.5          Final Packaging and Delivery                                     
+                                                                              
+The data delivery will take place in four stages, as specified in the         
+timeline in Figure 2.  Each subsidiary delivery will be made to PDS on a hard 
+medium such CD-ROMS.  The final data delivery will incorporate the entire     
+archive, including the earlier data deliveries.                               
+                                                                              
+                                                                              
+                                                                              
+3.6          Further Information                                              
+                                                                              
+An introduction to PDS archiving is available at                              
+http://pds.sbn.astro.umd.edu.  More detailed information on data archiving in 
+the PDS can be found in the PDS Data Preparation Workbook (DPW) and in the    
+PDS Standards Reference (SR).                                                 
+                                                                              
+4.          Roles and Responsibilities.                                       
+                                                                              
+This section describes the roles and responsibilities of the personnel and    
+organizations involved in generating, validating, transferring and            
+distributing the NEAR archive.  The NEAR project and NEAR science teams are   
+responsible for archive generation and validation; the Planetary Data System  
+(PDS) has the responsibility of ensuring that the archive meets PDS standards 
+(including peer review of the data), advising the project and science teams   
+on archive related issues, maintaining active archives of NEAR products for   
+access by the science community and being the interface with NSSDC for "deep  
+archiving" of NEAR data.                                                      
+                                                                              
+4.1          Responsibilities of the NEAR Project                             
+                                                                              
+The NEAR archive consists of products generated by the NEAR project and by    
+the individual science teams.  The Project Science Team has the overall       
+responsibility of setting observing priorities for the spacecraft instruments 
+in order to meet the fundamental science goals of the NEAR project.  The      
+ensemble data from these observations constitute the raw science data, the    
+fundamental element of the archive.                                           
+                                                                              
+a)          Science Data Center                                               
+                                                                              
+The SDC is responsible for generating and validating the level 1b science     
+data files, calibration files, spacecraft ephemeris and spacecraft attitude   
+records, a history of all commands and spacecraft housekeeping files, the     
+asteroid shape and kinematic models, and the source code and associated       
+documentation of software used to generate the data products.  The software   
+is quite important so that a future user can redo the calibration without     
+recourse to the science teams.                                                
+                                                                              
+The SDC will prepare the Software Interface Specification (SIS) documents,    
+which are an invaluable documentation of the archive structure and content    
+both for internal use and for future users of the archive.                    
+                                                                              
+The SDC is also responsible for clearing all liens generated by the review    
+process on products produced by the SDC.                                      
+                                                                              
+b)          Science Teams                                                     
+                                                                              
+The team leader of each science team is responsible for delivering to the SDC 
+a complete and validated archive of all files necessary for final data        
+calibration, and all higher level data products (levels 2 and 3) produced by  
+the team, along with source code for software and associated documentation.   
+                                                                              
+The team leader of each science team is also responsible for clearing all     
+liens generated by the review process on products produced by his/her team.   
+                                                                              
+c)          Archive Production                                                
+                                                                              
+The NEAR project has the responsibility of producing (premastering of CD-     
+ROMS) the final archive volumes and distributing these volumes to the NEAR    
+community.                                                                    
+                                                                              
+4.2          Responsibilities of the PDS                                      
+                                                                              
+The Small Bodies Node (SBN) is the lead node for interfacing with the NEAR    
+mission and will be supported by the PPI node (magnetometer data), radio      
+science subnode (radio science data), imaging node (imaging data), and NAIF   
+node (SPICE data).  Specific functions of PDS are:                            
+                                                                              
+a)          Archive Generation Activity:  Support the generation of the       
+archive by advising the project/science teams on PDS archive standards,       
+requirements and documentation needs.  PDS/SBN will also support the data     
+validation activity to ensure that the formal peer review process, a          
+requirement for data ingestion into PDS, proceeds with a minimum of problems. 
+                                                                              
+b)          Conduct a formal peer review of the archive.  This is a PDS       
+mandated step before any data can be ingested into PDS.                       
+                                                                              
+c)          Offer support to NEAR Project Science Teams and SDC in the        
+resolution of liens that arise in the course of the peer review.              
+                                                                              
+d)          Produce archive volumes for distribution to the NASA supported    
+science community.                                                            
+                                                                              
+e)          Provide the data archive volumes to NSSDC.                        
+                                                                              
+4.3          Responsibilities of NSSDC                                        
+                                                                              
+NSSDC is responsible for "deep" archiving of NEAR data for long-term          
+preservation and for filling large data orders to the science community per   
+the Memorandum of Understanding, dated January 13, 1994, between the PDS and  
+NSSDC.                                                                        
+                                                                              
+5.          NEAR Archive Structure.                                           
+                                                                              
+5.1          Overview of the Archive Structure                                
+                                                                              
+The NEAR archive will be broken down into data set collections, one for each  
+instrument and one for data sets deriving from more than one instrument (the  
+MERGE data set collection).  A typical volume will contain data from a        
+specified time interval.  The top level directory of a volume will thus       
+contain directories for each of the data set collections and directories for  
+each of the additional components of the archive, as required by PDS.  The    
+directories in the top level directory of the volume are given in Table 2.    
+                                                                              
+Table 2                                                                       
+Top-Level Components of a NEAR Archive Volume                                 
+DIRECTORIES                                                                   
+Contents                                                                      
+                                                                              
+DOCUMENT                                                                      
+Text files serving as documentation for the archive.                          
+CATALOG                                                                       
+The catalog objects (templates) required by PDS to document the mission,      
+spacecraft, instruments, and data sets.                                       
+SOFTWARE                                                                      
+Software to be included with the archive.                                     
+CALIB                                                                         
+Calibration files.  Calibrations may also be included within individual data  
+sets.                                                                         
+GEOMETRY                                                                      
+Data necessary to describe the observing geometry, such as spice kernels.     
+INDEX                                                                         
+Index files to enable the user to find the data of interest.                  
+MSI                                                                           
+The MSI data set collection.                                                  
+NIS                                                                           
+The NIS data set collection.                                                  
+XGRS                                                                          
+The XGRS data set collection.                                                 
+MAG                                                                           
+The magnetometer data set collection.                                         
+NLR                                                                           
+The NLR data set collection.                                                  
+RS                                                                            
+The radio science data set collection.                                        
+MERGE                                                                         
+The collection of data sets originating from more than one instrument.        
+                                                                              
+                                                                              
+5.2          The Volume Documentation Files                                   
+                                                                              
+PDS requires a number of volume documentation files for each archive volume,  
+including aareadme.txt, a text file describing the contents of the volume,    
+and voldesc.cat, a machine-readable file with a catalog of all the files      
+residing on the volume. Each of the directories under the top level directory 
+also requires one or more volume documentation files to document the contents 
+of that directory. The details of these files are specified in the PDS        
+Standards Reference.                                                          
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+5.3          The Data Set Collections                                         
+                                                                              
+The list of expected data products from each of the NEAR instruments, as      
+provided by the science teams at the May 1995 Science Team Meeting, is given  
+in Appendix A.  The data products from each instrument will comprise a data   
+set collection, and within each of these data set collections, the individual 
+data products will be grouped into data sets.  As an example, a suggested     
+grouping of the MSI data products into data sets is presented in Table 3.     
+Similarly, the data products from each of the other instruments will also be  
+grouped into data sets.                                                       
+                                                                              
+Table 3                                                                       
+The MSI Data Set Collection                                                   
+                                                                              
+Data Sets                                                                     
+Data Products                                                                 
+Raw images                                                                    
+Raw images                                                                    
+Calibration files                                                             
+Calibration files                                                             
+Mosaicked images                                                              
+Global color map                                                              
+Global B/W map                                                                
+Regional high-res maps                                                        
+Shape data                                                                    
+Control point network                                                         
+Shape model (1x1 degree, resolution ?20m)                                     
+Grid overlays for selected images                                             
+Global digital image mosaic (6m/pix) with topographic overlay (8pix/deg)      
+Support data                                                                  
+Mission history file                                                          
+Updated pointing for all images                                               
+Improved rotational elements                                                  
+                                                                              
+                                                                              
+6.          Schedule for Archive Generation, Validation, and Delivery.        
+                                                                              
+The principal archive elements, namely the science data products defined in   
+Appendix A, will be generated during the course of the mission, as will many  
+ancillary products such as SPICE files.  The general guideline for Discovery  
+missions is that they deliver data and calibration files to PDS at six-month  
+intervals.                                                                    
+                                                                              
+The timeline for archive delivery to PDS is shown in Figure 2.  The final     
+archive delivery is to be made 90 days after the end of the nominal mission   
+in order to allow time for PDS review and lien resolution before the end of   
+SDC operations.  There are three additional PDS data delivery dates planned:  
+Mathilde encounter data (December 31, 1997, six months after the encounter);  
+Earth encounter data (August, 1998, six months after Earth encounter); and    
+one intermediate delivery of Eros data (12/31/99).  The final archive         
+delivery will include updated versions of each of the preliminary deliveries. 
+                                                                              
+Following the delivery of data to PDS is a several-month-long period in which 
+the data will be peer reviewed by PDS.  Any liens that are identified by the  
+peer review process will be rectified by the Project and the appropriate      
+science teams before they cease operation (expected to be 30 days after the   
+end of mission for science teams and 10/01/2000 for the SDC)  The NEAR        
+project is responsible for resolving all liens against the final archive      
+delivery.  Final acceptance of the data by PDS will occur only after all      
+liens have been cleared.  The early delivery of data to PDS, such as the      
+Mathilde encounter data, will help to identify early in the mission any       
+potential problems that can be addressed before the final archive is          
+generated, thus avoiding liens on the data that require significant resources 
+to correct.                                                                   
+                                                                              
+7.          NEAR Data Release Policy.                                         
+                                                                              
+There are no proprietary data rights for the NEAR Mission.  Most uncalibrated 
+(level 1b) data, particularly image data, will be publicly released by the    
+NEAR project over Internet in close to real time.  The full NEAR Project Data 
+Policy is given in Appendix D.                                                
+                                                                              
+Fully reduced, calibrated and corrected data products (levels 2 and 3) will   
+be produced under the direction of the science teams for delivery to PDS per  
+the schedule given in Section 6.  The Team Leaders are responsible for        
+coordinating all scientific investigations involving the use of calibrated    
+data (levels 2 and 3) from their respective instruments and ensuring that all 
+science data products are delivered in a timely fashion.                      
+                                                                              
+                                                                              
+Appendix A.          NEAR Science Data Products                               
+                                                                              
+Data products listed by the science teams at the May 1995 NEAR Science Team   
+Meeting, with additional fundamental (level 1) data suggested for archiving   
+by the PDS.                                                                   
+                                                                              
+Multispectral Imager (MSI)                                                    
+                                                                              
+Validated raw images in PDS format with ancillary information.                
+Complete pre-flight calibration files with documentation.                     
+Complete in-flight calibration files with documentation.                      
+"Best" final calibration files, calibration algorithms, and optimum           
+parameters.                                                                   
+Mosaicked images:                                                             
+          global B/W map.                                                     
+          global color map.                                                   
+          regional high-res maps.                                             
+Mission history file (objectives of sequences, anomalies, etc.)               
+          (an observing log indicating what has changed and why.)             
+Support data:                                                                 
+          A)          Updated pointing (all images).                          
+          B)          Improved rotational elements.                           
+          C)          Control point network.                                  
+          D)          Shape model (1x1 degree, R?20m)                         
+          E)          Grid overlays for selected images.                      
+          F)          Global digital image mosaic (6m/pix) with topographic   
+overlay (8pix/deg).                                                           
+                                                                              
+Near-Infrared Spectrograph (NIS)                                              
+                                                                              
+Validated raw 62-channel data, in PDS format, with ancillary information.     
+Complete pre-flight calibration files with documentation.                     
+Complete in-flight calibration files with documentation.                      
+"Best" final calibration files, calibration algorithms, and optimum           
+parameters.                                                                   
+Individual I/F calibrated spectra in PDS format with ancillary information.   
+Mosaicked map-projected image cubes (format TBD, but compatible with MSI).    
+Mission history file (objectives of sequences, anomalies, etc.)               
+                                                                              
+X-ray/Gamma-ray Spectrometer (XGRS)                                           
+                                                                              
+Cruise and approach phases:                                                   
+          Verification of detector operation.                                 
+          Calibrations of the XGRS detectors.                                 
+          Identification of natural and induced activities.                   
+          Cross-calibration of solar monitors.                                
+                                                                              
+Eros orbital phase:                                                           
+          Near-real-time X-ray maps:                                          
+                    Relative abundances of Mg, Al, and Si for quiescent sun.  
+                    Relative abundances of Mg, Al, Si, S, Ca, and Fe for      
+active sun conditions.                                                        
+          Near-real-time gamma-ray maps:                                      
+                    Natural radioactivity (most likely K) distribution.       
+                    Global composition for selected elements.                 
+          Longer-term data products:                                          
+Elemental composition maps derived from X-ray data with spatial resolution    
+from 5 to 100 km.                                                             
+                                                                              
+Elemental composition maps derived from gamma-ray data over quadrants of      
+Eros.  X-ray solar spectral variation as a function of solar activity.        
+                                                                              
+Computer models used for identifications available both before and after      
+encounter.  (software)                                                        
+                                                                              
+Fundamental (level 0/1) data also to be archived:                             
+          Detector Count Rates                                                
+          Natural Radioactivity Rates                                         
+          EDR's from Solar Monitors                                           
+                                                                              
+Radio Science and Navigation (RS)                                             
+                                                                              
+Mass of Mathilde and uncertainty.                                             
+Mass of Eros and uncertainty.                                                 
+Harmonic coefficients and associated uncertainties from gravity model.        
+Harmonic coefficients and associated uncertainties from shape model.          
+Gravity maps.                                                                 
+          Accelerations (mgal) and uncertainties at reference surface.        
+          Geoid potential and associated uncertainties.                       
+          Vertical Bouguer (difference) map at reference surface.             
+Line-of-sight acceleration residuals remaining after gravity model.           
+Spin state of Eros.                                                           
+Principal axes directions and moments of inertia.                             
+Orbit determinations and ephemerides for satellites of Eros.                  
+Limit upon outgassing acceleration acting upon Eros.                          
+Fundamental (level 0) data also to be archived:                               
+          Frequencies vs. time                                                
+          Doppler shifts relative to ephemeris model vs. time                 
+          Ephemeris Model                                                     
+                                                                              
+NEAR Laser Rangefinder (NLR)                                                  
+                                                                              
+Raw type target data (level 1).                                               
+                                                                              
+Altimetry data products:                                                      
+                                                                              
+Profiles:                                                                     
+          EDRs with approximate horizontal resolution 10m.                    
+CDRs with 10m horizontal resolution.  (Precision orbits, higher vertical and  
+horizontal integrity than EDRs.)                                              
+                                                                              
+Grids:                                                                        
+          One month in 50km orbit will provide a 3 km grid.                   
+          Six months in 35km orbit will provide a 300 m grid.                 
+                                                                              
+Spherical harmonic topographic model and error model:                         
+A 120th degree and order model (300m resolution) with variance-covariance     
+matrix.                                                                       
+                                                                              
+Reference surface:                                                            
+          Global surface from the altimetry referenced to center of mass.     
+                                                                              
+Gravity and dynamics data products:                                           
+                                                                              
+Spherical harmonic gravity model:                                             
+          An approximately 15th degree and order gravitational field model.   
+Grids:                                                                        
+Geoid and gravity anomaly maps of Eros for use in geophysical and geologic    
+investigations.                                                               
+                                                                              
+                                                                              
+Error model:                                                                  
+The variance-covariance matrix of the gravity model, an error map and error   
+spectrum for the gravity field.                                               
+                                                                              
+Tracking data and precision orbits:                                           
+Archive the validated Doppler tracking data in a PDS-compatible format and    
+the precision orbits with a radial accuracy of 5-10 m.                        
+                                                                              
+Spin axis and rotation period:                                                
+          The rotation period and spin axis direction at regular intervals.   
+Simple descriptive model developed for comparison with imaging results.       
+                                                                              
+Magnetometer (MAG)                                                            
+                                                                              
+Raw B field components (field 1).                                             
+Time series (B(t)) in spacecraft coordinates.                                 
+Time series in celestial coordinates (J2000 inertial).                        
+Time series in Eros-centered (non-inertial) spherical polar coordinate        
+system.                                                                       
+Spherical harmonic models of Eros "global" field - wire models/graphics       
+("hairy asteroid").                                                           
+Spherical harmonics descriptions of magnetic "anomalies".                     
+Special data products (time series, spectra, etc.) for solar wind interaction 
+characterization and boundary detection, i.e., BP filter data, FFT's, etc.    
+Special data products to support joint investigations (GRS, gravity, etc.)    
+Fundamental (level 0) data also to be archived:                               
+          Raw magnetic field strengths                                        
+          Corrections applied for spacecraft interaction with B-field         
+                                                                              
+Auxiliary Data Products                                                       
+                                                                              
+Instrument and dataset descriptions to be incorporated into templates         
+according to PDS guidelines.                                                  
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+Appendix B.  Glossary of Terms and Acronyms                                   
+                                                                              
+Acronyms:                                                                     
+                                                                              
+APL                              -                    The Johns Hopkins       
+University Applied Physics Laboratory.                                        
+C&DH                              -                    Command and Data       
+Handling.                                                                     
+DPW                              -                    The PDS Data            
+Preparation Workbook.                                                         
+EDR                              -                    Experimental Data       
+Record.                                                                       
+GSE                              -                    Ground Support          
+Equipment.                                                                    
+JPL                              -                    Jet Propulsion          
+Laboratory.                                                                   
+MAG                              -                    Magnetometer, a NEAR    
+instrument.                                                                   
+MOC                              -                    Mission Operations      
+Center                                                                        
+MSI                              -                    Multi-Spectral Imager,  
+a NEAR instrument.                                                            
+NAIF                              -                              Navigation   
+and Ancillary Information Facility, a discipline node of PDS.                 
+NASCOM                    -                    NASA Communications.           
+NEAR                              -                    Near Earth Asteroid    
+Rendezvous mission.                                                           
+NIS                              -                    Near-Infrared           
+Spectrometer, a NEAR instrument.                                              
+NLR                              -                    NEAR Laser Rangefinder, 
+a NEAR instrument.                                                            
+NSSDC                    -                    National Space Science Data     
+Center.                                                                       
+PDS                              -                    The Planetary Data      
+System.                                                                       
+PPI                              -                    Planetary Plasma        
+Interactions, a discipline node of the PDS.                                   
+RS                              -                    Radio Science, a NEAR    
+experiment package.                                                           
+SBN                              -                    Small Bodies Node, a    
+discipline node of the PDS.                                                   
+SDC                              -                    NEAR Science Data       
+Center, based at JHU/APL.                                                     
+SIS                              -                    Software Interface      
+Specification.                                                                
+SPICE                              -                    A system of providing 
+navigation and geometry data.                                                 
+                                                  S = Spacecraft, P = Planet, 
+I = Instrument, C = C-matrix, and E = Events.                                 
+SR                              -                    The PDS Standards        
+Reference.                                                                    
+XGRS                              -                    X-ray Gamma-ray        
+Spectrometer, a NEAR instrument.                                              
+                                                                              
+Terms:                                                                        
+                                                                              
+Catalog object                    -                    A PDS-required file    
+formally documenting the details of a mission, spacecraft, instrument, or     
+data set.                                                                     
+Label                              -                    An attached or        
+detached header which formally describes the structure and content of a data  
+file.                                                                         
+Lien                              -                    An action recommended  
+by reviewers or PDS personnel to correct the  archive.                        
+Template                    -                    Same as a catalog object     
+Volume                    -                    A single CD-ROM or other       
+volume of a storage medium.                                                   
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+Appendix C.          Data Level Definitions                                   
+                                                                              
+Level:                    Description:                                        
+                                                                              
+0                    The raw telemetry data as received at the ground         
+receiving station or ground test GSE, organized by contacts or ground test.   
+                                                                              
+0a                    The telemetry data as produced by the C&DH system on    
+the spacecraft and passed to the telemetry subsystem.  NASCOM headers and     
+trailers have been separated.  Level 0a contains transfer frame packets       
+organized by contacts or ground tests.                                        
+                                                                              
+0b                    The transfer frame packets for virtual channel 2 and    
+sub-packets for virtual channels 0 and 3, plus radiometric tracking data, all 
+organized by contacts or ground test.                                         
+                                                                              
+1                    Level 0b data that have been cleaned and merged, time    
+ordered, and in packet format.  Cleaned and merged means that duplicate data  
+have been deleted, missing packets are padded out, and the data are organized 
+by days.  The actual format of these data is the same as level 0b.  This is   
+the level that should be passed to the instrument GSE's for their processing. 
+                                                                              
+1a                    The level 1 data that have been separated by            
+instrument.                                                                   
+                                                                              
+1b                    The level 1a data that have been sorted by instrument   
+data types and instrument modes.  Data are in scientifically useful form,     
+e.g. as images or individual spectra.  These data are still uncalibrated,     
+                                                                              
+2                    Level 1b with calibration and corrections applied to     
+yield data in scientific units.                                               
+                                                                              
+3                    Higher level data products developed for specific        
+scientific investigations.                                                    
+                                                                              
+                                                                              
+Appendix D.          NEAR Project Data Policy                                 
+                                                                              
+S1P 94-151                                                                    
+November 28, 1994                                                             
+                                                                              
+To:                    Thomas B. Coughlin                                     
+                                                                              
+From:                    Andrew F. Cheng                                      
+                                                                              
+Re:                    NEAR Project Data Policy                               
+                                                                              
+                                                                              
+This is a summary of the data analysis and release policies for the Near      
+Earth Asteroid Rendezvous (NEAR) Project.  It is meant to cover the pre-      
+flight, post-launch, and data analysis activities of the NEAR Science Team    
+and Instrument Scientists.  A list of these individuals is attached.  Data    
+policies were reviewed and discussed at a full meeting of the NEAR Science    
+Team held at APL on November 10-11, 1994.  Subsequently, a draft Data Policy  
+was circulated for comment among all Team members.  Based upon the reviews    
+and comments from Science Team members and Instrument Scientists, I am        
+issuing the following Data Policy for the NEAR Project.                       
+                                                                              
+Ground Rules                                                                  
+                                                                              
+o          Selected uncalibrated data, including imaging, will be publicly    
+released over the INTERNET in close to real time.                             
+                                                                              
+o          Fully reduced, calibrated and corrected data products will be      
+published and forwarded to the Planetary Data System as soon as they have     
+been generated and validated.                                                 
+                                                                              
+o          The Project strongly encourages shared data analyses, under the    
+direction of the teams whose data are being used, among members of different  
+instrument teams.                                                             
+                                                                              
+o          The Team Leaders are responsible for coordinating all scientific   
+investigations involving the use of data from their respective instruments.   
+                                                                              
+Guidelines                                                                    
+                                                                              
+o          In the interest of a systematic and orderly data analysis, the     
+Team Leaders must approve of all scientific investigations involving the use  
+of data from their respective instruments.                                    
+                                                                              
+o          Likewise, the Team Leaders must approve of all plans to release or 
+to publish calibrated data from their respective instruments.  In this        
+context, 'to publish' includes not only journal articles but also abstracts   
+and presentations.                                                            
+                                                                              
+o          In case of differences of opinion, the issues will be brought      
+before the Project Scientist for resolution.                                  
+                                                                              
+                                                                              
+Distribution                                                                  
+                                                                              
+T. Coughlin                              NEAR Science Team members            
+R. E. Gold                              NEAR Instrument Scientists            
+K. Heeres                              Elizabeth Beyer (NASA HQ)              
+J. Landshof                              Jurgen Rahe (NASA HQ)                
+R. Farquhar                                                                   
+L. Young                                                                      
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+NEAR     Archive     Volume                                                   
+                                                                              
+                                                                              
+                                                                              
+Documents                                                                     
+                                                                              
+Catalog Objects                                                               
+                                                                              
+Software                                                                      
+                                                                              
+Index                                                                         
+                                                                              
+Calibration Files                                                             
+                                                                              
+Navigation & Geometry                                                         
+                                                                              
+Data SetCollections                                                           
+                                                                              
+MERGE: shape models                                                           
+                                                                              
+MSI; raw images                                                               
+calibrations                                                                  
+mosaicked images                                                              
+shape data                                                                    
+support data                                                                  
+                                                                              
+NIS                                                                           
+raw spectra                                                                   
+calibrations                                                                  
+calibrated spectra                                                            
+image cubes                                                                   
+support data                                                                  
+                                                                              
+XGRS                                                                          
+X-ray maps                                                                    
+Gamma-ray maps                                                                
+composition maps                                                              
+solar spectral variations                                                     
+                                                                              
+MAG                                                                           
+B(t) time series                                                              
+spherical harmonic models                                                     
+special data products                                                         
+                                                                              
+NLR                                                                           
+profiles                                                                      
+grids                                                                         
+error models                                                                  
+gravity model                                                                 
+                                                                              
+RS                                                                            
+masses                                                                        
+harmonic coefficient                                                          
+gravity maps                                                                  
+acceleration residuals                                                        
+spin state                                                                    
+                                                                              
+                                                                              

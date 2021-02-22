@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>NEAT</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+            <h1> Near Earth Asteroid Tracking (NEAT) </h1>
+            </center>
+
+            <b>
+            <p>
+            The Near-Earth Asteroid Tracking (NEAT)
+              project began as a collaborative effort with the United States Air
+              Force (USAF) in December 1995.  It concentrated on the discovery and
+              observations of near-Earth asteroids and comets, collectively called
+              near-Earth objects (NEOs).  NEAT ended its observations in April 2007.
+              Throughout its history, NEAT utilized three 1m class telescopes - two
+              on the Hawaiian island of Maui (GEODSS and MSSS) and the 1.2m Oschin
+            Schmidt telescope
+              at Palomar Observatory near San Diego, CA.  Three unique cameras were
+              developed and used throughout the program.  These data are intended to
+              be usable for photometric analysis of the various objects within the
+              NEAT data.  Most nights included calibration data, and lists of
+              photometric standard calibration fields.
+
+            <p>
+            This dataset contains the NEAT
+                observations, associated darks, flats, log files and a list
+                of Landolt standards.
+
+            <p>
+            To search the available NEAT data for images containing a specified target,
+            and to download the selected images, use the <a href="http://sbntools.psi.edu/neosearch/">Small Bodies NEAT Browser</a>.
+            </b>
+
+<p>
+Note:  The individual images in the NEAT archive have been compressed to
+facilitate download.  To recover the full archived data files, use the
+command
+
+<p>
+$ funpack -C [filename] <br>where [filename] is the name of the file.
+
+<p>
+In order to run funpack, you will need the FITSIO package, which is available
+at <a href="https://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html">
+https://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html</a>.
+
+            <br><br>
+
+<p>
+<b>PDS4 version:</b>
+
+            <table border=1>
+            <tr><td width=250> <i>Bundle</i>
+                <td width=100> <i>Browse</i>
+                <td width=100> <i>Readme</i>
+            <tr><td> urn:nasa:pds:gbo.ast.neat.survey::1.0
+                <td> <a href="https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.neat.survey/"> Browse All </a>
+                <td> <a href="https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.neat.survey/readme.txt"> Readme </a>
+</table>
+
+<p>
+The PDS4 bundle was migrated from the full PDS3 data set in July 2020.  The
+data content is unchanged.
+
+<p>
+<b>PDS3 version:</b>
+
+            <table border=1>
+            <tr><td width=250> <i>Volume</i>
+                <td width=100> <i>planned delivery date</i>
+                <td width=100> <i>Browse</i>
+                <td width=100> <i>Readme</i>
+                <td width=100> <i>Comment</i>
+            <tr><td> Volume 1 - Maui GEODSS
+                <td> Available now
+                <td><a href="https://sbnarchive.psi.edu/pds3/neat/geodss/">Browse vol. 1</a>
+                <td><a href="https://sbnarchive.psi.edu/pds3/neat/geodss/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 2 - Palomar Tri-Cam part 1
+                <td> Available now
+                <td> <a href="https://sbnarchive.psi.edu/pds3/neat/tricam/">Browse vol. 2</a>
+                <td><a href="https://sbnarchive.psi.edu/pds3/neat/tricam/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 3 - Palomar Tri-Cam part 2
+                <td> Available now
+                <td> <a href="https://sbnarchive.psi.edu/pds3/neat/tricam2/">Browse vol. 3</a>
+                <td><a href="https://sbnarchive.psi.edu/pds3/neat/tricam2/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 4 - Palomar Tri-Cam part 3
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            <tr><td> Maui MSSS
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            <tr><td> Palomar QUEST
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            </table>
+
+            <p>
+            Use the following citation to reference this data set:
+
+            <p>
+            Bauer, J. M. and Lawrence, K. J., Eds.,
+                    Near Earth Asteroid Tracking V1.0.
+                    EAR-A-I1063-3-NEAT-V1.0. NASA Planetary Data System, 2013.
+
+            <br><br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

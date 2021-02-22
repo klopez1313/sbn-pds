@@ -1,0 +1,84 @@
+Liens from the 2017 SBN asteroid review.
+Feb. 10, 2017
+
+Attending:  Mike A'Hearn, Bobby Bus, Richard Chen, Beth Clark,
+Tony Farnham (for Fink data only), Ludmilla Kolokolova, Bea Mueller,
+Carol Neese, Eric Palmer, Jim Richardson.
+
+Fink Images and Spectra of Solar System Bodies
+==============================================
+
+Documentation:
+
+1.  Improve the instrument descriptions, merging the imaging instrument
+descriptions into one, correcting inconsistencies in the description
+of the spectrograph, and specifying what is not known and what is
+uncertain.  If possible, find more recent references to cite about the
+spectrograph.
+
+2.  Double quotes have been used as an abbreviation for inches and arcseconds
+but double quotes are not allowed in PDS text fields so OLAF converts
+them to single quotes.  Go through and spell them all out as inches and
+arcseconds.  This affects both the data set description and the
+instrument descriptions.
+
+3.  Correct typo "haeding" to heading in Ancillary Data section of data set
+description.
+
+4.  Document the file name convention(s) in the data set description.
+
+5.  Document in the confidence level note that the image orientation
+is in the PDS labels and there is no image orientation information in the
+FITS headers.  Thus any display software which reads only the FITS headers
+and not the PDS labels may not display with the correct orientation, which
+is N up and E to the left.
+
+6.  Explain briefly in the confidence level note about the dichroic and how
+it results in some images having the same start and stop times.
+
+7.  Update the citation description to the year the data are archived
+(presumeably 2017).  [OLAF automatically uses the year the data set was
+generated, so this should be taken care of.]
+
+8.  Provide a file documenting the original orientation of the images
+in a run.
+
+9.  Make the "reviewed" log files more consistent and highlight the lines that
+have a log entry but not corresponding uploaded data files.  
+
+10.  In the document descriptions for the log files, note that some log
+entries pertain to data which is not yet included in the data set, and
+specify which these are.  [Putting this information in the document label
+description automatically puts it into docinfo.txt.]
+
+11.  The document labels for the logs point to their document files
+incorrectly.  This is an OLAF problem which must be corrected before the
+data set is regenerated for archiving.
+
+Data labels:
+
+12.  Image labels associated with instrument I0043 list a variety of values
+for pixel scale.  Use a single value which agrees with the value given in
+the instrument description.
+
+13.  Some data files have the same start time.  For some this is correct
+because of the dichroic, but others represent duplicated files or other
+errors.  Track down all these and correct.
+
+14.  The target name SKY must be associated with the target type CALIBRATION.
+Suggested solution is to change the target name to something like
+OFFSET_SKY.  Use this or another acceptable solution that is consistent with
+PDS standards.
+
+15.  The labels say horizontal and vertical pixel FOV, but the value given
+is pixel scale (as prompted by OLAF).  This has to be fixed in OLAF before
+the data set is regenerated for archiving.
+
+For the future:  Provide a file listing the solar system objects observed,
+when they were observed, and in what mode.  It may make sense to do this
+only in the next update when all the data have been included.
+
+This data set is certified.  No further external review is needed after
+liens resolution is complete.
+
+

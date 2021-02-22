@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      OLAF
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="olafs/olafs.css">
+    <main><div class="sbn-main">
+
+        <div class="olaf-description">
+            <img src="images/olaf-logo-rasterized.png" alt="OLAF Logo" class="olaf-logo">
+            <h1 style="margin-top:0;margin-bottom:0;text-align:center;">On-Line Archiving Facility</h1>
+            <p>OLAF is a web application that allows individuals to submit their data to the Planetary Data System so that it can be archived and made available to the public. Submitted data is reviewed for quality and completeness and given a citation when accepted. This software is made available by the Small Bodies Node (SBN) of the PDS.</p>
+            <p>If you need access to a previous version of OLAF, please contact us at <a href="mailto:olaf@psi.edu">olaf@psi.edu</a></p>
+        </div>
+
+
+        <div class="container">
+
+            <a class="olaf ignore-a-styling" href="https://sbnapps.psi.edu/olaf-node" target="_blank">
+                Open <img src="images/olaf-logo-rasterized.png" alt="OLAF Logo" class="olaf-logo">
+            </a>
+        </div>
+
+        <div class="olaf-description">
+            <h2>Currently Supported Data Types:</h2>
+            <ul>
+                <li>Delimited (CSV) Tables</li>
+                <li>Fixed-Width Tables</li>
+                <li>Multi-Part Tables</li>
+                <li>Binary Tables</li>
+                <li>FITS Images <span class="note">(Extension support coming soon)</span></li>
+                <li>2D Array Images</li>
+                <li>Documents</li>
+            </ul>
+            <p class="note">More data types in development. If you need something not listed here, let us know at <a href="mailto:olaf@psi.edu">olaf@psi.edu</a></p>
+        </div>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

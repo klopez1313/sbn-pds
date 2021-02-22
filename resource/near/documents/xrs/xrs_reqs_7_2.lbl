@@ -1,0 +1,138 @@
+PDS_VERSION_ID           =   PDS3                                              
+RECORD_TYPE              =   STREAM                                            
+^WORD_DOCUMENT           =   "XRS_REQS_7_2.DOC"                                
+^JPEG_DOCUMENT           =   "XRS_REQS_7_2.JPG"                                
+^ASCII_DOCUMENT          =   "XRS_REQS_7_2.TXT"                                
+^TIFF_DOCUMENT           = { "XRS_REQS_7_2_001.TIF",                           
+                             "XRS_REQS_7_2_002.TIF",                           
+                             "XRS_REQS_7_2_003.TIF",                           
+                             "XRS_REQS_7_2_004.TIF",                           
+                             "XRS_REQS_7_2_005.TIF",                           
+                             "XRS_REQS_7_2_006.TIF",                           
+                             "XRS_REQS_7_2_007.TIF",                           
+                             "XRS_REQS_7_2_008.TIF",                           
+                             "XRS_REQS_7_2_009.TIF",                           
+                             "XRS_REQS_7_2_010.TIF",                           
+                             "XRS_REQS_7_2_011.TIF",                           
+                             "XRS_REQS_7_2_012.TIF",                           
+                             "XRS_REQS_7_2_013.TIF",                           
+                             "XRS_REQS_7_2_014.TIF",                           
+                             "XRS_REQS_7_2_015.TIF",                           
+                             "XRS_REQS_7_2_016.TIF",                           
+                             "XRS_REQS_7_2_017.TIF",                           
+                             "XRS_REQS_7_2_018.TIF",                           
+                             "XRS_REQS_7_2_019.TIF",                           
+                             "XRS_REQS_7_2_020.TIF",                           
+                             "XRS_REQS_7_2_021.TIF",                           
+                             "XRS_REQS_7_2_022.TIF",                           
+                             "XRS_REQS_7_2_023.TIF",                           
+                             "XRS_REQS_7_2_024.TIF",                           
+                             "XRS_REQS_7_2_025.TIF",                           
+                             "XRS_REQS_7_2_026.TIF",                           
+                             "XRS_REQS_7_2_027.TIF",                           
+                             "XRS_REQS_7_2_028.TIF",                           
+                             "XRS_REQS_7_2_029.TIF",                           
+                             "XRS_REQS_7_2_030.TIF",                           
+                             "XRS_REQS_7_2_031.TIF",                           
+                             "XRS_REQS_7_2_032.TIF",                           
+                             "XRS_REQS_7_2_033.TIF",                           
+                             "XRS_REQS_7_2_034.TIF",                           
+                             "XRS_REQS_7_2_035.TIF",                           
+                             "XRS_REQS_7_2_036.TIF",                           
+                             "XRS_REQS_7_2_037.TIF",                           
+                             "XRS_REQS_7_2_038.TIF",                           
+                             "XRS_REQS_7_2_039.TIF",                           
+                             "XRS_REQS_7_2_040.TIF",                           
+                             "XRS_REQS_7_2_041.TIF",                           
+                             "XRS_REQS_7_2_042.TIF",                           
+                             "XRS_REQS_7_2_043.TIF",                           
+                             "XRS_REQS_7_2_044.TIF",                           
+                             "XRS_REQS_7_2_045.TIF",                           
+                             "XRS_REQS_7_2_046.TIF",                           
+                             "XRS_REQS_7_2_047.TIF",                           
+                             "XRS_REQS_7_2_048.TIF",                           
+                             "XRS_REQS_7_2_049.TIF",                           
+                             "XRS_REQS_7_2_050.TIF",                           
+                             "XRS_REQS_7_2_051.TIF",                           
+                             "XRS_REQS_7_2_052.TIF",                           
+                             "XRS_REQS_7_2_053.TIF",                           
+                             "XRS_REQS_7_2_054.TIF",                           
+                             "XRS_REQS_7_2_055.TIF",                           
+                             "XRS_REQS_7_2_056.TIF",                           
+                             "XRS_REQS_7_2_057.TIF",                           
+                             "XRS_REQS_7_2_058.TIF",                           
+                             "XRS_REQS_7_2_059.TIF",                           
+                             "XRS_REQS_7_2_060.TIF",                           
+                             "XRS_REQS_7_2_061.TIF",                           
+                             "XRS_REQS_7_2_062.TIF",                           
+                             "XRS_REQS_7_2_063.TIF" }                          
+                                                                               
+                                                                               
+OBJECT                   = WORD_DOCUMENT                                       
+  DOCUMENT_NAME          = "Near Earth Asteroid Rendezvous X-ray               
+                            Spectrometer Level-2 Requirements Specification"   
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = MICROSOFT_WORD                                      
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR LEVEL-2 REQUIREMENTS SPECIFICATION,           
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for XRS Level-2 analysis"                          
+END_OBJECT               = WORD_DOCUMENT                                       
+                                                                               
+                                                                               
+OBJECT                   = JPEG_DOCUMENT                                       
+  DOCUMENT_NAME          = "NEAR Earth Asteroid Rendezvous, X-ray Spectrometer 
+                            Level-2 Requirements Specification. "              
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = JPG                                                 
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR XRS LEVEL-2 XRS Requirements Specification,   
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for XRS Level-2 analysis. NOTE:  This is an        
+                            integrated image with multiple pages in the        
+                            file. Some browsers do not support integrated      
+                            image documents. A version of this document is     
+                            in the TIF format as one image per page in the     
+                            XRS_REQS_7_2_xxx.TIF"                              
+END_OBJECT               = JPEG_DOCUMENT                                       
+                                                                               
+OBJECT                   = ASCII_DOCUMENT                                      
+  DOCUMENT_NAME          = "NEAR Earth Asteroid Rendezvous, X-ray Spectrometer 
+                            Level-2 Requirements Specification.  "             
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = ASCII                                               
+  DOCUMENT_FORMAT        = TEXT                                                
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR LEVEL-2 XRS Requirements Specification,       
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for XRS Level-2 analysis. This version is a        
+                            reduced form of the original document,             
+                            due to the loss of graphics, equations and figures 
+                            upon conversion to text."                          
+END_OBJECT               = ASCII_DOCUMENT                                      
+                                                                               
+                                                                               
+OBJECT                        = TIFF_DOCUMENT                                  
+  DOCUMENT_NAME                 = "Near Earth Asteroid Rendezvous Level-2      
+  Requirements Specification. "                                                
+  INTERCHANGE_FORMAT            = BINARY                                       
+  DOCUMENT_FORMAT               = TIFF                                         
+  PUBLICATION_DATE              = 2001-07-01                                   
+  FILES                         = 63                                           
+  ENCODING_TYPE                 = "CCITT/3"                                    
+  DOCUMENT_TOPIC_TYPE            = "REQUIREMENTS DOCUMENT"                     
+  DESCRIPTION                   = "                                            
+   NEAR LEVEL-2 REQUIREMENTS SPECIFICATION,                                    
+   This document elaborates on the formats and derivations                     
+   of all the parameters required for XRS level-2 analysis.                    
+                                                                               
+   A TIFF representation has been included that is  one file per page of the   
+   WORD document (XRS_REQS_7_2).   Each page is a file XRS_REQS_7_2_XXX.TIF    
+   where XXX is the page number."                                              
+END_OBJECT                    = TIFF_DOCUMENT                                  
+END                                                                            

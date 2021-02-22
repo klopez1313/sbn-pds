@@ -1,0 +1,102 @@
+PDS_VERSION_ID                   = PDS3                                       
+                                                                              
+OBJECT                           = DATA_SET                                   
+  DATA_SET_ID                    = "NEAR-A-XRS-2-EDR-CRUISE2-V1.0"            
+                                                                              
+ OBJECT                          = DATA_SET_INFORMATION                       
+  DATA_SET_NAME                  = "NEAR XRS SPECTRA FOR CRUISE 2 PHASE"      
+  DATA_SET_TERSE_DESC            = "                                          
+    Level 1b NEAR X-Ray Spectrometer observations taken                       
+    during the second cruise phase of the mission.                            
+    "                                                                         
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"                                        
+  DATA_OBJECT_TYPE               = TABLE                                      
+  START_TIME                     = 1997-08-27T14:58:17.588                    
+  STOP_TIME                      = 1998-01-22T23:55:02.871                    
+  DATA_SET_RELEASE_DATE          = 2002-07-04                                 
+  PRODUCER_FULL_NAME             = "DOUGLAS B. HOLLAND"                       
+  DETAILED_CATALOG_FLAG          = "N"                                        
+  DATA_SET_DESC                  = "                                          
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+      This data set contains X-Ray Spectrometer (XRS) observations            
+      made during the second cruise phase of the NEAR mission. The            
+      individual observations are combined into a single file per day         
+      for each sensor.                                                        
+                                                                              
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+      The data are presented as FITS binary tables (using the BINTAB          
+      extension) with detached PDS labels. The parameters listed in           
+      each table vary with observing sensor. The detailed descriptions        
+      of the various parameters included in the table are given in a          
+      separate documentation file, one for each sensor:                       
+                                                                              
+         XRFDEFINITIONS.TXT                                                   
+         XRSDEFINITIONS.TXT                                                   
+                                                                              
+                                                                              
+    Data                                                                      
+    ====                                                                      
+      The data are in the form of FITS files with attached FITS headers       
+      and detached PDS labels.  The data subdirectory has subdirectories      
+      for each instrument sensor.  Files contain all data for one day.        
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      Geometry data (pointing and attitude information) are provided          
+      for the entire NEAR mission as a separate data set.                     
+                                                                              
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      This data set is released as a CDROM set.                               
+                                                                              
+                                                                              
+    Processing History                                                        
+    ==================                                                        
+      The processing history includes no background, noise, geometry or       
+      other corrections."                                                     
+                                                                              
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+    Data Quality Flag                                                         
+    =================                                                         
+      Each observation includes a quality flag in the column named 'DQI'.     
+      This flag was extracted from the FITS keyword NEAR-008 of the           
+      original data label. The fields of this keyword are defined             
+      below.  Data quality defects flag is raised when there is missing       
+      data other fields informational and not quality related. The eight      
+      characters of this field are described below.                           
+                                                                              
+      Definition - Data Quality Index                                         
+                c0 = Data Quality Flag (0=good,1=flagged for quality          
+                     defects)                                                 
+                c1 = Instrument number for FC, CTP and AIU (1 or 2)           
+                c2 - c6 = Processing Flags not quality related                
+                c7 = CCDS Source (0=VC0, 1=VC1, 2=VC2, 3=VC3)                 
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This data set underwent external peer review within PDS in June,        
+      2000."                                                                  
+                                                                              
+  END_OBJECT                       = DATA_SET_INFORMATION                     
+                                                                              
+  OBJECT                           = DATA_SET_TARGET                          
+    TARGET_NAME                    = "SOLAR SYSTEM"                           
+  END_OBJECT                       = DATA_SET_TARGET                          
+                                                                              
+  OBJECT                           = DATA_SET_HOST                            
+    INSTRUMENT_HOST_ID             = "NEAR"                                   
+    INSTRUMENT_ID                  = "XRS"                                    
+  END_OBJECT                       = DATA_SET_HOST                            
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "CHENGETAL1998"                          
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+END                                                                           

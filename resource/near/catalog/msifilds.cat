@@ -1,0 +1,71 @@
+PDS_VERSION_ID                     = PDS3                                     
+LABEL_REVISION_NOTE                = "1999-04-09 PSI:CN"                      
+                                                                              
+OBJECT                             = DATA_SET                                 
+  DATA_SET_ID                      = "NEAR-MSI-6-RDR-INSTRUMENT-INFO-V1.0"    
+                                                                              
+  OBJECT                           = DATA_SET_INFORMATION                     
+    DATA_SET_NAME                  = "NEAR MULTISPECTRAL IMAGER V1.0"         
+    DATA_SET_COLLECTION_MEMBER_FLG = "N"                                      
+    DATA_OBJECT_TYPE               = TABLE                                    
+    START_TIME                     = "N/A"                                    
+    STOP_TIME                      = "N/A"                                    
+    DATA_SET_RELEASE_DATE          = 1999-04-09  /* Peer Review Date */       
+    PRODUCER_FULL_NAME             = "Carol Neese"                            
+    DETAILED_CATALOG_FLAG          = "N"                                      
+    DATA_SET_TERSE_DESCR           = "                                        
+  This data set contains the bandpasses of the filters used in conjunction    
+  the NEAR Multispectral Imager.  One file is included for each filter,       
+  giving the scaled response as a function of wavelength.  This information   
+  was provided by Scott Murchie. All files are in the /CALIB subdirectory."   
+    DATA_SET_DESC                  = "                                        
+                                                                              
+  Data Set Overview                                                           
+  =================                                                           
+                                                                              
+  This data set contains the bandpasses of the filters used in conjunction    
+  the NEAR Multispectral Imager.  One file is included for each filter,       
+  giving the scaled response as a function of wavelength.  This information   
+  was provided by Scott Murchie. All files are in the /CALIB subdirectory.    
+  The files are as follows:                                                   
+                                                                              
+  band0450.tab - 450 nanometer filter                                         
+  band0550.tab - 550 nanometer filter                                         
+  band0700.tab - 700 nanometer filter                                         
+  band0760.tab - 760 nanometer filter                                         
+  band0900.tab - 900 nanometer filter                                         
+  band0950.tab - 950 nanometer filter                                         
+  band1000.tab - 1000 nanometer filter                                        
+  band1050.tab - 1050 nanometer filter                                        
+                                                                              
+"                                                                             
+    CONFIDENCE_LEVEL_NOTE          = "                                        
+                                                                              
+  Review                                                                      
+  ======                                                                      
+                                                                              
+These data underwent peer review on April 9, 1999. At the time of review,     
+the filter bandpass files were provided as document files, but a lien         
+was placed requiring that they be packaged as a separate data set with        
+detached labels appropriate for ASCII tabular data.  This was done in April   
+1999.  The data files themselves are unchanged.                               
+                                                                              
+"                                                                             
+  END_OBJECT                       = DATA_SET_INFORMATION                     
+                                                                              
+  OBJECT                           = DATA_SET_TARGET                          
+    TARGET_NAME                    = N/A                                      
+  END_OBJECT                       = DATA_SET_TARGET                          
+                                                                              
+  OBJECT                           = DATA_SET_HOST                            
+    INSTRUMENT_HOST_ID             = "NEAR"                                   
+    INSTRUMENT_ID                  = "MSI"                                    
+  END_OBJECT                       = DATA_SET_HOST                            
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "HAWKINSETAL1997"                        
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+                                                                              
+END                                                                           

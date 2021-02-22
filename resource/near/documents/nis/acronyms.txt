@@ -1,0 +1,306 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  PUBLICATION_DATE    = 2001-09-01                                            
+  NOTE                = "NEAR Mission Acronyms."                              
+END_OBJECT            = TEXT                                                  
+END                                                                           
+                                                                              
+                    NEAR ACRONYM LIST                                         
+                                                                              
+This file contains a list of acronyms specific to the NEAR mission            
+and are used by several of the documents on this volume.                      
+                                                                              
+                                                                              
+Acronym   Description                                                         
+-------   --------------------------------------------------------            
+ACE       Project Mission Controller (DSN)                                    
+ACS       Attitude Control System                                             
+ADC       Analog-to-Digital Converter                                         
+AEC       Automatic Exposure Control                                          
+AGC       Automatic Gain Control                                              
+Ah        Ampere-hour                                                         
+AIU       Attitude Interface Units. There are two computers used for          
+          handling spacecraft commands, one of which is used (mainly for      
+          redundancy, in case one fails, there is a backup). There are also   
+          two Attitude Interface Units; they link the flight computer to the  
+          attitude (spacecraft pointing) control system, which includes       
+          gyroscopes, a star camera, accelerometers (for measuring how fast   
+          the spacecraft moves and turns in each direction) and the           
+          spacecraft thrusters.                                               
+AIU       Attitude Interface (Processor) Unit                                 
+ANSI      American National Standards Institute                               
+AOS       Advanced Orbiting Systems (CCSDS); Acquisition of Signal            
+APD       Avalanche Photodetector Diode (sensor in the receiver of the NLR)   
+APL       The Applied Physics Laboratory in Laurel, Maryland. Part of the     
+          Johns Hopkins University. NEAR was built and managed by APL.        
+APLNIS    APL Network Information System                                      
+ARQ       Automatic Request for Retransmission                                
+ASIC      Application-specific Integrated Circuit                             
+AU        Astronomical Unit, the average distance from the Earth to the Sun.  
+          149,597,870 km (92,955,808 miles). Astronomical Units are a common  
+          unit used for distances in solar system.                            
+b         bit, binary digit (used as a suffix; e.g., 256b means 256 bits)     
+B         Byte, octet of bits (used as a suffix; e.g., 2MB means two          
+          megabytes)                                                          
+BC        Bus Controller of the NEAR MIL-STD-1553 bus, located in the active  
+          CTP processor                                                       
+BCH       Bose-Chaudhuri-Hocquenghem                                          
+BCRTM     Bus Controller/Remote Terminal/Monitor                              
+BER       Bit Error Rate                                                      
+BGO       Bismuth Germanate                                                   
+BIT       Built-In Test                                                       
+BLF       Best Lock Frequency                                                 
+BOA       Beginning of (Acquisition)                                          
+BOL       Beginning of Life                                                   
+BOT       Beginning of Telemetry                                              
+BPS       Bits per Second                                                     
+bps       bits per second                                                     
+Bps       Bytes per second                                                    
+BTE       Bench Test Equipment                                                
+BVR       Block Five Receiver                                                 
+BWG       Beam Waveguide                                                      
+C&DH      Command and Data Handling.                                          
+C/TP      Command & Telemetry Processor (also CTP)                            
+CCD       Charge Coupled Device                                               
+CCSDS     Consultative Committee for Space Data Systems                       
+CDU       Command Detector Unit                                               
+CLCW      Command Link Control Word                                           
+CLTU      Command Link Transmission Unit                                      
+CMOS      Complementary Metal-Oxide Semiconductor                             
+COP       Command Operation Procedure                                         
+CPU       Central Processing Unit                                             
+CRC       Cyclic Redundancy Check                                             
+CSCI      Computer Software Configuration Item                                
+CTP       Command and Telemetry Processor                                     
+dB        decibel                                                             
+DIGSS     Development and Integration of Ground System Software               
+DLA       Declination of Launch Azimuth                                       
+DMD       DSCC Media Calibration Subsystem                                    
+DMR       Detailed Mission Requirement                                        
+DN        Digital Number                                                      
+DOD       Depth of Discharge                                                  
+DPCM      Differential Pulse Code Modulation                                  
+DPU       Data Processing Unit                                                
+DPW       The PDS Data Preparation Workbook.                                  
+DSAD      Digital Solar Attitude Detector, used in the attitude control       
+          subsystem                                                           
+DSCC      Deep Space Communications Complex                                   
+DSM       Deep Space Maneuver.                                                
+DSN       Deep Space Network, the JPL-administered network of interplanetary  
+          tracking stations in Goldstone, Calif.; Madrid, Spain; and          
+          Canberra, Australia. 34 meter is the diameter of the radio antenna  
+          used. high gain means that NEAR's 1-meter high-gain antenna is      
+          pointed at the Earth and used for the communication.                
+DST       Deep Space Transponder                                              
+Earth     Safe Mode In Earth Safe Mode, the spacecraft is placed in a power   
+          safe configuration with an emergency mode downlink. The solar       
+          panels are pointed directly at the Sun, and the medium gain         
+          antenna is placed on the Earth. The underlying assumption in Earth  
+          Safe Mode is that the Guidance & Control subsystem retains          
+          knowledge of the location of the Earth, and that the                
+          telecommunications subsystem is operational.                        
+ECL       Emitter-Coupled Logic                                               
+EDAC      Error Detection and Control                                         
+EDR       Experimental Data Record.                                           
+EEPROM    Electronically-Erasable Programmable Read-Only Memory               
+EOT       End of Telemetry                                                    
+ER        Eastern (Test) Range                                                
+Eros      An asteroid which is the destination of the NEAR spacecraft. Eros   
+          is one of the Near-Earth asteroids.                                 
+ESB       Earth Swingby, 23 Jan 98                                            
+FARM      Frame Acceptance and Reporting Mechanism                            
+FC        Flight Computer. NEAR has 2 flight computers.                       
+FIFO      First In, First Out                                                 
+FOP       Frame Operation Procedure                                           
+FOR       Field of Regard                                                     
+FOV       Field Of View                                                       
+FPGA      Field-Programmable Gate Array                                       
+FVP       Fine Velocity Control                                               
+G&C       Guidance and Control                                                
+Ge        Germanium                                                           
+GMT       Greenwich Mean Time                                                 
+GSE       Ground Support Equipment                                            
+GSFC      NASA/Goddard Space Flight Center                                    
+GSS       Ground Support System                                               
+H&S       Health and Status                                                   
+HEF       High Efficiency                                                     
+HGA       High Gain Antenna. This is the dish antenna on the NEAR spacecraft. 
+HVCE      High Voltage Control Electronics                                    
+HVPS      High Voltage Power Supply                                           
+Hz        Hertz, cycles or periods per second                                 
+I&T       Integration and Test                                                
+I/F       Interface                                                           
+I/O       Input/Output                                                        
+IC        Integrated Circuit                                                  
+IMR       Interrupt Mask Register                                             
+IMU       Inertial Measurement Unit                                           
+InGaAs    Indium Gallium Arsenide                                             
+IR        InfraRed                                                            
+IREQ      Interrupt REQuest                                                   
+ISS       Interface Support Structure                                         
+ITOGS     Integration and Test Operations Ground Segment                      
+JHU       The Johns Hopkins University                                        
+JPL       Jet Propulsion Laboratory, in Pasadena, CA.                         
+K         suffix representing kilo, indicating 1024 (e.g. 2^10 )              
+keV       kilo electron Volts                                                 
+KIPS      thousands of Instructions Per Second                                
+LASER     Light Amplification by Stimulated Emission of Radiation             
+LED       Light Emitting Diode                                                
+LEO       Low Earth Orbit                                                     
+LEOP      Launch and Early Operations                                         
+LFVC      Large Fine Velocity Control                                         
+LGA       Low Gain Antenna                                                    
+LHC       Left hand Circular                                                  
+LMC       Link Monitor and Control                                            
+LOS       Loss of Signal                                                      
+LSb       Least-Significant bit                                               
+LSB       Least-Significant Byte                                              
+LSSP      Launch Site Support Plan                                            
+LSW       Least Significant Word                                              
+LVA       Large Velocity Adjustment, as in LVA thruster.                      
+LVS       Low Bus Sense (Voltage)                                             
+MAG       Magnetometer. One of the instruments on NEAR.                       
+MDA       Metric Data Assembly                                                
+MDT       Mission Design Team                                                 
+MET       Mission Elapsed Time                                                
+MeV       Mega electron Volts                                                 
+MGA       Medium-Gain Antenna (Fan Beam)                                      
+MIPS      Millions of Instructions Per Second                                 
+MLI       Multi-Layer Insulation                                              
+MOAT      Mission Operations Analysis Tool Kit                                
+MOC       Mission Operations Center. People, processes, and facilities for    
+          planning, control, and assessment necessary for conducting the      
+          mission.                                                            
+MOGS      Mission Operations Ground Segment                                   
+MOM       Mission Operations Manager                                          
+MOPDD     Mission Operations Process Description Document                     
+MOPS      Mission Operations. Acitivites of the MOC.                          
+MOR       Mission Operations Review                                           
+MOS       Mission Operations System                                           
+MOSES     Model of Spacecraft, Environment, and Subsystems                    
+MOSO      Mission Operations Systems Office                                   
+MPP       Maximum Power Point                                                 
+MRDF      Material Review Disposition Form                                    
+MRT       Mission Readiness Test                                              
+MSb       Most Significant bit                                                
+MSB       Most-Significant Byte                                               
+msec      millisecond                                                         
+MSI       MultiSpectral Imager (the main camera). One of the instruments on   
+          NEAR.                                                               
+MSW       Most Significant Word                                               
+mux       multiplexer                                                         
+MVPS      Medium Voltage Power Supply                                         
+NaI       Sodium Iodide                                                       
+NAIF      Navigation and Ancillary Information Facility, a discipline node    
+          of PDS.                                                             
+NASCOM    NASA Communications                                                 
+NASTIE    NEAR Attitude System Test and Integration Environment               
+NEAR      The Near Earth Asteroid Rendezvous spacecraft, the first            
+          spacecraft launched in NASA's Discovery Program of low-cost,        
+          small-scale planetary missions.                                     
+NEAR_Sim  NEAR Simulation Program (for trajectory calculations)               
+NGS       NEAR Ground System                                                  
+NIS       Near-Infrared Spectrometer . One of the instruments on NEAR.        
+NLR       NEAR Laser Rangefinder. One of the instruments on NEAR.             
+nm        nanometer                                                           
+NMOC      NEAR Mission Operations Center                                      
+NOCC      Network Operations Control Center                                   
+NOP       Network Operations Plan                                             
+NSSDC     National Space Science Data Center.                                 
+nT        nanoTesla                                                           
+NTO       Nitrogen Tetroxide (N2O4), a propellant gas                         
+OLS       Orbital Launch Services                                             
+OpNav     OpNav stands for Optical Navigation, and means that images are      
+          obtained of Eros against the star background. These are measured    
+          (just like plates of asteroids and stars are measured to update     
+          asteroidal occultation predictions) to help determine where NEAR    
+          is relative to Eros, that is, to help navigate the spacecraft       
+          (since these observations are used in the overall orbit             
+          determination, based also on measurement of NEAR's radio signals,   
+          which is then used to plan thrusting maneuvers to target NEAR to    
+          Eros).                                                              
+OR        Operations Requirement                                              
+OWLT      One-Way Light Time                                                  
+PCP       Post Contact Processing                                             
+PCU       Power Converter Unit                                                
+PDS       The Planetary Data System.                                          
+POCC      Payload Operations Control Center                                   
+POR       Power-On Reset, an electrical signal that indicates to the FPGA in  
+          the NLR digital processor that power has recently been applied to   
+          the NLR instrument.  Also, the digital sequence within the FPGA     
+          that immediately follows power-on.                                  
+PPI       Planetary Plasma Interactions, a discipline node of the PDS.        
+PRF       Pulse Repetition Frequency (ie Shot Rate), the reciprocal of PRI    
+PRI       Pulse Repetition Interval (ie Shot Period), the reciprocal of PRF   
+PROM      Programmable Read-Only Memory                                       
+PSE       Power System Electronics                                            
+PSS       Propulsion System Structure                                         
+PSU       Power Switching Unit                                                
+R&QA      Reliability and Quality Assurance                                   
+R/T       Real-Time                                                           
+RAM       Random Access Memory                                                
+RHC       Right Hand Circular                                                 
+ROM       Read Only Memory                                                    
+RS        Radio Science, a NEAR experiment package.                           
+R-S       Reed-Solomon (family of burst error correcting codes)               
+RT        Remote Terminal of the NEAR MIL-STD-1553 bus                        
+RTX       Real Time Express                                                   
+RWA       Reaction Wheel Assembly                                             
+S/A       Solar Array                                                         
+S/C       Spacecraft                                                          
+SBN       Small Bodies Node, a discipline node of the PDS.                    
+SDC       NEAR Science Data Center, based at JHU/APL.                         
+SEC·DED   Single Error Correction, Double Error Detection Hamming code        
+SEP       Sun-Earth-Probe angle                                               
+SEU       Single Event Upset                                                  
+SFVC      Small Fine Velocity Control                                         
+SIS       Software Interface Specification.                                   
+SOE       Schedule of Events                                                  
+SPE       Sun-Probe-Earth angle                                               
+SPEC      Static Phase Error, Coarse                                          
+SPEF      Static Phase Error, Fine                                            
+SPICE     A system of providing navigation and geometry data.                 
+          S = Spacecraft, P = Planet, I = Instrument, C = C matrix, and       
+          E = Events.                                                         
+SR        The PDS Standards Reference.                                        
+SRAM      Static Random-Access (read/write) Memory                            
+SRS       Software Requirements Specification                                 
+SSG       Sensor System Group                                                 
+SSPA      Solid State Power Amplifier                                         
+SSR       Solid State Recorder, used for storing data before it is            
+          transmitted back to Earth. NEAR has 2 SSRs.                         
+ST        Star Tracker                                                        
+Sun       Safe Mode In Sun Safe Mode, the spacecraft is placed in a power     
+          safe configuration with an unmodulated carrier downlink. The solar  
+          panels are pointed directly at the Sun, and the spacecraft is       
+          rotated to sweep the fan beam antenna through the hemisphere        
+          facing the Sun and Earth. Every 10 hours, redundant components of   
+          the telecommunications subsystem are exercised.                     
+TBD       To Be Determined                                                    
+TBS       To Be Supplied                                                      
+TC        Telecommand                                                         
+TCM       Trajectory Correction Maneuver. TCM-18 indicates the 18th           
+          trajectory correction maneuver that has been planned since NEAR     
+          was launched.                                                       
+TCU       Telemetry Conditioning Unit                                         
+TCXO      Temperature-Compensated Crystal Oscillator                          
+TEC       Thermo-Electronic Cooler                                            
+TF        Transfer Frame                                                      
+Time      Systems of Time are discussed at                                    
+          http://tycho.usno.navy.mil/systime.html                             
+TLM       Telemetry                                                           
+TOF       Time Of Flight (e.g., duration of the laser pulse's round trip to   
+          the asteroid)                                                       
+UART      Universal Asynchronous Receiver/Transmitter                         
+usec      microsecond                                                         
+UTMC      United Technologies Microelectronics Center                         
+V/T       Voltage/Temperature                                                 
+VC        Virtual Channel                                                     
+VC0       NEAR virtual channel for solid-state recorder data                  
+VC3       NEAR virtual channel for real-time telemetry data                   
+VCDU      Virtual Channel Data Unit (CCSDS)                                   
+VCO       Voltage-Controlled Oscillator                                       
+XGRS      X-ray/Gamma-Ray Spectrometer. One of the instruments on NEAR.       
+XPDR      Transponder                                                         
+XRS/GRS   X- and Gamma-Ray Spectrometer                                       

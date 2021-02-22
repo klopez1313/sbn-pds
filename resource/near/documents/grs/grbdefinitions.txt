@@ -1,0 +1,164 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " GRB Data File Parameter Definitions "                  
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+GAMMA RAY BURST SCIENCE RECORD VARIABLES                                      
+ (Binary Table Fields)                                                        
+                                                                              
+The following list of variable names are contained in the header of the       
+Binary table extension of the gamma ray burst data file created by CFITSIO    
+user routines for PDS compliance. The corresponding definitions will be       
+placed in a separate file, and will not be contained in the PDS label         
+file, or require the generation of PDS keywords.                              
+                                                                              
+                                                                              
+                                                                              
+  1.  met                                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 2**32-1 (4294967295)                                  
+        units - seconds (unsigned)                                            
+        definition - Mission Elapsed Time in seconds for the start of this NIS
+                     integration period                                       
+                                                                              
+  2.  tdb                                                                     
+                                                                              
+        minimum value - -1.7976931348623157e+308                              
+        maximum value - +1.7976931348623157e+308                              
+        units - seconds (signed)                                              
+        definition - Barycentric Dynamical Time corresponding to MET(1).      
+     Barycentric Dynamical Time (TDB) is the independent                      
+     variable in the equations, including terms for relativity,               
+     of motion of the celestial bodies.  The solution of these                
+     equations gives the rectangular coordinates of those                     
+     bodies relative to the barycentre (centre of mass) of the                
+     solar system.  (The barycentre does not coincide with the                
+     centre of the Sun but is displaced to a point near its                   
+     surface in the direction of Jupiter.)                                    
+                                                                              
+  3.  dqi                                                                     
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - Data Quality Index                                       
+                     c0 = Data Quality Flag[0=good,1=flagged for quality      
+                          defects]                                            
+                     c1 = Instrument number for FC, CTP and AIU[1 or 2]       
+                     c2 - c6 = File Specific                                  
+                     c7 = CCDS Source[0=VC0, 1=VC1, 2=VC2, 3=VC3]             
+ 4. sample_start_met                                                          
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - seconds                                                              
+ definition - Burst data start MET - start time in seconds for collection     
+of 1st one second burst counter sample                                        
+                                                                              
+ 5. gamma_thresh_var                                                          
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 1023                                                         
+ units - N/A                                                                  
+ definition - Burst high energy threshold - determines how one second         
+gamma ray burst counter samples are formed; if burst threshold = 0, one       
+second samples are taken from the BGO raw hardware event counter; if burst    
+threshold between 1and 1023, the one second samples correspond the number     
+of BGO events in each one second period whose energy bins fall between 0      
+and the burst high energy threshold.                                          
+ initial value: energy bin 100                                                
+                                                                              
+ 6. xray_integ_start_met                                                      
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**32-1                                                      
+ units - seconds                                                              
+ definition - Crosstalk start MET - start time in seconds of the Xray         
+record period over which the crosstalk counter included in this record was    
+accumulated                                                                   
+                                                                              
+ 7. crosstalk_counter                                                         
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 65,535                                                       
+ units - N/A                                                                  
+ definition - Crosstalk counter - a count of the high energy gamma ray        
+events which occurred over an entire record period for the most recently      
+completed Xray period (independent of gamma ray sensor masking);              
+individual anti-coincident high energy gamma ray events each cause this       
+counter to be incremented by 1; coincident gamma ray events cause this        
+counter to be incremented by 1 if either or both are high energy; each        
+time the counter is incremented, the three primary Xray sensor channels       
+(unfiltered, Mg, and Al) are                                                  
+ cleared of any pending events by the XGRS software                           
+                                                                              
+ 8. encoded_crosstalk_thresh                                                  
+                                                                              
+ minimum value - N/A                                                          
+ maximum value - N/A                                                          
+ units - N/A                                                                  
+ definition - Encoded crosstalk thresholds - an encoding of the thresholds    
+which are used in determining "high energy" gamma ray events in the           
+context of crosstalk processing; events whose energy bins exceed this         
+threshold will be considered high energy (for the purposes of crosstalk       
+processing only)                                                              
+ ground conversion:                                                           
+ encoded thr 1022 or 2222 = NaI and BGO crosstalk thr both 1022               
+ encoded thr 2223 = NaI crosstalk thr 1022; BGO crosstalk thr 1023            
+ encoded thr 2322 = NaI crosstalk thr 1023; BGO crosstalk thr 1022            
+ encoded thr 2323 = NaI and BGO crosstalk thr both 1023                       
+ Note: a crosstalk threshold of 1023 effectively disables crosstalk           
+processing for that sensor, since only events in energy bin > 1023 (none)     
+would be considered high energy;                                              
+ a crosstalk threshold of 1022 enables crosstalk processing for that          
+sensor with high energy bins considered to be energy bin 1023 only.           
+ initial value: energy bin 1022                                               
+                                                                              
+ 9. gamma_burst_mode[GAMMA_BURST_DIMS]                                        
+                                                                              
+ minimum value - 0                                                            
+ maximum value - 2**16-1                                                      
+ units - N/A                                                                  
+ definition - gamma ray burst counter samples - 166 16-bit unsigned words;    
+ each word represents a one second counter sample (of either the BGO raw      
+hw ctr or the sum of events in energy bins 0 to the burst thr for that one    
+second)                                                                       
+                                                                              
+--------------------------------------------------------------------------    
+------                                                                        
+                                                                              
+NEAR KEYWORDS and Examples                                                    
+                                                                              
+The following list of NEAR keywords reflects the current status and can be    
+modified as required.                                                         
+                                                                              
+NEAR-001= 5760 / 012 Data offset from start of file (bytes)                   
+NEAR-002= '1.01 ' / Version of this file format                               
+NEAR-003= 'GRB98037.FIT' / Name of this file                                  
+NEAR-004= '01:41:57Z' / Time that this file was created                       
+NEAR-005= 'GRB.001 ' / Product ID                                             
+NEAR-006= 'PDSGRB ' / Program name that produced this file                    
+NEAR-007= ' ' / Version # of above program                                    
+COMMENT NEAR Project Parameters Can Have Names NEAR-001 Through NEAR-099      
+NEAR-601= 'XGR ' / File Type                                                  
+NEAR-602= ' ' / Scaling File                                                  
+NEAR-603= ' ' / Version of Scaling File                                       
+NEAR-604= 62133424 / 024 Initial MET in File                                  
+NEAR-605= 62188036 / 025 Final MET in File                                    
+NEAR-606= 'GAMMABURST' / Instrument type                                      
+NEAR-607= 'xgrs.c ' / Program name produced input file                        
+NEAR-608= '1.9 ' / Version of above program                                   
+COMMENT Additional Science Team Defined Parameters Below                      
+NEAR-609= ' ' / Spare                                                         
+NEAR-610= ' ' / Spare                                                         
+NEAR-611= ' ' / Spare                                                         
+NEAR-612= ' ' / Spare                                                         
+COMMENT Lines Before The Last Can Be Used For Documentation                   
+COMMENT                                                                       
+                                                                              

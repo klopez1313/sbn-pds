@@ -1,0 +1,242 @@
+NIS Mission Phases and Subphases.                                             
+                                                                              
+NIS-specific mission phase and subphase are working divisions of the NIS      
+observations within the NEAR mission.  NIS observations are grouped by        
+a 2-character NIS Phase/Subphase ID.  The first character identifies the      
+NIS phase which is defined as the NEAR mission phase, such as A = Initial     
+Cruise (CRU1), or an Eros orbital phase, such as J = 200 km Orbit at Eros.    
+J = 200 km orbit at Eros, etc.  The second character identifies a NIS         
+subphase within the NIS phase.  NIS subphases group a set of related          
+observation sequences and allow easy distinction between observations close   
+in time, but with different targets, sequence parameters, or scientific       
+objectives.                                                                   
+                                                                              
+The mission elasped time, MET, corresponds to the first spacecraft 1-Hz pulse 
+after the start of the first second of integration of the first spectrum of   
+the sequence, i.e., 1 second after the actual start of the integration.       
+The MET is defined as number of seconds since launch at UT February 17 1996   
+20:43:28.78.  See Section 6.2 of Izenberg et al. (2000) for a detailed        
+explanation of relative timing of spectrum acquisition and the spacecraft     
+pulse.                                                                        
+                                                                              
+This table is a copy of Table 2 in the NIS document, EXTRINFO.TXT, found      
+on the NEAR Archive volume /NNCOLL_1001/NNCRU1_0001/extras/.                  
+                                                                              
+                                                                              
+   NIS Phase/Subphase               DOY               MET Range               
+______________________________________________________________________        
+                              A - Initial Cruise                              
+AA- NIS Checkout                    96_108-96_110  005195300-005307000        
+AB - All-On Test                    96_143         008134300-008214500        
+AC - Dark Test                      97-220         046462700-046469100        
+AD - Dark Test                      97-260         049913000-049921100        
+AE - Cover open                     97-267         050512200-050522100        
+AF - NIS Checkout (Caltarget A)     97-269         050668100-050677100        
+                                                                              
+                              B - Earth Flyby                                 
+BA - Earth - Asia/Africa            98_023         060949600-060951200        
+BB - Earth - S. Africa              98_023         060952200-060952700        
+BC - Earth - Antarctica             98_023         060953700-060954000        
+BD - Moon Radiometry                98_023         060993100-060995800        
+BE - Caltarget B                    98_023         061004500-061005100        
+BF - Moon MSI/NIS Coalign           98_026         061216600-061218800        
+                                                                              
+                              C - Final Cruise                                
+CA - 300 sec. Dark Tests            98_231         078897700-078899000        
+CB - Caltarget C                    98_231         078899000-078901000        
+CC - Full Nixel Test-Caltarget      98_231         078901000-078909000        
+CD - 300 sec. Dark Tests            98_231         078909000-078910000        
+CE - Jupiter Mirror Plane Test      98_231         078924000-078932000        
+CF - Seq. Exerciser/Throughput      98_313         085993000-086005000        
+CG - Global seq. Test               98_323         086664000-086860000        
+CH - Caltarget Stability Test       98_324         086930000-086936900        
+CI - Deep Space Caltarget 1         98_324         086937000-086939000        
+CJ - SDC Throughput                 98_348         089043000-089047000        
+CK - Light Curve "3"*               98_349         089099000-089120600        
+                                                                              
+                           D - Eros Approach/Flyby                            
+DA - Contingency Sequence           98_357         089837000-089861000        
+                                                                              
+                            E - Eros-Eros Cruise                              
+EA - Caltarget 2                    99_041         094087000-094095000        
+EB - Caltarget 3                    99_042         094178000-094182000        
+EC - Caltarget 4                    99_049         094782000-094787000        
+ED - Caltarget 5                    99_088         098113000-098117000        
+EE - Caltarget 6                    99_109         099927000-099931000        
+EF - Dark cals                      99_197         107561000-107585000        
+EG - Caltarget 7                    99_198         107587000-107589000        
+EH - Mag Wheelie RA*                99_198         107593000-107598000        
+EI - LPF Test Global Map (50 in)    99_349         120673000-120673950        
+EJ - LPF Test Latscans (50-45)      99_349         120674000-120701150        
+EK - LPF Test Global Map (45 in)    99_349         120701200-120702440        
+EL - LPF Test Latscans (45-40)      99_349         120702500-120716440        
+EM - LPF Test Full Nixel Test       99_350         120716600-120719899        
+EN - LPF Test Global Map (40 in)    99_350         120719900-120721400        
+EO - LPF Test InGaAs Opt. (40-30)   99_350         120721401-120732400        
+EP - LPF Test Global Map (30 in)    99_350         120732401-120734000        
+EQ - LPF Test InGaAs Opt. (30-20)   99_350         120734001-120741000        
+ER - LPF Test MP Globals (in)       99_350         120741001-120751600        
+ES - LPF Test Minimum Phase Point   99_350         120751601-120755300        
+ET - LPF Test Globals (out)         99_350         120755301-120763000        
+EU - LPF Test Latscans (out)        99_350         120763001-120766400        
+                                                                              
+                              F - Eros Approach                               
+FA - Eros Caltarget A1              00_011         122960800-122963100        
+FB - LPF Re-Test Global Map (50)    00-019         123686000-123687200        
+FC - LPF Re-Test Latscans (50-45)   00-019         123687201-123714400        
+FD - LPF Re-Test Global Map (45)    00-019         123714401-123715600        
+FE - LPF Re-Test Latscans (45-40)   00-019         123715601-123729700        
+FF - LPF Re-Test Full Nixel Test    00-019         123729701-123733000        
+FG - LPF Re-Test Global Map (40)    00-019         123733100-123734500        
+FH - LPF Re-Test InGaAs Opt.(30)    00-019         123734501-123745170        
+FI - LPF Re-Test Global Map (30 in) 00-020         123745171-123747000        
+FJ - LPF Re-Test InGaAs Opt.(20)    00-020         123747001-123753600        
+FK - LPF Re-Test MP Globals (in)    00-020         123753700-123764800        
+FL - LPF Re-Test Min. Phase Point   00-020         123764801-123768400        
+FM - LPF Re-Test - Globals (out)    00-020         123768401-123776000        
+FN - LPF Re-Test - Latscans (out)   00-020         123776100-123779600        
+FO - Nixel Raster Tests             00_025         124182100-124216700        
+FP - Caltarget A2                   00_025         124220701-124223100        
+FQ - MS Light Curve 4* (RA)         00_029         124543900-124564300        
+FR - Mirror Plane Test (w/MSI)      00_031         124769800-124778000        
+FS - Mirror Geom 1 (w. MSI)         00_032         124796800-124799700        
+FT - Mirror Geom 2 (w. MSI)         00_036         125122600-125131000        
+FU - NIS "Movie" 6*                 00_037         125212600-125233000        
+FV - Caltarget A3                   00_038         125317900-125321100        
+FW - NIS "Movie" 7*                 00_041         125584000-125604500        
+FX - Global Morph 1* + L Curve 8*   00_042         125647600-125687800        
+FY - NIS MS Rotation 1*             00_043         125725600-125745700        
+                                                                              
+                              G - Low Phase Flyby                             
+GA - Global Map (50 in)             00_044         125835500-125836000        
+GB - Latitude Scans (50-45 in)      00_044         125836557-125863500        
+GC - Global Map (45 in)             00_044         125863700-125864400        
+GD - Latitude Scans (45-40 in)      00_044         125865000-125878600        
+GE - Full Nixel Test                00_044         125879100-125881825        
+GF - Global Map (40 in)             00_044         125882400-125883300        
+GG - InGaAs Opt. Latscan (40-30)    00_044         125883700-125894400        
+GH - Global Map (30 in)             00_044         125894450-125895900        
+GI - InGaAs Opt. Latscan (30-20)    00_044-00_045  125896300-125902700        
+GJ - Minimum Phase Globals (in)     00_045         125903100-125913700        
+GK - Minimum Phase Point            00_045         125913900-125917200        
+GL - Globals (out)                  00_045         125917550-125920300        
+                                                                              
+                           H - High Orbit I (370x300 km)                      
+HA - Daily Global "46" ***          00_046         126023200-126024300        
+HB - Daily Global "47" ***          00_047         126077200-126096300        
+HC - Caltarget O1                   00_047         126096400-126099600        
+HD - NIS Global Morph, 3x3***       00_047         126103200-126124600        
+HE - Daily Global "48" ***          00_048         126204900-126206100        
+HF - Daily Global "49" ***          00_049         126250000-126251100        
+HG - Daily Global "50" ***          00_050         126343600-126344700        
+HH - NIS Global Morph 2*            00_050         126360600-126381300        
+HI - Daily Global "51" ***          00_051         126462400-126463500        
+HJ - NIS Global Morph 3*            00_052         126518200-126538800        
+HK - Daily Global "52" ***          00_052         126545100-126546300        
+HL - Daily Global "53" ***          00_053         126664000-126665100        
+HM - Daily Global "54" ***          00_054         126678400-126679500        
+HN - Global Morph 4*                00_054         126708100-126727100        
+HO - Daily Global "55" ***          00_055         126790900-126792000        
+                                                                              
+                    I -Transfer to 200 Km Orbit (300x200 km)                  
+IA - Daily Global "56" ***          00_056         126865600-126866700        
+IB - Multispectral Rotation 3*      00_056         126880000-126898300        
+IC - Daily Global "57" ***          00_057         126970000-126971100        
+ID - Global Morph 5*                00_058         127022200-127043100        
+IE - Daily Global "58" ***          00_058         127065500-127066500        
+IF - Caltarget O2                   00_059         127116100-127119300        
+IG - Daily Global "63"              00_063         127477600-127479000        
+                                                                              
+                              J - 200 km Orbit                                
+JA - Daily Global "65"              00_065         127650400-127651800        
+JB - Daily Global "66"              00_066         127758400-127759400        
+JC - NIS Polar Lat 1                00_069         128056500-128072100        
+JD - NIS Polar Lon 1                00_070         128122000-128141400        
+JE - NIS Feature Track 1            00_074         128413600-128423500        
+JF - Caltarget O3                   00_074         128434900-128438100        
+JG - NIS Feature Track 2            00_074         128500600-128510500        
+JH - NIS Flyover 3*                 00_075         128512600-128529700        
+JI - South Polar Lon 1              00_076         128596900-128616300        
+JJ - NIS Feature Track 3            00_077         128683600-128688300        
+JK - NIS Flyover 4                  00_079         128845626-128859500        
+JL - South Polar Lon 2              00_080         128929700-128949100        
+JM - NIS NPolar Lat 2               00_081         129019100-129035100        
+JN - NIS SouthPolar_A               00_086         129446200-129525500        
+JO - NIS SouthPolarLon              00_086-00_087  129525400-129541600        
+JP - NIS Flyover 12                 00_088         129617200-129637100        
+JQ - NIS Flyover 13                 00_088         129637600-129703100        
+JR - NIS Flyover 14, N. Eq. Lon 3   00_089         129703200-129788700        
+JS - NIS Feature Track 7            00_090         129788800-129807900        
+JT - NIS Feature Track 8            00_090         129808600-129827700        
+JU - NIS Flyover 15                 00_091         129703200-129896000        
+JV - NIS Polar Lon 3                00_091         129897400-129917300        
+JW - NIS Flyover 16                 00_092         129960100-129979200        
+JX - NIS Flyover 17                 00_092         129981100-130000200        
+JY - NIS Flyover 18                 00_093-00_094  130117900-130137900        
+                                                                              
+                              K - 200-100 km Transfer                         
+KA - NIS Daily Global 95            00_095         130263500-130305699        
+KB - NIS Equat. Periapsis           00_096         130305700-130434699        
+KC - NIS Daily Global 97            00_097         130434700-130503399        
+KD - NIS Daily Global 98            00_098         130503400-130586299        
+KE - NIS Daily Global 99            00_099         130586300-130695999        
+KF - NIS Daily Global 100           00_100         130696000-130742799        
+KG - NIS Daily Global 101           00_101         130742800-130786499        
+KH - NIS RegGlobal 101              00_101         130786500-130861499        
+KI - NIS RegGlobal 102              00_102         130861500-130962399        
+                                                                              
+                              L - 100 km Orbit                                
+LA - NIS LonScan 103A               00_103         130962400-130994799        
+LB - NIS LonScan 104A               00_104         130994800-131017599        
+LC - NIS LonScan 104B               00_104         131017600-131099099        
+LD - NIS RegGlobal 105              00_105         131099100-131108099        
+LE - NIS South 2x3s 105             00_105         131108100-131167499        
+LF - NIS RegGlobal 106              00_106         131167500-131170499        
+LG - NIS Feature 2x2 106            00_106         131170500-131221599        
+LH - NIS LonScan 106A               00_106         131221600-131244999        
+LI - NIS LonScan 106B               00_106         131245000-131253399        
+LJ - NIS North 2x3s 107             00_107         131253400-131333999        
+LK - NIS RegGlobal 107              00_107         131334000-131349000        
+LL - NIS Feature 2x2 107            00_107-00_108  131335800-131657099        
+LM - NIS Feature 2x2 111            00_111         131657100-131661399        
+LN - NIS Lon Scan 111               00_111         131661400-131684099        
+LO - NIS North 2x3s 111             00_111-00_112  131684100-131706699        
+LP - NIS Lon Scan 112               00_112         131706700-131771499        
+LQ - NIS Caltarget O4               00_112-00_113  131771500-131887499        
+                                                                              
+                              M - 100-50 km Transfer                          
+MA - NIS North 2x3s 114             00_114         131887500-131951699        
+MB - NIS North 2x3s 115             00_115         131951700-131975199        
+MC - NIS Feature Track 115          00_115         131975200-131979300        
+MD - NIS RideNLR 116                00_116         132034300-132056399        
+ME - NIS North 2x3s 116A            00_116         132056400-132068099        
+MF - NIS North 2x3s 116B            00_116         132068100-132117099        
+MG - NIS RideNLR 117                00_116-00_117  132117100-132139899        
+MH - NIS Flyover 117                00_117         132139900-132203399        
+MI - NIS Feature Track 117          00_117-00_118  132203400-132207699        
+MJ - NIS LowEmissMaps 118A          00_118         132207700-132213099        
+MK - NIS LowEmissMaps 118B          00_118         132213100-132219099        
+ML - NIS LowEmissMaps 118C          00_118         132219100-132226899        
+MM - NIS RideNLR 118                00_118         132226900-132289299        
+MN - NIS Feature Track 118          00_118-00_119  132289300-132313299        
+MO - NIS RideNLR 119                00_119         132313300-132381599        
+MP - NIS LowEmissMaps 119           00_120         132213100-132399699        
+MQ - NIS RideNLR 120                00_120         132399700-132462599        
+MR - NIS North 2x3s 120             00_120-00_121  132462600-132479799        
+MS - NIS RideNLR 121                00_121         132479800-132548499        
+MT - NIS Feature Track 121          00_121-00_122  132548500-132572499        
+MU - NIS RideNLR 122                00_122         132572500-132635799        
+                                                                              
+                               N - Low Orbit I (50 km)                        
+NA - NIS Low Orbit Week 00122       00_123-00_129  132635800-133240699        
+NB - NIS Low Orbit Week 00129       00_130-00_136  133240700-133664999        
+_________________________________________________                             
+Notes:                                                                        
+DOY is day of year: two digit year followed by Julian day.                    
+MET range shows inclusive but not exact bounding times for the                
+sequences in the given subphase.                                              
+* Number represents MSI observation number. Ex: Light Curve "3" is the        
+first NIS light curve, but the 3rd MSI light curve.                           
+** RA = Ride Along with another instrument.                                   
+*** Early Daily globals and MSRots have bad command sequences that cause      
+lost and/or contaminated darks.                                               

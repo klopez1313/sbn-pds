@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="css/shape-models-page.css">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+    <base href="shape-models/">
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main" ng-app="ShapeModelTable" ng-controller="ShapeModels">
+        <script src="js/angular/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.28/angular-ui-router.min.js" integrity="sha512-2DoNBBUJq5Wr+Uhjgol+uvmHtxOgrtG1QjuDHltKMdtIiVEhujUi0eb/X21P+P0V9zgXKA/lOKCSq7wj5VYc5A==" crossorigin="anonymous"></script>
+        <script src="shape-models/js/app.ShapeModels.js"></script>
+        <script src="shape-models/js/app.Data.js"></script>
+        <script src="shape-models/js/app.Datasets.js"></script>
+        <script src="shape-models/js/app.arDetector.js"></script>
+
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Types</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Shape Models</li>
+        </ol>
+
+        <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
+        <p> These data sets contain Shape models (or Digital Terrain Models) three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data.  </p>
+
+        <!-- <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p> -->
+
+        <section id="shape-models-main" ui-view></section>
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

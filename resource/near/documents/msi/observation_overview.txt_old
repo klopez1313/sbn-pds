@@ -1,0 +1,1198 @@
+
+MSI Observation Overview Document 
+
+1.0  Introduction
+
+The  objective of this document is to provide an overview of the NEAR MSI observations. 
+It is intended to be used as a companion document to the spreadsheets available in the
+eros and pre_eros subdirectories to present more detailed descriptions of observations
+in the context of the larger events they comprised.  For a few observations there are 
+individual text files (separate from this document) which provide additional details.  
+These will be referenced from this document as well as from the spreadsheet in the Detailed 
+Description  column. When this document is complete, I would like to break it into pieces
+and link subsets of it to the Detailed Description column.
+
+The information here is presented in time order from start of mission to end of mission
+and is divided into obvious chapters that represent the major observation events. Each chapter 
+has a section which describes the historical background and one that talks about the
+detailed sequencing design. The historical background section provides some context for 
+understanding why observations were planned and acquired . This may include information 
+about spacecraft and mission events, as well as the orbital context.  In the sequence
+design sections I try to explain more about how the detailed design of the observations
+attempted to satisfy the science requirements. Sometimes detailed sequence files are
+referenced. This file is incomplete, but Chapters 5, 7, 13, and 14 are in farily
+good shape and will give the feel for what I hope to accomplish with it.  
+
+Some information about NIS data is available here as well.  Most of the NIS observations 
+acquired in the post-orbit insertion period and high orbits were designed as cooperative 
+observations with MSI. Pointing control was often (but not always) in the MSI sequences and 
+these are described here.  More information about NIS is available in the nis-browse area. 
+
+This is a text file. I wanted to incorporate plots, but we also wanted to keep this 
+readable for the largest audience and for a long time. So instead, I've drawn what I can with 
+ascii characters. A few gif files may eventually  be referenced, and if so they will be located 
+in this top level directory as obs_overview_figxx.gif. None exist in this initial delivery. 
+
+
+
+
+2.0  Post-launch Moon
+
+2.1 Historical Background
+
+The first activity performed with MSI following launch was to acquire a set of calibration 
+images taken on 1996/051 of the moon.  The cover had not been deployed yet.  The objective 
+was to take a set of images that would serve as a calibration baseline for cover-on imaging. 
+These ultimately improved ability to understand why Mathilde data were not as expected.
+(more on this from Scott)
+
+2.2 Sequence Design 
+
+See file /sequence/pre_eros/launchmoonseq.txt. Contains STOL, but no description yet. 
+
+
+3.0 Hyakutake     
+
+3.1 Historical Background
+
+The opportunity arose to image comet Hyakutake with MSI. It was primarily used as a means for
+exercising the imaging and pointing capabilities.  We did learn that the pointing capabilities
+on NEAR are excellent, and we also acquired some nice images of comet Hyakutake from space.
+
+3.2 Sequence Design 
+
+A descriptive overview of the sequence can be found in:
+ /sequence/pre_eros/hyakutake/hyakutakeseq.txt
+
+
+4.0 Cruise Calibrations I
+  
+4.1 Historical Background
+These calibrations were intended to give a look at the camera's
+radiomentric response before and after the cover deploy. 
+(more from Scott...)
+
+4.2 Sequence Design
+
+    Canopus1 - see /pre_eros/cruise_cals/canopus1seq.txt (summary and STOL script)
+    Canopus2 - see /pre_eros/cruise_cals/canopus2seq.txt (summary and STOL script) 
+    LowSunTest - see /pre_eros/cruise_cals/lowsuntestseq.txt (summary and STOL script) 
+
+
+
+5.  Mathilde 
+
+5.1 Historical Background
+
+The Mathilde flyby was first flyby of a carbonaceous asteroid.  A major constraint on aimpoint 
+selection had to do with keeping sun on the solar panels throughout the flyby.  The only trajectory 
+which would allow us to keep the camera pointed to Mathilde throughout most of the flyby while
+not violating solar panel constraints was to fly due North over Mathilde (ecliptic north).  
+Miss distance of 1200km was selected because that's the closest we could fly and still be able to 
+turn the spacecraft fast enough to track Mathilde at closest approach. It wasn't so much a problem 
+of maximum rate, but the acceleration needed to change the rate during the few minutes before and 
+after closest approach. 
+ 
+The two primary science experiments of the Mathilde flyby were imaging and gravity. 
+The spectrometers would not be able to do anything useful because of the distance
+and speed of flyby. The magnetometer remained on, but the other instruments were 
+turned off to conserve power and thus allow s/c to turn farther off the sun.
+The Mathilde flyby was similar to the Gaspra and Ida flybys in that there is no
+on-board closed loop tracking available on NEAR.  General problem to be solved,
+is that the ground-based uncertainties at closest approach represent a region of 
+sky that is huge compared to a single MSI field-of-view. Must refine knowledge
+of Mathilde's location from pictures taken during last day  before closest approach, 
+then have a mechanism for incorporating that knowledge into an on-board sequence 
+pointing update. 
+
+Uncertainties in the location of Mathilde from ground-based observation (pre-opnav)
+were ???  Opnavs were planned to be acquired at intervals of 6 hours, starting at E-42 
+and ending at -11 hours. Plans for an optional trajectory correction at E-24 hours
+were in place. Mathilde would need to be detected in the opnavs at -36 hours in order
+for there to be enough time to prepare the trajectory correction. 
+ 
+The main observation sequences were designed to cover a region of sky that represented 
+the 2-sigma uncertainties associated with the -18 hours opnavs.  The shape of the uncertainty 
+region was a prolate triaxial ellipsoid, with dimensions 84 x 79 x 230  km. Long dimension 
+was parallel to the downtrack motion of spacecraft (most difficult to determine distance 
+from a point source).  Cross-track uncertainties (normal to down-track) were smaller. 
+It's easier to determine location side-to-side by comparing location of Mathilde to stars 
+in the background.  There was a 90% chance that the center of Mathilde would lie within
+the perimeter of this ellipsoidal region, with the most probable location at the center. 
+
+The basic plan was to try to cover this uncertainty region as many times as possible during the 
+flyby,  in an intelligent manner. We started at one end and essentially slewed back and forth
+along the ellipsoid parallel to the long dimension.  Each full (or partial coverage) of the ellipsoid
+would return essentially one view (or partial view) of Mathilde).  It was not possible to do much 
+cross-track slewing because of limited acceleration available on the spacecraft (and also limitations
+due to smear requirements).  However, the only time the field of view was not as wide as, or wider than 
+the crosstrack dimension was during the closest approach slew and the two following slews. For those three 
+observations, we could not guarantee coverage of the full disk of Mathilde.
+
+When the sequence was uplinked to spacecraft, these mosaics were targetted to best known
+location of Mathilde at time of uplink. Uncertainty in it's location at time of
+uplink was basically the ground-based knowledge uncertainties quoted above. These were huge, much 
+much bigger than the little mosaics centered in that region.  The Mathilde sequence DEPENDED on the 
+successful acquisition of the images taken at -18 hours AND on a successful trajectory 
+correction at -24 hours, if one was needed.  Following acquisition of the images, a new 
+solution for location of Mathilde would be determined, and then a pointing tweak sent to spacecraft.
+The pointing tweak had two parts. First we would upload a revised spacecraft ephemeris.
+It's all relative, I think they kept the old Mathilde ephemeris up there, but represented any
+new information about location of Mathilde in the revised s/c trajectory that was sent to s/c.
+Since the sequence pointing was done with target-relative commands, by
+simply uploading a revised trajectory to the spacecraft, the mosaics would automatically
+be centered on the new most probable location of Mathilde as known at -18 hours.  The
+second part of the tweak was a timing update. It was decided (for a host of reasons)
+to simply turn the on-board clock forward or backward to correct for any improvement
+in knowledge of time of flight.  We would also take opnavs at -11 hours, but we were not depending 
+on them.  If analysis were complete in time, preparations in the ops timeline had been 
+made for a second tweak.  
+
+The nominal sequence was dependent upon the successful execution of the tcm at -24 hours
+AND a successful pointing update. The trajectory correction would be based on opnavs
+acquired at -36 hours or before.   If either were not successful, there was little
+chance that the the high and moderate resolution sequences would return any pictures
+of Mathilde.  As a contingency we added an observation following the multispectral
+imaging that bascially gave coverage a region the size of the uncertainties in Mathilde's 
+location if NO opnavs were acquired (basically we covered the uncertainty region associated with
+the ground-based trajectory). We opted to do it this way, that is, put this observation into 
+the nominal sequence rather than having a second separate sequence on-board, to avoid the 
+possibility of accidentally enabling the wrong sequence.
+
+Here's what happened.  Mathilde was detected tentatively in was the - 36 opnav set.
+As it turns out, the TCM was not needed ?????????????????.  
+We successfully acquired and analyzed all opnavs, performed two successful pointing updates 
+including a 9 second clock shift, and an orbit correction of about 100km. An image of 
+Mathilde was returned in all observations, including an image exactly at closest approach 
+thanks to Bill Owen's exceptional Opnav interpretation skills.
+
+
+5.2 Observation Design
+
+Shamtilly Tests - Five in-flight (on the spacecraft)  simulations were performed prior to 
+                  execution of the actual Mathilde flyby. Main purposes of these tests: perform
+                  calibrations, provide operational practice for Mathilde encounter, verify slewing 
+                  performance of the spacecraft (we put fake trajectories on-board which allowed 
+                  a realistic rehearsal of actual encounter sequence). Based on this, we tweaked 
+                  the slewing in the final sequence, solved some problems, retested sequence....
+
+                  Some text descriptions are available in the sequence directory:
+                     Sham2CanopusEnctrSeq.txt  Darks, Canopus Cal, Encounter slewing test
+                     Sham2GeomEnctrSeq.txt     Geometric Cal, Encounter slewing test
+                     Sham3Seq.txt              This was a full-up encounter simulation
+                     Sham4Seq.txt              This was a full-up encounter simulation
+                     Sham5Seq.txt              This was a full-up encounter simulation
+
+
+Opnavs- Point to mathilde, begin slow scan and take Seq 1 twice, which was 8 images spaced 2sec
+        apart, 999 ms man exp, filter 0.  Each opnav acquired 16 images while slewing slowly
+        to smear stars and Mathilde. 
+         
+            Opnav1  E- 42 Hrs 
+            Opnav2  E- 36 Hrs
+            Opnav3  E- 30 Hrs
+            Opnav4  E- 24 Hrs
+            Opnav5  E- 18 Hrs
+            Opnav6  E- 11 Hrs
+
+ENCOUNTER SEQUENCE:
+*********>>>> an imagelist exists for the encounter sequences. See MathildeImagelist.txt in Mathilde directory
+               
+
+MathildeHighPhase - Eight 3-exposure sets through filter 0 (clear) spaced 18 seconds apart. 
+
+                    This was a single scan across the ellipsoid;  lots of overlap between adjacent
+                    3-exposure sets.  At this point the ellipse was fat and collapsed as were still 
+                    looking more or less parallel to trajectory.  Eros was captured in many of these 
+                    images (all at high phase).
+
+
+MathildeHiRes1 -  One image every 2 seconds through filter 0 (clear) for duration of observation.
+                  Three manual exposures per time-step, to cover uncertainty in albedo of Mathilde. 
+                  There are 30 3-exposure sets in this strip. 
+                  
+                  This was the one chance we had at the highest resolution image. There was no time
+                  to cover the entire region, the MSI fov did not cover full width of the ellipse 
+                  in cross-track (normal to down-track direction) and the spacecraft could not slew 
+                  fast enough to scan in cross track.  We ran a single strip right through the center 
+                  of the error ellipse. The timing of this observations was such that we would be 
+                  pointed right at the center of the ellipse (most-probable location) right at
+                  closest approach.  Turns out, Bill Owen's analysis of the opnavs nailed the
+                  trajectory. We got a >95% complete global image exactly at closest approach.
+
+                  Mathilde is contained in several overlapping images near closest approach in this
+                  series of images. The diameter of Mathilde is almost exactly the width of
+                  the fov in these images at closest approach. 
+
+MathildeHiRes2 - One image every 2 seconds through filter 0 (clear) for duration of scan.
+                 Three manual exposures per time-step.  There are 18 3-exposure sets in this strip.
+  
+                 This is another single swath along the downtrack dimension of the uncertainty 
+                 ellipse. The field of view width was not yet as wide as the ellipse cross track 
+                 dimension. We veered to the side a bit to cover the edge of the ellipse.  
+                 Obtained a complete view of mathilde from this observations. 
+
+
+
+MathildeGlobal1 - One image every 2 seconds through filter 0 (clear) for duration of scan.
+                  Three manual exposures per time-step. There are 10 3-exposure sets in this strip.
+
+                  Another single swath along downtrack dimension. Now veer to the other side of the 
+                  ellipse near the center, because fov not quite covering the cross track width
+                  of ellipse.
+
+
+MathildeGlobal2 - One image every 2 seconds through filter 0 (clear) for duration of observation.
+                  Three manual exposures per time-step. There are 9 3-exposure sets in this strip.
+                  (well, actually, the last image of the last set is part of the first 5-filter set in 
+                  multispectral I)
+
+                  Another single swath along downtrack dimension. Veer to the other side of the ellipse
+                  near the center (same side as HiRes 2).
+
+
+Multispectral 1 - Still taking images once every 2 seconds but for this strip we take 15 5-filter sets. 
+                  (filters 0,1,2,3,4,5; all manual exposure). See imagelist, exposure values are changed 
+                  from set to set. 
+                  
+                  This represents another pass across the uncertainty ellipse, but the fov is 
+                  quite large now relative to the ellipse and covers more than 2-sigma crosstrack
+                  dimension. The first 13 5-filter sets were taken while slewing down the length 
+                  ellipse, the last two were taken while returning to nadir. 
+
+Multispectral 2 - Here we take several 7-filter sets, some of which have multiple exposures per
+                  filter. Images still being taken once every 2 seconds. 
+
+                  Slewing???
+
+
+No-Opnav   -      Still taking images every 2 seconds. Now we take 20 4-exposure sets (including a 999 
+                  exposure) through clear filter. Six of those are taken during the first slew, and
+                  14 are taken during the second slew (see below for slew description). 
+
+                  Before imaging began we repositioned to one end of the 'no-opnav' uncertainty ellipse.
+                  This is a large region of sky that represents uncertainty in Mathilde's location
+                  if we did not acquire any Opnavs.  We slewed across the region once (first slew) to the 
+                  other side, and then back to the starting position (second slew). 
+
+
+Satellite Search - Still taking images once every 2 seconds, we took several 7 filter sets and a long
+                   series of clear-filter images which was basically centered on nominal location of Mathilde. 
+                   WE slewed to a second position>>>>>>>> 
+                   
+6. Cruise Calibrations II
+
+
+
+
+7.0  Earth-Moon Swingby
+
+7.1  Historical Background 
+
+
+The main purpose for the Earth Swingby was to perform a gravity assist with the Earth.
+The project allowed the instrument teams to perform calibrations on the Earth and Moon during 
+the flyby.  A quick overview of the observations follows.  
+
+
+7.2 Sequence Design
+
+The spacecraft flew over the North Pole of the Earth and down across Asia, flying generally over 
+Iran, Iraq, the Persian Gulf, Saudi Arabia, and Africa, and receding from the Earth on a side that 
+allowed viewing of the South Pole and Antarctica. 
+
+   Earth I - Observations taken of Asia and Middle East. No slewing. Pointing fixed by spacecraft
+             solar panel constraints. Took pictures and spectra as boresight ground track passed over
+             these regions. 
+
+   Earth II - a. Following the Asia imaging was an Africa observation which was basically consisted
+              of a slew that took boresight north-south along southern Africa.  NIS performed 
+              mirror scans while MSI took 7-filter sets at 4 different positions along the scan.
+
+              b. After this was another MSI/NIS calibration pointed at Antarctica. 
+
+              c. Then we performed a 1.5 day Earth spin movie, targetting to the South pole of the Earth.
+                  This includes 7 scattered light cal sequences (the last taken 3 days after flyby).
+   
+    MoonI -  Set of calibrations with MSI and NIS. This interrupts the Earth spin movie for about 4 hours
+              at 23/1900.
+
+    MoonII - MSI/NIS Coalignment test. 
+
+
+The following files are available in /sequence/pre_eros/earthmoon_flyby/
+
+A laboriously detailed descriptive summary of both MSI and NIS observations: 
+      earthmoonsummary.txt
+
+The actual Earth and Moon sequences in STOL:
+      earth1seq.txt
+      earth2seq.txt
+      moon1seq.txt
+      moon2seq.txt
+ 
+A special imagelist just for the EarthMoon swingby:    
+      earthmoonimagelist.txt
+
+
+
+
+8.0 Eros Approach I and  Eros Flyover
+
+8.1 Historical Background
+
+Following the Earth Moon Swingby we performed a number of tests, and began doing approach Eros imaging
+per the original plan. These tests and approach imaging observations are described below. On Dec 20, 1998,
+Rendezvous burn 1 was attempted. It  was the biggest of the four rendezvous burns planned to slow the 
+spacecraft down relative to Eros prior to orbit insertion.  It was also the only burn that would use the 
+main engine. Approximately 1 second after the burn began, it abruptly shut down and the project lost contact 
+with the spacecraft for over a day. An intermittent signal was eventually picked up, and after hasty analysis  
+contact was reestablished. Since the burn had not executed, the spacecraft would  fly past Eros on 
+Dec 23. Project allowed a flyby imaging sequence to be built and sent to the spacecraft as this
+might be the only chance we would have to image Eros. This was done and successfully returned images of 
+Eros that improved our knowledge of the shape of the asteroid.  Prior to Eros Flyby, we were working with 
+a triaxial ellipsoid determined from ground-based lightcurves. After Eros,  Cornell produced a
+5 ??????????  degree shape model.
+
+Imaging design for he flyby was dependent on knowing the uncertainty in location of Eros, however, the size of 
+this uncertainty region for flyby was uncertain!  Navigation only had a little bit of doppler following the 
+aborted burn  to work with. The spacecraft had been tumbling.........
+off-course. Their best estimate was ??????? 
+analysis with our visualization software indicated that a 2x2 would likely cover this region through
+closest approach. Turns out this was a little less conservative that should have been.  
+
+
+
+8.2 Sequence Design
+
+SWUploadValidation - ?????   MSI DPU fix repeat thing,     
+                      g&c?   
+
+                     Sequence available
+
+SpacecraftRollTest - test related to g&c problem, no seq file available
+
+OpnavTest - 
+ 
+MonoLightCurveSeq_1a through Opnav_BPrime7 -  taken as nominal part of 
+   approach for Eros. The lightcurves and opnavs are described briefly in the spreadsheet. 
+   The lightcurves, in addition to their usefulness in refining the spin phase state of
+   Eros,  served another purpose. They would be a good test of the data flow through the SDC.
+   These Opnavs are described in laborious detail in the SequencingUserGuide.
+
+
+MSI and NIS Eros Flyby Sequences are described in:
+    ErosContingencySeq.txt (not available yet) 
+
+    Includes the following three parts.  NIS data was taken simultaneously with the MSI sequences.
+
+    a. SatSrch1_contingency - A pre-flyby satellite search consisting of a 4x4 mosaic through
+                       the clear filter, NIS data taken also. 
+
+    b. MultispecRot_contingency -  The main sequence, consisted of alternating the following two sequences
+                             1) a 2x2, 7-filters at each position, and 
+                             2) a 1x1 (single frame) also in 7 filters. 
+                            There were xx??? executions of this pair. Exactly at closest approach we
+                            put in a 4x4 monochrome sequence just in case the ephemeris was way off,
+                             (might get us one image at least of Eros).
+    c. SatSrch2_contingency - A post-flyby satellite search consisting of a 4x4 mosaic through the clear
+                          filter.
+
+
+9.0  1999 Post-Eros Flyover Calibrations and Opnavs
+ 
+
+9.1  Historical Background
+
+Following the Eros flyby sequence and the successful main-engine burn, the spacecraft was about
+a million km away from Eros and would chase it around the sun at that distance for 1 year until
+the next attempt at orbit insertion. For most of this year the science teams were allowed only
+a few calibrations in addition to some optical nav.  
+
+
+9.2 Sequence Design
+
+
+need to get design details of opnavs from  SeqUsersGuide, convert to text.
+supply separate detailed description file and link from spreadsheet
+ 
+ 
+
+10.  Approach  (tbd)
+
+
+
+
+
+
+11. Low Phase Flyover (tbd)
+
+
+
+
+12. Post-Orbit Insertion  (tbd)
+
+
+
+13.0 Orbital Mission Overview
+
+13.1 Historical Background
+
+Following the successful entry in to orbit, NEAR remained in orbit about Eros for almost
+exactly one year. At the time of orbit insertion, the North pole of Eros (which lies roughly in
+it's own solar orbital plane) was roughly pointing toward the sun, and was perpetually 
+illuminated.  The south polar region was in perpetual darkness.  As Eros (and the spacecraft) 
+proceeded around the sun in Eros' orbit for the year of the mission, the sub-solar latitude 
+gradually moved to the south, bringing perpetual darkness to the northern hemisphere, an
+full illumination to the southern pole region by late summer, 2000. 
+
+The orbital mission was divided into phases corresponding to the various orbits that were 
+achieved.  The table below (constructed with info from David Dunham and Jim McAdams on 6/21/01) 
+shows the 25 orbit correction maneuver times, which indicates entry into that orbit, and a 
+description of each orbit.  'Inclination' refers to the angle between the s/c orbital plane 
+and equatorial plane of Eros. If the number is positive it means the orbit was prograde 
+with respect to Eros' spin.  If the number is negative itmeans the orbit was retrograde with 
+respect to Eros' spin.  
+
+                           Eros Orbital Mission Overview 
+
+ Name   year   mo/day  doy   hh:mm:ss    orbit radii    inclination  period   # of orbits  
+                                              (km)         (deg)     (days)      
+ OIM     2000   2/14          15:33:05     321 x 366         35       21.8          .5   Post-Orbit Insertion A
+ OCM-1   2000   2/24          17:00:00     365 x 204         34       16.5          .5   Post-Orbit Insertion B
+ OCM-2   2000   3/3           18:00:00     206 x 203         37       10.1         2.7   200 km  North
+ OCM-3   2000   4/2           02:03:20     209 x 100         55        6.7         1.5   Transition 200x100
+ OCM-4   2000   4/11          21:20:00     101 x  99         59        3.5         3.2   100km North
+ OCM-5   2000   4/22          17:50:00     101 x  50         64        2.2         4.5   200x100 Transition  
+ OCM-6   2000   4/30          16:15:00      52 x  49         90        1.2        55.2   50km A
+ OCM-7   2000   7/7           18:00:02      51 x  35         90        1           6.6   50 x 35km Transition
+ OCM-8   2000   7/14          03:00:02      35 x  39         90        0.8        13.7   35 km A
+ OCM-9   2000   7/24          17:00:00      36 x  56         90        1.1         6.7   35 x 50km Transition
+ OCM-10  2000   7/31          20:00:00      52 x  49         90        1.2         6.7   50km B
+ OCM-11  2000   8/8           23:25:00      52 x  50        -75        1.2        14.1   50km C
+ OCM-12  2000   8/26          23:25:00      49 x 102        -67        2.3         4.4   50 x 100km Transition
+ OCM-13  2000   9/5           23:00:02     100 x 103        -65        3.5        10.9   100km  South
+ OCM-14  2000   10/13         05:45:00      98 x  50        -50        2.2         3.5   100 x 50km Transition (B)
+ OCM-15  2000   10/20         21:40:00      52 x  50        -47        1.2         3.2   50km D
+ OCM-16  2000   10/25         22:10:00      51 x  19        -47        0.7          1    Low Alt Flyover I
+ OCM-17  2000   10/26         17:40:00      64 x 203        -35        5.4         1.4   Transition to 200km
+ OCM-18  2000   11/3          03:00:00     196 x 194        -33        9.4         3.5   200km South
+ OCM-19  2000   12/7          15:20:00     193 x  34        -1         4.2         1.5   200 x 35km Transition
+ OCM-20  2000   12/13         20:15:00      38 x  34        -1         0.8        55.9   35km B
+ OCM-21  2001   1/24          16:05:00      35 x  22        -1         0.6         6.1   Low Altitude Flyover IIa
+ OCM-22  2001   1/28          01:25:00      37 x  19        -1         0.6         1.3   Low Altitude Flyover IIb
+ OCM-23  2001   1/28          18:05:00      36 x  35        -1         0.8         6     35 km C        
+ OCM-24  2001   2/2           08:51:00      36 x  36        -1         0.8         5.5   (35km, tweak for landing)  
+ OCM-25  2001   2/6           17:43:56      36 x  36        -1         0.8         5.4   (35km, tweak for landing)
+ OCM-25  2001   2/12          19:46:02      down to 6       -1  to 36  0.8-0.3     7.8    Descent
+ to surface                 (time s/c landed)           
+  total # orbits   =  233 
+
+
+Please check out the eros_orbital_info.txt file in the /eros directory. You can see the effects of
+the inclination of the orbits and a variation in the sub-s/c latitude. 
+This is useful in understanding how the observations were planned and scheduled.
+
+In order to simplify operations for the mission overall, pointing control was given to individual instruments 
+for long periods of time (one or more orbital phases).   MSI/NIS  was in control for the approach, low phase
+flyby,  all high orbits (200km, 100km circular and most transitions),  the two low altitude flyovers, 
+and the landing. There were two periods of high orbits. The first was just after orbit insertion 
+(March, April) when the north side of Eros was illuminated and provided global views of that hemisphere 
+of Eros.  The second was in in the fall (Sept, Oct, Nov) when the south side was illuminated.  During 
+the main part of the spring and summer the s/c was in the 50km orbits. NLR had control the first two 
+weeks of the 50km A, and XGRS was in control for all of the remainder of 50km orbits. In addition, 
+XGRS controlled pointing during 35 km B and C.  Navigation and gravity requirements imposed pointing control
+on the 35km A. Imaging data was taken opportunistically for that orbit.  Optical navigation sequences 
+were taken on a daily basis throughout the year. MSI designed and commanded those sequences based on inputs 
+from NAV. 
+
+
+The observation planning process complicated by many uncertainties. Dominant factor is that we did not know
+what the navigation uncertainties really were.  ........ more on this...... 
+orbit updates, in beginning did not use much abf. 
+began introducing it in 200km orbit actually, 
+
+In general planned for reasonable amount of success, with backup observations here and there in case of problems 
+
+
+
+13.2 Conventions and Terminology - 
+
+
+- Diagram of MSI field of view with s/c x,y,z axes shown. 
+
+       <---- 2.9 deg --->
+ ---------------------------------                     ^ +y
+|(0,0)           s/c +y          |                     |
+|              ^                 |  ^                  |
+|              |                 |  |                 ---  
+|              |                 |  |                 | |
+|              o--------> s/c +z |  2.25deg           | |------>+z   NIS Fov - .76 deg x .38 deg
+|         s/c +x into page       |  |                 ---
+|                                |  |                   Mirror position 75 approximately at center of MSI
+|                                | \/                   Mirror motion in +/- z direction  mp 40 <---------> mp300 ?????
+|                      (244,537) |                      NIS Fov - .76 deg x .38 deg
+----------------------------------
+                     (Line,Sample)
+
+
+MSI Filters 
+filter 0   broadband
+filter 1   550 nm
+filter 2   450 nm 
+filter 3   760 nm
+filter 4   950 nm
+filter 5   900 nm
+filter 6   1000 nm
+filter 7   1050 nm
+
+
+mosaic sizes - given as column x row
+
+emission -  the angle between surface normal and direction to s/c
+
+incidence -  the angle between surface normal and direction to sun  
+
+phase angle -  the sun/target/spacecraft angle
+
+eros spin period - 5.27 hours
+
+effective spin period - term used in this document to describe how long until same longitude 
+                        reappears below s/c (it's the sum of combined effects of eros spin and 
+                        orbital motion). When in prograde orbits the effective spin period is
+                        > 5.27 hours. When retrograde it's < 5.27 hours.
+
+sub-solar latitude - Draw line connecting Eros center with sun. This is the latitude where that line
+                     pierces surface.
+sub-spacecraft latitude - Draw a line connecting Eros center with spacecraft. This is the latitude  
+                          where that line pierces Eros surface. 
+
+orbit inclination - Angle between orbital plane and equatorial plane of Eros. When the pole of Eros was more
+                    or less pointing to the sun (beginning and end of mission, the most stable as well as
+                    the ones that would give lowest sun angles on the panels were nearly equatorial. 
+                    The high orbits were deliberately inclined to the equator so to give science better
+                    (lower emission) views of the illuminated territory.  When in any inclined orbit, 
+                    say 100km circular, for half of the orbital period the spacecraft has  sub-spacecraft 
+                    latitudes that are in the northern hemisphere, and for half the sub-s/c latitudes are 
+                    in the southern hemisphere.   Each latitude on Eros within the 
+                    range of the inclination is viewed twice during the orbit.  Once when the spacecraft is 
+                    heading 'north' in the orbit, and once when the spacecraft is heading 'south' in the orbit. 
+                    Because of Eros' irregular shape, and the fact that the pole was never pointing directly
+                    at the sun, the viewing of Eros is VERY different at the same latitude on different sides 
+                    of the orbit. It was therefore important to distinguish between the two cases with 
+                    respect to observation scheduling. In the various tables that describe 200 and 100 km 
+                    observations, when the s/c was on the side of the orbit going north, I denote this by a 
+                    (N), not to be confused with northern latitudes. Similarly, when on the south-going side I used
+                    an (S).  Examples: 1) +35(S) means the observation was acquired when the sub-spacecraft
+                    latitude was +35 (or 35 North), but on the side of the orbit that was descending to
+                    more southerly latitudes.  2) -20(N) means the observation was taken when sub-s/c latitude
+                    was 20 South, but on the side of the orbit that was heading north.
+
+
+asteroid body-fixed coordinate system -  ABF
+
+This describes the 'right-handed' abf system used to target to Eros features during the mission.
+A uniform use of this coordinate system was esablished among various parts of the project 
+including MSI team, NAV team, G&C, and ops. 
+
+Important NOTE*** The scientists generally use West longitude when quoting lat/lons on 
+                   the surface. This is not a right-handed system. Note that the +y in
+                   the abf system is at +90 East longitude which = 270 W longitude.
+                      
+                           concave  side of Eros
+         ---\           paw            /----\
+       /      -- \     (90W)       /          \ 
+      /            --------------              \  
+      |                                        |                 
+Prime \ +X <-----------o Npole(+Z)           /
+Meridian\              |    out of page     /
+          \            /-\                /
+            \----------|   ----------/
+                       |
+                      \/+y  = 90Deg East lon             
+                     convex side of Eros with saddle at 270w        
+
+
+
+
+13.3  Sequence Design 
+
+I want to take a minute to talk about some general sequence design info that will apply through most of the
+orbital mission.  These are generalizations that apply to 90% of the imaging, I will point out places where there 
+are deviations.
+
+Monochrome Imaging in Orbit - 
+
+In general, there were multiple overall science objectives to satisfy with the monochrome imaging throughout 
+the mission.  One objective was to obtain a low emission angle base map at each resolution. Another was to obtain 
+good stereo coverage at reasonably low emission angles.  Good viewing for morphology was moderate
+emission (<50) and moderately high incidence (want shadows)??????. This was consistent also with Opnav desires. 
+The monochrome imaging objectives were fairly easy to meet throughout the mission given the fact that 
+spacecraft solar panel design forced us into orbits that flew generally above the terminator.
+
+In orbit, one could divide the monochrome imaging into two general types: 1)movies and 2)mosaics. 
+
+1) Movies, flyovers, and feature tracks are observations where the camera is not slewed quickly,
+but many images are taken with short spacing in between. The frame-to-frame overlap is generally
+very high (>80%).  If you string them together, it looks like a movie.  
+
+2) Mosaics are observations where we slew quickly from position to position with images timed to give 
+frame-to-frame overlap of about 15-20%  to give a snapshot of a region (or global view) of Eros. 
+
+where to see mosaic designs? how to figure them out? seq guide?
+
+Monochrome mosaics of the type described here include the monochrome opnavs, any  global mosaics, daily 
+globals, low emission observations, lonscans, periapse observations, 2x2s, 3x3s, etc. 
+
+Almost all of the above named monochrome mosaics are of the 'slewing' type. This means we did not stop at each
+position along a column or row, but took the pictures along the way while slewing. Slew rates were slow
+enough to keep smear under .5 pixel usually for the estimated exposures. Reasons for this approach include
+commanding constraints, time efficiency (reduce distortion due to Eros rotation) and also to help make slewing 
+more compatible with NIS needs.   About 90% of the mosaic patterns slew along the column directions, and 
+reposition to the adjacent frame in adjacent column (not back to the original starting side of the column). 
+Slewing is resumed along the new column in the reverse direction.  This was done  because it was the most 
+efficient way to cover territory due to the rectangular shape of fov, and also because cooperative NIS 
+observations could be performed if the slewing was continuous in the y direction. The NIS mirror scans in 
+the z direction, and by slewing in y we could stack mirror strips in y direction as the scan progresses. 
+
+*** gif diagram of NIS scans and MSI fov together, tbd
+
+A few notable exceptions where we scanned in the z direction include some of the lonscans in 200km orbit, 
+and some of the global mosaics in the 100km (in the 'Periaps' series). These will be noted later. But for 
+everything else, you can usually assume that the scanning goes in the column direction, repositions occur in 
+the row direction. 
+ 
+Mosaics did not always start in the same corner.  There is a numbering scheme that was occaisionally used 
+where 1 = starts in upper left, 2 = starts in upper right, 3 = starts in lower right, 4 = starts in lower 
+left corner of the mosaic.  The reason for starting in different corners had to do with minimizing pull apart 
+caused by rotation of Eros during the mosaic. If the tip (a nose) of Eros landed on two frames of the same row, 
+but not at the side where the reposition occurred, there could be a 6 or 8 or more minute time difference 
+(approximately equivalent to same number of degrees of rotation)  between when those two frames were taken.   
+Usually one of the four possible mosaic patterns minimized the pull-apart.  
+
+Diagram of 4 3x3's starting in different corners:
+
+1) |    ^---->|   2)    <-----^     |   3) ^    <----^     4)  ^---->    ^
+   |    |     |         |     |     |      |    |    |         |    |    |
+   |    |     |         |     |     |      |    |    |         |    |    |
+   |    |     |         |     |     |      |    |    |         |    |    |
+  \/--->|    \/        \/     <----\/      <----\/   |         |    \/--->
+
+
+There was also an alphabetical naming scheme for mosaic sizes of the type being described here.
+You'll see this in the Opnav names for the 200km orbits. 
+
+
+   colxrow
+D = 2x2
+F = 2x3                                 So, for example, an Opnav_Q3 is a 3x5 (3 columns, 5 rows)
+G = 3x2                                  that starts in lower right corner, goes up, repositions
+H = 3x3                                  left, goes down, repositions left again, goes up for 
+I = 2x1                                  final column.
+J = 1x2
+L = 3x4
+M = 4x3
+N = 4x4
+O = 4x5
+P = 5x4
+Q = 3x5
+R = 2x4 
+
+Slew rates were usually on the order of .03-.04 deg/s.  To simplify image commanding we used different rates for 
+column vs.  row slews in order to keep time between all images in the mosaic constant, that is, repositions as 
+well as slews along columns. Time between images is usually, but not always 62 sec. This was the timing which 
+corresponded to rates that gave a reasonably low smear for the worst exposures throughout the mission, and 
+which gave about 15% overlap in each direction.   
+
+Almost all of the monochrome imaging during orbital phase was taken through filter 4. This filter had the
+least amount of smear due to scattered light.
+
+
+
+Color Imaging in Orbit
+
+It was a challenge to get good viewing angles for color imaging during this mission.  The best color imaging 
+requires low emission and low incidence. This was a difficult task given that we were essentially in orbits  
+that more or less flew above  the terminator throughout the mission. (cheaper, faster) 
+Where emission angles were low (<20), meaning viewing was directly down at the surface, incidence angles were 
+always very high (>70), meaning low sun. We did the best we could. Sometimes we went for very low incidence (good
+signal) and took higher emission, sometimes we tried to balance the two with  moderately low emission, moderate
+incidence. Color imaging at high incidence (which always came with very low emission) was worthless. 
+
+Almost all of the color imaging in orbit at Eros was 'cleaned'. This means for each filter in the sequence,
+a zero exposure was taken in addition to the normal exposure. Purpose for these zero exposures was
+to facilitate removal of effects of scattered light due to crap deposited on the optics during the Rend 
+Burn1 abort anomaly.  Due to sequencing constraints, we took all the autoexposures first (through what 
+ever different filters were being used) , they were followed by the set of zero exposures through all
+of the filters. One additional zero exp. image was taken at the end so the filter wheel was moving during 
+shutter of the previous zero exp (last filter).  So for a 3-filter set, you'll first see the 3 filters 
+that were the regular auto exposures, then a set of 4 zero exposures (3 through the matching filters, 
+plus one at the end to move the filter wheel during the readout of the last.. to make it consistent with 
+filter movement in the final frame of the autoexposure set).
+
+
+At some point during the year we began to do cleaned
+manual exposures.... for the clean movies............???????
+
+ 
+The design of the color mosaics was such that we tried to STOP at each position in mosaic pattern.
+Thanks to Matt DeMartino, an undergraduate working with us in 1998, who came up with a very clever
+use of the DS56 to make certain shapes of mosaics where we could stop at each of the positions long
+enough  to take all autoexposure and zero exposure exposures through the various filters thus reducing
+problems of co-registration and smear (some of the longer wavelength filters had very long exposures).
+These were different from the monochrome mosaics in that these ARE in a zig-zag pattern.  
+
+Diagram, typical 2x2 start-stop mosaic: 
+
+
+     1    3
+
+     2    4
+             
+             
+We also did 3x2's and 2x3's:
+
+1  3  5          1   2
+
+2  4  6          3   4
+             
+                 5   6
+
+
+These did not necessarily all start in the upper left corner, but the designs were all of a zig-zag type.
+
+                      
+
+
+14.0  200 km Orbit - North
+
+
+14.1  Historical Background
+
+
+Primary goal for MSI/NIS in the first 200km orbital period was to obtain color and monochrome global 
+coverage of the northern hemisphere of Eros. And that we did, in tremendous quantities!  This was the lowest 
+orbital radius at which a global mosaic could be obtained quickly enough so that distortion due to Eros 
+rotation was not a problem.  This orbit was inclined 37 deg to the equator of Eros, with a spacecraft orbital 
+period of 10.1 days (we were in this orbit for 2.7 orbital periods).   The sub-solar latitude was about +43
+meaning the northern hemisphere was entirely illuminated, and the south polar plateau was in perpetual darkness.
+Roughly half of each orbital period was spent looking at Eros from lower phase angles (mostly lit  Eros), and half was
+spent at higher phase angles (mostly dark). The highest sub-s/c latitudes would be 37 deg North and the lowest 37 
+deg South.  Checkout the orbital_overview.txt file in the main directory and and watch the sub-s/c latitudes 
+cycle up and down over the orbital period.
+
+
+                                     /
+                                    /  37 deg
+                         --------- E-------         orbital plane
+                                  /
+                                 /
+                                eros' equatorial plane, spin pole is normal to this plane, but I can't draw it in ascii
+ 
+need gif file!!!!!!!!
+
+
+Eros shape is far from the  triaxial ellipsoid we used in the pre-flyby planning. It is shaped a little bit like a 
+bent yam, except with many bites and facets. The random orientations of these facets made it a challenge   
+to satisfy the various viewing requirements for the different imaging objectives on each and every facet.  
+How and when to get the best viewing angle combinations for a given objective was a  function not only of 
+Eros spin orientation but ALSO the spacecraft orbital position.  
+
+Sub-spacecraft latitude in the orbit determined generally what parts of Eros could be viewed at lower emission. On 
+the northern part of the orbit, we could see the northern latitudes at low emission. On the southern part of the 
+orbit, we could see the southern latitudes (those that were illuminated) at low emission.  In reality, very low 
+emission views (<20 deg or so) only occurred in a narrow band of about 15 deg of latitude on Eros surrounding the 
+sub-s/c latitude.  The incidence was never very good on the southern latitudes in this part of the mission, but it 
+was the best and only time to get low emission and reasonably low incidence on the northern hemisphere. 
+With all of that said, I'll add that good incidence on the northern was not a given. It very much depended on 
+whether we were heading north in the orbit (sub-s/c latitudes increasing with time), or going south (sub-s/c
+attitudes decreasing with time).  Using the below quadrant diagram, for the most part I found that on the ascending 
+part of the orbit quadrants I and III were more viewable than II and IV (which were generally shadowed). On the 
+descending part of the orbit, the reverse was true, better viewing of II and IV, worse viewing of I and III. 
+To get complete coverage of any latitude band required imaging the same latitudes on both sides of the orbit 
+(descending and ascending). 
+
+
+
+
+
+                           concave  side of Eros
+         ---\           paw            /----\
+       /      -- \     (90W)       /          \ 
+      /   II       --------------     I        \  
+      |                                        |                 
+Prime \ +X <-----------o Npole(+Z)           /
+Meridian\              |    out of page     /
+          \  III       /-\        IV      /
+            \----------|   ----------/
+                       |  saddle
+                       |
+                      \/+y  = 90Deg East lon             
+                     convex side of Eros with saddle at 270w        
+
+
+ 
+Eros has a flat northern plain, a concave western hemisphere (including Psyche), and a relatively convex eastern 
+hemisphere with a huge dent (the saddle). The sequence designs were distributed throughout the orbit in 
+such a way as to take advantage of viewing available from different parts of the orbit.  Eros changing view was 
+dominated by its spin. During the first part of the mission the s/c was in a prograde orbit. Therefore the effective 
+spin (time it takes for same longitude to come below again) was a little larger than the actual spin period.
+It varied slightly throughout the 200km orbit but was generally a little less than 5.5 hours.  We usually planned 
+observations that were intended to cover one full effective spin in 5.5 hour time slots.
+
+Another little obstacle to planning of the 200km observations was that there was uncertainty in mass at the time 
+we were planning the 200km observations, getting DSN coverage, etc.  We built 3 sets of observations, one for 
+each of a high, nominal and low mass case.  Different mass would result in different orbital period if radius 
+is held constant.  We requested that nav hold radius constant and vary the orbital period. This way we could
+build template mosaics that would cover Eros in different orientations and be able to count on the planned-for radius.  
+This process held throughout the mission. 
+
+
+
+14.2 Sequence Design 
+ 
+
+200km NORTH MONOCHROME SEQUENCES: 
+-----------------------------------
+
+Opnavs -  Three opnav sequences were taken during each day of the 200km orbit. Usually they
+          were scheduled as follows: one following end of playback track, one just before the
+          next playback track, and one in the middle somewhere.  Each opnav sequence consisted
+          of a monochrome global mosaic whose shape was tailored to the view of Eros at the
+          time of the observation.  See the OpnavDescription.txt file. 
+          
+Daily Globals - Once each day, usually right after the end of the playback, and right before
+                the first opnav, we put in a monochrom 4x4 global mosaic of Eros. These were
+                supposed to be a backup for opnavs in case the pointing degraded for some reason.
+
+
+
+Globals - Only one set of globals in the 200km North orbit:
+
+
+    South Globals - This is a series of global mosaics taken of Eros over a 5.5 hour period at a time when
+                    the sub-spacecraft latitude was -35 deg on the south going part of the orbit.
+                    (66/0300)
+
+Lonscans -    
+
+These were intended to and did return large amount of monochrome (filter 4) stereo coverage of Eros . The idea,
+of a 'lonscan', short for 'longitude scan' was to take a strip of images which covered roughly a longitudinal region
+of Eros, let Eros rotate beneath until a new longitudinal area becomes visible and then take another strip.... repeat 
+for a whole spin period.  As mentioned before, the view of Eros varied considerably depending on what part of 
+the orbit we were in. At high latitudes in the orbit, I mean, when the sub-s/c latitude from orbit was high
+on Eros either north or south,  Eros was elongated in a diagonal direction to the MSI frame.  At equatorial latitudes
+Eros would extend in a horizontal direction (easier to image). This meant that the mosaic design had to be  different 
+depending on the sub-s/c latitude.  For most of the different latitudes within the orbit , we could cover most of Eros 
+with about 6 to 8 frames in a rectangular mosaic.  By looping this pattern continuously for a little more than one 
+effective spin period we could get a great deal of stereo coverage at one orbital view. We performed these 5.5 hour 
+observations at many places throughout the orbit.   Below is a summary table of the lonscans in the 200km North 
+orbital period.
+
+In the table, the column (lat) tells where in the spacecraft orbit this observation was performed. For example, 
+NorthEquatorialLon1 was acquired when the spacecraft was in the part of the orbit that was looking down 
+at about 12 deg North latitude. This lonscan will return fairly low emission views of the north equatorial
+region of Eros. The (N) means we were on the ascending part of the orbit (north-going). We lost the companion
+(S) south-going lonscan at that latitude, but we got one at about 0 latitude (EquatorialLon4). 
+
+I tried to schedule these lonscan observations in pairs (one going north, one going south) for 6 different latitude
+regions: north pole > 30, north equatorial 15-30, equatorial -15 to 15, south equatorial -15 to -30, and south 
+pole <-30.  The type of mosaic used was a function of how Eros looked throughout it's 5.5 hour spin period at these different 
+viewing opportunities. In the equatorial part of the orbit, Eros pole lies  roughly in the plane of camera field of view,
+and a looping horizontal mosaic covered Eros throughout the spin period. At higher latitudes in the orbit, the view of
+Eros elongates in a diagonal direction relative to the frame. In this case, 2x4s were better, but it was  difficult 
+to capture the whole thing mosaic throughout the spin period. Some little edges slop out of the mosaic. 
+But this is okay, because complete coverage was not the main objective. The objective was to get good stereo on parts 
+of the asteroid that were med to low emission.  We did not have enough time or sequencing uplink bits to build separate
+mosaics tailored to each view. Also, that would have made these observations less transportable and more sensitive
+to downtrack errors. I will mention that there is one north polar lonscan, NPolarLon3, that 
+does get complete coverage throughout.  This had a special asteroid body fixed circular slewing regime that follows the 
+spin of Eros.  If you want a complete coverage mosaic movie of the northern hemisphere, that's the one to look at.
+
+
+
+
+                                200km NORTHERN LONSCANS 
+                                -----------------------
+
+  week     observation        sub s/c  start time   mosaic      coverage
+                              latitude            (colxrow)
+
+ 00066   NorthPolarLon1         +37(N)   70/1800     2x3 repeating mosaics 
+ 00073   NorthPolarLon2         +33(N)   80/0230     2x4 repeating mosaics
+ 00087   NorthPolarLon3         +36(S)   91/0715     2x8 rotating diagonal mosaics, gives complete coverage through 1 rotation       
+
+ 00066   NorthEquatorialLon1     +12(N)  68/1900     3x2 repeating mosaics
+ 00066   NorthEquatorialLon2     +27(S)  72/0125     3x2 repeating mosaics
+ 00087   NorthEquatorialLon3     +25(N)  89/0700     6x2 repeating mosaics, lots of overlap    
+
+ 00066   EquatorialLon1         -7(N)    67/2242     3x2 repeating mosaics
+ 00073   EquatorialLon2          0(N)    78/0730     4x2 repeating mosaics
+ 00080   EquatorialLon3        -10(S)    83/2236     6x2 repeating mosaics, lots of overlap
+ 00094   EquatorialLon4          0(S)    99/2355
+
+ 00080   SouthEquatorialLon1    -25(S)   84/1316     2x4 repeating mosaics
+
+ 00073  SouthPoleLon1          -36(S)    76/0600     2x4 repeating mosaics
+ 00080  SouthPoleLon2          -30(N)    86/2353     2x8 repeating mosaics, lots of overlap
+
+
+
+
+ 
+Flyovers -    These are essentially monochrome movies. We point to Eros, perhaps scan slowly, and take 
+              pictures frequently. I tried to distribute these to cover as much of Eros as possible, collectively.
+
+                 sub-s/c lat                    longitude coverage:
+00066    Flyover1    -27(N)     67/0300 - 0445  lat-16, lon 198 to 306  III plus saddle
+00066    Flyover2    -12(N)     67/2125 - 2235  lat 0, lon 353 to 64    I 
+00073    Flyover3    -32(S)     75/0630 - 1125   all way around, south lats (S) (orbit going South)
+00073    Flyover4    +13(N)     79/0300 - 0700   I and IV in northern hemisph
+00080    Flyover5    +36(S)     81/0840 - 0950   North pole
+00080    Flyover6    +36(S)     81/1100 - 1210   North pole
+00080    Flyover7    +29(S)     81/2327 - 0500   all way around at mid north (S) (going South)
+00080    Flyover8     +5(S)     83/0730 - 1300   all way around  equator (S)  (orbit going South)
+00080    Flyover9    -30(S)     85/0500 - 0630   Psyche        *LOST
+00080    Flyover10   -30(S)     85/0755 - 0903   saddle        *LOST
+00080    Flyover11   -35(N)     86/0755 - 0935   Psyche        *LOST
+00087    Flyover12   -10(N)     88/0130 - 0651   all way around, south equator (orbit going North)
+00087    Flyover13    -6(N)     88/0700 - 1319   all way arund , high north (orbit going North)
+00087    Flyover14   +13(N)     89/0240 - 0628   ride with nlr pointing
+00087    Flyover15   +37(S)     91/0155 - 0715   south polar region
+00087    Flyover16   +29(S)     92/0050 - 0616   goes all over the northern hemisphere
+00087    Flyover17   +25(S)     92/0635 - 1202   goes all over the northern hemisphere
+00087    Flyover18    -7(S)     93/2051 - 0100   ride with nlr pointing
+
+
+Feature Tracks - The feature tracks differ from flyovers in that we point to a feature on Eros, and hold the pointing 
+                  on that feature. Idea is to watch this feature for as long as possible as viewing angles change.
+
+73    FeatureTrk2           -32(S)     75/0310 - 0600   lon 160  (II)
+73    FeatureTrk3           -25(N)     77/0600 - 0730   saddle
+80    FeatureTrk4           +25(S)     82/0600 - 0725   IV - going South   
+80    FeatureTrk5           -30(S)     85/0131 - 0330   Psyche     
+80    FeatureTrk6           -30(S)     85/0330 - 0430   lon 0 nose
+87    FeatureTrk7           +30(S)     90/0110 - 0630   lon 0 nose
+87    FeatureTrk8           +30(S)     90/0630 - 1240   lon 180 nose
+
+
+
+
+
+200km NORTH COLOR OBSERVATIONS:
+---------------------------------
+Four or seven filter sets were taken at STOPPED positions in scanning mosaics. I tried to point to
+and cover facets of Eros at times when the lowest emission for moderately low incidence viewing was available.  
+How to interpret the table below, using the following line as example:
+
+66*  (7f) HighNorth (x6)  A  +37(S)  71/0110  
+
+This means a series of 6 mosaics were taken at a time in the orbit when the sub-s/c latitude was 
+about +37 (or 37North). The (S) means that this was during the part of the orbit that was descending 
+(heading southward) .  Slewing was stopped at each position in each
+mosaic to acquire all filters in the set (in this case 7 filters were taken) and the zero exposures.  
+
+Quite a few of the color observations in this orbit were lost due to a s/w bug that occaisionally
+caused the spacecraft to abort the science sequence when doing an MSI_DoubleRepeat, or MSI_Triple
+Repeat  CAS (this is how color observations were originally commanded). This list only shows the 
+sequences for which we acquired data.  
+
+                         200 km Latitude Scans 
+                         ---------------------
+
+66*   (7f) NPolarLat1          +38(N)  69/2349  16 7filter sets at same off-nadir position near North pole
+80*   (4f) NPolarLat2          +36(S)  81/0310  9 4filter sets on each nose, a little away from the North pole
+
+66*    (7f) HighNorth (x6)  A  +37(S)  71/0110 good coverage of all longitudes 
+73*    (4f) HighNorth (x9)  B  +35(N)  80/0800 good coverage of all longitudes 
+
+
+66*     (7f) Mid-North (x4)  A  +22(N)  69/0850
+66*     (7f) Mid-North (x4)  B  +21(S)  72/0750 
+73*     (4f) Mid_North (x5)  C  +20(N)  79/0900   
+
+
+66*  (7f) Equatorial  (x4)   A    9(S)   73/0045    
+73*  (4f) Equatorial  (x5)   C   -6(N)   78/0300  
+87*  (4f) Equatorial  (x4)   D     (S)   93/1500   
+
+
+
+15. 100x100 NORTH
+
+15.1 Historical Background
+
+15.2 Sequence Design
+
+
+
+
+16. 50km A (north)
+
+During the first two weeks of this 50km orbit period, the NLR team was in control of pointing
+for all observations except opnavs. Most of the observations were pointed to nadir. MSI performed
+
+
+
+
+
+
+Periapse Observations -     attempt at global coverage  during first
+      op nav very interested in getting global v
+
+17. 35km 
+
+
+18. 50km B and C
+
+
+19. 100km South
+
+This is the second period we spent at 100km. Allowed us to get southern latitude coverage that was not
+possible during the first 100km period. 
+
+
+Same observation types as first time around.
+                                lat
+
+LonScan_250a  250/1720 - 2251   +11(S)  
+
+20. 50km D
+
+21. Low Altitude Flyover I
+
+
+22. 200km SOUTH
+
+
+
+ 
+200 km orbit II plan                   
+----------------------
+
+
+
+                 MONOCHROME
+00304   Lonscan_4x2_309   309/0630           -11  going north
+00311   Lonscan_4x2_315   315/0605           -15  going south
+00311   Lonscan_2x4_312   312/2125           +30  
+
+00332   HighSouthGlobals  335/2000           -30  
+00332   MidSouthGlobals   337/0615           -15  going north (need to get views that Lonscan_309 didn't get)
+	MidSouthGlobals   334????            -15  going south (need to get views that Lonscan_315 didnt' get)
+        EquatGlobals      342????             0   going south   
+00318   EquatGlobals      319/1400           -3   going north
+00325   MidNorthGlobals   329/1200           +18  going north
+        MidNorthGlobals   in 00339?          +15  going south
+00318   HighNorthGlobal   321/0930           +32   
+00325   HighNorthGlobal   331/0815           +32  
+
+00304   Flyover_306        306/1400 -        -28 going south    full rev near pole 120seq30(162 sec) 
+                                                                  (100km range)
+00332   Flyover_334        334/0600          -18 going south   (full rev)
+00311   Flyover_314        314/2100 -        -7  going south    half rev 120seq 30(82 sec) -x hem so of eq
+00332   Flyover_338a       338/0335          +4  going north    full rev - 420 seq 30 (48 sec)
+00332   Flyover_333        333/0100          +7  going south    half rev, 3-color
+00304   Flyover_310        310/0825          +11 going north    116 seq 30 (30 sec)   south paw
+00318   Flyover_323        322/0330          +15 going south    full rev 
+00332   Flyover_338b       338/2300          +19 going north    full rev  
+00318   Flyover_320        320/0820          +22 going north    full rev 300 seq 30 (
+00304   Flyover_311        311/0645 - 1210   +27 going north    full rev - 1000 seq 18 (19 sec) 
+00304   Flyover_311b       311/2200          +32                full rev (ptd nadir, misses noses) 
+00318   Flyover_322        322/0650          +30                250 seq 30 (
+00311   Flyover_311b       311/2200 - 0230   +33                190  seq 9  (82 sec)
+
+00318   FeatureTrack_320   320/1538 - 1838   +26                180 seq 18 (60 sec) on -x nose
+
+           ------\     paw        -----\
+        /        -- \          /         \ 
+       /    II        ----  -/     I       \  
+      |                    
+      \                Spole -------->+x   /
+        \  III                   IV      /
+          \                           /
+            \------------/\----------/
+                       saddle
+
+
+                          COLOR (everything 7 filter)
+
+
+means of commanding changed, no longer auto eposure 
+
+
+naming scheme different here than in first 200km.
+
+00311   SoPoleLatscan_316  316/0625 -        -30          25 7f sets on south pole at low emission position (1 full rot) 
+00325   SoPolenadirlat     326/0440          -30          13 7f sets near nadir  (1 full rot) 
+
+00332    MidSouth _335a    335/0750          -31(S)        2x2+1 of II/III nose 
+                   335b                                    2x2+1 of IV/I nose (HIGH incidence!)
+
+00332              336a    336/0440          -31(N)        2x2+1 of south pole area
+                   336b                                    2x2+1 of south pole area
+                   336c                                    2x2+1 of south pole area
+
+
+00318   Mid/HiSouth_325a     325/0740      -20to-28(S)     2x2+1 of III, ridge to pole 
+                    325b                                   2x2+1 of IV, sadd, whole south
+                    325c                                   2x3 of whole, IV best
+                    325d                                   6x1 of paw side ridge
+                    324e                                   2x2+1 of paw side and pole       
+                    324f                                   2x2+1 of paw side and pole        
+
+00325   Mid South 327a     327/           -20to-15(N)     2x2+1 of III and west sadd wall 
+                  327b                                    2x2+1 of III and west sadd wall
+                  327c                                    1x6 saddle side ridge
+                  327d                                    1x4 ridge but IV in front          
+                  327e                                    2x2+1 of paw side (I and II)          
+                  327f                                    2x2+1 of paw side (I and II)         
+
+00311   MidSouth_318a      318/0130          -21(N)      2x2+1 of paw side (I and II) very good
+                 318b                                    2x2+1 of III  (great!!)
+                 318c                                    2x2+1 of east saddle wall, and IV oblique  
+
+
+
+
+00318   Equat_324a         323/2330 -        -0(S)     9x1 of III (scan nose I to sadd)
+              324b                                     5x1 of IV (scan sadd to II nose)
+              324c                                     6x1 of II paw side
+              324d                                     4x1 of I paw side
+
+00332   Equat_333          333/0555          +2(S)    2x2+1 of -x nose from the side
+          
+00318   Equat_319a         319/0040           0(N)     5x1 of III 
+              319b                                     3x1 of west saddle wall   
+              319c                                     3x1 of  IV/I nose
+              319d                                     4x1 of  paw side
+00325   Equat 328(7colorpaw)328/1930         +4(N)     8x1 scan across paw side 
+                 (7colorsaddle) 1730                   8x1 scan across saddle side
+
+00332   Equat 337a        337/1700           -5(N)   2x2+1 of II/III nose
+              337b                                   2x2+1 of saddle side
+              337b                                   2x2+1 of saddle side
+
+00325   MidNorth           332/0715          +14(S)   13 7f sets lat scan (full rotation)
+00311   MidNorth_313       313/1730          +17(S)   1  2x2+1  of saddle 
+         
+
+00325   HiNorth(colortarg) 330/0750          +30                4 7f feature tracks (6x1 on 3, 4x1 on one) 
+         (put more of these in 00339)
+
+
+
+
+23. 35 km B
+
+
+
+24. Low Altitude Flyover II
+
+
+25. 35 km C
+
+26. Landing
+
+
+   

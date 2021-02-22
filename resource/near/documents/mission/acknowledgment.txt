@@ -1,0 +1,14 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT              = TEXT                                                    
+  PUBLICATION_DATE  = 1998                                                    
+  NOTE              = "JHU/APL Technical Digest Permission"                   
+END_OBJECT          = TEXT                                                    
+                                                                              
+END                                                                           
+                                                                              
+The contents of the "NEAR Overview" and "The NEAR Command and Data Handling   
+System" were reprinted with permission from Johns Hopkins APL Technical       
+Digest, Volume 19, Number 2,(April--June 1998). The Johns Hopkins University  
+Applied Physics Laboratory.                                                   

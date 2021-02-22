@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>SBN Reference BELTONETAL1992</title>
+
+<!-- 
+########################
+ALL of the head, style links, header and menu code is in the include. Edit that file with extreme care!!
+########################
+ -->
+
+<!--#include virtual="/css-n-includes/incl_top.inc"-->
+
+<!-- ################################################ LEFT SIDEBAR ########################################## -->
+
+<!--#include virtual="/css-n-includes/incl_left-side.inc"-->
+
+<!-- ################################################ MAIN ################################################## -->
+
+<div id="centerwide">
+
+<a name="mainContent"></a>
+<!-- ************************************************** You may begin editing! ************************************************** -->
+
+<!--
+===========================================================================
+EDIT HISTORY:
++ 2011-08-22 EMW	converted to xhtml, updated to new look
+===========================================================================
+-->
+
+<h1>BELTONETAL1992</h1>
+
+<p>Belton, Michael J.S., K.P. Klaasen, M.C. Clary, J.L. Anderson, C.D. Anger, M.H. Carr, C.R. Chapman, M.E. Davies, R. Greeley, D. Anderson, L.K. Bolef, T.E. Townsend, R. Greenberg, J.W. Head III, G. Neukum, C.B. Pilcher, J. Veverka, P.J. Gierasch, F.P. Fanale, A.P. Ingersoll, H. Masursky, D. Morrison, J.B. Pollack, The Galileo Solid-State Imaging Experiment, Vol. 60, p. 413-455, Space Science Reviews, 1992.</p>
+
+<!-- ************************************************** End editing! ************************************************** -->
+<!--#include virtual="/css-n-includes/incl_bottom.inc"-->
+<br />Last updated: <!--#config timefmt="%A %B %d, %Y"--><!--#echo var="LAST_MODIFIED" --></div><!-- close id whotext -->
+
+</div><!-- close id footer -->
+</div><!-- end id footwrap -->
+
+</div><!-- close wrapper -->
+
+</body>
+</html>

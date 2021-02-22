@@ -1,0 +1,237 @@
+PDS_VERSION_ID                    = PDS3                                      
+RECORD_TYPE                       = STREAM                                    
+LABEL_REVISION_NOTE               = "15 Apr 2002, A.C.Raugh: Creation         
+    10 Dec 2003, acr: minor editing to remove problematic keywords            
+    14 Mar 2004, T.L.Brown: Added 2 alternate target objects for              
+                 Eros & Mathilde."                                            
+                                                                              
+OBJECT                            = DATA_SET                                  
+  DATA_SET_ID                     = "NEAR-A-5-COLLECTED-MODELS-V1.0"          
+                                                                              
+  OBJECT                          = DATA_SET_INFORMATION                      
+    DATA_SET_NAME                 = "NEAR COLLECTED TARGET MODELS V1.0"       
+    DATA_SET_COLLECTION_MEMBER_FLG= "N"                                       
+    DATA_OBJECT_TYPE              = "TABLE"                                   
+    START_TIME                    = 1997-06-25T00:00:00                       
+    STOP_TIME                     = 2002-02-12T19:42:43                       
+    DATA_SET_RELEASE_DATE         = 2002-04-19                                
+    PRODUCER_FULL_NAME            = "SMALL BODIES NODE"                       
+    DETAILED_CATALOG_FLAG         = "N"                                       
+    DATA_SET_TERSE_DESC           = "Collected shape and gravity models and   
+      related data for the NEAR targets 433 Eros and 253 Mathilde."           
+    ABSTRACT_DESC                 = "                                         
+      Collected shape and gravity models and related data for the NEAR        
+      targets 433 Eros and 253 Mathilde."                                     
+    CITATION_DESC                 = "                                         
+      Raugh, A., NEAR COLLECTED TARGET MODELS V1.0,                           
+      NEAR-A-5-COLLECTED-MODELS-V1.0, NASA Planetary Data System, 2002."      
+                                                                              
+    DATA_SET_DESC                 = "                                         
+                                                                              
+      Data Set Overview                                                       
+      =================                                                       
+      Several instrument teams from the Near Earth Asteroid Rendezvous        
+      (NEAR) mission derived models of the main mission target, 433           
+      Eros. In addition, the Multi-Spectral Imager team also derived          
+      a shape model of the secondary target 253 Mathilde. These models        
+      and their associated data and descriptions have been collected          
+      into this data set for ease of distribution.                            
+                                                                              
+      The models are divided into groups based on the source of the           
+      files:                                                                  
+                                                                              
+        MSI - Produced by the MSI team                                        
+        ---                                                                   
+        - Numerical shape model and mosaic shape map of 253 Mathilde          
+        - Plate models of 433 Eros in 6 resolutions                           
+        - A plate model of Eros in the Thomas RGST format                     
+                                                                              
+        NAV - Produced by the Navigation team from NLR data                   
+        ---                                                                   
+        - Spherical harmonic coefficients for shape and gravity of Eros       
+        - Triangular plate model of Eros from NLR measurements                
+                                                                              
+        NLR - Produced by the NLR team                                        
+        ---                                                                   
+        - Global numerical shape model of Eros                                
+        - Shape map of Eros                                                   
+        - NLR coverage map                                                    
+        - Spherical harmonic shape model of Eros                              
+                                                                              
+        RSS - Produced by the Radio Science Subsystem, using combined         
+        ---   NLR and radar tracking data                                     
+        - Gravity map of Eros                                                 
+        - Maps of the Bouguer anomaly of Eros in 3 increasing orders          
+        - Two spherical harmonic models of Eros with covariance matrices      
+        - Landmark files for Eros                                             
+                                                                              
+                                                                              
+      Modification History                                                    
+      ====================                                                    
+      These data were culled from the version 1.0 NEAR archive. The           
+      data set descriptions from that delivery were converted to              
+      document files to accompany this data set. Data labels were             
+      updated:                                                                
+                                                                              
+       1. Information and references that became available in the             
+          months following the original archive delivery have been            
+          added. In some cases reference publication years have been          
+          changed.                                                            
+       2. Extrema have been found and added to data product labels            
+          where they seemed useful.                                           
+       3. DATA_SET_ID, PRODUCT_ID, PRODUCT_NAME and related fields            
+          have been changed to reflect the new data set being created.        
+                                                                              
+      In many cases file names have been changed to something shorter         
+      and more mnemonic.                                                      
+                                                                              
+      The original spherical harmonic model files all contained               
+      degenerate tables listing parameters relevant to the model.             
+      These lines have been removed from the data file and the                
+      parameters included in the description at the top of the                
+      labels.                                                                 
+                                                                              
+      The following additional changes were made to specific data file        
+      labels included in this collection:                                     
+                                                                              
+       MSI Shape Models - Eros                                                
+       -----------------------                                                
+       o The FILE_RECORDS value, which was incorrect in all but two           
+         cases, was corrected.                                                
+                                                                              
+       MSI Shape Models - Mathilde                                            
+       ---------------------------                                            
+       o Existing files were extracted from the Thomas optical shape          
+         models already in the SBN archives.                                  
+                                                                              
+       NLR Shape and Gravity models                                           
+       ----------------------------                                           
+       o The NLR125AR.IMG file was converted to two FITS files:               
+                                                                              
+          1. A signed 2-byte integer version; and                             
+          2. An IEEE-real floating-point version.                             
+                                                                              
+         In both cases the scaling factor and offset from the original        
+         label was applied to the data. For the integer file, the result      
+         was rounded to the nearest integer. Minimal FITS headers were        
+         created in both cases, and the PDS labels modified accordingly.      
+         [Name in this data set: NLR/SHAPEMAP*.FIT]                           
+                                                                              
+       o The structure included in the NLRT180A.LBL file seemed to bear       
+         only a slight resemblance to the actual structure of the data        
+         (wrong record size, wrong number of columns, wrong field sizes,      
+         etc.).  The following changes were made to the data (and             
+         reflected in the label):                                             
+                                                                              
+         + All records were trimmed to a fixed length (48 bytes).             
+         + Embedded blanks were removed from the first record to fit it       
+           into the 48-byte length.                                           
+         + Blank coefficient fields were filled with the equivalent           
+           representation of zero.                                            
+         + All 'D' exponentiation operators in the data file were             
+           changed to 'E'.                                                    
+         [NLR/SHCOEFF.TAB]                                                    
+                                                                              
+       o The JGE15A01 (ASCII and binary) files were reformatted to            
+         follow the style used in the NLR spherical harmonic files.           
+         Specifically:                                                        
+                                                                              
+         + The SHA coefficients file was reformatted to remove trailing       
+           zeros and field delimiters. The constants in the header line       
+           were moved into the label.                                         
+         + The SHB (binary) covariance file was converted to ASCII,           
+           output using the same record format and sorted into the same       
+           order as the other covariance file.                                
+         [RSS/N15ACOEFF.TAB and RSS/N15ACOVAR.TAB]                            
+                                                                              
+                                                                              
+       Navigation Team Shape and Gravity Models                               
+       ----------------------------------------                               
+       (Produced by the navigation team from NLR data)                        
+                                                                              
+       o The files containing the spherical harmonic coefficients for         
+         the gravity and shape models were converted from the internal        
+         format submitted to flat tables more conducive to PDS handling.      
+         No data were changed, added or omitted.                              
+                                                                              
+       o The plate model originally included as part of the shape model       
+         file (with the spherical harmonic solution) was pulled out into      
+         a separate file.                                                     
+                                                                              
+       o The triangular plate shape model was reformatted slightly to         
+         match the format used in other radar shape models already            
+         archived at the SBN.  The principal change consisted of adding       
+         flags in the first column of each record to indicate which           
+         records defined vertices and which facets.                           
+                                                                              
+                                                                              
+       Radio Science Team Shape and Gravity Models                            
+       -------------------------------------------                            
+       o The Bouguer gravity maps were converted to FITS files and the        
+         labels modified accordingly.                                         
+                                                                              
+       o The gravity map file was also converted to a FITS file.              
+                                                                              
+       o The landmarks file was reformatted to collect the position and       
+         uncertainty vector for each landmark into a single record. The       
+         label was re-written accordingly."                                   
+                                                                              
+    CONFIDENCE_LEVEL_NOTE         = "                                         
+                                                                              
+      Confidence Level Overview                                               
+      =========================                                               
+      Consult the documentation for caveats concerning individual             
+      models.                                                                 
+                                                                              
+      Review                                                                  
+      ======                                                                  
+      This collection will undergo external review in May 2002."              
+                                                                              
+  END_OBJECT                      = DATA_SET_INFORMATION                      
+                                                                              
+  OBJECT                          = DATA_SET_TARGET                           
+    TARGET_NAME                   = "EROS"                                    
+  END_OBJECT                      = DATA_SET_TARGET                           
+                                                                              
+  OBJECT                          = DATA_SET_TARGET                           
+    TARGET_NAME                   = "MATHILDE"                                
+  END_OBJECT                      = DATA_SET_TARGET                           
+                                                                              
+  OBJECT                          = DATA_SET_MISSION                          
+    MISSION_NAME                  = "NEAR EARTH ASTEROID RENDEZVOUS"          
+  END_OBJECT                      = DATA_SET_MISSION                          
+                                                                              
+  OBJECT                          = DATA_SET_HOST                             
+    INSTRUMENT_HOST_ID            = "NEAR"                                    
+    INSTRUMENT_ID                 = "MSI"                                     
+  END_OBJECT                      = DATA_SET_HOST                             
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "DAVIESETAL1996A"                         
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "KAULA1966"                               
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "KONOPLIVETAL2001"                        
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "MILLERETAL2002"                          
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "NEUMANNETAL2001"                         
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "THOMASETAL1999"                          
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+  OBJECT                          = DATA_SET_REFERENCE_INFORMATION            
+    REFERENCE_KEY_ID              = "THOMASETAL2002"                          
+  END_OBJECT                      = DATA_SET_REFERENCE_INFORMATION            
+END_OBJECT                        = DATA_SET                                  
+END                                                                           

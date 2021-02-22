@@ -1,0 +1,49 @@
+                                                                               
+XGRS Command Log Description                                                   
+                                                                               
+Associated Document:    XGRS_OBSLOG.XLS                                        
+                                                                               
+This document lists the start time and basic configuration                     
+parameters for the start collection of each dataset by the NEAR XGRS.          
+                                                                               
+The following fields are recorded:                                             
+                                                                               
+1.      Year -                                                                 
+        The calendar year in which the observation commenced. (0000-9999)      
+                                                                               
+2.      DOY- The day of year (001-366) on which observation commenced.         
+                                                                               
+3.      HH:MM:SS -                                                             
+        Universal time at the commanded start of each operation                
+        (0-24, hrs:mins:seconds)                                               
+                                                                               
+4.      XGRS_Command Set                                                       
+        Mode of XGRS operation; sets mode of data collection.                  
+        Command ID's  include                                                  
+        Examples Format:                                                       
+        4.1 CAS_xgrs_anneal_pin                                                
+        4.1.1 Description:                                                     
+        4.1.2 Field 1:                                                         
+        4.1.3 Field 2:                                                         
+        4.1.4 Field 3:                                                         
+        4.2 CAS_xgrs_cal_src_home                                              
+        4.2.1 Description:                                                     
+        4.2.2 Field 1:                                                         
+        4.2.3 Field 2:                                                         
+                                                                               
+        Similar Format for the rest of the Command Set.                        
+        4.3 CAS_xgrs_cal_src_pos                                               
+        4.4 CAS_xgrs_cal_src_pos_home                                          
+        4.5 CAS_xgrs_cal_src_pos_zero                                          
+        4.6 CAS_xgrs_gnc_park_mode                                             
+        4.7 CAS_xgrs_gnc_point_quick                                           
+        4.8 CAS_xgrs_gray_hv                                                   
+        4.9 CAS_xgrs_release_attitude                                          
+        4.10 CAS_xgrs_set_gray_int_per                                         
+        4.11 CAS_xgrs_set_int_per                                              
+        4.12 CAS_xgrs_set_xray_int_per                                         
+        4.13 CAS_xgrs_std_pwr_off                                              
+        4.14 CAS_xgrs_toggle_mod                                               
+        4.15 CAS_xgrs_xray_hv                                                  
+        4.16 CAS_xgrs_xray_rt_thr                                              
+        4.17 CAS_xgrs_xray_safing                                              

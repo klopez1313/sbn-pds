@@ -1,0 +1,156 @@
+PDS_VERSION_ID                = PDS3                                          
+RECORD_TYPE                   = STREAM                                        
+OBJECT                        = TEXT                                          
+  PUBLICATION_DATE            = 2001-07-20                                    
+  NOTE                        = "Description of the EROS_OBSV_GUIDE           
+     files in this directory."                                                
+END_OBJECT                    = TEXT                                          
+END                                                                           
+                                                                              
+Column Descriptions for the MSI Eros Observation Guides:                      
+                                                                              
+The MSI Eros Observation Guides are spreadsheets that describe some basic     
+information about each MSI observation that was acquired during the NEAR      
+mission starting with 1998-210.  There is one line per observation. An        
+'observation' is a convenient unit for organizing the data and refers to      
+the process of sequencing. The observations within the Eros guides were       
+developed using the SEQGEN software. This is in contrast to the               
+sequences prior to 1998 which were built by hand using STOL. A different      
+organizational structure for the supporting files was required for each       
+which is why the spreadsheets were divided in this manner.                    
+                                                                              
+                                                                              
+The following fields are recorded:                                            
+                                                                              
+1. Orbit                                                                      
+   An entry in this column identifies when an orbit correction maneuver       
+   was performed.  By example, when a value reads "325x266" it means          
+   that on that day, the spacecraft entered into an elliptical orbit          
+   with radii of 325x266 km. More information about spacecraft orbital        
+   position and viewing geometry can be found in the                          
+   eros_orbital_info.txt file.  See also the observation_overview.txt         
+   file; in chapter 13 there is a table of maneuvers performed during         
+   the orbital mission.                                                       
+                                                                              
+2. Sub-solar Latitude -  latitude of a point on Eros where a line             
+   connecting the sun and Eros center pierces the surface                     
+                                                                              
+3.  Observation                                                               
+    This is a unique descriptive term identifying the name of the             
+    observation. This represents a unit of sequencing which acquired a        
+    set of images.  The data acquired within an observation were              
+    generally taken as a discrete event with a common purpose. In the         
+    sequence files, (i.e., 00066_final_sasf.txt) a single 'Request'           
+    usually corresponds to one observation in this spreadsheet. The           
+    names will be similar but not always identical. Occasionally a            
+    Request is broken into several observations.                              
+                                                                              
+                                                                              
+4.  Year-Doy                                                                  
+    This describes the year and day of year of the start of the               
+    observation.                                                              
+                                                                              
+                                                                              
+5.  Sequence -                                                                
+    In the Eros spreadsheets, this column refers to a subdirectory which      
+    corresponds to the 'sequencing week' during which that observation        
+    was created. Sequences were generated once per week (duration 1           
+    week) during the orbital phase and were identified by this 5 digit        
+    integer which essentially tells you the year and doy of the start of      
+    that sequence (98306 was the sequence that started on or about doy        
+    306, 1998). In the corresponding subdirectory you will find the gif       
+    plots for that weeks observations, the sequence file                      
+    (98306_final_sasf.txt), the imagelist (98306.imagelist), and the          
+    expanded command files (98306.msi and 98306.nis).  More information       
+    about interpreting these files can be found in eros_seq_archive.txt.      
+                                                                              
+6.  MET Range                                                                 
+    This is the range of METs  for the observation (spacecraft mets for       
+    first and last images in the observation).                                
+                                                                              
+7.  Start UTC                                                                 
+    This is the UTC of the first image in the observation.                    
+                                                                              
+8.  End  UTC                                                                  
+    This is the UTC of the last image in the observation.                     
+                                                                              
+9.  Sequence ID                                                               
+    This column lists all SEQ IDs called for execution during the             
+    observation.                                                              
+                                                                              
+    Up to 30 unique Sequence Definitions were resident in the MSI DPU         
+    during the Eros mission phases.  Each of these 30 Sequence                
+    Definitions contains a parameter, the Seq ID, which is an integer         
+    between 1 and 30, that uniquely distinguishes it from the other Seq       
+    Defs.  A Sequence Definition defines the format by which images are       
+    acquired (number of images, spacing, compression, exposures,              
+    filters, etc).  They  were executed by calling the Seq ID. We could       
+    redefine the parameter values in any or all of the Sequence               
+    Definitions at any time during the mission. For the most part, we         
+    were able to keep the set of 30 constant for most of the orbital          
+    phase but various factors required that some of them be changed           
+    periodically.  The msi_seqid_log.txt contains a log entry for each        
+    Seq ID, sorted by time, every time that Sequence Definition was           
+    changed. It also describes the fields within a Sequence Definition.       
+                                                                              
+    Often more than one Seq Def was used within a given observation. For      
+    instance, Seq IDs 20 and 19 were often used to take the 3 color           
+    'cleaned' observations. The auto exposures were taken with Sequence       
+    20, and manual zero exposures were taken with Sequence 19 and they        
+    were executed within an observation as a pair.                            
+                                                                              
+    An alternative way to know what compression, exposures, filters, etc      
+    were used in an observation is to look in the individual image            
+    headers. The imagelist is also a good source to get an overview, but      
+    it does not give compression info (i.e., eros/00066/00066.imagelist)      
+                                                                              
+10. Filters                                                                   
+    This is a list of the filters that were used during this Sequence.        
+                                                                              
+11. Number of Nonzero Images                                                  
+    This is the number of images acquired by this observation which had       
+    non-zero exposure values.                                                 
+                                                                              
+12. Number of Zero Exp Images                                                 
+    This is the number images acquired by this observation which had          
+    zero exposure values.                                                     
+                                                                              
+13. Compression                                                               
+    This is a shortcut description of the type of compression used for        
+    the images acquired in this observation.  Generally, during the 2000      
+    data, when it says Table5, it means Table5, ON, FAST.  When it ways       
+    Lossless, it means NONE, ON, FAST.  See SeqIDs for more detail.           
+    Compression info is also available in the image header.                   
+                                                                              
+14. Description                                                               
+    A short description of the observation.                                   
+                                                                              
+15. Detailed Description -                                                    
+    In a few cases there are text files that offer more detailed              
+    information. They will be linked from the spreadsheet, or at the          
+    very least referenced by name. They will be located in the main           
+    /eros subdirectory. The observation_overview.txt also contains            
+    detailed descriptions of many observations.                               
+                                                                              
+15. Gifs -                                                                    
+    These are predict plots generated by our visualization program            
+    Orbit. They show the MSI and sometimes NIS fields of view plotted         
+    onto a 3-d representation of Eros shape.  Often an observation            
+    continued over the course of many hours. It is impossible to capture      
+    the observation design in a single plot,  but we were very pressed        
+    for time and tried to at least give the flavor of the observation in      
+    the simplest manner. Plots do not exist for every observation.            
+    Sometimes, but not always,  there is a short description in the           
+    comment area on the plot itself which will help explain the               
+    observation.                                                              
+                                                                              
+    The colored axes represent the asteroid body fixed system in Eros.        
+    The red axis is the +X, prime meridian (0 longitude). The green axis      
+    is +Y, which is 90 E long, or 270 W long.  The blue axis is the           
+    north pole of Eros, it is also the spin pole, +Z, for the                 
+    right-handed system these axes make up. Direction of spin of Eros is      
+    determined by putting right thumb in direction of blue axis, fingers      
+    pointing along +X, red axis, then curl fingers.  The direction in         
+    which your fingers curl is the direction that Eros is spinning.  The      
+    times shown in the middle of the plot usually represent the bounding      
+    mets and utcs for the frames displayed.                                   

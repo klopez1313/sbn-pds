@@ -1,0 +1,207 @@
+PDS_VERSION_ID                    = PDS3                                      
+RECORD_TYPE                       = STREAM                                    
+LABEL_REVISION_NOTE               = "2001-07-17 RS:simpson Original;          
+      2009-09-09, T. Barnes (SBN): Added ABSTRACT_DESC and CITATION_DESC      
+                                   from EN copy and added DATA_SET_MISSION.   
+      2009-11-25, T. Barnes (SBN): Fixed typo in DATA_SET_TERSE_DESC.         
+                                   Added REFERENCE_KEY_ID."                   
+                                                                              
+OBJECT                            = DATA_SET                                  
+ DATA_SET_ID                      = "NEAR-A-RSS-5-EROS/GRAVITY-V1.0"          
+                                                                              
+ OBJECT                           = DATA_SET_INFORMATION                      
+  DATA_SET_NAME                   = "                                         
+                   NEAR EROS RADIO SCIENCE DERIVED PRODUCTS - GRAVITY V1.0"   
+  DATA_SET_COLLECTION_MEMBER_FLG  = "N"                                       
+  DATA_OBJECT_TYPE                = TABLE                                     
+  START_TIME                      = 2000-02-14T16:00:00                       
+  STOP_TIME                       = 2001-02-12T15:15:00                       
+  DATA_SET_RELEASE_DATE           = 2001-07-31                                
+  PRODUCER_FULL_NAME              = "ALEXANDER KONOPLIV"                      
+  DETAILED_CATALOG_FLAG           = "N"                                       
+  ABSTRACT_DESC                  = "                                          
+      NEAR Eros gravity science derived data products from JPL."              
+  CITATION_DESC                  = "                                          
+      Neumann G., Giorgini J.D., Miller J.K., A. Konopliv, and E. Grayzeck,   
+      NEAR EROS RADIO SCIENCE DERIVED PRODUCTS - GRAVITY V1.0,                
+      NEAR-A-RSS-5-EROS/GRAVITY-V1.0, NASA Planetary Data System, 2001."      
+  DATA_SET_TERSE_DESC             = "NEAR Eros gravity science derived        
+                                     data products from JPL."                 
+  DATA_SET_DESC                   = "                                         
+                                                                              
+    Data Set Overview                                                         
+    =================                                                         
+      This data set includes a 15x15 gravity model for Eros derived           
+      from radio and landmark tracking of the NEAR spacecraft, several        
+      images/maps, and a file of surface landmarks.  The gravity model and    
+      images/maps were produced by Alex Konopliv of the NEAR                  
+      Radio Science Team at the NASA Jet Propulsion Laboratory.  The          
+      landmark file was compiled by the NEAR Navigation Team and was          
+      used in the solution for the gravity field.                             
+                                                                              
+                                                                              
+    Parameters                                                                
+    ==========                                                                
+      The gravity model is defined by a set of spherical harmonic             
+      coefficients -- GM, Cmn, and Smn.  These can be evaluated to            
+      give the gravitational potential of Eros.  Both ASCII (data type        
+      SHA) and binary (data type SHB) formats are defined, with the           
+      latter including covariance terms.  Each file contains up to            
+      four tables: a header table containing general parameters for           
+      the model (gravitational constant, its uncertainty, degree and          
+      order of the field, normalization state, reference longitude,           
+      and reference latitude); a names table, giving the order in             
+      which coefficients appear; a coefficients table (degree m,              
+      order n, coefficients Cmn and Smn, and their uncertainties);            
+      and a covariances table giving the covariances of CijCmn,               
+      SijSmn, CijSmn, and SijCmn.                                             
+                                                                              
+      The image files are digital maps of Bouguer anomaly and radial          
+      gravity acceleration where the gravity field has been evaluated         
+      to degree and order less than the full 15x15 range in the model.        
+      The truncation reduces noise in the maps resulting from                 
+      uncertainty in the higher degree and order coefficients.                
+                                                                              
+      The landmark file contains rotation information for Eros and            
+      X, Y, and Z coordinates for the centers of craters identified           
+      on its surface.                                                         
+                                                                              
+                                                                              
+    Processing                                                                
+    ==========                                                                
+      Spherical harmonic models and maps were derived from raw radio          
+      tracking data in several steps.                                         
+                                                                              
+      The gravity field coefficients were obtained by solving systems         
+      of equations with about 5000 unknowns.  Radio tracking data             
+      in long arcs were delimited mostly by propulsive maneuvers              
+      and were used in solutions which were obtained iteratively              
+      and by least squares.                                                   
+                                                                              
+      Maps of vertical gravity acceleration and Bouguer anomaly were          
+      generated from the spherical harmonic model(s) evaluated at             
+      regular grid points.                                                    
+                                                                              
+                                                                              
+    Data                                                                      
+    ====                                                                      
+      The following files are included in this data set:                      
+                                                                              
+      JGE15A01_ASC.SHA  ASCII coefficients for the 15x15 gravity model.       
+                                                                              
+      JGE15A01_BIN.SHB  Binary coefficients and covariances for the           
+                        15x15 gravity model.                                  
+                                                                              
+      JGE15A08.IMG  Map of vertical gravity acceleration in milligals         
+                    at one degree grid spacing from -89.5 to +89.5            
+                    latitude and from -180 to +179 east longitude.            
+                    The 15x15 gravity model was evaluated to degree           
+                    and order 8 for this map.                                 
+                                                                              
+      JBE15A05.IMG  Map of Bouguer anomaly im milligals at one degree         
+                    grid spacing from -89.5 to +89.5 latitude and             
+                    from -180 to +179 east longitude.  The 15x15              
+                    gravity models (observed and modeled from constant        
+                    density shape model) were evaluated to degree and         
+                    order 5 for this map.                                     
+                                                                              
+      JBE15A06.IMG  Same as above except the gravity models were              
+                    evaluated to degree and order 6.                          
+                                                                              
+      JBE15A07.IMG  Same as above except the gravity models were              
+                    evaluated to degree and order 7.                          
+                                                                              
+      LANDMARK.TAB  A table giving X, Y, and Z coordinates of the             
+                    centers of craters projected onto a plane tangent         
+                    to each crater's rim.                                     
+                                                                              
+                                                                              
+    Ancillary Data                                                            
+    ==============                                                            
+      None.                                                                   
+                                                                              
+                                                                              
+    Coordinate System                                                         
+    =================                                                         
+      The gravity model, maps, and landmark file use the IAU 1994             
+      right ascension and declination system [DAVIESETAL1996A].               
+      The Eros prime meridian is fixed at 326.08 degrees.                     
+                                                                              
+                                                                              
+    Software                                                                  
+    ========                                                                  
+      None.                                                                   
+                                                                              
+                                                                              
+    Media/Format                                                              
+    ============                                                              
+      TBD."                                                                   
+                                                                              
+                                                                              
+  CONFIDENCE_LEVEL_NOTE           = "                                         
+                                                                              
+    Overview                                                                  
+    ========                                                                  
+      Data in this archive have been reduced as part of mission data          
+      analysis activities of the NEAR Radio Science Team.  Data of            
+      questionable validity have been omitted from the solutions.             
+                                                                              
+                                                                              
+    Review                                                                    
+    ======                                                                    
+      This archival data set was reviewed by the NEAR Radio Science           
+      Team prior to submission to the Planetary Data System (PDS).            
+      It was one of several data sets included in a comprehensive             
+      review by the PDS Small Bodies Node in August 2001, prior to            
+      PDS acceptance and ingestion.                                           
+                                                                              
+      Prior to creation of the final version of the archival data             
+      set, key elements of the archive were distributed for                   
+      preliminary review.  These included electronic versions of              
+      example PDS labels and example data files.                              
+                                                                              
+                                                                              
+    Data Coverage and Quality                                                 
+    =========================                                                 
+      The data included in this archive were collected during the             
+      NEAR orbital phase from 2000-02-14 to 2001-02-12.                       
+      See 'DESCRIPTION' in the label file for JGE15A01.SHA for more           
+      information about the data included in this gravity solution.           
+                                                                              
+                                                                              
+    Limitations                                                               
+    ===========                                                               
+      The limitations in this data set follow from the quality of             
+      the execution, which is described above under Data Coverage             
+      and Quality."                                                           
+                                                                              
+                                                                              
+ END_OBJECT                       = DATA_SET_INFORMATION                      
+                                                                              
+ OBJECT                           = DATA_SET_MISSION                          
+  MISSION_NAME                    = "NEAR EARTH ASTEROID RENDEZVOUS"          
+ END_OBJECT                       = DATA_SET_MISSION                          
+                                                                              
+ OBJECT                           = DATA_SET_TARGET                           
+  TARGET_NAME                     = EROS                                      
+ END_OBJECT                       = DATA_SET_TARGET                           
+                                                                              
+ OBJECT                           = DATA_SET_HOST                             
+  INSTRUMENT_HOST_ID              = NEAR                                      
+  INSTRUMENT_ID                   = RSS                                       
+ END_OBJECT                       = DATA_SET_HOST                             
+                                                                              
+ OBJECT                           = DATA_SET_REFERENCE_INFORMATION            
+  REFERENCE_KEY_ID                = "DAVIESETAL1995"                          
+ END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+ OBJECT                           = DATA_SET_REFERENCE_INFORMATION            
+  REFERENCE_KEY_ID                = "DAVIESETAL1996A"                         
+ END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION            
+                                                                              
+END_OBJECT                        = DATA_SET                                  
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+                                                                              

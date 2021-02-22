@@ -1,0 +1,41 @@
+PDS_VERSION_ID           = PDS3                                               
+                                                                              
+RECORD_TYPE              = UNDEFINED                                          
+^ASCII_DOCUMENT          = "PDSARCHIVEPLAN.TXT"                               
+^RTF_DOCUMENT            = "PDSARCHIVEPLAN.RTF"                               
+                                                                              
+  OBJECT                 = ASCII_DOCUMENT                                     
+  DOCUMENT_NAME          = "NEAR-EARTH ASTEROID RENDEZVOUS PROJECT            
+                            ARCHIVE GENERATION, VALIDATION, AND TRANSFER PLAN"
+  DOCUMENT_TOPIC_TYPE    = "DATA SET DESCRIPTION"                             
+  PUBLICATION_DATE       = 1998                                               
+  FILES                  = 1                                                  
+  INTERCHANGE_FORMAT     = ASCII                                              
+  DOCUMENT_FORMAT        = TEXT                                               
+  DESCRIPTION            = " This is an ASCII version of the NEAR Archive Plan
+  document. This document defines the process of archiving data from the NEAR 
+  mission with the Planetary Data System (PDS), including the design,         
+  generation, validation, and transfer of the data archive to PDS. The archive
+  will include raw and reduced data, navigation data necessary for the        
+  interpretation of the data, documentation, and software."                   
+                                                                              
+  END_OBJECT             = ASCII_DOCUMENT                                     
+                                                                              
+  OBJECT                 = RTF_DOCUMENT                                       
+  DOCUMENT_NAME          = "NEAR-EARTH ASTEROID RENDEZVOUS PROJECT            
+                            ARCHIVE GENERATION, VALIDATION, AND TRANSFER PLAN"
+  DOCUMENT_TOPIC_TYPE    = "DATA SET DESCRIPTION"                             
+  PUBLICATION_DATE       = 1998                                               
+  FILES                  = 1                                                  
+  INTERCHANGE_FORMAT     = BINARY                                             
+  DOCUMENT_FORMAT        = TEXT                                               
+  DESCRIPTION            = " This is an RICH TEXT FORMAT version of the NEAR  
+  Archive Plan document. This document defines the process of archiving data  
+  from the NEAR mission with the Planetary Data System (PDS), including the   
+  design, generation, validation, and transfer of the data archive to PDS.    
+  The archive will include raw and reduced data, navigation data necessary for
+  the interpretation of the data, documentation, and software."               
+                                                                              
+   END_OBJECT               = RTF_DOCUMENT                                    
+                                                                              
+  END                                                                         

@@ -1,0 +1,161 @@
+#!/local/bin/perl
+
+require "/icarus/source/archive/nextPDSODL.pl";
+
+#
+#  This routine reads through the catalog files in the current working
+#  directory and renames them for use in the SBN archive system.
+#  Catalog files are named according to their key fields:
+#
+#       Data set              DATA_SET_ID
+#       Instrument host       INSTRUMENT_HOST_ID
+#       Instrument            INSTRUMENT_ID
+#       Target                TARGET_NAME
+#       Mission               MISSION_NAME
+#
+#  After determining the catalog file type, this program searches for the
+#  identifying field and then adds a link for the alternate name.  Files 
+#  which do not end with ".cat" or ".CAT" are ignored.
+#
+#  Format:
+#
+#       % setup_cat [ directory ]
+#
+#
+#  12 Aug 1996, acr.
+#  15 May 1997, acr: modified for new split archive structure; now it adds 
+#                    links rather than renaming files to facilitate delivery
+#                    processing.
+#  03 Jun 1997, acr: added distinguishing lower-case suffixes to file names
+#                    to avoid filename collision in links (sometimes the same
+#                    ID is used for mission and instrument, e.g.)
+#
+#=============================================================================
+
+if (@ARGV > 1)
+  { die "Usage: setup_cat [ directory ]\n"; }
+
+$dir = (@ARGV == 1) ? $ARGV[0] : ".";
+
+# Open the directory for input and get the list of catalog files:
+
+opendir (CATDIR,$dir)  ||  die "Could not open directory '$dir' for reading.";
+
+$fc = 0;
+while ($file = readdir(CATDIR))
+  { 
+    # We ignore hidden files, non-catalog files, and the required 
+    # 'catalog.cat' file:
+
+    next if ($file =~ /^\./);
+    next if ($file !~ /\.cat$/  &&  $file !~ /\.CAT$/);
+    next if ($file eq "catalog.cat" || $file eq "CATALOG.CAT");
+
+    $catlist[$fc] = "$dir/$file";
+    $fc++;
+  }
+
+closedir(CATDIR);
+
+# Now work through the collected list of catalog files, creating links
+# as needed:
+
+foreach $file (@catlist)
+  { open (CAT,$file)  ||  die "Could not open $file for input.";
+
+    $object = "";
+    while (!$object  &&  ($line=&nextPDSODL(*CAT)))
+      { if ($line =~ /OBJECT\s*=/)
+
+        # Found the first OBJECT line. Save the type.
+
+        { $line =~ s/^.*=\s*//;
+          $line =~ s/\s*$//;
+          $object = $line;
+        }
+      }
+
+    # Make sure you didn't just run out of file:
+
+    if (!$object)
+      { print "Could not find OBJECT in $file.\n"; 
+        next; 
+      }
+
+    # Now, read through the rest of the file looking for the corresponding
+    # naming field.  Note that the next line is already in the buffer at this
+    # stage, from the final pass of the previous loop.
+
+    $newname = "";
+    while ($line = &nextPDSODL(*CAT))
+      { $line =~ s/^\s*//;
+#print "$object: $line\n";
+        if (  ($object eq "DATA_SET"        &&  $line =~ /^DATA_SET_ID/)
+           || ($object eq "EBDATASET"       &&  $line =~ /^DATA_SET_ID/)
+           || ($object eq "EARTHBASE"       &&  $line =~ /^EARTH_BASE_ID/)
+            )
+          { $newname = &getfilename($line,$dir,""); }
+
+        elsif ( ($object eq "INSTRUMENT"      &&  $line =~ /^INSTRUMENT_ID/)
+              ||($object eq "EBINSTRUMENT"    &&  $line =~ /^INSTRUMENT_ID/)
+            )
+          { $newname = &getfilename($line,$dir,"in"); }
+
+        elsif ($object eq "INSTRUMENT_HOST" &&  $line =~ /^INSTRUMENT_HOST_ID/)
+          { $newname = &getfilename($line,$dir,"ih"); }
+
+        elsif ($object eq "TARGET"          &&  $line =~ /^TARGET_NAME/)
+          { $newname = &getfilename($line,$dir,"ta"); }
+
+        elsif ($object eq "MISSION"         &&  $line =~ /^MISSION_NAME/)
+          { $newname = &getfilename($line,$dir,"ms"); }
+
+      }
+
+    close(CAT);    # Done reading
+
+    # Make sure we got a new name:
+
+    if (!$newname)
+      { print "Unable to find name field in $file.\n";
+        next;
+      }
+
+    # If the new name is not the same as the old name, create a link:
+
+    if ($newname ne $file)
+      { link ($file,$newname); }
+  }
+
+# Done.
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+sub getfilename
+
+  # Separate and return the value part of the line converted to filename format.
+
+  { local ($buff) = $_[0];
+    local ($d)    = $_[1];  # directory name
+    local ($sfx)  = $_[2];  # distinguishing suffix
+
+    # First, isolate the value part:
+
+    $buff =~ s/^.*=\s*//;
+    $buff =~ s/\s*$//;
+    $buff =~ s/"//g;
+    $buff =~ s/ /_/g;
+
+    # Check for a slash in the name and escape it:
+
+    $buff =~ s/\//|/;
+
+    # Convert to upper case and add directory information:
+
+    $buff =~ tr/a-z/A-Z/;
+    $buff = "$dir/$buff$sfx.CAT";
+
+    # Return filename:
+
+    return $buff;
+  }

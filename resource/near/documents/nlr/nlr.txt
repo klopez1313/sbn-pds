@@ -1,0 +1,686 @@
+JOHNS HOPKINS APL TECHNICAL DIGEST, VOLUME 19, NUMBER 2 (1998) 142            
+                                                                              
+NEAR Laser Rangefinder: A Tool for the Mapping and Topologic Study of Asteroid
+433 Eros                                                                      
+Timothy D. Cole                                                               
+In 1999, after a 3-year transit through space, the Near Earth Asteroid        
+Rendezvous (NEAR) spacecraft will place a scientific payload consisting of    
+five instruments into a low-altitude orbit ( 35 km) about the asteroid 433    
+Eros for 1 year. One instrument, the NEAR Laser Rangefinder (NLR), will use   
+infrared laser pulses to provide astrophysicists with precision altimetry data
+measurements that were previously unavailable from asteroid observations.     
+These data will accurately map Eros's topology, identify and characterize     
+small-scale surface features, a precisely determine overall volume and mass   
+once they are combined with navigation data. Objectives associated with the   
+NLR science mission are presented along with performance specifications and   
+instrument design details. The method by which NLR performance was analyzed is
+described, as are tests us to verify its performance and operability. During  
+performance testing, an "end-to-end" test was conducted, where the integrated 
+NLR instrument was operated in free space using a 216.4-m hallway. Test       
+results fully verified all instrument interfaces and indicated that NLR per-  
+formance parameters were well within all specifications. In addition, range   
+noise and biases were repeatable to 1 count, which is the minimum level       
+possible for a direct-detection rangefinder.                                  
+(Keywords: Acceptance testing, APD detector, Laser altimeter, Laser           
+Rangefinder.)                                                                 
+INTRODUCTION                                                                  
+On 17 February 1996, NASA's first Discovery mission began as the Delta II     
+rocket rose from complex 17B carrying the Near Earth Asteroid Rendezvous      
+(NEAR) spacecraft. The overall NEAR mission objective is to provide           
+information about the origin and nature of near-Earth asteroids, whose        
+characteristics are suspected to provide clues about the formation of the     
+inner planets, including the Earth, and whose composition is reflective of    
+material as it existed soon after the "big bang." Interest in asteroids has   
+been further heightened by the realization of their potential for terrestrial 
+impacts; the Earth's geologic record contains evidence of many such events,   
+including the cataclysmic collision that occurred some 65 million years ago.  
+Astrophysicists have derived their knowledge of asteroids from Earth-based    
+observations, distant spacecraft flybys, and analyses of meteorites. From this
+data, a framework was developed to theoretically model asteroidal dynamics,   
+structure, and thermal evolution.Indeed, sizes and shapes of asteroids contain
+important clues about their thermal, collisional, and dynamic histories and   
+their internal structures. The NEAR mission offers an opportunity to          
+dramatically improve our understanding of asteroids by gathering data in close
+proximity to one. In addition to gathering data typical of previous           
+observations, the NEAR mission will obtain asteroid data never possible before
+data whose gathering requires close-range operation such as high-precision    
+altimetry.                                                                    
+High-precision altimetry data will contribute significant insight to asteroid 
+evolution by describing surface characteristics and global parameters such as 
+volume and mass. The altimeter instrument, the NEAR Laser Rangefinder (NLR),  
+is designed to operate continuously throughout the 1-year orbit and to produce
+precision altimetry data over altitudes <327 km from Eros's surface. This     
+laser altimeter detects round-trip time, or time of flight (TOF), using a     
+high-power pulsed laser with precise (2.08-ns resolution) timing measurements,
+which provides range resolution of 32 cm. With on-board calibration capability
+and from instrument-level tests prior to launch, the NLR range accuracy is    
+also 32 cm.                                                                   
+The target asteroid is 433 Eros, one of the largest and most intensively      
+studied near-Earth asteroids. Astrophysicists have estimated Eros to be 10-20 
+km in size, with a rotational period of roughly 5.27 h and an albedo of 0.15. 
+Available Earth-based observations1 indicate that Eros is a highly elliptical 
+body measuring 36   15   13 km. These data, however, do not rule out the      
+possibility that Eros may actually be a "rubble pile" consisting of two or    
+more small, gravitationally bound bodies. Figure 1 illustrates the geometry   
+involved for NEAR. The instruments continually observe Eros by attitude       
+rotation. The rotation plane is constrained by the requirements to maintain   
+solar arrays, which are mechanically fixed, facing toward the Sun and to keep 
+the high-gain antenna within an acceptable angle of Earth's position.         
+The NLR design approach is described in this article. The approach used to    
+analyze the operating performance of the altimeter is presented, and results  
+from this analysis are summarized. To validate the NLR design and to ensure   
+its successful operation subsequent to launch and exposure to deep space over 
+a total period of 4 years, several instrument-level and integration tests     
+were devised and performed. These included an operational test of the NLR to  
+verify correct system operation "end-to-end" and to characterize instrument   
+bias and performance. End-to-end testing also provided information            
+associated with operational peculiarities of the NLR and was vital to the     
+check-out of the instrument's interface to the spacecraft.                    
+MISSION SPECIFICATIONS                                                        
+The objective of the NEAR laser ranging investigation is to obtain accurate,  
+high-resolution altimetry measurements that can be correlated with navigation 
+and gravity data to provide quantitative insight into the internal structure, 
+rotational dynamics, and evolution of Eros. According to Dr. Maria Zuber, the 
+NLR science team leader, NEAR altimetry data and orbital tracking data will   
+allow the volume and mass of Eros to be estimated to a precision of 0.01% and 
+0.0001%, respectively. Comparison between the NLR-derived data set and the    
+predetermined gravity field (estimated from Eros's shape and spacecraft orbit 
+perturbations) will permit correlation of surface topography to the local     
+gravity field. Although the mean density measurement will be limited by the   
+accuracy of our topographic field, resultant volume and mass values can be    
+estimated with an accuracy significantly improved over that for any other     
+asteroid previously observed.                                                 
+Specifications for the NLR were derived from NLR mission requirements and     
+spacecraft constraints. To provide the desired volume and mass measurement    
+precision, single-shot altimetry resolution and accuracy relative to the      
+asteroid center of mass must not exceed 6 m. For small-scale topology,        
+altimetry sample density (spacing between altimetry measurements on Eros's    
+surface) must be almost contiguous along the direction of the subsatellite    
+track on the asteroid. Over the range of spacecraft altitudes expected with   
+a spacecraft velocity of 5 m/s relative to Eros, the sampling density will    
+be more than adequate given the altimeter firing rate of 1 Hz and a laser     
+transmitter divergence of 235 mrad. Figure 2 illustrates the extreme          
+expected orbit geometries and resulting sampling densities. In addition to    
+the sampling density along the track, global parameter estimation requires    
+that the cross-track resolution, the spatial resolution perpendicular to the  
+subsatellite tracks, must be  500 m. Cross-track resolution is governed by    
+orbit-to-orbit separation and orbit (NLR) mission duration; therefore, it     
+was not considered a direct requirement for the NLR instrument.               
+All NLR measurements will be registered in an absolute center-of-mass         
+reference frame, allowing precise registration with data from other NEAR      
+sensors. Any offset between center of mass and center of figure for the       
+asteroid will be determined by correlating gravity with topography data. The  
+offset will reveal whether internal density differences are uniformly         
+distributed and will help verify if Eros consists of two or more              
+gravitationally bound bodies. Table 1 summarizes the requirements for the     
+NLR based on NLR science objectives and on estimated characteristics          
+associated with Eros.                                                         
+NLR SYSTEM DESIGN: A MODULAR APPROACH                                         
+To meet the accelerated schedule for the NEAR program, the NLR was developed  
+as a modular system (Fig. 3). We selected a bistatic configuration, which     
+permitted parallel development of the transmitter and receiver. The NLR       
+instrument operates by transmitting laser pulses to the asteroid surface and  
+measuring the TOF between outgoing light energy and optical energy back-      
+scatter from the asteroid surface toward the receiver. This direct-detection  
+approach uses leading-edge detection based on Neyman Pearson thresholding,    
+thereby greatly simplifying wave form processing requirements. Not only are   
+leading-edge altimeters relatively simple to implement, but the approach      
+reduces range scintillation generated when the extent of the target range     
+exceeds the transmitted pulse width, a condition that could be encountered    
+when mapping irregular surfaces of an asteroid.                               
+Basic Subsystems and Operation                                                
+The NLR required 19 months to develop, from start of design through completion
+of flight qualification. The transmitter and receiver units were developed and
+tested separately; subsystems were tested prior to integration using National 
+Institute of Standards and Technology (NIST)-traceable equipment. Although    
+schedule constraints precluded fabrication of brassboard models,breadboard and
+engineering models were produced and used extensively to debug design and     
+packaging issues.                                                             
+A block diagram of the NLR instrument (Fig. 4) shows its five subsystems: the 
+laser transmitter subassembly with a fiber-optic delay assembly (FODA) and    
+laser power supply (LPS); the optical receiver; the analog electronics with a 
+detector, processor boards, and a medium-voltage power supply (MVPS); the     
+digital processing unit (DPU); and the low-voltage power supply (LVPS). Red   
+lines in Fig. 4 indicate the optical paths for laser signals; red words       
+indicate the primary signals for the electronics. The optical receiver,       
+analog electronics, LVPS, MVPS, and DPU are collectively referred to as the   
+NLR receiver. The receiver was designed, fabricated, and tested at APL. The   
+transmitter was obtained through subcontract from McDonnell Douglas Aerospace 
+Corp. The transmitter, once completed and qualified by McDonnell Douglas      
+Aerospace Corp., was delivered to APL for final integration and acceptance    
+testing at the instrument level.The integrated NLR instrument was subsequently
+tested and subsequently flight qualified at both instrument and spacecraft    
+levels.                                                                       
+NLR operation is described by Fig. 4. The measurement sequence begins with a  
+"Fire" command issued by the DPU at a selected pulse repetition frequency.This
+command enables the transmitter, which fires a 15-ns optical pulse toward the 
+asteroid and simultaneously directs a portion of this pulse into the FODA for 
+calibration TOF purposes. A photodiode at the transmitter output detects the  
+laser pulse and sends an electronic START signal command to both of the       
+receiver gallium arsenide (GaAs) TOF counters (range and calibration).        
+As a result, during operation, the NLR receiver should see two optical pulses 
+per transmitted pulse. The first, arriving 558 ns after the laser fires, is a 
+calibration pulse routed through the fixed delay provided by the FODA.        
+Detection of this pulse by the receiver halts the calibration TOF counter.The 
+second return is the optical backscatter from the asteroid, which halts the   
+range counter. To minimize noise, received optical signals are compared with  
+a threshold level set either by ground command or through an auto-acquisition 
+(calibration) sequence. After both TOF counters are stopped, the DPU reads the
+counter values and formats their contents (and other data) into NLR science   
+data packets for transmission over the 1553 bus,as requested by the spacecraft
+data collection process. Consequently, what is measured is elapsed time       
+between the START indication from the laser and the arrival of STOP signals as
+produced within the receiver. Terms used in Fig. 4 are defined and described  
+in subsequent sections. The figure also illustrates the electrical interface  
+between the spacecraft and the instrument. (Heater control and receiver door  
+release circuits are not shown.)                                              
+NLR Transmitter                                                               
+The laser resonator assembly (LRA) is a solid-state laser based on a proven   
+polarization-coupled U-cavity design2 (Fig. 5). The gain medium is a Cr:Nd:YAG
+zigzag slab, side-pumped at 809 nm using a 20-element gallium arsenide (GaAs) 
+diode array (having thermal sensitivity of Dl/DT = 1 nm/4 C) with a peak power
+of 620 W in a pulse width of 200 ms. The opposite side of the slab is coupled 
+to a heat sink for thermal control. An antireflection coating applied to the  
+long dimension of the slab improves pump-power coupling efficiency, and a high
+reflectance coating on the heat-sink side reflects pump energy back into the  
+slab. This zigzag pumping yields a uniform distribution of optical energy     
+throughout the gain medium, increasing absorption path length and conversion  
+efficiency.                                                                   
+An antireflection coating at both slab end faces reduces optical losses for   
+rotated polarization states. A quarter-wave plate placed after the slab end   
+face maintains polarization. The gain medium is located in a cross-porro      
+cavity to provide boresight stability; a Risley wedge in each porro prism     
+assembly permits cavity alignment during assembly. An internal aperture       
+reduces higher-order modes, and a 9.3  Galilean telescope acts as an external 
+beam expander to reduce angular divergence. (Output beam divergence was       
+specified as  300 mrad; our final divergence, in vacuum, is 235 mrad.)        
+The laser operates at 1.064 mm and is Q-switched for pulsed-mode operation    
+using a lithium niobate (LiNbO3) Pockels cell. A half-wave plate provides     
+polarization compensation. Placement of the Q-switch in the output segment of 
+the beam path minimizes the potential for optical damage to the crystal by    
+locating it within the low circulating power portion of the resonator. Because
+LiNbO3 is pyroelectric, thermal gradients must be controlled during operation 
+in vacuum environments. For this reason, the NLR has redundant operational and
+survival heater circuits to reduce thermal variations to 22 to 14 C of the    
+thermal set point.                                                            
+To provide thermal isolation, the LRA is mounted to the NLR housing using     
+Vespel shoulder washers. Figure 6 is a photograph of the actual LRA assembly  
+depicting the laser and associated resonator optics. Note the lightweight 9.3 
+output optic. Mechanical interface for the LRA uses a three-point kinematic   
+mounting configuration.                                                       
+Table 2 presents specifications for the NLR. Also presented are measurements  
+(and estimates) for each of these values.The laser transmitter was extensively
+characterized as part of the NLR instrument test sequence. The system reliably
+produced 15-ns (60.82 ns) optical pulses each having 15.3 mJ (62 mJ) energy.  
+This optical pulse was coupled to the FODA and was measured at the LRA output 
+coupler as 7.2 pJ. (All power measurements used NIST-traceable power meters   
+accurate to 65%). Prelaunch NLR testing demonstrated that the NLR passed all  
+specifications.                                                               
+The output beam was characterized using a fast (picosecond response) detector 
+to detail the longitudinal mode structure (Fig. 7). Characterization of the   
+near field included measurement of beam diameter (defined where amplitude     
+decreases to 1/e2 of maximum), modal structure, and energy distribution.      
+Far-field testing consisted of beam divergence, jitter, and wander. Divergence
+significantly affects the science data through surface sampling size. This    
+parameter was measured in both air (ambient,at 135 mrad) and vacuum (235 mrad)
+(Fig. 8). Gaussian correlation coefficients along both the x and y axes were  
+0.91;therefore, performance was better than the specified 0.90. The difference
+in divergence is related to output telescope alignment with and without       
+atmosphere. Although the index of refraction changes by only 3 parts in       
+10,000,3 it was enough in a high-power optic using air-gap spacing to make a  
+measurable difference in the wavefront shaping.                               
+The LPS provides the control logic and power necessary to enable and fire the 
+LRA. The LPS also provides the 190-ms pump current (45 A) to the diode array. 
+hybrid component develops the 12800 V necessary to operate the Q-switch. Upon 
+receiving a "Fire" command from the DPU, the LPS uses a signal from the NLR   
+logic within the DPU to begin charging the storage capacitors that produce the
+diode drive current. To reduce noise coupling to the receiver during expected 
+arrival of laser backscatter, the switching DC/DC converter within the LPS is 
+disabled for the maximum ranging distance (327 km). Subsequent to maximum TOF,
+the LPS is enabled to prepare for the next pulse.                             
+NLR Receiver                                                                  
+The NLR receiver design uses a lightweight Cassegrain telescope, a spectral   
+filter (centered at the laser wavelength), a single-element avalanche photo-  
+diode (APD) hybrid detector, amplification filtering, voltage biasing and     
+thresholding circuitry, and appropriate power supplies (1550 V DC for the APD 
+from the MVPS and 615 V DC and 65 V DC from the LVPS). The receiver design    
+was based on previous APL APD-based detection circuit designs and on APL      
+developments in TOF systems using high-speed (2 GHz) GaAs applications-       
+specific integrated circuitry (ASIC).                                         
+A significant aspect of our configuration is that the NLR receiver optics act 
+a direct-detection "photon bucket." This approach drastically simplified the  
+design and development of the optical receiver because the system is not      
+required to produce an image. Consequently, the optics could tolerate high    
+levels of aberrations as long as the resultant spot size remained within the  
+physical and alignment bounds of the APD detector. This gave us the freedom   
+to select the receiver optical design best suited for low weight and          
+manufacturing ease, specifically, an f/3.4 Dall Kirkham design (Fig. 9).      
+Our telescope is a two-mirror aluminum Dall Kirkham arrangement using an      
+athermal design. The primary mirror is 3.5 in. (8.89 cm) (see Fig. 9) with an 
+overall field of view of 3 mrad. The Dall Kirkham layout is simple to         
+manufacture but suffers primarily from coma arising from off-axis light.      
+However, since the NLR operates with paraxial light, comatic aberration is    
+minimal and does not influence the performance of the receiver.               
+Since there are no bright sources near the NLR line of sight when viewing     
+Eros, specifications of surface roughness for the aluminum mirrors were       
+relaxed; we used diamond-turned surfaces, which are relatively inexpensive for
+the mechanical and optical quality provided. No superpolishing was required;  
+only antioxidant layer was deposited onto the surfaces to maintain            
+reflectivity. Stray light contamination was controlled by a system of baffles 
+in the receive support structure to prevent off-axis light from reaching the  
+primary mirror in less than two reflections. The two-reflection tolerance     
+reduced the number of baffles, and hence, the weight of the receiver housing. 
+Baffles, made of lightweight magnesium, were also knife-edged to minimize     
+direct reflections into the receiver telescope.                               
+The final mass of the telescope assembly (Fig. 9) was 167.4 g. Acceptance     
+testing indicated that 98% of the focused energy was located within a 100-mm  
+central (Airy) disk, easily accommodated by the 700-mm active diameter of the 
+APD detector.                                                                 
+To further reduce optical background noise, we placed a narrow-band (7 nm)    
+spectral filter in the convergence cone of the telescope, a location selected 
+to reduce weight and cost. Spectral filter passbands are strongly dependent on
+temperature and angle of incidence. To minimize thermally induced performance 
+variation, the filter was fabricated using a proprietary deposition process4  
+that reduces passband shift by a factor of 10. We reduced angular sensitivity 
+selecting a wide enough passband to allow light from all angles of the        
+telescope, where the converging cone of light at the detector extends from 4  
+to 9 , to pass with minimal attenuation. The relatively low orbital velocity  
+of the spacecraft (5 m/s) imposed negligible Doppler requirement on filter    
+bandpass performance.                                                         
+A windowed door over the entrance aperture of the NLR receiver protects the   
+optics from contamination. Our primary concern was contamination from         
+byproducts arising from propellant burns during the transit phase, but the    
+door also provided mechanical and contamination protection during prelaunch   
+activities. The door is a deployable element meant to be opened once, which   
+was successful accomplished on September 24, 1997. Both transmitter and       
+receiver optical sections were kept under a positive purge using research-    
+grade nitrogen prior launch with a purge valve in the receiver door for       
+pressure relief. (The transmitter did not require a door; however, the        
+transmitter was nevertheless kept under purge until final pressure            
+equalization was reached subsequent to launch.) The door-release mechanism    
+uses redundant pyrotechnic wire cutters with a tempered beryllium oxide wire. 
+Six silica-coated windows are located on the receiver door to provide         
+approximately 50% of the total collecting area in the event of a door-release 
+failure at Eros. This 50% collection area will permit the NLR to operate at   
+the planned orbital altitude (50 km).                                         
+Analog Electronics                                                            
+The purpose of the analog electronics is to convert backscattered optical     
+energy from the asteroid surface into a digital STOP signal,permitting round- 
+trip TOF measurements to be computed. Four fundamental stages compose the     
+analog electronics (Fig. 10): the APD hybrid detector, a video amplifier, an  
+integrator stage (Bessel-type lowpass filter), and a programmable comparator. 
+The detector and amplifier are installed on a rigid-flex detector board where 
+the detector electronics use 50-V matched lines; the integrator and comparator
+are installed on a separate, analog signal processing board.                  
+The APD is a hybrid device combining an enhanced silicon APD with temperature 
+compensation and transimpedance amplification. The enhancement process pushes 
+maximum response of the APD detector slightly beyond 1 mm. The particular APD 
+used for the NLR is a wide field-of-view (FOV) detector with a measured band- 
+width response of 37 MHz and responsivity of 770 kV/W. (For coherent laser    
+radars, electronic bandwidth of the baseband signal relates to the FOV used in
+observing the returned signal.) Assuming 15-ns pulses at 1.064 mm,our detector
+circuit operates with a minimum detectable power of 9 nW and maximum input    
+power of 0.5 W. Gain variation is less than 5% over the temperature range from
+28 to 140 C due to compensation; however, our analog electronics housing is   
+thermally controlled 20 6 10 C.                                               
+The video amplifier stage consists of a wideband amplifier used to provide a  
+gain of 150 over a 75-MHz bandwidth. The filtering, or integrator, stage is a 
+seven-pole lowpass Bessel filter with 3-dB cutoff at 30 MHz. The lowpass      
+filter is used to integrate return pulses that may be spatially dilated by    
+interaction of the transmitted laser pulse with the asteroid's topology. The  
+use of this filter optimizes the probability of detection of anticipated      
+surface slopes while it limits high-frequency noise response of the analog    
+electronics.5                                                                 
+A comparator stage determines whether an input signal has sufficient energy to
+generate a STOP signal. The comparator operates using one of eight preset     
+threshold levels, which are set by ground command or auto-thresholding. These 
+threshold levels vary from 16 to 2048 mV; the lowest threshold is below the   
+receiver noise floor,and the highest setting is just above the signal strength
+associated with the calibration input. Therefore, threshold levels increase as
+2n Vth , where n = 0, . . . ,7 and Vth is the threshold voltage (16 mV).      
+Thresholding permits an input dynamic range of 24 dB to compensate for        
+instrument noise sensitivity and variations of return signal strength. The    
+comparator exhibits very low propagation delay (<2 ns) and very little        
+overdrive dispersion, making it ideal for precise timing applications such as 
+leading-edge detection.6                                                      
+Digital Processing Unit                                                       
+To save weight and to minimize high-speed lines to the TOF chip, the DPU uses 
+a single rigid-flex multilayered board (see Fig. 11). The board contains      
+a GaAs TOF chip, a radiation-hardened RTX-2010 FORTH-language microcontroller,
+dual-frequency stable oscillator, a field-programmable gate array (FPGA) chip,
+redundant-channel 1553 chip set and attendant transformers, digital memory, an
+analog-to-digital (A/D) converter and sampler, and control logic.7 The dual-  
+frequency oscillator produces two output frequencies: 480 MHz 60.01% and 48 MH
+60.01%, with short-term (100 ms) frequency stability of 1:108, but only the 48
+MHz frequency is used.The required 48-MHz clock is generated using the 480-MHz
+frequency within the TOF ASIC. The FPGA uses this 48-MHz clock and produces 24
+MHz, 2-MHz, and 500-kHz output clocks for the 1553-bus controller, RTX        
+microcontroller, and FPGA internal range-gating counters, respectively.       
+The GaAs TOF chip is an APL-designed ASIC with one 11-bit counter (used for   
+calibration) and one 21-bit counter (used for range measurement with 1-bit    
+overflow). Both counters operate at 480 MHz. The TOF counters are enabled with
+a "start" pulse from the transmitter (START) and are stopped when a detected  
+return pulse arrives from the receiver comparator (STOP). The RTX-2010 is a   
+parallel 16-bit microcontroller that operates at 2 MHz to conserve power. The 
+microprocessor chip contains three on-chip timers, a dual-stack architecture, 
+and an interrupt controller with the ability to handle five external          
+interrupts.                                                                   
+The 1553-bus interface to the DPU consists of two 1553 bus transformers       
+(channels A and B), a 1553 dual bus transceiver,and a bus protocol controller.
+The controller responds to bus commands sent by the spacecraft command        
+telemetry processor(CTP). The bus controller handles data transfers, commands,
+and telemetry that transfer between the NLR and the CTP. Data bus arbitration 
+is handled by our FPGA, which simplified digital hardware design and          
+fabrication incorporating several functions such as address decoding, memory  
+arbitration, clock generation, receiver range gating, receiver enable (denoted
+T-0 masking) and transmitter and receiver configuration control.              
+T-0 masking is necessary to eliminate spurious noise that is produced with the
+formation of the laser optical pulse. T-0 masking is a disabling of the range 
+counters (both calibration and return signal counters) for a few cycles of the
+natural response of the receiver circuit at the time the optical pulse is     
+formed within the laser transmitter. Without such masking, opportunities for  
+false STOP signals are possible, and actual range measurements would not be   
+possible. A second range-gating function is implemented to gate the return    
+signal to improve the sensitivity of the NLR receiver.                        
+The sought-after signal is the STOP indication, which is used to indicate a   
+detected optical pulse above the set threshold. STOP terminates either the    
+calibration or range TOF counter, depending on system configuration, and the  
+corresponding range is read out.                                              
+Software                                                                      
+The NLR software was programmed using the FORTH programming language for the  
+RTX-2010 microcontroller. The software interfaces with the spacecraft CTP via 
+the 1553 bus, executes commands from the ground control, formats science      
+telemetry and instrument housekeeping commands, and controls instrument       
+operation. The software was implemented in a multitasking environment running 
+four different NLR programs8: (1) "NLR_PROCESS" handles                       
+transmitter/receiver control and data formatting; (2) "TELEMETRY_PROCESS"     
+implements necessary 1553 protocol for data transfer; (3) "COMMAND_PROCESS"   
+handles incoming instrument commands; and (4) "DUMP_PROCESS" transfer blocks  
+of NLR memory to the telemetry stream for transmission to the ground.         
+"NLR_PROCESS" is the main controlling program for the instrument. This task   
+has the highest priority and requires 5 ms to execute. On the basis of a minor
+frame interrupt (every 125 ms) arriving by the 1553 bus, this program         
+determines when to fire the transmitter, initialize receiver parameters (i.e.,
+T-0 mask, threshold level, and receiver range-gate), and read and format      
+calibration and range counter values (i.e., the altimetry measurements).      
+Measurement data, spacecraft time, and NLR configuration parameters are       
+formatted into a science packet for each transmitter shot, with 56 shots (112 
+for a pulse rate of 2 Hz) accumulated into each of these packets for          
+transmission to ground via the downlink.                                      
+"NLR_PROCESS" is programmed with several calibration algorithms. Operating    
+during a contingency, or "fail-safe," mode, the TOF counter is started by a   
+delayed transmitter fire command as opposed to an electronic trigger from the 
+transmitter photodiode. This fire command is purposely delayed due to an      
+inherently variable delay in the transmitter optical output, nominally 192 ms.
+We can determine this delay by initiating a calibration mode that varies the  
+T-0 mask through a 10-bit programmable counter until a reasonable calibration 
+range is detected. Since the counter has a 500-ns resolution, the maximum     
+range error due to a failed START would be 74.9 m.                            
+The calibration algorithm configures the NLR to step through each threshold   
+level and collect 16 samples of range and calibration data at a rate of 8 Hz. 
+Collecting range data at 8 Hz minimizes the influence of relative movement    
+between the NLR and asteroid terrain, permitting high correlation between data
+points. This is important as range rate is calculated for each new sample at  
+each threshold and is compared to a predetermined difference (sent as a       
+command argument) to determine the system noise floor and, hence,the operating
+threshold for reliable range returns. The 8-Hz mode occurs for a 2-s burst    
+followed by a 14-s quiescent period to reduce thermal stresses within the     
+transmitter. Following the 14-s pause, the NLR automatically reconfigures to  
+the nominal 1-Hz rate.                                                        
+In-line Optical Calibration                                                   
+The NLR is the first laser altimeter to feature in-line calibration, which was
+implemented using a 109.5-m single-mode fused silica optical fiber. This fiber
+optic delay assembly (FODA) is optically connected between the transmitter and
+receiver using small turning mirrors and graded-index lens assemblies.A minute
+portion of each transmitted pulse is injected (using internal transmitter     
+scattering at the corner cube, see Fig. 5) into the FODA, producing a constant
+optical delay of 529.20 ns between transmitted pulse and reception of that    
+pulse by the receiver optics; the measured delay after integration into the   
+system was 558.33 ns, indicating an additional system bias of 29.13 ns. By    
+directing each transmitted optical pulse directly to the receiver optics,     
+"true" end-to-end calibration is possible, which allows detection of range-   
+walk, an error caused by threshold-level changes or oscillator drift. This    
+self-calibration feature, therefore, ensures high quality of the NLR data and 
+permits evaluation of the NLR instrument functionality throughout the mission.
+With the existence of the FODA, we essentially provide the NLR with a virtual 
+fly-along laser radar target. This allows us to operate the NLR and obtain    
+calibration measurements based on actual TOF readings using laser output power
+until our arrival at Eros.                                                    
+In addition to instrument operation,the FODA proved invaluable for performance
+evaluation and debugging during prelaunch integration and test phases. Using  
+the calibration range counter during testing allowed us to determine the      
+quality of the instrument measurements based on threshold level selected,     
+power levels used, operational mode selected, and various environmental       
+conditions.                                                                   
+NLR PERFORMANCE ANALYSIS                                                      
+Performance was estimated using several approaches, including the basic radio-
+metric modeling (Neyman Pearson detection) and Webb's9 photoelectron output   
+approximation. Determination of the adequacy of the NLR design requires       
+evaluation of performance given parameter values describing Eros, NLR mission 
+parameters (e.g., orbit altitude), and the NLR design implementation. (Table 1
+summarizes these parameters describing the NLR design.) Analytical evaluations
+used these values to examine expected NLR performance through link margin     
+calculations.                                                                 
+Radiometric performance of the APD and associated analog electronics was      
+particularly important. Using Neyman Pearson detection statistics, given the  
+required detection probability (Pd = 0.95) and false alarms (<10 2), our      
+performance model indicates ranging operation well beyond the required 50 km  
+(Fig. 12). At 232 km, our analysis indicates  135 equivalent signal photons   
+(N ) arriving at the NLR detector (APD) surface, providing a detection        
+probability of 0.1 with false alarms of less than 0.01. Our detection scheme  
+uses single-shot statistics; no multi-shot averaging is performed. At this    
+range, we set the threshold level at 7s0 (s0 is the receiver noise floor power
+level), providing false alarm count of 6   1024. Figure 12 illustrates        
+detection probability and the number of source photons received at the        
+detector as a function of range to the asteroid.                              
+Because the NLR uses leading-edge detection, pulse dilation due to interaction
+with the surface will introduce range error and can lead to performance loss  
+as a result of receiver filter mismatch. This is especially true when we      
+observe Eros at an angle, us, from nadir or when we range to a sloped surface 
+(up, from the local horizon), or when significant surface roughness (Zrms)    
+exists. Pulse dilation is defined as the temporal error in return pulse       
+detection caused by elapsed time between the arrival of the initial and final 
+backscattered photons for a given transmitter pulse, leading to error in      
+measured TOF. Figure 13 illustrates these concepts for a divergence of ud,    
+nadir altitude h0, mean slope of us, and an off-nadir look angle of up. An    
+analysis10 was performed that estimates pulse dilation as a range error, Z(us,
+up), within a footprint. Figure 14 is a plot of Z(us, up) using values of     
+pointing angles and a range of slope values presumed for the NLR mission. The 
+loci where we match the science requirement of 6-m error are shown in Fig. 14.
+Pulse dilation can also occur as the result of beam wave-front curvature or   
+variations in localized surface albedo. Additional range errors can arise from
+electronic delay, timing errors, and incorrect correlation of attitude with   
+range sample. Accounting for the various sources of range error with root-sum-
+square error analysis, we determined that the NLR instrument will generate a  
+topographic field that is accurate to  10 m with respect to Eros's center of  
+mass.(This is an estimate of the accuracy using the entire NLR data set within
+the ground-based data center.The NLR measures range to the asteroid's surface,
+not to its center of mass, which must be estimated through numerous           
+measurement made while NEAR orbits Eros.)                                     
+NLR TESTING                                                                   
+The NLR was tested at the instrument and spacecraft levels to ensure that it  
+satisfied or exceeded all instrument and spacecraft requirements and that no  
+adverse conditions existed that would jeopardize or corrupt spacecraft or     
+other instrument operations. Instrument testing included functional,          
+environmental, and end-to-end testing.                                        
+Functional testing used ground support equipment (GSE) to simulate return     
+signals for the NLR to operate with over simulated pulsewidths (dilation),    
+return levels (simulating changes in range or albedo), and operational modes. 
+Fiber-optic links allowed us to test throughout integration although the      
+transmitter was a Class IV laser, which would have precluded open-air testing 
+unprotected areas.                                                            
+Environmental testing was performed to evaluate the NLR operation and         
+performance under various operating conditions (variable spacecraft bus       
+voltages, environmental temperatures and gradients, and modes of operation).  
+Because the NLR produces high currents within its power supply to the         
+transmitter ( 45 A), the influence on other spacecraft instruments (especially
+the magnetometer) was evaluated. No interference was observed from the NLR    
+using data from all NEAR instruments during repeated laser firings. This was  
+verified during a post-launch interference test that was conducted in May     
+1996.                                                                         
+Finally, a free-space laser radar test was conducted to ensure end-to-end     
+operation and to provide significant data and confidence in the ability of the
+NLR to perform as required. Prior to this test, the NLR had been operated     
+using GSE; the receiver was provided with a "simulated" return signal, and    
+the transmitter was used only to provide timing for the return signal. Issues 
+such as power level sensitivity, optical alignment, and attributes associated 
+with overall system implementation were not quantifiable until this end-to-end
+test was performed.                                                           
+Functional Testing                                                            
+A graded-index lens was attached to one of the windows in the aperture door to
+provide access to the receiver prior to launch.A cap at the output aperture of
+the NLR transmitter was installed that had a fiber-optic connector to allow   
+access to the laser.Fiber-optic links allowed direct access to the transmitter
+and receiver to permit simulation of effects during the environmental and     
+functional tests without having to resort to open-air testing. This simulation
+allowed significant testing without affecting people around the laser,        
+especially during spacecraft integration activities. Fiber optics routed the  
+transmitted pulse from the laser to the GSE, where a photodetector converted  
+the optical signal into an electrical one for simulation of delay,signal level
+changes, and pulse stretching. This modified signal was then sent to a GSE    
+laser source, transforming the electrical signal back into an optical one.    
+This modified optical signal could then be directed to the receiver, and NLR  
+performance could be analyzed over a multitude of return signal conditions.   
+Figure 15 presents data for a functional test performed on the NLR. The       
+receiver was sequenced through a range of threshold levels, and range counters
+were averaged over multiple laser firings at each of the threshold levels. The
+data plots in Fig. 15 illustrate an expected error caused by the use of       
+leading-edge detection, a condition denoted as range-walk. As the threshold   
+levels are increased, increasingly more energy is required by the return pulse
+to signal its arrival (which produces the STOP signal). Increased energy      
+occurs later within the return pulse; thus the range indicated by the range   
+counters increases with increased threshold levels, introducing a bias, or    
+range-walk. The calibration curve shown in Fig. 15 illustrates a range-walk of
+4 m over operational thresholds. The corresponding range-walk for range       
+measurements is 2 m; the difference between the counters is that calibration  
+measurements are one-way TOFs, whereas range is computed by dividing TOF by 2.
+In the particular case shown, calibration data at the lowest threshold were   
+unreliable and therefore not plotted. For range, the measurements were        
+excessively noisy at the lowest two levels, indicating insufficient energy in 
+the return pulse for reliable detection. However, once we used threshold      
+levels set for operation (levels from n = 2 to n = 6 in the threshold equation
+given earlier, 2n Vth), reliable calibration and range values were provided by
+the tests.                                                                    
+Environmental Testing                                                         
+To ensure that the instrument would survive launch stresses and the NEAR space
+environment, each NLR component was subjected to rigorous environmental       
+testing. Such testing involved frequency-swept vibration levels, mechanically 
+induced from 10 to 100 Hz at sweep rates of 4 octaves/min along the thrust-   
+axis optical boresight. (Maximum amplitude of 15 g occurred from 30 to 40 Hz.)
+Along the lateral axes, frequency range and rate were identical with maximum  
+amplitudes occurring between 15 and 25 Hz of 7.5 g. The NLR instrument was    
+also subjected to random vibration over frequencies of 20 2000 Hz for 60 s    
+along each of the axes, with an overall root-mean-square amplitude of 13.6 g. 
+Performance data were collected following each axis of vibration, and         
+instrument alignment was verified before and after each test using two optical
+methods. The first method measured the relative change between optical        
+reference cubes mounted on the transmitter, receiver, and instrument base. The
+alignment of these reference cubes was measured with a theodolite having      
+2-arcsec precision. Transmitter-to-receiver alignment for our bistatic        
+configuration was also determined by observing the transmitter beam in the    
+receiver far-field FOV. This measurement was made by mapping the transmitter  
+central lobe to the electronically determined FOV of the receiver.Measurements
+indicated that the shifts induced by the mechanical vibration tests (345 mrad)
+were well within the acceptable range (<1100 mrad), permitting reliable       
+transmitter-to-receiver alignment.                                            
+The operating temperature of the spacecraft is projected to be between 229 and
+155 C,and the survival range is projected to be between 234 and 160 C. However
+manufacturers' specifications for some of the NLR elements required that the  
+components be maintained at a different temperature range. This was accomplish
+through blanketing and heater control. We tested the adequacy of the NLR      
+thermal design by testing the transmitter (laser) from 0 to 120 C,the receiver
+optics from 110 to 130 C, and the NLR electronics from 229 to 155 C. Survival 
+tests, during which the components are unpowered, increased the thermal range 
+of operation testing by 5 C in each direction (e.g., transmitter survival     
+testing range was increased to be from 25 to 125 C).                          
+To evaluate the NLR over these ranges, we placed the entire integrated        
+instrument (including all power supplies and flight cabling) in a thermal-    
+vacuum (T-V) chamber and operated it over several thermal cycles. The T-V test
+lasted for 5 days: 3 days involved actual testing and 2 days were required to 
+attain stable thermal and vacuum conditions for operation. To characterize the
+NLR while it was in the chamber, the previously described fiber-optic links   
+were used to route the transmitter signal out of the chamber to the GSE and to
+return the modified optical signal back into the chamber to the receiver,     
+permitting continuous performance evaluation. To prevent corona and to ensure 
+reliable operation of the NLR,the instrument was soaked in vacuum (<1025 torr)
+for the initial 36 h before it was powered.                                   
+We evaluated calibration data during the T-V testing, collecting over 200     
+range measurements at various threshold levels for each of the three platea   
+temperatures investigated, 229, 125, and 155 C. When operation at 155 C was   
+compared with operation at 229 C, a very slight thermal influence on NLR      
+performance was found; the range shifted by less than 0.5 ns ( 15 cm).        
+End-to-End System Test                                                        
+An end-to-end system test, conducted under moderately controlled conditions in
+a 216.4-m-long hallway at APL, verified that the NLR operated as a laser      
+altimeter system. The NLR was configured to fire at 1 Hz at two distinct      
+targets, one at time. One target, a sand-blasted aluminum sheet, could be     
+characterized as a Lambertian scatterer. The second target, a silicate-rich   
+rock, was use to represent more of what we expect of Eros's surface. Figure 16
+shows these targets; the white circle on the targets in Fig. 16a is the actual
+Nd:YAG infrared beam; the camera used to photograph is a charge coupled device
+camcorder and is sensitive to the near infrared. Data were collected at one   
+range for the aluminum target and at two separate ranges for the rock target. 
+Target ranges varied between 182 and 211 ft, with actual values determined    
+using a NIST-traceable 91.44-m surveyor's rule. The data, as represented in   
+Fig. 16a illustrate the insignificant noise and error levels associated with  
+NLR operation.                                                                
+To simulate actual operating distances (nominally 50 km) for the NLR, we used 
+neutral density filters and an aperture stop for a total attenuation of 71 dB.
+The graphs in Fig. 16 show range data from the NLR for operational threshold  
+levels. As expected, at the lowest threshold levels noise dominated,and at the
+highest threshold levels no returns were detected.                            
+Given the binary-increasing (octave) scaling used to create the threshold     
+level (recall that comparator voltage levels vary as 2n Vth), the operational 
+threshold at n = 5 is  9 dB above the receiver noise floor. With the 71-dB    
+attenuation, estimated link margin for the NLR operating at 50 km to Eros is  
+estimated to be 9 12 dB. The 3-dB granularity cannot be improved upon using   
+these test data because the data were taken using the eight-valued preset     
+threshold scheme.                                                             
+SUMMARY                                                                       
+The successful launch of the NEAR spacecraft from Cape Canaveral on 17        
+February 1996 at 3:43 EST was only the beginning. Three tests performed       
+subsequent to launch indicated satisfactory operation of the NLR. The actual  
+Eros rendezvous is scheduled for February 1999. From the substantial surface  
+coverage of Eros the NLR and the altimeter's expected resolution and accuracy 
+performance, the resulting measurements should significantly enhance our      
+understanding of asteroid structure. In addition to instrument-level testing, 
+the NLR underwent spacecraft qualification testing as an integrated           
+instrument. Figure 17 depicts the NLR located on the NLR instrument deck (note
+the nonflight, red caps that were used to protect the optics prior to launch).
+Although the NLR was a relatively simple laser radar compared with designs    
+commonly in use by terrestrial laser rangefinders, the combined requirement of
+operating an instrument in deep space for a prolonged period under strong     
+design constraints (weight, cost, and schedule) contributed significantly to  
+the complexity of this instrument. Fortunately, radiation effects for the NEAR
+mission are slight (10-krad total dose); nevertheless, space exposure         
+influenced our selection and design approach for the electronics and the      
+optical components.                                                           
+                                                                              
+REFERENCES                                                                    
+ 1      Binzel, R., Gehrels, T., and Matthews, M. (eds.), Asteroids II, The   
+University of Arizona Press, Tucson (1989).                                   
+ 2      Near Earth Asteroid Rendezvous Laser Transmitter, Vol. 1: Technical   
+and Management, Proposal to RFP No. 389, McDonnell Douglas Aerospace West (13 
+Dec 1993).                                                                    
+ 3      Bass, M. (ed.), Handbook of Optics, Vol. I: Fundamentals, Techniques, 
+and Design, McGraw-Hill, New York (1995).                                     
+ 4      Swenson, T., Specification of Microplasma 1064-nm Narrow Band Filter, 
+Technical Application Note, Optical Corp. of America (29 Aug 1994).           
+ 5      Davidson, F. M., and Sun, X., Reduced Electrical Bandwidth Receivers  
+for Direct Detection 4-ary PPM Optical Communication Intersatellite Links,    
+NASA Final Report, Grant NAG5-1510 (Feb 1993).                                
+ 6      Reiter, R. A., Timing Precision of the NEAR Navigation Laser          
+Rangefinder (NLR) Analog Electronics, APL Technical Memorandum S2A-93-0201,   
+JHU/APL, Laurel, MD (27 Sep 1993).                                            
+ 7      Rodriguez, D., NEAR Laser Rangefinder Digital Processor Electrical    
+Design Data Package, APL Technical Memorandum S2F-94-0315, JHU/APL, Laurel, MD
+(6 Oct 1994).                                                                 
+ 8      Moore, R. C., NEAR NLR Flight Software Requirements Specification, APL
+ 9      Webb, P. P., "Properties of Avalanche Photodiodes," RCA Rev. 234 278  
+(Jun 1974).                                                                   
+10      Cole, T. D., and Davidson, F. M., "Performance Evaluation of the Near-
+Earth Asteroid Rendezvous (NEAR) Laser Rangefinder," Proc. SPIE, Photonics for
+Space Environments IV 2811, 156 168 (1996).                                   
+                                                                              
+ACKNOWLEDGMENT: This work was supported under contract N00039-95-C-002 with   
+the U.S. Navy. Thomas B. Coughlin is the program manager for the NEAR program.

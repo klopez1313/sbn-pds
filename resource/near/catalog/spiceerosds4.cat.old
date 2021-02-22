@@ -1,0 +1,52 @@
+PDS_VERSION_ID               = PDS3                                           
+RECORD_TYPE                  = STREAM                                         
+                                                                              
+OBJECT                       = VOLUME                                         
+  VOLUME_SERIES_NAME         = "NEAR EARTH ASTEROID ENCOUNTER MISSION"        
+  VOLUME_SET_NAME            = "NEAR: GEOMETRY"                               
+  VOLUME_SET_ID              = "USA_NASA_PDS_NGEROS_XXXX"                     
+  VOLUMES                    = 0004                                           
+  VOLUME_NAME                = "VOLUME 0004: GEOM EROS/ORBIT"                 
+  VOLUME_ID                  = "NGEROS_0004"                                  
+  VOLUME_FORMAT              = "ISO-9660-Level-2"                             
+  VOLUME_VERSION_ID          = "VERSION 1.0"                                  
+  MEDIUM_TYPE                = "CD-ROM"                                       
+  DATA_SET_ID                = "NEAR-A-SPICE-6-EDR-EROS/ORBIT-V1.0"           
+  PUBLICATION_DATE           = 2001-08-03                                     
+  DESCRIPTION                = "This volume contains SPICE Ephemerides taken  
+                                for 2001007 through 2001043."                 
+                                                                              
+  OBJECT                     = DATA_PRODUCER                                  
+    INSTITUTION_NAME         = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY"     
+    FACILITY_NAME            = "NEAR SCIENCE DATA CENTER"                     
+    FULL_NAME                = "DOUGLAS B. HOLLAND"                           
+    ADDRESS_TEXT             = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY      
+                                11100 JOHNS HOPKINS ROAD                      
+                                LAUREL MD 20723-6099                          
+                                USA"                                          
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "douglas.holland@jhuapl.edu"                   
+  END_OBJECT                 = DATA_PRODUCER                                  
+                                                                              
+  OBJECT                     = DATA_SUPPLIER                                  
+    INSTITUTION_NAME         = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY"     
+    FACILITY_NAME            = "NEAR SCIENCE DATA CENTER"                     
+    FULL_NAME                = "DOUGLAS B. HOLLAND"                           
+    ADDRESS_TEXT             = "JOHNS HOPKINS APPLIED PHYSICS LABORATORY      
+                                11100 JOHNS HOPKINS ROAD                      
+                                LAUREL MD 20723-6099                          
+                                USA"                                          
+    TELEPHONE_NUMBER         = "N/A"                                          
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "douglas.holland@jhuapl.edu"                   
+  END_OBJECT                 = DATA_SUPPLIER                                  
+                                                                              
+  OBJECT                     = CATALOG                                        
+    ^REFERENCE               = "REF.CAT"                                      
+    ^DATA_SET                = "SPICEDS.CAT"                                  
+    ^INSTRUMENT_HOST         = "NEARINSTHOST.CAT"                             
+    ^MISSION                 = "NEARMISSION.CAT"                              
+  END_OBJECT                 = CATALOG                                        
+                                                                              
+END_OBJECT                   = VOLUME                                         
+END                                                                           

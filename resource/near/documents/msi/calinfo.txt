@@ -1,0 +1,117 @@
+PDS_VERSION_ID        = PDS3                                                  
+LABEL_REVISION_NOTE = "                                                       
+  04 Nov 2002  S.McLaughlin  Added paragraph about the MSICAL.TXT document.   
+  "                                                                           
+                                                                              
+RECORD_TYPE           = STREAM                                                
+OBJECT                = TEXT                                                  
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  PUBLICATION_DATE    = 2001-09-01                                            
+  NOTE                = "N/A"                                                 
+END_OBJECT            = TEXT                                                  
+                                                                              
+END                                                                           
+                                                                              
+The CALIB directory contains a set of files that are useful for the           
+calibration of the NEAR MultiSpectral Imager (MSI).  The files in the         
+CALIB directory itself are used in conjunction with the MSI calibration       
+software, while the files in the MSIBANDPASS directory are descriptions       
+of the MSI filter responses.                                                  
+                                                                              
+For a description of the MSI calibration processes and levels, refer to       
+/NIEROS_2001/DOCUMENT/MSICAL.TXT.  The document includes the two forms of the 
+calibration equations applied to MSI images and describes the MSI processing  
+levels such as RAD (image calibrated to units of radiance) and                
+CIFDBL (cleaned and deblurred image calibrated to units of I/F).              
+                                                                              
+                                                                              
+MSI Bandpass Calibration files:                                               
+===============================                                               
+                                                                              
+The /CALIB/MSIBANDPASS directory contains files describing the                
+bandpasses of the filters used in conjunction the NEAR Multispectral          
+Imager.  One file is included for each filter, giving the scaled              
+response as a function of wavelength.  This information was provided by       
+Scott Murchie.                                                                
+                                                                              
+The files are as follows:                                                     
+                                                                              
+  BAND0450.TAB -  450 nanometer filter                                        
+  BAND0550.TAB -  550 nanometer filter                                        
+  BAND0700.TAB -  700 nanometer filter                                        
+  BAND0760.TAB -  760 nanometer filter                                        
+  BAND0900.TAB -  900 nanometer filter                                        
+  BAND0950.TAB -  950 nanometer filter                                        
+  BAND1000.TAB - 1000 nanometer filter                                        
+  BAND1050.TAB - 1050 nanometer filter                                        
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+MSI Flatfield and Point Spread Function Calibration files:                    
+==========================================================                    
+                                                                              
+In order to correct for sensitivity and non-uniformity of the MSI system,     
+images were acquired before launch of the interior of a spectralon            
+lined integrating sphere (details given in MURCHIE S., M. ROBINSON, S.E       
+HAWKINS, III, A. HARCH, P. HELFENSTEIN, P. THOMAS, K. PEACOCK, W. OWEN,       
+G. HEYLER, P. MURPHY, E.H.  DARLINGTON, A. KEENEY, R. GOLD, B. CLARK, N.      
+IZENBERG, J.F. BELL, III, W. MERLINE, AND J. VEVERKA 1999.  Inflight          
+calibration of the NEAR multispectral imager.  Icarus 140, 66-91.)            
+                                                                              
+For the period of the mission when the transparent cover was used there       
+are two flat fields used.  After the cover was removed only one flat          
+field is used, the files named with FLAT?_31C.FIT were used for both          
+periods.  The * is an integer representing a particular filter                
+identification number.                                                        
+                                                                              
+Non-uniformity correction files used with Cover on                            
+==================================================                            
+FLAT0_31C.FIT       filter 0                                                  
+FLAT1_31C.FIT       filter 1                                                  
+FLAT2_31C.FIT       filter 2                                                  
+FLAT3_31C.FIT       filter 3                                                  
+FLAT4_31C.FIT       filter 4                                                  
+FLAT5_31C.FIT       filter 5                                                  
+FLAT6_31Cn.FIT      filter 6                                                  
+FLAT7_31Cn.FIT      filter 7                                                  
+COVERFLATRATIO0.FIT filter 0                                                  
+COVERFLATRATIO1.FIT filter 1                                                  
+COVERFLATRATIO2.FIT filter 2                                                  
+COVERFLATRATIO3.FIT filter 3                                                  
+COVERFLATRATIO4.FIT filter 4                                                  
+COVERFLATRATIO5.FIT filter 5                                                  
+COVERFLATRATIO6.FIT filter 6                                                  
+COVERFLATRATIO7.FIT filter 7                                                  
+                                                                              
+                                                                              
+Non-uniformity correction files used with Cover off                           
+===================================================                           
+FLAT0_31C.FIT       filter 0                                                  
+FLAT1_31C.FIT       filter 1                                                  
+FLAT2_31C.FIT       filter 2                                                  
+FLAT3_31C.FIT       filter 3                                                  
+FLAT4_31C.FIT       filter 4                                                  
+FLAT5_31C.FIT       filter 5                                                  
+FLAT6_31CN.FIT      filter 6                                                  
+FLAT7_31CN.FIT      filter 7                                                  
+                                                                              
+                                                                              
+In order to correct the blurring of MSI images due to the deposition          
+of contaminants of the optic during an aborted spacecraft burn system         
+PSF were derived for each filter (details given in LI, H., M. S.              
+ROBINSON, S. L. MURCHIE, AND J. R.  NEUBERT 2000. Remediation of              
+Scattered Light in NEAR MSI Images. Lunar and Planetary Science XXXI,         
+1790, Lunar and Planetary Institute, Houston. and LI, H., M. S.               
+ROBINSON, S. L. MURCHIE 2001 (in press).  Preliminary Remediation of          
+Scattered Light in NEAR MSI Images, Icarus.                                   
+                                                                              
+PSF files                                                                     
+================================================                              
+F1_512PSF_V2.FIT        filter 1                                              
+F2_512PSF_V1.FIT        filter 2                                              
+F3_512PSF_V2.FIT        filter 3                                              
+F4_512PSF_V2.FIT        filter 4                                              
+F5_512PSF_V2.FIT        filter 5                                              
+F6_512PSF_V2.FIT        filter 6                                              
+F7_512PSF_V2.FIT        filter 7                                              

@@ -1,0 +1,135 @@
+                                                                               
+                                                                               
+                                                                               
+PDS_VERSION_ID           = PDS3                                                
+RECORD_TYPE              = STREAM                                              
+^WORD_DOCUMENT           = "GRS_REQS_7_2.DOC"                                  
+^JPEG_DOCUMENT           = "GRS_REQS_7_2.JPG"                                  
+^ASCII_DOCUMENT          = "GRS_REQS_7_2.TXT"                                  
+^TIFF_DOCUMENT                = {"GRS_REQS_7_2_001.TIF",                       
+                                  "GRS_REQS_7_2_002.TIF",                      
+                                  "GRS_REQS_7_2_003.TIF",                      
+                                  "GRS_REQS_7_2_004.TIF",                      
+                                  "GRS_REQS_7_2_005.TIF",                      
+                                  "GRS_REQS_7_2_006.TIF",                      
+                                  "GRS_REQS_7_2_007.TIF",                      
+                                  "GRS_REQS_7_2_008.TIF",                      
+                                  "GRS_REQS_7_2_009.TIF",                      
+                                  "GRS_REQS_7_2_010.TIF",                      
+                                  "GRS_REQS_7_2_011.TIF",                      
+                                  "GRS_REQS_7_2_012.TIF",                      
+                                  "GRS_REQS_7_2_013.TIF",                      
+                                  "GRS_REQS_7_2_014.TIF",                      
+                                  "GRS_REQS_7_2_015.TIF",                      
+                                  "GRS_REQS_7_2_016.TIF",                      
+                                  "GRS_REQS_7_2_017.TIF",                      
+                                  "GRS_REQS_7_2_018.TIF",                      
+                                  "GRS_REQS_7_2_019.TIF",                      
+                                  "GRS_REQS_7_2_020.TIF",                      
+                                  "GRS_REQS_7_2_021.TIF",                      
+                                  "GRS_REQS_7_2_022.TIF",                      
+                                  "GRS_REQS_7_2_023.TIF",                      
+                                  "GRS_REQS_7_2_024.TIF",                      
+                                  "GRS_REQS_7_2_025.TIF",                      
+                                  "GRS_REQS_7_2_026.TIF",                      
+                                  "GRS_REQS_7_2_027.TIF",                      
+                                  "GRS_REQS_7_2_028.TIF",                      
+                                  "GRS_REQS_7_2_029.TIF",                      
+                                  "GRS_REQS_7_2_030.TIF",                      
+                                  "GRS_REQS_7_2_031.TIF",                      
+                                  "GRS_REQS_7_2_032.TIF",                      
+                                  "GRS_REQS_7_2_033.TIF",                      
+                                  "GRS_REQS_7_2_034.TIF",                      
+                                  "GRS_REQS_7_2_035.TIF",                      
+                                  "GRS_REQS_7_2_036.TIF",                      
+                                  "GRS_REQS_7_2_037.TIF",                      
+                                  "GRS_REQS_7_2_038.TIF",                      
+                                  "GRS_REQS_7_2_039.TIF",                      
+                                  "GRS_REQS_7_2_040.TIF",                      
+                                  "GRS_REQS_7_2_041.TIF",                      
+                                  "GRS_REQS_7_2_042.TIF",                      
+                                  "GRS_REQS_7_2_043.TIF",                      
+                                  "GRS_REQS_7_2_044.TIF",                      
+                                  "GRS_REQS_7_2_045.TIF",                      
+                                  "GRS_REQS_7_2_046.TIF",                      
+                                  "GRS_REQS_7_2_047.TIF",                      
+                                  "GRS_REQS_7_2_048.TIF",                      
+                                  "GRS_REQS_7_2_049.TIF",                      
+                                  "GRS_REQS_7_2_050.TIF",                      
+                                  "GRS_REQS_7_2_051.TIF"}                      
+                                                                               
+OBJECT                   = WORD_DOCUMENT                                       
+  DOCUMENT_NAME    = "Near Earth Asteroid Rendevous Gamma-ray Spectrometer     
+    Level-2 Requirements Specification"                                        
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = MICROSOFT_WORD                                      
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR LEVEL-2 REQUIREMENTS SPECIFICATION,           
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for GRS Level-2 analysis                           
+ "                                                                             
+END_OBJECT               = WORD_DOCUMENT                                       
+                                                                               
+                                                                               
+OBJECT                   = JPEG_DOCUMENT                                       
+  DOCUMENT_NAME      = "NEAR Earth Asteroid Rendezvous Gamma-ray Spectrometer, 
+                            Level-2 Requirements Specfication. "               
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = BINARY                                              
+  DOCUMENT_FORMAT        = JPEG                                                
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR LEVEL-2 GRS Requirements Specification,       
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for GRS Level-2 analysis. NOTE:  This is an        
+                            integrated image with multiple pages in the        
+                            file. Some browsers do not support integrated      
+                            image documents. A version of this document is     
+                            in the TIF format as one image per page in the     
+                            GRS_REQS_7_2_xxx.TIF                               
+ "                                                                             
+END_OBJECT               = JPEG_DOCUMENT                                       
+                                                                               
+OBJECT                   = ASCII_DOCUMENT                                      
+  DOCUMENT_NAME    = "NEAR Earth Asteroid Rendevous Gamma-ray Spectrometer     
+                            Level-2 Requirements Specfication.  "              
+  PUBLICATION_DATE       = 2001                                                
+  INTERCHANGE_FORMAT     = ASCII                                               
+  DOCUMENT_FORMAT        = TEXT                                                
+  DOCUMENT_TOPIC_TYPE    = "REQUIREMENTS DOCUMENT"                             
+  DESCRIPTION            = "NEAR LEVEL-2 GRS Requirements Specification,       
+                            This document elaborates the formats and           
+                            derivations of all of the parameters required      
+                            for GRS Level-2 analysis. This version is a        
+                            reduced form of the original document, due to      
+                            the loss of graphics, equations and figures        
+                            upon conversion to text.                           
+ "                                                                             
+END_OBJECT               = ASCII_DOCUMENT                                      
+                                                                               
+                                                                               
+OBJECT                        = TIFF_DOCUMENT                                  
+  DOCUMENT_NAME                 = "Near Earth Asteroid Rendevous Level-2       
+  Requirements Specification. "                                                
+  PUBLICATION_DATE              = 2001                                         
+  INTERCHANGE_FORMAT            = BINARY                                       
+  DOCUMENT_FORMAT               = TIFF                                         
+  PUBLICATION_DATE              = 2001-07-01                                   
+  FILES                         = 51                                           
+  ENCODING_TYPE                 = "CCITT/3"                                    
+  DOCUMENT_TOPIC_TYPE            = "REQUIREMENTS DOCUMENT"                     
+  DESCRIPTION                   = "                                            
+   NEAR LEVEL-2 REQUIREMENTS SPECIFICATION,                                    
+   This document elaborates on the formats and derivations                     
+   of all the parameters required for GRS level-2 analysis.                    
+                                                                               
+                                                                               
+A TIFF representation has been included that is  one file per page of the      
+WORD document (GRS_REQS_7_2).   Each page is a file GRS_REQS_7_2_XXX.TIF       
+where XXX is the page number."                                                 
+END_OBJECT                    = TIFF_DOCUMENT                                  
+                                                                               
+                                                                               
+END                                                                            

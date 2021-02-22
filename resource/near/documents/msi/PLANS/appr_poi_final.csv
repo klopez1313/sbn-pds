@@ -1,0 +1,278 @@
+Observation Name,High-gain pass DSS Sta. ,Ownr,Date,DOY,"Strt, UT", Dur,"End, UT",Pr'ty,Bits/ pixel,# imgs  or       # spec,Seq.     IDs,Filters,Est.  comp.,Mbits,P/B (hrs @8.8 kb/s),P/B (hrs @17.6 kb/s),P/B (hrs @26.4 kb/s),week,Target,Description,Status
+NIS Low Phase Flyby test 1,,NIS,15-Dec,349,13:00,,,,,,,,,0.00,0.0,0.0,0.0,,,,done
+,,NIS,15-Dec,349,13:09,0:14,13:23,,,19,,,,0.02,0.0,0.0,0.0,99347,space,GLOBAL_MAP_50_IN,done
+,,NIS,15-Dec,349,13:25,7:30,20:55,,,1707,,,,1.96,0.1,0.0,0.0,99347,space,LAT_SCANS_50-45_IN,done
+,,NIS,15-Dec,349,20:59,0:15,21:14,,,36,,,,0.04,0.0,0.0,0.0,99347,space,GLOBAL_MAP_45_IN,done
+,,NIS,15-Dec,349,21:20,3:50,1:10,,,842,,,,0.96,0.0,0.0,0.0,99347,space,LAT_SCANS_45-40_IN,done
+,,NIS,16-Dec,350,1:15,0:50,2:05,,,1753,,,,2.01,0.1,0.0,0.0,99347,space,FULL_NIXEL_TEST,done
+,,NIS,16-Dec,350,2:10,0:15,2:25,,,49,,,,0.06,0.0,0.0,0.0,99347,space,GLOBAL_MAP_40_IN,done
+,,NIS,16-Dec,350,2:30,4:35,7:05,,,1820,,,,2.08,0.1,0.0,0.0,99347,space,InGas_OPT_LAT_SCAN_40-30_IN,done
+,,NIS,16-Dec,350,7:10,0:30,7:40,,,90,,,,0.10,0.0,0.0,0.0,99347,space,GLOBAL_MAP_30_IN,done
+,,NIS,16-Dec,350,7:45,1:00,8:45,,,400,,,,0.46,0.0,0.0,0.0,99347,space,InGas_OPT_LAT_SCAN_30-20_IN,done
+,,NIS,16-Dec,350,8:50,2:38,11:28,,,500,,,,0.57,0.0,0.0,0.0,99347,space,GLOBAL_MPPS_IN,done
+,,NIS,16-Dec,350,11:31,0:55,12:26,,,228,,,,0.26,0.0,0.0,0.0,99347,space,LOW_PHASE_MPPS,done
+,,NIS,16-Dec,350,12:30,1:32,14:02,,,422,,,,0.48,0.0,0.0,0.0,99347,space,GLOBALS_OUT,done
+,,NIS,16-Dec,350,14:05,0:48,14:53,,,166,,,,0.19,0.0,0.0,0.0,99347,space,LAT_SCANS_OUT,done
+End of NIS Low Phase Flyby,,NIS,16-Dec,350,14:56,,,,,,,,,0.00,0.0,0.0,0.0,,,,done
+70m downlink track,14,,16-Dec,350,15:30,2:15,17:45,,,,,,,9.20,0.32,0.01,0.00,,,mock LPF - read down twice,
+NLR MSI alignment test,,NLR,17-Dec,351,16:00,0:05,16:05,,12,16,17,7,2.5,9.92,0.3,0.2,0.1,99347,undefined,"MSI_NLR_align_test: 4 images taken 1 sec apart in 4 sets. Timed to occur before, during and after 2 8 hz bursts.",done
+Opnav D test,,NAV,19-Dec,353,0:00,0:11,0:11,F,12,4,27,0,2.6,2.38,0.1,0.0,0.0,99347,M6,OPDt1:2x2 mosaic,done
+Opnav F test,,NAV,19-Dec,353,0:15,0:15,0:30,F,12,6,27,0,2.6,3.58,0.1,0.1,0.0,99347,M6,OPFt1:2x3 mosaic,done
+Opnav G test,,NAV,19-Dec,353,0:32,0:15,0:47,F,12,6,27,0,2.6,3.58,0.1,0.1,0.0,99347,M6,OPGt1: 3x2 mosaic ,done
+Opnav H test,,NAV,19-Dec,353,0:50,0:17,1:07,F,12,9,27,0,2.6,5.36,0.2,0.1,0.1,99347,M6,OPHt1: 3x3 mosaic,done
+Opnav I test,,NAV,19-Dec,353,1:11,0:11,1:22,F,12,2,27,0,2.6,1.19,0.0,0.0,0.0,99347,M6,OPIt1: 1x2 mosaic,done
+Opnav J test,,NAV,19-Dec,353,1:24,0:10,1:34,F,12,2,27,0,2.6,1.19,0.0,0.0,0.0,99347,M6,OPJt1: 2x1 mosaic,done
+Opnav K 3x2 test,,NAV,19-Dec,353,1:37,0:17,1:54,F,12,6,27,0,2.6,3.58,0.1,0.1,0.0,99347,M6,3x2 mosaic,done
+Opnav K 2x3 test,,NAV,19-Dec,353,1:57,0:17,2:14,F,12,6,27,0,2.6,3.58,0.1,0.1,0.0,99347,M6,2x3 mosaic,done
+Opnav K 2x2 test,,NAV,19-Dec,353,2:17,0:17,2:34,F,12,4,27,0,2.6,2.38,0.1,0.0,0.0,99347,M6,2x2 mosaic,done
+Multispectral Rotation Seq.,,MSI,19-Dec,353,21:00,11:24,8:24,,8,780,18,5,4,302.21,10.6,5.3,3.5,99347,Eros,(TABLE5+FAST),done
+,,,,,,,,,12,40,25,0-7,2.5,24.80,0.9,0.4,0.3,99347,Eros,"MSI_MSRot_1: one filter 5 image every 1/2 deg of rot., 7 additional filters every 10 deg for 1.1 Eros rotation each.  Auto exp. (FAST) *EROS = 2 pixels",done
+70m downlink track,43,,20-Dec,354,16:25,13:10,5:35,,,,,,,363.75,12.76,6.36,4.26,,,SDC test - read down twice,
+NIS Cal target 7,,NIS,11-Jan,011,0:30,0:32,1:02,,,100,,,,0.11,0.0,0.0,0.0,00010,cal target,NIS_Caltarg_7: Standard NIS_CAL,done
+Canopus Calibration 4 part b,,MSI,11-Jan,011,1:15,1:00,2:15,,12,640,"3,5,6, 11,12","1,3,4,5,6",2.5,396.75,13.9,6.9,4.6,00010,Canopus,"MSI_Cancal_4b: 16 images slewing across 2 pixels with Canopus, repeat at 8 positions (FAST)",done
+70m downlink track,43,,11-Jan,011,16:00,8:00,0:00,,,,,,,396.86,13.92,6.93,4.64,,,,
+Canopus Calibration 4 part a,,MSI,12-Jan,012,0:30,1:00,1:30,,12,128,"2,3,4, 5,6,11, 12, 23",0-7,2.5,79.35,2.8,1.4,0.9,00010,Canopus,"MSI_Cancal_4a: 16 images slewing across 2 pixels with Canopus, repeat (filters 0-7) (FAST)",done
+MSI Movie 1 (sun roll ref),,MSI,12-Jan,012,4:45,5:54,10:39,,8,794,18,4,4,307.64,10.8,5.4,3.6,00010,Eros,MSI_Movie1: one filter 4 image every 1/2 deg of rot. for 1.1 Eros rotation.  Auto exp. (TABLE5+FAST),done
+70m downlink track,43,,12-Jan,012,16:00,8:00,0:00,,,,,,,386.99,13.58,6.76,4.53,,,,
+Satellite Search A (sun roll ref),,MSI,13-Jan,013,4:05,3:00,7:05,,12,288,29,0,2.5,178.54,6.3,3.1,2.1,00010,Eros,"MSI_SatSrchA: Take 8 frames(while slewing diagonally across 2x2 pixels) at each of the 6 positions in a 2x3 mosaic centered on Eros. Repeat 5 additional times. Covers 6000x6000 km region. Clr filter, man exp 999 ms,FAST).",done
+MSI Multispectral Light Curve 1 (sun roll ref),,MSI,13-Jan,013,12:00,5:54,17:54,,12,104,25,0-7,2.5,64.47,2.3,1.1,0.8,00010,Eros,MSI_MSLtCv1: 8 filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST),done
+70m downlink track,43,,13-Jan,013,19:20,7:10,2:30,,,,,,,243.01,8.53,4.25,2.84,,,,
+Opnav B Prime 100 (sun roll ref),,NAV,14-Jan,014,9:30,0:20,9:50,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00010,Eros,"OPBP_100:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,15-Jan,015,19:25,4:15,23:40,,,,,,,9.92,0.35,0.17,0.12,,,,
+Opnav B Prime 101 (sun roll ref),,NAV,16-Jan,016,14:00,0:20,14:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00010,Eros,"OPBP_101:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,17-Jan,017,17:30,3:15,20:45,,,,,,,4.96,0.17,0.09,0.06,,,,
+MSI Multispectral Light Curve 2,,MSI,18-Jan,018,9:00,5:54,14:54,,12,104,25,0-7,2.5,64.47,2.3,1.1,0.8,00017,Eros,MSI_MSLtCv2: 8 filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST),done
+70m downlink track,43,,18-Jan,018,16:00,8:00,0:00,,,,,,,64.47,2.26,1.13,0.75,,,,
+Opnav B Prime 102,,NAV,19-Jan,019,2:30,0:20,2:50,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00017,Eros,"OPBP_102:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+NIS Low Phase Flyby test 2,,NIS,19-Jan,019,10:00,,,,,,,,,,,,,,,,done
+,,NIS,19-Jan,019,10:09,0:14,10:23,,,19,,,,0.02,0.0,0.0,0.0,00017,space,GLOBAL_MAP_50_IN,done
+,,NIS,19-Jan,019,10:25,7:30,17:55,,,1707,,,,1.96,0.1,0.0,0.0,00017,space,LAT_SCANS_50-45_IN,done
+,,NIS,19-Jan,019,17:59,0:15,18:14,,,36,,,,0.04,0.0,0.0,0.0,00017,space,GLOBAL_MAP_45_IN,done
+,,NIS,19-Jan,019,18:20,3:50,22:10,,,842,,,,0.96,0.0,0.0,0.0,00017,space,LAT_SCANS_45-40_IN,done
+,,NIS,19-Jan,019,22:15,0:50,23:05,,,1753,,,,2.01,0.1,0.0,0.0,00017,space,FULL_NIXEL_TEST,done
+,,NIS,19-Jan,019,23:32,4:35,4:07,,,49,,,,0.06,0.0,0.0,0.0,00017,space,InGas_OPT_LAT_SCAN_40-30_IN,done
+,,NIS,20-Jan,020,2:10,0:15,2:25,,,1820,,,,2.08,0.1,0.0,0.0,00017,space,GLOBAL_MAP_40_IN,done
+,,NIS,20-Jan,020,2:30,0:30,3:00,,,90,,,,0.10,0.0,0.0,0.0,00017,space,GLOBAL_MAP_30_IN,done
+,,NIS,20-Jan,020,3:02,1:00,4:02,,,400,,,,0.46,0.0,0.0,0.0,00017,space,InGas_OPT_LAT_SCAN_30-20_IN,done
+,,NIS,20-Jan,020,4:55,2:38,7:33,,,500,,,,0.57,0.0,0.0,0.0,00017,space,GLOBAL_MPPS_IN,done
+,,NIS,20-Jan,020,7:56,0:55,8:51,,,228,,,,0.26,0.0,0.0,0.0,00017,space,LOW_PHASE_MPPS,done
+,,NIS,20-Jan,020,8:55,1:32,10:27,,,422,,,,0.48,0.0,0.0,0.0,00017,space,GLOBALS_OUT,done
+,,NIS,20-Jan,020,11:05,0:48,11:53,,,166,,,,0.19,0.0,0.0,0.0,00017,space,LAT_SCANS_OUT,done
+End of NIS Low Phase Flyby,,NIS,20-Jan,020,11:54,,,,,,,,,,,,,,,,done
+70m downlink track,14,,20-Jan,020,12:40,2:00,14:40,,,,,,,14.16,0.50,0.09,0.06,,,mock LPF - read down twice,
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+NLR MSI alignment test,,NLR,21-Jan,21,22:45,0:05,22:50,,12,16,17,7,2.5,9.92,0.3,0.2,0.1,00017,undefined,"MSI_NLR_align_test: 4 images taken 1 sec apart in 4 sets. Timed to occur before, during and after 2 8 hz bursts.",done
+70m downlink track,43,,21-Jan,021,20:40,5:30,2:10,,,,,,,9.92,0.35,0.17,0.12,,,,
+Opnav B Prime 103,,NAV,22-Jan,022,2:00,0:20,2:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00017,Eros,"OPBP_103:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+MSI Movie 3,,MSI,22-Jan,022,5:30,5:54,11:24,,8,780,18,4,4,302.21,10.6,5.3,3.5,00017,Eros,MSI_Movie3: one filter 4 image every 1/2 deg of rot. for 1.1 Eros rotation.  Auto exp. (TABLE5+FAST),done
+70m downlink track,43,,22-Jan,022,22:15,4:45,3:00,,,,,,,307.17,10.78,5.37,3.60,,,,
+Opnav B Prime 104,,NAV,24-Jan,024,14:00,0:20,14:20,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00017,Eros,"OPBP_104:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,24-Jan,024,15:55,4:50,20:45,,,,,,,619.30,21.73,10.82,7.25,,,,
+Opnav B Prime 105,,NAV,25-Jan,025,3:00,0:20,3:20,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00024,Eros,"OPBP_105:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+NIS Nixel Raster Test narrow slit,,NIS,25-Jan,025,3:30,4:25,7:55,,,1350,,,,1.55,0.1,0.0,0.0,00024,Eros,NIS_NixRasTst_narrow: 6x8 mosaic in NIS Narrow slit (25*(14+2+4)),done
+MSI Support images of narrow NIS Test,,NIS,25-Jan,025,3:30,4:25,7:55,,8,144,1,4,4,55.79,2.0,1.0,0.7,00024,Eros,MSI_NixRasTst_narrow: 3 images taken at each position of 6x8 mosaic (TABLE5+FAST),done
+NIS Nixel Raster Test wide slit,,NIS,25-Jan,025,8:50,4:03,12:53,,,118,,,,0.14,0.0,0.0,0.0,00024,Eros,NIS_NixRasTst_wide: 10x8 mosaic in NIS Wide slit (12*(14+2+4)),done
+MSI Support images of wide NIS Test,,NIS,25-Jan,025,8:50,4:03,12:53,,8,240,2,4,4,92.99,3.3,1.6,1.1,00024,Eros,MSI_NixRasTst_wide: 3 images taken at each position in 10x8 mosaic (TABLE5+FAST),done
+NIS Cal target 8,,NIS,25-Jan,025,14:30,0:32,15:02,,,100,,,,0.11,0.0,0.0,0.0,00024,cal target,NIS_Caltarg_8: Standard NIS_CAL,done
+70m downlink track,43,,25-Jan,025,16:00,8:00,0:00,,,,,,,67.26,2.36,1.15,0.77,,,,
+MSI Multispectral Light Curve 3,,,26-Jan,026,2:00,5:54,7:54,,12,104,25,0-7,2.5,64.47,2.3,1.1,0.8,00024,Eros,MSI_MSLtCv3: 8 filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST),done
+Opnav B Prime 106,,NAV,26-Jan,026,11:00,0:20,11:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_106:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,26-Jan,026,17:35,6:25,0:00,,,,,,,4.96,0.17,0.09,0.06,,,,
+Opnav B Prime 107,,NAV,27-Jan,027,14:00,0:20,14:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_107:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,27-Jan,027,20:00,7:15,3:15,,,,,,,4.96,0.17,0.09,0.06,,,,
+Satellite Search B (sun roll ref),,MSI,28-Jan,028,8:00,2:36,10:36,,12,168,"7,26",0,2.5,104.15,3.7,1.8,1.2,00024,Eros,"MSI_SatSrchB: Cover region (+/- 125Er) with 7x6 mosaic. Slew so boresight moves 0.01 deg/s in direction that is 3 long pixels by 50 urad in short pix direction. Take 4 pics for each position in mosaic, spaced 3 sec apart. 1 auto, 3 man exp (999ms). (FAST)",done
+Opnav B Prime 108,,NAV,28-Jan,028,13:00,0:20,13:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_108:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,28-Jan,028,19:00,7:15,2:15,,,,,,,109.11,3.83,1.91,1.28,,,,
+Opnav B Prime 109,,NAV,29-Jan,029,6:00,0:20,6:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_109:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+MSI Multispectral Light Curve 4,,MSI,29-Jan,029,8:00,5:54,13:54,,12,104,25,0-7,2.5,64.47,2.3,1.1,0.8,00024,Eros,MSI_MSLtCv4: 8 filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST) *EROS= 15 pixels,done
+NIS MSLtCv 4,,MSI,29-Jan,029,8:00,5:54,13:54,,,1575,,,,1.80,0.0,0.0,0.0,00024,Eros,NIS_Movie4: Narrow (4x16sec spectra+2 r+4dark) 315 exec. Mp 75,done
+70m downlink track,43,,29-Jan,029,16:00,8:00,0:00,,,,,,,69.43,2.44,1.21,0.81,,,,
+Opnav B Prime 110,,NAV,30-Jan,030,13:30,0:20,13:50,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_110:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,30-Jan,030,16:00,8:00,0:00,,,,,,,140.67,4.90,2.45,1.65,,,,
+Opnav B Prime 111,,NAV,31-Jan,031,15:05,0:20,15:25,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00024,Eros,"OPBP_111:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,31-Jan,031,15:45,5:00,20:45,,,,,,,4.96,0.17,0.09,0.06,,,,
+NIS Mirror Plane Test,,NIS,31-Jan,031,23:00,2:12,1:12,,,4920,,,,5.64,0.2,0.0,0.0,00031,Eros,"NIS_MirrorPlaneTst: Test Mirror plane alignment  Narrow (486x1), Wide (486x1) positions 45,75,125,175,225",done
+MSI Support images,,NIS,31-Jan,031,23:00,2:12,1:12,,8,84,18,0,4,32.55,1.1,0.6,0.4,00031,Eros,MSI_MirrorPlaneSup: images every 12 seconds when NIS on mp 75 (TABLE5+FAST),done
+Opnav B Prime 112,,NAV,01-Feb,032,6:00,0:20,6:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00031,Eros,"OPBP_112:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+NIS Mirror Geometry Test 1,,NIS,01-Feb,032,6:30,3:00,9:30,,,1857,,,,2.13,0.1,0.0,0.0,00031,Eros,NIS_MirrorGeom1: Test mirror steps; mp 76 to 46 odd and 47 to 75 even; 58 1 second spectra per mirror step,done
+MSI Support images 1,,NIS,01-Feb,032,6:30,3:00,9:30,,8,37,18,0,4,14.34,0.5,0.3,0.2,00031,Eros,MSI_MirrorGeomSup1: images every 12 seconds when NIS on mp 72 - 79 (TABLE5+FAST),done
+70m downlink track,14,,01-Feb,032,12:40,6:05,18:45,,,,,,,59.60,2.09,0.91,0.61,,,,
+Opnav B Prime 113,,NAV,03-Feb,034,10:00,0:20,10:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00033,Eros,"OPBP_113:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+RND BURN 1,,,03-Feb,034,17:00,,,,,,,,,,,,,,,,
+Opnav B Prime 114,,NAV,03-Feb,034,18:00,0:20,18:20,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00033,Eros,"OPBP_114:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 115,,NAV,03-Feb,034,21:00,0:20,21:20,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00033,Eros,"OPBP_115:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,03-Feb,034,21:30,4:00,1:30,,,,,,,9.92,0.35,0.17,0.12,,,,
+Opnav B Prime 116,,NAV,04-Feb,035,1:50,0:20,2:10,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00033,Eros,"OPBP_116:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+MSI NAV Movie,,MSI,04-Feb,035,6:20,5:30,11:50,,8,26,18,4,4,10.07,0.4,0.2,0.1,00033,Eros,MSI_NAVMovie: one filter 4 image every 15 deg of rot. for 1.1 Eros rotation.  Auto exp. (TABLE5+FAST),done
+34 m downlink track,63,,04-Feb,035,12:35,7:00,19:35,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav B Prime 117,,NAV,04-Feb,035,19:55,0:20,20:15,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_117:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 118,,NAV,05-Feb,036,0:00,0:20,0:20,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_118:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+NIS Mirror Geometry Test 2,,NIS,05-Feb,036,1:00,3:00,4:00,,,7367,,,,8.44,0.3,0.0,0.0,00035,Eros,NIS_MirrorGeom2: Test mirror steps; mp 75 to 199 odd and 200 to 74 even; 58 1 second spectra per mirror step,done
+MSI Support images,,NIS,05-Feb,036,1:00,3:00,4:00,,8,35,18,0,4,13.56,0.5,0.2,0.2,00035,Eros,MSI_MirrorGeomSup2: images every 12 seconds when NIS on mp 72 - 79 (TABLE5+FAST),done
+Opnav B Prime 119,,NAV,05-Feb,036,4:55,0:12,5:07,T,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_119:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,63,,05-Feb,036,5:10,6:05,11:15,,,,,,,5.39,0.19,0.09,0.06,,,,
+Opnav B Prime 120,,NAV,05-Feb,036,11:35,0:20,11:55,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_120:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 121,,NAV,05-Feb,036,18:00,0:20,18:20,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_121:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 122,,NAV,06-Feb,037,1:00,0:20,1:20,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_122:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+MSI Movie 6,,MSI,06-Feb,037,1:45,5:54,7:39,,8,780,18,4,4,302.21,10.6,5.3,3.5,00035,Eros,MSI_Movie6: one filter 4 image every 1/2 deg of rot. for 1.1 Eros rotation.  Auto exp. (TABLE5+FAST),done
+NIS Movie 6,,MSI,06-Feb,037,1:45,5:54,7:39,,,1575,,,,1.80,0.1,0.0,0.0,00035,Eros,NIS_Movie6: Narrow (4x16sec spectra+2 r+4dark) 315 exec. Mp 75,done
+MSI Multispectral Light Curve 6,,MSI,06-Feb,037,8:30,5:54,14:24,,12,616,25,0-7,2.5,381.87,13.4,6.7,4.5,00035,Eros,MSI_MSLtCv6: 8 filters every 5 deg for 1.1 Eros rotation.  Auto exp. (FAST) *EROS= 30 pixels,done
+Opnav B Prime 123,,NAV,06-Feb,037,17:50,0:12,18:02,F,12,8,"8,9,29",4,2.3,5.39,0.2,0.1,0.1,00035,Eros,"OPBP_123:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,06-Feb,037,18:05,10:55,5:00,,,,,,,696.67,24.44,12.14,8.13,,,,
+Opnav B Prime 126,,NAV,07-Feb,038,5:31,0:20,5:51,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_126:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Canopus Calibration 5,,MSI,07-Feb,038,6:00,1:00,7:00,,12,128,"2,3,4, 5,6,11, 12, 23",0-7,2.5,79.35,2.8,1.4,0.9,00038,Canopus,"MSI_Cancal_5: 16 images slewing across 2 pixels with Canopus, repeat (filters 0-7) (FAST)",done
+NIS Cal target  9,,NIS,07-Feb,038,7:30,0:32,8:02,,,100,,,,0.11,0.0,0.0,0.0,00038,cal target,NIS_Caltarg_9: Standard NIS_CAL,done
+Opnav B Prime 127,,NAV,07-Feb,038,8:51,0:20,9:11,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_127:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 128,,NAV,07-Feb,038,13:51,0:20,14:11,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_128:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+34m downlink track,45,,07-Feb,038,17:30,4:00,21:30,,,,,,,94.34,3.31,1.65,1.10,,,,
+Opnav B Prime 129,,NAV,08-Feb,039,2:51,0:20,3:11,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_129:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Opnav B Prime 130,,NAV,08-Feb,039,15:00,0:20,15:20,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_130:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,08-Feb,039,16:00,6:30,22:30,,,,,,,9.92,0.35,0.17,0.12,,,,
+RND BURN 2,,,08-Feb,039,22:00,,,,,,,,,,,,,,,,
+Opnav B Prime 131,,NAV,08-Feb,039,22:45,0:20,23:05,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00038,Eros,"OPBP_131:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,08-Feb,039,23:30,1:15,0:45,,,,,,,9.92,0.35,0.17,0.12,,,,
+Opnav B Prime 132,,NAV,09-Feb,040,2:00,0:20,2:20,T,12,8,"8,9,29",0,2.5,9.92,0.3,0.2,0.1,00038,Eros,"OPBP_132:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms",done
+34m downlink track,65,,09-Feb,040,5:35,2:00,7:35,,,,,,,9.92,0.35,0.17,0.12,,,,
+Opnav B Prime 133,,NAV,09-Feb,040,7:25,0:20,7:45,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_133:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Multispectral Light Curve 7,,MSI,09-Feb,040,8:15,5:58,14:13,,12,104,25,0-7,2.5,64.47,2.3,1.1,0.8,00038,Eros,MSI_MSLtCv7: 8  filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST) *EROS = 50 pixels,done
+Opnav B Prime 134,,NAV,09-Feb,040,14:51,0:20,15:11,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_134: 8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,09-Feb,040,16:00,4:30,20:30,,,,,,,94.23,2.61,1.30,0.87,,,,
+Opnav B Prime 135,,NAV,10-Feb,040,20:18,0:20,20:38,F,12,8,"8,9,29",0,2.5,4.96,0.2,0.1,0.1,00038,Eros,"OPBP_135:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Satellite Search D (sun roll ref),,MSI,10-Feb,041,1:30,6:50,8:20,,12,416,"7,26",0,2.5,257.89,9.0,4.5,3.0,00038,Eros,"MSI_SatSrchD: Cover region (+/- 100 Er) with 13x8 mosaic.Slew so boresight moves .01deg/s in direction that is 3 long pixels by 50 urad in short pix direction. Take 3 pics for each position in mosaic, spaced 3 sec apart.  1 auto, 3 man  exp (999ms, FAST).",done
+Opnav B Prime 136,,NAV,10-Feb,041,8:28,0:20,8:48,T,12,8,"8,9,29",0,2.3,10.78,0.4,0.2,0.1,00038,Eros,"OPBP_136:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+MSI Movie 7,,MSI,10-Feb,041,8:55,6:00,14:55,,8,780,18,4,3.9,309.96,10.9,5.4,3.6,00038,Eros,"MSI_Movie7: one filter 4 image every 1/2 deg of rot., (TABLE5+FAST)",done
+NIS Movie 7,,MSI,10-Feb,041,8:55,6:00,14:55,,,1575,,,,1.80,0.1,0.0,0.0,00038,Eros,NIS_Movie7: Narrow (4x16sec spectra+2 r+4dark) 315 exec. Mp 75,done
+Opnav B Prime 137,,NAV,10-Feb,041,15:21,0:20,15:41,T,12,8,"8,9,29",0,2.3,10.78,0.4,0.2,0.1,00038,Eros,"OPBP_137:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,10-Feb,041,16:00,9:00,1:00,,,,,,,596.17,20.92,10.39,6.96,,,,
+Opnav B Prime 138,,NAV,11-Feb,042,0:50,0:20,1:10,T,12,8,"8,9,29",0,2.3,10.78,0.4,0.2,0.1,00038,Eros,"OPBP_138:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Global Morphology 1,,NAV/MSI,11-Feb,042,2:40,5:35,8:15,,8,780,18,4,2.3,525.59,18.4,9.2,6.2,00038,Eros,MSI_GM_1: 1 filter 4 every 1/2 deg for another Eros rotation.  Autoexp. (TABLE5+FAST) *EROS = 70 pixels,done
+NIS Global Morph 1,,NAV/MSI,11-Feb,042,2:40,5:35,8:15,,,1495,,,,1.71,0.1,0.0,0.0,00038,Eros,NIS_GM_1: Wide (4x16sec spectra+2 r+4dark) 299 exec. Mp 75,done
+Multispectral Light Curve 8,,MSI,11-Feb,042,8:30,5:18,13:48,,12,104,25,0-7,2.3,70.08,2.5,1.2,0.8,00038,Eros,MSI_MSLtCv8: 8 filters every 30 deg for 1.1 Eros rotation.  Auto exp. (FAST) *EROS = 80 pixels,done
+NIS Multispectral Light Curve 8,,MSI,11-Feb,042,8:30,5:18,13:48,,,1495,,,,1.71,0.1,0.0,0.0,00038,Eros,NIS_MSLtCv8: Narrow (4x16sec spectra+2 r+4dark) 299 exec. Mp 75,done
+Opnav B Prime 139,,NAV,11-Feb,042,15:20,0:20,15:40,T,12,8,"8,9,29",0,2.3,10.78,0.4,0.2,0.1,00038,Eros,"OPBP_139:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+70m downlink track,43,,11-Feb,042,16:00,7:00,23:00,,,,,,,620.65,21.78,10.79,7.22,,,,
+Opnav B Prime 140,,NAV,11-Feb,042,22:50,0:20,23:10,T,12,8,"8,9,29",0,2.3,10.78,0.4,0.2,0.1,00038,Eros,"OPBP_140:8 clr filter images 5 exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+Star Calibration 1,,NAV,12-Feb,043,0:15,0:10,0:25,,12,3,29,0,1.9,4.89,0.2,0.1,0.1,00038,undefined,"StarCal_1: Point anti-NADIR, 2 seq 29,return",done
+Multispectral Rotation Seq.,,MSI,12-Feb,043,0:30,11:25,11:55,,8,780,18,4,3.2,377.76,13.3,6.6,4.4,00038,Eros,MSI_MSRot_1: one filter 4 image every 1/2 deg of rot. (TABLE5+FAST),done
+,,,,,,,,,12,210,1,1-7,1.9,171.29,6.0,3.0,2.0,00038,Eros,7 filters every 12 deg for 1.1 Eros rotation.  Auto exp. (FAST) *EROS = 125 pixels,done
+NIS Multispectral Rotation Seq.,,MSI,12-Feb,043,0:30,5:32,6:02,,,1415,,,,1.62,0.1,0.0,0.0,00038,Eros,"NIS_MSRot_1: Mirror position 73-77 w/ 16 sec integration, 283 executes.",done
+70m downlink track,14,,12-Feb,043,12:30,16:45,5:15,,,,,,,566.36,19.87,9.87,6.61,,,downlink MSI_MSRot two times,
+Opnav B Prime 141 (sun roll ref),,NAV,13-Feb,044,05:15,00:11,05:26,F,12,8,"8,9,29",0,2.3,5.39,0.2,0.1,0.1,00045,Eros,"OPBP_141:8 clr filter images exposed for Eros, 3 exposed for stars (1 999 ms, 3 auto, 2 short, 2 999ms)",done
+NIS Low Phase Flyby,,NIS,13-Feb,044,07:03,,,,,,,,,,,,,,,,
+,,NIS,13-Feb,044,07:03,00:14,07:17,,,26,,,,0.03,0.0,0.0,0.0,00045,Eros,GLOBAL_MAP_50_IN,done
+,,NIS,13-Feb,044,07:19,07:30,14:49,,,1777,,,,2.04,0.1,0.0,0.0,00045,Eros,LAT_SCANS_50-45_IN,done
+,,NIS,13-Feb,044,14:53,00:15,15:08,,,37,,,,0.04,0.0,0.0,0.0,00045,Eros,GLOBAL_MAP_45_IN,done
+,,NIS,13-Feb,044,15:14,03:50,19:04,,,842,,,,0.96,0.0,0.0,0.0,00045,Eros,LAT_SCANS_45-40_IN,done
+,,NIS,13-Feb,044,19:09,00:50,19:59,,,1753,,,,2.01,0.1,0.0,0.0,00045,Eros,FULL_NIXEL_TEST,done
+,,NIS,13-Feb,044,20:04,00:15,20:19,,,58,,,,0.07,0.0,0.0,0.0,00045,Eros,GLOBAL_MAP_40_IN,done
+,,NIS,13-Feb,044,20:26,02:53,23:19,,,1386,,,,1.59,0.1,0.0,0.0,00045,Eros,InGas_OPT_LAT_SCAN_40-30_IN,done
+,,NIS,13-Feb,044,23:24,00:25,23:49,,,82,,,,0.09,0.0,0.0,0.0,00045,Eros,GLOBAL_MAP_30_IN,done
+,,NIS,13-Feb,044,23:56,01:50,01:46,,,810,,,,0.93,0.0,0.0,0.0,00045,Eros,InGas_OPT_LAT_SCAN_30-20_IN,done
+,,NIS,14-Feb,045,01:49,02:56,04:45,,,519,,,,0.59,0.0,0.0,0.0,00045,Eros,GLOBAL_MPPS_IN,done
+,,NIS,14-Feb,045,04:50,00:55,05:45,,,228,,,,0.26,0.0,0.0,0.0,00045,Eros,LOW_PHASE_MPPS,done
+,,NIS,14-Feb,045,05:49,00:55,06:44,,,161,,,,0.18,0.0,0.0,0.0,00045,Eros,GLOBALS_OUT,done
+End of NIS Low Phase Flyby,,NIS,14-Feb,045,06:44,,,,,,,,,,,,,,,,
+70m  track (26.4 kb/s),63,,14-Feb,045,08:35,02:20,10:55,,,,,,,14.19,0.50,0.10,0.06,,,read down twice,
+Total images for Appraoch,,,,,,,,,,9698,,,,,,,,,,,
+Total spectra for Approach,,,,,,,,,,48785,,,,,,,,,,,
+Orbit Insertion ,,,14-Feb,045,15:33,,,,,,,,,,,,,,,,
+Opnav K OIM1 3x4,,NAV,14-Feb,045,16:33,00:20,16:53,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00045,Eros,OPK_OIM1_3x4: 3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,14-Feb,045,17:00,03:30,20:30,,,,,,,14.88,0.52,0.26,0.17,,,,
+ Opnav K OIM2 3x4,,NAV,14-Feb,045,20:33,00:20,20:53,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00045,Eros,OPK_OIM2_3x4: 3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,14-Feb,045,21:00,03:45,00:45,,,,,,,14.88,0.52,0.26,0.17,,,,
+ Opnav H3,,NAV,15-Feb,046,01:50,00:18,02:08,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00045,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H4,,NAV,15-Feb,046,08:10,00:18,08:28,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00045,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 46,,NAV,15-Feb,046,11:00,00:25,11:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00045,Eros,DailyGlobal_46: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 46,,NAV,15-Feb,046,11:00,00:25,11:25,,,196,,,,0.22,0.0,0.0,0.0,00045,Eros,NIS_DailyGlobal_46: 6x7 mosaics during above slew,done
+ Opnav H5,,NAV,15-Feb,046,14:30,00:18,14:48,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00045,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,15-Feb,046,14:50,07:55,22:45,,,,,,,26.50,0.93,0.46,0.31,,,,
+ Opnav H6,,NAV,15-Feb,046,22:50,00:18,23:08,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00045,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 47,,NAV,16-Feb,047,02:00,00:25,02:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00045,Eros,DailyGlobal_47: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 47,,NAV,16-Feb,047,02:00,00:25,02:25,,,196,,,,0.22,0.0,0.0,0.0,00045,Eros,NIS_DailyGlobal_47: 6x7 mosaics during above slew,done
+ Opnav H7,,NAV,16-Feb,047,05:30,00:18,05:48,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00045,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+NIS Cal target O1,,NIS,16-Feb,047,07:45,01:00,08:45,,,100,,,,0.11,0.0,0.0,0.0,00045,Cal target,NIS_Caltarg_O1: Standard NIS_CAL,done
+Global Morphology 3x3,,NAV/MSI,16-Feb,047,09:15,06:10,15:25,,8,243,18,4,2.6,144.85,5.1,2.5,1.7,00045,Eros,"MSI_GM_3x3: Mosaics every 15 deg for 1 rotation. Filter 4, autoexposure  (FAST)",done
+NIS Global Morph 3x3,,NAV/MSI,16-Feb,047,09:15,06:10,15:25,,,2916,,,,3.34,0.1,0.1,0.0,00045,Eros,NIS_GM_3x3: 6x5 mosaics during above slew (3 sec),done
+70m  track (26.4 kb/s),43,,16-Feb,047,15:35,05:10,20:45,,,,,,,169.22,5.94,2.96,1.98,,,,
+ Opnav H9,,NAV,17-Feb,048,12:30,00:18,12:48,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 48,,NAV,17-Feb,048,13:30,00:25,13:55,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00048,Eros,DailyGlobal_48: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 48,,NAV,17-Feb,048,13:30,00:25,13:55,,,196,,,,0.22,0.0,0.0,0.0,00048,Eros,NIS_DailyGlobal_48: 6x7 mosaics during above slew,done
+ Opnav H10,,NAV,17-Feb,048,15:15,00:18,15:33,T,8,9,27,4,2.5,11.16,0.4,0.2,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,17-Feb,048,15:35,07:40,23:15,,,,,,,26.50,0.93,0.46,0.31,,,,
+ Opnav H11,,NAV,17-Feb,048,23:20,00:18,23:38,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 49,,NAV,18-Feb,049,02:00,00:25,02:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00048,Eros,DailyGlobal_49: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 49,,NAV,18-Feb,049,02:00,00:25,02:25,,,196,,,,0.22,0.0,0.0,0.0,00048,Eros,NIS_DailyGlobal_49: 6x7 mosaics during above slew,done
+ Opnav H12,,NAV,18-Feb,049,07:00,00:18,07:18,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H13,,NAV,18-Feb,049,12:00,00:18,12:18,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H14,,NAV,18-Feb,049,14:45,00:18,15:03,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,18-Feb,049,15:05,05:05,20:10,,,,,,,32.08,1.13,0.56,0.38,,,,
+ Opnav H15,,NAV,18-Feb,049,20:20,00:18,20:38,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 50,,NAV,19-Feb,050,04:00,00:25,04:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00048,Eros,DailyGlobal_50: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 50,,NAV,19-Feb,050,04:00,00:25,04:25,,,196,,,,0.22,0.0,0.0,0.0,00048,Eros,NIS_DailyGlobal_50: 6x7 mosaics during above slew,done
+Global Morphology 2,,NAV/MSI,19-Feb,050,08:45,06:00,14:45,,8,234,18,4,2.6,139.48,4.9,2.4,1.6,00048,Eros,"MSI_GM_2: 2x3 every 10 deg for 1.1 Eros rotation.  One filter, autoexp. (TABLE 5 + FAST)",done
+,,,,,,,,,8,234,14,4,2.6,139.48,4.9,2.4,1.6,00048,Eros,Clean (TABLE 5 + FAST),done
+NIS Global Morph 2,,NAV/MSI,19-Feb,050,08:45,06:00,14:45,,,2808,,,,3.22,0.1,0.1,0.0,00048,Eros,"NIS_GM_2: 6 mirror pos, 3 sec integr/pos during above 2x3 slew",done
+70m  track (26.4 kb/s),43,,19-Feb,050,15:05,05:55,21:00,,,,,,,297.52,10.44,5.20,3.48,,,,
+ Opnav H16,,NAV,19-Feb,050,21:05,00:18,21:23,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H17,,NAV,20-Feb,051,05:00,00:18,05:18,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H18,,NAV,20-Feb,051,09:00,00:18,09:18,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 51,,NAV,20-Feb,051,13:00,00:25,13:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00048,Eros,DailyGlobal_51: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 51,,NAV,20-Feb,051,13:00,00:25,13:25,,,196,,,,0.22,0.0,0.0,0.0,00048,Eros,NIS_DailyGlobal_51: 6x7 mosaics during above slew,done
+ Opnav H19,,NAV,20-Feb,051,14:30,00:18,14:48,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,20-Feb,051,14:50,05:10,20:00,,,,,,,32.08,1.13,0.56,0.38,,,,
+ Opnav H20,,NAV,20-Feb,051,20:05,00:18,20:23,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav H21,,NAV,21-Feb,052,03:00,00:18,03:18,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Global Morphology 3,,NAV/MSI,21-Feb,052,04:30,06:00,10:30,,8,234,18,4,2.6,139.48,4.9,2.4,1.6,00048,Eros,"MSI_GM_3: 2x3 every 10 deg for 1.1 Eros rotation.  One filter, autoexp. (TABLE 5 + FAST)",done
+NIS Global Morph 3,,NAV/MSI,21-Feb,052,04:30,06:00,10:30,,,2808,,,,3.22,0.1,0.1,0.0,00048,Eros,"NIS_GM_3: 6 mirror pos, 3 sec integr/pos during above 2x3 slew",done
+ Opnav H22,,NAV,21-Feb,052,10:40,00:18,10:58,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 52,,NAV,21-Feb,052,12:00,00:25,12:25,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00048,Eros,DailyGlobal_52: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 52,,NAV,21-Feb,052,12:00,00:25,12:25,,,196,,,,0.22,0.0,0.0,0.0,00048,Eros,NIS_DailyGlobal_52: 6x7 mosaics during above slew,done
+ Opnav H23,,NAV,21-Feb,052,17:15,00:18,17:33,F,8,9,27,4,2.5,5.58,0.2,0.1,0.1,00048,Eros,3x3 mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),43,,21-Feb,052,18:00,06:00,00:00,,,,,,,174.78,6.13,3.05,2.05,,,,
+ Opnav 53a KF,,NAV,22-Feb,053,00:05,00:17,00:22,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 53b KF,,NAV,22-Feb,053,05:05,00:17,05:22,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 53c KF,,NAV,22-Feb,053,11:35,00:17,11:52,T,8,6,27,4,2.5,7.44,0.3,0.1,0.1,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),14,,22-Feb,053,12:20,03:00,15:20,,,,,,,14.88,0.52,0.26,0.17,,,,
+Opnav 53d KL,,NAV,22-Feb,053,16:35,00:17,16:52,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00052,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 53,,NAV,22-Feb,053,21:00,00:30,21:30,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00052,Eros,DailyGlobal_53: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 53,,NAV,22-Feb,053,21:00,00:30,21:30,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_53: 6x7 mosaics during above slew,done
+ Opnav 53e KF,,NAV,22-Feb,053,22:40,00:17,22:57,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Star Calibration 053,,NAV,22-Feb,053,23:30,00:10,23:40,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00052,undefined,"Point anti-NADIR, 4 seq 29, return (FAST)",done
+Daily Global 54,,NAV,23-Feb,054,01:00,00:30,01:30,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00052,Eros,DailyGlobal_54: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 54,,NAV,23-Feb,054,01:00,00:30,01:30,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_54: 6x7 mosaics during above slew,done
+ Opnav 54a KF,,NAV,23-Feb,054,04:15,00:17,04:32,T,8,6,27,4,2.5,7.44,0.3,0.1,0.1,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+ Opnav 54b KF,,NAV,23-Feb,054,06:10,00:17,06:27,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Global Morphology 4,,NAV/MSI,23-Feb,054,09:15,05:30,14:45,,12,216,18,4,2.6,128.75,4.5,2.3,1.5,00052,Eros,"MSI_GM_4: 2x3 every 10 deg for 1.1 Eros rotation.  One filter, autoexp. (FAST)",done
+NIS Global Morph 4,,NAV/MSI,23-Feb,054,09:15,05:30,14:45,,,2808,,,,3.22,0.1,0.1,0.0,00052,Eros,"NIS_GM_4: 6 mirror pos, 5 sec integr/pos during above 2x3 slew",done
+70m  track (26.4 kb/s),43,,23-Feb,054,15:30,05:15,20:45,,,,,,,183.63,6.44,3.21,2.15,,,,
+ Opnav 54c KF,,NAV,23-Feb,054,20:50,00:17,21:07,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Star Calibration 054,,NAV,23-Feb,054,22:30,00:10,22:40,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00052,undefined,"Point anti-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 55a KF,,NAV,24-Feb,055,05:30,00:17,05:47,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Daily Global 55,,NAV,24-Feb,055,08:15,00:30,08:45,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00052,Eros,DailyGlobal_55: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 55,,NAV,24-Feb,055,08:15,00:30,08:45,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_55: 7x6 mosaics during above slew,done
+Star Calibration 055,,NAV,24-Feb,055,10:00,00:10,10:10,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00052,undefined,"Point anti-NADIR, 4 seq 29, return (FAST)",done
+ Opnav 55b KF,,NAV,24-Feb,055,11:35,00:17,11:52,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+70m  track (26.4 kb/s),14,,24-Feb,055,12:20,05:40,18:00,,,,,,,25.69,0.90,0.45,0.30,,,,
+Orbit Correction Man 1,,,24-Feb,055,17:00,,,,,,,,,,,,,,,,
+ Opnav 55c KL,,NAV,24-Feb,055,18:05,00:17,18:22,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00052,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,24-Feb,055,18:55,02:05,21:00,,,,,,,14.88,0.52,0.26,0.17,,,,
+ Opnav 55d KL,,NAV,24-Feb,055,21:05,00:17,21:22,T,8,12,27,4,2.5,14.88,0.5,0.3,0.2,00052,Eros,3x4 mosaic in filter 4 (TABLE 5 + FAST),done
+34 m track (8.8 kb/s),45,,25-Feb,056,00:45,03:15,04:00,,,,,,,14.88,0.52,0.26,0.17,,,,
+Star Calibration 056,,NAV,25-Feb,056,04:00,00:10,04:10,,12,4,29,0,2.6,2.38,0.1,0.0,0.0,00052,undefined,"Point anti-NADIR, 4 seq 29, return (FAST)",done
+Daily Global 56,,NAV,25-Feb,056,05:00,00:30,05:30,,8,16,18,4,2.6,9.54,0.3,0.2,0.1,00052,Eros,DailyGlobal_56: 4x4 in filter 4 (TABLE 5 + FAST),done
+NIS Daily Global 56,,NAV,25-Feb,056,05:00,00:30,05:30,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_56: 7x6 mosaics during above slew,done
+ Opnav 56b KF,,NAV,25-Feb,056,07:20,00:17,07:37,F,8,6,27,4,2.5,3.72,0.1,0.1,0.0,00052,Eros,2x3 start stop mosaic in filter 4 (TABLE 5 + FAST),done
+Multispectral Rotation 3, ,MSI,25-Feb,056,09:00,05:30,14:30, ,12,189,22,1-7,1,292.91,10.3,5.1,3.4,00052,Eros,MSI_MSRot_3: 2x2; seven filters every 45 deg of rot. for 1.1 Eros rotation.  Auto exp. (Uncompressed),done
+,,,,,,,,,12,189,21,1-7,1.7,172.30,6.0,3.0,2.0,00052,Eros,Clean (FAST),done
+NIS Multispectral Rotation 3,,MSI,25-Feb,056,09:00,05:30,14:30,,,282,,,,0.32,0.0,0.0,0.0,00052,Eros,"NIS_MSRot_3: 6 mirror pos, 5 sec, scanning with slew",done
+70m  track (26.4 kb/s),43,,25-Feb,056,15:30,08:00,23:30,,,,,,,481.40,16.89,8.42,5.63,,,,
+All MSI data were lost on days 57 and 58 due to DPU error.,,,,,,,,,,,,,,,,,,,,,
+NIS Daily Global 57,,NAV,26-Feb,057,10:00,00:30,10:30,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_57: 7x6 mosaics during above slew,done
+34 m track (8.8 kb/s),15,,26-Feb,057,12:15,06:50,19:05,,,,,,,0.22,0.01,0.00,0.00,,,,
+NIS Global Morph 5,,NAV/MSI,27-Feb,058,00:30,06:00,06:30,,,2808,,,,3.22,0.1,0.1,0.0,00052,Eros,"NIS_GM_5: 6 mirror pos, 3 sec integr/pos during above 2x3 slew",done
+NIS Daily Global 058,,NAV,27-Feb,058,12:30,00:30,13:00,,,196,,,,0.22,0.0,0.0,0.0,00052,Eros,NIS_DailyGlobal_058: 7x6 mosaics during above slew,done
+70m  track (26.4 kb/s),43,,27-Feb,058,16:55,07:15,00:10,,,,,,,3.44,0.12,0.05,0.04,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Total images for POI,,,,,,,,,,2031,,,,,,,,,,,
+Total spectra for POI,,,,,,,,,,17078,,,,,,,,,,,

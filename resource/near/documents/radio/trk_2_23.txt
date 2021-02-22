@@ -1,0 +1,271 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+OBJECT              = TEXT                                                    
+  PUBLICATION_DATE    = 1985-06-01                                            
+  NOTE                = "DSN Media Calibration Data File Software             
+                         Interface Specification.  Typed in from hard         
+                         copy original "                                      
+END_OBJECT          = TEXT                                                    
+END                                                                           
+                                                                              
+                        DOCUMENT 820-13; REV. A                               
+                        DSN SYSTEM REQUIREMENTS                               
+                       DETAILED INTERFACE DESIGN                              
+                                                                              
+                               TRK-2-23                                       
+                     DSN Tracking System Interfaces                           
+                    Media Calibration Data Interface                          
+                                                                              
+(Insert this module in Document 820-13; Rev. A)                               
+                                                                              
+EFFECTIVE DATE:  Mark IVA Implementation                                      
+---------------------------------------------------------------------         
+Initial Release Date: June 1, 1985                                            
+                                                                              
+                            Approved by: s/Joseph A. Wackley  (430)           
+                                         --------------------------           
+                                                                              
+                                         s/Herbert N. Royden  (335)           
+                                         --------------------------           
+                                                                              
+                                         s/Gene L. Goltz      (314)           
+                                         --------------------------           
+                                                                              
+A. PURPOSE                                                                    
+                                                                              
+      This module defines the formats and content of the media calibration    
+data provided by the Tracking System Analytic Calibration (TSAC) group.       
+                                                                              
+B. REVISION AND CONTROL                                                       
+                                                                              
+      Revisions or changes to the information herein presented may be         
+initiated in accordance with the procedures in Section I of this document.    
+                                                                              
+C. GENERAL INFORMATION                                                        
+                                                                              
+      Media calibrations provided by the DSN are used by project navigation   
+teams to improve the accuracy of spacecraft orbit determination; they are     
+also used by project Radio Science teams and other investigators.  The        
+calibrations comprise corrections for the effects of transmission media       
+(troposphere, ionosphere, and solar plasma) on the radio metric data.  The    
+media calibrations are to be provided at intervals determined by the accuracy 
+and timeliness requirements of the primary users and by negotiations with the 
+various DSN users.                                                            
+                                                                              
+D. DATA FORMATS                                                               
+                                                                              
+      1. General Description                                                  
+                                                                              
+            All TSAC calibrations are provided in the form of card images (or 
+punched cards, if necessary) in files on the JPL user's computer.  On the     
+Univac 1100/81 computers, the files are in field data format (SDF); on all    
+other computers, they are in American Standard Code for Information           
+Interchange (ASCII) format.                                                   
+                                                                              
+            TSAC media calibrations conform to the Command Statement          
+Processor (CSP) English-like command language used by the Orbit Determination 
+Program (ODP) to adjust, delete, or weight data points.  The language is      
+described in detail in the DPTRAJ-ODP User's Reference Manual (618-783 Rev.   
+B, Vol. 1, Section 36).                                                       
+                                                                              
+            In  general, a CSP command consists of a verb and optional scope  
+limiters and computation specifiers, terminated by a period.  A command may,  
+and frequently does, extend over more than one card image.  The CSP commands  
+produced by the TSAC software comprise a small subset of those used by the    
+ODP.  Elements of CSP commands used in the TSAC media calibrations are given  
+in Table TRK-2-23-2; examples of the calibrations are given below under the   
+sub-headings Tropospheric Calibrations, Ionospheric Calibrations, and Solar   
+Plasma Calibrations.                                                          
+                                                                              
+                                                                              
+   Table TRK-2-23-1.  CSP Elements Used in TSAC Media Calibrations            
+|===================================================================|         
+|      Type of Element      |  Elements Used                        |         
+|===========================|=======================================|         
+| Verbs                     | ADJUST, DELETE                        |         
+|---------------------------+---------------------------------------|         
+| Scope Limiters            | Time Span Limiters:                   |         
+|                           | FROM                BEFORE            |         
+|                           | TO                  AFTER             |         
+|                           | AT                                    |         
+|                           |                                       |         
+|                           | Network (Complex or Station):         |         
+|                           | DSN                                   |         
+|                           | C10                 11, 12, 13, 14    |         
+|                           | C40                 42, 43, 44        |         
+|                           | C60                 61, 62, 63        |         
+|                           |                                       |         
+|                           | Band:  S, X; L (VAX ODP only)         |         
+|                           |                                       |         
+|                           | Source:  SCID, QUASAR                 |         
+|                           |                                       |         
+|---------------------------+---------------------------------------|         
+| Computation Specifiers    | Series Type:                          |         
+|                           | BY NRMPOW            BY DNRMPOW       |         
+|                           | BY CONST             BY DCONST        |         
+|                           | BY TRIG              BY DTRIG         |         
+|                           |                                       |         
+|                           | Model:                                |         
+|                           | DRY NUPART (dry troposphere)          |         
+|                           | WET NUPART (tropospheric water vapor) |         
+|                           | CHPART (ionosphere)                   |         
+|                           | DRVID (ionosphere + solar plasma)     |         
+|                           |                                       |         
+|                           | Data Type:                            |         
+|                           | DOPPLER            F1, F2, F3, F3C    |         
+|                           | RANGE              PLOP               |         
+|                           | VLBI                                  |         
+|                           | DVLBI                                 |         
+|                           |                                       |         
+|===========================|=======================================|         
+                                                                              
+      2. Time Formats                                                         
+                                                                              
+            Times are preceded by a time-span limiter (FROM, TO, AT,          
+BEFORE, or AFTER) and are enclosed in parentheses.  The format is             
+(YY/MM/DD,HH:MM:SS).  The year, month, day, hour, and minute values are       
+integers; seconds are double precision.  Up to three of the right-most time   
+fields may be omitted.  When omitted, their values are taken to be zeroes.    
+The calibrations apply only during the times specified by the time-span       
+limiter(s).  If the limiter is AT, the time span depends on the computer      
+word length.  On the UNIVAC (36-bit word length), the time span is from one   
+microsecond before the given time to one microsecond after; on the VAX        
+(32-bit word length), it is from one millisecond before to one millisecond    
+after.                                                                        
+                                                                              
+      3. Number Formats                                                       
+                                                                              
+      The formats for integers and single- and double-precision floating-     
+point numbers are the same as in FORTRAN.  In addition, the sign of the       
+exponent of a floating point number may replace the letter D or E; for        
+example, 1.234E-3 may be written 1.234-3.                                     
+                                                                              
+      4. Comments                                                             
+                                                                              
+      Additional explanatory information, not to be used by the ODP, may      
+appear on a command provided that it is preceded by the number sign (#).      
+Characters following the number sign are ignored by the ODP.                  
+                                                                              
+      5. Series Type                                                          
+                                                                              
+      Media calibrations may be specified by a normalized power series        
+(NRMPOW), a single constant (CONST), or a Fourier series (TRIG).  If the      
+coefficients or constant are double precision, the computation specifier is   
+preceded by the letter "D" (e.g., DNRMPOW).                                   
+                                                                              
+      If the ADJUST command contained BY NRMPOW (C0, C1,  ..., CN) FROM (S)   
+TO (E), where S and E refer to the start and end times for the command, the   
+calibration is computed from the normalized power series C0 + C1 * X + C2 *   
+X^2 + ... + CN * X^N.  This polynomial is called "normalized" because the     
+time argument of the series, T, has been replaced by the normalized,          
+dimensionless argument X, which is defined to be -1 when T = S and +1 when T  
+= E.  This normalization is done by a change of variable given by             
+                                                                              
+                     X = 2*( (T-S)/(E-S) ) -1.                                
+                                                                              
+Up to 24 single-precision or 12 double-precision coefficients are allowed in  
+one series.                                                                   
+                                                                              
+      If the ADJUST command contains BY CONST (C), the calibration is given   
+by the constant C.                                                            
+                                                                              
+      If the ADJUST command contains BY TRIG (P, A0, A1, B1, A2, B2, ..., AN, 
+BN) AFTER (S), the calibration is given by the Fourier series                 
+                                                                              
+      A0 + A1 cos x + B1 sin x + A2 cos 2x + B2 sin 2x + ...                  
+                               + AN cos Nx + BN sin Nx,                       
+                                                                              
+where x = 2 * PI * (T-S)/P; P is the period of the fundamental mode, in       
+seconds.                                                                      
+                                                                              
+      6. Sign of Calibration                                                  
+                                                                              
+      In the ODP, the calibration is, effectively, always subtracted from     
+the observable.  Range calibrations, then, will always be positive; a         
+positive sign corresponds to a range delay.                                   
+                                                                              
+      7. Tropospheric Calibrations                                            
+                                                                              
+      Tropospheric calibrations are currently given by a normalized power     
+series representing the seasonal variation over a two-year span.   Two        
+series are given for each station or complex; the "dry" and "wet" components  
+of one-way zenith range delay in meters.  The dry component, typically about  
+2 meters, is the delay due to the nonwater-vapor components of the atmosphere 
+(N2, O2, CO2, and Ar), whose proportions are essentially constant.  The wet   
+component, typically a few centimeters, is the contribution of the highly     
+variable water-vapor content of the atmosphere.  The program using the        
+tropospheric calibrations must determine the line-of-sight delay by mapping   
+each zenith component to the elevation angle corresponding to the line-of-    
+sight;  the ODP performs this function by using separate dry and wet mapping  
+tables.                                                                       
+                                                                              
+      An example of the format for tropospheric calibrations is given in      
+Figure TRK-2-23-1 of this module.                                             
+                                                                              
+|===========================================================================| 
+|ADJUST (ALL) BY NRMPOW (.5385215940876400-001,-.1545263252791661+000,      | 
+| .6120410421392178+000,.8393903860788785+000,-.1757061589993537+001,       | 
+| -.1192449606993796+001,.1774783212089319+001,.6265889342013949+000,       | 
+| -.7481685636314813+000,-.1116904190364361+000,.1136781820255777+000) MODEL| 
+| (WET NUPART) FROM (83/1/1,00:00:00.01) TO (85/1/1) DSN (C10).             | 
+|===========================================================================| 
+          Figure TRK-2-23-1.  Format for Tropospheric Calibrations            
+                                                                              
+      8. Ionospheric Calibrations                                             
+                                                                              
+      Ionospheric calibrations are given by a normalized power series for     
+each spacecraft pass at each DSN complex.  The calibration represents the     
+one-way line-of-sight ionospheric range delay in meters at S-band (2295 MHz). 
+>From this polynomial, the ODP calculates Doppler corrections (in Hz) and     
+range corrections (in range units) for each data point in its OD file.        
+                                                                              
+      The magnitude of the vertical ionospheric range delay at each complex   
+depends on time of day, season, and time since start of the current solar     
+cycle; it can range from less than 1 meter to more than 8 meters.  Because    
+the slant-range adjustment factor can vary from unity at zenith to about 3.5  
+at 0 degrees elevation, the resulting total variation in line-of-sight        
+ionospheric calibration can range from less than 1 meter to more than 25      
+meters.                                                                       
+                                                                              
+      The time spans of each polynomial, except in special circumstances, are 
+from spacecraft rise (0 deg) to spacecraft set (0 deg) at the station or      
+complex.                                                                      
+                                                                              
+      An example of the format for ionospheric calibrations is given in       
+Figure TRK-2-23-2.                                                            
+                                                                              
+|===========================================================================| 
+|ADJUST (ALL) BY NRMPOW (.127504448000000D+001,-.363046489000000D+000,      | 
+| .221433675000000D+001,.385002747000000D+000,-.476505244000000D-001,       | 
+| -.379998393000000D+000) MODEL (CHPART) FROM (84/10/31.20:40:55) TO        | 
+| (84/11/1,10:45:30) DSN (C40). #S/C32 PRED S66 841011                      | 
+|===========================================================================| 
+         Figure TRK-2-23-2.  Format for Ionospheric Calibrations              
+                                                                              
+      9. Solar Plasma Calibrations                                            
+                                                                              
+      Solar plasma calibrations are given by a single constant that applies   
+only at the time tag of an individual data point.  Units are the same as      
+those of the observables; for example, range units for range and Hertz for    
+Doppler.  The TSAC software reads the ODP input data file to get the time     
+tags, and also removes the ionospheric portion of the downlink S/Z dual-      
+frequency Doppler measurements so that only the solar plasma contributions    
+remain.                                                                       
+                                                                              
+      An example of the format for solar plasma calibrations is given in      
+Figure TRK-2-23-3.                                                            
+                                                                              
+|===========================================================================| 
+|ADJUST (F2) BY CONST (.38755-001) AT (84/10/1.00:03:30) DSN (43) BAND (S). | 
+|ADJUST(PLOP) BY CONST (.69398+002) AT (84/10/1.00:19:46) DSN (43) BAND (S).| 
+|ADJUST (F2) BY CONST (.36505-001) AT (84/10/1.00:20:30) DSN (43) BAND (S). | 
+|ADJUST (F2) BY CONST (.20189-001) AT (84/10/1.00:36:30) DSN (43) BAND (S). | 
+|ADJUST(PLOP) BY CONST (.54675+002) AT (84/10/1.00:38:03) DSN (43) BAND (S).| 
+|ADJUST (F2) BY CONST (-.58993-001) AT (84/10/1.00:47:30) DSN (43) BAND (S).| 
+|ADJUST (F2) BY CONST (-.50877-001) AT (84/10/1.00:54:30) DSN (43) BAND (S).| 
+|ADJUST(PLOP) BY CONST (.69124+002) AT (84/10/1.00:56:20) DSN (43) BAND (S).| 
+|ADJUST (F2) BY CONST (-.70260-001) AT (84/10/1.01:01:30) DSN (43) BAND (S).| 
+|===========================================================================| 
+         Figure TRK-2-23-3.  Format for Solar Plasma Calibrations             
+NB: First number in parentheses has been truncated from 10 mantissa digits    
+to 5 mantissa digits to permit display within 80 character line limit here.   

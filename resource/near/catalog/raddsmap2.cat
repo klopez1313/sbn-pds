@@ -1,0 +1,92 @@
+PDS_VERSION_ID                    = PDS3                                      
+LABEL_REVISION_NOTE               = "2000-09-21 RS:simpson original;          
+                                     2001-06-13 RS:simpson revision"          
+RECORD_TYPE                       = FIXED_LENGTH                              
+RECORD_BYTES                      = 72                                        
+                                                                              
+OBJECT                            = DATA_SET_MAP_PROJECTION                   
+ DATA_SET_ID                      = "NEAR-A-RSS-5-EROS/GRAVITY-V1.0"          
+ OBJECT                           = DATA_SET_MAP_PROJECTION_INFO              
+  MAP_PROJECTION_TYPE             = "SIMPLE CYLINDRICAL"                      
+  MAP_PROJECTION_DESC             = "                                         
+                                                                              
+    In the simple cylindrical projection [SNYDER1987], parallels              
+    of latitude and meridians of longitude are straight lines that            
+    intersect one another at right angles.                                    
+                                                                              
+    Images in this projection are centered on the equator. Map                
+    resolution is constant throughout the image, thus increasing              
+    distortion away from the poles.                                           
+                                                                              
+    The transformation from latitude and longitude (LAT, LON) in              
+    degrees to LINE and SAMPLE is given by the following equations.           
+                                                                              
+    SCALE = MAP_RESOLUTION                                                    
+                                                                              
+    SAMPLE = SAMPLE_PROJECTION_OFFSET+SCALE*(LON-CENTER_LONGITUDE)+1          
+                                                                              
+    LINE = LINE_PROJECTION_OFFSET-SCALE*(LAT-CENTER_LATITUDE)+1               
+                                                                              
+    In the above definitions, integral values of LINE and SAMPLE              
+    correspond to the center of a pixel, and the top left image               
+    pixel has LINE=1 and SAMPLE=1. LAT and LON are the latitude and           
+    longitude of a given spot on the surface in degrees.                      
+                                                                              
+    LINE_PROJECTION_OFFSET                                                    
+      is the image line number minus one on which the map projection          
+      origin occurs.  The map projection origin is the intersection           
+      of the equator and the projection longitude CENTER_LONGITUDE.           
+                                                                              
+    SAMPLE_PROJECTION_OFFSET                                                  
+      is the sample number minus one on which the map projection              
+      origin occurs.                                                          
+                                                                              
+    CENTER_LATITUDE                                                           
+      is the value of the projection latitude in degrees, which is            
+      typically the latitude that passes through the center of the            
+      projection.                                                             
+                                                                              
+    CENTER_LONGITUDE                                                          
+      is the value of the projection longitude in degrees, which is           
+      typically the longitude that passes through the center of the           
+      projection.                                                             
+                                                                              
+    MAP_RESOLUTION                                                            
+      number of pixels per degree at the projection origin.                   
+                                                                              
+    The following four keywords are defined in the PDS Data                   
+    Dictionary, but their usage in Mars Global Surveyor Radio Science         
+    image products may be non-standard.  In more conventional usage           
+    these keywords define the limits of the area covered by the image         
+    or map.  In Radio Science products, their values are the extremes         
+    at the pixel centers.                                                     
+                                                                              
+    EASTERNMOST_LONGITUDE                                                     
+      longitude of the easternmost pixel (center coordinates) in the          
+      map or image.                                                           
+                                                                              
+    WESTERNMOST_LONGITUDE                                                     
+      longitude of the westernmost pixel (center coordinates) in the          
+      map or image; numerically, always less than                             
+      EASTERNMOST_LONGITUDE.                                                  
+                                                                              
+    MINIMUM_LATITUDE                                                          
+      latitude of the southernmost pixel (center coordinates) in the          
+      map or image.                                                           
+                                                                              
+    MAXIMUM_LATITUDE                                                          
+      latitude of the northernmost pixel (center coordinates) in the          
+      map or image; numerically always greater than MINIMUM_LATITUDE."        
+                                                                              
+  ROTATIONAL_ELEMENT_DESC         = "See [DAVIESETAL1995]."                   
+                                                                              
+  OBJECT                          = DS_MAP_PROJECTION_REF_INFO                
+   REFERENCE_KEY_ID               = "DAVIESETAL1995"                          
+  END_OBJECT                      = DS_MAP_PROJECTION_REF_INFO                
+  OBJECT                          = DS_MAP_PROJECTION_REF_INFO                
+   REFERENCE_KEY_ID               = "SNYDER1987"                              
+  END_OBJECT                      = DS_MAP_PROJECTION_REF_INFO                
+ END_OBJECT                       = DATA_SET_MAP_PROJECTION_INFO              
+END_OBJECT                        = DATA_SET_MAP_PROJECTION                   
+END                                                                           
+                                                                              

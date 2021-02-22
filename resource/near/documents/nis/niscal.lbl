@@ -1,0 +1,43 @@
+PDS_VERSION_ID                 = PDS3                                         
+RECORD_TYPE                    = UNDEFINED                                    
+^WORD_DOCUMENT                 = "NISCAL.DOC"                                 
+^ASCII_DOCUMENT                = "NISCAL.ASC"                                 
+VOLUME_ID                      = NNEROS_2001                                  
+DATA_SET_ID                    = "NEAR-A-NIS-5-EDR-EROS/ORBIT-V1.0"           
+PRODUCT_CREATION_TIME          = 2001-07-20                                   
+NOTE                           = "                                            
+                                                                              
+In-flight Calibration of the Near Earth Asteroid                              
+Rendezvous Mission's Near Infrared Spectrometer                               
+-----------------------------------------------                               
+                                                                              
+The following documents describe the calibration procedure for                
+Near Earth Asteroid Rendezvous Mission's Near Infrared Spectrometer.          
+The information in these documents together with the calibration              
+files in the CALIB/ directory and the source code in the NISCAL IDL           
+program in DOCUMENT/NISCALSW/ are provided to archive the calibration         
+procedure used by the NEAR MSI/NIS team members.                              
+                                                                              
+    NISCAL.DOC : Microsoft Word(tm) document containing the entire text of    
+                 the document.                                                
+                                                                              
+    NISCAL.ASC : Text document containing the entire text of the              
+                 document.                                                    
+"                                                                             
+                                                                              
+OBJECT                         = WORD_DOCUMENT                                
+DOCUMENT_NAME                  = "CALIBRATION OF NEAR NIS"                    
+PUBLICATION_DATE               = 2001-07-20                                   
+DOCUMENT_TOPIC_TYPE            = "CALIBRATION REPORT"                         
+INTERCHANGE_FORMAT             = "BINARY"                                     
+DOCUMENT_FORMAT                = "MICROSOFT WORD"                             
+END_OBJECT = WORD_DOCUMENT                                                    
+                                                                              
+OBJECT                         = ASCII_DOCUMENT                               
+DOCUMENT_NAME                  = "CALIBRATION OF NEAR NIS"                    
+PUBLICATION_DATE               = 2001-07-20                                   
+DOCUMENT_TOPIC_TYPE            = "CALIBRATION REPORT"                         
+INTERCHANGE_FORMAT             = "ASCII"                                      
+DOCUMENT_FORMAT                = "TEXT"                                       
+END_OBJECT = ASCII_DOCUMENT                                                   
+END                                                                           

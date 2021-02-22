@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Ida/Gaspra Collection</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <center>
+        <h1> Ida/Gaspra Collection </h1>
+        </center>
+
+        <h3>
+        <p>
+        This is a collection of data on the asteroids Ida and Gaspra,
+        compiled in support of the Galileo Mission.
+        </h3>
+
+        <table border=1>
+        <tr><td width=400>  EAR-A-3-EDC-IDA/GASPRA-SPECTRA-V1.0
+            <td width=300>  Ida and Gaspra Groundbased Spectra
+            <td width=100> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/igspec.cat"> Catalog file </a>
+            <td width=100> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/data/spectra/"> Browse </a>
+        <tr><td> EAR-A-3-EDC-IDA/GASPRA-APC/LC-V1.0
+            <td> Ida and Gaspra Groundbased Lightcurves
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/iglc.cat"> Catalog file </a>
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/data/lightcurves/"> Browse </a>
+        <tr><td>  GO-A-MAG/POS-3-RDR/SUMM/TRAJ-GASPRA-V1.0
+            <td> Gaspra Galileo Magnetometer Trajectory Data
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/igmaggas.cat"> Catalog file </a>
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/data/galileo_mag/gaspra"> Browse </a>
+        <tr><td> GO-A-MAG/POS-3-RDR/SUMM/TRAJ-IDA-V1.0
+            <td>  Ida Galileo Magnetometer Trajectory Data
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/igmagida.cat"> Catalog file </a>
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/data/galileo_mag/ida"> Browse </a>
+        <tr><td>  GO-A-SSI-2-REDR-IDA/GASPRA-V1.0
+            <td>  Galileo SSI Ida and Gaspra Images
+            <td> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/igssi.cat"> Catalog file </a>
+            <td width=100> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/data/galileo_ssi/"> Browse </a>
+        </table>
+
+        <ul>
+            <li> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/galmaginst.cat"> Galileo Magnetometer Instrument Catalog File </a>
+            <li> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/galssiinst.cat"> Galileo SSI Instrument Catalog File </a>
+            <li> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/catalog/igref.cat"> References list </a>
+            <li> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001/"> Browse the entire Ida/Gaspra Data Collection </a>
+            <li> <a href="https://sbnarchive.psi.edu/pds3/galileo/idagaspra/sbnig_0001.zip"> Download the Ida/Gaspra Data Collection as a zip file (13 Mb)</a>
+        </ul>
+        <br> <br>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

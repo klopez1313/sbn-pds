@@ -1,0 +1,391 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* === Theme colors === */
+
+/* Dark - default */
+:root {
+    --page-background: #12181D;
+    --background-l1: #192028;
+    --section-header: #282F36;
+    --raised-content: #474C53;
+    --raised-content-hover: #656A6F;
+    --text: #FDFDFD;
+    --secondary-text: #C0C2C4;
+    --icon: #FDFDFD;
+    --link: #B5DCFB;
+    --link-hover: #D5EBFD;
+    --link-subtitle: #FFFFFF;
+    --button: #57B4FF;
+    --button-contrast: #000000;
+    --hr: rgba(255, 255, 255, 0.25);
+}
+
+/* Light */
+[data-theme="light"] {
+    --page-background: #FFFFFF;
+    --background-l1: #FFFFFF;
+    --section-header: #DEDFE0;
+    --raised-content: #FFFFFF;
+    --raised-content-hover: #EEEEEF;
+    --text: #192028;
+    --secondary-text: #192028A0;
+    --icon: #192028;
+    --link: #0A6BB9;
+    --link-hover: #0B7ED9;
+    --link-subtitle: #000000;
+    --button: #0A6BB9;
+    --button-contrast: #FFFFFF;
+    --hr: rgba(0, 0, 0, 0.25);
+}
+
+/* === Begin custom CSS === */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 160%;
+    background-color: var(--page-background);
+    color: var(--text);
+}
+
+main a:not(.ignore-a-styling):not(.pds-button), nav a:not(.ignore-a-styling):not(.pds-button), footer a:not(.ignore-a-styling):not(.pds-button) {
+    color: var(--link);
+    text-decoration: none;
+}
+main a:not(.ignore-a-styling):not(.pds-button):hover {
+    color: var(--link-hover);
+    /* text-decoration: underline; */
+}
+main a[href^='http']:not([href*='psi.edu']):after,
+nav a[href^='http']:not([href*='psi.edu']):after {
+    background-image: url('/pds-staging/images/external.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    display: inline-block;
+    padding-left: 1em;
+    padding-top: 2px;
+    width: 20px;
+    height: 20px;
+    content:"";
+}
+[data-theme="light"] main a[href^='http']:not([href*='psi.edu']):after, 
+[data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):after {
+    background-image: url('/pds-staging/images/external-black.svg');
+}
+
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+u { 
+    text-decoration: underline;
+}
+
+hr {
+    border-color: var(--hr);
+    height: 0px;
+    box-sizing: border-box;
+}
+
+ul li ul {
+    margin-left: 16px;
+}
+
+
+#pds-superseded {
+    display: none;
+}
+#pds-superseded-toggle {
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-left: 1em;
+}
+.resource-title {
+    text-align: center;
+}
+.pds-button {
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 16px;
+
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), var(--button);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
+    position: relative;
+    display: inline-block;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* primary / contrast text */
+
+    color: var(--button-contrast);
+}
+.fullwidth {
+    width: 100%;
+}
+table.fullwidth td:first-child {
+    width: 100%;
+}
+
+.pds-button:hover {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #57B4FF;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0;
+}
+h2 {
+    font-size: 34px;
+    line-height: initial;
+    letter-spacing: 0.25px;
+    margin: 40px 0;
+}
+h3 {
+    font-size: 24px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0;
+}
+h4 {
+    font-size: 20px;
+    line-height: initial;
+    letter-spacing: 0.15px;
+    margin: 32px 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 24px 0;
+
+    background: var(--raised-content);
+
+    box-sizing: border-box;
+
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+td, th {
+    padding: 16px;
+    border: 0;
+}
+td > a:only-child {
+    display: block;
+    margin: -16px;
+    padding: 16px;
+}
+td a:hover {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background: var(--raised-content-hover);
+}
+th, td i {
+    font-weight: bold;
+    font-style: normal;
+}
+td[rowspan]:not([rowspan="1"]) {
+    vertical-align: text-top;
+}
+th, tr:not(:last-child) td{
+    border-bottom: 1px solid var(--hr);
+}
+
+main p, main li {
+    margin: 24px 0;
+}
+
+/* main */
+main {
+    min-height: calc(100vh - 8em);
+}
+.sbn-main {
+    padding: 16px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sbn-main.index {
+    max-width: 1100px;
+}
+
+
+
+.paper {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.breadcrumbs {
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;  
+}
+.breadcrumbs-separator {
+    display: flex;
+    margin-left: 8px;
+    user-select: none;
+    margin-right: 8px;
+}
+.breadcrumbs li:not(:last-child), .breadcrumbs a {
+    color: var(--secondary-text) !important
+}
+
+.breadcrumbs + .breadcrumbs li {
+    margin-top: 0;
+}
+.breadcrumbs + .breadcrumbs:not(:last-of-type) li {
+    margin-bottom: 0;
+}
+.breadcrumbs:not(:only-of-type):first-of-type li {
+    margin-bottom: 0;
+}
+
+.primary-sections {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: stretch;
+}
+.primary-sections section {
+    flex: 1;
+    margin: 16px;
+    background: var(--raised-content);
+}
+.primary-sections .section-header-img {
+    height: 120px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+.primary-sections section h2 {
+    display: block;
+    margin: 0 0 8px 0;
+    padding: 16px;
+    font-size: 20px;
+    background-color: var(--section-header);
+}
+.primary-sections ul {
+    list-style: none;
+    padding: 0;
+}
+.primary-sections li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.primary-sections li a {
+    display: block;
+    padding: 12px 24px;
+    margin: 0;
+}
+a .subtitle {
+    color:var(--link-subtitle);
+    font-size: 0.8em;
+    text-decoration: none !important;
+    padding: 0 0.5em;
+}
+.primary-sections li a:hover {
+    /* text-decoration: underline; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: var(--raised-content-hover);
+}
+
+/* iPhone 6 & wider */
+@media (min-width: 375px) {
+    .sbn-footer-text {
+        font-size: 1em;
+    }
+}
+/* iPad (portrait mode) & wider */
+@media (min-width: 768px) {
+    
+    main {
+        box-sizing: border-box;
+    }
+    .primary-sections {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .primary-sections section {
+        min-width: 250px;
+    }
+}
+/* iPad (landscape mode) & wider */
+@media (min-width: 1024px) {
+    .primary-sections section {
+        max-width: 300px;
+    }
+}

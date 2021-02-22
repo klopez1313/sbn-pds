@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Subnode</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+
+        <h1>PDS4 Line Feed Changes</h1>
+
+        <p>The Planetary Data System is considering a change to its standards, which may impact users of PDS data. If and how PDS proceeds with this change depends in large part on the response of the community. See <a href="line-feed-notice/#contact">below</a> for contact information.</p>
+
+        <h2>What would change?</h2>
+        <p>Current standards require that Text Stream (like ASCII), Character Table (like Fixed-Width Tables), and Delimited Table (like CSV) files follow the Windows format in which every line ends with both the Carriage Return (<mono>CR</mono>) and Line Feed (<mono>LF</mono>) characters. The change under consideration would allow such archived data in which every line ends with a Line Feed character (<mono>LF</mono>) alone, used by Linux and MacOS systems, in addition to the prior Windows format.</p>
+
+        <h2>What are line feed characters?</h2>
+        <p>In digital files, special invisible "control characters" are used to indicate when a line has ended. These may be used in a text document, table, image, or any other format. In Windows and most older computing systems, this is indicated with two adjacent characters: "Carriage Return" (<mono>CR</mono>, Hex <mono>0xD</mono>, <mono>"\r"</mono>) and "Line Feed" (<mono>LF</mono>, Hex <mono>0xA</mono>, <mono>"\n"</mono>). On Unix-based systems like Mac and Linux, this is typically represented as a single Line Feed character instead. Further background can be found <a href="https://en.wikipedia.org/wiki/Newline">here</a>.</p>
+
+        <h2>How would this affect me?</h2>
+        <p>If you use your own custom software or scripts to parse and use data from the PDS, this may need to be updated to support this change.</p>
+        <p>If you use software distributed by the PDS on our archived data, you would need to download the latest versions when those are available at the same time this change is made (date TBD).</p>
+
+        <h2>What might I need to change in my code?</h2>
+        <p>Maybe nothing! If you use widely-distributed image/text/file parsing libraries in your code, many of them already know how to handle variable format line endings.</p>
+        <p>Otherwise, you would need to inspect your code for any place you are expecting a <mono>CR+LF</mono> newline, and modify it to expect <em>either</em> <mono>CR+LF</mono> or <mono>LF</mono>. Note that errors might occur if you switch to just expecting <mono>LF</mono>; the trailing <mono>CR</mono> could cause issues. You must handle <em>both</em> cases.</p>
+        <p>In many programming languages (like Python), these characters are represented in code by <mono>"\n"</mono> (for LF) and <mono>"\r"</mono> for carriage return. So in those cases, you would need to change any code that expected <mono>"\r\n"</mono> to also expect <mono>"\n"</mono>.</p>
+
+        <h2>What do I <em>not</em> need to worry about?</h2>
+        <p>Data that has already been archived with the existing PDS3 or PDS4 standards would not change, and can continue to be used with any tools out there today. This change would only affect some data files archived in the future model versions (date TBD).</p>
+        <p>Software written and distributed by the PDS would be updated to work with this new format at the same time, so you would not need to modify that software, merely use the most updated versions.</p>
+        <p>Data providers already supplying data using Windows-format line endings will not need to change anything. The record delimiter type has always been specified in the accompanying labels, and will continue to be so.</p>
+
+        <h2>I am a data provider, how would this affect me?</h2>
+        <p>This is merely an addition to what's allowed in our standards. Any existing data that you provide would continue to be archivable. Going forward though, you would have more flexibility in the types of files you can archive, or the amount of work you need to put in to make your data archive-ready.</p>
+
+        <h2 id="contact">Who can I contact for feedback or questions?</h2>
+        <p>Please contact us at <a href="mailto:sbn@psi.edu">sbn@psi.edu</a></p>
+        
+        <p>We are seeking community feedback on whether or not we should move forward with this change. If this change would impact you, we would like to know if you support or oppose this change. We are also here if you have further questions, or need help understanding how this would impact any tools you use or have written.</p>
+
+    </div></main>
+
+    <style media = "all">
+        mono {
+           font-family: 'Courier New', Courier, monospace;
+        }
+     </style>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

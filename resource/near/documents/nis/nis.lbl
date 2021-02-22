@@ -1,0 +1,43 @@
+PDS_VERSION_ID           = PDS3                                               
+                                                                              
+RECORD_TYPE              = UNDEFINED                                          
+^ASCII_DOCUMENT          = "NIS.ASC"                                          
+^ADOBE_PDF_DOCUMENT      = "NIS.PDF"                                          
+                                                                              
+OBJECT                     = ASCII_DOCUMENT                                   
+  DOCUMENT_NAME            = "THE NEAR INFRARED SPECTROMETER"                 
+  DOCUMENT_TOPIC_TYPE      = "INSTRUMENT DESCRIPTION"                         
+  INTERCHANGE_FORMAT       = ASCII                                            
+  DOCUMENT_FORMAT          = TEXT                                             
+  PUBLICATION_DATE         = 1998                                             
+  DESCRIPTION              = "This provides an overview of the Near Infrared  
+                              Spectrometer"                                   
+END_OBJECT                 = ASCII_DOCUMENT                                   
+                                                                              
+OBJECT                     = ADOBE_PDF_DOCUMENT                               
+  DOCUMENT_NAME            = "THE NEAR INFRARED SPECTROMETER"                 
+  DOCUMENT_TOPIC_TYPE      = "INSTRUMENT DESCRIPTION"                         
+  INTERCHANGE_FORMAT       = BINARY                                           
+  DOCUMENT_FORMAT          = ADOBE_PDF                                        
+  PUBLICATION_DATE         = 1998                                             
+  DESCRIPTION              = "This provides and overview of the Near Infrared 
+                              Spectrometer"                                   
+ABSTRACT_TEXT              = "                                                
+ The Near Infrared Spectrometer (NIS) instrument will map the spectral prop-  
+erties of asteroid 433 Eros in the range 800-2600 nm to determine its mineral 
+content. Optically, NIS uses a scan mirror and an imaging mirror to project   
+an image at a field stop. A grating spectrometer disperses the energy, and    
+a dichroic beamsplitter separates two spectral orders, reflecting the short   
+wavelengths (816-1500 nm) to a 32-element Ge detector, and transmitting the   
+long wavelengths (1500-2600 nm) to a 32-element InGaAs detector. The spectral 
+resolutions are 22 and 44 nm for the second and first spectral orders,        
+respectively. A scan mirror rotates the field of view over a 140 degree range 
+that includes a solar-illuminated calibration target. Spectra are measured    
+at 1 Hz using a selection of data acquisition macros. The properties of the   
+instrument were extensively measured during on-ground calibration, and        
+in-flight calibration was begun shortly after launch. The NIS will observe    
+Eros during approach to the asteroid and will produce composition maps of the 
+entire illuminated surface at spatial resolutions as high as  300 m.          
+    "                                                                         
+END_OBJECT                 = ADOBE_PDF_DOCUMENT                               
+END                                                                           

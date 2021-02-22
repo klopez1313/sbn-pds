@@ -1,0 +1,50 @@
+grs2ersfds.cat      NEAR-A-GRS-3-EDR-EROS/SURFACE-V1.0
+grs3ersfds.cat      NEAR-A-GRS-3-RDR-EROS/SURFACE-V1.0
+
+mag1erosds.cat      NEAR-A-MAG-2-EDR-EROS/ORBIT-V1.0
+mag2cru4ds.cat      NEAR-A-MAG-3-EDR-CRUISE4-V1.0
+mag2erosds.cat      NEAR-A-MAG-3-EDR-EROS/ORBIT-V1.0
+
+msi1cru1ds.cat      NEAR-A-MSI-2-EDR-CRUISE1-V1.0
+msi1cru2ds.cat      NEAR-A-MSI-2-EDR-CRUISE2-V1.0
+msi1cru3ds.cat      NEAR-A-MSI-2-EDR-CRUISE3-V1.0
+msi1cru4ds.cat      NEAR-A-MSI-2-EDR-CRUISE4-V1.0
+msi1erfbds.cat      NEAR-A-MSI-2-EDR-EROS/FLY/BY-V1.0
+msi1erosds.cat      NEAR-A-MSI-2-EDR-EROS/ORBIT-V1.0
+msi1erthds.cat      NEAR-A-MSI-2-EDR-EARTH-V1.0
+msi1mathds.cat      NEAR-A-MSI-2-EDR-MATHILDE-V1.0
+
+msi2dseros.cat      NEAR-A-MSI-3-EDR-EROS/ORBIT-V1.0
+msi2dsmath.cat      NEAR-A-MSI-3-EDR-MATHILDE-V1.0
+
+msi3basemapsds.cat  NEAR-A-MSI-5-DIM-EROS/ORBIT-V1.0
+msi3shapeds.cat     NEAR-A-MSI-5-EROS-SHAPE-MODELS-V1.0
+msifilds.cat        NEAR-MSI-6-RDR-INSTRUMENT-INFO-V1.0
+
+nis1cru1ds.cat      NEAR-A-NIS-2-EDR-CRUISE1-V1.0
+nis1cru2ds.cat      NEAR-A-NIS-2-EDR-CRUISE2-V1.0
+nis1cru3ds.cat      NEAR-A-NIS-2-EDR-CRUISE3-V1.0
+nis1cru4ds.cat      NEAR-A-NIS-2-EDR-CRUISE4-V1.0
+nis1erfbds.cat      NEAR-A-NIS-2-EDR-EROS/FLY/BY-V1.0
+nis1erosds.cat      NEAR-A-NIS-2-EDR-EROS/ORBIT-V1.0
+nis1erthds.cat      NEAR-A-NIS-2-EDR-EARTH-V1.0
+
+nis2erosds.cat      NEAR-A-NIS-5-EDR-EROS/ORBIT-V1.0
+
+nlr1cru1ds.cat      NEAR-A-NLR-2-EDR-CRUISE1-V1.0
+nlr1cru2ds.cat      NEAR-A-NLR-2-EDR-CRUISE2-V1.0
+nlr1cru4ds.cat      NEAR-A-NLR-2-EDR-CRUISE4-V1.0
+nlr1erosds.cat      NEAR-A-NLR-2-EDR-EROS/ORBIT-V1.0
+
+nlr2erosds.cat      NEAR-A-NLR-5-CDR-EROS/ORBIT-V1.0
+nlr3erosds.cat      NEAR-A-NLR-6-EROS-MAPS-MODELS-V1.0
+
+raderfbds.cat       NEAR-A-RSS-1/5-EROS/FLYBY-V1.0
+raderosds.cat       NEAR-A-RSS-1/5-EROS/ORBIT-V1.0
+radgravds.cat       NEAR-A-RSS-5-EROS/GRAVITY-V1.0
+radmathds.cat       NEAR-A-RSS-1/5-MATHILDE-V1.0
+
+xgrs1erosds.cat     NEAR-A-XGRS-2-EDR-EROS/ORBIT-V1.0
+xgrs1ersfds.cat     NEAR-A-XGRS-2-EDR-EROS/SURFACE-V1.0
+
+xgrs2erosds.cat     NEAR-A-XGRS-3-EDR-EROS/ORBIT-V1.0

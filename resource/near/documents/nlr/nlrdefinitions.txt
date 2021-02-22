@@ -1,0 +1,294 @@
+PDS_VERSION_ID      = PDS3                                                    
+RECORD_TYPE         = STREAM                                                  
+                                                                              
+OBJECT     = TEXT                                                             
+  PUBLICATION_DATE = 2000-06-13                                               
+  NOTE             = " NLR Data File Parameter Definitions "                  
+END_OBJECT = TEXT                                                             
+                                                                              
+END                                                                           
+                                                                              
+                                                                              
+NEAR LASER RANGEFINDER SCIENCE RECORD VARIABLES                               
+       (Binary Table Fields)                                                  
+                                                                              
+The following list of variable names are contained in the header of the Binary
+table extension of the Magnetometer data file created by CFITSIO user routines
+for PDS compliance.  The corresponding definitions will be placed in a        
+separate file, and will not be contained in the PDS label file, or require the
+generation of PDS keywords.                                                   
+                                                                              
+                                                                              
+  1.  met                                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 160000000                                             
+        units - seconds (unsigned)                                            
+        definition - Mission Elapsed Time in seconds for the start of this    
+                     NLR Packet                                               
+                                                                              
+  2.  tdb                                                                     
+                                                                              
+        minimum value - -1.3e+8                                               
+        maximum value - +6.4e+7                                               
+        units - seconds (signed)                                              
+        definition - Barycentric Dynamical Time corresponding to MET(1).      
+     Barycentric Dynamical Time (TDB) is the independent                      
+     variable in the equations, including terms for relativity,               
+     of motion of the celestial bodies.  The solution of these                
+     equations gives the rectangular coordinates of those                     
+     bodies relative to the barycentre (centre of mass) of the                
+     solar system.  (The barycentre does not coincide with the                
+     centre of the Sun but is displaced to a point near its                   
+     surface in the direction of Jupiter.)                                    
+                                                                              
+  3.  dqi                                                                     
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - Data Quality Index                                       
+                     c0 = Data Quality Flag[0=good,1=flagged for quality      
+                          defects]                                            
+                     c1 = Instrument number for FC, CTP and AIU[1 or 2]       
+                     c2 - c6 = Processing Flags not quality related           
+                     c7 = CCDS Source[0=VC0, 1=VC1, 2=VC2, 3=VC3]             
+                                                                              
+  4 and 5.  CALIBRATION_WORD_1 CALIBRATION_WORD_2                             
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1023                                                  
+        units - N/A                                                           
+        definition - CALIBRATION_WORD_1 is the time counts for the calibration
+        return for measurement 1 of the 56 measurements in a data packet.     
+        CALIBRATION_WORD_2 is the time counts for the calibration             
+        return for measurement 56 of the 56 measurements in a data packet.    
+                                                                              
+        All NLR data after 6/22/00 (2000 204) will appear in the version 7    
+        NLR format, which is the same as the version 6 normal format (ID = 4) 
+        EXCEPT for the field labeled "CALIBRATION_WORD_1" which has been      
+        changed.                                                              
+        "CALIBRATION_WORD_1" will take the following values:                  
+        in AutoAcq, "first cal" = 30                                          
+        in 1 Hz, "first cal" = 584 (first shot in minor frame 4, at packet    
+                 MET plus 0.5 second)                                         
+        in 2 Hz, "first cal" = 364 (usually) but 804 is possible. If 364, the 
+                 first shot was in minor frame 2 (at packet MET plus 0.25     
+                 second).      Otherwise, the first shot was in minor frame 6.
+                                                                              
+                                                                              
+  6.  Spare                                                                   
+                                                                              
+        minimum value - N/A                                                   
+        maximum value - N/A                                                   
+        units - N/A                                                           
+        definition - N/A                                                      
+                                                                              
+                                                                              
+  7.  T0_COUNT                                                                
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1023                                                  
+        units - N/A                                                           
+        definition -                                                          
+        The NLR receiver is 'blanked', or prevented from detecting a pulse,   
+        for a time interval T0 after the fire command. This T-0 mask is set   
+        by ground command with a default value of 180.498 ms. In-flight tests 
+        have shown that this default value, as well as values half as large,  
+        are sufficient to suppress any electronic noise from firing. The value
+        of T0 is adjusted by two parameters returned in the NLR data; the     
+        first is called "T0_COUNT" and is represented here by the symbol d,   
+        while the second is called "Range gate" and is represented by the     
+        symbol rg. This "Range gate" parameter does not define a range gate   
+        in the usual sense of a brief time interval, during which the receiver
+        is active, encompassing the time of the expected range return. Rather,
+        the NLR receiver becomes active once the time T0 has elapsed, and it  
+        remains active until two stop pulses are generated, one from the      
+        calibration return and one from the target. The relation between T0   
+        and the commandable parameters d and rg is where T0 is in units of ms,
+        and where d and rg are both integers in the range [0, 1023] is:       
+              T0 = 0.081 +RANGE_GATE * 0.0417 + TO_COUNT*0.5                  
+                                                                              
+                                                                              
+  8.  LAST_COMMAND                                                            
+                                                                              
+        minimum value - 00 Hex                                                
+        maximum value - 4D Hex                                                
+        units - N/A                                                           
+        definition - NLR Command Op-code for the last command                 
+                                                                              
+  9.  V_THRESHOLD                                                             
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  255                                                  
+        units - N/A                                                           
+        definition - Threshold voltage counts.  NLR's receiver is a           
+        leading-edge detector, meaning that a stop pulse is generated         
+        as soon as the optically produced signal (the filtered, analog        
+        voltage from the calibration pulse or the target return) exceeds      
+        a threshold level.                                                    
+                                                                              
+   10.  TIME_OF_FLIGHT_TEMP                                                   
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  255                                                  
+        units - N/A                                                           
+        definition - To convert counts to the time-of flight ASIC temperature 
+         ("Time-of-Flight Temp" in NLR packet data),  the receiver detector   
+         temperature in  C, or the medium voltage power converter temperature 
+         in C u the equation found in the calibration paper.                  
+                                                                              
+  11.  APD_BIAS                                                               
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  255                                                  
+        units - N/A                                                           
+        definition - To convert counts to APD bias voltage in mV              
+        ("APD Bias" in NLR packets) use the equation found in the calibration 
+        paper.                                                                
+                                                                              
+  12.  RANGE_GATE                                                             
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1023                                                  
+        units - N/A                                                           
+        definition - See 7) T0_COUNTS definintion above.                      
+                                                                              
+  13.  PRF                                                                    
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 3                                                     
+        units - N/A                                                           
+        definition - The laser pulse repetition rate (PRF) can be selected    
+        from among 1/8 Hz, 1 Hz, 2 Hz, and 8 Hz, but firing at 1 Hz PRF will  
+        be the nominal mode                                                   
+of operation at Eros.                                                         
+1/8 Hz   0                                                                    
+1 Hz     1                                                                    
+2 Hz     2                                                                    
+8 Hz     3                                                                    
+                                                                              
+                                                                              
+  14.  FAIL_SAFE                                                              
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  1                                                    
+        units - N/A                                                           
+        definition - The NLR timing shown in Fig 2 applies to normal operation
+         at any of the four PRF values. NLR also includes two special failure 
+         modes of operation, that can be used in the event of failures        
+         involving either the start pulse or the calibration pulse. In the    
+         former case, the FAILSAFE mode starts the TOF counters at the final  
+         value of the "T-0 COUNT" countdown. In the latter case, the          
+         ONESTOP mode causes NLR to use the first received stop pulse as the  
+         range pulse from the target. As of September, 1999, the start and c  
+         alibration pulses are functioning nominally, and there is no plan    
+         to use either FAILSAFE or ONESTOP. FAILSAFE and ONESTOP are set to   
+         1 if in use.                                                         
+                                                                              
+  15.  ONE_STOP                                                               
+                                                                              
+        minimum value - 0                                                     
+        maximum value -1                                                      
+        units - N/A                                                           
+        definition - See 14) FAILSAFE definition.                             
+                                                                              
+  16.  AUTO_ACQ_MODE                                                          
+                                                                              
+        minimum value - 0                                                     
+        maximum value -1                                                      
+        units - N/A                                                           
+        definition - NLR has two special operating modes designed             
+        to enable autonomous operation without excessive ground commanding.   
+        The first is called "AUTO ACQUIRE", in which NLR uses the             
+        calibration pulse to find a threshold voltage above the noise         
+        level in the receiver. NLR fires 16-shot bursts at each of the        
+        eight possible values for the voltage threshold (listed in Table 1),  
+        which are labeled TH = 0 through TH = 7. AUTO_ACQ_MODE = 1 when       
+        in this mode.                                                         
+==========                                                                    
+Note: There are 56 of each of the following measurement data sets per packet. 
+This file contains 56 columns of each, with the the index, 1-56, identifying  
+the associated data set items.                                                
+==========                                                                    
+                                                                              
+                                                                              
+ 17 and 18  NORMAL_RATE_MET NORMAL_RATE_MFT                                   
+       minimum value - 0                                                      
+       maximum value - 1024                                                   
+       units - seconds(unsigned)                                              
+       definition - The 12 least significan bits of the current 32 bit        
+       Mission Elapsed Time, in seconds, for the start of this                
+    NLR measurement. MET is a 4 byte integer which is                         
+    split into two items: NORMAL_RATE_MET, which is the                       
+    most significant part and NORMAL_RATE_MFT, the least                      
+    significant part.  The range above is for the 4 byte MET.                 
+                                                                              
+  19.  NORMAL_RATE_CALIB                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  1023                                                 
+        units - N/A                                                           
+        definition - NLR is the first laser altimeter to employ continuous,   
+    in-flight calibration using a fiber-optic delay assembly (FODA), which    
+    is a spooled, 109.5-m fused silica fiber-optic cable. Part of each        
+    optical pulse formed within the laser resonator is injected into the      
+    FODA, which is connected to the baffle system in front of the receiver    
+    telescope. Using a 45o elliptical mirror, the delayed optical signal is   
+    directly introduced into the receiver. This allows end-to-end             
+    calibration for each emitted pulse even when no target surface is         
+    available.  NORMAL_RATE_CALIB is the cal word of one shot, minus 256,     
+    expressed as unsigned integer.                                            
+                                                                              
+ 20.  NORMAL_RATE_TX_RDY                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1                                                     
+        units - N/A                                                           
+        definition - If transmitter is ready to fire, TxReady = 0             
+                                                                              
+                                                                              
+  21.  NORMAL_RATE_NO_RTN                                                     
+                                                                              
+        minimum value - 0                                                     
+        maximum value -  1                                                    
+        units - N/A                                                           
+        definition - If range overflow,  NoReturn                             
+                                                                              
+                                                                              
+  22.  NORMAL_RATE_RANGE                                                      
+                                                                              
+        minimum value - 0                                                     
+        maximum value - 1048508                                               
+        units - N/A                                                           
+        definition - The NLR "Range" counts are converted to integers         
+        [0, 1048580]. The conversion from "Range" counts to range is          
+        given in the calibration document.                                    
+                                                                              
+------------------------------------------------------------------------------
+                                                                              
+NEAR KEYWORDS and Examples                                                    
+                                                                              
+The following list of NEAR keywords reflects the current status and can be    
+modified as required.                                                         
+                                                                              
+EXTNAME = 'BINARY_TBL'         / name of this binary table extension          
+DATE    = '06/10/98'           / Current Date                                 
+ORIGIN  = 'NEAR-4  '           / Originator Science Data Center               
+DATE-OBS= '19/01/98'           / dd/mm/yy                                     
+INSTRUME= 'NEAR-NLR'           / Spacecraft Instrument                        
+AUTHOR  = 'NEAR-SDC'           / Contact point for this data                  
+COMMENT   NEAR Project/MSI Reserved Keywords: NEAR-001 Through NEAR-199       
+NEAR-001=                17280 / Data offset from start of file (bytes)       
+NEAR-002= '1.01    '           / Version of this file format                  
+NEAR-003= 'NLRN98019.FIT'      / Name of this file                            
+NEAR-004= '18:00:28Z'          / Time that this file was created              
+NEAR-005= 'NLRN.001'           / Product ID                                   
+NEAR-006= 'PDSNLRN '           / Program name that produced this file         
+NEAR-007= 'v0-00   '           / Version # of above program                   
+COMMENT   NLR Reserved Keywords: NEAR-200 Through NEAR-299                    
+NEAR-201= 'NLR     '           / Instrument Type                              
+NEAR-202= 'NLRNORM   '         / Sensor Type                                  
+NEAR-203=             60595218 / Initial MET in File                          
+NEAR-204=             60602403 / Final MET in File                            
+END                                                                           

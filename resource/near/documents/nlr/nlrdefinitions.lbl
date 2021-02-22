@@ -1,0 +1,19 @@
+PDS_VERSION_ID = PDS3                                                         
+RECORD_TYPE    = FIXED_LENGTH                                                 
+RECORD_BYTES   = 80                                                           
+FILE_RECORDS   = 285                                                          
+                                                                              
+^TEXT_DOCUMENT = "NLRDEFINITIONS.TXT"                                         
+                                                                              
+OBJECT     = TEXT_DOCUMENT                                                    
+  DOCUMENT_NAME       = "NLR PARAMETER DEFINITIONS"                           
+  DOCUMENT_TOPIC_TYPE = "DATA SET DESCRIPTION"                                
+  INTERCHANGE_FORMAT  = ASCII                                                 
+  DOCUMENT_FORMAT     = TEXT                                                  
+  PUBLICATION_DATE    = 2002-06-05                                            
+  DESCRIPTION         = "                                                     
+    This file contains a description of NLR-specific parameters found         
+    in the FITS headers of the NLR data."                                     
+END_OBJECT = TEXT_DOCUMENT                                                    
+                                                                              
+END                                                                           

@@ -1,0 +1,122 @@
+PDS_VERSION_ID                   = PDS3
+RECORD_TYPE                      = STREAM
+
+OBJECT                           = DATA_SET
+  DATA_SET_ID                    = "NEAR-A-XGRS-3-EDR-EROS/ORBIT-V1.0"
+
+ OBJECT                          = DATA_SET_INFORMATION
+  DATA_SET_NAME                  = "NEAR XGRS SPECTRA FOR EROS/ORBIT"
+  DATA_SET_COLLECTION_MEMBER_FLG = "N"
+  DATA_OBJECT_TYPE               = SPECTRUM
+  START_TIME                     = 2000-01-01T00:00:00.000
+  STOP_TIME                      = 2001-02-14T23:59:59.999
+  DATA_SET_RELEASE_DATE          = 2001-07-15
+  PRODUCER_FULL_NAME             = "JACOB TROMBKA"
+  DETAILED_CATALOG_FLAG          = "N"
+  DATA_SET_DESC                  = "
+
+ Volume Contents
+ _______________
+
+Files on this volume are organized into a series of subdirectories
+below the top-level directory. The following table shows the
+structure and content of these directories. In the table,
+directory names are enclosed in square brackets ([]).
+
+      FILE                  CONTENTS
+
+  Top-level directory
+   |
+   |- AAREADME.TXT          The file you are reading.
+   |
+   |- [BROWSE]              XRS Browse facility - overview of XRS data
+   |-  |- BROWINFO.TXT      Description- XRS BROWSE files and system
+   |-  |- MANIFEST.TAB      List of files, formats, sizes under BROWSE
+   |-  |- XGRSBROWSE.HTML   Home page for Browsing daily images
+   |-  |- XGRSBROWSE.LBL    Label file for XGRSBROWSE.HTML file
+   |   |
+   |   |- [COV_MAP]         Asteroid Surface Coverage Maps - each day
+   |   |   |- XRS_MAP*      6 view image of Asteroid coverage
+   |   |   |-               from Unfiltered Detector.
+   |   |   |-               MMM = 3 Char. Month (i.e. JAN = January)
+   |   |   |-               DD  = 2 Char. Day   (0-31)
+   |   |   |-               YYYY= 4 Char. Year  (2000 or 2001)
+   |   |
+   |   |- [D_HTML]
+   |   |   |- *.HTML        HTML files for viewing Daily images during
+   |   |   |-               low orbit XRS sampling, * = MMM_DD_YYYY
+   |   |
+   |   |- [DAILY_SUMMARY]   XRS Daily Ephemerides text summaries
+   |   |   |- XRS_SUM*.TXT  Daily summar file * = MMM_DD_YYY, as above
+   |   |
+   |   |- [HIST]            Hist. images XRS daily Solar, Unfiltered
+   |   |-  |                detectors.
+   |   |   |- [SOLAR]       Daily Solar histogram images
+   |   |   |-  |- XRS_SOL*  Solar Histogram image, * = MMM_DD_YYY.JPG
+   |   |   |
+   |   |   |- [UNFIL]       Daily Unfiltered Histogram images
+   |   |   |-  |- XRS_UNF*  Unfil. Hist. image, * = MMM_DD_YYYY.JPG
+   |
+   |- [DATA]
+   |   |- DATAINFO.TXT      Description - files in the DATA directory
+   |   |
+   |   |- [JAN2000]         Jan 2000 Month Reference Dir
+   |   |   |- [X01_01_00]   Daily Spectra Set,X=XRS,01=mon,01=dy,00=yr
+   |   |   |   |-*.(lbl,xdr)Daily Binary integrations and label files
+   |   |   |- [X01_02_00]   Daily Spectra Set,X=XRS,01=mon,02=dy,00=yr
+   |   |   |   |-*.(lbl,xdr)Daily Binary integrations and label files
+   |   |   |-   .....       All days in Jan. 2000
+   |   |
+   |   |- [FEB2000]         Feb 2000 Month Reference Dir
+   |   |   |- [X02_01_00]   Daily Spectra Set,X=XRS,02=mon,01=dy,00=yr
+   |   |   |   |-*.(lbl,xdr)Daily Binary integrations and label files
+   |   |
+   |   | ..........         All months 2000 to Feb 2001
+   |   |
+   |   |- [FEB2001]         Feb 2000 Month Reference Dir
+   |   |   |- [X02_01_01]   Daily Spectra Set,X=XRS,02=mon,01=dy,00=yr
+   |   |   |   |-*.(lbl,xdr)Daily Binary integrations and label files
+   |   |   |- .......       Up to Feb 11, 2001 Coverage Stops
+   |   |
+   |
+   |- [DOCUMENTATION]       XRS Documentation file.
+   |   |- DOCINFO.TXT       Description- files in DOCUMENT directory.
+   |   |- REFERENCES.CAT    References to published NEAR XRS papers.
+   |-  |- XRS_REQS_7_2.DOC  NEAR-XRS L-2 Requirement Specs (MS Word)
+   |-  |- XRS_REQS_7_2.LBL  Label file for XRS L-2 Reqs Doc versions
+   |-  |- XRS_REQS_7_2.TXT  Reduced form NEAR XRS Reqs specs. (ASCII)
+   |-  |- XRS_REQS_7_2.JPG  Reqs. saved as multi-page Jpeg file.
+   |-  |- XRS_REQS_7_2.TIF  Reqs. saved as multi-page TIF file.
+   |-  |- XRS_REQS_7_2_*
+   |   |-                   Individual Pages, NEAR XRS L-2 Reqs Spec.
+   |   |-                   Saved as 1 page per TIF file, * = Page #
+   |   |-                   Also included, label file each TIF image
+   |   |
+   |   |- [OBSERVATION_LOG]
+   |   |   |- XGRS_COMMAND_DESC*     Observation Log and config parms
+   |   |   |- XGRS_INST_USER_GUIDE4* Command, CAS generation instructs
+   |   |   |- XGRS_OBSLOG*           Actual XGRS observ. + command log
+   |   |
+   |   |- [INSTRUMENT]
+   |   |   |- XGRSDEFINITIONS.TXT  XGRS Instrument Definitions
+   |   |
+   |
+"
+
+  END_OBJECT                       = DATA_SET_INFORMATION
+
+  OBJECT                           = DATA_SET_TARGET
+    TARGET_NAME                    = "EROS"
+  END_OBJECT                       = DATA_SET_TARGET
+
+  OBJECT                           = DATA_SET_HOST
+    INSTRUMENT_HOST_ID             = "NEAR"
+    INSTRUMENT_ID                  = "XGR"
+  END_OBJECT                       = DATA_SET_HOST
+
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID               = "CHENGETAL1998"
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION
+
+END_OBJECT                         = DATA_SET
+END

@@ -1,0 +1,30 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = UNDEFINED                                             
+^ADOBE_PDF_DOCUMENT   = "MISSIONOVERVIEW.PDF"                                 
+                                                                              
+OBJECT                = ADOBE_PDF_DOCUMENT                                    
+  DOCUMENT_NAME       = "NEAR OVERVIEW"                                       
+  DOCUMENT_TOPIC_TYPE = "DATA SET DESCRIPTION"                                
+  INTERCHANGE_FORMAT  = BINARY                                                
+  DOCUMENT_FORMAT     = ADOBE_PDF                                             
+  PUBLICATION_DATE    = 1998                                                  
+  DESCRIPTION         = "This provides an overview of the entire NEAR mission"
+  ABSTRACT_TEXT       = "The Near Earth Asteroid Rendezvous (NEAR) mission    
+    inaugurates NASA's Discovery Program. It will be the first to orbit an    
+    asteroid and will make the first comprehensive scientific measurements of 
+    an asteroid's surface composition, geology, physical properties, and      
+    internal structure. NEAR was launched successfuly on 17 February 1996     
+    aboard a Delta II-7925. It made the first reconnaissance of a C-type      
+    asteroid during its flyby of the main-belt asteroid 253 Mathilde in June  
+    1997 and will orbit the unusually large near-Earth asteroid 433 Eros for a
+    year at a minimum orbit of about 35 km from the center of the asteroid.   
+    NEAR will obtain new information on the nature and evolution of asteroids,
+    improve our understanding of planetary formation processes in the early   
+    solar system, and clarify the relationship between asteroids and          
+    meteorites. The NEAR Mission Operations Center and Science Data Center are
+    both located at APL. The latter will maintain the entire NEAR data set    
+    on-line and will make data from all instruments accessible over the       
+    Internet to every member of the NEAR science team."                       
+END_OBJECT            = ADOBE_PDF_DOCUMENT                                    
+                                                                              
+END                                                                           

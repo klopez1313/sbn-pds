@@ -1,0 +1,192 @@
+PDS_VERSION_ID                 = PDS3                                         
+LABEL_REVISION_NOTE            = "2001-07-20"                                 
+                                                                              
+OBJECT                             = DATA_SET                                 
+  DATA_SET_ID                      = "NEAR-A-MSI-3-EDR-CRUISE1-V1.0"          
+                                                                              
+  OBJECT                           = DATA_SET_INFORMATION                     
+    DATA_SET_NAME                  = "NEAR MSI IMAGES FOR CRUISE1"            
+    DATA_SET_COLLECTION_MEMBER_FLG = "N"                                      
+    DATA_OBJECT_TYPE               = IMAGE                                    
+    START_TIME                     = 1996-02-20T00:00:00.000                  
+    STOP_TIME                      = 1997-06-24T23:59:59.999                  
+    DATA_SET_RELEASE_DATE          = 2001-06-25                               
+    PRODUCER_FULL_NAME             = "Howard W. Taylor"                       
+    DETAILED_CATALOG_FLAG          = "N"                                      
+    DATA_SET_DESC                  = "                                        
+                                                                              
+                                                                              
+Data Set Overview                                                             
+=================                                                             
+NEAR EDR volume sets contain a single data set, from one instrument           
+and one mission phase (defined in the phase table in /AAREADME.TXT).          
+                                                                              
+The first volume of the set is a documentation-only volume and contains       
+CALIB, GEOMETRY and other non-data subdirectories. The INDEX directory        
+on the first volume contains the summary of all the volumes. The DOCUMENT     
+directory on the first volume contains non-changing documentation.            
+Subsequent volumes contain only BROWSE, CATALOG, DATA, and INDEX              
+subdirectories in order to minimize duplication.  The data volumes also       
+contain a DOCUMENT directory, which contains information related to the       
+calibration of the data files on that volume.                                 
+                                                                              
+                                                                              
+Directory/Product Description:                                                
+------------------------------                                                
+All images and image products described below are 537 x 244                   
+rectangular pixels where the rectangular pixel dimensions are                 
+162 x 96 microradians.                                                        
+                                                                              
+RAW: Raw images. Image in this directory are units of raw DN, as              
+received from the spacecraft after data were uncompressed. No editing         
+of the data has taken place. Missing transfer frames are represented          
+as null pixels.                                                               
+                                                                              
+RAD: Radiance images. Images in this directory have been calibrated           
+to units of radiance using the following procedure. Dark current was          
+removed using a model based on position in the image, mission-elapsed         
+time, exposure time, and CCD temperature. Frame transfer smear was            
+removed using the procedure described in MSICAL.TXT. The image was            
+then divided by the flat-field image corresponding to the filter              
+through which the image was taken. To convert from these units of             
+'corrected DN' to radiance, the image was divided by its exposure             
+time, a calibration coefficient (which converts from DNs/time to              
+radiance) for that filter, and the temperature dependence of the              
+calibration coefficient as described in MSICAL.TXT.                           
+                                                                              
+CRD: Cleaned radiance images. Images in this directory have been              
+calibrated to units of radiance using the following procedure. Dark           
+current, background frame transfer smear, and background leaked light         
+were removed using the nominal image and one taken with a 0-ms                
+exposure within several seconds, through the same filter. The 0-ms            
+exposure has a slightly different dark current but the same frame             
+transfer smear and leaked light. Dark current was removed separately          
+from the two images, using a model based on position in the image,            
+mission-elapsed time, exposure time, and CCD temperature. The                 
+dark-corrected 0-ms image was subtracted from the dark-corrected              
+nominal image. The difference image was then divided by the                   
+flat- field image corresponding to the filter through which the               
+image was taken. To convert from these units of 'corrected DN' to             
+to radiance, the image was divided by its exposure time, a                    
+calibration coefficient (which converts from DNs/time to radiance)            
+for that filter, and the temperature dependence of the calibration            
+coefficient as described in MSICAL.TXT.                                       
+                                                                              
+CRDDBL: Cleaned, deblurred radiance images. Images in this directory          
+have been calibrated to units of radiance beginning with the                  
+procedure described for cleaned radiance images (CRD). In addition,           
+images were 'deblurred' by application of a Fourier filtering                 
+restoration of a degraded image point-spread function, as described           
+in MSICAL.TXT.                                                                
+                                                                              
+IOF: I/F images. Images in this directory have been calibrated to             
+units of I/F beginning with the procedure described for radiance              
+images (RAD). The images were subsequently divided by pi times the            
+solar irradiance expected at the target body's distance from the Sun.         
+                                                                              
+IOFDBL: Deblurred I/F images. Images in this directory have been              
+calibrated to units of I/F beginning with the procedure described             
+for I/F images (IOF). In addition, images were 'deblurred' by                 
+application of a Fourier filtering resotration of a degreded image            
+point-spread funcition, as described in MSICAL.TXT                            
+                                                                              
+CIF: Cleaned I/F images. Images in this directory have been                   
+calibrated to units of I/F beginning with the procedure described             
+for cleaned radiance images (CRD). The images were subsequently               
+divided by pi times the solar irradiance expected at the target               
+body's distance from the Sun.                                                 
+                                                                              
+CIFDBL: Cleaned, deblurred I/F images. Images in this directory               
+have been calibrated to units of radiance beginning with the                  
+procedure described for cleaned I/F images (CIF). In addition,                
+images were 'deblurred' by application of a Fourier filtering                 
+restoration of a degraded image point-spread function, as described           
+in MSICAL.TXT.                                                                
+                                                                              
+------------------------------------------------------                        
+                                                                              
+Parameters                                                                    
+==========                                                                    
+The definitions for the image parameters and other keywords are given         
+in the file MSIDEFINITIONS.TXT contained in the DOCUMENT/INSTRUMENT           
+subdirectory.                                                                 
+                                                                              
+Data                                                                          
+====                                                                          
+The data are in the form of FITS files with attached FITS                     
+headers and detached PDS labels. Data files contain one image                 
+per file.                                                                     
+                                                                              
+Ancillary Data                                                                
+==============                                                                
+Geometry and CALIB subdirectories are described above.                        
+                                                                              
+Media/Format                                                                  
+============                                                                  
+This data set is released as a CDROM set.                                     
+                                                                              
+Processing History                                                            
+==================                                                            
+The processing history includes no background, noise, geometry                
+or other corrections."                                                        
+                                                                              
+CONFIDENCE_LEVEL_NOTE          = "                                            
+                                                                              
+Data Quality Flag                                                             
+=================                                                             
+Each data file label includes a quality flag string in the                    
+data_qualITY_ID keyword, extracted from the FITS keyword near-008 of          
+the original data label. The fields of this keyword are defined below.        
+Data quality defects flag is raised when there is missing data other          
+fields informational and not quality related. The eight characters of         
+this field are described below.                                               
+                                                                              
+Definition - Data Quality Index                                               
+                                                                              
+    c0 = Data Quality Flag (0=good,1=flagged for quality                      
+         defects)                                                             
+                                                                              
+    c1 = Instrument Number for FC, CTP and AIU (1 or 2)                       
+                                                                              
+    c2 - c6 = Processing Flags not quality related                            
+                                                                              
+    c7 = CCDS Source (0=VC0, 1=VC1, 2=VC2, 3=VC3)                             
+                                                                              
+                                                                              
+Review                                                                        
+======                                                                        
+This data set was currently undergoing external peer review within            
+PDS in July, 2001."                                                           
+                                                                              
+                                                                              
+                                                                              
+  END_OBJECT                       = DATA_SET_INFORMATION                     
+                                                                              
+                                                                              
+  OBJECT                           = DATA_SET_TARGET                          
+    TARGET_NAME                    = "EROS"                                   
+  END_OBJECT                       = DATA_SET_TARGET                          
+                                                                              
+                                                                              
+  OBJECT                           = DATA_SET_HOST                            
+    INSTRUMENT_HOST_ID             = "NEAR"                                   
+    INSTRUMENT_ID                  = "MSI"                                    
+  END_OBJECT                       = DATA_SET_HOST                            
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "CHENGETAL1998"                          
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "HAWKINSETAL1997"                        
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+                                                                              
+  OBJECT                           = DATA_SET_REFERENCE_INFORMATION           
+    REFERENCE_KEY_ID               = "MURCHIE&PIETERS1996"                    
+  END_OBJECT                       = DATA_SET_REFERENCE_INFORMATION           
+                                                                              
+                                                                              
+END_OBJECT                         = DATA_SET                                 
+                                                                              
+END                                                                           

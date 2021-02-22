@@ -1,0 +1,251 @@
+PDS_VERSION_ID        = PDS3
+RECORD_TYPE           = STREAM
+OBJECT                = TEXT
+  INTERCHANGE_FORMAT  = ASCII
+  PUBLICATION_DATE    = 2001-09-01
+  NOTE                = "N/A"
+END_OBJECT            = TEXT
+
+END
+
+This writeup is was developed as part of the NEAR XGRS
+submission to NASA's Planetary Data System (PDS).  The contents
+are specific to the NEAR XRS Level 3 partition of the dataset
+and are from the Nittler, 2001 MAPS paper. Tables 1-4 are listed
+at the end of the first section.
+
+XRS Results
+-----------
+
+Elemental ratios for Eros have been determined for areas sampled
+by the XRS during five solar flares and two extended integrations
+during quiescent solar conditions. Some basic characteristics
+for these data are provided in Table 1, including the date and
+UT of each flare, the total integration time used in spectral
+sums, the average latitude and longitude of the instrument
+footprint on the asteroid surface and the average temperature
+of the solar plasma, determined from the Geostationary
+Operational Environmental Satellite (GOES-8). GOES measures
+the solar x-ray flux in two wavelength bands every three
+seconds. Isothermal plasma temperatures are determined from the
+flux measurements by convolving theoretical solar spectra with
+instrument response functions to generate calibration curves.
+The estimated uncertainty in derived temperature is 10-20%.
+
+Background-subtracted pulse-height spectra for the five flares
+and two quiet Sun integration periods are given in Figures 2
+and 3. For each flare spectrum, the background is the sum of
+all spectra acquired the same day during periods when the
+instrument field of view did not include solar-illuminated
+asteroid and scaled to the same integration time as the flare
+spectral sum. Background for quiet Sun spectra
+are sums of all off-pointing spectra acquired over the same
+time period as the summed fluorescence spectrum. Errors on
+indivudal channel counts are based on counting statistics. Each
+asteroid-pointing spectrum was fitted using a non-linear
+least-squares technique to extract count rates of characteristic
+photons from Mg, Al,Si, S, Ca and Fe incident on the XRS. The
+best spectral fits are included in Figures 2 and 3. From the
+fits, photon ratios Mg/Si, Al/Si,S/Si, Ca/Si and S/Si were
+derived, along with statistical errors. These are provided in
+Table 3.
+
+Conversion of x-ray photon ratios to elemental abundance
+ratios requires knowledge of the incident solar x-ray spectrum.
+For the Eros flare spectra, solar spectra acquired by the solar
+monitor detector during the same integration period were fitted
+to derive plasma temperatures. This fitting procedure involved
+convolving theoretical solar spectra of different temperatures
+through the response function of the solar monitor filter and
+minimizing the difference between synthetic and
+observed spectra. For each flare, two fits were performed: F1
+was a two temperature fit to the full solar monitor spectrum;
+F2 is a single temperature fit to the high energy portion
+(5-10 keV) of the spectrum. For more discussion of solar
+modeling see Figure 4 and GOES, Solar Modeling discussion in
+appendix of this paper.
+
+Given an observation geometry (determined from a shape model of
+Eros and spacecraft pointing data) and a solar spectrum,
+theoretical fluorescence and coherent backscatter models are
+used to generate calibration curves relating photon ratios to
+elemental ratios. Standard analytical models of x-ray scatter
+and fluorescence were performed for a wide range of compositions,
+typical of different meteorite types, and solar temperatures.
+Figure 6 gives example calibration curves for Mg/Si and Fe/Si.
+The x-ray models assume a homogeneous composition of the observed
+sample, but in real rocks different elements are contained
+in different minerals. To account for this, a correction is
+applied to elemental ratios derived from the model calibration
+curves. The correction factor calculated for four meteorite types
+is given in Table 2; for the results included here the average
+chondrite correction factor (last column) was applied.
+
+Elemental ratios derived for each flare and quiet sun spectrum
+are given in Table 3. Flare results for solar monitor fits F1
+and F2 are given separately. S/Si, Ca/Si and Fe/Si ratios are
+only derived for the brighter flares for which sufficient signal
+was obtained. The average element ratios of Eros, determined from
+the individual analyses, is provided in Table 4. The F1 results
+for the May 4 and June 15 flares and the F2 result for the
+December 27 flare are believed to be in error, due
+to errors in solar modeling, and are not included in the average.
+The standard deviation of individual S/Si results is within 1 sigma
+of zero and a two-sigma upper limit is provided for this ratio.
+For the other ratios, three error estimates are provided.
+Sigma_stat is the statistical error bar, based on the standard
+error of the mean of the individual results. Sigma_var is the
+standard deviation of individual results; this includes both
+the effects of any km-scale heterogeneity on the asteroids'
+surface and a systematic error due to incorrect modeling
+of solar monitor spectra. Sigma_sys is the total systematic
+error. This was calculated in quadrature from three sources of
+error: the error in the mineral mixing correction factor
+(Table 2), a 10% error due to uncertain elemental abundance
+variations in the solar corona, and sigma_var to account for
+errors in solar modeling.
+
+Table 1: Basic data for analyzed solar flares and quiet Sun integrations
+______________________________________________________________________________________
+
+Spectrum                                UT      Total     Lat   Long    Average GOES
+                                            Integration  (deg)  (deg) Temperature (MK)
+                                               time (s)
+
+May 4, 2000 Flare                      4:40       950      17    146   14.5
+Jun 15, 2000 Flare                    19:49      2250     -22    153   11.9
+Jul 10, 2000 Flare                    22:00      3750       6    266   10.6
+Dec 27, 2000 Flare                    15:40      1000      -5    175   14.2
+Jan 2, 2001 Flare                      7:52      1700     -27    106   12.7
+Quiet Sun, May 2 - Aug 27, 2000         ---    402800     ---    ---    4.23 +/- 0.4
+Quiet Sun, Dec 12, 2000 - Feb 10, 2001  ---    357500     ---    ---    3.89 +/- 0.4
+
+Addendum to Table1:
+Mission Event Time Range of Flare(MET):
+
+May 4: MET=132826285-132827185
+June 15:MET=136508736-136510936
+Jul 10 MET=138677136-138680836
+Dec 27: MET=153341842-153342792
+Jan 2: MET=153832142-153833792
+
+
+
+Table 2: Effect of assumed hetergeneous (mineral mixing)
+         versus homogeneous compositions of predicted
+         XRF photon ratios.
+______________________________________________________________
+
+Ratio     Ratio of homogeneous model to mineral mixing modeli
+
+        R Chon.  LL Chon.  H Chon.  Eucrite  Chondrite Average
+
+Mg/Si    1.11      1.05     0.95     1.23      1.04 +/- 0.08
+Al/Si    0.7       0.76     0.8      0.71      0.76 +/- 0.05
+S/Si     1.28      1.29     1.45     1.08      1.34 +/- 0.10
+Ca/Si    1.05      1.08     1.25     0.95      1.12 +/- 0.10
+Fe/Si    1.18      1.29     1.78     1.2       1.42 +/- 0.32
+
+
+
+
+Table 3: Derived photon and elemental abudnance ratio data for Eros(*):
+
+___________________________________________________________________________________________________________________
+
+Spectrum       Ratio          Mg/Si             Al/Si              S/Si               Ca/Si              Fe/Si
+
+4-May-00     Photon       0.93 +/- 0.03    0.08  +/- 0.02    0.055  +/- 0.007    0.052 +/- 0.004    0.101 +/- 0.004
+Flare        Element: F1  0.64 +/- 0.02    0.04  +/- 0.02    0.049  +/- 0.015    0.201 +/- 0.026    4.32  +/- 0.22
+             Element: F2  0.88 +/- 0.03    0.04  +/- 0.02    0.026  +/- 0.008    0.081 +/- 0.010    2.03  +/- 0.10
+
+15-Jun-00    Photon       0.96 +/- 0.070   0.12  +/- 0.05    0.023  +/- 0.017    0.047 +/- 0.012    0.077 +/- 0.009
+Flare        Element: F1  0.70 +/- 0.05    0.081 +/- 0.045   0.004  +/- 0.011    0.152 +/- 0.066    3.12  +/- 0.46
+             Element: F2  0.90 +/- 0.06    0.083 +/- 0.045   0.001  +/- 0.009    0.079 +/- 0.034    1.75  +/- 0.24
+
+10-Jul-00    Photon       1.16 +/- 0.05    0.10  +/- 0.04    0.009  +/- 0.014          ---                ---
+Flare        Element: F1  0.86 +/- 0.04    0.06  +/- 0.03    0.0004 +/- 0.0004         ---                ---
+             Element: F2  1.07 +/- 0.04    0.07  +/- 0.03   <0.004                     ---                ---
+
+27-Dec-00    Photon       0.97 +/- 0.04    0.08  +/- 0.03    0.064  +/- 0.008    0.054 +/- 0.005    0.105 +/- 0.005
+Flare        Element: F1  0.81 +/- 0.03    0.05  +/- 0.03    0.047  +/- 0.013    0.082 +/- 0.012    1.32  +/- 0.08
+             Element: F2  0.97 +/- 0.04    0.05  +/- 0.03    0.032  +/- 0.009    0.043 +/- 0.007    0.75  +/- 0.04
+
+02-Jan-01    Photon       0.93 +/- 0.04    0.14  +/- 0.03    0.036  +/- 0.010    0.045 +/- 0.007    0.080 +/- 0.005
+Flare        Element: F1  0.84 +/- 0.03    0.10  +/- 0.03    0.011  +/- 0.009    0.077 +/- 0.020    1.69  +/- 0.12
+             Element: F2  0.89 +/- 0.04    0.10  +/- 0.03    0.010  +/- 0.008    0.067 +/- 0.017    1.48  +/- 0.11
+
+Quiet Sun    Photon       2.19 +/- 0.08    0.16  +/- 0.04          ---                ---                ---
+Summer       Element      0.72 +/- 0.10    0.05  +/- 0.03          ---                ---                ---
+
+Quiet Sun    Photon       2.44 +/- 0.11    0.19  +/- 0.05          ---                ---                ---
+Winter       Element      0.70 +/- 0.11    0.05  +/- 0.03          ---                ---                ---
+
+M
+____________________________________________________________________________________________________________________
+
+* For solar flares, element ratios were derived for two theoretical solar spectra: F1: two-temperature fit to
+  solar monitor, F2: single temperature fit to high energy portion of solar monitor (see text). Element ratios
+  for quiet Sun were derived using GOES temperatures (Table 1).
+
+
+Table 4: Average surface composition of 433 Eros
+
+           Mg/Si   Al/Si   S/Si    Ca/Si  Fe/Si
+ratio       0.85   0.068   0.05    0.077   1.65
+sigma_stat  0.04   0.007  	   0.003   0.12
+sigma_var   0.11   0.022  	   0.006   0.27
+sigma_sys   0.15   0.023  	   0.012   0.49
+
+
+Appendix:
+---------
+
+GOES Processing Issues:
+-----------------------
+From the ratio of the two channels the temperature is computed
+either from the parameterized fit in Thomas et al (Solar Physics
+v95, 1983) or by interpolating from a lookup table computed by
+folding the GOES transfer functions with the MEWE emission line
+and continuum spectrum calculated by MEWE_SPEC.PRO.  The responses
+of the GOES ionization chamber were obtained from Donnelly et al
+1977.  The responses for GOES8+ were obtained by a private
+communication from Howard Garcia to Hugh Hudson subsequently
+passed along to Richard Schwartz and implemented in July 1996.
+Tables for GOES6 and GOES7 were communicated by Garcia to Schwartz
+on 10 Oct 1996.  The most recent version, Nov 22 1996, corrects
+the Thomas parameterization by including the change in definition
+for the transmission-averaged short wavelength flux which occurred
+from GOES4 onward.  These are reported in the GBAR_TABLE produced
+by GOES_TRANSFER.PRO While there are real changes in the response
+between versions of GOES, this was a simple change of divisor
+from (4-0.5) to (3-0.5) and not in any real difference between
+detectors such as a change in thickness of the beryllium window.
+This change of definition results in the higher values found in
+Table 1 of Garcia, Sol Phys, v154, p275.  This issue is disussed
+on page 284 in paragraph 2 of section 3.1 of Garcia.
+
+An alternative interpolation table was created by Howard Garcia
+and reported by private communication and partially published
+in Solar Physics v154, p275. The tables for GOES2, GOES6, GOES7,
+and GOES8 have been renormalized to 1e49 cm-3 and the ratio
+taken the ratio of the long current divided by the short current
+as given by Garcia.
+
+References for Solar Modeling and Temperature
+---------------------------------------------
+Extensive calculations of solar emission over a wide range of
+temperatures (4 to 30 million Kelvins) include both continuum and
+line emissions from less than 1 to greater than 10 KeV.  Continuum
+is derived from computations of Landini and Fossi (1970) for
+coronal continuum production (free-free+free-bound radiation)
+with a correction (Karzas and Latter, 1961) for free-free emission.
+Calculation of the extensive spectral lines in the soft X-ray
+region for major elements C, N, O, Ne, Na, Mg, Al, Si, S, Ar, K,
+Ca, Ti, Cr, Mn, Fe, and Ni, that result from both resonant and
+non-resonant transitions, are based on the work of Landini and
+Fossi (1970) and Mewe (1972), with improved excitation
+cross-sections provided by Mewe (1972).  (See Mewe, 1972,
+Calculated solar x-radiation from 1 to 60 Angstroms, Solar
+Physics 22, 459-491.)
+

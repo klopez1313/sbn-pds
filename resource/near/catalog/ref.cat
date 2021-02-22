@@ -1,0 +1,885 @@
+PDS_VERSION_ID                     = PDS3                                     
+RECORD_TYPE                        = STREAM                                   
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ACUNAETAL1997"                          
+  REFERENCE_DESC                   = "Acuna, M., C.T. Russell, L.J.           
+  Zanetti, B.J. Anderson, 'The NEAR Magnetic Field Investigation:             
+  Science Objectives at Asteroid Eros 433 and Experimental Approach,'         
+  Journal of Geophysical Research, 102, 23751-23760, 1997."                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ADLERETAL1972A"                         
+  REFERENCE_DESC                   = "Adler, I., J.I. Trombka, J. Gerard,     
+  P. Lowman, R. Schamadebeck, H. Blodgett, E. Eller, L. Yin, R. Lamothe,      
+  P. Gorenstein, P. Bjorkholm, 'Apollo 15 Geochemical X-Ray Fluorescence      
+  Experiment:  Preliminary Report,' Science, 175, 436-440, 1972."             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ADLERETAL1972B"                         
+  REFERENCE_DESC                   = "Adler, I., J. Gerard, J.I. Trombka,     
+  R. Schamadebeck, P. Lowman, H. Blodgett, L. Yin, E. Eller, R. Lamothe,      
+  'The Apollo 15 X-Ray Fluorescence Experiment,' Proc. Lunar Sci Conf. 3rd,   
+  2157-2178, 1972."                                                           
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ADLERETAL1972C"                         
+  REFERENCE_DESC                   = "Adler, I., J.I. Trombka, J. Gerard,     
+  P. Lowman, R. Schamadebeck, H. Blodgett, E. Eller, L. Yin, R. Lamothe,      
+  G. Osswald, P. Gorenstein, P. Bjorkholm, H. Gursky, B. Harris,              
+  'Apollo 16 Geochemical X-ray Fluorescence Experiment:  Preliminary          
+  Report,' Science, 177, 256-259, 1972."                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ANDERSONETAL1993"                       
+  REFERENCE_DESC                   = "Anderson, J.D., J.W. Armstrong, and     
+  E.L. Lau, 'Upper Limits for Gravitational Radiation from Supermassive       
+  Coalescing Binaries,' Astrophysical Journal, 408, 287-292, 1993."           
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ANDERSONETAL2001"                       
+  REFERENCE_DESC                   = "Anderson, B.J., L.J. Zanetti,           
+  D.H. Lohr, J.R. Hayes, M.H. Acuna, C.T. Russell, T. Mulligan,               
+  'In-flight calibration of the NEAR magnetometer,' IEEE Trans. Geosci.       
+  Remote Sens., 39, 907-917, 2001."                                           
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ANTREASIANETAL1998"                     
+  REFERENCE_DESC                   = "Antreasian, P.G., C.L. Helfrich,        
+  J.K. Miller, W.M. Owen, B.G. Williams, D.K. Yeomans, J.D. Giorgini, D.W.    
+  Dunham, R.W. Farquhar, J.V. McAdams, D.J. Scheeres, 'Preliminary            
+  Considerations for NEAR's Low-Altitude Passes and Landing Operations at     
+  433 Eros,' AIAA 98-4397, AIAA/AAS Astrodynamics Specialist Conference,      
+  Boston, MA, USA, 1998."                                                     
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ANTREASIANETAL1999"                     
+  REFERENCE_DESC                   = "Antreasian, P.G., C.L. Helfrich,        
+  J.K. Miller, W.M. Owen, B.G.Williams, D.K. Yeomans, J.D. Giorgini, D.J.     
+  Scheeres, D.W. Dunham, R.W. Farquhar, J.V. McAdams, A.G. Santo, G.A.        
+  Heyler, 'Preliminary Planning for NEAR's Low-Altitude Operations at 433     
+  Eros,' AAS 99-465, AAS/AIAA/Astrodynamics Specialist Conference,            
+  Girdwood, AK, USA, 1999."                                                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ASMAR&HERRERA1993"                      
+  REFERENCE_DESC                   = "Asmar, S.W., and R.G. Herrera,          
+  Radio Science Handbook, JPL D-7938 Volume 4, Jet Propulsion Laboratory,     
+  Pasadena, CA, USA, 1993."                                                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ASMAR&RENZETTI1993"                     
+  REFERENCE_DESC                   = "Asmar, S.W., and N.A. Renzetti,         
+  'The Deep Space Network as an Instrument for Radio Science Research,'       
+  Jet Propulsion Laboratory Publication 80-93, Rev. 1, 1993."                 
+END_OBJECT = REFERENCE                                                        
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ASMARETAL1995"                          
+  REFERENCE_DESC                   = "Asmar, S.W., R.G. Herrera, and T.       
+  Priest, Radio Science Handbook, JPL D-7938 Volume 6, Jet Propulsion         
+  Laboratory, Pasadena, CA, USA, 1995."                                       
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BELLETAL1989"                           
+  REFERENCE_DESC                   = "Bell, J., D. Davis, W. Hartmann,        
+  M. Gaffey, 'Asteroids: The Big Picture,' Asteroids II, R.  Binzel, T.       
+  Gehrels, and M. Matthews (eds.), University of Arizona Press, Tucson,       
+  AZ, USA, 921-945, 1989."                                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BELTONETAL1992"                         
+  REFERENCE_DESC                   = "Belton, M.J.S., K.P. Klaasen,           
+  M.C. Clary, J.L. Anderson, C.D. Anger, M.H. Carr, C.R. Chapman,             
+  M.E. Davies, R. Greeley, D. Anderson, L.K. Bolef, T.E. Townsend,            
+  R. Greenberg, J.W. Head III, G. Neukum, C.B. Pilcher, J. Veverka,           
+  P.J. Gierasch, F.P. Fanale, A.P. Ingersoll, H. Masursky, D. Morrison,       
+  J.B. Pollack, 'The Galileo Solid-State Imaging Experiment,' Space           
+  Science Reviews, 60, 413-455, 1992."                                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BELTONETAL1994"                         
+  REFERENCE_DESC                   = "Belton, M., C. Chapman, J. Veverka,     
+  K. Klaasen, A. Harch, et al., 'First Images of Asteroid 243 Ida,'           
+  Science, 265, 1543-1547, 1994."                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BIELEFELDETAL1976"                      
+  REFERENCE_DESC                   = "Bielefeld, M., R. Reedy, A. Metzger,    
+  J. Trombka, J. Arnold, Proc. Lunar Sci. Conf. 7th, 2661-2676, 1976."        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BINZEL&XU1993"                          
+  REFERENCE_DESC                   = "Binzel, R. and S. Xu, 'Chips off of     
+  Asteroid 4 Vesta: Evidence for the Parent Body of Basaltic Achondrite       
+  Meteorites,' Science, 260, 186-191, 1993."                                  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BINZELETAL1996"                         
+  REFERENCE_DESC                   = "Binzel, R.P., T. Burbine and S.         
+  Bus, 'Ground-Based Reconnaissance of 253 Mathilde:  Visible Wavelength      
+  Spectrum and Meteorite Comparison,' Icarus, 119, 447-449, 1996."            
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BOYNTONETAL1992"                        
+  REFERENCE_DESC                   = "Boynton, W.V., J.I. Trombka,            
+  W.C. Feldman, J.R. Arnold, P. Englert, A.E. Metzger, R.C. Reedy,            
+  S.W. Squyres, H. Waenke, S.H. Bailey, J. Bruckner, J.L. Callas,             
+  D.M. Drake, P. Duke, L.G. Evans, E.L. Haines, F.C. McCloskey, H.            
+  Mills, C. Shinohara, R. Starr, 'Science Applications Of The Mars            
+  Observer Gamma Ray Spectrometer,' J. Geophys. Res., 97, 7681, 1992."        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BOYNTONETAL1993"                        
+  REFERENCE_DESC                   = "Boynton, W.V., L.G. Evans,              
+  R.C. Reedy, J.I. Trombka, 'The Composition Of Mars And Comets By            
+  Remote And In-situ Gamma-ray Spectrometry,' Remote Geochemical              
+  Analysis: Geochemical And Mineralogical Composition, C. Pieters and         
+  P. Englert (eds.), Cambridge University Press, New York, NY, USA            
+  395-412, 1993."                                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BRUCKNERETAL1991"                       
+  REFERENCE_DESC                   = "Bruckner, J., M. Koerfer, H. Waenke,    
+  A.N.F. Schroeder, D. Filges, P. Dragovitsch, P.A.J. Englert, R. Starr,      
+  J.I. Trombka, I. Taylor, D.M. Drake, E.R. Schunk, IEEE Trans. Nucl. Sci.,   
+  NS-38, 209-217, 1991."                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BRUCKNER&MASARIK1997"                   
+  REFERENCE_DESC                   = "Bruckner, J. and J. Masarik,            
+  'Planetary Gamma-Ray Spectroscopy of the Surface of Mercury,' Planet.       
+  Space Sci., 45, 39-48, 1997."                                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "BUSSEYETAL2001"                         
+  REFERENCE_DESC                   = "Bussey, D.B.J., M.S. Robinson, K.       
+  Edwards, P.C. Thomas, J. Joseph, 'Digital Cartography of 433 Eros           
+  Using the NEAR Shoemaker Multispectral Imager,' Icarus, 2001,               
+  submitted."                                                                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHAPMAN1996"                            
+  REFERENCE_DESC                   = "Chapman, C., 'S-Type Asteroids,         
+  Ordinary Chondrites, and Space Weathering:  The Evidence from Galileo's     
+  Flybys of Gaspra and Ida,' Meteoritics and Planetary Science, 31,           
+  699-725, 1996."                                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHENGETAL1994"                          
+  REFERENCE_DESC                   = "Cheng, A.F., J. Veverka, C. Pilcher,    
+  R. Farquhar, 'Missions to Near-Earth Objects,' Hazards Due to               
+  Comets & Asteroids, T. Gehrels (ed.), University of Arizona Press,          
+  Tucson, AZ, USA, 651-670, 1994."                                            
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHENGETAL1997"                          
+  REFERENCE_DESC                   = "Cheng, A.F., A. Santo, K. Heeres, J.    
+  Landshof, R. Farquhar, et al., 'Near-Earth Asteroid Rendezvous:  Mission    
+  Overview,' Journal of Geophysical Research, 102, 23695-23708, 1997."        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHENGETAL1998"                          
+  REFERENCE_DESC                   = "Cheng, A.F., R.W. Farquhar, A.G.        
+  Santo, 'NEAR Overview,' Johns Hopkins APL Technical Digest, 19, 95,         
+  1998."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHENGETAL2000"                          
+  REFERENCE_DESC                   = "Cheng, A.F., T.D. Cole, M.T. Zuber,     
+  D.E. Smith, Y. Guo, F. Davidson, 'In-Flight Calibration of the Near         
+  Earth Asteroid Rendezvous Laser Rangefinder,' Icarus, 148, 572-586, 2000."  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CHENGETAL2001"                          
+  REFERENCE_DESC                   = "Cheng, A.F., O. Barnouin-Jha,           
+  L. Prockter, M.T. Zuber, G. Neumann, D.E. Smith, J. Garvin,                 
+  M. Robinson, J. Veverka, P. Thomas, 'Small Scale Topography of              
+  433 Eros from Laser Altimetry and Imaging,' Icarus, in press, 2001."        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "CLARKETAL1995"                          
+  REFERENCE_DESC                   = "Clark, B.E., J.F. Bell, F.P. Fanale,    
+  D.J. O'Connor, 'Results of the Seven Color Asteroid Survey: Infrared        
+  spectral observations of ~50-km size S-, K-, and M-type asteroids,'         
+  Icarus, 113, 387-402, 1995."                                                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "COLEETAL1997"                           
+  REFERENCE_DESC                   = "Cole, T., M. Boies, A. El-Dinary,       
+  A.F. Cheng, M. Zuber, D.E. Smith, 'The Near Earth Asteroid Rendezvous       
+  Laser Altimeter,' Space Science Reviews, 82, 217-253, 1997."                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "DAVIESETAL1994B"                        
+  REFERENCE_DESC                   = "Davies, M.E., V.K. Abalakin, M. Bursa,  
+  J.H. Lieske, B. Morando, D. Morrison, P.K. Seidelman, A.T. Sinclair,        
+  B. Yallop, Y.S. Tjuflin, 'Report of the IAU/IAG/COSPAR Working Group on     
+  Cartographic Coordinates and Rotational Elements of the Planets and         
+  Satellites,' Celestial Mechanics and Dynamical Astronomy, 63, 127-148,      
+  1994."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "DONNELLYETAL1977"                       
+  REFERENCE_DESC                   = "Donnelly, R.F., R.N. Grubb and          
+  F.C. Cowley, 'Solar X-ray Measurements from SMS-1, SMS-2, and GOES-1,       
+  Information for Data Users,' US Department of Commerce, NOAA,               
+  Washington, D.C., USA, 1977."                                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "DSN810-5"                               
+  REFERENCE_DESC                   = "Deep Space Network / Flight Project     
+  Interface Design Book, Document 810-5, Jet Propulsion Laboratory,           
+  Pasadena, CA, USA."                                                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "DYERETAL1980"                           
+  REFERENCE_DESC                   = "Dyer, C.J., J. Trombka, S. Seltzer,     
+  L. Evans, 'Calculation of Radioactivity Induced in Gamma Ray                
+  Spectrometers During Spaceflight,' Nucl. Instrum. Methods, 173, 585-601,    
+  1980."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ESTABROOKETAL1995"                      
+  REFERENCE_DESC                   = "Estabrook, F.B. and H.D.                
+  Wahlquist, 'Response of Doppler Spacecraft Tracking to Gravitational        
+  Radiation,' Gen. Rel. Grav., 6, 439-447, 1995."                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "EVANSETAL1993"                          
+  REFERENCE_DESC                   = "Evans, L.G., R.C. Reedy and J.I.        
+  Trombka, 'Elemental and Mineralogical Composition,' Remote Geochemical      
+  Analysis, C. Pieters and P. Englert (eds.), University of Cambridge,        
+  Cambridge, England, 167-198, 1993."                                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "EVANSETAL1995"                          
+  REFERENCE_DESC                   = "Evans, L.G., P.E. Clark and J.I.        
+  Trombka, Acta Astron., 35, 79-88, 1995."                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "EVANSETAL2000"                          
+  REFERENCE_DESC                   = "Evans, L.G. et al., 'Calibration of     
+  the NEAR Gamma-ray Spectromer,' Icarus, 148, 95-117, 2000."                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "EVANSETAL2001"                          
+  REFERENCE_DESC                   = "Evans, L.G., R.D. Starr,                
+  J. Bruckner, R.C. Reedy, J.O. Goldsten, J. Masarik, W.V. Boynton, J.I.      
+  Trombka, L.R. Nittler, T.J. McCoy, 'Elemental Composition from Gamma-Ray    
+  Spectroscopy of the NEAR Shoemaker Landing Site on 433 Eros,'               
+  Meteoritics and Planetary Science, 36, 1639-1660, 2001"                     
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "FARQUHARETAL1995"                       
+  REFERENCE_DESC                   = "Farquhar, R.W., D. Dunham and J.        
+  McAdams, 'NEAR Mission Overview and Trajectory Design,' Journal of          
+  Astronautical Science, 43, 353-371, 1995."                                  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GAFFEYETAL1993A"                        
+  REFERENCE_DESC                   = "Gaffey, M., T.H. Burbine and R.         
+  Binzel, 'Asteroid Spectroscopy:  Progress and Perspectives,' Meteoritics    
+  and Planetary Science, 28, 161-187, 1993."                                  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GAFFEYETAL1993B"                        
+  REFERENCE_DESC                   = "Gaffey, M., J. Bell, R. Brown, T.       
+  Burbine, J. Piatek, et al., 'Mineralogic Variations Within the S-Type       
+  Asteroid Class,' Icarus, 106, 573-602, 1993."                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GARCIA1994"                             
+  REFERNECE_DESC                   = "Garcia, H.A., 'Temperature and          
+  Emission Measures from GOES Soft X-ray Measurements,' Solar Physics,        
+  154, 275-308, 1994."                                                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GARDNER1992"                            
+  REFERENCE_DESC                   = "Gardner, C.S., 'Ranging performance     
+  of satellite laser altimeters,' IEEE Trans Geoscience and Remote Sensing,   
+  30, 1061-1072, 1992."                                                       
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GASNAULTETAL1963"                       
+  REFERENCE_DESC                   = "Gasnault, O., W.C. Feldman, S.          
+  Maurice, I. Genetay, C. d'Uston, 'The First Lunar Map of the Average        
+  Soil Atomic Mass (abstract), Lunar Planet. Sci., 32, 1963, Lunar and        
+  Planetary Institute, Houston, Texas, USA (CD-ROM)."                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GEO-10REVD"                             
+  REFERENCE_DESC                   = "DSN Geometry and Spacecraft             
+  Visibility, Document 810-5, Rev. D, Vol. 1, DSN/Flight Project Interface    
+  Design, Jet Propulsion Laboratory, Pasadena, CA, USA, 1987."                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GOLDSTEN1998"                           
+  REFERENCE_DESC                   = "Goldsten, J.O., Johns Hopkins APL       
+  Technical Digest, 19, 126-135, 1998."                                       
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "GOLDSTENETAL1997"                       
+  REFERENCE_DESC                   = "Goldsten, J.O., R.L. McNutt, R.E.       
+  Gold, S.A. Gary, E. Fiore, S.E. Schneider, J.R. Hayes, J.I. Trombka,        
+  S.R. Floyd, W.V. Boynton, S. Bailey, J. Bruckner, S.W. Squyres, L.G.        
+  Evans, P.E. Clark, R. Starr, Space Sciences Review, 82, 169-216,            
+  1997."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "HAWKINSETAL1997"                        
+  REFERENCE_DESC                   = "Hawkins, S.E., E.H. Darlington, S.L.    
+  Murchie, K. Peacock, T.J. Harris, C.B. Hersman, M.J. Elko, D.T.             
+  Prendergast, B.W. Ballard, R.E. Gold, J. Veverka, and M.S. Robinson,        
+  'Multi-spectral imager on the Near Earth Asteroid Rendezvous Mission,'      
+  Space Science Reviews, 82, 31-100, 1997."                                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "IZENBERGETAL1998"                       
+  REFERENCE_DESC                   = "Izenberg, N.R., K. Peacock, J.          
+  Warren, S.L. Murchie, J.F. Bell III, 'In-flight calibration of              
+  NEAR's near infrared spectrometer,' Proceedings of the 1998 SDL/USU         
+  Symposium on Infrared Radiometric Sensor Calibration, Space Dynamics        
+  Laboratory, Utah State University, Logan, UT, USA, 1998."                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "IZENBERGETAL2000"                       
+  REFERENCE_DESC                   = "Izenberg, N.R., J.F. Bell, J.W.         
+  Warren, S.L. Murchie, K. Peacock, E.H. Darlington, B. Carcich, C.           
+  Chapman, B.E. Clark, A. Harch, G. Heyler, J. Joseph, P. Martin, L.          
+  McFadden, B. Merline, M. Robinson, J. Veverka, D. Wellnitz, 'In-Flight      
+  Calibration of the Near Earth Asteroid Rendezvous Mission's Near Infrared   
+  Spectrometer,' Icarus, 148, 550-571, 2000."                                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "JENKINSETAL1995"                        
+  REFERENCE_DESC                   = "Jenkins, J., G. Dakermanji, M. Butler,  
+  and U. Carlsson, 'The Near Earth Asteroid Rendezvous Spacecraft Power       
+  Subsystem,' Proc. 4th European Space Power Conf., T.-D. Guyenne (ed.),      
+  ESA-SP369, 277, 1995."                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "JPLD-14027"                             
+  REFERENCE_DESC                   = "Mars Global Surveyor Project,           
+  Telecommunications System Operations Reference Handbook, Version 2.1        
+  (MGS 542-257), JPL Document D-14027, Jet Propulsion Laboratory,             
+  Pasadena, CA, USA, 1996."                                                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KARZAS&LATTER1961"                      
+  REFERENCE_DESC                   = "Karzas, W.J. and  R. Latter,            
+  'Electron Radiative Transitions in a Coulomb Field,' Astrophysical          
+  Journal Supplement, 6, 167, 1961."                                          
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KAULA1966"                              
+  REFERENCE_DESC                   = "Kaula, W.M. 'Theory of Satellite        
+  Geodesy,' Blaisdell, Waltham, MA, USA, 1966."                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KIVELSONETAL1993"                       
+  REFERENCE_DESC                   = "Kivelson, M., L. Bargatze, K.           
+  Khurana, D. Southwood, R. Walker and P. Coleman, 'Magnetic Field            
+  Signatures Near Galileo's Closest Approach to Gaspra,' Science, 261,        
+  331-334, 1993."                                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KIVELSONETAL1995"                       
+  REFERENCE_DESC                   = "Kivelson, M.G., Z. Wang, S. Joy, K.K.   
+  Khurana, C. Polanskey, D.J. Southwood, R.J. Walker, 'Solar wind interaction 
+  with small bodies' and 'What can Galileo's detection of magnetic            
+  rotations tell us about Gaspra and Ida,' Advances in Space Research,        
+  16, 459-468, 1995."                                                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KONOPLIVETAL2001"                       
+  REFERENCE_DESC                   = "Konopliv, A.S., J.K. Miller, W.M.       
+  Owen, D.K. Yeomans, J.D. Giorgini, R. Garmier, J.-P. Barriot, 'A Global     
+  Solution for the Gravity Field, Rotation, Landmarks, and Ephemeris of       
+  Eros,' 16th International Symposium on Space Dynamics, Pasadena, CA,        
+  USA, 2001."                                                                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "KNOLL1989"                              
+  REFERENCE_DESC                   = "Knoll, G.F., 'Radiation Detection       
+  And Measurement,' Wiley & Sons, New York, NY, USA, 1989."                   
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "LANDINI&FOSSI1970"                      
+  REFERENCE_DESC                   = "Landini, M. and B.C. Monsignori         
+  Fossi, 'Solar Radiation From 1 to 100 Angstroms,' Astronomy and             
+  Astrophysics, 6, 468, 1970."                                                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "LANDSHOF&CHENG1995"                     
+  REFERENCE_DESC                   = "Landshof, J.A. and A.F. Cheng, 'NEAR    
+  Mission and Science Operations at Eros,' Journal of Astronautical           
+  Science, 43, 477, 1995."                                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "LIETAL2000"                             
+  REFERENCE_DESC                   = "Li, H., M.S. Robinson and S.L.          
+  Murchie, 'Preliminary remediation of scattered light in NEAR MSI            
+  Images,' Icarus, 2000, submitted."                                          
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "LOHRETAL1997"                           
+  REFERENCE_DESC                   = "Lohr, D.A., L.J. Zanetti, B.J.          
+  Anderson, T.A. Potemra, J.R. Hayes, R.E. Gold, R.M. Henshaw, F.F.           
+  Mobley, D.B. Holland, M.H. Acuna, J.L. Sheifele, 'Near Magnetic Field       
+  Investigation, Instrumentation, Spacecraft Magnetics and Data Access,'      
+  Science Reviews, 82, 255-281, 1997."                                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MASARIK&REEDY1996"                      
+  REFERENCE_DESC                   = "Masarik, J. and R.C. Reedy,             
+  'Gamma-ray Production and Transport in Mars,' Journal of  Geophysical       
+  Research, 101, 18891-18912, 1996."                                          
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MCCARTHYETAL1994"                       
+  REFERENCE_DESC                   = "McCarthy, J.J., et al., 'SOLVE          
+  Systems Descriptions and Operations Manuals,' NASA GSFC and HSTX Rpt,       
+  1994."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MCCORDETAL1970"                         
+  REFERENCE_DESC                   = "McCord, T., J.B. Adams and T.V.         
+  Johnson, 'Asteroid Vesta: Spectral Reflectivity and Compositional           
+  Implications,' Science, 168, 1445-1447, 1970."                              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MEWE1972"                               
+  REFERENCE_DESC                   = "Mewe, R., 'Calculations on the Solar    
+  Spectra from 1 to 60 Angstroms,' Space Science Review, 13, 666, 1972."      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MICHELETAL1996"                         
+  REFERENCE_DESC                   = "Michel, P., P. Farinella and C.         
+  Froeschle, 'The Orbital Evolution of the Asteroid Eros and Implications     
+  for Collision with the Earth,' Nature, 380, 689-691, 1996."                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MILLERETAL1999"                         
+  REFERENCE_DESC                   = "Miller, J.K., P.G. Antreasian, R.W.     
+  Gaskell, J.D. Giorgini, C.E. Helfrich, W.M. Owen, B.G. Williams, D.K.       
+  Yeomans, 'Determination of Eros Physical Parameters for Near Earth          
+  Asteroid Rendezvous Orbit Phase Navigation,' AAS 99-463, AAS/AIAA           
+  Astrodynamics Specialist Conference, Girdwood, AK, USA, 1999."              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MILLERETAL2000"                         
+  REFERENCE_DESC                   = "Miller, J.K., P.G. Antreasian, J.J.     
+  Bordi, S. Chesley, C.E. Helfrich, A. Konopliv, W.M. Owen, T.C. Wang,        
+  B.G. Williams, D.K. Yeomans, 'Determination of Eros Physical Parameters     
+  from Near-Earth Asteroid Rendezvous Orbit Phase Navigation Data,' AIAA      
+  2000-4422, AAS/AIAA Astrodynamics Specialists Conference, Denver, CO,       
+  USA, 2000."                                                                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MILLERETAL2002"                         
+  REFERENCE_DESC                   = "Miller, J.K., A.S. Konopliv, P.G.       
+  Antreasian, J.J. Bordi, S. Chesley, C.E. Helfrich, W.M. Owen, D.J.          
+  Scheeres, T.C. Wang, B.G. Williams, D.K. Yeomans, 'Determination of         
+  Shape, Gravity, and Rotational State of Asteroid 433 Eros,' Icarus, in      
+  press, 2002."                                                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MOTTOLAETAL1995"                        
+  REFERENCE_DESC                   = "Mottola, S., W. Sears, A. Erikson,      
+  A. Harris, J. Young, et al., 'The Slow Rotation of 253 Mathilde,'           
+  Planetary Space Science, 43, 1609-1613, 1995."                              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MURCHIEETAL1999"                        
+  REFERENCE_DESC                   = "Murchie, S.L., M. Robinson, S.E. Hawkins
+  III, A. Harch, P. Helfenstein, P. Thomas, K. Peacock, W. Owen, G. Heyler,   
+  P. Murphy, E.H. Darlington, A. Keeney, R. Gold, B. Clark, N. Izenberg, J.F. 
+  Bell III, W. Merline, J. Veverka, Icarus, 140, 66-91, 1999."                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MURCHIEETAL2002"                        
+  REFERENCE_DESC                   = "Murchie, S., D. Domingue, M.            
+  Robinson, H. Li, L. Prockter, S.E. Hawkins, W. Owen, B. Clark,              
+  'Inflight calibration of the NEAR Multispectral Imager and Results at       
+  Eros,' Icarus, 1555, 229-243, 2002."                                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "MURCHIE&PIETERS1996"                    
+  REFERENCE_DESC                   = "Murchie, S.L. and C. Pieters,           
+  'Spectral Properties and Rotational Spectral Heterogeneity of 433 Eros,'    
+  Journal of Geophysical Research, 101, 2201-2214, 1996."                     
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "NEUMANNETAL2001"                        
+  REFERENCE_DESC                   = "Neumann, G.A., F.G. Lemoine, D.D.       
+  Rowlands, D.E. Smith, M.T. Zuber, 'Crossover Analysis of Mars Orbiter       
+  Laser Altimeter Data,' J. Geophys. Res., 106, 23753-23768, 2001."           
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "NISAPLSRS1995"                          
+  REFERENCE_DESC                   = "JHU/APL, 'NEAR Near Infrared            
+  Spectrograph/Magnetometer DPU Software Requirement Specification,' JHU/APL  
+  pub. 7357-9001 Rev. A, JHU/APL Space Department, Laurel, MD, USA, 1995."    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "NITTLERETAL2001A"                       
+  REFERENCE_DESC                   = "Nittler, L.R., T.J. McCoy, P.E.         
+  Clark, M.E. Murphy, J.I. Trombka, E. Jarosewich, 'Bulk Element              
+  Composition of Meteorites: Linking Asteroids and Meteorites and             
+  Understanding Their Formation,' Meteoritic and Planetary Science,           
+  submitted 2001."                                                            
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "NITTLERETAL2001B"                       
+  REFERENCE_DESC                   = "Nittler, L.R., R.D. Starr, L. Lim,      
+  T.J. McCoy, T.H. Burbine, R.C.Reedy, J.I. Trombka, P. Gorenstein,           
+  S.W. Squyres, W.V. Boynton, T.P. McClanahan, J. S. Bhangoo, P.E. Clark,     
+  M.E. Murphy, R. Killen, 'X-ray Fluorescence Measurements of the             
+  Surface Elemental Composition of Asteroid 433 Eros,' Meteoritics and        
+  Planetary Science, 36, 1673-1695, 2001."                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "OSTROETAL1990"                          
+  REFERENCE_DESC                   = "Ostro, S., K. Rosema and R. Jurgens,    
+  'The Shape of Eros,' Icarus, 84, 334-351, 1990."                            
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "PEACOCK1997"                            
+  REFERENCE_DESC                   = "Peacock, K., 'Calibration of the Near   
+  Infrared Spectrograph,' Proceedings of the 1997 SDL/USU Symposium on        
+  Infrared Radiometric Sensor Calibration, Space Dynamics Laboratory, Utah    
+  State University, Logan, UT, USA, 1997."                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "REEDYETAL1973"                          
+  REFERENCE_DESC                   = "Reedy, R.C., J.R. Arnold, and           
+  J.I. Trombka, 'Expected Gamma-ray Emission Spectra from the Lunar           
+  Surface as a Function of Chemical Composition,' Journal of  Geophysical     
+  Research, 78, 5847-5866, 1973."                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "REEDY1978"                              
+  REFERENCE_DESC                   = "Reedy, R.C., 'Planetary Gamma-ray       
+  Spectroscopy,' Proc. Lunar Planet. Sci. 9th, 2961-2984, 1978."              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ROWLANDSETAL1993"                       
+  REFERENCE_DESC                   = "Rowlands, D.D., et al., 'Geodyn II      
+  System Description,' HSTX Rpt, 1993."                                       
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "SANTOETAL1995"                          
+  REFERENCE_DESC                   = "Santo, A.G., S.C. Lee and R.E.          
+  Gold, 'NEAR Spacecraft and Instrumentation,' Journal of Astronautical       
+  Sciences, 43, 373-397, 1995."                                               
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "SCHEERESETAL1998"                       
+  REFERENCE_DESC                   = "Scheeres, D.J., D.W. Dunham, R.W.       
+  Farquhar, J.V. McAdams, C.E. Helfrich, W.M. Owen, S.P. Synnott, B.G.        
+  Williams, P.J. Wolff, D.K. Yeomans, 'Mission Design and Navigation of       
+  NEAR's encounter with Asteroid 253 Mathilde,' AAS 98-184, AAS/AIAA Space    
+  Flight Mechanics meeting, Monterey, CA, USA, 1998."                         
+END_OBJECT          = REFERENCE                                               
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "SMITHETAL1999"                          
+  REFERENCE_DESC                   = "Smith, D.E., M.T. Zuber, S.C. Solomon,  
+  R.J. Phillips, J.W. Head, J.B. Garvin, W.B. Banerdt, D.O. Muhleman, G.H.    
+  Pettengill, G.A. Neumann, F.G. Lemoine, J.B. Abshire, O. Aharonson, C.D.    
+  Brown, S.A. Hauck, A.B. Ivanov, P.J. McGovern, H.J. Zwally, T.C. Duxbury,   
+  'The Global Topography Of Mars And Implications For Surface Evolution,'     
+  Science, 284, 1495-1503, 1999."                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "SNYDER1987"                             
+  REFERENCE_DESC                   = "Snyder, J.P., 'Map Projections --       
+  A Working Manual,' U.S. Geol. Surv. Professional Paper 1395, 383, 1987."    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "STARRETAL1999"                          
+  REFERENCE_DESC                   = "Starr, R., P.E. Clark, L.G. Evans,      
+  S.R. Floyd, T.P. McClanahan, J.I. Trombka, J.O. Goldsten, R.H. Maurer,      
+  R.L. McNutt, Jr., D.R. Roth, 'Nuclear Instruments and Methods in            
+  Physics Research,' A428, 209, 1999."                                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "STARRETAL2000"                          
+  REFERENCE_DESC                   = "Starr, R.D. et al., 'Instrument         
+  Calibrations and Data Analysis Procedures for the NEAR X-ray                
+  Spectrometer,' Icarus, 147, 498-519, 2000."                                 
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "THOMASETAL1985"                         
+  REFERENCE_DESC                   = "Thomas, R.J., R. Starr, C.J.            
+  Crannel, 'Expressions to Determine Temperatures and Emission Measures       
+  for Solar X-ray Events from GOES Measurements,' Solar Physics, 95,          
+  323-329, 1985."                                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "THOMASETAL2002"                         
+  REFERENCE_DESC                   = "Thomas, P.C., J. Joseph, B. Carcich,    
+  J. Veverka, B.E. Clark, J.F. Bell III, M. Robinson, S. Murchie, L. Prockter,
+  A. Cheng, N. Izenberg, M. Malin, C. Chapman, L.A. McFadden, R. Kirk,        
+  M. Gaffey, P.G. Lucey, 'Eros: Shape, Topography, and Slope Processes,'      
+  Icarus, 155, 18-37, 2002."                                                  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "TROMBKAETAL1997"                        
+  REFERENCE_DESC                   = "Trombka, J., S. Floyd, W. Boynton,      
+  S. Bailey, J. Bruckner, S. Squyres, L. Evans, P. Clear, R. Starr,           
+  E. Fiore, R. Gold, J. Goldsten, R. McNutt, 'Compositional Mapping With      
+  The Near X-ray/Gamma-ray Spectrometer,' J. Geophys. Res., 102,              
+  23729-23750, 1997."                                                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "TYLERETAL1992"                          
+  REFERENCE_DESC                   = "Tyler, G.L., G. Balmino, D.P.           
+  Hinson, W.L. Sjogren, D.E. Smith, R. Woo, S.W. Amar, M.J. Connally, C.L.    
+  Hamilton, R.A. Simpson, 'Radio Science Investigations with Mars Observer,'  
+  Journal of Geophysical Research, 97, 7759-7779, 1992."                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "VEVERKAETAL1997A"                       
+  REFERENCE_DESC                   = "Veverka, J., J.F. Bell III, P. Thomas,  
+  A. Harch, S.L. Murchie, S.E. Hawkins III, J. Warren, E.H. Darlington,       
+  K. Peacock, C. Chapman, L. McFadden, M. Malin, M. Robinson, 'An Overview Of 
+  The Near Multispectral Imager - Near-infrared Spectrometer Investigation,'  
+  J. Geophys. Res., 102, 23709-23727, 1997."                                  
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "VEVERKAETAL1997B"                       
+  REFERENCE_DESC                   = "Veverka, J., P. Thomas, A. Harch,       
+  B. Clark, J.F. Bell III, B. Carcich, J. Joseph, C. Chapman, W. Merline,     
+  M. Robinson, M. Malin, L. McFadden, S.L. Murchie, S.E. Hawkins III,         
+  R. Farquhar, N.R. Izenberg, A. Cheng, 'Near's Flyby Of 253 Mathilde:        
+  Images of a C Asteroid,' Science, 278, 2109-2114, 1997."                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "VEVERKAETAL1999A"                       
+  REFERENCE_DESC                   = "Veverka, J., P.C. Thomas,               
+  J.F. Bell III, M. Bell, B. Carcich, B. Clark, A. Harch, J. Joseph,          
+  P. Martin, M. Robinson, S. Murchie, N. Izenberg, E. Hawkins, J. Warren,     
+  R. Farquhar, A. Cheng, D. Dunham, C. Chapman, W.J. Merline, L. McFadden,    
+  D. Wellnitz, M. Malin, W.M. Owen Jr., J.K. Miller, B.G. Williams,           
+  D.K. Yeomans, 'Imaging Of Asteroid 433 Eros During Near's Flyby             
+  Reconnaissance,' Science, 285, 562-564, 1999."                              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "VEVERKAETAL1999B"                       
+  REFERENCE_DESC                   = "Veverka, J.,  P. Thomas, A. Harch,      
+  B. Clark, J.F. Bell III, B. Carcich, J. Joseph, S.L. Murchie, N.R.          
+  Izenberg, C. Chapman, W. Merline, M. Malin, L. McFadden, M. Robinson,       
+  'Near Encounter With Asteroid 253 Mathilde: Overview,' Icarus, 140,         
+  3-16, 1999."                                                                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "WANGETAL1995"                           
+  REFERENCE_DESC                   = "Wang, Z., Kivelson, M.G., S. Joy, K.K.  
+  Khurana, C. Polanskey, D.J. Southwood, R.J. Walker, 'Solar wind interaction 
+  with small bodies' and 'What can Galileo's detection of magnetic            
+  rotations tell us about Gaspra and Ida,' Advances in Space Research,        
+  16, 459-468, 1995."                                                         
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "WARRENETAL1997"                         
+  REFERENCE_DESC                   = "Warren, J., K. Peacock, E.H.            
+  Darlington, S.L. Murchie, S. Oden, J. Hayes, J.F. Bell III, S. Krein,       
+  A. Mastandrea, 'Near-infrared spectrometer for the Near Earth               
+  Asteroid Rendezvous mission,' Space Science Review, 82, 101-167, 1997."     
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "WOO1993"                                
+  REFERENCE_DESC                   = "Woo, R., 'Spacecraft Radio              
+  Scintillation and Solar System Exploration,' Wave Propagation in Random     
+  Media (Scintillation), University of Washington, SPIE Optical               
+  Engineering Press, Bellingham, WA, USA, 1993."                              
+END_OBJECT                      = REFERENCE                                   
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YEOMANS1995"                            
+  REFERENCE_DESC                   = "Yeomans, D.K., 'Asteroid 433 Eros:      
+  The Target Body of the NEAR Mission,' Journal of Astronautical Sciences,    
+  43, 417, 1995."                                                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YEOMANSETAL1997A"                       
+  REFERENCE_DESC                   = "Yeomans, D., A.S. Konopliv, and         
+  J.-P. Barriot, 'The NEAR Radio Science Investigations,' Journal of          
+  Geophysical Research, 102, 23775, 1997."                                    
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YEOMANSETAL1997B"                       
+  REFERENCE_DESC                   = "Yeomans, D.K., J.-P. Barriot, D.W.      
+  Dunham, R.W. Farquhar, J.D. Giorgini, C.E. Helfrich, A.S. Konopliv, J.V.    
+  McAdams, J.K. Miller, W.M. Owen Jr., D.J. Scheeres, S.P. Synnott, B.G.      
+  Williams, 'Estimating the Mass of Asteroid 253 Mathilde from Tracking       
+  Data During the NEAR Flyby,' Science, 278, 2106-2109, 1997."                
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YEOMANSETAL1999"                        
+  REFERENCE_DESC                   = "Yeomans, D.K., P.G. Antreasian,         
+  A. Cheng, D.W. Dunham, R.W. Farquhar, R.W. Gaskell, J.D. Giorgini,          
+  C.E. Helfrich, A.S. Konopliv, J.V. Mcadams, J.K. Miller, W.M. Owen Jr.,     
+  P.C. Thomas, J. Veverka, B.G. Williams, 'Estimating The Mass Of Asteroid    
+  433 Eros During The Near Spacecraft Flyby,' Science, 285, 560-561,          
+  1999."                                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YEOMANSETAL2000"                        
+  REFERENCE_DESC                   = "Yeomans, D.K., P.G. Antreasian,         
+  J.-P. Barriot, S.R. Chesley, D.W. Dunham, R.W. Farquhar, J.D. Giorgini,     
+  C.E. Helfrich, A.S. Konopliv, J.V. McAdams, J.K. Miller, W.M. Owen, D.J.    
+  Scheeres, P.C. Thomas, J. Veverka, B.G. Williams, 'Radio Science Results    
+  During the NEAR Shoemaker Spacecraft Rendezvous with Eros,' Science,        
+  289, 2085-2088, 2000."                                                      
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "YINETAL1993"                            
+  REFERENCE_DESC                   = "Yin, L, J. Trombka, I. Adler,           
+  M. Bielefeld, 'X-ray Remote Sensing Techniques For Geochemical Analysis     
+  Of Planetary Surfaces,' Remote Geochemical Analysis: Geochemical And        
+  Mineralogical Composition, C. Pieters and P. Englert (eds.), Cambridge      
+  University Press, New York, NY, USA, 199-212, 1993."                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ZELLNER1976"                            
+  REFERENCE_DESC                   = "Zellner, B., 'Physical Properties of    
+  Asteroid 433 Eros,' Icarus, 28, 149-153, 1976."                             
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ZUBERETAL1992"                          
+  REFERENCE_DESC                   = "Zuber, M. et al., 'The Mars Observer    
+  Laser Altimeter Investigation,' Journal of Geophysical Research, 97,        
+  7781-7797, 1992."                                                           
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ZUBERETAL1994"                          
+  REFERENCE_DESC                   = "Zuber, M., D.E. Smith, F.G. Lemoine,    
+  G. Neumann, 'The Shape and Internal Structure of the Moon from the          
+  Clementine Mission,' Science, 266, 1839-1843, 1994."                        
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ZUBERETAL1997"                          
+  REFERENCE_DESC                   = "Zuber, M., D.E. Smith, A.F. Cheng,      
+  T.D. Cole, 'The NEAR Laser Ranging Investigation,' Journal of               
+  Geophysical Research, 102, 23761-23773, 1997."                              
+END_OBJECT                         = REFERENCE                                
+                                                                              
+OBJECT                             = REFERENCE                                
+  REFERENCE_KEY_ID                 = "ZUBERETAL2000"                          
+  REFERENCE_DESC                   = "Zuber, M.T., D.E. Smith, A.F. Cheng,    
+  J. Garvin, O. Aharonson, T.D. Cole, P.D. Dunn, Y. Guo, F.G. Lemoine, G.A.   
+  Neumann, D.D. Rowlands, M.H. Torrence, 'The Shape of 433 Eros from the      
+  NEAR-Shoemaker Laser Rangefinder,' Science, 289, 2097-2101, 2000."          
+END_OBJECT                         = REFERENCE                                
+                                                                              
+END                                                                           

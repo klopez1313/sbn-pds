@@ -1,0 +1,47 @@
+PDS_VERSION_ID        = PDS3                                                  
+RECORD_TYPE           = UNDEFINED                                             
+^ASCII_DOCUMENT       = {                                                     
+                         "NIS_CH2CH_EMP_COR.DAT",                             
+                         "NIS_CH2CH_EMP_ERR.DAT",                             
+                         "NIS_DEFAULT_DARK.DAT",                              
+                         "NIS_DEFAULT_NOISE.DAT",                             
+                         "NIS_DN2RAD_COEFFS.DAT",                             
+                         "NIS_HEATER_EVENT_MET.DAT",                          
+                         "NIS_MIRROR_POL_COR.DAT",                            
+                         "NIS_MIRROR_POLY_COEFFS_N.DAT",                      
+                         "NIS_MIRROR_POLY_COEFFS_W.DAT",                      
+                         "NIS_MOTOR_V_COR.DAT",                               
+                         "NIS_MOTOR_V_ERR.DAT",                               
+                         "NIS_MOTOR_V_MET.DAT",                               
+                         "NIS_SOLAR_SPECTRUM_CONVOL.DAT",                     
+                         "NIS_W_SLIT_COR.DAT",                                
+                         "NIS_XTALK_COEFS.DAT",                               
+                         "NISDN2RADUSERDEFINEDCOEFFS.DAT"                     
+                         }                                                    
+                                                                              
+OBJECT                = ASCII_DOCUMENT                                        
+  PUBLICATION_DATE    = 2001-07-13                                            
+  DOCUMENT_NAME       = " Niscal NIS Calibration IDL Program                  
+                          calibration files "                                 
+  DOCUMENT_TOPIC_TYPE = "SENSOR CALIBRATION"                                  
+  INTERCHANGE_FORMAT  = BINARY                                                
+  DOCUMENT_FORMAT     = TEXT                                                  
+  FILES               = 16                                                    
+  DESCRIPTION         = "                                                     
+These files are used by the IDL program Niscal to calibrate NIS data from     
+from raw counts to radiance factor.  They have not been changed from their    
+original format except that they now have tabs replaced with spaces           
+carriage returns added at the end of each line to conform to PDS              
+standards.   Also, many of these files have lines longer than 78              
+characters.  Therefore, they may display in a strange                         
+fashion, cause display corruption or cause unexpected behavior when opened    
+using standard editors on some computers.  As such, they were only meant      
+for use with the IDL version of NISCAL in a  Unix(tm) environment.  PDS       
+versions of these files as ASCII Tables are available in the CALIB/           
+directory on this volume; the PDS labels in that directory explain the        
+contents of each file and its purpose in the calibration procedure.           
+                                                                              
+See also DOCUMENT/NISCALSW/MANUAL.TXT. "                                      
+                                                                              
+END_OBJECT            = ASCII_DOCUMENT                                        
+END                                                                           

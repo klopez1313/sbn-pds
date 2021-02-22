@@ -1,0 +1,32 @@
+PDS_VERSION_ID           = PDS3                                               
+RECORD_TYPE              = STREAM                                             
+^XLS_DOCUMENT            = "PRE_EROS_OBSV_GUIDE.CSV"                          
+^CSV_DOCUMENT            = "PRE_EROS_OBSV_GUIDE.XLS"                          
+                                                                              
+OBJECT                   = XLS_DOCUMENT                                       
+  DOCUMENT_NAME          = "PRE_EROS_OBSV_GUIDE.XLS"                          
+  PUBLICATION_DATE       = 2001                                               
+  INTERCHANGE_FORMAT     = BINARY                                             
+  DOCUMENT_FORMAT        = "MICROSOFT EXCEL"                                  
+  DOCUMENT_TOPIC_TYPE    = OPERATION_REPORT                                   
+  DESCRIPTION            = "Operations log for the MSI instrument.            
+                            This document lists in a tabular format           
+                            the observations taken by the MSI                 
+                            instrument prior to rendezvous with the           
+                            asteroid 433 Eros."                               
+END_OBJECT               = XLS_DOCUMENT                                       
+                                                                              
+OBJECT                   = CSV_DOCUMENT                                       
+  DOCUMENT_NAME          = "PRE_EROS_OBSV_GUIDE.CSV"                          
+  PUBLICATION_DATE       = 2001                                               
+  INTERCHANGE_FORMAT     = ASCII                                              
+  DOCUMENT_FORMAT        = TEXT                                               
+  DOCUMENT_TOPIC_TYPE    = OPERATION_REPORT                                   
+  DESCRIPTION            = "Operations log for the MSI instrument.            
+                            This document lists in a tabular format           
+                            the observations taken by the MSI                 
+                            instrument prior to rendezvous with the           
+                            asteroid 433 Eros."                               
+END_OBJECT               = CSV_DOCUMENT                                       
+                                                                              
+END                                                                           

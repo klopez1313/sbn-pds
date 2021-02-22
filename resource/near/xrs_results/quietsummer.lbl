@@ -1,0 +1,212 @@
+PDS_VERSION_ID        = PDS3                                                   
+                                                                               
+RECORD_TYPE           = FIXED_LENGTH                                           
+RECORD_BYTES          = 48                                                     
+FILE_RECORDS          = 200                                                    
+                                                                               
+                                                                               
+^UNFILTERED_TABLE     = ("QUIETSUMMER.TAB",  1)                                
+^MG_TABLE             = ("QUIETSUMMER.TAB", 69)                                
+^AL_TABLE             = ("QUIETSUMMER.TAB",135)                                
+                                                                               
+                                                                               
+DATA_SET_ID           = "NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0"                     
+PRODUCT_NAME          = "NITTLER ET AL. (2001) FIGURE 3A"                      
+PRODUCT_ID            = QUIETSUMMER                                            
+                                                                               
+                                                                               
+INSTRUMENT_HOST_NAME  = "NEAR EARTH ASTEROID RENDEZVOUS"                       
+INSTRUMENT_NAME       = "NEAR X-RAY SPECTROMETER"                              
+TARGET_NAME           = "EROS"                                                 
+PRODUCT_CREATION_TIME = 2001-09-25                                             
+                                                                               
+NOTE                  = "Three blank records have been inserted between        
+    the successive tables in this file for readability."                       
+                                                                               
+DESCRIPTION           = "Figure 3 caption from Nittler et al. (2001):          
+                                                                               
+    Background-subtracted NEAR asteroid-pointing XRS spectra, acquired         
+    during periods of quiet Sun (non-flaring conditions). One sigma error      
+    bars are due to counting statistics; solid curves are fits to spectra.     
+    ...                                                                        
+                                                                               
+  These spectra represent a spectral sum from 2 May 2000 - 27 August 2000.     
+  "                                                                            
+                                                                               
+  /*========================================================================*/ 
+                                                                               
+OBJECT     = UNFILTERED_TABLE                                                  
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = UNFILTERED_SPECTRUM                                     
+  ROWS               = 65                                                      
+  ROW_BYTES          = 48                                                      
+  COLUMNS            = 4                                                       
+  DESCRIPTION        = ""                                                      
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = ENERGY                                                     
+    START_BYTE    = 1                                                          
+    BYTES         = 9                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F9.7"                                                     
+    UNIT          = "keV"                                                      
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = COUNTS                                                     
+    START_BYTE    = 11                                                         
+    BYTES         = 14                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E14.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = ERROR                                                      
+    START_BYTE    = 26                                                         
+    BYTES         =  7                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F7.3"                                                     
+    UNIT          = ""                                                         
+    DESCRIPTION   = "1-sigma error bar due to counting statistics"             
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = FIT                                                        
+    START_BYTE    = 34                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = UNFILTERED_TABLE                                                  
+                                                                               
+  /*========================================================================*/ 
+                                                                               
+OBJECT     = MG_TABLE                                                          
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = MG_FILTERED_SPECTRUM                                    
+  ROWS               = 62                                                      
+  ROW_BYTES          = 48                                                      
+  COLUMNS            = 4                                                       
+  DESCRIPTION        = "Magnesium-filtered asteroid-pointing spectrum          
+      from quiet summer sun.                                                   
+    "                                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = ENERGY                                                     
+    START_BYTE    = 1                                                          
+    BYTES         = 9                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F9.7"                                                     
+    UNIT          = "keV"                                                      
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = COUNTS                                                     
+    START_BYTE    = 11                                                         
+    BYTES         = 14                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E14.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = ERROR                                                      
+    START_BYTE    = 26                                                         
+    BYTES         =  7                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F7.3"                                                     
+    UNIT          = ""                                                         
+    DESCRIPTION   = "1-sigma error bar due to counting statistics"             
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = FIT                                                        
+    START_BYTE    = 34                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = MG_TABLE                                                          
+                                                                               
+  /*========================================================================*/ 
+                                                                               
+OBJECT     = AL_TABLE                                                          
+  INTERCHANGE_FORMAT = ASCII                                                   
+  NAME               = AL_FILTERED_SPECTRUM                                    
+  ROWS               = 66                                                      
+  ROW_BYTES          = 48                                                      
+  COLUMNS            = 4                                                       
+  DESCRIPTION        = "Aluminum-filtered asteroid-pointing spectrum           
+      from quiet summer sun.                                                   
+    "                                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 1                                                          
+    NAME          = ENERGY                                                     
+    START_BYTE    = 1                                                          
+    BYTES         = 9                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F9.7"                                                     
+    UNIT          = "keV"                                                      
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 2                                                          
+    NAME          = COUNTS                                                     
+    START_BYTE    = 11                                                         
+    BYTES         = 14                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E14.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 3                                                          
+    NAME          = ERROR                                                      
+    START_BYTE    = 26                                                         
+    BYTES         = 7                                                          
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "F7.3"                                                     
+    UNIT          = ""                                                         
+    DESCRIPTION   = "1-sigma error bar due to counting statistics"             
+  END_OBJECT = COLUMN                                                          
+                                                                               
+  OBJECT     = COLUMN                                                          
+    COLUMN_NUMBER = 4                                                          
+    NAME          = FIT                                                        
+    START_BYTE    = 34                                                         
+    BYTES         = 13                                                         
+    DATA_TYPE     = ASCII_REAL                                                 
+    FORMAT        = "E13.7"                                                    
+    UNIT          = "COUNTS/402800 SECONDS"                                    
+    DESCRIPTION   = ""                                                         
+  END_OBJECT = COLUMN                                                          
+                                                                               
+END_OBJECT = AL_TABLE                                                          
+                                                                               
+  /*========================================================================*/ 
+                                                                               
+END                                                                            
