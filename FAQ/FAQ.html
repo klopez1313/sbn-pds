@@ -68,15 +68,24 @@
               display: none;
               background-color: rgb(10, 10, 10);
               overflow: hidden;
+              
             }
 
-            h3 {
+            .panel h3 {
+              margin-bottom: 5px;
+              font-size: 110%;
+            }
+            .panel p {
+              margin-top: 5px
+            }
+            
+            .h3 {
                 font-size: 110%;
 
             }
             </style>
         
-        <button class="accordion">General PDS</button>
+        <button class="accordion">General PDS </button>
         <div class="panel">
         <h3>Q:I found a broken link or bad data file, how do I report it?</h3>
             <p>A:</strong>Use the "Feedback" tab on the side of the page.</p>
@@ -113,7 +122,6 @@
 
         <button class="accordion">Archiving</button>
         <div class="panel">
-        <p><div>
             <h3>Q:Why can't you archive normal image format like JPG and png?</h3>
            <p><strong>A:</strong>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and further processing degrades the image further. </p>
            
@@ -130,7 +138,9 @@
             <h3>Q:How good must my documentation be? </h3>  
             <p><strong>A:</strong>We archive for 50 years.  Needs to describe things clear enough to let someone use/validate it without being able to ask questions.</p>
                       
-    
+            <h3>Can I archive software?</h3>
+            <p><strong>Processing software is sometimes archived as documentation of the algorithms used to process the data.  Such documentation software is not maintained for use.  Other than this, PDS does not archive software.  Software relevant for NASA data and projects can be provided to the community on NASA GitHub. </p> </strong>
+            
         </div>
 
         <button class="accordion">Images</button>
