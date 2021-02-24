@@ -87,6 +87,7 @@
         
         <button class="accordion">General PDS </button>
         <div class="panel">
+          
         <h3>Q:I found a broken link or bad data file, how do I report it?</h3>
             <p>A:</strong>Use the "Feedback" tab on the side of the page.</p>
             
@@ -97,17 +98,22 @@
             <h3>Q:If there is both a PDS3 and PDS4 version of the data, which should I use?</h3>
                 <p><strong>A:</strong>We recommend using PDS4 as it might have more meta data available. However, the data themselves are the same in PDS3 and PDS4
                 </p>
-            
+            <h3>Why can't I archive in PDS3?</h3>
+            <p>NASA/PDS requires missions confirmed for flight after 1 November 2011 and R&A projects funded after that date to submit data to PDS in the PDS4 standard.  The PDS3 standard is no longer accepted other than for older projects predating November 2011.
+            </p>
+
         </div>
 
         <button class="accordion">Finding Data</button>
         <div class="panel">
+
             <h3>Q:How do you search in the PDS? </h3>
             <p><strong>A:</strong>There are multiple search tools available for PDS, search tools are available on the individual node pages (Atmospheres, Small Bodies etc). One the main PDS page there is a link to search all the PDS nodes. https://pds.nasa.gov/datasearch/data-search/
             </p>
 
             <h3>Q: How can I find all the data available on a given asteroid or comet?</h3> 
-            <p><strong>A:</strong>Try the <a href="https://sbnapps.psi.edu/ferret/"> Ferret </a></p>
+            <p><strong>A:</strong>Try the <a href="https://sbnapps.psi.edu/ferret/"> Ferret, which can also be used to search for asteroids with a specific parameter (albedo, size, semi-major axis, inclination, dynamical family, etc.)?
+            </a></p>
 
             <h3>Q: I'm working with an asteroid which was visited by a spacecraft.  How can I select image data on a specific area or crater of the asteroid?</h3>
             <p><strong>A:</strong>Try the <a href="https://sbib.psi.edu/">Small Bodies Image Browser (SBIB) </a></p>
@@ -117,11 +123,15 @@
             
             <h3>Q: I found the table of data I need but how do I find out what the columns mean or what the units are on the columns?</h3>
             <p><strong>A:</strong> Each data file has a separate label file with the same filename, but with extension either .lbl or .xml.  Open this file to find the column definitions and other information about the data file. Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer"> PDS4 Viewer </a>which displays the column headers with the data </p>
+            <h3>Where do I find a data dictionary?</h3>
+            <p>Answer:  https://pds.nasa.gov/datastandards/dictionaries/index-1.15.0.0.shtml
+            </p>
 
         </div>
 
         <button class="accordion">Archiving</button>
         <div class="panel">
+
             <h3>Q:Why can't you archive normal image format like JPG and png?</h3>
            <p><strong>A:</strong>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and further processing degrades the image further. </p>
            
@@ -141,10 +151,14 @@
             <h3>Can I archive software?</h3>
             <p><strong>Processing software is sometimes archived as documentation of the algorithms used to process the data.  Such documentation software is not maintained for use.  Other than this, PDS does not archive software.  Software relevant for NASA data and projects can be provided to the community on NASA GitHub. </p> </strong>
             
+            <h3>What names should I use for asteroids?      </h3>
+              <p>Follow the guidelines on this page (https://sbnwiki.astro.umd.edu/wiki/Target_Names#Asteroids) </p>
+
         </div>
 
         <button class="accordion">Images</button>
         <div class="panel">
+
         <h3>Q:When do you use a Mission Dictionary vs. Discipline Dictionary? </h3>
         <p><strong>A:</strong>A data defines the meaning and structure of classes and attributes. When used in the context of XML files, it can also constrain the content within an XML element. A discipline Dictionary is intended to provide a place for scientists to write definitions for the SBN discipline dictionary attributes.</p>
           
@@ -153,6 +167,7 @@
 
         <button class="accordion">Use of Data</button>
         <div class="panel">
+
             <h3>Q:How do I find out how to use and read PDS Dictionaries</h3>
             <p><strong>A:</strong><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 wiki</a></p>
             
